@@ -1,0 +1,31 @@
+{
+ "version": "0.1.0",
+ "description": "047 批注类型与颜色语义表。类型先分载体形态（高亮/划线/页边/手写/便签/区域），再谈语义；颜色含义只按本表解释，表外颜色一律留空，不猜。",
+ "types": {
+  "highlight": {"label": "高亮", "aliases": ["highlight", "高亮", "highlight_add", "annotation"]},
+  "underline": {"label": "划线", "aliases": ["underline", "下划线", "划线", "strikeout"]},
+  "margin_note": {"label": "页边批注", "aliases": ["margin_note", "margin", "页边批注", "旁注", "note", "text"]},
+  "handwritten": {"label": "手写标记", "aliases": ["handwritten", "ink", "手写", "手写批注", "pen"]},
+  "sticky_note": {"label": "便签", "aliases": ["sticky_note", "sticky", "便签", "comment"]},
+  "region": {"label": "区域框选", "aliases": ["region", "area", "框选", "rect"]}
+ },
+ "colors": {
+  "yellow": {"label": "黄色", "meaning": "关键结论/必读"},
+  "green": {"label": "绿色", "meaning": "方法或方案可复用"},
+  "red": {"label": "红色", "meaning": "待验证/存疑/与本文结论冲突"},
+  "blue": {"label": "蓝色", "meaning": "背景与定义"},
+  "orange": {"label": "橙色", "meaning": "待跟进的问题"}
+ },
+ "aspect_cues": {
+  "question": {"label": "研究问题", "cues": ["问题", "为何", "为什么", "是否", "疑问", "未解决", "question", "why"]},
+  "method": {"label": "方法", "cues": ["方法", "采用", "流程", "步骤", "训练", "评估", "使用了", "based on", "using", "method"]},
+  "conclusion": {"label": "结论", "cues": ["结论", "表明", "结果显示", "证明了", "我们发现", "conclusion", "results show", "indicates"]},
+  "reusable": {"label": "可复用要点", "cues": ["可复用", "可迁移", "模板", "配方", "参数", "阈值", "协议", "reuse", "template", "protocol"]},
+  "caveat": {"label": "待验证疑点", "cues": ["待验证", "存疑", "矛盾", "不一致", "需复核", "不确定", "caveat", "conflict", "uncertain"]}
+ },
+ "notes": {
+  "type_first": "先判类型再谈语义：高亮/划线/页边批注/手写标记混成一类会丢信息",
+  "unknown_color": "表外颜色（如 purple）不猜含义，color_meaning 留空并记入 uncertainty",
+  "unknown_type": "表外类型标 unknown_type，不并入最近似的类型"
+ }
+}

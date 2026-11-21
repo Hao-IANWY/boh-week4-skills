@@ -1,0 +1,4378 @@
+{
+ "case_id": "EXAMPLE-056-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "argument-and-logic-review",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-20T11:48:05+0800",
+ "研究产物": {
+  "coverage": {
+   "extraction_method": "inline_text",
+   "source": "case.manuscript",
+   "source_sha256": "",
+   "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+   "total_chars": 619,
+   "declared_total_chars": null,
+   "char_coverage": null,
+   "sentence_count": 19,
+   "section_count": 6,
+   "sections_present": {
+    "abstract": true,
+    "introduction": true,
+    "methods": true,
+    "results": true,
+    "discussion": true,
+    "conclusion": false
+   },
+   "core_sections_missing": [
+    "conclusion"
+   ],
+   "truncated": false,
+   "truncation_evidence": [],
+   "truncation_marker_examples": [],
+   "unparsed_materials": [],
+   "provenance": null,
+   "note": "全文口径：truncated 或核心章节缺失时 status 不写 complete；char_coverage 只在平台声明总字符数时给出"
+  },
+  "facets_status": [
+   {
+    "facet": "fact_check",
+    "label": "事实核验",
+    "status": "executed",
+    "detectors": [
+     "T7_NUM_CROSS_SECTION",
+     "T11_FIGTAB_MISSING",
+     "T12_SIGN_CONFLICT"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": "只核验稿件内部可复算的事实（数值、图表编号、系数方向）；外部事实需检索，不在本 skill 能力内，缺口进 uncertainty"
+   },
+   {
+    "facet": "citation_support",
+    "label": "引用支持",
+    "status": "executed",
+    "detectors": [
+     "T8_CONTRADICTORY_EDGE"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": "离线无法读取被引文献原文：仅检查文内相反证据是否被结论处理；『所引文献是否支持该句』需外部证据，标为待复核"
+   },
+   {
+    "facet": "method_design",
+    "label": "方法设计",
+    "status": "executed",
+    "detectors": [
+     "T9_METHOD_ANSWER_GAP"
+    ],
+    "findings": 2,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "stats_reporting",
+    "label": "统计报告",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T12_SIGN_CONFLICT",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "argument_chain",
+    "label": "论证链",
+    "status": "executed",
+    "detectors": [
+     "T1_UNSUPPORTED_CLAIM",
+     "T2_ASSUMPTION_ONLY",
+     "T3_CIRCULAR",
+     "T5_STRENGTH_MISMATCH",
+     "T6_CAUSAL_IN_CORRELATIONAL"
+    ],
+    "findings": 6,
+    "suppressed": 1,
+    "boundary": ""
+   },
+   {
+    "facet": "section_coherence",
+    "label": "章节衔接",
+    "status": "executed",
+    "detectors": [
+     "T4_PROMISE_UNDELIVERED",
+     "T11_FIGTAB_MISSING",
+     "T13_STRENGTH_DIRECTION_MISMATCH",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "academic_norm",
+    "label": "学术规范",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T11_FIGTAB_MISSING"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": ""
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "A1",
+    "sent_id": "s0003",
+    "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+    "section_id": "S2",
+    "section": "## 摘要",
+    "section_role": "interpretation",
+    "char_span": [
+     79,
+     120
+    ],
+    "locator": "MS-6eace5/S2¶1#s0003@79-120",
+    "claim_cues": [
+     "发现"
+    ],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A2",
+    "sent_id": "s0005",
+    "text": "既往研究提示绿地暴露与心理健康相关[1]。",
+    "section_id": "S3",
+    "section": "## 1 引言",
+    "section_role": "introduction",
+    "char_span": [
+     149,
+     170
+    ],
+    "locator": "MS-6eace5/S3¶1#s0005@149-170",
+    "claim_cues": [
+     "提示"
+    ],
+    "source_type": "reported",
+    "source_cues": [
+     "既往研究"
+    ],
+    "has_citation": true,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A3",
+    "sent_id": "s0011",
+    "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "char_span": [
+     361,
+     427
+    ],
+    "locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "claim_cues": [],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A4",
+    "sent_id": "s0012",
+    "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "char_span": [
+     427,
+     460
+    ],
+    "locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "claim_cues": [],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A5",
+    "sent_id": "s0013",
+    "text": "中介分析提示社会支持可能部分解释该关联。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "char_span": [
+     460,
+     480
+    ],
+    "locator": "MS-6eace5/S5¶1#s0013@460-480",
+    "claim_cues": [
+     "提示"
+    ],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A6",
+    "sent_id": "s0014",
+    "text": "模型准确率 78%。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "char_span": [
+     480,
+     490
+    ],
+    "locator": "MS-6eace5/S5¶1#s0014@480-490",
+    "claim_cues": [],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A7",
+    "sent_id": "s0015",
+    "text": "本研究表明绿化通过提升社会支持改善心理健康。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "char_span": [
+     501,
+     523
+    ],
+    "locator": "MS-6eace5/S6¶1#s0015@501-523",
+    "claim_cues": [
+     "表明"
+    ],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A8",
+    "sent_id": "s0016",
+    "text": "社会支持是中介变量，因为社会支持与心理健康正相关。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "char_span": [
+     523,
+     548
+    ],
+    "locator": "MS-6eace5/S6¶1#s0016@523-548",
+    "claim_cues": [],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   },
+   {
+    "claim_id": "A9",
+    "sent_id": "s0017",
+    "text": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "char_span": [
+     548,
+     573
+    ],
+    "locator": "MS-6eace5/S6¶1#s0017@548-573",
+    "claim_cues": [],
+    "source_type": "author",
+    "source_cues": [],
+    "has_citation": false,
+    "is_premise_like": false
+   }
+  ],
+  "sentence_index": [
+   {
+    "sent_id": "s0001",
+    "section_id": "S2",
+    "para_idx": 1,
+    "char_span": [
+     29,
+     50
+    ],
+    "section_role": "interpretation",
+    "heading": "## 摘要",
+    "text": "城市绿化与居民心理健康的关系受到广泛关注。"
+   },
+   {
+    "sent_id": "s0002",
+    "section_id": "S2",
+    "para_idx": 1,
+    "char_span": [
+     50,
+     79
+    ],
+    "section_role": "interpretation",
+    "heading": "## 摘要",
+    "text": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。"
+   },
+   {
+    "sent_id": "s0003",
+    "section_id": "S2",
+    "para_idx": 1,
+    "char_span": [
+     79,
+     120
+    ],
+    "section_role": "interpretation",
+    "heading": "## 摘要",
+    "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。"
+   },
+   {
+    "sent_id": "s0004",
+    "section_id": "S2",
+    "para_idx": 1,
+    "char_span": [
+     120,
+     138
+    ],
+    "section_role": "interpretation",
+    "heading": "## 摘要",
+    "text": "因此绿化改善证明了社区干预的有效性。"
+   },
+   {
+    "sent_id": "s0005",
+    "section_id": "S3",
+    "para_idx": 1,
+    "char_span": [
+     149,
+     170
+    ],
+    "section_role": "introduction",
+    "heading": "## 1 引言",
+    "text": "既往研究提示绿地暴露与心理健康相关[1]。"
+   },
+   {
+    "sent_id": "s0006",
+    "section_id": "S3",
+    "para_idx": 1,
+    "char_span": [
+     170,
+     191
+    ],
+    "section_role": "introduction",
+    "heading": "## 1 引言",
+    "text": "然而，多数研究为横断面设计，因果证据有限。"
+   },
+   {
+    "sent_id": "s0007",
+    "section_id": "S3",
+    "para_idx": 1,
+    "char_span": [
+     191,
+     240
+    ],
+    "section_role": "introduction",
+    "heading": "## 1 引言",
+    "text": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。"
+   },
+   {
+    "sent_id": "s0008",
+    "section_id": "S4",
+    "para_idx": 1,
+    "char_span": [
+     251,
+     283
+    ],
+    "section_role": "evidence",
+    "heading": "## 2 方法",
+    "text": "研究采用横断面问卷设计，覆盖 12 个社区、共 480 名居民。"
+   },
+   {
+    "sent_id": "s0009",
+    "section_id": "S4",
+    "para_idx": 1,
+    "char_span": [
+     283,
+     322
+    ],
+    "section_role": "evidence",
+    "heading": "## 2 方法",
+    "text": "绿地暴露以社区绿化覆盖率衡量，心理健康以量表得分衡量，社会支持以自评量表衡量。"
+   },
+   {
+    "sent_id": "s0010",
+    "section_id": "S4",
+    "para_idx": 1,
+    "char_span": [
+     322,
+     342
+    ],
+    "section_role": "evidence",
+    "heading": "## 2 方法",
+    "text": "分析采用线性回归，控制年龄、收入与教育。"
+   },
+   {
+    "sent_id": "s0011",
+    "section_id": "S5",
+    "para_idx": 1,
+    "char_span": [
+     361,
+     427
+    ],
+    "section_role": "evidence",
+    "heading": "## 3 结果",
+    "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。"
+   },
+   {
+    "sent_id": "s0012",
+    "section_id": "S5",
+    "para_idx": 1,
+    "char_span": [
+     427,
+     460
+    ],
+    "section_role": "evidence",
+    "heading": "## 3 结果",
+    "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。"
+   },
+   {
+    "sent_id": "s0013",
+    "section_id": "S5",
+    "para_idx": 1,
+    "char_span": [
+     460,
+     480
+    ],
+    "section_role": "evidence",
+    "heading": "## 3 结果",
+    "text": "中介分析提示社会支持可能部分解释该关联。"
+   },
+   {
+    "sent_id": "s0014",
+    "section_id": "S5",
+    "para_idx": 1,
+    "char_span": [
+     480,
+     490
+    ],
+    "section_role": "evidence",
+    "heading": "## 3 结果",
+    "text": "模型准确率 78%。"
+   },
+   {
+    "sent_id": "s0015",
+    "section_id": "S6",
+    "para_idx": 1,
+    "char_span": [
+     501,
+     523
+    ],
+    "section_role": "interpretation",
+    "heading": "## 4 讨论",
+    "text": "本研究表明绿化通过提升社会支持改善心理健康。"
+   },
+   {
+    "sent_id": "s0016",
+    "section_id": "S6",
+    "para_idx": 1,
+    "char_span": [
+     523,
+     548
+    ],
+    "section_role": "interpretation",
+    "heading": "## 4 讨论",
+    "text": "社会支持是中介变量，因为社会支持与心理健康正相关。"
+   },
+   {
+    "sent_id": "s0017",
+    "section_id": "S6",
+    "para_idx": 1,
+    "char_span": [
+     548,
+     573
+    ],
+    "section_role": "interpretation",
+    "heading": "## 4 讨论",
+    "text": "社会支持与心理健康正相关，因为社会支持是中介变量。"
+   },
+   {
+    "sent_id": "s0018",
+    "section_id": "S6",
+    "para_idx": 1,
+    "char_span": [
+     573,
+     597
+    ],
+    "section_role": "interpretation",
+    "heading": "## 4 讨论",
+    "text": "该结论证明了绿化干预的有效性，可推广到所有城市。"
+   },
+   {
+    "sent_id": "s0019",
+    "section_id": "S6",
+    "para_idx": 1,
+    "char_span": [
+     597,
+     618
+    ],
+    "section_role": "interpretation",
+    "heading": "## 4 讨论",
+    "text": "需要注意的是，横断面设计无法排除反向因果。"
+   }
+  ],
+  "argument_graph": {
+   "nodes": [
+    {
+     "claim_id": "A1",
+     "sent_id": "s0003",
+     "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+     "section_id": "S2",
+     "section": "## 摘要",
+     "section_role": "interpretation",
+     "source_type": "author",
+     "locator": "MS-6eace5/S2¶1#s0003@79-120"
+    },
+    {
+     "claim_id": "A2",
+     "sent_id": "s0005",
+     "text": "既往研究提示绿地暴露与心理健康相关[1]。",
+     "section_id": "S3",
+     "section": "## 1 引言",
+     "section_role": "introduction",
+     "source_type": "reported",
+     "locator": "MS-6eace5/S3¶1#s0005@149-170"
+    },
+    {
+     "claim_id": "A3",
+     "sent_id": "s0011",
+     "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。",
+     "section_id": "S5",
+     "section": "## 3 结果",
+     "section_role": "evidence",
+     "source_type": "author",
+     "locator": "MS-6eace5/S5¶1#s0011@361-427"
+    },
+    {
+     "claim_id": "A4",
+     "sent_id": "s0012",
+     "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。",
+     "section_id": "S5",
+     "section": "## 3 结果",
+     "section_role": "evidence",
+     "source_type": "author",
+     "locator": "MS-6eace5/S5¶1#s0012@427-460"
+    },
+    {
+     "claim_id": "A5",
+     "sent_id": "s0013",
+     "text": "中介分析提示社会支持可能部分解释该关联。",
+     "section_id": "S5",
+     "section": "## 3 结果",
+     "section_role": "evidence",
+     "source_type": "author",
+     "locator": "MS-6eace5/S5¶1#s0013@460-480"
+    },
+    {
+     "claim_id": "A6",
+     "sent_id": "s0014",
+     "text": "模型准确率 78%。",
+     "section_id": "S5",
+     "section": "## 3 结果",
+     "section_role": "evidence",
+     "source_type": "author",
+     "locator": "MS-6eace5/S5¶1#s0014@480-490"
+    },
+    {
+     "claim_id": "A7",
+     "sent_id": "s0015",
+     "text": "本研究表明绿化通过提升社会支持改善心理健康。",
+     "section_id": "S6",
+     "section": "## 4 讨论",
+     "section_role": "interpretation",
+     "source_type": "author",
+     "locator": "MS-6eace5/S6¶1#s0015@501-523"
+    },
+    {
+     "claim_id": "A8",
+     "sent_id": "s0016",
+     "text": "社会支持是中介变量，因为社会支持与心理健康正相关。",
+     "section_id": "S6",
+     "section": "## 4 讨论",
+     "section_role": "interpretation",
+     "source_type": "author",
+     "locator": "MS-6eace5/S6¶1#s0016@523-548"
+    },
+    {
+     "claim_id": "A9",
+     "sent_id": "s0017",
+     "text": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+     "section_id": "S6",
+     "section": "## 4 讨论",
+     "section_role": "interpretation",
+     "source_type": "author",
+     "locator": "MS-6eace5/S6¶1#s0017@548-573"
+    }
+   ],
+   "edges": [
+    {
+     "from": "A3",
+     "to": "A1",
+     "type": "supports",
+     "overlap": 0.5833,
+     "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A4",
+     "to": "A1",
+     "type": "supports",
+     "overlap": 0.25,
+     "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A3",
+     "to": "A4",
+     "type": "supports",
+     "overlap": 0.6923,
+     "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A3",
+     "to": "A7",
+     "type": "supports",
+     "overlap": 0.35,
+     "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A4",
+     "to": "A7",
+     "type": "supports",
+     "overlap": 0.3,
+     "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A9",
+     "to": "A8",
+     "type": "supports",
+     "overlap": 1.0,
+     "from_locator": "MS-6eace5/S6¶1#s0017@548-573",
+     "from_section": "## 4 讨论",
+     "from_source_type": "author",
+     "note": "解释章节内部强重合（可能构成循环论证）"
+    },
+    {
+     "from": "A4",
+     "to": "A8",
+     "type": "supports",
+     "overlap": 0.6111,
+     "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A3",
+     "to": "A8",
+     "type": "supports",
+     "overlap": 0.5,
+     "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A8",
+     "to": "A9",
+     "type": "supports",
+     "overlap": 1.0,
+     "from_locator": "MS-6eace5/S6¶1#s0016@523-548",
+     "from_section": "## 4 讨论",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A4",
+     "to": "A9",
+     "type": "supports",
+     "overlap": 0.6111,
+     "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    },
+    {
+     "from": "A3",
+     "to": "A9",
+     "type": "supports",
+     "overlap": 0.5,
+     "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+     "from_section": "## 3 结果",
+     "from_source_type": "author"
+    }
+   ],
+   "cycles": [
+    [
+     "A9",
+     "A8",
+     "A9"
+    ]
+   ],
+   "params": {
+    "support_min_overlap": 0.25,
+    "strong_support_overlap": 0.45,
+    "attack_overlap_min": 0.15,
+    "max_edges_per_node": 3,
+    "edge_rule": "overlap=|claim∩premise|/|claim|；证据章节→解释章节，或同章节前文→后文"
+   },
+   "breakage_summary": {
+    "unsupported": 0,
+    "assumption_only": 0,
+    "contradictory": 0,
+    "cycles": 1
+   }
+  },
+  "cross_section_matrix": {
+   "aims": [
+    {
+     "aim": "本研究旨在量化绿地对心理健康的因果效应",
+     "sent_id": "s0002",
+     "locator": "MS-6eace5/S2¶1#s0002@50-79",
+     "section": "## 摘要",
+     "matched_tokens": [
+      "健康",
+      "心理",
+      "理健"
+     ],
+     "coverage": 0.3333,
+     "status": "delivered"
+    },
+    {
+     "aim": "本研究旨在量化绿地暴露对心理健康的因果效应",
+     "sent_id": "s0007",
+     "locator": "MS-6eace5/S3¶1#s0007@191-240",
+     "section": "## 1 引言",
+     "matched_tokens": [
+      "健康",
+      "心理",
+      "理健"
+     ],
+     "coverage": 0.2727,
+     "status": "delivered"
+    },
+    {
+     "aim": "检验社会支持的中介作用",
+     "sent_id": "s0007",
+     "locator": "MS-6eace5/S3¶1#s0007@191-240",
+     "section": "## 1 引言",
+     "matched_tokens": [
+      "中介",
+      "会支",
+      "支持",
+      "社会"
+     ],
+     "coverage": 0.5,
+     "status": "delivered"
+    },
+    {
+     "aim": "并评估社区绿化改造的成本效益。",
+     "sent_id": "s0007",
+     "locator": "MS-6eace5/S3¶1#s0007@191-240",
+     "section": "## 1 引言",
+     "matched_tokens": [
+      "绿化"
+     ],
+     "coverage": 0.1,
+     "status": "partial"
+    }
+   ],
+   "undelivered": [
+    {
+     "aim": "并评估社区绿化改造的成本效益。",
+     "sent_id": "s0007",
+     "locator": "MS-6eace5/S3¶1#s0007@191-240",
+     "section": "## 1 引言",
+     "matched_tokens": [
+      "绿化"
+     ],
+     "coverage": 0.1,
+     "status": "partial"
+    }
+   ],
+   "coverage_threshold": 0.25,
+   "delivery_corpus": "结果章节（Results/结果）全部句子",
+   "role_gate": "目标句只从引言/摘要收集",
+   "note": "交付判定=目标子句内容词在结果章节中的覆盖率（≥阈值且命中≥3 个内容词）；低覆盖也可能是措辞差异，需人工确认"
+  },
+  "coherence": {
+   "methods_vs_results_terms": [],
+   "strength_direction": {
+    "direction": "",
+    "note": "缺摘要或结论章节，未做强度方向比对"
+   },
+   "figure_table_integrity": {
+    "declared": [],
+    "cited": [],
+    "cited_missing": [],
+    "cited_missing_locations": {},
+    "declared_uncited": [],
+    "captions_found": [],
+    "note": "declared 来自题注行（Figure N. / 表N：）与 case figures/tables 声明；cited 来自正文句级扫描"
+   }
+  },
+  "findings": [
+   {
+    "detector": "T3_CIRCULAR",
+    "issue_label": "循环论证",
+    "category": "insufficient_evidence",
+    "category_label": "证据不足",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S6",
+     "heading": "## 4 讨论",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0017",
+     "char_span": [
+      548,
+      573
+     ],
+     "locator": "MS-6eace5/S6¶1#s0017@548-573"
+    },
+    "quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "支撑关系中存在环：A 支撑 B 且 B 支撑 A，论证自我确认",
+    "evidence": {
+     "cycle": [
+      "A9",
+      "A8",
+      "A9"
+     ]
+    },
+    "revision": {
+     "action": "add_evidence",
+     "target_sent_id": "s0017",
+     "target_quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+     "detail": "删除环中一条推论，改为各自独立引用外部证据或本文结果"
+    },
+    "finding_id": "F001"
+   },
+   {
+    "detector": "T4_PROMISE_UNDELIVERED",
+    "issue_label": "引言承诺未交付",
+    "category": "coherence_break",
+    "category_label": "章节衔接断裂",
+    "facet": "section_coherence",
+    "facets": [
+     "section_coherence"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S3",
+     "heading": "## 1 引言",
+     "section_role": "introduction",
+     "para_idx": 1,
+     "sent_id": "s0007",
+     "char_span": [
+      191,
+      240
+     ],
+     "locator": "MS-6eace5/S3¶1#s0007@191-240"
+    },
+    "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "引言声明的目标在结果/方法章节没有对应交付",
+    "evidence": {
+     "aim": "并评估社区绿化改造的成本效益。",
+     "coverage": 0.1,
+     "matched_tokens": [
+      "绿化"
+     ],
+     "delivery_corpus": "结果章节（Results/结果）全部句子"
+    },
+    "revision": {
+     "action": "reconcile_scope",
+     "target_sent_id": "s0007",
+     "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+     "detail": "在结果章节补该目标的对应分析，或把引言目标改写为实际交付的范围（删除未交付子句）",
+     "evidence_needed": "并评估社区绿化改造的成本效益。"
+    },
+    "finding_id": "F002"
+   },
+   {
+    "detector": "T5_STRENGTH_MISMATCH",
+    "issue_label": "结论强度越界",
+    "category": "overclaim",
+    "category_label": "结论超数据",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S2",
+     "heading": "## 摘要",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0004",
+     "char_span": [
+      120,
+      138
+     ],
+     "locator": "MS-6eace5/S2¶1#s0004@120-138"
+    },
+    "quote": "因此绿化改善证明了社区干预的有效性。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+    "evidence": {
+     "strong_terms": [
+      "证明",
+      "证明了"
+     ],
+     "results_hedges": [
+      "相关",
+      "可能",
+      "提示",
+      "关联"
+     ]
+    },
+    "revision": {
+     "action": "downgrade_claim",
+     "target_sent_id": "s0004",
+     "target_quote": "因此绿化改善证明了社区干预的有效性。",
+     "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+     "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+    },
+    "finding_id": "F003"
+   },
+   {
+    "detector": "T5_STRENGTH_MISMATCH",
+    "issue_label": "结论强度越界",
+    "category": "overclaim",
+    "category_label": "结论超数据",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S6",
+     "heading": "## 4 讨论",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0018",
+     "char_span": [
+      573,
+      597
+     ],
+     "locator": "MS-6eace5/S6¶1#s0018@573-597"
+    },
+    "quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+    "evidence": {
+     "strong_terms": [
+      "证明",
+      "证明了"
+     ],
+     "results_hedges": [
+      "相关",
+      "可能",
+      "提示",
+      "关联"
+     ]
+    },
+    "revision": {
+     "action": "downgrade_claim",
+     "target_sent_id": "s0018",
+     "target_quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+     "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+     "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+    },
+    "finding_id": "F004"
+   },
+   {
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "issue_label": "相关当因果",
+    "category": "correlation_as_causation",
+    "category_label": "相关当因果",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S2",
+     "heading": "## 摘要",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0004",
+     "char_span": [
+      120,
+      138
+     ],
+     "locator": "MS-6eace5/S2¶1#s0004@120-138"
+    },
+    "quote": "因此绿化改善证明了社区干预的有效性。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+    "evidence": {
+     "causal_terms": [
+      "改善"
+     ],
+     "correlational_terms": [],
+     "design_kind": "observational",
+     "design_markers_obs": [
+      "横断面",
+      "横断",
+      "问卷设计"
+     ],
+     "design_markers_causal": []
+    },
+    "revision": {
+     "action": "rewrite_sentence",
+     "target_sent_id": "s0004",
+     "target_quote": "因此绿化改善证明了社区干预的有效性。",
+     "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+     "downgrade_to": "关联表述（『与…相关』）"
+    },
+    "finding_id": "F005"
+   },
+   {
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "issue_label": "相关当因果",
+    "category": "correlation_as_causation",
+    "category_label": "相关当因果",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S3",
+     "heading": "## 1 引言",
+     "section_role": "introduction",
+     "para_idx": 1,
+     "sent_id": "s0006",
+     "char_span": [
+      170,
+      191
+     ],
+     "locator": "MS-6eace5/S3¶1#s0006@170-191"
+    },
+    "quote": "然而，多数研究为横断面设计，因果证据有限。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+    "evidence": {
+     "causal_terms": [
+      "因果"
+     ],
+     "correlational_terms": [],
+     "design_kind": "observational",
+     "design_markers_obs": [
+      "横断面",
+      "横断",
+      "问卷设计"
+     ],
+     "design_markers_causal": []
+    },
+    "revision": {
+     "action": "rewrite_sentence",
+     "target_sent_id": "s0006",
+     "target_quote": "然而，多数研究为横断面设计，因果证据有限。",
+     "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+     "downgrade_to": "关联表述（『与…相关』）"
+    },
+    "finding_id": "F006"
+   },
+   {
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "issue_label": "相关当因果",
+    "category": "correlation_as_causation",
+    "category_label": "相关当因果",
+    "facet": "argument_chain",
+    "facets": [
+     "argument_chain"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S6",
+     "heading": "## 4 讨论",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0015",
+     "char_span": [
+      501,
+      523
+     ],
+     "locator": "MS-6eace5/S6¶1#s0015@501-523"
+    },
+    "quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+    "evidence": {
+     "causal_terms": [
+      "改善",
+      "提升"
+     ],
+     "correlational_terms": [],
+     "design_kind": "observational",
+     "design_markers_obs": [
+      "横断面",
+      "横断",
+      "问卷设计"
+     ],
+     "design_markers_causal": []
+    },
+    "revision": {
+     "action": "rewrite_sentence",
+     "target_sent_id": "s0015",
+     "target_quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+     "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+     "downgrade_to": "关联表述（『与…相关』）"
+    },
+    "finding_id": "F007"
+   },
+   {
+    "detector": "T7_NUM_CROSS_SECTION",
+    "issue_label": "跨章节数值不一致",
+    "category": "fact_error",
+    "category_label": "事实错误",
+    "facet": "fact_check",
+    "facets": [
+     "fact_check",
+     "stats_reporting"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true; affects_reproducibility=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": true,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S2",
+     "heading": "## 摘要",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0003",
+     "char_span": [
+      79,
+      120
+     ],
+     "locator": "MS-6eace5/S2¶1#s0003@79-120"
+    },
+    "quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "同一指标在多个章节取值不一致，结论依赖的数值来源不明",
+    "evidence": {
+     "metric": "准确率",
+     "values": [
+      0.78,
+      0.82
+     ],
+     "occurrences": [
+      {
+       "value": 0.82,
+       "section": "## 摘要",
+       "sent_id": "s0003",
+       "locator": "MS-6eace5/S2¶1#s0003@79-120"
+      },
+      {
+       "value": 0.78,
+       "section": "## 3 结果",
+       "sent_id": "s0014",
+       "locator": "MS-6eace5/S5¶1#s0014@480-490"
+      }
+     ]
+    },
+    "revision": {
+     "action": "reconcile_numbers",
+     "target_sent_id": "s0003",
+     "target_quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+     "detail": "统一指标 准确率 的取值（[0.78, 0.82]），每一处注明唯一来源（表号/图号/数据版本）",
+     "values": [
+      0.78,
+      0.82
+     ]
+    },
+    "finding_id": "F008"
+   },
+   {
+    "detector": "T9_METHOD_ANSWER_GAP",
+    "issue_label": "方法无法回答研究问题",
+    "category": "method_answer_gap",
+    "category_label": "方法无法回答问题",
+    "facet": "method_design",
+    "facets": [
+     "method_design"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S2",
+     "heading": "## 摘要",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0002",
+     "char_span": [
+      50,
+      79
+     ],
+     "locator": "MS-6eace5/S2¶1#s0002@50-79"
+    },
+    "quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+    "evidence": {
+     "aim": "本研究旨在量化绿地对心理健康的因果效应",
+     "design_kind": "observational",
+     "design_markers_obs": [
+      "横断面",
+      "横断",
+      "问卷设计"
+     ],
+     "design_markers_causal": []
+    },
+    "revision": {
+     "action": "realign_design",
+     "target_sent_id": "s0002",
+     "target_quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+     "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+     "evidence_needed": "因果识别设计或改写后的目标句"
+    },
+    "finding_id": "F009"
+   },
+   {
+    "detector": "T9_METHOD_ANSWER_GAP",
+    "issue_label": "方法无法回答研究问题",
+    "category": "method_answer_gap",
+    "category_label": "方法无法回答问题",
+    "facet": "method_design",
+    "facets": [
+     "method_design"
+    ],
+    "severity": "major",
+    "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+    "severity_answers": {
+     "affects_main_conclusion": true,
+     "affects_reproducibility": false,
+     "fixable": true
+    },
+    "location": {
+     "doc_id": "MS-6eace5",
+     "section_id": "S3",
+     "heading": "## 1 引言",
+     "section_role": "introduction",
+     "para_idx": 1,
+     "sent_id": "s0007",
+     "char_span": [
+      191,
+      240
+     ],
+     "locator": "MS-6eace5/S3¶1#s0007@191-240"
+    },
+    "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "quote_verified": true,
+    "source_type": "author",
+    "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+    "evidence": {
+     "aim": "本研究旨在量化绿地暴露对心理健康的因果效应",
+     "design_kind": "observational",
+     "design_markers_obs": [
+      "横断面",
+      "横断",
+      "问卷设计"
+     ],
+     "design_markers_causal": []
+    },
+    "revision": {
+     "action": "realign_design",
+     "target_sent_id": "s0007",
+     "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+     "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+     "evidence_needed": "因果识别设计或改写后的目标句"
+    },
+    "finding_id": "F010"
+   }
+  ],
+  "suppressed": [
+   {
+    "suppressed_id": "S001",
+    "guard_id": "G_LIMITATION_SECTION",
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "reason": "句内自述局限（命中：无法排除, 需要注意的是），不按作者缺陷判",
+    "location": {
+     "doc_id": null,
+     "section_id": "S6",
+     "heading": "## 4 讨论",
+     "section_role": "interpretation",
+     "para_idx": 1,
+     "sent_id": "s0019",
+     "char_span": [
+      597,
+      618
+     ],
+     "locator": "MS-6eace5/S6¶1#s0019@597-618"
+    },
+    "quote": "需要注意的是，横断面设计无法排除反向因果。",
+    "quote_verified": true
+   }
+  ],
+  "references": [],
+  "summary": {
+   "claims": 9,
+   "edges": 11,
+   "cycles": 1,
+   "sentences": 19,
+   "sections": 6,
+   "findings": 10,
+   "by_detector": {
+    "T3_CIRCULAR": 1,
+    "T4_PROMISE_UNDELIVERED": 1,
+    "T5_STRENGTH_MISMATCH": 2,
+    "T6_CAUSAL_IN_CORRELATIONAL": 3,
+    "T7_NUM_CROSS_SECTION": 1,
+    "T9_METHOD_ANSWER_GAP": 2
+   },
+   "by_severity": {
+    "major": 10
+   },
+   "by_category": {
+    "insufficient_evidence": 1,
+    "coherence_break": 1,
+    "overclaim": 2,
+    "correlation_as_causation": 3,
+    "fact_error": 1,
+    "method_answer_gap": 2
+   },
+   "by_facet": {
+    "argument_chain": 6,
+    "section_coherence": 1,
+    "fact_check": 1,
+    "method_design": 2
+   },
+   "source_type_counts": {
+    "author": 8,
+    "reported": 1,
+    "assumption": 0
+   },
+   "suppressed": 1,
+   "by_guard": {
+    "G_LIMITATION_SECTION": 1
+   },
+   "design_kind": "observational"
+  },
+  "fix_plan": [
+   {
+    "finding_id": "F001",
+    "severity": "major",
+    "detector": "T3_CIRCULAR",
+    "locator": "MS-6eace5/S6¶1#s0017@548-573",
+    "action": "删除环中一条推论，改为各自独立引用外部证据或本文结果"
+   },
+   {
+    "finding_id": "F002",
+    "severity": "major",
+    "detector": "T4_PROMISE_UNDELIVERED",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "action": "在结果章节补该目标的对应分析，或把引言目标改写为实际交付的范围（删除未交付子句）"
+   },
+   {
+    "finding_id": "F003",
+    "severity": "major",
+    "detector": "T5_STRENGTH_MISMATCH",
+    "locator": "MS-6eace5/S2¶1#s0004@120-138",
+    "action": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据"
+   },
+   {
+    "finding_id": "F004",
+    "severity": "major",
+    "detector": "T5_STRENGTH_MISMATCH",
+    "locator": "MS-6eace5/S6¶1#s0018@573-597",
+    "action": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据"
+   },
+   {
+    "finding_id": "F005",
+    "severity": "major",
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "locator": "MS-6eace5/S2¶1#s0004@120-138",
+    "action": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句"
+   },
+   {
+    "finding_id": "F006",
+    "severity": "major",
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "locator": "MS-6eace5/S3¶1#s0006@170-191",
+    "action": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句"
+   },
+   {
+    "finding_id": "F007",
+    "severity": "major",
+    "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+    "locator": "MS-6eace5/S6¶1#s0015@501-523",
+    "action": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句"
+   },
+   {
+    "finding_id": "F008",
+    "severity": "major",
+    "detector": "T7_NUM_CROSS_SECTION",
+    "locator": "MS-6eace5/S2¶1#s0003@79-120",
+    "action": "统一指标 准确率 的取值（[0.78, 0.82]），每一处注明唯一来源（表号/图号/数据版本）"
+   },
+   {
+    "finding_id": "F009",
+    "severity": "major",
+    "detector": "T9_METHOD_ANSWER_GAP",
+    "locator": "MS-6eace5/S2¶1#s0002@50-79",
+    "action": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）"
+   },
+   {
+    "finding_id": "F010",
+    "severity": "major",
+    "detector": "T9_METHOD_ANSWER_GAP",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "action": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）"
+   }
+  ]
+ },
+ "问题清单": [
+  {
+   "detector": "T3_CIRCULAR",
+   "issue_label": "循环论证",
+   "category": "insufficient_evidence",
+   "category_label": "证据不足",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0017",
+    "char_span": [
+     548,
+     573
+    ],
+    "locator": "MS-6eace5/S6¶1#s0017@548-573"
+   },
+   "quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "支撑关系中存在环：A 支撑 B 且 B 支撑 A，论证自我确认",
+   "evidence": {
+    "cycle": [
+     "A9",
+     "A8",
+     "A9"
+    ]
+   },
+   "revision": {
+    "action": "add_evidence",
+    "target_sent_id": "s0017",
+    "target_quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+    "detail": "删除环中一条推论，改为各自独立引用外部证据或本文结果"
+   },
+   "finding_id": "F001"
+  },
+  {
+   "detector": "T4_PROMISE_UNDELIVERED",
+   "issue_label": "引言承诺未交付",
+   "category": "coherence_break",
+   "category_label": "章节衔接断裂",
+   "facet": "section_coherence",
+   "facets": [
+    "section_coherence"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0007",
+    "char_span": [
+     191,
+     240
+    ],
+    "locator": "MS-6eace5/S3¶1#s0007@191-240"
+   },
+   "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言声明的目标在结果/方法章节没有对应交付",
+   "evidence": {
+    "aim": "并评估社区绿化改造的成本效益。",
+    "coverage": 0.1,
+    "matched_tokens": [
+     "绿化"
+    ],
+    "delivery_corpus": "结果章节（Results/结果）全部句子"
+   },
+   "revision": {
+    "action": "reconcile_scope",
+    "target_sent_id": "s0007",
+    "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "detail": "在结果章节补该目标的对应分析，或把引言目标改写为实际交付的范围（删除未交付子句）",
+    "evidence_needed": "并评估社区绿化改造的成本效益。"
+   },
+   "finding_id": "F002"
+  },
+  {
+   "detector": "T5_STRENGTH_MISMATCH",
+   "issue_label": "结论强度越界",
+   "category": "overclaim",
+   "category_label": "结论超数据",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0004",
+    "char_span": [
+     120,
+     138
+    ],
+    "locator": "MS-6eace5/S2¶1#s0004@120-138"
+   },
+   "quote": "因此绿化改善证明了社区干预的有效性。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+   "evidence": {
+    "strong_terms": [
+     "证明",
+     "证明了"
+    ],
+    "results_hedges": [
+     "相关",
+     "可能",
+     "提示",
+     "关联"
+    ]
+   },
+   "revision": {
+    "action": "downgrade_claim",
+    "target_sent_id": "s0004",
+    "target_quote": "因此绿化改善证明了社区干预的有效性。",
+    "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+    "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+   },
+   "finding_id": "F003"
+  },
+  {
+   "detector": "T5_STRENGTH_MISMATCH",
+   "issue_label": "结论强度越界",
+   "category": "overclaim",
+   "category_label": "结论超数据",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0018",
+    "char_span": [
+     573,
+     597
+    ],
+    "locator": "MS-6eace5/S6¶1#s0018@573-597"
+   },
+   "quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+   "evidence": {
+    "strong_terms": [
+     "证明",
+     "证明了"
+    ],
+    "results_hedges": [
+     "相关",
+     "可能",
+     "提示",
+     "关联"
+    ]
+   },
+   "revision": {
+    "action": "downgrade_claim",
+    "target_sent_id": "s0018",
+    "target_quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+    "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+    "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+   },
+   "finding_id": "F004"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0004",
+    "char_span": [
+     120,
+     138
+    ],
+    "locator": "MS-6eace5/S2¶1#s0004@120-138"
+   },
+   "quote": "因此绿化改善证明了社区干预的有效性。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "改善"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0004",
+    "target_quote": "因此绿化改善证明了社区干预的有效性。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F005"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0006",
+    "char_span": [
+     170,
+     191
+    ],
+    "locator": "MS-6eace5/S3¶1#s0006@170-191"
+   },
+   "quote": "然而，多数研究为横断面设计，因果证据有限。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "因果"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0006",
+    "target_quote": "然而，多数研究为横断面设计，因果证据有限。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F006"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0015",
+    "char_span": [
+     501,
+     523
+    ],
+    "locator": "MS-6eace5/S6¶1#s0015@501-523"
+   },
+   "quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "改善",
+     "提升"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0015",
+    "target_quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F007"
+  },
+  {
+   "detector": "T7_NUM_CROSS_SECTION",
+   "issue_label": "跨章节数值不一致",
+   "category": "fact_error",
+   "category_label": "事实错误",
+   "facet": "fact_check",
+   "facets": [
+    "fact_check",
+    "stats_reporting"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true; affects_reproducibility=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0003",
+    "char_span": [
+     79,
+     120
+    ],
+    "locator": "MS-6eace5/S2¶1#s0003@79-120"
+   },
+   "quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "同一指标在多个章节取值不一致，结论依赖的数值来源不明",
+   "evidence": {
+    "metric": "准确率",
+    "values": [
+     0.78,
+     0.82
+    ],
+    "occurrences": [
+     {
+      "value": 0.82,
+      "section": "## 摘要",
+      "sent_id": "s0003",
+      "locator": "MS-6eace5/S2¶1#s0003@79-120"
+     },
+     {
+      "value": 0.78,
+      "section": "## 3 结果",
+      "sent_id": "s0014",
+      "locator": "MS-6eace5/S5¶1#s0014@480-490"
+     }
+    ]
+   },
+   "revision": {
+    "action": "reconcile_numbers",
+    "target_sent_id": "s0003",
+    "target_quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+    "detail": "统一指标 准确率 的取值（[0.78, 0.82]），每一处注明唯一来源（表号/图号/数据版本）",
+    "values": [
+     0.78,
+     0.82
+    ]
+   },
+   "finding_id": "F008"
+  },
+  {
+   "detector": "T9_METHOD_ANSWER_GAP",
+   "issue_label": "方法无法回答研究问题",
+   "category": "method_answer_gap",
+   "category_label": "方法无法回答问题",
+   "facet": "method_design",
+   "facets": [
+    "method_design"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0002",
+    "char_span": [
+     50,
+     79
+    ],
+    "locator": "MS-6eace5/S2¶1#s0002@50-79"
+   },
+   "quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+   "evidence": {
+    "aim": "本研究旨在量化绿地对心理健康的因果效应",
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "realign_design",
+    "target_sent_id": "s0002",
+    "target_quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+    "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+    "evidence_needed": "因果识别设计或改写后的目标句"
+   },
+   "finding_id": "F009"
+  },
+  {
+   "detector": "T9_METHOD_ANSWER_GAP",
+   "issue_label": "方法无法回答研究问题",
+   "category": "method_answer_gap",
+   "category_label": "方法无法回答问题",
+   "facet": "method_design",
+   "facets": [
+    "method_design"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0007",
+    "char_span": [
+     191,
+     240
+    ],
+    "locator": "MS-6eace5/S3¶1#s0007@191-240"
+   },
+   "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+   "evidence": {
+    "aim": "本研究旨在量化绿地暴露对心理健康的因果效应",
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "realign_design",
+    "target_sent_id": "s0007",
+    "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+    "evidence_needed": "因果识别设计或改写后的目标句"
+   },
+   "finding_id": "F010"
+  }
+ ],
+ "证据矩阵": {
+  "coverage": {
+   "extraction_method": "inline_text",
+   "source": "case.manuscript",
+   "source_sha256": "",
+   "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+   "total_chars": 619,
+   "declared_total_chars": null,
+   "char_coverage": null,
+   "sentence_count": 19,
+   "section_count": 6,
+   "sections_present": {
+    "abstract": true,
+    "introduction": true,
+    "methods": true,
+    "results": true,
+    "discussion": true,
+    "conclusion": false
+   },
+   "core_sections_missing": [
+    "conclusion"
+   ],
+   "truncated": false,
+   "truncation_evidence": [],
+   "truncation_marker_examples": [],
+   "unparsed_materials": [],
+   "provenance": null,
+   "note": "全文口径：truncated 或核心章节缺失时 status 不写 complete；char_coverage 只在平台声明总字符数时给出"
+  },
+  "extraction": {
+   "extraction_method": "inline_text",
+   "source": "case.manuscript",
+   "source_sha256": "",
+   "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+   "n_pages": null,
+   "text_layers": null,
+   "materials_audit": [],
+   "unparsed": [],
+   "declared_total_chars": null
+  },
+  "facets_selection": {
+   "requested": [
+    "fact_check",
+    "citation_support",
+    "method_design",
+    "stats_reporting",
+    "argument_chain",
+    "section_coherence",
+    "academic_norm"
+   ],
+   "mode": "default_all",
+   "unknown_requests": [],
+   "matched_by": "任务未点名任何维度，默认全量并如实记录"
+  },
+  "facets_status": [
+   {
+    "facet": "fact_check",
+    "label": "事实核验",
+    "status": "executed",
+    "detectors": [
+     "T7_NUM_CROSS_SECTION",
+     "T11_FIGTAB_MISSING",
+     "T12_SIGN_CONFLICT"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": "只核验稿件内部可复算的事实（数值、图表编号、系数方向）；外部事实需检索，不在本 skill 能力内，缺口进 uncertainty"
+   },
+   {
+    "facet": "citation_support",
+    "label": "引用支持",
+    "status": "executed",
+    "detectors": [
+     "T8_CONTRADICTORY_EDGE"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": "离线无法读取被引文献原文：仅检查文内相反证据是否被结论处理；『所引文献是否支持该句』需外部证据，标为待复核"
+   },
+   {
+    "facet": "method_design",
+    "label": "方法设计",
+    "status": "executed",
+    "detectors": [
+     "T9_METHOD_ANSWER_GAP"
+    ],
+    "findings": 2,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "stats_reporting",
+    "label": "统计报告",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T12_SIGN_CONFLICT",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "argument_chain",
+    "label": "论证链",
+    "status": "executed",
+    "detectors": [
+     "T1_UNSUPPORTED_CLAIM",
+     "T2_ASSUMPTION_ONLY",
+     "T3_CIRCULAR",
+     "T5_STRENGTH_MISMATCH",
+     "T6_CAUSAL_IN_CORRELATIONAL"
+    ],
+    "findings": 6,
+    "suppressed": 1,
+    "boundary": ""
+   },
+   {
+    "facet": "section_coherence",
+    "label": "章节衔接",
+    "status": "executed",
+    "detectors": [
+     "T4_PROMISE_UNDELIVERED",
+     "T11_FIGTAB_MISSING",
+     "T13_STRENGTH_DIRECTION_MISMATCH",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "academic_norm",
+    "label": "学术规范",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T11_FIGTAB_MISSING"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": ""
+   }
+  ],
+  "graph_params": {
+   "support_min_overlap": 0.25,
+   "strong_support_overlap": 0.45,
+   "attack_overlap_min": 0.15,
+   "max_edges_per_node": 3,
+   "edge_rule": "overlap=|claim∩premise|/|claim|；证据章节→解释章节，或同章节前文→后文"
+  },
+  "edges": [
+   {
+    "from": "A3",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.5833,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.25,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A4",
+    "type": "supports",
+    "overlap": 0.6923,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.35,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.3,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A9",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0017@548-573",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author",
+    "note": "解释章节内部强重合（可能构成循环论证）"
+   },
+   {
+    "from": "A4",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A8",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0016@523-548",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   }
+  ],
+  "guards": {
+   "suppressed": [
+    {
+     "suppressed_id": "S001",
+     "guard_id": "G_LIMITATION_SECTION",
+     "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+     "reason": "句内自述局限（命中：无法排除, 需要注意的是），不按作者缺陷判",
+     "location": {
+      "doc_id": null,
+      "section_id": "S6",
+      "heading": "## 4 讨论",
+      "section_role": "interpretation",
+      "para_idx": 1,
+      "sent_id": "s0019",
+      "char_span": [
+       597,
+       618
+      ],
+      "locator": "MS-6eace5/S6¶1#s0019@597-618"
+     },
+     "quote": "需要注意的是，横断面设计无法排除反向因果。",
+     "quote_verified": true
+    }
+   ],
+   "rules": [
+    {
+     "id": "G_INTENDED_CONTROL",
+     "when": "句子或所在章节含有意对照标记（negative control/对照组/安慰剂/as expected）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T12_SIGN_CONFLICT",
+      "T5_STRENGTH_MISMATCH",
+      "T7_NUM_CROSS_SECTION",
+      "T1_UNSUPPORTED_CLAIM"
+     ]
+    },
+    {
+     "id": "G_EXPLICIT_ASSUMPTION",
+     "when": "句为作者显式标注的假设情形（hypothesize/assume/假设/推测）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T5_STRENGTH_MISMATCH",
+      "T1_UNSUPPORTED_CLAIM",
+      "T7_NUM_CROSS_SECTION",
+      "T12_SIGN_CONFLICT"
+     ]
+    },
+    {
+     "id": "G_REPORTED_VIEW",
+     "when": "句为转述他人观点（et al/既往研究/reported that/文献报道）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T5_STRENGTH_MISMATCH",
+      "T1_UNSUPPORTED_CLAIM",
+      "T7_NUM_CROSS_SECTION",
+      "T12_SIGN_CONFLICT",
+      "T9_METHOD_ANSWER_GAP"
+     ]
+    },
+    {
+     "id": "G_LIMITATION_SECTION",
+     "when": "问题出现在 Limitations/局限/不足 段落",
+     "action": "suppress",
+     "applies_to": [
+      "ALL"
+     ]
+    }
+   ],
+   "note": "命中白名单的候选不出现在 findings，可在 suppressed 里核对『该报未报』质疑"
+  },
+  "design_kind": "observational",
+  "rules_hashes": {
+   "argument_rules.json": "9c5a0c55e2f69de46496c55a32cc77f2b8e9814a2eb572bfd5fc4e11fffd5c01",
+   "contract_routing.json": "be1554aa8aea75805e8c5154976d4f23d2d808b2b22d945f1610c570c38eb75d",
+   "facets.json": "c016e3db7c10dfa09c77e64bb9cc0968ac46972541700e5aeabb1c837dce6c09",
+   "reason_codes.json": "ce9b1b867d947d2790897b2ecf8ce71aea853023f556ea8b53a969eaabdc09f6",
+   "severity.json": "46f77a059dc6c9c65e15d082766316fc327e851f5d1bf62a3d59b4b55f53c939"
+  },
+  "scope": {
+   "claims": 9,
+   "edges": 11,
+   "detectors_run": [
+    "T7_NUM_CROSS_SECTION",
+    "T11_FIGTAB_MISSING",
+    "T12_SIGN_CONFLICT",
+    "T8_CONTRADICTORY_EDGE",
+    "T9_METHOD_ANSWER_GAP",
+    "T10_STATS_REPORTING",
+    "T14_METHODS_RESULTS_TERMS",
+    "T1_UNSUPPORTED_CLAIM",
+    "T2_ASSUMPTION_ONLY",
+    "T3_CIRCULAR",
+    "T5_STRENGTH_MISMATCH",
+    "T6_CAUSAL_IN_CORRELATIONAL",
+    "T4_PROMISE_UNDELIVERED",
+    "T13_STRENGTH_DIRECTION_MISMATCH"
+   ],
+   "note": "边由重合度阈值决定；未建边不等于无支撑（见 uncertainty）"
+  }
+ },
+ "不确定性": [
+  {
+   "item": "论证边判定",
+   "reason": "边由 token 重合度阈值决定：同义改写会漏建边，『无支撑』类发现需人工确认（未建边 ≠ 无支撑）"
+  },
+  {
+   "item": "意图判断",
+   "reason": "作者意图不可知：显式假设/转述他人/有意对照已按白名单抑制并记录 suppressed，其余按作者主张处理"
+  },
+  {
+   "item": "跨章节数值",
+   "reason": "只比对 rules 里 metric_terms 可抽取的指标数值；图内/表格内数值不可读"
+  },
+  {
+   "item": "引用支持",
+   "reason": "离线无法读取被引文献原文：仅能检查文内相反证据处理情况，『所引文献是否支持该句』为待复核"
+  }
+ ],
+ "状态说明": {
+  "overall": "complete",
+  "completed": [
+   "全文获取与覆盖率登记",
+   "章节切分与句级索引",
+   "审查维度动态绑定",
+   "主张抽取与来源三分类",
+   "论证图构建与断裂点检测",
+   "跨章节一致性检查",
+   "分型发现与严重度分级",
+   "白名单抑制（suppressed）"
+  ],
+  "unmet": [],
+  "notes": []
+ },
+ "claims": [
+  {
+   "claim_id": "A1",
+   "sent_id": "s0003",
+   "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+   "section_id": "S2",
+   "section": "## 摘要",
+   "section_role": "interpretation",
+   "char_span": [
+    79,
+    120
+   ],
+   "locator": "MS-6eace5/S2¶1#s0003@79-120",
+   "claim_cues": [
+    "发现"
+   ],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A2",
+   "sent_id": "s0005",
+   "text": "既往研究提示绿地暴露与心理健康相关[1]。",
+   "section_id": "S3",
+   "section": "## 1 引言",
+   "section_role": "introduction",
+   "char_span": [
+    149,
+    170
+   ],
+   "locator": "MS-6eace5/S3¶1#s0005@149-170",
+   "claim_cues": [
+    "提示"
+   ],
+   "source_type": "reported",
+   "source_cues": [
+    "既往研究"
+   ],
+   "has_citation": true,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A3",
+   "sent_id": "s0011",
+   "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。",
+   "section_id": "S5",
+   "section": "## 3 结果",
+   "section_role": "evidence",
+   "char_span": [
+    361,
+    427
+   ],
+   "locator": "MS-6eace5/S5¶1#s0011@361-427",
+   "claim_cues": [],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A4",
+   "sent_id": "s0012",
+   "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。",
+   "section_id": "S5",
+   "section": "## 3 结果",
+   "section_role": "evidence",
+   "char_span": [
+    427,
+    460
+   ],
+   "locator": "MS-6eace5/S5¶1#s0012@427-460",
+   "claim_cues": [],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A5",
+   "sent_id": "s0013",
+   "text": "中介分析提示社会支持可能部分解释该关联。",
+   "section_id": "S5",
+   "section": "## 3 结果",
+   "section_role": "evidence",
+   "char_span": [
+    460,
+    480
+   ],
+   "locator": "MS-6eace5/S5¶1#s0013@460-480",
+   "claim_cues": [
+    "提示"
+   ],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A6",
+   "sent_id": "s0014",
+   "text": "模型准确率 78%。",
+   "section_id": "S5",
+   "section": "## 3 结果",
+   "section_role": "evidence",
+   "char_span": [
+    480,
+    490
+   ],
+   "locator": "MS-6eace5/S5¶1#s0014@480-490",
+   "claim_cues": [],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A7",
+   "sent_id": "s0015",
+   "text": "本研究表明绿化通过提升社会支持改善心理健康。",
+   "section_id": "S6",
+   "section": "## 4 讨论",
+   "section_role": "interpretation",
+   "char_span": [
+    501,
+    523
+   ],
+   "locator": "MS-6eace5/S6¶1#s0015@501-523",
+   "claim_cues": [
+    "表明"
+   ],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A8",
+   "sent_id": "s0016",
+   "text": "社会支持是中介变量，因为社会支持与心理健康正相关。",
+   "section_id": "S6",
+   "section": "## 4 讨论",
+   "section_role": "interpretation",
+   "char_span": [
+    523,
+    548
+   ],
+   "locator": "MS-6eace5/S6¶1#s0016@523-548",
+   "claim_cues": [],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  },
+  {
+   "claim_id": "A9",
+   "sent_id": "s0017",
+   "text": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+   "section_id": "S6",
+   "section": "## 4 讨论",
+   "section_role": "interpretation",
+   "char_span": [
+    548,
+    573
+   ],
+   "locator": "MS-6eace5/S6¶1#s0017@548-573",
+   "claim_cues": [],
+   "source_type": "author",
+   "source_cues": [],
+   "has_citation": false,
+   "is_premise_like": false
+  }
+ ],
+ "sentence_index": [
+  {
+   "sent_id": "s0001",
+   "section_id": "S2",
+   "para_idx": 1,
+   "char_span": [
+    29,
+    50
+   ],
+   "section_role": "interpretation",
+   "heading": "## 摘要",
+   "text": "城市绿化与居民心理健康的关系受到广泛关注。"
+  },
+  {
+   "sent_id": "s0002",
+   "section_id": "S2",
+   "para_idx": 1,
+   "char_span": [
+    50,
+    79
+   ],
+   "section_role": "interpretation",
+   "heading": "## 摘要",
+   "text": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。"
+  },
+  {
+   "sent_id": "s0003",
+   "section_id": "S2",
+   "para_idx": 1,
+   "char_span": [
+    79,
+    120
+   ],
+   "section_role": "interpretation",
+   "heading": "## 摘要",
+   "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。"
+  },
+  {
+   "sent_id": "s0004",
+   "section_id": "S2",
+   "para_idx": 1,
+   "char_span": [
+    120,
+    138
+   ],
+   "section_role": "interpretation",
+   "heading": "## 摘要",
+   "text": "因此绿化改善证明了社区干预的有效性。"
+  },
+  {
+   "sent_id": "s0005",
+   "section_id": "S3",
+   "para_idx": 1,
+   "char_span": [
+    149,
+    170
+   ],
+   "section_role": "introduction",
+   "heading": "## 1 引言",
+   "text": "既往研究提示绿地暴露与心理健康相关[1]。"
+  },
+  {
+   "sent_id": "s0006",
+   "section_id": "S3",
+   "para_idx": 1,
+   "char_span": [
+    170,
+    191
+   ],
+   "section_role": "introduction",
+   "heading": "## 1 引言",
+   "text": "然而，多数研究为横断面设计，因果证据有限。"
+  },
+  {
+   "sent_id": "s0007",
+   "section_id": "S3",
+   "para_idx": 1,
+   "char_span": [
+    191,
+    240
+   ],
+   "section_role": "introduction",
+   "heading": "## 1 引言",
+   "text": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。"
+  },
+  {
+   "sent_id": "s0008",
+   "section_id": "S4",
+   "para_idx": 1,
+   "char_span": [
+    251,
+    283
+   ],
+   "section_role": "evidence",
+   "heading": "## 2 方法",
+   "text": "研究采用横断面问卷设计，覆盖 12 个社区、共 480 名居民。"
+  },
+  {
+   "sent_id": "s0009",
+   "section_id": "S4",
+   "para_idx": 1,
+   "char_span": [
+    283,
+    322
+   ],
+   "section_role": "evidence",
+   "heading": "## 2 方法",
+   "text": "绿地暴露以社区绿化覆盖率衡量，心理健康以量表得分衡量，社会支持以自评量表衡量。"
+  },
+  {
+   "sent_id": "s0010",
+   "section_id": "S4",
+   "para_idx": 1,
+   "char_span": [
+    322,
+    342
+   ],
+   "section_role": "evidence",
+   "heading": "## 2 方法",
+   "text": "分析采用线性回归，控制年龄、收入与教育。"
+  },
+  {
+   "sent_id": "s0011",
+   "section_id": "S5",
+   "para_idx": 1,
+   "char_span": [
+    361,
+    427
+   ],
+   "section_role": "evidence",
+   "heading": "## 3 结果",
+   "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。"
+  },
+  {
+   "sent_id": "s0012",
+   "section_id": "S5",
+   "para_idx": 1,
+   "char_span": [
+    427,
+    460
+   ],
+   "section_role": "evidence",
+   "heading": "## 3 结果",
+   "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。"
+  },
+  {
+   "sent_id": "s0013",
+   "section_id": "S5",
+   "para_idx": 1,
+   "char_span": [
+    460,
+    480
+   ],
+   "section_role": "evidence",
+   "heading": "## 3 结果",
+   "text": "中介分析提示社会支持可能部分解释该关联。"
+  },
+  {
+   "sent_id": "s0014",
+   "section_id": "S5",
+   "para_idx": 1,
+   "char_span": [
+    480,
+    490
+   ],
+   "section_role": "evidence",
+   "heading": "## 3 结果",
+   "text": "模型准确率 78%。"
+  },
+  {
+   "sent_id": "s0015",
+   "section_id": "S6",
+   "para_idx": 1,
+   "char_span": [
+    501,
+    523
+   ],
+   "section_role": "interpretation",
+   "heading": "## 4 讨论",
+   "text": "本研究表明绿化通过提升社会支持改善心理健康。"
+  },
+  {
+   "sent_id": "s0016",
+   "section_id": "S6",
+   "para_idx": 1,
+   "char_span": [
+    523,
+    548
+   ],
+   "section_role": "interpretation",
+   "heading": "## 4 讨论",
+   "text": "社会支持是中介变量，因为社会支持与心理健康正相关。"
+  },
+  {
+   "sent_id": "s0017",
+   "section_id": "S6",
+   "para_idx": 1,
+   "char_span": [
+    548,
+    573
+   ],
+   "section_role": "interpretation",
+   "heading": "## 4 讨论",
+   "text": "社会支持与心理健康正相关，因为社会支持是中介变量。"
+  },
+  {
+   "sent_id": "s0018",
+   "section_id": "S6",
+   "para_idx": 1,
+   "char_span": [
+    573,
+    597
+   ],
+   "section_role": "interpretation",
+   "heading": "## 4 讨论",
+   "text": "该结论证明了绿化干预的有效性，可推广到所有城市。"
+  },
+  {
+   "sent_id": "s0019",
+   "section_id": "S6",
+   "para_idx": 1,
+   "char_span": [
+    597,
+    618
+   ],
+   "section_role": "interpretation",
+   "heading": "## 4 讨论",
+   "text": "需要注意的是，横断面设计无法排除反向因果。"
+  }
+ ],
+ "argument_graph": {
+  "nodes": [
+   {
+    "claim_id": "A1",
+    "sent_id": "s0003",
+    "text": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+    "section_id": "S2",
+    "section": "## 摘要",
+    "section_role": "interpretation",
+    "source_type": "author",
+    "locator": "MS-6eace5/S2¶1#s0003@79-120"
+   },
+   {
+    "claim_id": "A2",
+    "sent_id": "s0005",
+    "text": "既往研究提示绿地暴露与心理健康相关[1]。",
+    "section_id": "S3",
+    "section": "## 1 引言",
+    "section_role": "introduction",
+    "source_type": "reported",
+    "locator": "MS-6eace5/S3¶1#s0005@149-170"
+   },
+   {
+    "claim_id": "A3",
+    "sent_id": "s0011",
+    "text": "绿化覆盖率与心理健康得分正相关（β = 0.21，p = 0.008），与社会支持亦正相关（β = 0.18，p = 0.011）。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "source_type": "author",
+    "locator": "MS-6eace5/S5¶1#s0011@361-427"
+   },
+   {
+    "claim_id": "A4",
+    "sent_id": "s0012",
+    "text": "社会支持与心理健康正相关（β = 0.27，p = 0.003）。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "source_type": "author",
+    "locator": "MS-6eace5/S5¶1#s0012@427-460"
+   },
+   {
+    "claim_id": "A5",
+    "sent_id": "s0013",
+    "text": "中介分析提示社会支持可能部分解释该关联。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "source_type": "author",
+    "locator": "MS-6eace5/S5¶1#s0013@460-480"
+   },
+   {
+    "claim_id": "A6",
+    "sent_id": "s0014",
+    "text": "模型准确率 78%。",
+    "section_id": "S5",
+    "section": "## 3 结果",
+    "section_role": "evidence",
+    "source_type": "author",
+    "locator": "MS-6eace5/S5¶1#s0014@480-490"
+   },
+   {
+    "claim_id": "A7",
+    "sent_id": "s0015",
+    "text": "本研究表明绿化通过提升社会支持改善心理健康。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "source_type": "author",
+    "locator": "MS-6eace5/S6¶1#s0015@501-523"
+   },
+   {
+    "claim_id": "A8",
+    "sent_id": "s0016",
+    "text": "社会支持是中介变量，因为社会支持与心理健康正相关。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "source_type": "author",
+    "locator": "MS-6eace5/S6¶1#s0016@523-548"
+   },
+   {
+    "claim_id": "A9",
+    "sent_id": "s0017",
+    "text": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+    "section_id": "S6",
+    "section": "## 4 讨论",
+    "section_role": "interpretation",
+    "source_type": "author",
+    "locator": "MS-6eace5/S6¶1#s0017@548-573"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A3",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.5833,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.25,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A4",
+    "type": "supports",
+    "overlap": 0.6923,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.35,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.3,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A9",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0017@548-573",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author",
+    "note": "解释章节内部强重合（可能构成循环论证）"
+   },
+   {
+    "from": "A4",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A8",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0016@523-548",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   }
+  ],
+  "cycles": [
+   [
+    "A9",
+    "A8",
+    "A9"
+   ]
+  ],
+  "params": {
+   "support_min_overlap": 0.25,
+   "strong_support_overlap": 0.45,
+   "attack_overlap_min": 0.15,
+   "max_edges_per_node": 3,
+   "edge_rule": "overlap=|claim∩premise|/|claim|；证据章节→解释章节，或同章节前文→后文"
+  },
+  "breakage_summary": {
+   "unsupported": 0,
+   "assumption_only": 0,
+   "contradictory": 0,
+   "cycles": 1
+  }
+ },
+ "cross_section_matrix": {
+  "aims": [
+   {
+    "aim": "本研究旨在量化绿地对心理健康的因果效应",
+    "sent_id": "s0002",
+    "locator": "MS-6eace5/S2¶1#s0002@50-79",
+    "section": "## 摘要",
+    "matched_tokens": [
+     "健康",
+     "心理",
+     "理健"
+    ],
+    "coverage": 0.3333,
+    "status": "delivered"
+   },
+   {
+    "aim": "本研究旨在量化绿地暴露对心理健康的因果效应",
+    "sent_id": "s0007",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "section": "## 1 引言",
+    "matched_tokens": [
+     "健康",
+     "心理",
+     "理健"
+    ],
+    "coverage": 0.2727,
+    "status": "delivered"
+   },
+   {
+    "aim": "检验社会支持的中介作用",
+    "sent_id": "s0007",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "section": "## 1 引言",
+    "matched_tokens": [
+     "中介",
+     "会支",
+     "支持",
+     "社会"
+    ],
+    "coverage": 0.5,
+    "status": "delivered"
+   },
+   {
+    "aim": "并评估社区绿化改造的成本效益。",
+    "sent_id": "s0007",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "section": "## 1 引言",
+    "matched_tokens": [
+     "绿化"
+    ],
+    "coverage": 0.1,
+    "status": "partial"
+   }
+  ],
+  "undelivered": [
+   {
+    "aim": "并评估社区绿化改造的成本效益。",
+    "sent_id": "s0007",
+    "locator": "MS-6eace5/S3¶1#s0007@191-240",
+    "section": "## 1 引言",
+    "matched_tokens": [
+     "绿化"
+    ],
+    "coverage": 0.1,
+    "status": "partial"
+   }
+  ],
+  "coverage_threshold": 0.25,
+  "delivery_corpus": "结果章节（Results/结果）全部句子",
+  "role_gate": "目标句只从引言/摘要收集",
+  "note": "交付判定=目标子句内容词在结果章节中的覆盖率（≥阈值且命中≥3 个内容词）；低覆盖也可能是措辞差异，需人工确认"
+ },
+ "coherence": {
+  "methods_vs_results_terms": [],
+  "strength_direction": {
+   "direction": "",
+   "note": "缺摘要或结论章节，未做强度方向比对"
+  },
+  "figure_table_integrity": {
+   "declared": [],
+   "cited": [],
+   "cited_missing": [],
+   "cited_missing_locations": {},
+   "declared_uncited": [],
+   "captions_found": [],
+   "note": "declared 来自题注行（Figure N. / 表N：）与 case figures/tables 声明；cited 来自正文句级扫描"
+  }
+ },
+ "findings": [
+  {
+   "detector": "T3_CIRCULAR",
+   "issue_label": "循环论证",
+   "category": "insufficient_evidence",
+   "category_label": "证据不足",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0017",
+    "char_span": [
+     548,
+     573
+    ],
+    "locator": "MS-6eace5/S6¶1#s0017@548-573"
+   },
+   "quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "支撑关系中存在环：A 支撑 B 且 B 支撑 A，论证自我确认",
+   "evidence": {
+    "cycle": [
+     "A9",
+     "A8",
+     "A9"
+    ]
+   },
+   "revision": {
+    "action": "add_evidence",
+    "target_sent_id": "s0017",
+    "target_quote": "社会支持与心理健康正相关，因为社会支持是中介变量。",
+    "detail": "删除环中一条推论，改为各自独立引用外部证据或本文结果"
+   },
+   "finding_id": "F001"
+  },
+  {
+   "detector": "T4_PROMISE_UNDELIVERED",
+   "issue_label": "引言承诺未交付",
+   "category": "coherence_break",
+   "category_label": "章节衔接断裂",
+   "facet": "section_coherence",
+   "facets": [
+    "section_coherence"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0007",
+    "char_span": [
+     191,
+     240
+    ],
+    "locator": "MS-6eace5/S3¶1#s0007@191-240"
+   },
+   "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言声明的目标在结果/方法章节没有对应交付",
+   "evidence": {
+    "aim": "并评估社区绿化改造的成本效益。",
+    "coverage": 0.1,
+    "matched_tokens": [
+     "绿化"
+    ],
+    "delivery_corpus": "结果章节（Results/结果）全部句子"
+   },
+   "revision": {
+    "action": "reconcile_scope",
+    "target_sent_id": "s0007",
+    "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "detail": "在结果章节补该目标的对应分析，或把引言目标改写为实际交付的范围（删除未交付子句）",
+    "evidence_needed": "并评估社区绿化改造的成本效益。"
+   },
+   "finding_id": "F002"
+  },
+  {
+   "detector": "T5_STRENGTH_MISMATCH",
+   "issue_label": "结论强度越界",
+   "category": "overclaim",
+   "category_label": "结论超数据",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0004",
+    "char_span": [
+     120,
+     138
+    ],
+    "locator": "MS-6eace5/S2¶1#s0004@120-138"
+   },
+   "quote": "因此绿化改善证明了社区干预的有效性。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+   "evidence": {
+    "strong_terms": [
+     "证明",
+     "证明了"
+    ],
+    "results_hedges": [
+     "相关",
+     "可能",
+     "提示",
+     "关联"
+    ]
+   },
+   "revision": {
+    "action": "downgrade_claim",
+    "target_sent_id": "s0004",
+    "target_quote": "因此绿化改善证明了社区干预的有效性。",
+    "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+    "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+   },
+   "finding_id": "F003"
+  },
+  {
+   "detector": "T5_STRENGTH_MISMATCH",
+   "issue_label": "结论强度越界",
+   "category": "overclaim",
+   "category_label": "结论超数据",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0018",
+    "char_span": [
+     573,
+     597
+    ],
+    "locator": "MS-6eace5/S6¶1#s0018@573-597"
+   },
+   "quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+   "evidence": {
+    "strong_terms": [
+     "证明",
+     "证明了"
+    ],
+    "results_hedges": [
+     "相关",
+     "可能",
+     "提示",
+     "关联"
+    ]
+   },
+   "revision": {
+    "action": "downgrade_claim",
+    "target_sent_id": "s0018",
+    "target_quote": "该结论证明了绿化干预的有效性，可推广到所有城市。",
+    "detail": "把该句强断言词（['证明', '证明了']）降为与结果一致的表述（『与…相关』『提示』），或补充可支持该强度的设计证据",
+    "downgrade_to": "关联/限定表述（与结果 hedge 口径一致）"
+   },
+   "finding_id": "F004"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0004",
+    "char_span": [
+     120,
+     138
+    ],
+    "locator": "MS-6eace5/S2¶1#s0004@120-138"
+   },
+   "quote": "因此绿化改善证明了社区干预的有效性。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "改善"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0004",
+    "target_quote": "因此绿化改善证明了社区干预的有效性。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F005"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0006",
+    "char_span": [
+     170,
+     191
+    ],
+    "locator": "MS-6eace5/S3¶1#s0006@170-191"
+   },
+   "quote": "然而，多数研究为横断面设计，因果证据有限。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "因果"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0006",
+    "target_quote": "然而，多数研究为横断面设计，因果证据有限。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F006"
+  },
+  {
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "issue_label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facet": "argument_chain",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0015",
+    "char_span": [
+     501,
+     523
+    ],
+    "locator": "MS-6eace5/S6¶1#s0015@501-523"
+   },
+   "quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "evidence": {
+    "causal_terms": [
+     "改善",
+     "提升"
+    ],
+    "correlational_terms": [],
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "rewrite_sentence",
+    "target_sent_id": "s0015",
+    "target_quote": "本研究表明绿化通过提升社会支持改善心理健康。",
+    "detail": "把该句改为关联表述，或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写本句",
+    "downgrade_to": "关联表述（『与…相关』）"
+   },
+   "finding_id": "F007"
+  },
+  {
+   "detector": "T7_NUM_CROSS_SECTION",
+   "issue_label": "跨章节数值不一致",
+   "category": "fact_error",
+   "category_label": "事实错误",
+   "facet": "fact_check",
+   "facets": [
+    "fact_check",
+    "stats_reporting"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true; affects_reproducibility=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0003",
+    "char_span": [
+     79,
+     120
+    ],
+    "locator": "MS-6eace5/S2¶1#s0003@79-120"
+   },
+   "quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "同一指标在多个章节取值不一致，结论依赖的数值来源不明",
+   "evidence": {
+    "metric": "准确率",
+    "values": [
+     0.78,
+     0.82
+    ],
+    "occurrences": [
+     {
+      "value": 0.82,
+      "section": "## 摘要",
+      "sent_id": "s0003",
+      "locator": "MS-6eace5/S2¶1#s0003@79-120"
+     },
+     {
+      "value": 0.78,
+      "section": "## 3 结果",
+      "sent_id": "s0014",
+      "locator": "MS-6eace5/S5¶1#s0014@480-490"
+     }
+    ]
+   },
+   "revision": {
+    "action": "reconcile_numbers",
+    "target_sent_id": "s0003",
+    "target_quote": "我们发现绿化覆盖率与心理健康得分正相关（p = 0.02），模型准确率 0.82。",
+    "detail": "统一指标 准确率 的取值（[0.78, 0.82]），每一处注明唯一来源（表号/图号/数据版本）",
+    "values": [
+     0.78,
+     0.82
+    ]
+   },
+   "finding_id": "F008"
+  },
+  {
+   "detector": "T9_METHOD_ANSWER_GAP",
+   "issue_label": "方法无法回答研究问题",
+   "category": "method_answer_gap",
+   "category_label": "方法无法回答问题",
+   "facet": "method_design",
+   "facets": [
+    "method_design"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S2",
+    "heading": "## 摘要",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0002",
+    "char_span": [
+     50,
+     79
+    ],
+    "locator": "MS-6eace5/S2¶1#s0002@50-79"
+   },
+   "quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+   "evidence": {
+    "aim": "本研究旨在量化绿地对心理健康的因果效应",
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "realign_design",
+    "target_sent_id": "s0002",
+    "target_quote": "本研究旨在量化绿地对心理健康的因果效应，并分析其作用机制。",
+    "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+    "evidence_needed": "因果识别设计或改写后的目标句"
+   },
+   "finding_id": "F009"
+  },
+  {
+   "detector": "T9_METHOD_ANSWER_GAP",
+   "issue_label": "方法无法回答研究问题",
+   "category": "method_answer_gap",
+   "category_label": "方法无法回答问题",
+   "facet": "method_design",
+   "facets": [
+    "method_design"
+   ],
+   "severity": "major",
+   "severity_basis": "affects_main_conclusion=true → major（severity.json.matrix；fixable=True）",
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "location": {
+    "doc_id": "MS-6eace5",
+    "section_id": "S3",
+    "heading": "## 1 引言",
+    "section_role": "introduction",
+    "para_idx": 1,
+    "sent_id": "s0007",
+    "char_span": [
+     191,
+     240
+    ],
+    "locator": "MS-6eace5/S3¶1#s0007@191-240"
+   },
+   "quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+   "quote_verified": true,
+   "source_type": "author",
+   "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+   "evidence": {
+    "aim": "本研究旨在量化绿地暴露对心理健康的因果效应",
+    "design_kind": "observational",
+    "design_markers_obs": [
+     "横断面",
+     "横断",
+     "问卷设计"
+    ],
+    "design_markers_causal": []
+   },
+   "revision": {
+    "action": "realign_design",
+    "target_sent_id": "s0007",
+    "target_quote": "本研究旨在量化绿地暴露对心理健康的因果效应，检验社会支持的中介作用，并评估社区绿化改造的成本效益。",
+    "detail": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）",
+    "evidence_needed": "因果识别设计或改写后的目标句"
+   },
+   "finding_id": "F010"
+  }
+ ],
+ "suppressed": [
+  {
+   "suppressed_id": "S001",
+   "guard_id": "G_LIMITATION_SECTION",
+   "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+   "reason": "句内自述局限（命中：无法排除, 需要注意的是），不按作者缺陷判",
+   "location": {
+    "doc_id": null,
+    "section_id": "S6",
+    "heading": "## 4 讨论",
+    "section_role": "interpretation",
+    "para_idx": 1,
+    "sent_id": "s0019",
+    "char_span": [
+     597,
+     618
+    ],
+    "locator": "MS-6eace5/S6¶1#s0019@597-618"
+   },
+   "quote": "需要注意的是，横断面设计无法排除反向因果。",
+   "quote_verified": true
+  }
+ ],
+ "coverage": {
+  "extraction_method": "inline_text",
+  "source": "case.manuscript",
+  "source_sha256": "",
+  "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+  "total_chars": 619,
+  "declared_total_chars": null,
+  "char_coverage": null,
+  "sentence_count": 19,
+  "section_count": 6,
+  "sections_present": {
+   "abstract": true,
+   "introduction": true,
+   "methods": true,
+   "results": true,
+   "discussion": true,
+   "conclusion": false
+  },
+  "core_sections_missing": [
+   "conclusion"
+  ],
+  "truncated": false,
+  "truncation_evidence": [],
+  "truncation_marker_examples": [],
+  "unparsed_materials": [],
+  "provenance": null,
+  "note": "全文口径：truncated 或核心章节缺失时 status 不写 complete；char_coverage 只在平台声明总字符数时给出"
+ },
+ "facets_status": [
+  {
+   "facet": "fact_check",
+   "label": "事实核验",
+   "status": "executed",
+   "detectors": [
+    "T7_NUM_CROSS_SECTION",
+    "T11_FIGTAB_MISSING",
+    "T12_SIGN_CONFLICT"
+   ],
+   "findings": 1,
+   "suppressed": 0,
+   "boundary": "只核验稿件内部可复算的事实（数值、图表编号、系数方向）；外部事实需检索，不在本 skill 能力内，缺口进 uncertainty"
+  },
+  {
+   "facet": "citation_support",
+   "label": "引用支持",
+   "status": "executed",
+   "detectors": [
+    "T8_CONTRADICTORY_EDGE"
+   ],
+   "findings": 0,
+   "suppressed": 0,
+   "boundary": "离线无法读取被引文献原文：仅检查文内相反证据是否被结论处理；『所引文献是否支持该句』需外部证据，标为待复核"
+  },
+  {
+   "facet": "method_design",
+   "label": "方法设计",
+   "status": "executed",
+   "detectors": [
+    "T9_METHOD_ANSWER_GAP"
+   ],
+   "findings": 2,
+   "suppressed": 0,
+   "boundary": ""
+  },
+  {
+   "facet": "stats_reporting",
+   "label": "统计报告",
+   "status": "executed",
+   "detectors": [
+    "T10_STATS_REPORTING",
+    "T12_SIGN_CONFLICT",
+    "T14_METHODS_RESULTS_TERMS"
+   ],
+   "findings": 1,
+   "suppressed": 0,
+   "boundary": ""
+  },
+  {
+   "facet": "argument_chain",
+   "label": "论证链",
+   "status": "executed",
+   "detectors": [
+    "T1_UNSUPPORTED_CLAIM",
+    "T2_ASSUMPTION_ONLY",
+    "T3_CIRCULAR",
+    "T5_STRENGTH_MISMATCH",
+    "T6_CAUSAL_IN_CORRELATIONAL"
+   ],
+   "findings": 6,
+   "suppressed": 1,
+   "boundary": ""
+  },
+  {
+   "facet": "section_coherence",
+   "label": "章节衔接",
+   "status": "executed",
+   "detectors": [
+    "T4_PROMISE_UNDELIVERED",
+    "T11_FIGTAB_MISSING",
+    "T13_STRENGTH_DIRECTION_MISMATCH",
+    "T14_METHODS_RESULTS_TERMS"
+   ],
+   "findings": 1,
+   "suppressed": 0,
+   "boundary": ""
+  },
+  {
+   "facet": "academic_norm",
+   "label": "学术规范",
+   "status": "executed",
+   "detectors": [
+    "T10_STATS_REPORTING",
+    "T11_FIGTAB_MISSING"
+   ],
+   "findings": 0,
+   "suppressed": 0,
+   "boundary": ""
+  }
+ ],
+ "summary": {
+  "claims": 9,
+  "edges": 11,
+  "cycles": 1,
+  "sentences": 19,
+  "sections": 6,
+  "findings": 10,
+  "by_detector": {
+   "T3_CIRCULAR": 1,
+   "T4_PROMISE_UNDELIVERED": 1,
+   "T5_STRENGTH_MISMATCH": 2,
+   "T6_CAUSAL_IN_CORRELATIONAL": 3,
+   "T7_NUM_CROSS_SECTION": 1,
+   "T9_METHOD_ANSWER_GAP": 2
+  },
+  "by_severity": {
+   "major": 10
+  },
+  "by_category": {
+   "insufficient_evidence": 1,
+   "coherence_break": 1,
+   "overclaim": 2,
+   "correlation_as_causation": 3,
+   "fact_error": 1,
+   "method_answer_gap": 2
+  },
+  "by_facet": {
+   "argument_chain": 6,
+   "section_coherence": 1,
+   "fact_check": 1,
+   "method_design": 2
+  },
+  "source_type_counts": {
+   "author": 8,
+   "reported": 1,
+   "assumption": 0
+  },
+  "suppressed": 1,
+  "by_guard": {
+   "G_LIMITATION_SECTION": 1
+  },
+  "design_kind": "observational"
+ },
+ "evidence": {
+  "coverage": {
+   "extraction_method": "inline_text",
+   "source": "case.manuscript",
+   "source_sha256": "",
+   "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+   "total_chars": 619,
+   "declared_total_chars": null,
+   "char_coverage": null,
+   "sentence_count": 19,
+   "section_count": 6,
+   "sections_present": {
+    "abstract": true,
+    "introduction": true,
+    "methods": true,
+    "results": true,
+    "discussion": true,
+    "conclusion": false
+   },
+   "core_sections_missing": [
+    "conclusion"
+   ],
+   "truncated": false,
+   "truncation_evidence": [],
+   "truncation_marker_examples": [],
+   "unparsed_materials": [],
+   "provenance": null,
+   "note": "全文口径：truncated 或核心章节缺失时 status 不写 complete；char_coverage 只在平台声明总字符数时给出"
+  },
+  "extraction": {
+   "extraction_method": "inline_text",
+   "source": "case.manuscript",
+   "source_sha256": "",
+   "text_sha256": "71200879c7b7b4047b3bb0462fa379b173b85f2ab7a115000257c7e687b3beeb",
+   "n_pages": null,
+   "text_layers": null,
+   "materials_audit": [],
+   "unparsed": [],
+   "declared_total_chars": null
+  },
+  "facets_selection": {
+   "requested": [
+    "fact_check",
+    "citation_support",
+    "method_design",
+    "stats_reporting",
+    "argument_chain",
+    "section_coherence",
+    "academic_norm"
+   ],
+   "mode": "default_all",
+   "unknown_requests": [],
+   "matched_by": "任务未点名任何维度，默认全量并如实记录"
+  },
+  "facets_status": [
+   {
+    "facet": "fact_check",
+    "label": "事实核验",
+    "status": "executed",
+    "detectors": [
+     "T7_NUM_CROSS_SECTION",
+     "T11_FIGTAB_MISSING",
+     "T12_SIGN_CONFLICT"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": "只核验稿件内部可复算的事实（数值、图表编号、系数方向）；外部事实需检索，不在本 skill 能力内，缺口进 uncertainty"
+   },
+   {
+    "facet": "citation_support",
+    "label": "引用支持",
+    "status": "executed",
+    "detectors": [
+     "T8_CONTRADICTORY_EDGE"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": "离线无法读取被引文献原文：仅检查文内相反证据是否被结论处理；『所引文献是否支持该句』需外部证据，标为待复核"
+   },
+   {
+    "facet": "method_design",
+    "label": "方法设计",
+    "status": "executed",
+    "detectors": [
+     "T9_METHOD_ANSWER_GAP"
+    ],
+    "findings": 2,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "stats_reporting",
+    "label": "统计报告",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T12_SIGN_CONFLICT",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "argument_chain",
+    "label": "论证链",
+    "status": "executed",
+    "detectors": [
+     "T1_UNSUPPORTED_CLAIM",
+     "T2_ASSUMPTION_ONLY",
+     "T3_CIRCULAR",
+     "T5_STRENGTH_MISMATCH",
+     "T6_CAUSAL_IN_CORRELATIONAL"
+    ],
+    "findings": 6,
+    "suppressed": 1,
+    "boundary": ""
+   },
+   {
+    "facet": "section_coherence",
+    "label": "章节衔接",
+    "status": "executed",
+    "detectors": [
+     "T4_PROMISE_UNDELIVERED",
+     "T11_FIGTAB_MISSING",
+     "T13_STRENGTH_DIRECTION_MISMATCH",
+     "T14_METHODS_RESULTS_TERMS"
+    ],
+    "findings": 1,
+    "suppressed": 0,
+    "boundary": ""
+   },
+   {
+    "facet": "academic_norm",
+    "label": "学术规范",
+    "status": "executed",
+    "detectors": [
+     "T10_STATS_REPORTING",
+     "T11_FIGTAB_MISSING"
+    ],
+    "findings": 0,
+    "suppressed": 0,
+    "boundary": ""
+   }
+  ],
+  "graph_params": {
+   "support_min_overlap": 0.25,
+   "strong_support_overlap": 0.45,
+   "attack_overlap_min": 0.15,
+   "max_edges_per_node": 3,
+   "edge_rule": "overlap=|claim∩premise|/|claim|；证据章节→解释章节，或同章节前文→后文"
+  },
+  "edges": [
+   {
+    "from": "A3",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.5833,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A1",
+    "type": "supports",
+    "overlap": 0.25,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A4",
+    "type": "supports",
+    "overlap": 0.6923,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.35,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A7",
+    "type": "supports",
+    "overlap": 0.3,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A9",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0017@548-573",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author",
+    "note": "解释章节内部强重合（可能构成循环论证）"
+   },
+   {
+    "from": "A4",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A8",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A8",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 1.0,
+    "from_locator": "MS-6eace5/S6¶1#s0016@523-548",
+    "from_section": "## 4 讨论",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A4",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.6111,
+    "from_locator": "MS-6eace5/S5¶1#s0012@427-460",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   },
+   {
+    "from": "A3",
+    "to": "A9",
+    "type": "supports",
+    "overlap": 0.5,
+    "from_locator": "MS-6eace5/S5¶1#s0011@361-427",
+    "from_section": "## 3 结果",
+    "from_source_type": "author"
+   }
+  ],
+  "guards": {
+   "suppressed": [
+    {
+     "suppressed_id": "S001",
+     "guard_id": "G_LIMITATION_SECTION",
+     "detector": "T6_CAUSAL_IN_CORRELATIONAL",
+     "reason": "句内自述局限（命中：无法排除, 需要注意的是），不按作者缺陷判",
+     "location": {
+      "doc_id": null,
+      "section_id": "S6",
+      "heading": "## 4 讨论",
+      "section_role": "interpretation",
+      "para_idx": 1,
+      "sent_id": "s0019",
+      "char_span": [
+       597,
+       618
+      ],
+      "locator": "MS-6eace5/S6¶1#s0019@597-618"
+     },
+     "quote": "需要注意的是，横断面设计无法排除反向因果。",
+     "quote_verified": true
+    }
+   ],
+   "rules": [
+    {
+     "id": "G_INTENDED_CONTROL",
+     "when": "句子或所在章节含有意对照标记（negative control/对照组/安慰剂/as expected）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T12_SIGN_CONFLICT",
+      "T5_STRENGTH_MISMATCH",
+      "T7_NUM_CROSS_SECTION",
+      "T1_UNSUPPORTED_CLAIM"
+     ]
+    },
+    {
+     "id": "G_EXPLICIT_ASSUMPTION",
+     "when": "句为作者显式标注的假设情形（hypothesize/assume/假设/推测）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T5_STRENGTH_MISMATCH",
+      "T1_UNSUPPORTED_CLAIM",
+      "T7_NUM_CROSS_SECTION",
+      "T12_SIGN_CONFLICT"
+     ]
+    },
+    {
+     "id": "G_REPORTED_VIEW",
+     "when": "句为转述他人观点（et al/既往研究/reported that/文献报道）",
+     "action": "suppress",
+     "applies_to": [
+      "T6_CAUSAL_IN_CORRELATIONAL",
+      "T5_STRENGTH_MISMATCH",
+      "T1_UNSUPPORTED_CLAIM",
+      "T7_NUM_CROSS_SECTION",
+      "T12_SIGN_CONFLICT",
+      "T9_METHOD_ANSWER_GAP"
+     ]
+    },
+    {
+     "id": "G_LIMITATION_SECTION",
+     "when": "问题出现在 Limitations/局限/不足 段落",
+     "action": "suppress",
+     "applies_to": [
+      "ALL"
+     ]
+    }
+   ],
+   "note": "命中白名单的候选不出现在 findings，可在 suppressed 里核对『该报未报』质疑"
+  },
+  "design_kind": "observational",
+  "rules_hashes": {
+   "argument_rules.json": "9c5a0c55e2f69de46496c55a32cc77f2b8e9814a2eb572bfd5fc4e11fffd5c01",
+   "contract_routing.json": "be1554aa8aea75805e8c5154976d4f23d2d808b2b22d945f1610c570c38eb75d",
+   "facets.json": "c016e3db7c10dfa09c77e64bb9cc0968ac46972541700e5aeabb1c837dce6c09",
+   "reason_codes.json": "ce9b1b867d947d2790897b2ecf8ce71aea853023f556ea8b53a969eaabdc09f6",
+   "severity.json": "46f77a059dc6c9c65e15d082766316fc327e851f5d1bf62a3d59b4b55f53c939"
+  },
+  "scope": {
+   "claims": 9,
+   "edges": 11,
+   "detectors_run": [
+    "T7_NUM_CROSS_SECTION",
+    "T11_FIGTAB_MISSING",
+    "T12_SIGN_CONFLICT",
+    "T8_CONTRADICTORY_EDGE",
+    "T9_METHOD_ANSWER_GAP",
+    "T10_STATS_REPORTING",
+    "T14_METHODS_RESULTS_TERMS",
+    "T1_UNSUPPORTED_CLAIM",
+    "T2_ASSUMPTION_ONLY",
+    "T3_CIRCULAR",
+    "T5_STRENGTH_MISMATCH",
+    "T6_CAUSAL_IN_CORRELATIONAL",
+    "T4_PROMISE_UNDELIVERED",
+    "T13_STRENGTH_DIRECTION_MISMATCH"
+   ],
+   "note": "边由重合度阈值决定；未建边不等于无支撑（见 uncertainty）"
+  },
+  "contract_routing": [
+   {
+    "contract_key": "研究产物",
+    "source": "研究产物",
+    "how": "exact"
+   },
+   {
+    "contract_key": "问题清单",
+    "source": "findings",
+    "how": "routing",
+    "facet": null
+   },
+   {
+    "contract_key": "证据矩阵",
+    "source": "evidence",
+    "how": "routing",
+    "facet": null
+   },
+   {
+    "contract_key": "不确定性",
+    "source": "uncertainty",
+    "how": "routing",
+    "facet": null
+   },
+   {
+    "contract_key": "状态说明",
+    "source": "status",
+    "how": "routing",
+    "facet": null
+   }
+  ],
+  "contract": {
+   "研究产物": "主张与论证图及断裂点",
+   "问题清单": "逐条逻辑问题与建议",
+   "证据矩阵": "每条主张的支撑证据与定位",
+   "不确定性": "无法判定项",
+   "状态说明": "完成与未完成部分"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-056-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "不确定性",
+     "状态说明",
+     "研究产物",
+     "证据矩阵",
+     "问题清单"
+    ]
+   },
+   {
+    "step": "extract",
+    "seq": 2,
+    "method": "inline_text",
+    "chars": 619,
+    "sections": 6,
+    "sentences": 19,
+    "unparsed": 0
+   },
+   {
+    "step": "facets",
+    "seq": 3,
+    "requested": [
+     "fact_check",
+     "citation_support",
+     "method_design",
+     "stats_reporting",
+     "argument_chain",
+     "section_coherence",
+     "academic_norm"
+    ],
+    "detectors": [
+     "T7_NUM_CROSS_SECTION",
+     "T11_FIGTAB_MISSING",
+     "T12_SIGN_CONFLICT",
+     "T8_CONTRADICTORY_EDGE",
+     "T9_METHOD_ANSWER_GAP",
+     "T10_STATS_REPORTING",
+     "T14_METHODS_RESULTS_TERMS",
+     "T1_UNSUPPORTED_CLAIM",
+     "T2_ASSUMPTION_ONLY",
+     "T3_CIRCULAR",
+     "T5_STRENGTH_MISMATCH",
+     "T6_CAUSAL_IN_CORRELATIONAL",
+     "T4_PROMISE_UNDELIVERED",
+     "T13_STRENGTH_DIRECTION_MISMATCH"
+    ],
+    "mode": "default_all"
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-056-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "complete",
+  "completed": [
+   "全文获取与覆盖率登记",
+   "章节切分与句级索引",
+   "审查维度动态绑定",
+   "主张抽取与来源三分类",
+   "论证图构建与断裂点检测",
+   "跨章节一致性检查",
+   "分型发现与严重度分级",
+   "白名单抑制（suppressed）"
+  ],
+  "unmet": [],
+  "notes": []
+ },
+ "uncertainty": [
+  {
+   "item": "论证边判定",
+   "reason": "边由 token 重合度阈值决定：同义改写会漏建边，『无支撑』类发现需人工确认（未建边 ≠ 无支撑）"
+  },
+  {
+   "item": "意图判断",
+   "reason": "作者意图不可知：显式假设/转述他人/有意对照已按白名单抑制并记录 suppressed，其余按作者主张处理"
+  },
+  {
+   "item": "跨章节数值",
+   "reason": "只比对 rules 里 metric_terms 可抽取的指标数值；图内/表格内数值不可读"
+  },
+  {
+   "item": "引用支持",
+   "reason": "离线无法读取被引文献原文：仅能检查文内相反证据处理情况，『所引文献是否支持该句』为待复核"
+  }
+ ]
+}

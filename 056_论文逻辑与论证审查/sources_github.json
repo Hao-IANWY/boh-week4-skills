@@ -1,0 +1,252 @@
+{
+ "seq": 56,
+ "title": "论文逻辑与论证审查",
+ "category": "学术审查",
+ "queries": [
+  "argument mining scientific papers",
+  "logical consistency check writing",
+  "argument structure analysis nlp"
+ ],
+ "candidates": [
+  {
+   "full_name": "vale-cli/vale",
+   "url": "https://github.com/vale-cli/vale",
+   "stars": 6404,
+   "desc": ":pencil: A markup-aware linter for prose built with speed and extensibility in mind.",
+   "topics": [
+    "linter",
+    "linting",
+    "vale"
+   ],
+   "lang": "Go",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T09:56:08Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "WenyuChiou/ai-research-skills",
+   "url": "https://github.com/WenyuChiou/ai-research-skills",
+   "stars": 676,
+   "desc": "Universal SKILL.md catalog for research workflows: literature review, research design, project memory, manuscript writing, and cross-agent delegation for Claude Code, Codex, Gemini, Cursor, OpenClaw, and generic AI clie…",
+   "topics": [
+    "academic-writing",
+    "agentic-ai",
+    "agentskills",
+    "ai-research",
+    "ai-skills",
+    "claude-code"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T12:44:56Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020",
+   "url": "https://github.com/chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020",
+   "stars": 324,
+   "desc": "NOTICE This repository contains the public FTC SDK for the SKYSTONE (2019-2020) competition season. If you are looking for the current season's FTC SDK software, please visit the new and permanent home of the public FTC…",
+   "topics": [],
+   "lang": "Java",
+   "license": null,
+   "pushed_at": "2024-04-12T05:48:35Z",
+   "via": [
+    "logic check text"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "allenai/scifact",
+   "url": "https://github.com/allenai/scifact",
+   "stars": 282,
+   "desc": "Data and models for the SciFact verification task.",
+   "topics": [],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2023-10-15T18:32:12Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "trusthlt/mining-legal-arguments",
+   "url": "https://github.com/trusthlt/mining-legal-arguments",
+   "stars": 83,
+   "desc": "Mining Legal Arguments in Court Decisions - Data and software",
+   "topics": [],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2023-05-15T08:58:14Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Aryia-Behroziuan/References",
+   "url": "https://github.com/Aryia-Behroziuan/References",
+   "stars": 78,
+   "desc": "Poole, Mackworth & Goebel 1998, p. 1.  Russell & Norvig 2003, p. 55.  Definition of AI as the study of intelligent agents: Poole, Mackworth & Goebel (1998), which provides the version that is used in this article. These…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2022-09-02T16:06:15Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "vene/marseille",
+   "url": "https://github.com/vene/marseille",
+   "stars": 66,
+   "desc": "Mining Argument Structures with Expressive Inference (Linear and LSTM Engines)",
+   "topics": [
+    "argumentation",
+    "deep-learning",
+    "discourse-analysis",
+    "machine-learning",
+    "natural-language-processing",
+    "nlp"
+   ],
+   "lang": "Python",
+   "license": "BSD-3-Clause",
+   "pushed_at": "2017-08-01T16:43:53Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "UKPLab/acl2017-neural_end2end_am",
+   "url": "https://github.com/UKPLab/acl2017-neural_end2end_am",
+   "stars": 59,
+   "desc": "Accompanying code for our ACL-2017 publication on Neural End-to-End Learning for Computational Argumentation Mining",
+   "topics": [],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2021-01-13T11:06:34Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Hellisotherpeople/DebateSum",
+   "url": "https://github.com/Hellisotherpeople/DebateSum",
+   "stars": 55,
+   "desc": "Corresponding code repo for the paper at COLING 2020 - ARGMIN 2020: \"DebateSum: A large-scale argument mining and summarization dataset\"",
+   "topics": [
+    "debate",
+    "debaters",
+    "evidence"
+   ],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2021-12-02T09:56:46Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Rynkll696/HH",
+   "url": "https://github.com/Rynkll696/HH",
+   "stars": 43,
+   "desc": "import pyttsx3 import speech_recognition as sr import datetime  from datetime import date import calendar import time import math import wikipedia import webbrowser import os import smtplib import winsound import pyauto…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2022-07-24T11:31:26Z",
+   "via": [
+    "logic check text"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "gaoyixu/CAIL2020-Argument-Mining",
+   "url": "https://github.com/gaoyixu/CAIL2020-Argument-Mining",
+   "stars": 40,
+   "desc": "Baselines for CAIL2020-Argument-Mining: BERT, RNN",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2020-05-29T13:24:17Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "UKPLab/naacl18-multitask_argument_mining",
+   "url": "https://github.com/UKPLab/naacl18-multitask_argument_mining",
+   "stars": 39,
+   "desc": "Code for the paper \"Multi-Task Learning for Argumentation Mining in Low-Resource Settings\"",
+   "topics": [],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2019-03-19T14:32:49Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "recap-utr/argument-graph-mining",
+   "url": "https://github.com/recap-utr/argument-graph-mining",
+   "stars": 28,
+   "desc": "Code for the paper \"Towards an Argument Mining Pipeline Transforming Texts to Argument Graphs\" presented at COMMA 2020",
+   "topics": [
+    "argument-mining",
+    "classification",
+    "docker",
+    "graph",
+    "pipeline",
+    "python"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "Apache-2.0",
+   "pushed_at": "2025-03-25T10:21:35Z",
+   "via": [
+    "argument mining"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "pkargupta/tree-of-debate",
+   "url": "https://github.com/pkargupta/tree-of-debate",
+   "stars": 20,
+   "desc": "Tree-of-Debate converts scientific papers into LLM personas that debate their respective novelties. To emphasize structured, critical reasoning rather than focusing solely on outcomes, Tree-of-Debate dynamically constru…",
+   "topics": [
+    "ai-agents",
+    "ai-for-research",
+    "ai-for-science",
+    "llm-agent",
+    "multi-agent",
+    "retrieval-augmented-generation"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2025-07-22T14:45:07Z",
+   "via": [
+    "argument structure analysis"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "zaynsdev/ETHOS",
+   "url": "https://github.com/zaynsdev/ETHOS",
+   "stars": 2,
+   "desc": "ETHOS (Evaluative Text Heuristic for Objective Scrutiny) analyzes argument structure, validity, and rhetorical quality through advanced NLP. Combining rule-based analysis with neural models (BERT), it identifies claims,…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-05-10T15:48:50Z",
+   "via": [
+    "argument structure analysis nlp"
+   ],
+   "seed": false
+  }
+ ]
+}

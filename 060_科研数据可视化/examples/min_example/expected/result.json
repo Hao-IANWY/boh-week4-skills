@@ -1,0 +1,1776 @@
+{
+ "case_id": "EXAMPLE-060-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "research-figure-builder",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-20T11:55:18+0800",
+ "figures": {
+  "n_requested": 2,
+  "n_delivered": 2,
+  "figures": [
+   {
+    "figure_id": "F1",
+    "status": "delivered",
+    "purpose": "comparison",
+    "chart_type": "bar_with_error_points",
+    "actual_chart_type": "bar_with_error_points",
+    "selection_rationale": "purpose=comparison; requested=bar; executable route=bar_with_error_points",
+    "rejected_alternatives": [],
+    "venue": {
+     "name": "通用单栏",
+     "width_mm": 89.0,
+     "height_mm": 62.0,
+     "dpi": 600,
+     "min_font_pt": 6.0
+    },
+    "layout_adjustment": null,
+    "format_gaps": [],
+    "fallback": null,
+    "preparation": {
+     "figure_id": "F1",
+     "status": "ready",
+     "reason": "",
+     "n_input": 24,
+     "n_used": 23,
+     "n_excluded": 1,
+     "missing_columns": [],
+     "groups": [],
+     "n_categories": 3,
+     "numeric_invalid": {},
+     "numeric_missing": {
+      "yield_mg_L": 1
+     },
+     "data_file": "figure_1.tsv",
+     "csv_file": "figure_1.csv",
+     "lineage_file": "figure_1_lineage.json",
+     "warnings": []
+    },
+    "analysis": {
+     "figure_id": "F1",
+     "status": "ok",
+     "chart_type": "bar_with_error_points",
+     "actual_chart_type": "bar_with_error_points",
+     "n_input": 23,
+     "n_used": 23,
+     "n_excluded": 0,
+     "groups": [
+      "A",
+      "B",
+      "C"
+     ],
+     "notes": [],
+     "warnings": [
+      "Using ragg device as default. Ignoring `type` and `antialias` arguments"
+     ],
+     "font": {
+      "family": "PingFang SC",
+      "cjk": true,
+      "detector": "systemfonts"
+     },
+     "font_family": "PingFang SC",
+     "width_mm": 89,
+     "height_mm": 62,
+     "dpi": 600,
+     "base_size": 9,
+     "method_note": "Points: raw observations; bars: group means; error bars: ±1 SD for n≥2; n=1 uncertainty is undefined.",
+     "series": [
+      {
+       "category": "A",
+       "n": 8,
+       "mean": 43.6925,
+       "sd": 4.45249127696266,
+       "se": 1.57419338755712,
+       "ci95": 3.72237586091457,
+       "ci95_lower": 39.9701241390854,
+       "ci95_upper": 47.4148758609146,
+       "error": 4.45249127696266,
+       "error_type": "sd",
+       "source_row_ids": [
+        "1",
+        "4",
+        "7",
+        "10",
+        "13",
+        "16",
+        "19",
+        "22"
+       ],
+       "technical_readings": 8,
+       "independent_unit_summary": false
+      },
+      {
+       "category": "B",
+       "n": 7,
+       "mean": 48.3785714285714,
+       "sd": 4.24645902908697,
+       "se": 1.60501064908413,
+       "ci95": 3.92731957845784,
+       "ci95_lower": 44.4512518501136,
+       "ci95_upper": 52.3058910070293,
+       "error": 4.24645902908697,
+       "error_type": "sd",
+       "source_row_ids": [
+        "2",
+        "5",
+        "11",
+        "14",
+        "17",
+        "20",
+        "23"
+       ],
+       "technical_readings": 7,
+       "independent_unit_summary": false
+      },
+      {
+       "category": "C",
+       "n": 8,
+       "mean": 44.86625,
+       "sd": 4.28212543187209,
+       "se": 1.51395996538406,
+       "ci95": 3.57994645008773,
+       "ci95_lower": 41.2863035499123,
+       "ci95_upper": 48.4461964500877,
+       "error": 4.28212543187209,
+       "error_type": "sd",
+       "source_row_ids": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "15",
+        "18",
+        "21",
+        "24"
+       ],
+       "technical_readings": 8,
+       "independent_unit_summary": false
+      }
+     ],
+     "palette": [
+      "#0072B2",
+      "#D55E00",
+      "#009E73"
+     ],
+     "point_style": {
+      "shape": 21,
+      "fill": "category palette (same as bars/boxes)",
+      "stroke": "white",
+      "alpha": 0.75,
+      "size_mm": 1.5,
+      "note": "raw observations coloured by category with white stroke; alpha shrinks with point count"
+     },
+     "error_bar": {
+      "requested": "sd",
+      "displayed": "sd",
+      "ci95_definition": "two-sided t interval half-width; null for n=1"
+     },
+     "distribution": {
+      "min_n": 7,
+      "max_n": 8,
+      "selection_rule": "explicit mean bar + raw points"
+     },
+     "files": {
+      "pdf": "figure_1.pdf",
+      "png": "figure_1.png",
+      "svg": "figure_1.svg"
+     }
+    },
+    "caption": {
+     "title": "三个站点的产量比较",
+     "panel": "A",
+     "x_label": "站点",
+     "y_label": "产量 (mg/L)",
+     "n": 23,
+     "n_independent_units": {},
+     "groups": [
+      "A",
+      "B",
+      "C"
+     ],
+     "error_bar": "误差线为 ±1 样本标准差（SD，n−1）",
+     "stats": "各组均值与全部有效原始观测；误差线为 ±1 样本标准差（SD，n−1）",
+     "standalone_text": "三个站点的产量比较。横轴：站点；纵轴：产量 (mg/L)。有效观测行 n=23，排除 1 行。各组均值与全部有效原始观测；误差线为 ±1 样本标准差（SD，n−1）。误差线为 ±1 样本标准差（SD，n−1）。所有排除原因见对应 lineage 文件。"
+    },
+    "resources": {
+     "tsv": "figure_1.tsv",
+     "csv": "figure_1.csv",
+     "spec": "figure_1_spec.json",
+     "lineage": "figure_1_lineage.json",
+     "analysis": "figure_1_analysis.json",
+     "data_prep": "data_prep.sh",
+     "plot_script": "plot.R",
+     "theme": "theme.R",
+     "normalize_pdf": "scripts/normalize_pdf.py",
+     "audit": "scripts/audit_outputs.py"
+    },
+    "files": {
+     "pdf": {
+      "file": "figure_1.pdf",
+      "exists": true,
+      "bytes": 10715,
+      "sha256": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
+      "metadata": {
+       "path": "figure_1.pdf",
+       "exists": true,
+       "size_bytes": 10715,
+       "format": "pdf",
+       "properties": {
+        "pages": 1,
+        "page_width_mm": 88.89999999999999,
+        "page_height_mm": 61.736111111111114,
+        "page_sizes": [
+         {
+          "page": 1,
+          "width_mm": 88.89999999999999,
+          "height_mm": 61.736111111111114
+         }
+        ],
+        "first_page_fonts": [
+         "ASAVIP+PingFangSC-Semibold",
+         "IDTZZE+PingFangSC-Semibold",
+         "VRRUSS+PingFangSC-Semibold",
+         "f-2-0"
+        ],
+        "pdf_fonts": [
+         {
+          "page": 1,
+          "resource_name": "/f-0-0",
+          "resource_path": "/Resources/Font/f-0-0",
+          "base_font": "ASAVIP+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "ASAVIP+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-1-0",
+          "resource_path": "/Resources/Font/f-1-0",
+          "base_font": "IDTZZE+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "IDTZZE+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-2-0",
+          "resource_path": "/Resources/Font/f-2-0",
+          "base_font": null,
+          "subtype": "Type3",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [],
+          "type3_charprocs": {
+           "count": 1,
+           "stream_count": 1
+          },
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-3-0",
+          "resource_path": "/Resources/Font/f-3-0",
+          "base_font": "VRRUSS+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "VRRUSS+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         }
+        ],
+        "all_fonts_embedded": true,
+        "font_scan_issues": [],
+        "inspection_limits": [
+         "FontFile/FontFile2/FontFile3 and Type3 CharProcs are resource evidence only; font programs, glyph coverage and rendering are not certified.",
+         "Fonts are inventoried in all page and nested Form XObject resources, including unused resources; other resource contexts are not scanned.",
+         "Page dimensions use the unrotated MediaBox and UserUnit; crop boxes and rendered bounds are not checked."
+        ],
+        "document_metadata_keys": [
+         "/CreationDate",
+         "/ModDate",
+         "/Producer"
+        ]
+       },
+       "warnings": [],
+       "errors": []
+      }
+     },
+     "png": {
+      "file": "figure_1.png",
+      "exists": true,
+      "bytes": 86037,
+      "sha256": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
+      "metadata": {
+       "path": "figure_1.png",
+       "exists": true,
+       "size_bytes": 86037,
+       "format": "png",
+       "properties": {
+        "format": "PNG",
+        "width_px": 2102,
+        "height_px": 1464,
+        "mode": "RGB",
+        "dpi_x": 599.9988,
+        "dpi_y": 599.9988,
+        "width_mm": 88.98484463635594,
+        "height_mm": 61.9761239522479,
+        "embedded_dpi_rounding_tolerance": 0.0127,
+        "size_rounding_tolerance_mm": {
+         "width": 0.044216974180690385,
+         "height": 0.04364527634854365
+        },
+        "compression": null,
+        "has_alpha_channel": false,
+        "has_transparency": false,
+        "has_alpha": false,
+        "has_icc_profile": false,
+        "effective_dpi_at_target_width": 599.8966292134832,
+        "effective_dpi_at_target_height": 599.7677419354839,
+        "dpi_check": {
+         "source": "minimum_effective_axis",
+         "value": 599.7677419354839,
+         "minimum": 600.0,
+         "rounding_tolerance": 0.40967742035483873,
+         "axes": {
+          "x": {
+           "source": "effective_at_target_width",
+           "value": 599.8966292134832,
+           "minimum": 600.0,
+           "rounding_tolerance": 0.2853932594269663
+          },
+          "y": {
+           "source": "effective_at_target_height",
+           "value": 599.7677419354839,
+           "minimum": 600.0,
+           "rounding_tolerance": 0.40967742035483873
+          }
+         }
+        }
+       },
+       "warnings": [],
+       "errors": []
+      },
+      "visual_margins": {
+       "blank": false,
+       "bbox_px": [
+        100,
+        110,
+        2003,
+        1357
+       ],
+       "margins": {
+        "left_in": 0.16666700000066667,
+        "top_in": 0.18333370000073335,
+        "right_in": 0.16500033000066,
+        "bottom_in": 0.17833369000071334
+       },
+       "min_margin_in": 0.16500033000066,
+       "clipped": false,
+       "tight": false,
+       "clip_margin_in": 0.02,
+       "tight_margin_in": 0.1,
+       "pass": true,
+       "policy": "fail=blank-or-clipped; tight margins are reported but do not fail a figure"
+      }
+     },
+     "svg": {
+      "file": "figure_1.svg",
+      "exists": true,
+      "bytes": 8440,
+      "sha256": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f",
+      "metadata": {
+       "path": "figure_1.svg",
+       "exists": true,
+       "size_bytes": 8440,
+       "format": "svg",
+       "properties": {
+        "width_mm": 88.99877777777778,
+        "height_mm": 62.00069444444444,
+        "viewBox": "0 0 252.28 175.75",
+        "text_elements": 11,
+        "image_elements": 0,
+        "path_elements": 0,
+        "visible_path_instances": 0,
+        "visible_text_instances": 11,
+        "text_mode_evidence": "editable-text-present",
+        "font_families": [
+         "PingFang SC"
+        ],
+        "has_alpha_markers": true,
+        "stylesheet_elements": 1,
+        "stylesheet_has_alpha_markers": false,
+        "unresolved_opacity_values": [],
+        "inspection_limits": [
+         "Visible instances are structural candidates using presentation/inline styles, local use references and local feImage targets of used filters; path data, transforms, clipping and occlusion are not rendered.",
+         "Nested CSS rules, selector matching, cascading, external stylesheets, animation, filter effects and color alpha are not resolved; stylesheet opacity markers may be unused.",
+         "Paths without text are outline evidence only; paths may be ordinary diagram geometry and do not certify outlined glyphs."
+        ]
+       },
+       "warnings": [],
+       "errors": []
+      }
+     },
+     "palette_audit": {
+      "role": "graphical",
+      "threshold": 3.0,
+      "background": "#FFFFFF",
+      "foreground": "#000000",
+      "foreground_contrast_vs_background": 21.0,
+      "min_gray_delta": 10.0,
+      "gray_threshold_kind": "heuristic",
+      "context": {
+       "geometry": "bar",
+       "declared_cues": [
+        "outline",
+        "position-labels"
+       ],
+       "foreground_placement": "outside-marks",
+       "source": "caller declaration; not image detection"
+      },
+      "colours": [
+       {
+        "name": "A",
+        "hex": "#0072B2",
+        "contrast_vs_background": 5.1854,
+        "contrast_vs_foreground": 4.0498,
+        "cie_lstar": 45.9707
+       },
+       {
+        "name": "B",
+        "hex": "#D55E00",
+        "contrast_vs_background": 3.8672,
+        "contrast_vs_foreground": 5.4303,
+        "cie_lstar": 54.192
+       },
+       {
+        "name": "C",
+        "hex": "#009E73",
+        "contrast_vs_background": 3.4211,
+        "contrast_vs_foreground": 6.1383,
+        "cie_lstar": 57.7411
+       }
+      ],
+      "pairs": [
+       {
+        "first": "A",
+        "second": "B",
+        "delta_cie_lstar": 8.2212,
+        "below_heuristic": true
+       },
+       {
+        "first": "A",
+        "second": "C",
+        "delta_cie_lstar": 11.7704,
+        "below_heuristic": false
+       },
+       {
+        "first": "B",
+        "second": "C",
+        "delta_cie_lstar": 3.5491,
+        "below_heuristic": true
+       }
+      ],
+      "summary": {
+       "min_contrast_vs_background": 3.4211,
+       "min_contrast_vs_foreground": 4.0498,
+       "min_pairwise_cie_lstar_delta": 3.5491,
+       "passes_foreground_threshold": true,
+       "passes_grayscale_screen": false
+      },
+      "warnings": [],
+      "notes": [
+       "2 pair(s) have CIE L* separation below 10.0 (EasyPlot heuristic, not a WCAG criterion); declared identity cues may cover this; confirm at final size"
+      ],
+      "recommendations": [
+       "Keep pastel fills. With readable category labels, fixed positions and visible boundaries, extra hatching/markers are usually unnecessary. Repeated or stacked groups need a separate review."
+      ]
+     }
+    },
+    "qa": {
+     "checks": [
+      {
+       "check": "r_analysis_status",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "row_accounting",
+       "pass": true,
+       "detail": "R n_used=23 preparation n_used=23"
+      },
+      {
+       "check": "sample_size_present",
+       "pass": true,
+       "detail": "n=23"
+      },
+      {
+       "check": "cjk_font_family",
+       "pass": true,
+       "detail": "CJK text requires a real CJK family; actual=PingFang SC"
+      },
+      {
+       "check": "independent_numeric_recheck",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "export_pdf",
+       "pass": true,
+       "detail": "figure_1.pdf"
+      },
+      {
+       "check": "export_png",
+       "pass": true,
+       "detail": "figure_1.png"
+      },
+      {
+       "check": "export_svg",
+       "pass": true,
+       "detail": "figure_1.svg"
+      },
+      {
+       "check": "metadata_pdf",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "metadata_png",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "metadata_svg",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "png_not_blank_and_margins",
+       "pass": true,
+       "detail": "{\"blank\": false, \"bbox_px\": [100, 110, 2003, 1357], \"margins\": {\"left_in\": 0.16666700000066667, \"top_in\": 0.18333370000073335, \"right_in\": 0.16500033000066, \"bottom_in\": 0.17833369000071334}, \"min_margin_in\": 0.16500033000066, \"clipped\": false, \"tight\": false, \"clip_margin_in\": 0.02, \"tight_margin_in\": 0.1, \"pass\": true, \"policy\": \"fail=blank-or-clipped; tight margins are reported but do not fail a figure\"}"
+      },
+      {
+       "check": "svg_expected_axis_labels",
+       "pass": true,
+       "detail": "missing: "
+      },
+      {
+       "check": "palette_context_screen",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "no_silent_category_truncation",
+       "pass": true,
+       "detail": "all categories retained or explicitly aggregated"
+      },
+      {
+       "check": "caption_self_contained",
+       "pass": true,
+       "detail": "title/axes/n/method/uncertainty/exclusions"
+      },
+      {
+       "check": "requested_formats",
+       "pass": true,
+       "detail": "requested=['pdf', 'png', 'svg']; supported_delivered=['pdf', 'png', 'svg']; missing=[]; PDF/PNG/SVG are emitted by default"
+      },
+      {
+       "check": "end_to_end_reproduce",
+       "pass": true,
+       "detail": "raw snapshot → TSV → R statistics → PDF/PNG/SVG, two complete runs"
+      }
+     ],
+     "all_pass": true
+    },
+    "reproduce": {
+     "commands": [
+      "bash data_prep.sh",
+      "Rscript plot.R",
+      "python3 -B scripts/normalize_pdf.py --plan run_plan.json --out ."
+     ],
+     "before": {
+      "figure_1.tsv": "5a43c7517dbfece13ff2586ddba025dfbe24d29890d149933a9e844d1ee445ef",
+      "figure_1.csv": "f3bda6343ebe23068c1c4b8dad43b834b2581cb01cfdd06978d3de72ded9e0a9",
+      "figure_1_lineage.json": "1fb2a37c1bbde450752f242f4fce717c3aec3ae5d3a1213180a5887b5d02ae2b",
+      "figure_1_analysis.json": "3a8c5180d9f3b95ac4498764d18ff7bfed23e8da56d9d41486eddf6829839425",
+      "figure_1.pdf": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
+      "figure_1.png": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
+      "figure_1.svg": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f"
+     },
+     "after": {
+      "figure_1.tsv": "5a43c7517dbfece13ff2586ddba025dfbe24d29890d149933a9e844d1ee445ef",
+      "figure_1.csv": "f3bda6343ebe23068c1c4b8dad43b834b2581cb01cfdd06978d3de72ded9e0a9",
+      "figure_1_lineage.json": "1fb2a37c1bbde450752f242f4fce717c3aec3ae5d3a1213180a5887b5d02ae2b",
+      "figure_1_analysis.json": "3a8c5180d9f3b95ac4498764d18ff7bfed23e8da56d9d41486eddf6829839425",
+      "figure_1.pdf": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
+      "figure_1.png": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
+      "figure_1.svg": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f"
+     },
+     "per_file_sha_match": {
+      "figure_1.tsv": true,
+      "figure_1.csv": true,
+      "figure_1_lineage.json": true,
+      "figure_1_analysis.json": true,
+      "figure_1.pdf": true,
+      "figure_1.png": true,
+      "figure_1.svg": true
+     },
+     "end_to_end_sha_match": true
+    }
+   },
+   {
+    "figure_id": "F2",
+    "status": "delivered",
+    "purpose": "correlation",
+    "chart_type": "scatter_with_fit",
+    "actual_chart_type": "scatter_with_fit",
+    "selection_rationale": "purpose=correlation; requested=scatter; executable route=scatter_with_fit",
+    "rejected_alternatives": [
+     {
+      "chart": "line",
+      "reason": "无序观测不连线；仅使用散点与声明的拟合"
+     }
+    ],
+    "venue": {
+     "name": "通用单栏",
+     "width_mm": 89.0,
+     "height_mm": 62.0,
+     "dpi": 600,
+     "min_font_pt": 6.0
+    },
+    "layout_adjustment": null,
+    "format_gaps": [],
+    "fallback": null,
+    "preparation": {
+     "figure_id": "F2",
+     "status": "ready",
+     "reason": "",
+     "n_input": 24,
+     "n_used": 23,
+     "n_excluded": 1,
+     "missing_columns": [],
+     "groups": [
+      "A",
+      "B",
+      "C"
+     ],
+     "n_categories": 23,
+     "numeric_invalid": {},
+     "numeric_missing": {
+      "yield_mg_L": 1
+     },
+     "data_file": "figure_2.tsv",
+     "csv_file": "figure_2.csv",
+     "lineage_file": "figure_2_lineage.json",
+     "warnings": []
+    },
+    "analysis": {
+     "figure_id": "F2",
+     "status": "ok",
+     "chart_type": "scatter_with_fit",
+     "actual_chart_type": "scatter_with_fit",
+     "n_input": 23,
+     "n_used": 23,
+     "n_excluded": 0,
+     "groups": [
+      "A",
+      "B",
+      "C"
+     ],
+     "notes": [],
+     "warnings": [
+      "Using ragg device as default. Ignoring `type` and `antialias` arguments"
+     ],
+     "font": {
+      "family": "PingFang SC",
+      "cjk": true,
+      "detector": "systemfonts"
+     },
+     "font_family": "PingFang SC",
+     "width_mm": 89,
+     "height_mm": 62,
+     "dpi": 600,
+     "base_size": 9,
+     "method_note": "Overall OLS with pointwise 95% confidence band where defined; groups do not trigger separate fits unless fit_group=true.",
+     "x_scale": {
+      "type": "numeric"
+     },
+     "fit_group": false,
+     "fit": {
+      "n": 23,
+      "slope": 1.47655375298603,
+      "intercept": 7.08199065323125,
+      "r": 0.778252615001042,
+      "r_squared": 0.605677132755961,
+      "status": "ok"
+     },
+     "series": [
+      {
+       "source_row_id": "1",
+       "x": 26.9,
+       "y": 47.45,
+       "group": "A"
+      },
+      {
+       "source_row_id": "2",
+       "x": 28.63,
+       "y": 53.36,
+       "group": "B"
+      },
+      {
+       "source_row_id": "3",
+       "x": 27.56,
+       "y": 47.03,
+       "group": "C"
+      },
+      {
+       "source_row_id": "4",
+       "x": 27.65,
+       "y": 44.55,
+       "group": "A"
+      },
+      {
+       "source_row_id": "5",
+       "x": 24.33,
+       "y": 43.53,
+       "group": "B"
+      },
+      {
+       "source_row_id": "6",
+       "x": 23.32,
+       "y": 40.39,
+       "group": "C"
+      },
+      {
+       "source_row_id": "7",
+       "x": 27.61,
+       "y": 47.31,
+       "group": "A"
+      },
+      {
+       "source_row_id": "9",
+       "x": 27.88,
+       "y": 47.07,
+       "group": "C"
+      },
+      {
+       "source_row_id": "10",
+       "x": 21.67,
+       "y": 37.18,
+       "group": "A"
+      },
+      {
+       "source_row_id": "11",
+       "x": 25.14,
+       "y": 46.71,
+       "group": "B"
+      },
+      {
+       "source_row_id": "12",
+       "x": 25.61,
+       "y": 48.34,
+       "group": "C"
+      },
+      {
+       "source_row_id": "13",
+       "x": 29.08,
+       "y": 47.63,
+       "group": "A"
+      },
+      {
+       "source_row_id": "14",
+       "x": 23.47,
+       "y": 45.22,
+       "group": "B"
+      },
+      {
+       "source_row_id": "15",
+       "x": 24.06,
+       "y": 43.08,
+       "group": "C"
+      },
+      {
+       "source_row_id": "16",
+       "x": 22.52,
+       "y": 36.64,
+       "group": "A"
+      },
+      {
+       "source_row_id": "17",
+       "x": 28.58,
+       "y": 50.27,
+       "group": "B"
+      },
+      {
+       "source_row_id": "18",
+       "x": 26.55,
+       "y": 45.31,
+       "group": "C"
+      },
+      {
+       "source_row_id": "19",
+       "x": 28.62,
+       "y": 45.44,
+       "group": "A"
+      },
+      {
+       "source_row_id": "20",
+       "x": 28,
+       "y": 54.23,
+       "group": "B"
+      },
+      {
+       "source_row_id": "21",
+       "x": 22.59,
+       "y": 37.48,
+       "group": "C"
+      },
+      {
+       "source_row_id": "22",
+       "x": 27.44,
+       "y": 43.34,
+       "group": "A"
+      },
+      {
+       "source_row_id": "23",
+       "x": 22.94,
+       "y": 45.33,
+       "group": "B"
+      },
+      {
+       "source_row_id": "24",
+       "x": 28.7,
+       "y": 50.23,
+       "group": "C"
+      }
+     ],
+     "files": {
+      "pdf": "figure_2.pdf",
+      "png": "figure_2.png",
+      "svg": "figure_2.svg"
+     }
+    },
+    "caption": {
+     "title": "产量与平均温度的关系",
+     "panel": "B",
+     "x_label": "平均温度 (°C)",
+     "y_label": "产量 (mg/L)",
+     "n": 23,
+     "n_independent_units": {},
+     "groups": [
+      "A",
+      "B",
+      "C"
+     ],
+     "error_bar": "散点不画单点误差线；拟合带（若存在）为均值响应的 95% 置信带",
+     "stats": "总体最小二乘拟合：slope=1.47655，intercept=7.08199，Pearson r=0.778253，R²=0.605677；带 95% 置信带",
+     "standalone_text": "产量与平均温度的关系。横轴：平均温度 (°C)；纵轴：产量 (mg/L)。有效观测行 n=23，排除 1 行。总体最小二乘拟合：slope=1.47655，intercept=7.08199，Pearson r=0.778253，R²=0.605677；带 95% 置信带。散点不画单点误差线；拟合带（若存在）为均值响应的 95% 置信带。所有排除原因见对应 lineage 文件。"
+    },
+    "resources": {
+     "tsv": "figure_2.tsv",
+     "csv": "figure_2.csv",
+     "spec": "figure_2_spec.json",
+     "lineage": "figure_2_lineage.json",
+     "analysis": "figure_2_analysis.json",
+     "data_prep": "data_prep.sh",
+     "plot_script": "plot.R",
+     "theme": "theme.R",
+     "normalize_pdf": "scripts/normalize_pdf.py",
+     "audit": "scripts/audit_outputs.py"
+    },
+    "files": {
+     "pdf": {
+      "file": "figure_2.pdf",
+      "exists": true,
+      "bytes": 15718,
+      "sha256": "a842f916846957923d27d5dec6746f211c2bf384166640a1c58d80c18ceb4f95",
+      "metadata": {
+       "path": "figure_2.pdf",
+       "exists": true,
+       "size_bytes": 15718,
+       "format": "pdf",
+       "properties": {
+        "pages": 1,
+        "page_width_mm": 88.89999999999999,
+        "page_height_mm": 61.736111111111114,
+        "page_sizes": [
+         {
+          "page": 1,
+          "width_mm": 88.89999999999999,
+          "height_mm": 61.736111111111114
+         }
+        ],
+        "first_page_fonts": [
+         "AWVYCQ+PingFangSC-Semibold",
+         "HFQQUX+PingFangSC-Semibold",
+         "SJVJFJ+PingFangSC-Semibold",
+         "VIRKVQ+PingFangSC-Semibold",
+         "f-2-0",
+         "f-3-0"
+        ],
+        "pdf_fonts": [
+         {
+          "page": 1,
+          "resource_name": "/f-0-0",
+          "resource_path": "/Resources/Font/f-0-0",
+          "base_font": "AWVYCQ+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "AWVYCQ+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-1-0",
+          "resource_path": "/Resources/Font/f-1-0",
+          "base_font": "HFQQUX+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "HFQQUX+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-2-0",
+          "resource_path": "/Resources/Font/f-2-0",
+          "base_font": null,
+          "subtype": "Type3",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [],
+          "type3_charprocs": {
+           "count": 1,
+           "stream_count": 1
+          },
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-3-0",
+          "resource_path": "/Resources/Font/f-3-0",
+          "base_font": null,
+          "subtype": "Type3",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [],
+          "type3_charprocs": {
+           "count": 1,
+           "stream_count": 1
+          },
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-4-0",
+          "resource_path": "/Resources/Font/f-4-0",
+          "base_font": "VIRKVQ+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "VIRKVQ+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         },
+         {
+          "page": 1,
+          "resource_name": "/f-5-0",
+          "resource_path": "/Resources/Font/f-5-0",
+          "base_font": "SJVJFJ+PingFangSC-Semibold",
+          "subtype": "Type0",
+          "embedded": true,
+          "font_file_keys": [],
+          "descendant_fonts": [
+           {
+            "base_font": "SJVJFJ+PingFangSC-Semibold",
+            "subtype": "CIDFontType0",
+            "embedded": true,
+            "font_file_keys": [
+             "/FontFile3"
+            ],
+            "descendant_fonts": [],
+            "type3_charprocs": null,
+            "issues": []
+           }
+          ],
+          "type3_charprocs": null,
+          "issues": []
+         }
+        ],
+        "all_fonts_embedded": true,
+        "font_scan_issues": [],
+        "inspection_limits": [
+         "FontFile/FontFile2/FontFile3 and Type3 CharProcs are resource evidence only; font programs, glyph coverage and rendering are not certified.",
+         "Fonts are inventoried in all page and nested Form XObject resources, including unused resources; other resource contexts are not scanned.",
+         "Page dimensions use the unrotated MediaBox and UserUnit; crop boxes and rendered bounds are not checked."
+        ],
+        "document_metadata_keys": [
+         "/CreationDate",
+         "/ModDate",
+         "/Producer"
+        ]
+       },
+       "warnings": [],
+       "errors": []
+      }
+     },
+     "png": {
+      "file": "figure_2.png",
+      "exists": true,
+      "bytes": 119725,
+      "sha256": "4b9cefbf73af36b877112976e85cefc78904f68270cf256b546f120871f7d6c7",
+      "metadata": {
+       "path": "figure_2.png",
+       "exists": true,
+       "size_bytes": 119725,
+       "format": "png",
+       "properties": {
+        "format": "PNG",
+        "width_px": 2102,
+        "height_px": 1464,
+        "mode": "RGB",
+        "dpi_x": 599.9988,
+        "dpi_y": 599.9988,
+        "width_mm": 88.98484463635594,
+        "height_mm": 61.9761239522479,
+        "embedded_dpi_rounding_tolerance": 0.0127,
+        "size_rounding_tolerance_mm": {
+         "width": 0.044216974180690385,
+         "height": 0.04364527634854365
+        },
+        "compression": null,
+        "has_alpha_channel": false,
+        "has_transparency": false,
+        "has_alpha": false,
+        "has_icc_profile": false,
+        "effective_dpi_at_target_width": 599.8966292134832,
+        "effective_dpi_at_target_height": 599.7677419354839,
+        "dpi_check": {
+         "source": "minimum_effective_axis",
+         "value": 599.7677419354839,
+         "minimum": 600.0,
+         "rounding_tolerance": 0.40967742035483873,
+         "axes": {
+          "x": {
+           "source": "effective_at_target_width",
+           "value": 599.8966292134832,
+           "minimum": 600.0,
+           "rounding_tolerance": 0.2853932594269663
+          },
+          "y": {
+           "source": "effective_at_target_height",
+           "value": 599.7677419354839,
+           "minimum": 600.0,
+           "rounding_tolerance": 0.40967742035483873
+          }
+         }
+        }
+       },
+       "warnings": [],
+       "errors": []
+      },
+      "visual_margins": {
+       "blank": false,
+       "bbox_px": [
+        106,
+        110,
+        2008,
+        1357
+       ],
+       "margins": {
+        "left_in": 0.1766670200007067,
+        "top_in": 0.18333370000073335,
+        "right_in": 0.15666698000062668,
+        "bottom_in": 0.17833369000071334
+       },
+       "min_margin_in": 0.15666698000062668,
+       "clipped": false,
+       "tight": false,
+       "clip_margin_in": 0.02,
+       "tight_margin_in": 0.1,
+       "pass": true,
+       "policy": "fail=blank-or-clipped; tight margins are reported but do not fail a figure"
+      }
+     },
+     "svg": {
+      "file": "figure_2.svg",
+      "exists": true,
+      "bytes": 15046,
+      "sha256": "185e9d26f7b2e19f0b6b2cfd762b712476bdd25534ea09d8afe38a046bb77283",
+      "metadata": {
+       "path": "figure_2.svg",
+       "exists": true,
+       "size_bytes": 15046,
+       "format": "svg",
+       "properties": {
+        "width_mm": 88.99877777777778,
+        "height_mm": 62.00069444444444,
+        "viewBox": "0 0 252.28 175.75",
+        "text_elements": 16,
+        "image_elements": 0,
+        "path_elements": 0,
+        "visible_path_instances": 0,
+        "visible_text_instances": 16,
+        "text_mode_evidence": "editable-text-present",
+        "font_families": [
+         "PingFang SC"
+        ],
+        "has_alpha_markers": true,
+        "stylesheet_elements": 1,
+        "stylesheet_has_alpha_markers": false,
+        "unresolved_opacity_values": [],
+        "inspection_limits": [
+         "Visible instances are structural candidates using presentation/inline styles, local use references and local feImage targets of used filters; path data, transforms, clipping and occlusion are not rendered.",
+         "Nested CSS rules, selector matching, cascading, external stylesheets, animation, filter effects and color alpha are not resolved; stylesheet opacity markers may be unused.",
+         "Paths without text are outline evidence only; paths may be ordinary diagram geometry and do not certify outlined glyphs."
+        ]
+       },
+       "warnings": [],
+       "errors": []
+      }
+     },
+     "palette_audit": {
+      "role": "graphical",
+      "threshold": 3.0,
+      "background": "#FFFFFF",
+      "foreground": "#000000",
+      "foreground_contrast_vs_background": 21.0,
+      "min_gray_delta": 10.0,
+      "gray_threshold_kind": "heuristic",
+      "context": {
+       "geometry": "scatter",
+       "declared_cues": [
+        "markers"
+       ],
+       "foreground_placement": "outside-marks",
+       "source": "caller declaration; not image detection"
+      },
+      "colours": [
+       {
+        "name": "A",
+        "hex": "#0072B2",
+        "contrast_vs_background": 5.1854,
+        "contrast_vs_foreground": 4.0498,
+        "cie_lstar": 45.9707
+       },
+       {
+        "name": "B",
+        "hex": "#D55E00",
+        "contrast_vs_background": 3.8672,
+        "contrast_vs_foreground": 5.4303,
+        "cie_lstar": 54.192
+       },
+       {
+        "name": "C",
+        "hex": "#009E73",
+        "contrast_vs_background": 3.4211,
+        "contrast_vs_foreground": 6.1383,
+        "cie_lstar": 57.7411
+       }
+      ],
+      "pairs": [
+       {
+        "first": "A",
+        "second": "B",
+        "delta_cie_lstar": 8.2212,
+        "below_heuristic": true
+       },
+       {
+        "first": "A",
+        "second": "C",
+        "delta_cie_lstar": 11.7704,
+        "below_heuristic": false
+       },
+       {
+        "first": "B",
+        "second": "C",
+        "delta_cie_lstar": 3.5491,
+        "below_heuristic": true
+       }
+      ],
+      "summary": {
+       "min_contrast_vs_background": 3.4211,
+       "min_contrast_vs_foreground": 4.0498,
+       "min_pairwise_cie_lstar_delta": 3.5491,
+       "passes_foreground_threshold": true,
+       "passes_grayscale_screen": false
+      },
+      "warnings": [],
+      "notes": [
+       "2 pair(s) have CIE L* separation below 10.0 (EasyPlot heuristic, not a WCAG criterion); declared identity cues may cover this; confirm at final size"
+      ],
+      "recommendations": [
+       "For overlapping groups, use group-specific marker shapes or facets and check occlusion; a shared dark outline alone does not identify groups."
+      ]
+     }
+    },
+    "qa": {
+     "checks": [
+      {
+       "check": "r_analysis_status",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "row_accounting",
+       "pass": true,
+       "detail": "R n_used=23 preparation n_used=23"
+      },
+      {
+       "check": "sample_size_present",
+       "pass": true,
+       "detail": "n=23"
+      },
+      {
+       "check": "cjk_font_family",
+       "pass": true,
+       "detail": "CJK text requires a real CJK family; actual=PingFang SC"
+      },
+      {
+       "check": "independent_numeric_recheck",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "export_pdf",
+       "pass": true,
+       "detail": "figure_2.pdf"
+      },
+      {
+       "check": "export_png",
+       "pass": true,
+       "detail": "figure_2.png"
+      },
+      {
+       "check": "export_svg",
+       "pass": true,
+       "detail": "figure_2.svg"
+      },
+      {
+       "check": "metadata_pdf",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "metadata_png",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "metadata_svg",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "png_not_blank_and_margins",
+       "pass": true,
+       "detail": "{\"blank\": false, \"bbox_px\": [106, 110, 2008, 1357], \"margins\": {\"left_in\": 0.1766670200007067, \"top_in\": 0.18333370000073335, \"right_in\": 0.15666698000062668, \"bottom_in\": 0.17833369000071334}, \"min_margin_in\": 0.15666698000062668, \"clipped\": false, \"tight\": false, \"clip_margin_in\": 0.02, \"tight_margin_in\": 0.1, \"pass\": true, \"policy\": \"fail=blank-or-clipped; tight margins are reported but do not fail a figure\"}"
+      },
+      {
+       "check": "svg_expected_axis_labels",
+       "pass": true,
+       "detail": "missing: "
+      },
+      {
+       "check": "palette_context_screen",
+       "pass": true,
+       "detail": ""
+      },
+      {
+       "check": "no_silent_category_truncation",
+       "pass": true,
+       "detail": "all categories retained or explicitly aggregated"
+      },
+      {
+       "check": "caption_self_contained",
+       "pass": true,
+       "detail": "title/axes/n/method/uncertainty/exclusions"
+      },
+      {
+       "check": "requested_formats",
+       "pass": true,
+       "detail": "requested=['pdf', 'png', 'svg']; supported_delivered=['pdf', 'png', 'svg']; missing=[]; PDF/PNG/SVG are emitted by default"
+      },
+      {
+       "check": "end_to_end_reproduce",
+       "pass": true,
+       "detail": "raw snapshot → TSV → R statistics → PDF/PNG/SVG, two complete runs"
+      }
+     ],
+     "all_pass": true
+    },
+    "reproduce": {
+     "commands": [
+      "bash data_prep.sh",
+      "Rscript plot.R",
+      "python3 -B scripts/normalize_pdf.py --plan run_plan.json --out ."
+     ],
+     "before": {
+      "figure_2.tsv": "d4a6ec05b12d4dc7a0f3d6bfdb40c9f11a549095150a22614caef86685bc1d5d",
+      "figure_2.csv": "76bb0921931febb2cca37cb73e2d2d4f580eb51507130dfae25e78fe1590e1c6",
+      "figure_2_lineage.json": "abde18e9074d92c53264b219532a39659b24f7a8c19f2df86a521c95622d8f58",
+      "figure_2_analysis.json": "fae48a2b466238954414b57f95bdb5e9323f5b6aee0c33d1f1c5bf810cd0558a",
+      "figure_2.pdf": "a842f916846957923d27d5dec6746f211c2bf384166640a1c58d80c18ceb4f95",
+      "figure_2.png": "4b9cefbf73af36b877112976e85cefc78904f68270cf256b546f120871f7d6c7",
+      "figure_2.svg": "185e9d26f7b2e19f0b6b2cfd762b712476bdd25534ea09d8afe38a046bb77283"
+     },
+     "after": {
+      "figure_2.tsv": "d4a6ec05b12d4dc7a0f3d6bfdb40c9f11a549095150a22614caef86685bc1d5d",
+      "figure_2.csv": "76bb0921931febb2cca37cb73e2d2d4f580eb51507130dfae25e78fe1590e1c6",
+      "figure_2_lineage.json": "abde18e9074d92c53264b219532a39659b24f7a8c19f2df86a521c95622d8f58",
+      "figure_2_analysis.json": "fae48a2b466238954414b57f95bdb5e9323f5b6aee0c33d1f1c5bf810cd0558a",
+      "figure_2.pdf": "a842f916846957923d27d5dec6746f211c2bf384166640a1c58d80c18ceb4f95",
+      "figure_2.png": "4b9cefbf73af36b877112976e85cefc78904f68270cf256b546f120871f7d6c7",
+      "figure_2.svg": "185e9d26f7b2e19f0b6b2cfd762b712476bdd25534ea09d8afe38a046bb77283"
+     },
+     "per_file_sha_match": {
+      "figure_2.tsv": true,
+      "figure_2.csv": true,
+      "figure_2_lineage.json": true,
+      "figure_2_analysis.json": true,
+      "figure_2.pdf": true,
+      "figure_2.png": true,
+      "figure_2.svg": true
+     },
+     "end_to_end_sha_match": true
+    }
+   }
+  ],
+  "format_gaps": [],
+  "probe": {
+   "python": {
+    "version": "3.12.12"
+   },
+   "Pillow": {
+    "available": true,
+    "version": "13.0.0"
+   },
+   "pypdf": {
+    "available": true,
+    "version": "6.9.1"
+   },
+   "matplotlib": {
+    "available": true,
+    "version": "3.11.2"
+   },
+   "Rscript": {
+    "available": true,
+    "path": "/Users/hao/miniforge3/bin/Rscript"
+   },
+   "R": {
+    "returncode": 0,
+    "packages": {
+     "ggplot2": {
+      "available": true,
+      "version": "4.0.2"
+     },
+     "ggprism": {
+      "available": true,
+      "version": "1.0.7"
+     },
+     "svglite": {
+      "available": true,
+      "version": "2.2.2"
+     },
+     "jsonlite": {
+      "available": true,
+      "version": "2.0.0"
+     },
+     "systemfonts": {
+      "available": true,
+      "version": "1.3.1"
+     }
+    },
+    "ready": true,
+    "stderr": ""
+   }
+  },
+  "export_policy": {
+   "default_formats": [
+    "pdf",
+    "png",
+    "svg"
+   ],
+   "png_dpi": 600,
+   "svg_text": "editable",
+   "pdf_fonts": "embedded evidence audited",
+   "unsupported_requests": "记录为范围外缺口并交付默认三格式；支持范围内格式缺失才判 partial",
+   "no_r_fallback": "R 依赖缺失时用 matplotlib 降级渲染真实 PNG（仅 PNG，PDF/SVG 缺口如实记录，不伪造）"
+  }
+ },
+ "data_to_visual_map": {
+  "n_figures": 2,
+  "maps": [
+   {
+    "figure_id": "F1",
+    "plot_data": "figure_1.tsv",
+    "lineage": "figure_1_lineage.json",
+    "source_columns": [
+     "site",
+     "yield_mg_L"
+    ],
+    "mapping": [
+     {
+      "source": "x",
+      "channel": "x position/category + point fill (category colour)"
+     },
+     {
+      "source": "y",
+      "channel": "bar length + raw point y"
+     },
+     {
+      "source": "y",
+      "channel": "declared uncertainty"
+     }
+    ],
+    "aggregation": "documented in analysis JSON; series retain source_row_ids where applicable"
+   },
+   {
+    "figure_id": "F2",
+    "plot_data": "figure_2.tsv",
+    "lineage": "figure_2_lineage.json",
+    "source_columns": [
+     "temperature_c",
+     "yield_mg_L",
+     "site"
+    ],
+    "mapping": [
+     {
+      "source": "x",
+      "channel": "x position"
+     },
+     {
+      "source": "y",
+      "channel": "y position"
+     },
+     {
+      "source": "group",
+      "channel": "colour + shape"
+     }
+    ],
+    "aggregation": "row-level points plus declared OLS"
+   }
+  ],
+  "note": "绘图 TSV 保留完整精度与 source_row_id；聚合统计回指 R analysis 和 lineage"
+ },
+ "evidence_map": {
+  "source": {
+   "name": "EXAMPLE 站点产量表（合成）",
+   "note": "示例合成数据：3 站点 × 8 样地；温度与产量存在正相关（便于演示散点+拟合）；P-08 的产量留空用于验证「缺失不插补、只计数」",
+   "source_path": null,
+   "original_sha256": "dc507930fbf9656b948928b6b9672a06b4d73b6ce6c1ea08891bee4e2878fe85",
+   "n_rows": 24,
+   "columns": [
+    "plot_id",
+    "site",
+    "yield_mg_L",
+    "temperature_c"
+   ],
+   "snapshot": "source_data.tsv",
+   "snapshot_sha256": "67ee5427b51292f9add3331fc773d7e10545be12c3d69287cb69c0e84cde4339"
+  },
+  "run_plan": "run_plan.json",
+  "data_quality": "data_quality.json",
+  "preparation": "preparation.json",
+  "dependencies": "dependencies.json",
+  "rules": {
+   "chart_choice": {
+    "file": "rules/chart_choice.json",
+    "sha256": "36134dd164baf06c72b6571367e59ce683fd023243eb25adc129ca8c2cdbf842"
+   },
+   "palette": {
+    "file": "rules/palette.json",
+    "sha256": "2547b7ba9c9063444706e2eb754a25b963c7989c2f70931eec6915917411cfca"
+   },
+   "venue": {
+    "file": "rules/venue.json",
+    "sha256": "09cd64076ba861135c9fba1cd6d31a0efae32a933fbac49043291476430f7741"
+   }
+  },
+  "scripts": [
+   "data_prep.sh",
+   "scripts/prepare_data.py",
+   "plot.R",
+   "theme.R",
+   "scripts/normalize_pdf.py",
+   "scripts/audit_outputs.py"
+  ],
+  "reproduce_commands": [
+   "bash data_prep.sh",
+   "Rscript plot.R",
+   "python3 -B scripts/normalize_pdf.py --plan run_plan.json --out .",
+   "python3 -B scripts/audit_outputs.py --plan run_plan.json --out ."
+  ],
+  "gaps": []
+ },
+ "状态说明": {
+  "overall": "complete",
+  "gaps": [],
+  "notes": [
+   "PDF、PNG、SVG 均由同一 R/ggplot2 绘图脚本生成；默认 PNG 600dpi，最低接受 300dpi。",
+   "原始快照、清洗规则、排除行、绘图 TSV、R 统计、版本和运行日志均随结果保存。",
+   "自动检查不替代科学语义审查；使用 Agent 时还需查看 PNG/PDF 的实际渲染。"
+  ],
+  "uncertainty": [
+   {
+    "item": "视觉语义复核",
+    "reason": "像素边距、字体、色板和数值检查不能证明图型与研究问题完全匹配"
+   }
+  ]
+ },
+ "baseline_comparison": {
+  "claim": "同一数据与任务要求下，本 Skill 相对基础 Agent/通用绘图方案的确定性防御对照；平台侧公平对照由组织方自行运行，本表不虚构基线数字",
+  "dimensions": [
+   {
+    "aspect": "图表选择",
+    "base_agent_typical": "无序分类比较画饼图、时序画并列柱，或只给“建议使用柱状图”的文字不出图",
+    "this_skill": "purpose/chart_hint 路由到 10 类可执行图型；饼/3D/双轴显式拒绝并给理由；交付真实图件与绘图代码",
+    "evidence": "figures[].selection_rationale / rejected_alternatives；figures[].files"
+   },
+   {
+    "aspect": "坐标轴与刻度",
+    "base_agent_typical": "柱状图纵轴不从 0 起截断基线；最大值超出刻度被裁剪",
+    "this_skill": "柱/条一律从 0 起；刻度覆盖数据、误差线与显著性括线的最高点",
+    "evidence": "analysis.x_scale / analysis.y_axis_cover；audit 的 size 与 margin 检查"
+   },
+   {
+    "aspect": "编码与可读性",
+    "base_agent_typical": "类别过多硬塞一图、标签互相重叠；大样本散点糊成色块；配色灰度/色盲不可辨",
+    "this_skill": "类别不截断：自动增高画布/横向布局/45°-90° 标签/字号收缩；点径与透明度按密度自适应；Okabe-Ito 色盲友好色板 + 形状/线型冗余编码",
+    "evidence": "figures[].layout_adjustment；analysis.point_style / heatmap.label_policy；palette 审计检查"
+   },
+   {
+    "aspect": "标注与图注",
+    "base_agent_typical": "误差线不写口径；显著性凭空画星号；图注依赖正文才能读懂",
+    "this_skill": "误差线口径（SD/SE/CI95）逐图声明；显著性只透传任务提供的结果并注明方法与来源；图注含轴/单位/n/排除数/方法，独立可读",
+    "evidence": "figures[].caption.standalone_text；analysis.significance_rendered"
+   },
+   {
+    "aspect": "导出规格",
+    "base_agent_typical": "只出低分辨率截图；字体未嵌入；中文乱码；尺寸不合期刊栏宽",
+    "this_skill": "每图 PDF(字体子集嵌入)+600dpi PNG+可编辑 SVG；Cairo/svglite 真实文本；venue 栏宽适配（尺寸误差 <0.2mm）",
+    "evidence": "audit.files.*.metadata（页面尺寸/字体清单/DPI/SVG 文本元素数）"
+   },
+   {
+    "aspect": "复现与证据链",
+    "base_agent_typical": "清洗与统计口径无记录，换一台机器重跑得到另一张图",
+    "this_skill": "原始快照+声明式清洗规则+行级血缘；两次全链重跑逐文件 SHA-256 一致；缺失/重复/哨兵逐行可查",
+    "evidence": "data_quality.json / figure_N_lineage.json / figures[].reproduce.end_to_end_sha_match"
+   },
+   {
+    "aspect": "异常与降级",
+    "base_agent_typical": "缺列/坏值/不支持格式时静默失败或伪造结果",
+    "this_skill": "列缺失→诚实 partial；未知格式→范围外缺口记录并交付默认三格式；n=1/常量相关/零方差→null 而非 0；单图失败不影响其余图",
+    "evidence": "status.unmet / figures[].format_gaps / 状态说明.gaps"
+   }
+  ],
+  "verified_by": [
+   "figures[].reproduce.end_to_end_sha_match",
+   "audit.json 各项检查",
+   "validate.py + validate_figures.py 全 PASS"
+  ]
+ },
+ "evidence": {
+  "figure_pipeline": {
+   "source": {
+    "name": "EXAMPLE 站点产量表（合成）",
+    "note": "示例合成数据：3 站点 × 8 样地；温度与产量存在正相关（便于演示散点+拟合）；P-08 的产量留空用于验证「缺失不插补、只计数」",
+    "source_path": null,
+    "original_sha256": "dc507930fbf9656b948928b6b9672a06b4d73b6ce6c1ea08891bee4e2878fe85",
+    "n_rows": 24,
+    "columns": [
+     "plot_id",
+     "site",
+     "yield_mg_L",
+     "temperature_c"
+    ],
+    "snapshot": "source_data.tsv",
+    "snapshot_sha256": "67ee5427b51292f9add3331fc773d7e10545be12c3d69287cb69c0e84cde4339"
+   },
+   "run_plan": "run_plan.json",
+   "data_quality": "data_quality.json",
+   "preparation": "preparation.json",
+   "dependencies": "dependencies.json",
+   "rules": {
+    "chart_choice": {
+     "file": "rules/chart_choice.json",
+     "sha256": "36134dd164baf06c72b6571367e59ce683fd023243eb25adc129ca8c2cdbf842"
+    },
+    "palette": {
+     "file": "rules/palette.json",
+     "sha256": "2547b7ba9c9063444706e2eb754a25b963c7989c2f70931eec6915917411cfca"
+    },
+    "venue": {
+     "file": "rules/venue.json",
+     "sha256": "09cd64076ba861135c9fba1cd6d31a0efae32a933fbac49043291476430f7741"
+    }
+   },
+   "scripts": [
+    "data_prep.sh",
+    "scripts/prepare_data.py",
+    "plot.R",
+    "theme.R",
+    "scripts/normalize_pdf.py",
+    "scripts/audit_outputs.py"
+   ],
+   "reproduce_commands": [
+    "bash data_prep.sh",
+    "Rscript plot.R",
+    "python3 -B scripts/normalize_pdf.py --plan run_plan.json --out .",
+    "python3 -B scripts/audit_outputs.py --plan run_plan.json --out ."
+   ],
+   "gaps": []
+  },
+  "notes": [
+   "PDF、PNG、SVG 均由同一 R/ggplot2 绘图脚本生成；默认 PNG 600dpi，最低接受 300dpi。",
+   "原始快照、清洗规则、排除行、绘图 TSV、R 统计、版本和运行日志均随结果保存。",
+   "自动检查不替代科学语义审查；使用 Agent 时还需查看 PNG/PDF 的实际渲染。"
+  ],
+  "contract": {
+   "figures": "图件清单：图型与选择理由/拒绝理由、误差线语义、文件（PDF / 600dpi PNG / 可编辑 SVG / TSV+CSV / spec / 成对脚本）、图注、数值与渲染 QA、全链复现证据",
+   "data_to_visual_map": "数据列 → 视觉通道映射表（位置/长度/颜色/拟合线），每图逐项列明，可回指 figure_N.csv",
+   "evidence_map": "规则文件、数据快照形态判定、渲染管线、复现命令、缺口清单；渲染脚本真实执行记录",
+   "状态说明": "R/Pillow/pypdf/字体缺失、类别或样本量异常、整组不可绘、QA/复现失败等缺口与不确定性"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "rows": 24,
+    "requests": 2,
+    "routed": 2
+   },
+   {
+    "step": "end_to_end_rerun",
+    "seq": 2,
+    "prep_rc": 0,
+    "plot_rc": 0,
+    "normalize_rc": 0
+   },
+   {
+    "step": "figure",
+    "seq": 3,
+    "figure_id": "F1",
+    "chart": "bar_with_error_points",
+    "qa_pass": true
+   },
+   {
+    "step": "figure",
+    "seq": 4,
+    "figure_id": "F2",
+    "chart": "scatter_with_fit",
+    "qa_pass": true
+   },
+   {
+    "step": "emit",
+    "seq": 5,
+    "delivered": 2,
+    "gaps": 0
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-060-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "complete",
+  "completed": [
+   "原始快照与数据字典适配",
+   "运行计划与动态输出契约",
+   "声明式清洗与行级血缘",
+   "R/ggplot2 统计绘图",
+   "PDF/PNG/SVG 三格式导出",
+   "独立数值与元数据审计",
+   "两次端到端复现比较"
+  ],
+  "unmet": [],
+  "notes": []
+ },
+ "uncertainty": [
+  {
+   "item": "视觉语义复核",
+   "reason": "像素边距、字体、色板和数值检查不能证明图型与研究问题完全匹配"
+  }
+ ]
+}

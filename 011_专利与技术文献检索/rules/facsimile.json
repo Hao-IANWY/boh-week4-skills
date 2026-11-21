@@ -1,0 +1,42 @@
+{
+ "version": "0.2.0",
+ "description": "影印件（USPTO facsimile）与材料正文的读取口径。侧车优先级、提取方法词表、OCR 边界判定与 WO 合并号码的拆解规则都集中在此，代码不出现硬编阈值。",
+ "sidecar_priority": [
+  {"pattern": "<pdf>.ocr.txt", "method": "ocr_sidecar", "ocr_boundary": true, "note": "OCR 侧车文本，优先级最高：直接标记 OCR 边界"},
+  {"pattern": "<pdf>.txt", "method": "sidecar_text", "ocr_boundary": false, "note": "干净文本层侧车"},
+  {"pattern": "<pdf stem>.ocr.txt", "method": "ocr_sidecar", "ocr_boundary": true},
+  {"pattern": "<pdf stem>.txt", "method": "sidecar_text", "ocr_boundary": false}
+ ],
+ "extraction_order": [
+  "ocr_sidecar（<pdf>.ocr.txt 或文件名含 .ocr.txt 的侧车）",
+  "sidecar_text（<pdf>.txt / <stem>.txt 干净侧车）",
+  "pdf_stdlib_text（scripts/pdf_min.py 流扫描：zlib 解压 + BT/ET/Tj 抽取；不是通用 PDF 解析器）",
+  "failed（前两步拿不到文本：扫描件/编码不支持，如实记 gap，不编造正文）"
+ ],
+ "ocr_boundary_rule": "来源为 .ocr.txt 侧车、或记录 ocr=true、或材料显式声明 ocr=true 时，其上的权项引用与正文摘引一律 ocr_boundary=true；残句不作为完整权项范围。",
+ "record_ref_keys": {
+  "facsimile": ["facsimiles", "facsimile", "facsimile_pdfs", "pdf", "pdfs"],
+  "literature_fulltext": ["fulltext", "fulltext_path", "text_path"]
+ },
+ "case_ref_keys": {
+  "facsimile": ["facsimiles", "facsimile_pdfs"],
+  "literature": ["literature", "comparison_papers", "papers", "documents"],
+  "mixed": ["materials"]
+ },
+ "filename_match_policy": "未显式挂接的影印件按「公开号数字出现在文件名」提示性挂接（linkage=filename_match），只取第一个匹配记录；挂接依据必须写进 evidence_map.facsimiles[].linkage。",
+ "claims_source_refs": {
+  "inline_field": "权项来自记录内联 claims 字段；char_span 在内联拼接文本内",
+  "facsimile:<file>": "权项来自影印件文本（stdlib 提取或干净侧车），page 指页码，char_span 在该页文本内",
+  "ocr_sidecar:<file>": "权项来自 OCR 侧车文本，char_span 在侧车文本内，ocr_boundary 必为 true"
+ },
+ "quote_policy": "claims quote 与材料正文摘引（literature_hits）都必须是对应来源文本的精确子串（无省略号、无空白归一），char_span=[start,end] 满足 source[start:end]==quote。",
+ "wo_normalization": {
+  "prefix": "WO",
+  "standard_layout": "WO YYYY/NNNNNN（4 位年份 + 斜杠 + 序号）",
+  "slash_variants": ["WO 2018/123456", "WO2018/123456", "wo 2018/123456 a1", "WO 2018-123456"],
+  "merged_ocr_policy": "丢斜杠丢空格的合并形态（如 WO2018123456A1）：仍给 canonical 以便跨写法命中同一记录，但标 wo_merged=true + ambiguous=true，并给「4 位年份 + 序号」拆解候选（wo_split），不把单一拆解写成确定结论",
+  "plausible_year_range": [1990, 2035],
+  "note": "拆解候选必须回 WIPO/受理局登记确认；编号变体（千分位/空格/小写/尾部标点/全角）一律先 NFKC 归一再拆字段"
+ },
+ "max_text_chars": 200000
+}

@@ -1,0 +1,147 @@
+{
+ "version": "0.1.0",
+ "description": "048 研究问题要素词典与子问题模板。要素识别决定拆解树；模板决定子问题的检索动作与证据要求。",
+ "lexicon": {
+  "object": {
+   "label": "研究对象",
+   "canonical": "单步逆合成预测",
+   "required": true,
+   "terms": [
+    "逆合成",
+    "retrosynthesis",
+    "单步",
+    "single-step",
+    "反应预测"
+   ]
+  },
+  "method": {
+   "label": "方法",
+   "canonical": "消息传递图神经网络",
+   "required": false,
+   "terms": [
+    "消息传递",
+    "message passing",
+    "图神经网络",
+    "graph neural network",
+    "gnn",
+    "反应中心",
+    "reaction centre",
+    "reaction center"
+   ]
+  },
+  "metric": {
+   "label": "评价指标",
+   "canonical": "top-1 准确率",
+   "required": false,
+   "terms": [
+    "准确率",
+    "accuracy",
+    "top-1",
+    "top1",
+    "产率",
+    "yield"
+   ]
+  },
+  "constraint": {
+   "label": "限制条件",
+   "canonical": "低数据条件",
+   "required": false,
+   "terms": [
+    "低数据",
+    "数据不足",
+    "样本量",
+    "data scarcity",
+    "limited data",
+    "训练数据"
+   ]
+  },
+  "comparison": {
+   "label": "比较对象",
+   "canonical": "多步路线规划",
+   "required": false,
+   "terms": [
+    "多步",
+    "multi-step",
+    "路线规划",
+    "route planning",
+    "对比",
+    "versus",
+    "与"
+   ]
+  },
+  "evidence_requirement": {
+   "label": "证据要求",
+   "canonical": "原始实验或基准数据",
+   "required": false,
+   "terms": [
+    "证据",
+    "benchmark",
+    "基准",
+    "数据划分",
+    "数据集",
+    "reproduction study"
+   ]
+  }
+ },
+ "templates": [
+  {
+   "id": "S_OBJECT_METRIC",
+   "requires": [
+    "object",
+    "metric"
+   ],
+   "depends_on": [],
+   "template": "{object} 在 {metric} 上的现有水平是多少",
+   "evidence_requirement": "需要报告该指标的原始研究或基准结果（含数据集与划分）"
+  },
+  {
+   "id": "S_METHOD",
+   "requires": [
+    "method"
+   ],
+   "depends_on": [
+    "S_OBJECT_METRIC"
+   ],
+   "template": "{method} 在该任务中的具体贡献与消融结果是什么",
+   "evidence_requirement": "需要消融实验或方法对比（去掉某组件后的指标变化）"
+  },
+  {
+   "id": "S_CONSTRAINT",
+   "requires": [
+    "constraint",
+    "metric"
+   ],
+   "depends_on": [
+    "S_OBJECT_METRIC"
+   ],
+   "template": "{constraint} 对 {metric} 的限制有多大",
+   "evidence_requirement": "需要低数据/小样本条件下的对比数据（训练规模 vs 指标）"
+  },
+  {
+   "id": "S_COMPARISON",
+   "requires": [
+    "comparison"
+   ],
+   "depends_on": [],
+   "template": "{comparison} 与单步预测的评测口径差异在哪里",
+   "evidence_requirement": "需要同时报告单步与多步评测的研究或数据集说明"
+  },
+  {
+   "id": "S_EVIDENCE",
+   "requires": [
+    "object",
+    "evidence_requirement"
+   ],
+   "depends_on": [
+    "S_OBJECT_METRIC"
+   ],
+   "template": "现有证据能否支撑「{object} 已达性能上限」的判断",
+   "evidence_requirement": "需要覆盖多个数据集/多种划分的复现研究，单篇结果不足以下结论"
+  }
+ ],
+ "dependency_rule": "S_METHOD / S_CONSTRAINT / S_EVIDENCE 依赖 S_OBJECT_METRIC（先确认基线水平，再谈贡献与限制）；S_COMPARISON 独立可并行。",
+ "notes": {
+  "missing_required": "required=true 的要素未在问题中出现时，生成一条澄清子问题，不硬凑检索式",
+  "surface_terms": "子问题的检索键 = 命中要素的原始表述 + 规范名，保证同义词都能召回"
+ }
+}

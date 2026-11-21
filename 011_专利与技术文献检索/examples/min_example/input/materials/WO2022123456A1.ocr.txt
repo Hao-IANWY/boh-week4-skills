@@ -1,0 +1,7 @@
+WIPO PUBLICATION - OCR SIDECAR (SYNTHETIC EXAMPLE)
+WO20 22/123456 A1   [OCR: merged number boundary, slash shifted]
+Title: Sulfide solid electrolyte and method of manufacturing the same
+
+Claims:
+1. A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]
+2. The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]

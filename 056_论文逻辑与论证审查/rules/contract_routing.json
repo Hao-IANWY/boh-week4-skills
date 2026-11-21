@@ -1,0 +1,28 @@
+{
+ "version": "1.0.0",
+ "description": "output_contract 字段名 → 产物键。带 facet 的规则会把 findings 按维度裁剪后再绑定。",
+ "virtual_targets": {"evidence": "证据分区视图", "uncertainty": "uncertainty 列表", "status": "status 三段"},
+ "rules": [
+  {"match": ["事实核验", "fact_check"], "target": "findings", "facet": "fact_check"},
+  {"match": ["统计报告", "stats_reporting"], "target": "findings", "facet": "stats_reporting"},
+  {"match": ["论证链", "argument_chain"], "target": "findings", "facet": "argument_chain"},
+  {"match": ["章节衔接", "section_coherence"], "target": "findings", "facet": "section_coherence"},
+  {"match": ["方法设计", "method_design"], "target": "findings", "facet": "method_design"},
+  {"match": ["引用支持", "citation_support"], "target": "findings", "facet": "citation_support"},
+  {"match": ["学术规范", "academic_norm"], "target": "findings", "facet": "academic_norm"},
+  {"match": ["主张", "claims", "论点"], "target": "claims"},
+  {"match": ["句子索引", "sentences", "sentence_index"], "target": "sentence_index"},
+  {"match": ["论证图", "推理链", "graph", "断裂", "断点"], "target": "argument_graph"},
+  {"match": ["跨章节", "一致性", "衔接矩阵", "promise"], "target": "cross_section_matrix"},
+  {"match": ["问题清单", "findings", "审查报告", "逻辑问题", "发现"], "target": "findings"},
+  {"match": ["抑制", "suppressed", "误报"], "target": "suppressed"},
+  {"match": ["覆盖", "coverage", "全文", "截断", "提取"], "target": "coverage"},
+  {"match": ["审查范围", "facets", "维度"], "target": "facets_status"},
+  {"match": ["建议", "fix", "修改"], "target": "fix_plan"},
+  {"match": ["依据", "证据", "evidence", "定位"], "target": "evidence"},
+  {"match": ["不确定", "待复核", "uncertainty", "边界"], "target": "uncertainty"},
+  {"match": ["状态", "status", "结果状态"], "target": "status"},
+  {"match": ["研究产物", "主结果", "结果", "deliverable"], "target": "研究产物"}
+ ],
+ "note": "按数组顺序匹配；facet 规则排在通用 findings 规则之前，命中即把 findings 按维度过滤后绑定，未点名的维度字段拿到的是裁剪后的清单，避免冒充全查"
+}

@@ -1,0 +1,588 @@
+{
+ "version": "1.0.0",
+ "description": "056 论证审查规则：全文获取后的主张抽取、来源三分类、论证图边判定、分型发现（typed findings）与修改模板。全部可复算：边由 token 重合度阈值决定，断裂点由图结构判定，ASCII 线索词按词边界匹配（避免 improve 误中 prove）。",
+ "claim_cues": [
+  "we show",
+  "we find",
+  "we demonstrate",
+  "we conclude",
+  "results indicate",
+  "results show",
+  "this suggests",
+  "our results",
+  "we argue",
+  "taken together",
+  "表明",
+  "发现",
+  "说明",
+  "提示",
+  "我们认为",
+  "本研究显示",
+  "由此可见",
+  "综上所述"
+ ],
+ "premise_cues": [
+  "because",
+  "since",
+  "as shown",
+  "given that",
+  "based on",
+  "由于",
+  "基于",
+  "由图",
+  "如表",
+  "根据"
+ ],
+ "assumption_cues": [
+  "assume",
+  "assuming",
+  "presumably",
+  "under the assumption",
+  "hypothesize",
+  "hypothesized",
+  "hypothesis",
+  "we expect",
+  "we anticipate",
+  "假设",
+  "假定",
+  "设若",
+  "我们推测",
+  "预计",
+  "预期"
+ ],
+ "reported_cues": [
+  "et al",
+  "reported that",
+  "previous studies",
+  "prior work",
+  "previous report",
+  "prior survey",
+  "according to",
+  "文献",
+  "既往研究",
+  "已有研究",
+  "有人报告",
+  "报道",
+  "曾报道",
+  "文献报道",
+  "既往报道",
+  "综述指出"
+ ],
+ "contrast_cues": [
+  "however",
+  "but",
+  "although",
+  "in contrast",
+  "conversely",
+  "by contrast",
+  "while",
+  "然而",
+  "但是",
+  "相反",
+  "尽管",
+  "另一方面",
+  "相比之下"
+ ],
+ "hedges": [
+  "may",
+  "might",
+  "could",
+  "suggests",
+  "suggest",
+  "is consistent with",
+  "possible",
+  "likely",
+  "associated with",
+  "associated",
+  "可能",
+  "提示",
+  "或许",
+  "有望",
+  "推测",
+  "相关",
+  "关联",
+  "伴随"
+ ],
+ "strong_claims": [
+  "prove",
+  "proven",
+  "proves",
+  "demonstrates conclusively",
+  "demonstrate",
+  "demonstrates",
+  "establish",
+  "establishes",
+  "confirms",
+  "confirm",
+  "conclusive",
+  "definitively",
+  "证明",
+  "证实",
+  "确定",
+  "首次",
+  "无疑",
+  "确凿",
+  "证明了",
+  "确立了"
+ ],
+ "causal_terms": [
+  "causes",
+  "caused",
+  "cause",
+  "causal",
+  "leads to",
+  "led to",
+  "lead to",
+  "results in",
+  "due to",
+  "effect of",
+  "driven by",
+  "导致",
+  "引起",
+  "造成",
+  "决定了",
+  "使得",
+  "改善",
+  "提升",
+  "降低",
+  "减少",
+  "增强",
+  "因果"
+ ],
+ "correlational_terms": [
+  "associated with",
+  "correlates",
+  "correlation",
+  "related to",
+  "association",
+  "相关",
+  "关联",
+  "伴随"
+ ],
+ "aim_cues": [
+  "we aim to",
+  "this study aims",
+  "objective",
+  "we set out",
+  "purpose of this study",
+  "we sought",
+  "本研究旨在",
+  "本文目的",
+  "目的是",
+  "研究目的",
+  "目标是",
+  "我们将"
+ ],
+ "section_roles": {
+  "evidence": [
+   "method",
+   "methods",
+   "materials and methods",
+   "results",
+   "result",
+   "方法",
+   "材料与方法",
+   "结果",
+   "研究对象",
+   "统计分析",
+   "statistical analysis",
+   "study design"
+  ],
+  "interpretation": [
+   "abstract",
+   "summary",
+   "discussion",
+   "conclusion",
+   "implications",
+   "摘要",
+   "讨论",
+   "结论",
+   "启示"
+  ],
+  "introduction": [
+   "introduction",
+   "background",
+   "前言",
+   "引言",
+   "背景",
+   "绪论"
+  ]
+ },
+ "meta_sections": [
+  "references",
+  "bibliography",
+  "appendix",
+  "acknowledg",
+  "data availability",
+  "author contribution",
+  "funding",
+  "conflict of interest",
+  "ethical approval",
+  "ethics statement",
+  "abbreviations",
+  "参考文献",
+  "附录",
+  "致谢",
+  "数据可用性",
+  "作者贡献",
+  "基金",
+  "利益冲突",
+  "伦理",
+  "缩略词"
+ ],
+ "note_roles": "未命中角色词典的编号子章节从最近一个非 meta 章节继承角色（3.1→results、4.1→discussion），避免把结果子章节误判为 other 后整段漏检；meta 章节不参与主张抽取与任何检测",
+ "design_markers": {
+  "observational": [
+   "cross-sectional",
+   "cross sectional",
+   "observational",
+   "retrospective",
+   "survey",
+   "questionnaire",
+   "self-reported",
+   "medical records",
+   "横断面",
+   "横断",
+   "观察性",
+   "回顾性",
+   "问卷调查",
+   "问卷设计",
+   "自我报告"
+  ],
+  "causal": [
+   "randomized",
+   "randomised",
+   "randomly assigned",
+   "randomization",
+   "randomisation",
+   "rct",
+   "cluster trial",
+   "随机分配",
+   "随机分组",
+   "随机对照",
+   "随机化",
+   "纵向",
+   "前瞻性",
+   "前瞻队列",
+   "交叉试验"
+  ]
+ },
+ "control_cues": [
+  "negative control",
+  "positive control",
+  "control analysis",
+  "control condition",
+  "placebo",
+  "as expected",
+  "sensitivity analysis",
+  "阴性对照",
+  "阳性对照",
+  "对照分析",
+  "对照组",
+  "安慰剂",
+  "符合预期",
+  "不出所料",
+  "作为对照"
+ ],
+ "metric_terms": [
+  "accuracy",
+  "auc",
+  "f1",
+  "rmse",
+  "mae",
+  "sensitivity",
+  "specificity",
+  "response rate",
+  "retention rate",
+  "prevalence",
+  "alpha",
+  "cronbach",
+  "准确率",
+  "灵敏度",
+  "特异度",
+  "应答率",
+  "回收率",
+  "保留率",
+  "患病率",
+  "阳性率",
+  "信度"
+ ],
+ "figure_label_pattern": "(figure|fig\\.?|table|图|表)\\s*\\.?\\s*(\\d+|[一二三四五六七八九十]+)",
+ "graph": {
+  "support_min_overlap": 0.25,
+  "strong_support_overlap": 0.45,
+  "attack_overlap_min": 0.15,
+  "max_nodes": 60,
+  "max_edges_per_node": 3,
+  "note": "overlap = |claim_tokens ∩ premise_tokens| / |claim_tokens|；边只从『证据章节』指向『解释章节』，或同章节相邻句且重合度更高时成立；解释章节内部双向需更强重合以捕捉循环论证"
+ },
+ "issue_types": {
+  "T1_UNSUPPORTED_CLAIM": {
+   "label": "结论无支撑边",
+   "category": "insufficient_evidence",
+   "category_label": "证据不足",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "该结论在论证图中没有任何来自结果/方法章节的支撑边，属于结论跳跃（词面重合口径，见 uncertainty）",
+   "fix_template": "为该句结论在结果章节补对应证据，或改写为不依赖数据的表述（局限/展望）；避免只删形容词"
+  },
+  "T2_ASSUMPTION_ONLY": {
+   "label": "仅由假设支撑",
+   "category": "insufficient_evidence",
+   "category_label": "证据不足",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "结论的支撑边全部来自假设句，隐含假设未在主文中说明",
+   "fix_template": "把该假设显式写进方法并说明若不成立结论如何变化"
+  },
+  "T3_CIRCULAR": {
+   "label": "循环论证",
+   "category": "insufficient_evidence",
+   "category_label": "证据不足",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "支撑关系中存在环：A 支撑 B 且 B 支撑 A，论证自我确认",
+   "fix_template": "删除环中一条推论，改为各自独立引用外部证据或本文结果"
+  },
+  "T4_PROMISE_UNDELIVERED": {
+   "label": "引言承诺未交付",
+   "category": "coherence_break",
+   "category_label": "章节衔接断裂",
+   "facets": [
+    "section_coherence"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "引言声明的目标在结果/方法章节没有对应交付",
+   "fix_template": "在结果章节补该目标的分析，或把引言目标改写为实际交付的范围"
+  },
+  "T5_STRENGTH_MISMATCH": {
+   "label": "结论强度越界",
+   "category": "overclaim",
+   "category_label": "结论超数据",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "结果章节用 hedge（可能/相关/提示），该句用强断言（证明/确立/确凿），表述强度超出证据",
+   "fix_template": "把该句强断言词降为与结果一致的表述（『与…相关』『提示』），或补更强证据（随机/纵向设计）"
+  },
+  "T6_CAUSAL_IN_CORRELATIONAL": {
+   "label": "相关当因果",
+   "category": "correlation_as_causation",
+   "category_label": "相关当因果",
+   "facets": [
+    "argument_chain"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "观察性/横断面设计中该句使用因果动词或因果名词，因果方向依赖未声明的设计假设",
+   "fix_template": "把该句改为关联表述（『与…相关』），或在方法中补因果识别设计（随机分配/纵向随访/工具变量）并重写该句"
+  },
+  "T7_NUM_CROSS_SECTION": {
+   "label": "跨章节数值不一致",
+   "category": "fact_error",
+   "category_label": "事实错误",
+   "facets": [
+    "fact_check",
+    "stats_reporting"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "why": "同一指标在多个章节取值不一致，结论依赖的数值来源不明",
+   "fix_template": "统一该指标数值，并在每一处注明唯一来源（表号/图号/数据库版本）"
+  },
+  "T8_CONTRADICTORY_EDGE": {
+   "label": "文中存在相反证据但结论未处理",
+   "category": "internal_inconsistency",
+   "category_label": "内部不一致",
+   "facets": [
+    "citation_support"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "图中存在攻击边（相反结果/相反文献）指向该结论，但该句未做限定或解释",
+   "fix_template": "在该句正面处理相反证据（为何仍成立/适用边界），或把结论限定到证据范围内"
+  },
+  "T9_METHOD_ANSWER_GAP": {
+   "label": "方法无法回答研究问题",
+   "category": "method_answer_gap",
+   "category_label": "方法无法回答问题",
+   "facets": [
+    "method_design"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "引言以因果/机制口径提出目标，而方法为观察性/横断面设计且无因果识别要素",
+   "fix_template": "把该目标降为关联假设并同步修改结论口径，或补可回答该问题的设计（随机/纵向/准实验）"
+  },
+  "T10_STATS_REPORTING": {
+   "label": "统计报告要素缺失",
+   "category": "norm_issue",
+   "category_label": "规范问题",
+   "facets": [
+    "stats_reporting",
+    "academic_norm"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": false,
+    "affects_reproducibility": false,
+    "fixable": true,
+    "advisory": true
+   },
+   "why": "该句报了显著性但缺效应量/精确 p 值/检验方法，读者无法复核",
+   "fix_template": "为该句补齐统计报告要素：效应量 + 95%CI + 检验统计量与精确 p 值（或声明非精确报告的原因）"
+  },
+  "T11_FIGTAB_MISSING": {
+   "label": "图表引用与本体不对应",
+   "category": "fact_error",
+   "category_label": "事实错误",
+   "facets": [
+    "fact_check",
+    "section_coherence",
+    "academic_norm"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": false,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "why": "正文引用了不存在/未呈现的图表编号（或已声明图表从未被正文引用）",
+   "fix_template": "补上该编号的图/表本体，或删除/改正正文对该编号的引用"
+  },
+  "T12_SIGN_CONFLICT": {
+   "label": "同暴露系数方向冲突",
+   "category": "internal_inconsistency",
+   "category_label": "内部不一致",
+   "facets": [
+    "fact_check",
+    "stats_reporting"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "why": "同一暴露/结局语境下两处系数方向相反，可能口径不同或为有意对照，需核对",
+   "fix_template": "核对两处系数口径（变量、模型、样本），统一或在文中说明方向差异的原因"
+  },
+  "T13_STRENGTH_DIRECTION_MISMATCH": {
+   "label": "摘要与结论强度方向不一致",
+   "category": "internal_inconsistency",
+   "category_label": "内部不一致",
+   "facets": [
+    "section_coherence"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": true,
+    "affects_reproducibility": false,
+    "fixable": true
+   },
+   "why": "摘要与结论对同一主结论的强度口径相反（一强一弱），读者无法判断实际证据强度",
+   "fix_template": "把摘要与结论统一到与结果一致的强度口径（较强的一方降档）"
+  },
+  "T14_METHODS_RESULTS_TERMS": {
+   "label": "方法声明的指标结果未报告",
+   "category": "coherence_break",
+   "category_label": "章节衔接断裂",
+   "facets": [
+    "section_coherence",
+    "stats_reporting"
+   ],
+   "severity_answers": {
+    "affects_main_conclusion": false,
+    "affects_reproducibility": true,
+    "fixable": true
+   },
+   "why": "方法声明使用某指标/信度检验，但结果章节从未报告对应数值",
+   "fix_template": "在结果章节补报该指标数值，或从方法中删除未执行的声明"
+  }
+ },
+ "false_positive_guards": {
+  "rules": [
+   {
+    "id": "G_INTENDED_CONTROL",
+    "when": "句子或所在章节含有意对照标记（negative control/对照组/安慰剂/as expected）",
+    "action": "suppress",
+    "applies_to": [
+     "T6_CAUSAL_IN_CORRELATIONAL",
+     "T12_SIGN_CONFLICT",
+     "T5_STRENGTH_MISMATCH",
+     "T7_NUM_CROSS_SECTION",
+     "T1_UNSUPPORTED_CLAIM"
+    ]
+   },
+   {
+    "id": "G_EXPLICIT_ASSUMPTION",
+    "when": "句为作者显式标注的假设情形（hypothesize/assume/假设/推测）",
+    "action": "suppress",
+    "applies_to": [
+     "T6_CAUSAL_IN_CORRELATIONAL",
+     "T5_STRENGTH_MISMATCH",
+     "T1_UNSUPPORTED_CLAIM",
+     "T7_NUM_CROSS_SECTION",
+     "T12_SIGN_CONFLICT"
+    ]
+   },
+   {
+    "id": "G_REPORTED_VIEW",
+    "when": "句为转述他人观点（et al/既往研究/reported that/文献报道）",
+    "action": "suppress",
+    "applies_to": [
+     "T6_CAUSAL_IN_CORRELATIONAL",
+     "T5_STRENGTH_MISMATCH",
+     "T1_UNSUPPORTED_CLAIM",
+     "T7_NUM_CROSS_SECTION",
+     "T12_SIGN_CONFLICT",
+     "T9_METHOD_ANSWER_GAP"
+    ]
+   },
+   {
+    "id": "G_LIMITATION_SECTION",
+    "when": "问题出现在 Limitations/局限/不足 段落",
+    "action": "suppress",
+    "applies_to": [
+     "ALL"
+    ]
+   }
+  ],
+  "note": "命中即不进入 findings，写入 suppressed 列表（含 guard_id、命中原因、原文引用与句子定位），供评审核对『该报未报』质疑"
+ }
+}

@@ -1,0 +1,400 @@
+{
+ "seq": 48,
+ "title": "深度研究 Agent",
+ "category": "深度研究与文献综述",
+ "queries": [
+  "deep research agent open source",
+  "open deep research multi step agent",
+  "research agent framework citations"
+ ],
+ "candidates": [
+  {
+   "full_name": "stanford-oval/storm",
+   "url": "https://github.com/stanford-oval/storm",
+   "stars": 31907,
+   "desc": "An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations.",
+   "topics": [
+    "agentic-rag",
+    "deep-research",
+    "emnlp2024",
+    "knowledge-curation",
+    "large-language-models",
+    "naacl"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2025-09-30T18:07:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "assafelovic/gpt-researcher",
+   "url": "https://github.com/assafelovic/gpt-researcher",
+   "stars": 30769,
+   "desc": "An autonomous agent that conducts deep research on any data using any LLM providers",
+   "topics": [
+    "agent",
+    "ai",
+    "automation",
+    "deepresearch",
+    "llms",
+    "mcp"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-12T19:34:46Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "Alibaba-NLP/DeepResearch",
+   "url": "https://github.com/Alibaba-NLP/DeepResearch",
+   "stars": 20152,
+   "desc": "Tongyi Deep Research, the Leading Open-source Deep Research Agent",
+   "topics": [
+    "agent",
+    "alibaba",
+    "artificial-intelligence",
+    "deep-research",
+    "deepresearch",
+    "information-seeking"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-02-27T13:12:11Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dzhng/deep-research",
+   "url": "https://github.com/dzhng/deep-research",
+   "stars": 19910,
+   "desc": "An AI-powered research assistant that performs iterative, deep research on any topic by combining search engines, web scraping, and large language models.  The goal of this repo is to provide the simplest implementation…",
+   "topics": [
+    "agent",
+    "ai",
+    "gpt",
+    "o3-mini",
+    "research"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-04-11T23:58:25Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "langchain-ai/open_deep_research",
+   "url": "https://github.com/langchain-ai/open_deep_research",
+   "stars": 12675,
+   "desc": "",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-08-10T18:13:37Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "LearningCircuit/local-deep-research",
+   "url": "https://github.com/LearningCircuit/local-deep-research",
+   "stars": 9601,
+   "desc": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+   "topics": [
+    "academia",
+    "anthropic",
+    "arxiv",
+    "brave",
+    "deep-research",
+    "encryption"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T10:50:09Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "nickscamara/open-deep-research",
+   "url": "https://github.com/nickscamara/open-deep-research",
+   "stars": 6300,
+   "desc": "An open source deep research clone. AI Agent that reasons large amounts of web data extracted with Firecrawl",
+   "topics": [],
+   "lang": "TypeScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2025-05-07T15:38:28Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "agentset-ai/agentset",
+   "url": "https://github.com/agentset-ai/agentset",
+   "stars": 2128,
+   "desc": "The open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more.",
+   "topics": [
+    "agentic-rag",
+    "ai",
+    "ai-agents",
+    "ai-sdk",
+    "chatbots",
+    "embeddings"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-10-28T16:17:44Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "CopilotKit/open-multi-agent-canvas",
+   "url": "https://github.com/CopilotKit/open-multi-agent-canvas",
+   "stars": 565,
+   "desc": "The open-source multi-agent chat interface that lets you manage multiple agents in one dynamic conversation and add MCP servers for deep research",
+   "topics": [
+    "ai-agents",
+    "copilotkit",
+    "mcp-client",
+    "multi-agent",
+    "open-canvas",
+    "python"
+   ],
+   "lang": "TypeScript",
+   "license": null,
+   "pushed_at": "2026-11-15T19:52:28Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "openJiuwen-ai/deepsearch",
+   "url": "https://github.com/openJiuwen-ai/deepsearch",
+   "stars": 130,
+   "desc": "openJiuwen DeepSearch is a knowledge-enhanced deep search and research framework with industry-leading chunk-level citation and traceable reasoning capabilities, delivering precise agentic search and research abilities.",
+   "topics": [],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-16T01:36:48Z",
+   "via": [
+    "research agent framework citations"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "yoloshii/gigaxity-deep-research",
+   "url": "https://github.com/yoloshii/gigaxity-deep-research",
+   "stars": 66,
+   "desc": "Open-source deep research MCP. Qwen3-30B-A3B-Thinking via OpenRouter, cited web synthesis for Claude Code, Codex, Cursor, Hermes and any MCP-compatible agent.",
+   "topics": [
+    "agentic-ai",
+    "agentic-search",
+    "ai-agents",
+    "ai-research-agent",
+    "ai-research-tool",
+    "claude-code"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-09-30T11:15:12Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "0xmariowu/Autosearch",
+   "url": "https://github.com/0xmariowu/Autosearch",
+   "stars": 55,
+   "desc": "Open-source deep research for AI agents: 40 channels, 10+ Chinese sources.",
+   "topics": [
+    "agent-infrastructure",
+    "agentic-search",
+    "ai-agent",
+    "ai-agents",
+    "autogen",
+    "chinese-search"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-13T23:15:27Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "brycewang-stanford/lit-review-agent-tools",
+   "url": "https://github.com/brycewang-stanford/lit-review-agent-tools",
+   "stars": 54,
+   "desc": "🤖 The strongest curated list of open-source AI-agent tools for literature review — 70+ tools across 11 categories (Claude Code skills, deep research, MCP servers, PDF parsing, systematic review). 面向智能体文献综述的最强工具大全。",
+   "topics": [
+    "academic-research",
+    "ai-agents",
+    "awesome",
+    "awesome-list",
+    "claude-code",
+    "claude-skills"
+   ],
+   "lang": "Python",
+   "license": "CC0-1.0",
+   "pushed_at": "2026-11-16T12:36:44Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "openmake/openmake_llm",
+   "url": "https://github.com/openmake/openmake_llm",
+   "stars": 44,
+   "desc": "Open-source, self-hosted AI workspace for local and open-weight LLMs with vLLM, LiteLLM, autonomous agents, MCP tools, deep research, artifacts, and BYOK.",
+   "topics": [
+    "ai-agent",
+    "ai-assistant",
+    "ai-workspace",
+    "deep-research",
+    "discord-bot",
+    "docker"
+   ],
+   "lang": "TypeScript",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-18T11:24:58Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "meituan-longcat/LongCat-DeepResearch",
+   "url": "https://github.com/meituan-longcat/LongCat-DeepResearch",
+   "stars": 31,
+   "desc": "Open-source deep research harness for evidence-grounded reports: multi-agent planning, independent section research, and targeted report revision.",
+   "topics": [
+    "deep-research",
+    "information-retrieval",
+    "llm-agents",
+    "multi-agent",
+    "report-generation",
+    "research-agents"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-09T16:35:39Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "letta-ai/deep-research",
+   "url": "https://github.com/letta-ai/deep-research",
+   "stars": 29,
+   "desc": "Open-source deep research agent implemented with Letta",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-08-19T21:08:29Z",
+   "via": [
+    "deep research agent open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "d-oit/opencode-perplexity-research-agent",
+   "url": "https://github.com/d-oit/opencode-perplexity-research-agent",
+   "stars": 19,
+   "desc": "OpenCode agents for Perplexity AI research featuring multi-model Sonar AI models designed for comprehensive real-time research, citation, and comparative analysis. Supports structured, citation-aware markdown outputs in…",
+   "topics": [
+    "opencode",
+    "perplexity"
+   ],
+   "lang": "Shell",
+   "license": "MIT",
+   "pushed_at": "2025-11-06T09:07:12Z",
+   "via": [
+    "research agent framework citations"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "peternicholls/PaperKit",
+   "url": "https://github.com/peternicholls/PaperKit",
+   "stars": 5,
+   "desc": "An Agent framework for researching, extracting citations, drafting and producing detailed academic papers in LaTeX format.",
+   "topics": [
+    "agentic-workflow",
+    "ai",
+    "ai-agents",
+    "citation-generator",
+    "latex-assistant",
+    "research-tools"
+   ],
+   "lang": "TeX",
+   "license": "MIT",
+   "pushed_at": "2026-06-19T00:24:54Z",
+   "via": [
+    "research agent framework citations"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Monishwaran45/DeepAgents-LangChain-Tavily-OpenAI-Multi-step-AI-Agent",
+   "url": "https://github.com/Monishwaran45/DeepAgents-LangChain-Tavily-OpenAI-Multi-step-AI-Agent",
+   "stars": 3,
+   "desc": "A powerful AI research agent built using OpenAI, Tavily, and LangChain that can think, search, and generate intelligent responses.",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-10-29T17:45:49Z",
+   "via": [
+    "open deep research multi step agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Bharathmsh/Deep-Research-Agent-with-Flowise-AI",
+   "url": "https://github.com/Bharathmsh/Deep-Research-Agent-with-Flowise-AI",
+   "stars": 2,
+   "desc": "Inspired by Anthropic's multi-agent research framework, this project implements a sophisticated research agent capable of:  Iteratively refining its research approach Coordinating specialized sub-agents Using multiple r…",
+   "topics": [
+    "ai",
+    "ai-agents",
+    "flowise"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2025-08-11T09:45:48Z",
+   "via": [
+    "research agent framework citations"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "jman4162/agentic-financial-planner-lab",
+   "url": "https://github.com/jman4162/agentic-financial-planner-lab",
+   "stars": 2,
+   "desc": "Experimental, provider-neutral framework for auditable personal-finance planning agents: deterministic calculators, Monte Carlo simulation, MCP research citations, and a critic gate. The LLM never does the math.",
+   "topics": [
+    "financial-planning",
+    "llm-agents",
+    "mcp",
+    "model-context-protocol",
+    "monte-carlo-simulation",
+    "ollama"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-20T04:46:59Z",
+   "via": [
+    "research agent framework citations"
+   ],
+   "seed": false
+  }
+ ]
+}

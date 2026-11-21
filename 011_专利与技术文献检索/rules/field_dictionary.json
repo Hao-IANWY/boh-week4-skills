@@ -1,0 +1,107 @@
+{
+ "version": "0.2.0",
+ "description": "专利字段口径字典。号码类型判定、种类码释义、来源分级与法律状态取值都以此为唯一口径，代码里不出现硬编的字段语义。",
+ "number_kinds": {
+  "grant": {
+   "label_zh": "授权公告号",
+   "criteria": "国家码 + 7~8 位号码 + 授权类种类码（B1/B2/U/S）",
+   "note": "授权号不等于公开号；不得与申请公开号混用"
+  },
+  "application_publication": {
+   "label_zh": "申请公开号",
+   "criteria": "国家码 + 4 位年份 + 7 位序号 + 公开类种类码（A1/A2）",
+   "note": "未授权的公开文本，权项范围可能随后续审查变化"
+  },
+  "application": {
+   "label_zh": "申请号",
+   "criteria": "含斜杠的序列号（如 16/123,456）或本国申请格式",
+   "note": "申请号用于族归并与审查历史定位，不能当公开号引用"
+  },
+  "priority": {
+   "label_zh": "优先权号",
+   "criteria": "首次申请的国家码 + 申请号 + 优先权日",
+   "note": "优先权是族归并的第一判据"
+  },
+  "unknown": {
+   "label_zh": "未识别",
+   "criteria": "缺国家码或号码位数不足",
+   "note": "输出候选解释并标 ambiguous"
+  }
+ },
+ "kind_codes": {
+  "A1": "申请公开（未附检索报告）",
+  "A2": "申请公开（附检索报告）",
+  "A3": "检索报告单独公开",
+  "B1": "授权（未经修改）",
+  "B2": "授权（经修改）",
+  "U": "实用新型",
+  "S": "补充保护证书",
+  "E": "再颁专利"
+ },
+ "grant_kind_codes": [
+  "B1",
+  "B2",
+  "U",
+  "S",
+  "E"
+ ],
+ "fields": {
+  "publication_number": "公开号：国家码 + 号码 + 种类码；引用专利时的规范标识",
+  "application_number": "申请号：受理编号，用于审查历史与族归并",
+  "priority_number": "优先权号：首次申请的号码，族归并第一判据",
+  "priority_date": "优先权日：最早申请日，不能与申请日混用",
+  "filing_date": "申请日",
+  "publication_date": "公开日（公布或授权公告日）",
+  "ipc": "国际专利分类号（部/大类/小类/主组/分组）",
+  "cpc": "合作专利分类号",
+  "assignee": "申请人/权利人（原文照抄，不改写）",
+  "claims": "权利要求；同族不同成员的权项版本可能不同，必须标版本"
+ },
+ "source_tiers": {
+  "official_registry": 1.0,
+  "official_office_pdf": 0.9,
+  "publisher": 0.7,
+  "third_party_aggregator": 0.45,
+  "unknown": 0.2
+ },
+ "source_tier_aliases": {
+  "uspto": "official_registry",
+  "epo": "official_registry",
+  "wipo": "official_registry",
+  "official": "official_registry",
+  "uspto_pdf": "official_office_pdf",
+  "ocr_facsimile": "official_office_pdf",
+  "lens": "third_party_aggregator",
+  "google patents": "third_party_aggregator",
+  "freepatentsonline": "third_party_aggregator",
+  "patsnap": "third_party_aggregator"
+ },
+ "legal_status": {
+  "allowed_values": [
+   "granted",
+   "pending",
+   "withdrawn",
+   "rejected",
+   "expired",
+   "unverified"
+  ],
+  "default": "unverified",
+  "verified_requires_tier": "official_registry",
+  "verified_requires_date": true,
+  "statement_rule": "只有官方登记库（含查询日期）可写确定状态；二手聚合页只登记为 observed，输出值仍为 unverified，并给回官方库复核路径",
+  "recheck_template": "按公开号 {canonical} 到 {country} 官方登记库核对状态与生效日，记录查询日期与登记号"
+ },
+ "display_policy": {
+  "restricted_sources": [
+   "patsnap",
+   "derwent",
+   "orbit"
+  ],
+  "rule": "受限商业库只登记元数据与访问条件，不抓取、不外显正文与权项原文"
+ },
+ "number_noise_policy": {
+  "normalize_first": "NFKC 全角→半角、千分位/任意空白/小写/尾部标点在拆字段前统一处理",
+  "wo_merged_ocr": "WO 号丢斜杠丢空格的合并形态标 wo_merged=true + ambiguous=true，拆解候选见 rules/facsimile.json.wo_normalization",
+  "detail": "rules/facsimile.json"
+ }
+}

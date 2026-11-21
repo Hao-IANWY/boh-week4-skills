@@ -1,0 +1,491 @@
+{
+ "seq": 60,
+ "title": "科研数据可视化",
+ "category": "科研数据分析",
+ "queries": [
+  "scientific data visualization agent",
+  "matplotlib publication quality figures",
+  "data visualization skill claude"
+ ],
+ "candidates": [
+  {
+   "full_name": "matplotlib/matplotlib",
+   "url": "https://github.com/matplotlib/matplotlib",
+   "stars": 23479,
+   "desc": "matplotlib: plotting with Python",
+   "topics": [
+    "data-science",
+    "data-visualization",
+    "gtk",
+    "matplotlib",
+    "plotting",
+    "python"
+   ],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-11-18T08:35:56Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "plotly/plotly.py",
+   "url": "https://github.com/plotly/plotly.py",
+   "stars": 18909,
+   "desc": "The interactive graphing library for Python :sparkles:",
+   "topics": [
+    "d3",
+    "dashboard",
+    "declarative",
+    "graph-library",
+    "interactive",
+    "jupyter-notebook"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T21:08:23Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "mwaskom/seaborn",
+   "url": "https://github.com/mwaskom/seaborn",
+   "stars": 14117,
+   "desc": "Statistical data visualization in Python",
+   "topics": [
+    "data-science",
+    "data-visualization",
+    "matplotlib",
+    "pandas",
+    "python"
+   ],
+   "lang": "Python",
+   "license": "BSD-3-Clause",
+   "pushed_at": "2026-10-08T01:29:20Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "garrettj403/SciencePlots",
+   "url": "https://github.com/garrettj403/SciencePlots",
+   "stars": 9415,
+   "desc": "Matplotlib styles for scientific plotting",
+   "topics": [
+    "cjk-fonts",
+    "ieee-paper",
+    "latex",
+    "matplotlib-figures",
+    "matplotlib-style-sheets",
+    "matplotlib-styles"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-06-23T07:51:51Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "has2k1/plotnine",
+   "url": "https://github.com/has2k1/plotnine",
+   "stars": 4782,
+   "desc": "A Grammar of Graphics for Python",
+   "topics": [
+    "data-analysis",
+    "grammar",
+    "graphics",
+    "plotting",
+    "python"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-03T12:08:34Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "jbmouret/matplotlib_for_papers",
+   "url": "https://github.com/jbmouret/matplotlib_for_papers",
+   "stars": 2204,
+   "desc": "Handout for the tutorial \"Creating publication-quality figures with matplotlib\"",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": "NOASSERTION",
+   "pushed_at": "2022-11-20T13:06:40Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Phlya/adjustText",
+   "url": "https://github.com/Phlya/adjustText",
+   "stars": 1666,
+   "desc": "A small library for automatical adjustment of text position in matplotlib plots to minimize overlaps.",
+   "topics": [
+    "graph",
+    "matplotlib",
+    "plot",
+    "plotting",
+    "python",
+    "text"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "MIT",
+   "pushed_at": "2026-06-08T16:47:54Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "coffeefuelbump/csv-data-summarizer-claude-skill",
+   "url": "https://github.com/coffeefuelbump/csv-data-summarizer-claude-skill",
+   "stars": 486,
+   "desc": "A Claude Skill that automatically analyzes uploaded CSV files — generating summary statistics, detecting missing data, and creating quick visualizations using Python and pandas.",
+   "topics": [
+    "claude-skills"
+   ],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-10-16T20:20:06Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "TAO-QKV/Icarus-Figures",
+   "url": "https://github.com/TAO-QKV/Icarus-Figures",
+   "stars": 61,
+   "desc": "Publication-grade figures for scientific papers — reproducible matplotlib & TikZ, with a quality bar, composition paradigms, and journal-grade craft. A self-contained Claude skill.",
+   "topics": [
+    "claude-skill",
+    "data-visualization",
+    "figures",
+    "matplotlib",
+    "publication-quality",
+    "python"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-06-30T08:06:42Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "skthewimp/karthik-data-visualization-skill",
+   "url": "https://github.com/skthewimp/karthik-data-visualization-skill",
+   "stars": 52,
+   "desc": "Public data visualization skill for Codex and Claude",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-27T04:07:53Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "get-zeked/research-knowledge-super-skill",
+   "url": "https://github.com/get-zeked/research-knowledge-super-skill",
+   "stars": 39,
+   "desc": "Comprehensive research and knowledge management skill merging Perplexity Computer's research + data skills with Claude Code's knowledge graphs, RAG, brainstorming, and content synthesis. Deep research, statistical analy…",
+   "topics": [
+    "perplexity-super-skill"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-03-03T20:15:40Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "csinva/data-viz-utils",
+   "url": "https://github.com/csinva/data-viz-utils",
+   "stars": 19,
+   "desc": "Functions for easily making publication-quality figures with matplotlib.",
+   "topics": [
+    "big-data",
+    "data-analysis",
+    "data-science",
+    "data-visualization",
+    "eda",
+    "legend"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "MIT",
+   "pushed_at": "2024-01-20T01:23:55Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "adammico-lab/adammico-lab",
+   "url": "https://github.com/adammico-lab/adammico-lab",
+   "stars": 18,
+   "desc": "Agentic tools for the Tableau workflow. Claude skills built around Tableau MCP to help practitioners design dashboards, author calculations, generate synthetic data, evaluate visualizations, document analytics assets, a…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-07-27T20:59:11Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ICWallis/tutorial-publication-ready-figures",
+   "url": "https://github.com/ICWallis/tutorial-publication-ready-figures",
+   "stars": 11,
+   "desc": "How to use matplotlib and seaborn to generate high-quality figures for a report, manuscript or dissertation.",
+   "topics": [
+    "plotting-in-python",
+    "tutorial"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "Apache-2.0",
+   "pushed_at": "2023-05-14T21:45:16Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "labrinyang/apple-health-analysis",
+   "url": "https://github.com/labrinyang/apple-health-analysis",
+   "stars": 10,
+   "desc": "Mayo Clinic-grade Apple Health data analysis — Claude Code skill with 20 peer-reviewed statistical methods and 35+ SVG visualizations",
+   "topics": [
+    "apple-health",
+    "cgm",
+    "claude-code",
+    "claude-skill",
+    "data-analysis",
+    "health-analytics"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-03-28T11:39:13Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "slb2248/ai-ux-skills",
+   "url": "https://github.com/slb2248/ai-ux-skills",
+   "stars": 7,
+   "desc": "AI agent UX skills. Accessibility, UX writing, design critique, and data visualization—install once, your AI uses them automatically. Works with Cursor, Claude Code, VS Code Copilot, and Codex.",
+   "topics": [],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-04-13T22:36:46Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ARPeeketi/Template_Scientifc_Figures",
+   "url": "https://github.com/ARPeeketi/Template_Scientifc_Figures",
+   "stars": 6,
+   "desc": "A comprehensive collection of production-ready matplotlib templates for creating publication-quality scientific figures. Designed for researchers, students, and anyone who needs professional visualizations with minimal …",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2025-11-17T04:24:07Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ersilia-os/stylia",
+   "url": "https://github.com/ersilia-os/stylia",
+   "stars": 6,
+   "desc": "Predefined Matplotlib styles, palettes, and utilities for publication-quality scientific figures.",
+   "topics": [],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-03-12T23:05:37Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cailmdaley/skills",
+   "url": "https://github.com/cailmdaley/skills",
+   "stars": 6,
+   "desc": "Research skills for Claude Code: autonomous iteration, bibliography management, data visualization, scientific coding, image generation, TTS, and flashcards.",
+   "topics": [],
+   "lang": "Shell",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-05-30T15:15:30Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ruozhoulin/PlotPublication",
+   "url": "https://github.com/ruozhoulin/PlotPublication",
+   "stars": 5,
+   "desc": "Plot high quality figures for publication based on Matplotlib.",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": "MIT",
+   "pushed_at": "2024-05-08T07:51:06Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Rob217/nice-figures",
+   "url": "https://github.com/Rob217/nice-figures",
+   "stars": 5,
+   "desc": "Python3 package for generating publication quality figures in Matplotlib",
+   "topics": [
+    "academic-publishing",
+    "figures",
+    "matplotlib",
+    "numpy",
+    "packages",
+    "python"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2020-07-20T15:30:16Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "nejaz1/plotlib",
+   "url": "https://github.com/nejaz1/plotlib",
+   "stars": 5,
+   "desc": "Plot, manipulate and save publication quality figures in MATLAB easily. Based on matplotlib in python. Requires dataframe toolbox (https://github.com/jdiedrichsen/dataframe).",
+   "topics": [],
+   "lang": "Matlab",
+   "license": "MIT",
+   "pushed_at": "2018-06-08T17:31:40Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dartworklabs/dartwork-mpl",
+   "url": "https://github.com/dartworklabs/dartwork-mpl",
+   "stars": 5,
+   "desc": "Thin matplotlib layer for publication-quality figures — physical-width API, OKLCH color system, content-aware layout, and an MCP server for AI agents.",
+   "topics": [
+    "charts",
+    "color-palette",
+    "data-visualization",
+    "matplotlib",
+    "matplotlib-style",
+    "mcp"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T05:45:05Z",
+   "via": [
+    "matplotlib publication quality figures"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "pablodatamonster/Tableau-ClaudeAI-Skills",
+   "url": "https://github.com/pablodatamonster/Tableau-ClaudeAI-Skills",
+   "stars": 5,
+   "desc": "Claude Code skills for Tableau and data visualization, by DataMonster (Pablo Gomez)",
+   "topics": [
+    "claude",
+    "claude-code",
+    "data-analysis",
+    "data-visualization",
+    "datafam",
+    "datamonster"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-02-24T19:26:39Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "SNL-UCSB/data-visualization-skill",
+   "url": "https://github.com/SNL-UCSB/data-visualization-skill",
+   "stars": 5,
+   "desc": "A Claude Code skill that teaches researchers to think about data before plotting it, then produce publication-quality figures with built-in reflection. Brainstorm → Plan → Execute.",
+   "topics": [
+    "claude-code",
+    "data-visualization",
+    "exploratory-data-analysis",
+    "matplotlib",
+    "plotting",
+    "publication-quality"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-07-27T23:56:13Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "JoBBurt/proteomics-skill",
+   "url": "https://github.com/JoBBurt/proteomics-skill",
+   "stars": 5,
+   "desc": "Claude Code skill for proteomics data analysis - normalization, visualization, pathway analysis, and protein list cross-referencing",
+   "topics": [],
+   "lang": "R",
+   "license": null,
+   "pushed_at": "2025-12-27T06:11:24Z",
+   "via": [
+    "data visualization skill claude"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cosmosambassador/cosmosambassador",
+   "url": "https://github.com/cosmosambassador/cosmosambassador",
+   "stars": 4,
+   "desc": "Config files for my GitHub profile.Absolutely. I think JETservices should have its own blog inside the repository so it becomes the operational journal for your AI ecosystem.  Suggested structure  JETservices/ │ ├── REA…",
+   "topics": [
+    "config",
+    "github-config"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-11-11T07:08:52Z",
+   "via": [
+    "scientific data visualization agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "YufeiHouAnne/SciData-Insight-Agent",
+   "url": "https://github.com/YufeiHouAnne/SciData-Insight-Agent",
+   "stars": 2,
+   "desc": "An AI system automating academic data visualization, table formatting, and scientific interpretation.",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-05-12T11:07:07Z",
+   "via": [
+    "scientific data visualization agent"
+   ],
+   "seed": false
+  }
+ ]
+}

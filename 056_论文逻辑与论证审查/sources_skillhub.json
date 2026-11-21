@@ -1,0 +1,170 @@
+{
+ "seq": 56,
+ "title": "论文逻辑与论证审查",
+ "queries": [
+  "argument analysis writing",
+  "logic consistency check"
+ ],
+ "skills": [
+  {
+   "name": "claimify",
+   "slug": "leegonzales-aiskills-claimify",
+   "author": "leegonzales",
+   "category": "writing",
+   "description": "Extract and structure claims from discourse into analyzable argument maps with logical relationships and assumptions. Use when analyzing arguments, red-teaming reasoning, synthesizing debates, or transforming conversations into structured claim networks. Triggers include \"what are the claims,\" \"analyze this argument,\"…",
+   "description_zh": "从话语中提取并结构化主张，构建可分析的论点地图，识别逻辑关系和假设，以揭示论证结构、矛盾和漏洞。",
+   "repo_url": "https://github.com/leegonzales/AISkills#Claimify~claimify",
+   "github_stars": 25
+  },
+  {
+   "name": "deep-reading-analyst",
+   "slug": "ginobefun-deep-reading-analyst-skill-deep-reading-analyst",
+   "author": "ginobefun",
+   "category": "development",
+   "description": "Comprehensive framework for deep analysis of articles, papers, and long-form content using 10+ thinking models (SCQA, 5W2H, critical thinking, inversion, mental models, first principles, systems thinking, six thinking hats). Use when users want to: (1) deeply understand complex articles/content, (2) analyze arguments …",
+   "description_zh": null,
+   "repo_url": "https://github.com/ginobefun/deep-reading-analyst-skill#src-deep-reading-analyst",
+   "github_stars": 297
+  },
+  {
+   "name": "kanban-orchestrator",
+   "slug": "kevinnft-ai-agent-skills-kanban-orchestrator",
+   "author": "kevinnft",
+   "category": "development",
+   "description": "Decomposition playbook + specialist-roster conventions + anti-temptation rules for an orchestrator profile routing work through Kanban. The \"don't do the work yourself\" rule and the basic lifecycle are auto-injected into every kanban worker's system prompt; this skill is the deeper playbook when you're specifically pl…",
+   "description_zh": null,
+   "repo_url": "https://github.com/kevinnft/ai-agent-skills#skills~devops~kanban-orchestrator",
+   "github_stars": 13
+  },
+  {
+   "name": "authorship-credit-gen",
+   "slug": "aipoch-medical-research-skills-authorship-credit-gen",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Use when determining author order on research manuscripts, assigning CRediT contributor roles for transparency, documenting individual contributions to collaborative projects, or resolving authorship disputes in multi-institutional research. Generates fair and transparent auth...",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#scientific-skills~Academic Writing~authorship-credit-gen",
+   "github_stars": 1395
+  },
+  {
+   "name": "analyze-project",
+   "slug": "lllllllama-rigorpilot-skills-analyze-project",
+   "author": "lllllllama",
+   "category": "development",
+   "description": "Rigor Analyze / Rigor Audit read-only skill for deep learning research repositories. Use when the user wants to read and understand a repository, inspect model structure and training or inference entrypoints, review configs and insertion points, or flag suspicious implementation patterns without modifying code or runn…",
+   "description_zh": null,
+   "repo_url": "https://github.com/lllllllama/rigorpilot-skills#skills~analyze-project",
+   "github_stars": 499
+  },
+  {
+   "name": "language-demand-analyser",
+   "slug": "garethmanning-education-agent-skills-language-demand-analyser",
+   "author": "GarethManning",
+   "category": "development",
+   "description": "Analyse the language demands of a classroom task to identify barriers for EAL and multilingual learners. Use when adapting tasks, planning support, or assessing linguistic accessibility.",
+   "description_zh": null,
+   "repo_url": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/eal-language-development/language-demand-analyser",
+   "github_stars": 582
+  },
+  {
+   "name": "aeri-literature-positioning",
+   "slug": "brycewang-stanford-awesome-journal-skills-aeri-literature-positioning",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills#AER-Insights-Skills~skills~aeri-literature-positioning",
+   "github_stars": 792
+  },
+  {
+   "name": "aeri-theory-model",
+   "slug": "brycewang-stanford-awesome-journal-skills-aeri-theory-model",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills#AER-Insights-Skills~skills~aeri-theory-model",
+   "github_stars": 792
+  },
+  {
+   "name": "paper-self-review",
+   "slug": "galaxy-dawn-claude-scholar-paper-self-review",
+   "author": "Galaxy-Dawn",
+   "category": "development",
+   "description": "This skill should be used when the user asks to \"review paper quality\", \"check paper completeness\", \"validate paper structure\", \"self-review before submission\", \"audit claims\", \"check overclaiming\", \"verify whether results support claims\", or mentions systematic paper quality checking. Provides comprehensive quality a…",
+   "description_zh": null,
+   "repo_url": "https://github.com/Galaxy-Dawn/claude-scholar#skills~paper-self-review",
+   "github_stars": 5046
+  },
+  {
+   "name": "workflow-orchestrator",
+   "slug": "zenobi-us-dotfiles-workflow-orchestrator",
+   "author": "zenobi-us",
+   "category": "meta",
+   "description": "A comprehensive workflow orchestration expert with extensive coverage of process patterns, state management, and error handling, designed for complex business process automation with strong practical value.",
+   "description_zh": "一个全面的工作流编排专家，广泛覆盖流程模式、状态管理和错误处理，专为复杂业务流程自动化设计，具有强大的实用价值。",
+   "repo_url": "https://github.com/zenobi-us/dotfiles#ai~files~skills~experts~meta-orchestration~workflow-orchestrator",
+   "github_stars": 48
+  },
+  {
+   "name": "consistency-checker-across-manuscript",
+   "slug": "aipoch-medical-research-skills-consistency-checker-across-manuscript",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Checks consistency across title, abstract, methods, results, figures, tables, and supplements to identify internal contradictions and version drift in biomedical manuscripts.",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#awesome-med-research-skills~Academic Writing~consistency-checker-across-manuscript",
+   "github_stars": 1341
+  },
+  {
+   "name": "currency-audit",
+   "slug": "fabioc-aloha-alex-skill-mall-currency-audit",
+   "author": "fabioc-aloha",
+   "category": "security",
+   "description": "Comprehensive brain file review — external freshness, internal consistency, semantic accuracy — stamp only after full assessment",
+   "description_zh": null,
+   "repo_url": "https://github.com/fabioc-aloha/Alex_Skill_Mall#.github~skills~currency-audit",
+   "github_stars": 4
+  },
+  {
+   "name": "meditation",
+   "slug": "fabioc-aloha-alex-skill-mall-meditation",
+   "author": "fabioc-aloha",
+   "category": "security",
+   "description": "Consolidate session learning into permanent architecture — extract patterns into skills, instructions, prompts, or memory",
+   "description_zh": null,
+   "repo_url": "https://github.com/fabioc-aloha/Alex_Skill_Mall#.github~skills~meditation",
+   "github_stars": 4
+  },
+  {
+   "name": "zotero-literature-review",
+   "slug": "openclaw-skills-sun2001-zotero-literature-review",
+   "author": "sun2001",
+   "category": null,
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills/tree/main/skills/sun2001/zotero-literature-review",
+   "github_stars": 0
+  },
+  {
+   "name": "check-cross-layer",
+   "slug": "panyw5-opencode-check-cross-layer",
+   "author": "panyw5",
+   "category": "development",
+   "description": "Post-implementation verification across multiple code dimensions: cross-layer data flow, code reuse analysis, import path validation, and same-layer consistency checks. Identifies missed update sites, type mismatches, and duplicated constants. Use when changes span 3+ architectural layers, after modifying shared const…",
+   "description_zh": null,
+   "repo_url": "https://github.com/panyw5/opencode#.kiro~skills~check-cross-layer",
+   "github_stars": 95
+  },
+  {
+   "name": "check-model",
+   "slug": "anthropics-financial-services-plugins-check-model",
+   "author": "anthropics",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/anthropics/financial-services-plugins#financial-analysis~skills~check-model~SKILL.md",
+   "github_stars": 7168
+  }
+ ]
+}

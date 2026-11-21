@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "note": "图型路由与执行层一一对应；自动比较图按样本量展示原始点，不能退回裸均值柱。",
+  "table": [
+    {
+      "purpose": "comparison",
+      "x_shape": "categorical",
+      "y_shape": "continuous",
+      "recommend": "comparison_auto",
+      "explicit_error_bar": "bar_with_error_points",
+      "rules": ["n<3: points only", "3<=n<10: points plus declared summary", "n>=10: boxplot plus jitter points"],
+      "reject": [
+        {"chart": "pie", "reason": "无序分类比较不用角度/面积，且不能表达离散"},
+        {"chart": "mean_only_bar", "reason": "裸均值柱掩盖样本量、偏态、双峰和离群点"},
+        {"chart": "line", "reason": "无序分类之间不连线"}
+      ]
+    },
+    {
+      "purpose": "correlation",
+      "x_shape": "continuous",
+      "y_shape": "continuous",
+      "recommend": "scatter_with_fit",
+      "reject": [{"chart": "line", "reason": "非有序观测不连线；拟合必须说明总体或分组口径"}]
+    },
+    {
+      "purpose": "correlation",
+      "variables_min": 2,
+      "recommend": "correlation_heatmap",
+      "reject": [{"chart": "rainbow_heatmap", "reason": "相关有正负方向，使用以 0 为中心的发散色阶并带 colorbar"}]
+    },
+    {
+      "purpose": "trend",
+      "x_shape": "temporal_or_ordered_continuous",
+      "y_shape": "continuous",
+      "recommend": "line_series",
+      "reject": [{"chart": "grouped_bar", "reason": "趋势任务需要保留有序变化与斜率"}]
+    },
+    {
+      "purpose": "distribution",
+      "x_shape": "continuous",
+      "recommend": "histogram",
+      "reject": [{"chart": "pie", "reason": "分布不是构成；保留连续位置与频数"}]
+    },
+    {
+      "purpose": "composition",
+      "x_shape": "categorical",
+      "y_shape": "continuous",
+      "recommend": "stacked_bar",
+      "reject": [{"chart": "pie", "reason": "构成使用从 0 起的长度编码，不使用角度"}]
+    },
+    {
+      "purpose": "count_or_composition_without_y",
+      "x_shape": "categorical",
+      "recommend": "category_count",
+      "reject": [{"chart": "pie", "reason": "分类计数使用排序横条，避免角度误判"}]
+    }
+  ],
+  "fallback": {"recommend": "no_builder", "note": "未匹配时明确记录，不猜测图型，不静默改画其它图"},
+  "error_bar": {
+    "allowed": ["sd", "se", "ci95", "none"],
+    "definitions": {
+      "sd": "sample SD with n-1; null for n<2",
+      "se": "SD/sqrt(n); null for n<2",
+      "ci95": "mean 95% CI using Student t; null for n<2",
+      "none": "raw observations without an invented uncertainty estimate"
+    }
+  },
+  "axis": {
+    "bar_baseline_zero": true,
+    "axis_ticks_cover_marks_and_error_bars": true,
+    "heatmap_limits": [-1, 1],
+    "category_policy": "retain all categories; use horizontal/faceted layout or an explicitly requested aggregate, never first-N truncation"
+  }
+}

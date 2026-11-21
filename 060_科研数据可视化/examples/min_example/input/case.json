@@ -1,0 +1,238 @@
+{
+ "case_id": "EXAMPLE-060-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：把一张小数据表做成两件可投稿图件——组间比较（柱+误差线）与两变量相关（散点+拟合）——并交出图注、数据到视觉元素映射表、可重跑脚本与交付前 QA。",
+ "output_contract": {
+  "figures": "图件清单：图型与选择理由/拒绝理由、误差线语义、文件（PDF / 600dpi PNG / 可编辑 SVG / TSV+CSV / spec / 成对脚本）、图注、数值与渲染 QA、全链复现证据",
+  "data_to_visual_map": "数据列 → 视觉通道映射表（位置/长度/颜色/拟合线），每图逐项列明，可回指 figure_N.csv",
+  "evidence_map": "规则文件、数据快照形态判定、渲染管线、复现命令、缺口清单；渲染脚本真实执行记录",
+  "状态说明": "R/Pillow/pypdf/字体缺失、类别或样本量异常、整组不可绘、QA/复现失败等缺口与不确定性"
+ },
+ "venue": {
+  "name": "通用单栏（示例）",
+  "width_mm": 89,
+  "min_font_pt": 6,
+  "dpi": 300
+ },
+ "data_dictionary": {
+  "plot_id": {
+   "label": "样地编号",
+   "type": "key"
+  },
+  "site": {
+   "label": "站点",
+   "type": "categorical",
+   "allowed_values": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "yield_mg_L": {
+   "label": "产量",
+   "type": "continuous",
+   "unit": "mg/L"
+  },
+  "temperature_c": {
+   "label": "平均温度",
+   "type": "continuous",
+   "unit": "°C"
+  }
+ },
+ "figure_requests": [
+  {
+   "figure_id": "F1",
+   "purpose": "comparison",
+   "chart_hint": "bar",
+   "x": "site",
+   "y": "yield_mg_L",
+   "x_label": "站点",
+   "y_label": "产量",
+   "unit": "mg/L",
+   "error_bar": "sd",
+   "panel": "A",
+   "title": "三个站点的产量比较",
+   "venue": "default_single_column",
+   "height_mm": 62
+  },
+  {
+   "figure_id": "F2",
+   "purpose": "correlation",
+   "chart_hint": "scatter",
+   "x": "temperature_c",
+   "y": "yield_mg_L",
+   "group": "site",
+   "x_label": "平均温度",
+   "x_unit": "°C",
+   "y_label": "产量",
+   "unit": "mg/L",
+   "panel": "B",
+   "title": "产量与平均温度的关系",
+   "venue": "default_single_column",
+   "height_mm": 62
+  }
+ ],
+ "dataset": {
+  "name": "EXAMPLE 站点产量表（合成）",
+  "note": "示例合成数据：3 站点 × 8 样地；温度与产量存在正相关（便于演示散点+拟合）；P-08 的产量留空用于验证「缺失不插补、只计数」",
+  "columns": [
+   "plot_id",
+   "site",
+   "yield_mg_L",
+   "temperature_c"
+  ],
+  "rows": [
+   {
+    "plot_id": "P-01",
+    "site": "A",
+    "yield_mg_L": 47.45,
+    "temperature_c": 26.9
+   },
+   {
+    "plot_id": "P-02",
+    "site": "B",
+    "yield_mg_L": 53.36,
+    "temperature_c": 28.63
+   },
+   {
+    "plot_id": "P-03",
+    "site": "C",
+    "yield_mg_L": 47.03,
+    "temperature_c": 27.56
+   },
+   {
+    "plot_id": "P-04",
+    "site": "A",
+    "yield_mg_L": 44.55,
+    "temperature_c": 27.65
+   },
+   {
+    "plot_id": "P-05",
+    "site": "B",
+    "yield_mg_L": 43.53,
+    "temperature_c": 24.33
+   },
+   {
+    "plot_id": "P-06",
+    "site": "C",
+    "yield_mg_L": 40.39,
+    "temperature_c": 23.32
+   },
+   {
+    "plot_id": "P-07",
+    "site": "A",
+    "yield_mg_L": 47.31,
+    "temperature_c": 27.61
+   },
+   {
+    "plot_id": "P-08",
+    "site": "B",
+    "yield_mg_L": null,
+    "temperature_c": 27.48
+   },
+   {
+    "plot_id": "P-09",
+    "site": "C",
+    "yield_mg_L": 47.07,
+    "temperature_c": 27.88
+   },
+   {
+    "plot_id": "P-10",
+    "site": "A",
+    "yield_mg_L": 37.18,
+    "temperature_c": 21.67
+   },
+   {
+    "plot_id": "P-11",
+    "site": "B",
+    "yield_mg_L": 46.71,
+    "temperature_c": 25.14
+   },
+   {
+    "plot_id": "P-12",
+    "site": "C",
+    "yield_mg_L": 48.34,
+    "temperature_c": 25.61
+   },
+   {
+    "plot_id": "P-13",
+    "site": "A",
+    "yield_mg_L": 47.63,
+    "temperature_c": 29.08
+   },
+   {
+    "plot_id": "P-14",
+    "site": "B",
+    "yield_mg_L": 45.22,
+    "temperature_c": 23.47
+   },
+   {
+    "plot_id": "P-15",
+    "site": "C",
+    "yield_mg_L": 43.08,
+    "temperature_c": 24.06
+   },
+   {
+    "plot_id": "P-16",
+    "site": "A",
+    "yield_mg_L": 36.64,
+    "temperature_c": 22.52
+   },
+   {
+    "plot_id": "P-17",
+    "site": "B",
+    "yield_mg_L": 50.27,
+    "temperature_c": 28.58
+   },
+   {
+    "plot_id": "P-18",
+    "site": "C",
+    "yield_mg_L": 45.31,
+    "temperature_c": 26.55
+   },
+   {
+    "plot_id": "P-19",
+    "site": "A",
+    "yield_mg_L": 45.44,
+    "temperature_c": 28.62
+   },
+   {
+    "plot_id": "P-20",
+    "site": "B",
+    "yield_mg_L": 54.23,
+    "temperature_c": 28.0
+   },
+   {
+    "plot_id": "P-21",
+    "site": "C",
+    "yield_mg_L": 37.48,
+    "temperature_c": 22.59
+   },
+   {
+    "plot_id": "P-22",
+    "site": "A",
+    "yield_mg_L": 43.34,
+    "temperature_c": 27.44
+   },
+   {
+    "plot_id": "P-23",
+    "site": "B",
+    "yield_mg_L": 45.33,
+    "temperature_c": 22.94
+   },
+   {
+    "plot_id": "P-24",
+    "site": "C",
+    "yield_mg_L": 50.23,
+    "temperature_c": 28.7
+   }
+  ]
+ },
+ "constraints": {
+  "no_log_axis_abuse": true,
+  "budget_seconds": 900
+ },
+ "source": {
+  "title": "Synthetic interface example (not a test case)",
+  "doi": null
+ }
+}

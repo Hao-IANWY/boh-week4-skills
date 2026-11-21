@@ -1,0 +1,112 @@
+{
+ "seq": 11,
+ "title": "专利与技术文献检索",
+ "category": "文献检索",
+ "queries": [
+  "patent search api python tool",
+  "google patents lens.org scraper",
+  "patent analysis skill agent"
+ ],
+ "candidates": [
+  {
+   "full_name": "biopython/biopython",
+   "url": "https://github.com/biopython/biopython",
+   "stars": 5276,
+   "desc": "Official git repository for Biopython (originally converted from CVS)",
+   "topics": [
+    "bioinformatics",
+    "biopython",
+    "dna",
+    "genomics",
+    "phylogenetics",
+    "protein"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-16T14:26:08Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "google/patents-public-data",
+   "url": "https://github.com/google/patents-public-data",
+   "stars": 694,
+   "desc": "Patent analysis using the Google Patents Public Datasets on BigQuery",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": "Apache-2.0",
+   "pushed_at": "2024-06-17T21:48:06Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "Obviously-Not/patent-skills",
+   "url": "https://github.com/Obviously-Not/patent-skills",
+   "stars": 19,
+   "desc": "Open-source Agent Skills for patent and innovation research. Discover distinctive technical patterns in a codebase and strategic concepts. Works in Claude Code, Cursor, Copilot, and any Agent Skills tool. Engineering an…",
+   "topics": [
+    "code-search",
+    "intellectual-property",
+    "ip",
+    "patent-search",
+    "patents"
+   ],
+   "lang": "Go",
+   "license": "MIT",
+   "pushed_at": "2026-11-08T14:54:23Z",
+   "via": [
+    "patent analysis skill agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dungnotnull/freedom-to-operate-analysis-agent-skill",
+   "url": "https://github.com/dungnotnull/freedom-to-operate-analysis-agent-skill",
+   "stars": 9,
+   "desc": "📑 Freedom to Operate (FTO) Patent Analyzer | Production-grade IP compliance harness. Scans technical features against active claims to score patent-infringement risks..",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-06-29T07:39:20Z",
+   "via": [
+    "patent analysis skill agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "NathanMaine/memoriant-patent-skills",
+   "url": "https://github.com/NathanMaine/memoriant-patent-skills",
+   "stars": 3,
+   "desc": "Claude Code plugin: AI-powered patent search, drafting, review, and analysis. 6 skills + 4 agents for the full patent workflow.",
+   "topics": [],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-03-27T01:56:05Z",
+   "via": [
+    "patent analysis skill agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "meshcode-ai/skills-research",
+   "url": "https://github.com/meshcode-ai/skills-research",
+   "stars": 3,
+   "desc": "8 research skills for Claude Code, Codex, Cursor, and meshcode — deep research, literature review, customer research, survey design, patent landscape analysis, competitor research, dossiers, and research briefs. Knowled…",
+   "topics": [
+    "agent-skills",
+    "claude-skills",
+    "deep-research",
+    "literature-review",
+    "market-research",
+    "survey-design"
+   ],
+   "lang": null,
+   "license": "NOASSERTION",
+   "pushed_at": "2026-09-13T06:54:18Z",
+   "via": [
+    "patent analysis skill agent"
+   ],
+   "seed": false
+  }
+ ]
+}

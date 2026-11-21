@@ -1,0 +1,107 @@
+{
+ "version": "0.2.0",
+ "description": "048 执行/协议/证据/综合的参数。筛选协议回退口径、检索打分、停止条件、证据强度、引文校验全部参数化，便于复算与对照。",
+ "sources": [
+  "local-corpus"
+ ],
+ "budget_units_per_subquestion": 400,
+ "generic_max_keys": 8,
+ "retrieval": {
+  "bm25": {
+   "k1": 1.2,
+   "b": 0.75
+  },
+  "weights": {
+   "bm25": 0.5,
+   "coverage": 0.5
+  },
+  "formula": "record_score = 0.5·min(bm25,1) + 0.5·idf_coverage(keys)"
+ },
+ "thresholds": {
+  "top_records_per_subquestion": 6,
+  "min_record_score": 0.3,
+  "min_evidence_key_coverage": 0.3,
+  "direct_coverage": 0.6,
+  "indirect_coverage": 0.35,
+  "max_rounds": 2,
+  "stop_when_no_new_evidence_rounds": 1,
+  "strong_min_direct_evidence": 2
+ },
+ "stop_condition": "每个子问题最多 max_rounds 轮；某轮没有新增证据即停止（no_new_evidence），记录 stopped_by；不再对同一批记录重复检索",
+ "screening_rule": "前瞻协议（prospective）：协议（纳排标准/检索顺序/停止条件）先写入 work/plan.json 再逐条筛选；每条记录记 criterion_hits（命中/未命中哪条标准）；仅 included 记录进入检索；协议缺失记 R_PROTOCOL_MISSING 并按声明回退口径筛选，不冒充已按协议筛选",
+ "fallback_screening": {
+  "declared_in": "rules/plan_rules.json#fallback_screening",
+  "note": "案例未提供协议时的声明回退口径：正文可读（内联/侧车/自研提取成功且非空）即纳入检索，不做额外纳排剔除；每条筛选记录标注 fallback=true",
+  "inclusion": [
+   {
+    "criterion_id": "FB-IN1",
+    "text": "记录正文可读（提取成功且非空）",
+    "body_readable": true
+   }
+  ],
+  "exclusion": [],
+  "stop_conditions": [
+   "每个子问题最多 max_rounds 轮；某轮没有新增证据即停止"
+  ]
+ },
+ "sentence_terminators": [
+  "。",
+  "！",
+  "？",
+  ";",
+  "；"
+ ],
+ "split_ascii_period": true,
+ "split_period_rule": "ASCII 句点仅在其前后都不是数字（避开 52.3 类小数）且后随空白/行尾时切句",
+ "conflict_rule": "方向冲突按 rules/direction_lexicon.json 成对判定（同子问题 + 共享检索键）；数值冲突只在「同一数据集 + 同一方法口径」下判定（context_vocabulary 两组 key 都相同）。冲突一律双列（side_a/side_b 各带逐字引文、方向与强度词），不择一、不合并、不以「尚存争议」替代双列。",
+ "gap_rule": "空白只从检索缺口推导：零证据子问题 → R_NO_EVIDENCE（basis=zero_evidence）；仅弱证据子问题 → R_WEAK_EVIDENCE（basis=weak_evidence_only）。空白必须落到「缺哪类证据 + plan_id」，不得写成「领域尚属空白」",
+ "proposal_rule": "研究建议只在案例声明 proposal_request 时产出；逐条引用 evidence_id / conflict_id / gap 与 constraints 键，not_claimed 显式声明不做实验、不称全局完备、不越界",
+ "evidence_rule": "证据行 = evidence_id + record_id + source_file + quote_field + char_span + 逐字 quote；管线内做精确子串校验，失败标 quote_mismatch 不静默；二进制来源（PDF/DOCX）另以 body_sha256 锚定提取文本",
+ "reason_codes": {
+  "R_NO_EVIDENCE": "该子问题在给定语料内无达阈值证据（零证据）",
+  "R_WEAK_EVIDENCE": "该子问题仅有弱证据（无直接证据且间接证据不足两条）",
+  "R_PROTOCOL_MISSING": "case.json 未提供前瞻性筛选/检索协议，已按声明回退口径筛选",
+  "R_CLARIFY": "问题必备要素缺失，需澄清后才能检索",
+  "R_CONFLICT": "同一子问题内证据方向相反或数值不一致",
+  "R_INPUT_ERROR": "输入不可读"
+ },
+ "key_stop_terms": [
+  "与",
+  "的",
+  "在",
+  "上",
+  "是",
+  "和",
+  "及",
+  "或",
+  "了",
+  "为",
+  "对",
+  "the",
+  "a",
+  "an",
+  "of",
+  "in",
+  "on",
+  "and",
+  "or",
+  "to",
+  "is",
+  "are"
+ ],
+ "context_vocabulary": {
+  "dataset": [
+   "uspTO-50k",
+   "uspto-50k",
+   "uspto 50k",
+   "uspto"
+  ],
+  "method": [
+   "message passing",
+   "graph neural network",
+   "template-free",
+   "graph attention",
+   "route planning"
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "case_id": "EXAMPLE-047-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：把 3 份阅读材料上的 8 条批注做成闭环——类型/颜色分开记、引文回到原文校正锚点、沉淀成带来源定位的结构化笔记、按共享术语连边并抑制过度连接、最后用一个真实问题检索沉淀结果。",
+ "output_contract": {
+  "annotations": "批注清单：文件+哈希+页（物理页与印刷页）+坐标或字符区间+类型+颜色及其含义+原文片段+校正后的锚点",
+  "notes": "结构化笔记：问题/方法/结论/可复用要点/待验证疑点 + 每条挂 annotation_id + 原文片段 + 来源定位 + 置信度",
+  "links": "笔记间关联及依据（共享术语或同一引文的跨版本副本），被抑制的关联也留记录",
+  "index": "检索入口：按维度/标签/来源文件/页/术语的索引与召回演示",
+  "evidence_map": "类型与颜色表、锚点校正逐条结果、笔记↔批注映射、连边规则与抑制记录、材料哈希",
+  "状态说明": "完成/部分完成、锚点未校正类批注、未知颜色/类型、无文本层材料、不确定性"
+ },
+ "materials": [
+  {
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "title": "图神经网络逆合成综述（正式版）",
+   "metadata": {"version": "v2", "year": 2022, "source": "journal"},
+   "pages": [
+    {
+     "page": 3,
+     "page_label": "3",
+     "text": "# 2 结果\n## 2.1 主结果\n模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。\n我们采用消息传递编码器并在反应中心做分类，训练 24 小时完成。\n该结论在低数据条件下未复现，样本量不足 500 时误差显著增大。\n我们提出反应中心的新表示，用于单步逆合成预测。"
+    },
+    {
+     "page": 4,
+     "page_label": "4",
+     "text": "## 2.2 消融实验\n低数据条件下准确率下降 12 个百分点，仅使用 10% 训练数据时降到 41.1%。\n去掉消息传递层后 top-1 准确率下降 3.4 个百分点。"
+    }
+   ]
+  },
+  {
+   "file_id": "M2",
+   "path": "clippings/2020_arxiv_preprint.md",
+   "title": "预印本网页剪藏",
+   "metadata": {"version": "v1", "year": 2020, "source": "web-clip"},
+   "text": "# 预印本摘录（arXiv:2020.1234v1）\n模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。\n预印本版本中该方法称为 MPNN，与正式版命名不同。"
+  },
+  {
+   "file_id": "M3",
+   "path": "scans/2021_handwritten_notes.pdf",
+   "title": "手写笔记扫描件",
+   "metadata": {"version": "v1", "year": 2021, "scanned": true},
+   "note": "扫描件无文本层，需 ocr-tool 产出旁路文本后才能校正锚点"
+  }
+ ],
+ "annotations": [
+  {
+   "annotation_id": "A1",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 3,
+   "page_label": "3",
+   "type": "highlight",
+   "color": "yellow",
+   "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "comment": "关键结论：与表 2 的主结果一致",
+   "position": {"rects": [[72, 320, 480, 338]]},
+   "tags": ["逆合成", "主结果"]
+  },
+  {
+   "annotation_id": "A2",
+   "file_id": "M1",
+   "page": 3,
+   "page_label": "3",
+   "type": "underline",
+   "color": "green",
+   "quote": "我们采用消息传递编码器并在反应中心做分类",
+   "comment": "方法可复用：编码器结构可以直接迁移到产率预测",
+   "tags": ["方法", "图神经网络"]
+  },
+  {
+   "annotation_id": "A3",
+   "file_id": "M1",
+   "page": 4,
+   "page_label": "4",
+   "type": "margin_note",
+   "color": "red",
+   "quote": "该结论在低数据条件下未复现",
+   "comment": "与主结果不一致，需要复核样本量口径",
+   "tags": ["低数据", "待复核"]
+  },
+  {
+   "annotation_id": "A4",
+   "file_id": "M1",
+   "page": 4,
+   "page_label": "4",
+   "type": "highlight",
+   "color": "purple",
+   "quote": "低数据条件下准确率下降 12 个百分点",
+   "comment": "待验证：与主结果的关系还没有解释",
+   "tags": ["低数据"]
+  },
+  {
+   "annotation_id": "A5",
+   "file_id": "M3",
+   "page": 1,
+   "type": "handwritten",
+   "color": "red",
+   "quote": "此处推导跳步，需要补中间式",
+   "comment": "",
+   "tags": ["推导"]
+  },
+  {
+   "annotation_id": "A6",
+   "file_id": "M2",
+   "page": 1,
+   "type": "scribble",
+   "color": "blue",
+   "quote": "预印本版本中该方法称为 MPNN",
+   "comment": "需复核版本差异：命名与正式版不同",
+   "tags": ["版本差异"]
+  },
+  {
+   "annotation_id": "A7",
+   "file_id": "M2",
+   "page": 1,
+   "type": "highlight",
+   "color": "yellow",
+   "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "comment": "结论与正式版一致，可作交叉印证",
+   "tags": ["逆合成", "主结果"]
+  },
+  {
+   "annotation_id": "A8",
+   "file_id": "M1",
+   "page": 3,
+   "page_label": "3",
+   "type": "highlight",
+   "color": "orange",
+   "quote": "我们提出了一种新的反应中心表示",
+   "comment": "研究问题：这种表示能否推广到新反应类型",
+   "tags": ["推广性"]
+  }
+ ],
+ "queries": [
+  {"query_id": "LQ1", "text": "低数据条件下准确率为什么会下降"},
+  {"query_id": "LQ2", "text": "预印本与正式版的命名差异"}
+ ],
+ "source": {"title": "Synthetic interface example (not a test case)", "doi": null}
+}

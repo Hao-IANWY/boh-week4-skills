@@ -1,0 +1,160 @@
+{
+ "seq": 60,
+ "title": "科研数据可视化",
+ "queries": [
+  "scientific visualization",
+  "publication figures matplotlib"
+ ],
+ "skills": [
+  {
+   "name": "scientific-visualization",
+   "slug": "k-dense-ai-scientific-agent-skills-scientific-visualization",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Meta-skill for publication-ready figures. Use when creating journal submission figures requiring multi-panel layouts, significance annotations, error bars, colorblind-safe palettes, and specific journal formatting (Nature, Science, Cell). Orchestrates matplotlib/seaborn/plotly with publication styles. For quick explor…",
+   "description_zh": null,
+   "repo_url": "https://github.com/K-Dense-AI/scientific-agent-skills#skills~scientific-visualization",
+   "github_stars": 29988
+  },
+  {
+   "name": "scientific-visualization",
+   "slug": "k-dense-ai-claude-scientific-skills-scientific-visualization",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "This skill provides templates and utilities for creating publication-ready scientific figures. It includes journal-specific style presets (Nature, Science, Cell), colorblind-safe palettes, multi-panel layout helpers, and export functions for PDF/EPS/TIFF formats. Focuses on meeting exact journal submission requirement…",
+   "description_zh": "该技能为创建符合期刊发表标准的科学图表提供模板和工具。包含Nature、Science、Cell等期刊的样式预设、色盲友好调色板、多面板布局助手，以及PDF/EPS/TIFF格式导出功能。专注于满足期刊投稿的具体格式要求。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~scientific-visualization",
+   "github_stars": 16952
+  },
+  {
+   "name": "scientific-visualization",
+   "slug": "microck-ordinary-claude-skills-scientific-visualization",
+   "author": "Microck",
+   "category": "research",
+   "description": "This skill provides Python scripts and templates for creating publication-ready scientific figures. It includes journal-specific style presets, colorblind-safe palettes, and export functions for PDF/EPS/TIFF formats. The documentation covers multi-panel layouts, error bars, significance markers, and workflows for Natu…",
+   "description_zh": "该技能提供用于创建可直接发表的科学图表所需的Python脚本和模板。包含期刊特定样式预设、色盲友好调色板以及PDF/EPS/TIFF格式导出功能。文档涵盖多面板布局、误差线、显著性标记和Nature/Science期刊投稿工作流程。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~scientific-visualization",
+   "github_stars": 150
+  },
+  {
+   "name": "scientific-visualization",
+   "slug": "tyche-mkr-scientific-agent-skills-scientific-visualization",
+   "author": "Tyche-MKR",
+   "category": "data",
+   "description": "Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for figure design, multi-panel layouts, uncertainty and missing-data displays, color/contrast review, image metadata validation, and journal export planning.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tyche-MKR/scientific-agent-skills#skills~scientific-visualization",
+   "github_stars": 101
+  },
+  {
+   "name": "scientific-visualization",
+   "slug": "bbgnsurftech-claude-skills-collection-scientific-visualization",
+   "author": "BbgnsurfTech",
+   "category": "data",
+   "description": "Create publication figures with matplotlib/seaborn/plotly. Multi-panel layouts, error bars, significance markers, colorblind-safe, export PDF/EPS/TIFF, for journal-ready scientific plots.",
+   "description_zh": "使用 matplotlib、seaborn 和 plotly 创建符合出版标准的科学图表。确保正确的格式、多面板布局、色盲友好配色，并导出为 PDF/EPS/TIFF 等期刊接受的格式。",
+   "repo_url": "https://github.com/BbgnsurfTech/claude-skills-collection#community~individual-skills~claude-scientific-skills~scientific-skills~scientific-visualization",
+   "github_stars": 11
+  },
+  {
+   "name": "scientific-thinking-scientific-visualization",
+   "slug": "jackspace-claudeskillz-scientific-thinking-scientific-visualization",
+   "author": "jackspace",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/jackspace/ClaudeSkillz#skills~scientific-thinking-scientific-visualization",
+   "github_stars": 12
+  },
+  {
+   "name": "build-scientific-visualizations",
+   "slug": "gxcaesar-open-research-skills-build-scientific-visualizations-f7ff997b32",
+   "author": "gxCaesar",
+   "category": "data",
+   "description": "Use when creating, redesigning, planning, or visually auditing scientific figures, flowcharts, method schematics or model-architecture diagrams, graphical abstracts, dense many-panel compound figures, domain-specific omics visualizations, and conference or journal figure sets, including Nature-style main, Extended Dat…",
+   "description_zh": null,
+   "repo_url": "https://github.com/gxCaesar/open-research-skills#skills~build-scientific-visualizations",
+   "github_stars": 63
+  },
+  {
+   "name": "scientific-schematics",
+   "slug": "bbgnsurftech-claude-skills-collection-scientific-schematics",
+   "author": "BbgnsurfTech",
+   "category": "design",
+   "description": "Create publication-quality scientific diagrams using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3 Pro for quality review. Only regenerates if quality is below threshold for your document type. Specialized in neural network architectures, system diagrams, flowcharts, biological pathways, and comple…",
+   "description_zh": "该技能利用AI智能迭代优化，生成符合期刊、会议等不同文档质量要求的科学图表，如神经网络架构图、流程图和生物通路图，用于出版物和演示。",
+   "repo_url": "https://github.com/BbgnsurfTech/claude-skills-collection#community~individual-skills~claude-scientific-skills~scientific-skills~scientific-schematics",
+   "github_stars": 11
+  },
+  {
+   "name": "stata-style-figures",
+   "slug": "kennethkhoocy-applied-micro-skills-stata-style-figures",
+   "author": "kennethkhoocy",
+   "category": "development",
+   "description": "Style every matplotlib figure like the Stata 18/19 default (stcolor) scheme — Arial embedded as TrueType, white background, recessive light-gray grid below the data, no top/right spines, unframed legends, and the validated blue/red/gray palette. Use whenever a task generates or restyles charts, plots, or figures for p…",
+   "description_zh": null,
+   "repo_url": "https://github.com/kennethkhoocy/applied-micro-skills#plugins~applied-micro~skills~stata-style-figures",
+   "github_stars": 48
+  },
+  {
+   "name": "seaborn",
+   "slug": "microck-ordinary-claude-skills-seaborn",
+   "author": "Microck",
+   "category": "data",
+   "description": "This skill provides comprehensive guidance for using Seaborn to create statistical visualizations in Python. It covers both function and object interfaces, explains when to use different plot types, and includes practical patterns for EDA and publication figures. The documentation addresses common troubleshooting scen…",
+   "description_zh": "该技能提供使用Seaborn创建Python统计可视化的完整指南，涵盖函数和对象两种接口，解释不同图表类型的使用场景，包含EDA和出版级图形的实用模式。文档解决了常见故障排除场景，并与matplotlib良好集成。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~seaborn",
+   "github_stars": 150
+  },
+  {
+   "name": "plotly",
+   "slug": "olavocarvalho-data-agents-plotly",
+   "author": "olavocarvalho",
+   "category": "data",
+   "description": "Interactive visualization library. Use when you need hover info, zoom, pan, or web-embeddable charts. Best for dashboards, exploratory analysis, and presentations. For static publication figures use matplotlib or scientific-visualization.",
+   "description_zh": null,
+   "repo_url": "https://github.com/olavocarvalho/data-agents/tree/main/skills/plotly",
+   "github_stars": 1
+  },
+  {
+   "name": "research-init",
+   "slug": "phdemotions-research-methods-research-init",
+   "author": "phdemotions",
+   "category": "research",
+   "description": "Scaffold a new research project with full reproducibility infrastructure in R and/or Python. Creates directory structure, pipeline stubs (targets/Snakemake), environment lockfiles (renv/uv), documentation templates (codebook, decision log, pre-registration, Cornell README), Quarto manuscript template, and proper .giti…",
+   "description_zh": null,
+   "repo_url": "https://github.com/phdemotions/research-methods/tree/main/.claude/skills/research-init",
+   "github_stars": 1
+  },
+  {
+   "name": "figure-generation",
+   "slug": "lingzhi227-agent-research-skills-figure-generation",
+   "author": "lingzhi227",
+   "category": "development",
+   "description": "Generate publication-quality scientific figures using matplotlib/seaborn with a three-phase pipeline (query expansion, code generation with execution, VLM visual feedback). Handles bar charts, line plots, heatmaps, training curves, ablation plots, and more. Use when the user needs figures, plots, or visualizations for…",
+   "description_zh": null,
+   "repo_url": "https://github.com/lingzhi227/agent-research-skills/tree/main/skills/figure-generation",
+   "github_stars": 263
+  },
+  {
+   "name": "seaborn",
+   "slug": "k-dense-ai-scientific-agent-skills-seaborn",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Statistical visualization with pandas integration. Use for quick exploration of distributions, relationships, and categorical comparisons with attractive defaults. Best for box plots, violin plots, pair plots, heatmaps. Built on matplotlib. For interactive plots use plotly; for publication styling use scientific-visua…",
+   "description_zh": null,
+   "repo_url": "https://github.com/K-Dense-AI/scientific-agent-skills#skills~seaborn",
+   "github_stars": 29992
+  },
+  {
+   "name": "seaborn",
+   "slug": "k-dense-ai-claude-scientific-skills-seaborn",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Statistical visualization with pandas integration. Use for quick exploration of distributions, relationships, and categorical comparisons with attractive defaults. Best for box plots, violin plots, pair plots, heatmaps. Built on matplotlib. For interactive plots use plotly; for publication styling use scientific-visua…",
+   "description_zh": "该技能提供了使用Seaborn Python统计可视化库的完整指南。涵盖传统函数式和现代面向对象两种API，包含常见图表类型的实用示例、故障排除技巧以及与pandas DataFrame的集成。文档包含用于探索性数据分析和出版质量图形的实际代码片段。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills-seaborn",
+   "github_stars": 16952
+  }
+ ]
+}

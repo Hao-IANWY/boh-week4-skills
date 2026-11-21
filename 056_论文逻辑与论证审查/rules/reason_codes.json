@@ -1,0 +1,15 @@
+{
+ "version": "1.0.0",
+ "description": "056 理由码。",
+ "codes": {
+  "R_FEW_CLAIMS": "可抽取的主张过少，论证图不足以支撑结构判定",
+  "R_NO_SECTION_ROLE": "章节角色无法识别（缺结果/讨论/结论标题），跨章节判定降级",
+  "R_AMBIGUOUS": "原文表述歧义，两种读法结论不同",
+  "R_GUARD_SKIP": "命中误报抑制白名单（有意对照/显式假设/转述他人/局限性自述），条目已写入 suppressed",
+  "R_TRUNCATED": "稿件被截断或章节缺失：只审查了已获文本，覆盖率见 evidence.coverage，状态不为 complete",
+  "R_LOW_OVERLAP": "支撑关系重合度低于阈值，未建边（不等于无支撑）",
+  "R_NO_TEXT_LAYER": "PDF/扫描件无可提取文本层：未做任何内容审查，状态 empty，不编造结论",
+  "R_EXTRACTION_FALLBACK": "侧车文本缺失或为空，回退到自研 stdlib 提取；版面顺序不保证，定位以重建文本的 char_span 为准",
+  "R_FACET_UNCHECKED": "任务指令未点名的审查维度未执行，已在 facets_status 标 unchecked，不冒充全查"
+ }
+}

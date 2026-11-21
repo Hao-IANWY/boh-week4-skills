@@ -1,0 +1,102 @@
+{
+ "version": "0.2.0",
+ "description": "011 的排序、族归并与检索参数。所有阈值集中在此，代码内不出现魔法数；评审可按 field_table + score_breakdown 复算。",
+ "relevance_weights": {
+  "number_match": 0.5,
+  "keyword_match": 0.2,
+  "ipc_match": 0.2,
+  "metadata_completeness": 0.1
+ },
+ "thresholds": {
+  "min_relevance": 0.2,
+  "max_results": 10,
+  "title_jaccard_min": 0.7,
+  "family_year_window": 2,
+  "claims_quote_chars": 200
+ },
+ "family_rules": {
+  "primary_criterion": "priority_number_normalized（优先权号归一后相同 → 同族候选）",
+  "secondary_criteria": "assignee 相同 + 标题强归一 Jaccard ≥ title_jaccard_min + 优先权日差 ≤ family_year_window 年",
+  "scope_statement": "只声明‘观察到的同族关系’，不声称穷尽 INPADOC 简单族或扩展族",
+  "member_count_basis": "以本轮候选记录为限，不引入库外成员"
+ },
+ "claims_rules": {
+  "version_required": true,
+  "locate_by": "权项号 → 原文段落 → 字符区间",
+  "ocr_boundary_marking": "记录或权项带 ocr=true 时，权项引用必须标 ocr_boundary=true，且不得把残句当完整权项范围",
+  "unlocated_policy": "定位失败的权项只登记状态 R_CLAIM_NOT_LOCATED，不摘引、不改写",
+  "source_ref_required": true,
+  "source_ref_values": [
+   "inline_field",
+   "facsimile:<file> page:N",
+   "ocr_sidecar:<file>"
+  ],
+  "quote_exactness": "located 的权项 quote 必须是其来源文本内 char_span 指向的精确子串（source[start:end]==quote）；不做空白归一、不加省略号"
+ },
+ "provenance_rules": {
+  "required_fields": [
+   "db",
+   "queried_at",
+   "source_tier"
+  ],
+  "optional_fields": [
+   "version",
+   "license",
+   "access_note"
+  ],
+  "note": "每条字段级结论都要能回指到来源四元组；缺 queried_at 的结论不得写成已核验"
+ },
+ "risk_grading": {
+  "levels": {
+   "high": "存在越权断言（法律状态被写成确定值而来源非官方登记）、或号码类型混用",
+   "medium": "族关系不穷尽、OCR 边界、关键字段缺失",
+   "low": "字段齐备、来源为官方登记且带查询日期"
+  },
+  "note": "风险分级只描述本次检索的证据强度，不构成 FTO/侵权结论"
+ },
+ "normalization": {
+  "keyword_cap": 3,
+  "ipc_cap": 2,
+  "note": "关键词/分类号命中率按 min(hits, cap)/cap 归一：主题关键词表通常 8–12 项，用全表做分母会把只命中 3 项的相关记录压成低分；cap 写在 rules 里便于复算"
+ },
+ "metadata_fields": {
+  "patent": [
+   "title",
+   "assignee",
+   "publication_raw",
+   "priority_date",
+   "ipc"
+  ],
+  "non_patent": [
+   "title",
+   "abstract",
+   "publication_date",
+   "source_db"
+  ],
+  "non_patent_indicators": [
+   "journal",
+   "article",
+   "preprint",
+   "conference",
+   "crossref",
+   "pubmed",
+   "arxiv",
+   "doi",
+   "review"
+  ],
+  "note": "技术文献（期刊论文/会议论文）本来就没有申请人与 IPC，用专利字段表算完整度会系统性压低其相关性；按文献类型分别取字段集"
+ },
+ "material_hits": {
+  "quote_chars": 160,
+  "max_hits_per_material": 5,
+  "scan_query_types": [
+   "topic",
+   "assignee_topic"
+  ],
+  "scan_material_kinds": [
+   "literature",
+   "facsimile"
+  ],
+  "note": "主题型/申请人型查询对材料正文（对比文献 TXT、影印件提取文本）另做关键词+申请人命中；quote 为来源文本精确切片（char_span 可逐字节复核），与 records 打分分开呈现，不并入 relevance"
+ }
+}

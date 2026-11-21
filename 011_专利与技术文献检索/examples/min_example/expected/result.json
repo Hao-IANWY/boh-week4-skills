@@ -1,0 +1,2603 @@
+{
+ "case_id": "EXAMPLE-011-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "patent-literature-retrieval",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-20T11:09:04+0800",
+ "claims_table": [
+  {
+   "record_id": "P1",
+   "publication_number": "US10123456B2",
+   "versions": [
+    {
+     "version": "B2 (granted)"
+    }
+   ],
+   "source_refs": [
+    "inline_field"
+   ],
+   "gap": "",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      156
+     ],
+     "quote": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/US10123456B2.pdf",
+       "ocr_boundary": false
+      }
+     ],
+     "status": "located"
+    },
+    {
+     "claim_no": "2",
+     "version": "B2 (granted)",
+     "text": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      157,
+      273
+     ],
+     "quote": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/US10123456B2.pdf",
+       "ocr_boundary": false
+      }
+     ],
+     "status": "located"
+    }
+   ],
+   "ocr_boundary": true
+  },
+  {
+   "record_id": "P2",
+   "publication_number": "US20210123456A1",
+   "versions": [
+    {
+     "version": "A1 (as published)"
+    }
+   ],
+   "source_refs": [
+    "inline_field"
+   ],
+   "gap": "",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      104
+     ],
+     "quote": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "ocr_boundary": false
+  },
+  {
+   "record_id": "P5",
+   "publication_number": "US11456789B2",
+   "versions": [
+    {
+     "version": "B2 (granted)"
+    }
+   ],
+   "source_refs": [
+    "inline_field"
+   ],
+   "gap": "",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      150
+     ],
+     "quote": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "ocr_boundary": false
+  },
+  {
+   "record_id": "P3",
+   "publication_number": "WO2022123456A1",
+   "versions": [
+    {
+     "version": "A1 (as published, OCR)"
+    }
+   ],
+   "source_refs": [
+    "inline_field"
+   ],
+   "gap": "",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published, OCR)",
+     "text": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      115
+     ],
+     "quote": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/WO2022123456A1.ocr.txt",
+       "ocr_boundary": true
+      }
+     ],
+     "status": "located"
+    },
+    {
+     "claim_no": "2",
+     "version": "A1 (as published, OCR)",
+     "text": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      116,
+      228
+     ],
+     "quote": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/WO2022123456A1.ocr.txt",
+       "ocr_boundary": true
+      }
+     ],
+     "status": "located"
+    }
+   ],
+   "ocr_boundary": true
+  },
+  {
+   "record_id": "P4",
+   "publication_number": "",
+   "versions": [],
+   "source_refs": [],
+   "gap": "",
+   "claims": [],
+   "ocr_boundary": false
+  },
+  {
+   "record_id": "P6",
+   "publication_number": "US10234567",
+   "versions": [
+    {
+     "version": "as provided"
+    }
+   ],
+   "source_refs": [
+    "inline_field"
+   ],
+   "gap": "",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "as provided",
+     "text": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      79
+     ],
+     "quote": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "ocr_boundary": false
+  }
+ ],
+ "patent_families": [
+  {
+   "family_id": "F-30e45f02",
+   "basis": "priority:JP2020204355",
+   "members": [
+    {
+     "record_id": "P3",
+     "publication_number": "WO2022123456A1",
+     "application_number": "JP2021555123",
+     "priority_number": "JP2020204355",
+     "priority_date": "2020-12-09",
+     "title": "Sulfide solid electrolyte and method of manufacturing the same"
+    }
+   ],
+   "member_count": 1,
+   "scope": "observed_not_exhaustive",
+   "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+  },
+  {
+   "family_id": "F-7f2cf029",
+   "basis": "priority:US62345678",
+   "members": [
+    {
+     "record_id": "P1",
+     "publication_number": "US10123456B2",
+     "application_number": "US15234567",
+     "priority_number": "US62345678",
+     "priority_date": "2019-05-02",
+     "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries"
+    },
+    {
+     "record_id": "P2",
+     "publication_number": "US20210123456A1",
+     "application_number": "US15234567",
+     "priority_number": "US62345678",
+     "priority_date": "2019-05-02",
+     "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries"
+    }
+   ],
+   "member_count": 2,
+   "scope": "observed_not_exhaustive",
+   "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+  },
+  {
+   "family_id": "F-c10f5a2e",
+   "basis": "priority:US62888111",
+   "members": [
+    {
+     "record_id": "P5",
+     "publication_number": "US11456789B2",
+     "application_number": "US16987654",
+     "priority_number": "US62888111",
+     "priority_date": "2018-11-20",
+     "title": "Ionizable lipid nanoparticle for mRNA delivery to lung tissue"
+    }
+   ],
+   "member_count": 1,
+   "scope": "observed_not_exhaustive",
+   "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+  },
+  {
+   "family_id": "F-8e5c07ee",
+   "basis": "single_record",
+   "members": [
+    {
+     "record_id": "P4",
+     "publication_number": "",
+     "application_number": "",
+     "priority_number": "",
+     "priority_date": "",
+     "title": "Interfacial resistance in garnet solid electrolytes: a comparative study"
+    }
+   ],
+   "member_count": 1,
+   "scope": "observed_not_exhaustive",
+   "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+  },
+  {
+   "family_id": "F-0699dcd5",
+   "basis": "single_record",
+   "members": [
+    {
+     "record_id": "P6",
+     "publication_number": "US10234567",
+     "application_number": "US16543210",
+     "priority_number": "",
+     "priority_date": "",
+     "title": "Composite solid electrolyte membrane for solid-state lithium batteries"
+    }
+   ],
+   "member_count": 1,
+   "scope": "observed_not_exhaustive",
+   "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+  }
+ ],
+ "excluded": [],
+ "candidates": [
+  {
+   "record_id": "P1",
+   "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries",
+   "assignee": "SolidEnergy Labs Inc.",
+   "inventors": [
+    "H. Tanaka",
+    "R. Mehta"
+   ],
+   "publication_number": {
+    "raw": "US 10,123,456 B2",
+    "country": "US",
+    "digits": "10123456",
+    "kind_code": "B2",
+    "number_kind": "grant",
+    "canonical": "US10123456B2",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "application_number": {
+    "raw": "US 15/234,567",
+    "country": "US",
+    "digits": "15234567",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US15234567",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "US 62/345,678",
+    "country": "US",
+    "digits": "62345678",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US62345678",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-11-09",
+   "ipc": [
+    "H01M10/0562",
+    "H01M4/62"
+   ],
+   "cpc": [
+    "H01M10/0562",
+    "H01M2300/0068"
+   ],
+   "family_id": "F-7f2cf029",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      156
+     ],
+     "quote": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/US10123456B2.pdf",
+       "ocr_boundary": false
+      }
+     ],
+     "status": "located"
+    },
+    {
+     "claim_no": "2",
+     "version": "B2 (granted)",
+     "text": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      157,
+      273
+     ],
+     "quote": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/US10123456B2.pdf",
+       "ocr_boundary": false
+      }
+     ],
+     "status": "located"
+    }
+   ],
+   "claims_summary": {
+    "count": 2,
+    "located": 2,
+    "versions": [
+     "B2 (granted)"
+    ],
+    "ocr_boundary": true,
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": ""
+   },
+   "facsimiles": [
+    {
+     "material_id": "M2",
+     "file": "materials/US10123456B2.pdf",
+     "kind": "facsimile",
+     "linked_record_ids": [
+      "P1"
+     ],
+     "linkage": [
+      {
+       "record_id": "P1",
+       "how": "declared"
+      }
+     ],
+     "ocr_boundary": false,
+     "sha256": "a09b7e525abbc5e60bb6384d304cb996b0bc13f56c39e95f9b4b52cf507a8e29",
+     "extraction_method": "pdf_stdlib_text",
+     "extraction_note": "pdf_min 流扫描提取（zlib + BT/ET/Tj），非通用 PDF 解析器",
+     "char_count": 491,
+     "page_count": 1,
+     "text_available": true
+    }
+   ],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "granted",
+    "observed_source": "FreePatentsOnline",
+    "observed_date": "2023-04-11",
+    "source_tier": "official_office_pdf",
+    "basis": "观测值来自 FreePatentsOnline，来源分级 official_office_pdf，不作为登记依据",
+    "recheck_path": "按公开号 US10123456B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "USPTO",
+    "queried_at": "2026-03-01",
+    "source_tier": "official_office_pdf",
+    "restricted": false
+   },
+   "relevance": 0.6,
+   "score_breakdown": {
+    "number_match": 1.0,
+    "number_match_mode": "canonical:publication",
+    "keyword_match": 0.0,
+    "ipc_match": 0.0,
+    "metadata_completeness": 1.0,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q1",
+   "query_scores": {
+    "Q1": 0.6,
+    "Q2": 0.6,
+    "Q3": 0.4333,
+    "Q4": 0.1
+   },
+   "keyword_hits": [],
+   "ipc_hits": [],
+   "rank": 1
+  },
+  {
+   "record_id": "P2",
+   "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries",
+   "assignee": "SolidEnergy Labs Inc.",
+   "inventors": [
+    "H. Tanaka"
+   ],
+   "publication_number": {
+    "raw": "US 2021/0123456 A1",
+    "country": "US",
+    "digits": "20210123456",
+    "kind_code": "A1",
+    "number_kind": "application_publication",
+    "canonical": "US20210123456A1",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "application_number": {
+    "raw": "US 15/234,567",
+    "country": "US",
+    "digits": "15234567",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US15234567",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "US 62/345,678",
+    "country": "US",
+    "digits": "62345678",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US62345678",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-04-29",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "cpc": [],
+   "family_id": "F-7f2cf029",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      104
+     ],
+     "quote": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "claims_summary": {
+    "count": 1,
+    "located": 1,
+    "versions": [
+     "A1 (as published)"
+    ],
+    "ocr_boundary": false,
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": ""
+   },
+   "facsimiles": [],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "USPTO",
+    "observed_date": "2026-03-01",
+    "source_tier": "official_registry",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号 US20210123456A1 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "USPTO",
+    "queried_at": "2026-03-01",
+    "source_tier": "official_registry",
+    "restricted": false
+   },
+   "relevance": 0.6,
+   "score_breakdown": {
+    "number_match": 1.0,
+    "number_match_mode": "canonical:application",
+    "keyword_match": 0.0,
+    "ipc_match": 0.0,
+    "metadata_completeness": 1.0,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q2",
+   "query_scores": {
+    "Q1": 0.1,
+    "Q2": 0.6,
+    "Q3": 0.2667,
+    "Q4": 0.1
+   },
+   "keyword_hits": [],
+   "ipc_hits": [],
+   "rank": 2
+  },
+  {
+   "record_id": "P5",
+   "title": "Ionizable lipid nanoparticle for mRNA delivery to lung tissue",
+   "assignee": "Helix RNA Therapeutics",
+   "inventors": [
+    "A. Duarte"
+   ],
+   "publication_number": {
+    "raw": "US 11,456,789 B2",
+    "country": "US",
+    "digits": "11456789",
+    "kind_code": "B2",
+    "number_kind": "grant",
+    "canonical": "US11456789B2",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "application_number": {
+    "raw": "US 16/987,654",
+    "country": "US",
+    "digits": "16987654",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US16987654",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "US 62/888,111",
+    "country": "US",
+    "digits": "62888111",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US62888111",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "2018-11-20",
+   "filing_date": "2019-11-19",
+   "publication_date": "2023-05-30",
+   "ipc": [
+    "A61K9/127",
+    "A61K48/00"
+   ],
+   "cpc": [],
+   "family_id": "F-c10f5a2e",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      150
+     ],
+     "quote": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "claims_summary": {
+    "count": 1,
+    "located": 1,
+    "versions": [
+     "B2 (granted)"
+    ],
+    "ocr_boundary": false,
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": ""
+   },
+   "facsimiles": [],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "granted",
+    "observed_source": "PatSnap",
+    "observed_date": "2024-06-01",
+    "source_tier": "third_party_aggregator",
+    "basis": "观测值来自 PatSnap，来源分级 third_party_aggregator，不作为登记依据",
+    "recheck_path": "按公开号 US11456789B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "PatSnap",
+    "queried_at": "2026-03-01",
+    "source_tier": "third_party_aggregator",
+    "restricted": true
+   },
+   "relevance": 0.5,
+   "score_breakdown": {
+    "number_match": 0.0,
+    "number_match_mode": "",
+    "keyword_match": 1.0,
+    "ipc_match": 1.0,
+    "metadata_completeness": 1.0,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q4",
+   "query_scores": {
+    "Q1": 0.1,
+    "Q2": 0.1,
+    "Q3": 0.1,
+    "Q4": 0.5
+   },
+   "keyword_hits": [
+    "lipid nanoparticle",
+    "ionizable lipid",
+    "mrna delivery"
+   ],
+   "ipc_hits": [
+    {
+     "want": "A61K9/127",
+     "record_value": "A61K9/127"
+    },
+    {
+     "want": "A61K48/00",
+     "record_value": "A61K48/00"
+    }
+   ],
+   "rank": 3
+  },
+  {
+   "record_id": "P3",
+   "title": "Sulfide solid electrolyte and method of manufacturing the same",
+   "assignee": "Tohoku Battery Materials KK",
+   "inventors": [
+    "S. Ito"
+   ],
+   "publication_number": {
+    "raw": "WO 2022/123456 A1",
+    "country": "WO",
+    "digits": "2022123456",
+    "kind_code": "A1",
+    "number_kind": "application_publication",
+    "canonical": "WO2022123456A1",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": "2022/123456"
+   },
+   "application_number": {
+    "raw": "JP 2021-555123",
+    "country": "JP",
+    "digits": "2021555123",
+    "kind_code": "",
+    "number_kind": "application_publication",
+    "canonical": "JP2021555123",
+    "confidence": "medium",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "JP 2020-204355",
+    "country": "JP",
+    "digits": "2020204355",
+    "kind_code": "",
+    "number_kind": "application_publication",
+    "canonical": "JP2020204355",
+    "confidence": "medium",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "2020-12-09",
+   "filing_date": "2021-12-08",
+   "publication_date": "2022-06-16",
+   "ipc": [
+    "H01M10/0562",
+    "H01M10/058"
+   ],
+   "cpc": [],
+   "family_id": "F-30e45f02",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published, OCR)",
+     "text": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      115
+     ],
+     "quote": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/WO2022123456A1.ocr.txt",
+       "ocr_boundary": true
+      }
+     ],
+     "status": "located"
+    },
+    {
+     "claim_no": "2",
+     "version": "A1 (as published, OCR)",
+     "text": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      116,
+      228
+     ],
+     "quote": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+     "ocr_boundary": true,
+     "facsimile_corroborated": true,
+     "corroborating_files": [
+      {
+       "file": "materials/WO2022123456A1.ocr.txt",
+       "ocr_boundary": true
+      }
+     ],
+     "status": "located"
+    }
+   ],
+   "claims_summary": {
+    "count": 2,
+    "located": 2,
+    "versions": [
+     "A1 (as published, OCR)"
+    ],
+    "ocr_boundary": true,
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": ""
+   },
+   "facsimiles": [
+    {
+     "material_id": "M3",
+     "file": "materials/WO2022123456A1.ocr.txt",
+     "kind": "facsimile",
+     "linked_record_ids": [
+      "P3"
+     ],
+     "linkage": [
+      {
+       "record_id": "P3",
+       "how": "declared"
+      }
+     ],
+     "ocr_boundary": true,
+     "sha256": "0d5b19eb1696e01b64b1e4d60097f7e54d91aa81192e3dc29f13ffa11dd64dca",
+     "extraction_method": "ocr_sidecar",
+     "extraction_note": "",
+     "char_count": 430,
+     "page_count": 1,
+     "text_available": true
+    }
+   ],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "pending",
+    "observed_source": "Lens.org",
+    "observed_date": "2024-02-20",
+    "source_tier": "official_office_pdf",
+    "basis": "观测值来自 Lens.org，来源分级 official_office_pdf，不作为登记依据",
+    "recheck_path": "按公开号 WO2022123456A1 到 WO 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "WIPO",
+    "queried_at": "2026-03-01",
+    "source_tier": "official_office_pdf",
+    "restricted": false
+   },
+   "relevance": 0.4333,
+   "score_breakdown": {
+    "number_match": 0.0,
+    "number_match_mode": "",
+    "keyword_match": 0.6667,
+    "ipc_match": 1.0,
+    "metadata_completeness": 1.0,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q3",
+   "query_scores": {
+    "Q1": 0.1,
+    "Q2": 0.1,
+    "Q3": 0.4333,
+    "Q4": 0.1
+   },
+   "keyword_hits": [
+    "solid electrolyte",
+    "lithium dendrite"
+   ],
+   "ipc_hits": [
+    {
+     "want": "H01M10/0562",
+     "record_value": "H01M10/0562"
+    },
+    {
+     "want": "H01M10/058",
+     "record_value": "H01M10/058"
+    }
+   ],
+   "rank": 4
+  },
+  {
+   "record_id": "P4",
+   "title": "Interfacial resistance in garnet solid electrolytes: a comparative study",
+   "assignee": "",
+   "inventors": [
+    "M. Novak",
+    "L. Wu"
+   ],
+   "publication_number": {
+    "raw": "",
+    "country": "",
+    "digits": "",
+    "kind_code": "",
+    "number_kind": "unknown",
+    "canonical": "",
+    "confidence": "low",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "application_number": {
+    "raw": "",
+    "country": "",
+    "digits": "",
+    "kind_code": "",
+    "number_kind": "unknown",
+    "canonical": "",
+    "confidence": "low",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "",
+    "country": "",
+    "digits": "",
+    "kind_code": "",
+    "number_kind": "unknown",
+    "canonical": "",
+    "confidence": "low",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "",
+   "filing_date": "",
+   "publication_date": "2023-03-15",
+   "ipc": [],
+   "cpc": [],
+   "family_id": "F-8e5c07ee",
+   "claims": [],
+   "claims_summary": {
+    "count": 0,
+    "located": 0,
+    "versions": [],
+    "ocr_boundary": false,
+    "source_refs": [],
+    "gap": ""
+   },
+   "facsimiles": [
+    {
+     "material_id": "M1",
+     "file": "materials/garnet_comparison_review.txt",
+     "kind": "literature",
+     "linked_record_ids": [
+      "P4"
+     ],
+     "linkage": [
+      {
+       "record_id": "P4",
+       "how": "declared"
+      },
+      {
+       "record_id": "P4",
+       "how": "declared"
+      }
+     ],
+     "ocr_boundary": false,
+     "sha256": "58a3195b6884cc4a54cc570920013dc8b4e729e0917abe0c5514183a3a06ed4f",
+     "extraction_method": "plain_text",
+     "extraction_note": "",
+     "char_count": 703,
+     "page_count": 1,
+     "text_available": true
+    }
+   ],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "Crossref",
+    "observed_date": "2026-03-01",
+    "source_tier": "publisher",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号  到  官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "Crossref",
+    "queried_at": "2026-03-01",
+    "source_tier": "publisher",
+    "restricted": false
+   },
+   "relevance": 0.3,
+   "score_breakdown": {
+    "number_match": 0.0,
+    "number_match_mode": "",
+    "keyword_match": 1.0,
+    "ipc_match": 0.0,
+    "metadata_completeness": 1.0,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q3",
+   "query_scores": {
+    "Q1": 0.1,
+    "Q2": 0.1,
+    "Q3": 0.3,
+    "Q4": 0.1
+   },
+   "keyword_hits": [
+    "solid electrolyte",
+    "lithium dendrite",
+    "oxide electrolyte"
+   ],
+   "ipc_hits": [],
+   "rank": 5
+  },
+  {
+   "record_id": "P6",
+   "title": "Composite solid electrolyte membrane for solid-state lithium batteries",
+   "assignee": "Northern Grid Storage",
+   "inventors": [
+    "K. Berg"
+   ],
+   "publication_number": {
+    "raw": "US 10,234,567",
+    "country": "US",
+    "digits": "10234567",
+    "kind_code": "",
+    "number_kind": "unknown",
+    "canonical": "US10234567",
+    "confidence": "low",
+    "alternatives": [
+     {
+      "number_kind": "grant",
+      "reason": "7~8 位号码 + 授权类种类码（如 B2）时按授权公告号解释"
+     },
+     {
+      "number_kind": "application",
+      "reason": "本国申请号也可能是 7~8 位，需回官方登记确认"
+     }
+    ],
+    "has_slash": false,
+    "ambiguous": true,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "application_number": {
+    "raw": "US 16/543,210",
+    "country": "US",
+    "digits": "16543210",
+    "kind_code": "",
+    "number_kind": "application",
+    "canonical": "US16543210",
+    "confidence": "high",
+    "alternatives": [],
+    "has_slash": true,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_number": {
+    "raw": "",
+    "country": "",
+    "digits": "",
+    "kind_code": "",
+    "number_kind": "unknown",
+    "canonical": "",
+    "confidence": "low",
+    "alternatives": [],
+    "has_slash": false,
+    "ambiguous": false,
+    "wo_merged": false,
+    "wo_split": ""
+   },
+   "priority_date": "",
+   "filing_date": "2020-01-14",
+   "publication_date": "2024-01-02",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "cpc": [],
+   "family_id": "F-0699dcd5",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "as provided",
+     "text": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+     "located": true,
+     "source_ref": "inline_field",
+     "page": null,
+     "char_span": [
+      0,
+      79
+     ],
+     "quote": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+     "ocr_boundary": false,
+     "facsimile_corroborated": false,
+     "corroborating_files": [],
+     "status": "located"
+    }
+   ],
+   "claims_summary": {
+    "count": 1,
+    "located": 1,
+    "versions": [
+     "as provided"
+    ],
+    "ocr_boundary": false,
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": ""
+   },
+   "facsimiles": [],
+   "legal_status": {
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "Google Patents",
+    "observed_date": "2026-03-01",
+    "source_tier": "third_party_aggregator",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号 US10234567 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   "provenance": {
+    "db": "Google Patents",
+    "queried_at": "2026-03-01",
+    "source_tier": "third_party_aggregator",
+    "restricted": false
+   },
+   "relevance": 0.2467,
+   "score_breakdown": {
+    "number_match": 0.0,
+    "number_match_mode": "",
+    "keyword_match": 0.3333,
+    "ipc_match": 0.5,
+    "metadata_completeness": 0.8,
+    "weights": {
+     "number_match": 0.5,
+     "keyword_match": 0.2,
+     "ipc_match": 0.2,
+     "metadata_completeness": 0.1
+    }
+   },
+   "matched_query_id": "Q3",
+   "query_scores": {
+    "Q1": 0.08,
+    "Q2": 0.08,
+    "Q3": 0.2467,
+    "Q4": 0.08
+   },
+   "keyword_hits": [
+    "solid electrolyte"
+   ],
+   "ipc_hits": [
+    {
+     "want": "H01M10/0562",
+     "record_value": "H01M10/0562"
+    }
+   ],
+   "rank": 6
+  }
+ ],
+ "field_table": [
+  {
+   "record_id": "P1",
+   "publication_number_raw": "US 10,123,456 B2",
+   "publication_number_canonical": "US10123456B2",
+   "publication_number_kind": "grant",
+   "publication_kind_code": "B2",
+   "application_number_canonical": "US15234567",
+   "application_number_kind": "application",
+   "priority_number_canonical": "US62345678",
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-11-09",
+   "assignee": "SolidEnergy Labs Inc.",
+   "ipc": [
+    "H01M10/0562",
+    "H01M4/62"
+   ],
+   "family_id": "F-7f2cf029",
+   "source_db": "USPTO",
+   "queried_at": "2026-03-01",
+   "source_tier": "official_office_pdf",
+   "ocr": true,
+   "facsimile_files": [
+    {
+     "material_id": "M2",
+     "file": "materials/US10123456B2.pdf",
+     "linkage": "declared"
+    }
+   ],
+   "wo_ocr_merged": false,
+   "number_ambiguous": false,
+   "alternatives": []
+  },
+  {
+   "record_id": "P2",
+   "publication_number_raw": "US 2021/0123456 A1",
+   "publication_number_canonical": "US20210123456A1",
+   "publication_number_kind": "application_publication",
+   "publication_kind_code": "A1",
+   "application_number_canonical": "US15234567",
+   "application_number_kind": "application",
+   "priority_number_canonical": "US62345678",
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-04-29",
+   "assignee": "SolidEnergy Labs Inc.",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "family_id": "F-7f2cf029",
+   "source_db": "USPTO",
+   "queried_at": "2026-03-01",
+   "source_tier": "official_registry",
+   "ocr": false,
+   "facsimile_files": [],
+   "wo_ocr_merged": false,
+   "number_ambiguous": false,
+   "alternatives": []
+  },
+  {
+   "record_id": "P3",
+   "publication_number_raw": "WO 2022/123456 A1",
+   "publication_number_canonical": "WO2022123456A1",
+   "publication_number_kind": "application_publication",
+   "publication_kind_code": "A1",
+   "application_number_canonical": "JP2021555123",
+   "application_number_kind": "application_publication",
+   "priority_number_canonical": "JP2020204355",
+   "priority_date": "2020-12-09",
+   "filing_date": "2021-12-08",
+   "publication_date": "2022-06-16",
+   "assignee": "Tohoku Battery Materials KK",
+   "ipc": [
+    "H01M10/0562",
+    "H01M10/058"
+   ],
+   "family_id": "F-30e45f02",
+   "source_db": "WIPO",
+   "queried_at": "2026-03-01",
+   "source_tier": "official_office_pdf",
+   "ocr": true,
+   "facsimile_files": [
+    {
+     "material_id": "M3",
+     "file": "materials/WO2022123456A1.ocr.txt",
+     "linkage": "declared"
+    }
+   ],
+   "wo_ocr_merged": false,
+   "number_ambiguous": false,
+   "alternatives": []
+  },
+  {
+   "record_id": "P4",
+   "publication_number_raw": "",
+   "publication_number_canonical": "",
+   "publication_number_kind": "unknown",
+   "publication_kind_code": "",
+   "application_number_canonical": "",
+   "application_number_kind": "unknown",
+   "priority_number_canonical": "",
+   "priority_date": "",
+   "filing_date": "",
+   "publication_date": "2023-03-15",
+   "assignee": "",
+   "ipc": [],
+   "family_id": "F-8e5c07ee",
+   "source_db": "Crossref",
+   "queried_at": "2026-03-01",
+   "source_tier": "publisher",
+   "ocr": false,
+   "facsimile_files": [
+    {
+     "material_id": "M1",
+     "file": "materials/garnet_comparison_review.txt",
+     "linkage": "declared"
+    }
+   ],
+   "wo_ocr_merged": false,
+   "number_ambiguous": false,
+   "alternatives": []
+  },
+  {
+   "record_id": "P5",
+   "publication_number_raw": "US 11,456,789 B2",
+   "publication_number_canonical": "US11456789B2",
+   "publication_number_kind": "grant",
+   "publication_kind_code": "B2",
+   "application_number_canonical": "US16987654",
+   "application_number_kind": "application",
+   "priority_number_canonical": "US62888111",
+   "priority_date": "2018-11-20",
+   "filing_date": "2019-11-19",
+   "publication_date": "2023-05-30",
+   "assignee": "Helix RNA Therapeutics",
+   "ipc": [
+    "A61K9/127",
+    "A61K48/00"
+   ],
+   "family_id": "F-c10f5a2e",
+   "source_db": "PatSnap",
+   "queried_at": "2026-03-01",
+   "source_tier": "third_party_aggregator",
+   "ocr": false,
+   "facsimile_files": [],
+   "wo_ocr_merged": false,
+   "number_ambiguous": false,
+   "alternatives": []
+  },
+  {
+   "record_id": "P6",
+   "publication_number_raw": "US 10,234,567",
+   "publication_number_canonical": "US10234567",
+   "publication_number_kind": "unknown",
+   "publication_kind_code": "",
+   "application_number_canonical": "US16543210",
+   "application_number_kind": "application",
+   "priority_number_canonical": "",
+   "priority_date": "",
+   "filing_date": "2020-01-14",
+   "publication_date": "2024-01-02",
+   "assignee": "Northern Grid Storage",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "family_id": "F-0699dcd5",
+   "source_db": "Google Patents",
+   "queried_at": "2026-03-01",
+   "source_tier": "third_party_aggregator",
+   "ocr": false,
+   "facsimile_files": [],
+   "wo_ocr_merged": false,
+   "number_ambiguous": true,
+   "alternatives": [
+    {
+     "number_kind": "grant",
+     "reason": "7~8 位号码 + 授权类种类码（如 B2）时按授权公告号解释"
+    },
+    {
+     "number_kind": "application",
+     "reason": "本国申请号也可能是 7~8 位，需回官方登记确认"
+    }
+   ]
+  }
+ ],
+ "legal_status": [
+  {
+   "record_id": "P1",
+   "publication_number": "US10123456B2",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "granted",
+   "observed_source": "FreePatentsOnline",
+   "observed_date": "2023-04-11",
+   "source_tier": "official_office_pdf",
+   "basis": "观测值来自 FreePatentsOnline，来源分级 official_office_pdf，不作为登记依据",
+   "recheck_path": "按公开号 US10123456B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+  },
+  {
+   "record_id": "P2",
+   "publication_number": "US20210123456A1",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "",
+   "observed_source": "USPTO",
+   "observed_date": "2026-03-01",
+   "source_tier": "official_registry",
+   "basis": "材料未提供官方登记状态",
+   "recheck_path": "按公开号 US20210123456A1 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+  },
+  {
+   "record_id": "P5",
+   "publication_number": "US11456789B2",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "granted",
+   "observed_source": "PatSnap",
+   "observed_date": "2024-06-01",
+   "source_tier": "third_party_aggregator",
+   "basis": "观测值来自 PatSnap，来源分级 third_party_aggregator，不作为登记依据",
+   "recheck_path": "按公开号 US11456789B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+  },
+  {
+   "record_id": "P3",
+   "publication_number": "WO2022123456A1",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "pending",
+   "observed_source": "Lens.org",
+   "observed_date": "2024-02-20",
+   "source_tier": "official_office_pdf",
+   "basis": "观测值来自 Lens.org，来源分级 official_office_pdf，不作为登记依据",
+   "recheck_path": "按公开号 WO2022123456A1 到 WO 官方登记库核对状态与生效日，记录查询日期与登记号"
+  },
+  {
+   "record_id": "P4",
+   "publication_number": "",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "",
+   "observed_source": "Crossref",
+   "observed_date": "2026-03-01",
+   "source_tier": "publisher",
+   "basis": "材料未提供官方登记状态",
+   "recheck_path": "按公开号  到  官方登记库核对状态与生效日，记录查询日期与登记号"
+  },
+  {
+   "record_id": "P6",
+   "publication_number": "US10234567",
+   "value": "unverified",
+   "verified": false,
+   "observed_value": "",
+   "observed_source": "Google Patents",
+   "observed_date": "2026-03-01",
+   "source_tier": "third_party_aggregator",
+   "basis": "材料未提供官方登记状态",
+   "recheck_path": "按公开号 US10234567 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+  }
+ ],
+ "evidence_map": {
+  "search_expressions": [
+   {
+    "query_id": "Q1",
+    "type": "number",
+    "value": "US 10,123,456 B2",
+    "expression": "PN=(US 10,123,456 B2)",
+    "topics": []
+   },
+   {
+    "query_id": "Q2",
+    "type": "number",
+    "value": "US 15/234,567",
+    "expression": "PN=(US 15/234,567)",
+    "topics": []
+   },
+   {
+    "query_id": "Q3",
+    "type": "topic",
+    "topics": [
+     "solid_state_battery"
+    ],
+    "keywords": [
+     "solid electrolyte",
+     "solid-state battery",
+     "solid state electrolyte",
+     "lithium dendrite",
+     "garnet electrolyte",
+     "sulfide electrolyte",
+     "oxide electrolyte",
+     "固态电解质",
+     "固态电池",
+     "锂枝晶"
+    ],
+    "ipc": [
+     "H01M10/0562",
+     "H01M10/058",
+     "H01M4/62",
+     "H01M10/052"
+    ],
+    "assignee": "",
+    "expression": "(IPC=(H01M10/0562 OR H01M10/058 OR H01M4/62) OR CPC=(H01M10/0562 OR H01M10/058 OR H01M4/62)) AND (TI=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite) OR AB=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite) OR CLM=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite))"
+   },
+   {
+    "query_id": "Q4",
+    "type": "topic",
+    "topics": [
+     "mrna_delivery"
+    ],
+    "keywords": [
+     "lipid nanoparticle",
+     "lnp",
+     "ionizable lipid",
+     "mrna delivery",
+     "脂质纳米颗粒",
+     "可电离脂质"
+    ],
+    "ipc": [
+     "A61K9/127",
+     "A61K48/00",
+     "C12N15/88"
+    ],
+    "assignee": "",
+    "expression": "(IPC=(A61K9/127 OR A61K48/00 OR C12N15/88) OR CPC=(A61K9/127 OR A61K48/00 OR C12N15/88)) AND (TI=(lipid nanoparticle OR lnp OR ionizable lipid OR mrna delivery) OR AB=(lipid nanoparticle OR lnp OR ionizable lipid OR mrna delivery) OR CLM=(lipid nanoparticle OR lnp OR ionizable lipid OR mrna delivery))"
+   }
+  ],
+  "number_normalization": [
+   {
+    "record_id": "P1",
+    "publication": {
+     "raw": "US 10,123,456 B2",
+     "country": "US",
+     "digits": "10123456",
+     "kind_code": "B2",
+     "number_kind": "grant",
+     "canonical": "US10123456B2",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "application": {
+     "raw": "US 15/234,567",
+     "country": "US",
+     "digits": "15234567",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US15234567",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "US 62/345,678",
+     "country": "US",
+     "digits": "62345678",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US62345678",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   },
+   {
+    "record_id": "P2",
+    "publication": {
+     "raw": "US 2021/0123456 A1",
+     "country": "US",
+     "digits": "20210123456",
+     "kind_code": "A1",
+     "number_kind": "application_publication",
+     "canonical": "US20210123456A1",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "application": {
+     "raw": "US 15/234,567",
+     "country": "US",
+     "digits": "15234567",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US15234567",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "US 62/345,678",
+     "country": "US",
+     "digits": "62345678",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US62345678",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   },
+   {
+    "record_id": "P3",
+    "publication": {
+     "raw": "WO 2022/123456 A1",
+     "country": "WO",
+     "digits": "2022123456",
+     "kind_code": "A1",
+     "number_kind": "application_publication",
+     "canonical": "WO2022123456A1",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": "2022/123456"
+    },
+    "application": {
+     "raw": "JP 2021-555123",
+     "country": "JP",
+     "digits": "2021555123",
+     "kind_code": "",
+     "number_kind": "application_publication",
+     "canonical": "JP2021555123",
+     "confidence": "medium",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "JP 2020-204355",
+     "country": "JP",
+     "digits": "2020204355",
+     "kind_code": "",
+     "number_kind": "application_publication",
+     "canonical": "JP2020204355",
+     "confidence": "medium",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   },
+   {
+    "record_id": "P4",
+    "publication": {
+     "raw": "",
+     "country": "",
+     "digits": "",
+     "kind_code": "",
+     "number_kind": "unknown",
+     "canonical": "",
+     "confidence": "low",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "application": {
+     "raw": "",
+     "country": "",
+     "digits": "",
+     "kind_code": "",
+     "number_kind": "unknown",
+     "canonical": "",
+     "confidence": "low",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "",
+     "country": "",
+     "digits": "",
+     "kind_code": "",
+     "number_kind": "unknown",
+     "canonical": "",
+     "confidence": "low",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   },
+   {
+    "record_id": "P5",
+    "publication": {
+     "raw": "US 11,456,789 B2",
+     "country": "US",
+     "digits": "11456789",
+     "kind_code": "B2",
+     "number_kind": "grant",
+     "canonical": "US11456789B2",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "application": {
+     "raw": "US 16/987,654",
+     "country": "US",
+     "digits": "16987654",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US16987654",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "US 62/888,111",
+     "country": "US",
+     "digits": "62888111",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US62888111",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   },
+   {
+    "record_id": "P6",
+    "publication": {
+     "raw": "US 10,234,567",
+     "country": "US",
+     "digits": "10234567",
+     "kind_code": "",
+     "number_kind": "unknown",
+     "canonical": "US10234567",
+     "confidence": "low",
+     "alternatives": [
+      {
+       "number_kind": "grant",
+       "reason": "7~8 位号码 + 授权类种类码（如 B2）时按授权公告号解释"
+      },
+      {
+       "number_kind": "application",
+       "reason": "本国申请号也可能是 7~8 位，需回官方登记确认"
+      }
+     ],
+     "has_slash": false,
+     "ambiguous": true,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "application": {
+     "raw": "US 16/543,210",
+     "country": "US",
+     "digits": "16543210",
+     "kind_code": "",
+     "number_kind": "application",
+     "canonical": "US16543210",
+     "confidence": "high",
+     "alternatives": [],
+     "has_slash": true,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "priority": {
+     "raw": "",
+     "country": "",
+     "digits": "",
+     "kind_code": "",
+     "number_kind": "unknown",
+     "canonical": "",
+     "confidence": "low",
+     "alternatives": [],
+     "has_slash": false,
+     "ambiguous": false,
+     "wo_merged": false,
+     "wo_split": ""
+    },
+    "rule": "rules/field_dictionary.json.number_kinds + rules/facsimile.json.wo_normalization + 代码中的号码解析；ambiguous/合并 WO 时给拆解候选"
+   }
+  ],
+  "facsimiles": [
+   {
+    "material_id": "M1",
+    "file": "materials/garnet_comparison_review.txt",
+    "kind": "literature",
+    "linked_record_ids": [
+     "P4"
+    ],
+    "linkage": [
+     {
+      "record_id": "P4",
+      "how": "declared"
+     },
+     {
+      "record_id": "P4",
+      "how": "declared"
+     }
+    ],
+    "ocr_boundary": false,
+    "sha256": "58a3195b6884cc4a54cc570920013dc8b4e729e0917abe0c5514183a3a06ed4f",
+    "extraction_method": "plain_text",
+    "extraction_note": "",
+    "char_count": 703,
+    "page_count": 1,
+    "text_available": true
+   },
+   {
+    "material_id": "M2",
+    "file": "materials/US10123456B2.pdf",
+    "kind": "facsimile",
+    "linked_record_ids": [
+     "P1"
+    ],
+    "linkage": [
+     {
+      "record_id": "P1",
+      "how": "declared"
+     }
+    ],
+    "ocr_boundary": false,
+    "sha256": "a09b7e525abbc5e60bb6384d304cb996b0bc13f56c39e95f9b4b52cf507a8e29",
+    "extraction_method": "pdf_stdlib_text",
+    "extraction_note": "pdf_min 流扫描提取（zlib + BT/ET/Tj），非通用 PDF 解析器",
+    "char_count": 491,
+    "page_count": 1,
+    "text_available": true
+   },
+   {
+    "material_id": "M3",
+    "file": "materials/WO2022123456A1.ocr.txt",
+    "kind": "facsimile",
+    "linked_record_ids": [
+     "P3"
+    ],
+    "linkage": [
+     {
+      "record_id": "P3",
+      "how": "declared"
+     }
+    ],
+    "ocr_boundary": true,
+    "sha256": "0d5b19eb1696e01b64b1e4d60097f7e54d91aa81192e3dc29f13ffa11dd64dca",
+    "extraction_method": "ocr_sidecar",
+    "extraction_note": "",
+    "char_count": 430,
+    "page_count": 1,
+    "text_available": true
+   }
+  ],
+  "literature_hits": [
+   {
+    "query_id": "Q3",
+    "query_type": "topic",
+    "expression": "(IPC=(H01M10/0562 OR H01M10/058 OR H01M4/62) OR CPC=(H01M10/0562 OR H01M10/058 OR H01M4/62)) AND (TI=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite) OR AB=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite) OR CLM=(solid electrolyte OR solid-state battery OR solid state electrolyte OR lithium dendrite))",
+    "materials": [
+     {
+      "material_id": "M1",
+      "file": "materials/garnet_comparison_review.txt",
+      "kind": "literature",
+      "sha256": "58a3195b6884cc4a54cc570920013dc8b4e729e0917abe0c5514183a3a06ed4f",
+      "extraction_method": "plain_text",
+      "ocr_boundary": false,
+      "hits": [
+       {
+        "term": "solid electrolyte",
+        "count": 4,
+        "char_span": [
+         53,
+         213
+        ],
+        "quote": "Solid Electrolytes\n(SYNTHETIC EXAMPLE REVIEW - not a real paper)\n\nAbstract: We compare interfacial resistance of garnet-type solid electrolytes across\nreporting"
+       },
+       {
+        "term": "lithium dendrite",
+        "count": 2,
+        "char_span": [
+         233,
+         393
+        ],
+        "quote": "lithium dendrite suppression mechanisms in solid-state\nbatteries. A solid electrolyte with sub-50 ohm cm2 interfacial resistance remains rare.\n\nSection 1: Measu"
+       },
+       {
+        "term": "oxide electrolyte",
+        "count": 1,
+        "char_span": [
+         684,
+         703
+        ],
+        "quote": "oxide electrolyte.\n"
+       }
+      ],
+      "hit_terms": 3,
+      "terms_without_hit": [
+       "solid-state battery",
+       "solid state electrolyte",
+       "garnet electrolyte",
+       "sulfide electrolyte",
+       "固态电解质",
+       "固态电池",
+       "锂枝晶"
+      ]
+     },
+     {
+      "material_id": "M2",
+      "file": "materials/US10123456B2.pdf",
+      "kind": "facsimile",
+      "sha256": "a09b7e525abbc5e60bb6384d304cb996b0bc13f56c39e95f9b4b52cf507a8e29",
+      "extraction_method": "pdf_stdlib_text",
+      "ocr_boundary": false,
+      "hits": [
+       {
+        "term": "solid electrolyte",
+        "count": 3,
+        "char_span": [
+         117,
+         277
+        ],
+        "quote": "solid electrolyte with reduced interfacial resistance\nAssignee: SolidEnergy Labs Inc.\n\nClaims:\n1. A solid electrolyte comprising a garnet-type oxide layer havin"
+       },
+       {
+        "term": "lithium dendrite",
+        "count": 1,
+        "char_span": [
+         456,
+         491
+        ],
+        "quote": "lithium dendrite suppression layer."
+       }
+      ],
+      "hit_terms": 2,
+      "terms_without_hit": [
+       "solid-state battery",
+       "solid state electrolyte",
+       "garnet electrolyte",
+       "sulfide electrolyte",
+       "oxide electrolyte",
+       "固态电解质",
+       "固态电池",
+       "锂枝晶"
+      ]
+     },
+     {
+      "material_id": "M3",
+      "file": "materials/WO2022123456A1.ocr.txt",
+      "kind": "facsimile",
+      "sha256": "0d5b19eb1696e01b64b1e4d60097f7e54d91aa81192e3dc29f13ffa11dd64dca",
+      "extraction_method": "ocr_sidecar",
+      "ocr_boundary": true,
+      "hits": [
+       {
+        "term": "solid electrolyte",
+        "count": 2,
+        "char_span": [
+         131,
+         291
+        ],
+        "quote": "solid electrolyte and method of manufacturing the same\n\nClaims:\n1. A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wher"
+       }
+      ],
+      "hit_terms": 1,
+      "terms_without_hit": [
+       "solid-state battery",
+       "solid state electrolyte",
+       "lithium dendrite",
+       "garnet electrolyte",
+       "sulfide electrolyte",
+       "oxide electrolyte",
+       "固态电解质",
+       "固态电池",
+       "锂枝晶"
+      ]
+     }
+    ]
+   }
+  ],
+  "family_basis": [
+   {
+    "family_id": "F-30e45f02",
+    "basis": "priority:JP2020204355",
+    "members": [
+     {
+      "record_id": "P3",
+      "publication_number": "WO2022123456A1",
+      "application_number": "JP2021555123",
+      "priority_number": "JP2020204355",
+      "priority_date": "2020-12-09",
+      "title": "Sulfide solid electrolyte and method of manufacturing the same"
+     }
+    ],
+    "member_count": 1,
+    "scope": "observed_not_exhaustive",
+    "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+   },
+   {
+    "family_id": "F-7f2cf029",
+    "basis": "priority:US62345678",
+    "members": [
+     {
+      "record_id": "P1",
+      "publication_number": "US10123456B2",
+      "application_number": "US15234567",
+      "priority_number": "US62345678",
+      "priority_date": "2019-05-02",
+      "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries"
+     },
+     {
+      "record_id": "P2",
+      "publication_number": "US20210123456A1",
+      "application_number": "US15234567",
+      "priority_number": "US62345678",
+      "priority_date": "2019-05-02",
+      "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries"
+     }
+    ],
+    "member_count": 2,
+    "scope": "observed_not_exhaustive",
+    "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+   },
+   {
+    "family_id": "F-c10f5a2e",
+    "basis": "priority:US62888111",
+    "members": [
+     {
+      "record_id": "P5",
+      "publication_number": "US11456789B2",
+      "application_number": "US16987654",
+      "priority_number": "US62888111",
+      "priority_date": "2018-11-20",
+      "title": "Ionizable lipid nanoparticle for mRNA delivery to lung tissue"
+     }
+    ],
+    "member_count": 1,
+    "scope": "observed_not_exhaustive",
+    "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+   },
+   {
+    "family_id": "F-8e5c07ee",
+    "basis": "single_record",
+    "members": [
+     {
+      "record_id": "P4",
+      "publication_number": "",
+      "application_number": "",
+      "priority_number": "",
+      "priority_date": "",
+      "title": "Interfacial resistance in garnet solid electrolytes: a comparative study"
+     }
+    ],
+    "member_count": 1,
+    "scope": "observed_not_exhaustive",
+    "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+   },
+   {
+    "family_id": "F-0699dcd5",
+    "basis": "single_record",
+    "members": [
+     {
+      "record_id": "P6",
+      "publication_number": "US10234567",
+      "application_number": "US16543210",
+      "priority_number": "",
+      "priority_date": "",
+      "title": "Composite solid electrolyte membrane for solid-state lithium batteries"
+     }
+    ],
+    "member_count": 1,
+    "scope": "observed_not_exhaustive",
+    "scope_note": "只声明本轮观察到的同族关系，不声称穷尽简单族/扩展族，也不声称权项范围等同"
+   }
+  ],
+  "claims_lookup": [
+   {
+    "record_id": "P1",
+    "publication_number": "US10123456B2",
+    "versions": [
+     {
+      "version": "B2 (granted)"
+     }
+    ],
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": "",
+    "claims": [
+     {
+      "claim_no": "1",
+      "version": "B2 (granted)",
+      "text": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       0,
+       156
+      ],
+      "quote": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2.",
+      "ocr_boundary": true,
+      "facsimile_corroborated": true,
+      "corroborating_files": [
+       {
+        "file": "materials/US10123456B2.pdf",
+        "ocr_boundary": false
+       }
+      ],
+      "status": "located"
+     },
+     {
+      "claim_no": "2",
+      "version": "B2 (granted)",
+      "text": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       157,
+       273
+      ],
+      "quote": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer.",
+      "ocr_boundary": true,
+      "facsimile_corroborated": true,
+      "corroborating_files": [
+       {
+        "file": "materials/US10123456B2.pdf",
+        "ocr_boundary": false
+       }
+      ],
+      "status": "located"
+     }
+    ],
+    "ocr_boundary": true
+   },
+   {
+    "record_id": "P2",
+    "publication_number": "US20210123456A1",
+    "versions": [
+     {
+      "version": "A1 (as published)"
+     }
+    ],
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": "",
+    "claims": [
+     {
+      "claim_no": "1",
+      "version": "A1 (as published)",
+      "text": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       0,
+       104
+      ],
+      "quote": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced.",
+      "ocr_boundary": false,
+      "facsimile_corroborated": false,
+      "corroborating_files": [],
+      "status": "located"
+     }
+    ],
+    "ocr_boundary": false
+   },
+   {
+    "record_id": "P5",
+    "publication_number": "US11456789B2",
+    "versions": [
+     {
+      "version": "B2 (granted)"
+     }
+    ],
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": "",
+    "claims": [
+     {
+      "claim_no": "1",
+      "version": "B2 (granted)",
+      "text": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       0,
+       150
+      ],
+      "quote": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue.",
+      "ocr_boundary": false,
+      "facsimile_corroborated": false,
+      "corroborating_files": [],
+      "status": "located"
+     }
+    ],
+    "ocr_boundary": false
+   },
+   {
+    "record_id": "P3",
+    "publication_number": "WO2022123456A1",
+    "versions": [
+     {
+      "version": "A1 (as published, OCR)"
+     }
+    ],
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": "",
+    "claims": [
+     {
+      "claim_no": "1",
+      "version": "A1 (as published, OCR)",
+      "text": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       0,
+       115
+      ],
+      "quote": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]",
+      "ocr_boundary": true,
+      "facsimile_corroborated": true,
+      "corroborating_files": [
+       {
+        "file": "materials/WO2022123456A1.ocr.txt",
+        "ocr_boundary": true
+       }
+      ],
+      "status": "located"
+     },
+     {
+      "claim_no": "2",
+      "version": "A1 (as published, OCR)",
+      "text": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       116,
+       228
+      ],
+      "quote": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]",
+      "ocr_boundary": true,
+      "facsimile_corroborated": true,
+      "corroborating_files": [
+       {
+        "file": "materials/WO2022123456A1.ocr.txt",
+        "ocr_boundary": true
+       }
+      ],
+      "status": "located"
+     }
+    ],
+    "ocr_boundary": true
+   },
+   {
+    "record_id": "P4",
+    "publication_number": "",
+    "versions": [],
+    "source_refs": [],
+    "gap": "",
+    "claims": [],
+    "ocr_boundary": false
+   },
+   {
+    "record_id": "P6",
+    "publication_number": "US10234567",
+    "versions": [
+     {
+      "version": "as provided"
+     }
+    ],
+    "source_refs": [
+     "inline_field"
+    ],
+    "gap": "",
+    "claims": [
+     {
+      "claim_no": "1",
+      "version": "as provided",
+      "text": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+      "located": true,
+      "source_ref": "inline_field",
+      "page": null,
+      "char_span": [
+       0,
+       79
+      ],
+      "quote": "A composite membrane comprising garnet particles dispersed in a polymer matrix.",
+      "ocr_boundary": false,
+      "facsimile_corroborated": false,
+      "corroborating_files": [],
+      "status": "located"
+     }
+    ],
+    "ocr_boundary": false
+   }
+  ],
+  "legal_status_lookup": [
+   {
+    "record_id": "P1",
+    "publication_number": "US10123456B2",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "granted",
+    "observed_source": "FreePatentsOnline",
+    "observed_date": "2023-04-11",
+    "source_tier": "official_office_pdf",
+    "basis": "观测值来自 FreePatentsOnline，来源分级 official_office_pdf，不作为登记依据",
+    "recheck_path": "按公开号 US10123456B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   {
+    "record_id": "P2",
+    "publication_number": "US20210123456A1",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "USPTO",
+    "observed_date": "2026-03-01",
+    "source_tier": "official_registry",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号 US20210123456A1 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   {
+    "record_id": "P5",
+    "publication_number": "US11456789B2",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "granted",
+    "observed_source": "PatSnap",
+    "observed_date": "2024-06-01",
+    "source_tier": "third_party_aggregator",
+    "basis": "观测值来自 PatSnap，来源分级 third_party_aggregator，不作为登记依据",
+    "recheck_path": "按公开号 US11456789B2 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   {
+    "record_id": "P3",
+    "publication_number": "WO2022123456A1",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "pending",
+    "observed_source": "Lens.org",
+    "observed_date": "2024-02-20",
+    "source_tier": "official_office_pdf",
+    "basis": "观测值来自 Lens.org，来源分级 official_office_pdf，不作为登记依据",
+    "recheck_path": "按公开号 WO2022123456A1 到 WO 官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   {
+    "record_id": "P4",
+    "publication_number": "",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "Crossref",
+    "observed_date": "2026-03-01",
+    "source_tier": "publisher",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号  到  官方登记库核对状态与生效日，记录查询日期与登记号"
+   },
+   {
+    "record_id": "P6",
+    "publication_number": "US10234567",
+    "value": "unverified",
+    "verified": false,
+    "observed_value": "",
+    "observed_source": "Google Patents",
+    "observed_date": "2026-03-01",
+    "source_tier": "third_party_aggregator",
+    "basis": "材料未提供官方登记状态",
+    "recheck_path": "按公开号 US10234567 到 US 官方登记库核对状态与生效日，记录查询日期与登记号"
+   }
+  ],
+  "provenance_rules": {
+   "required_fields": [
+    "db",
+    "queried_at",
+    "source_tier"
+   ],
+   "optional_fields": [
+    "version",
+    "license",
+    "access_note"
+   ],
+   "note": "每条字段级结论都要能回指到来源四元组；缺 queried_at 的结论不得写成已核验"
+  },
+  "recompute": "relevance = w_num*number_match + w_kw*keyword_match + w_ipc*ipc_match + w_meta*metadata（权重见 rules/scoring.json）；主题/申请人查询另对材料正文做关键词命中（rules/scoring.json.material_hits），quote 为来源文本精确切片；claims quote/char_span 在其 source_ref 指向的来源文本内逐字节可复核",
+  "excluded": []
+ },
+ "状态说明": {
+  "overall": "partial",
+  "completed": [
+   "材料读取",
+   "传真件文本读取",
+   "号码规范化",
+   "检索式构造",
+   "相关性打分",
+   "材料正文命中",
+   "专利族归并",
+   "权利要求定位",
+   "法律状态处置"
+  ],
+  "unmet": [
+   {
+    "item": "法律状态核验",
+    "reason": "6/6 条记录的状态为 unverified（来源分级不满足 official_registry 或缺查询日期）；本轮未获官方登记库访问，未把二手来源写成确定状态，逐条复核路径见 legal_status[].recheck_path"
+   }
+  ],
+  "notes": [
+   "2 条记录的观测状态来自非官方来源，已按 R_OVERSCOPED_CLAIM 处置，未写成确定状态",
+   "['P1', 'P3'] 为 OCR/影印件来源，权项引用已标 ocr_boundary，残句不作为完整权项范围",
+   "['P6'] 的号码缺种类码或位数不足，已给候选解释并标 ambiguous，需回官方登记确认",
+   "材料正文 3/3 份可读（方法分布 {'ocr_sidecar': 1, 'pdf_stdlib_text': 1, 'plain_text': 1}）；SHA-256/字符数/提取方法见 evidence_map.facsimiles",
+   "主题/申请人查询对材料正文另做关键词命中 3 份（quote 为来源文本精确切片，见 evidence_map.literature_hits），与 records 打分分开呈现",
+   "专利族只声明本轮观察到的关系（observed_not_exhaustive），不声称穷尽简单族/扩展族",
+   "本 skill 不做侵权判定、FTO 结论与专利价值评估，不绕过付费墙、不外显受限库原文"
+  ]
+ },
+ "evidence": {
+  "rules_applied": {
+   "field_dictionary": "rules/field_dictionary.json",
+   "ipc_topics": "rules/ipc_topics.json",
+   "scoring": "rules/scoring.json",
+   "facsimile": "rules/facsimile.json"
+  },
+  "contract": {
+   "candidates": "命中的专利/技术文献、排序与规范化后的号码字段；每条注明来源库、查询日期与来源分级",
+   "field_table": "逐记录的字段表：公开号/申请号/优先权号/优先权日/申请日/公开日/IPC/申请人/族标识，含 ambiguous 标记",
+   "legal_status": "逐记录的法律状态项：取值、是否已核验、依据、来源、查询日期与回官方登记库的复核路径",
+   "evidence_map": "检索式、号码规范化依据、族归并依据、权项定位与去重记录，他人可按记录复核",
+   "状态说明": "法律状态未知、族不穷尽、OCR 边界、受限库与字段缺口；不写成确定结论"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-011-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "candidates",
+     "evidence_map",
+     "field_table",
+     "legal_status",
+     "状态说明"
+    ]
+   },
+   {
+    "step": "materials",
+    "seq": 2,
+    "records": 6,
+    "queries": 4,
+    "task_chars": 0
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-011-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "partial",
+  "completed": [
+   "材料读取",
+   "传真件文本读取",
+   "号码规范化",
+   "检索式构造",
+   "相关性打分",
+   "材料正文命中",
+   "专利族归并",
+   "权利要求定位",
+   "法律状态处置"
+  ],
+  "unmet": [
+   {
+    "item": "法律状态核验",
+    "reason": "6/6 条记录的状态为 unverified（来源分级不满足 official_registry 或缺查询日期）；本轮未获官方登记库访问，未把二手来源写成确定状态，逐条复核路径见 legal_status[].recheck_path"
+   }
+  ],
+  "notes": [
+   "2 条记录的观测状态来自非官方来源，已按 R_OVERSCOPED_CLAIM 处置，未写成确定状态",
+   "['P1', 'P3'] 为 OCR/影印件来源，权项引用已标 ocr_boundary，残句不作为完整权项范围",
+   "['P6'] 的号码缺种类码或位数不足，已给候选解释并标 ambiguous，需回官方登记确认",
+   "材料正文 3/3 份可读（方法分布 {'ocr_sidecar': 1, 'pdf_stdlib_text': 1, 'plain_text': 1}）；SHA-256/字符数/提取方法见 evidence_map.facsimiles",
+   "主题/申请人查询对材料正文另做关键词命中 3 份（quote 为来源文本精确切片，见 evidence_map.literature_hits），与 records 打分分开呈现",
+   "专利族只声明本轮观察到的关系（observed_not_exhaustive），不声称穷尽简单族/扩展族",
+   "本 skill 不做侵权判定、FTO 结论与专利价值评估，不绕过付费墙、不外显受限库原文"
+  ]
+ },
+ "uncertainty": [
+  {
+   "item": "字段准确性",
+   "reason": "号码、日期、权项均按记录原值规范化，未联网回官方库核对"
+  },
+  {
+   "item": "族完整性",
+   "reason": "族成员仅限本轮候选记录，未引入库外成员"
+  },
+  {
+   "item": "法律状态",
+   "reason": "题面给定当前官方状态未知；所有状态值均为 unverified 并附复核路径"
+  }
+ ]
+}

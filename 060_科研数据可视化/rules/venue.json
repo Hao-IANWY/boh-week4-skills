@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "note": "版式由 case/figure 请求覆盖；所有图默认同时导出 PDF、PNG、SVG。",
+  "venues": {
+    "default_single_column": {
+      "name": "通用单栏",
+      "width_mm": 89,
+      "height_mm": 62,
+      "max_height_mm": 240,
+      "min_font_pt": 6,
+      "min_line_width_pt": 0.5,
+      "raster_dpi": 600
+    },
+    "double_column": {
+      "name": "通用双栏",
+      "width_mm": 183,
+      "height_mm": 110,
+      "max_height_mm": 240,
+      "min_font_pt": 6,
+      "min_line_width_pt": 0.5,
+      "raster_dpi": 600
+    }
+  },
+  "export": {
+    "formats": ["pdf", "png", "svg"],
+    "pdf_device": "cairo_pdf",
+    "png_default_dpi": 600,
+    "png_min_dpi": 300,
+    "svg_device": "svglite",
+    "svg_text": "editable",
+    "font_default": "Arial",
+    "cjk_exception": "仅为输入指定的中文标签选择真实 CJK 字体；不得静默替换文字或接受方块字形"
+  },
+  "qa": {
+    "clip_margin_in": 0.02,
+    "min_margin_in": 0.1,
+    "margin_policy": "空白图或内容贴边/裁切（<0.02in）判失败；留白低于 0.1in 仅记录 tight 标志，不单独判图件失败",
+    "size_tolerance_mm": 0.2,
+    "require_pdf_font_embedding": true,
+    "require_end_to_end_reproduction": true,
+    "histogram_bin_rule": "sturges"
+  }
+}

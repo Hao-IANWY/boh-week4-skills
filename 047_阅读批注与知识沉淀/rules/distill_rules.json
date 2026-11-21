@@ -1,0 +1,66 @@
+{
+ "version": "0.2.0",
+ "description": "047 沉淀、关联、锚点与文件库阈值。连边、召回、模糊匹配、OCR 降级、置信度全部参数化；代码内不出现魔法数。",
+ "thresholds": {
+  "link_min_shared_terms": 2,
+  "link_max_per_note": 3,
+  "lookup_min_bm25_score": 0.5,
+  "lookup_top_k": 5,
+  "fuzzy_min_ratio": 0.72,
+  "ocr_confidence_floor": 0.85,
+  "ocr_confidence_penalty": 0.8,
+  "anchor_verified_min_ratio": 0.8
+ },
+ "bm25_params": {"k1": 1.2, "b": 0.75},
+ "anchor_weights": {
+  "verified": 1.0,
+  "ambiguous": 0.7,
+  "fuzzy_matched": 0.5,
+  "page_mismatch": 0.6,
+  "not_found": 0.3,
+  "unverifiable": 0.2
+ },
+ "trivial_terms": [
+  "的", "了", "是", "在", "和", "与", "及", "或", "中", "上", "下", "对", "为", "把", "被", "从", "到",
+  "这", "那", "一个", "我们", "可以", "使用", "进行", "以及", "the", "a", "an", "of", "in", "on", "for",
+  "with", "and", "or", "is", "are", "was", "were", "to", "be", "this", "that", "it", "we", "using"
+ ],
+ "link_rule": "仅在两条笔记共享 ≥link_min_shared_terms 个非平凡术语（或引用同一段原文的跨版本/重复文件副本）时连边；共享 1 个术语一律抑制，防止仅凭一个共用词把笔记连成一片。",
+ "note_schema": {
+  "aspects": ["question", "method", "conclusion", "reusable", "caveat"],
+  "fallback": "excerpt（原文摘录，维度未定）",
+  "rule": "一条批注可命中多个维度；未命中任何线索词时不臆测维度"
+ },
+ "confidence_formula": "confidence = anchor_status 权重 × 类型系数(未知类型 0.85) × 引文系数(无引文 0.7) × OCR 降级系数(低置信 0.8)；anchor 权重见 anchor_weights：verified 1.0 / ambiguous 0.7 / fuzzy_matched 0.5 / page_mismatch 0.6 / not_found 0.3 / unverifiable 0.2",
+ "library_policy": {
+  "acquisition_chain": "内联正文 → 侧车 .txt/.ocr.txt（可带 .ocr.json 置信度）→ pdf_min 文本层 → DOCX zip+xml 段落 → 纯文本 → 诚实 gap",
+  "alias_rule": "同 SHA-256 不同文件名 = 完全重复/别名文件；canonical 取排序最靠前者，其余标 alias_of；只出合并建议，不改名不删除",
+  "near_duplicate_rule": "同归一化标题（去版本词后 norm_title）但内容哈希不同 → 近重复提示，不自动合并",
+  "version_rule": "版本说明字段（version_notes/admin_notes/versions）优先，其次 metadata.version，最后文件名模式（启发式，须标注 basis）；canonical=版本序最大者（final>v(n)>draft，同前缀数字大者）",
+  "readonly_rule": "输入库全程只读：扫描时与结束时各取一次 SHA-256，一致才记 hashes_unchanged；恢复操作只进 ops_log，绝不改写输入"
+ },
+ "reason_codes": {
+  "R_ANCHOR_NOT_FOUND": "引文逐字与模糊匹配均未命中（OCR 漂移/跨栏拼接/来自其它版本），不硬挂位置",
+  "R_ANCHOR_FUZZY": "逐字匹配失败但模糊匹配达阈值：如实标 fuzzy_matched，不作字符级锚点，需人工确认",
+  "R_ANCHOR_PAGE_MISMATCH": "引文实际所在页与批注记录的页/标签不一致，已给校正页",
+  "R_ANCHOR_AMBIGUOUS": "引文在同一文件出现多次，锚点不唯一，需人工确认",
+  "R_ANCHOR_NO_TEXT_LAYER": "材料无可用文本层（扫描件无侧车/PDF 加密或损坏），锚点无法校正，只沿用批注自带坐标",
+  "R_ANCHOR_NO_MATERIAL": "批注指向的材料不在本 case 材料/文件库内",
+  "R_ASPECT_UNRESOLVED": "未命中任何维度线索词，按原文摘录保留",
+  "R_LINK_SUPPRESSED": "共享术语不足阈值，抑制连边",
+  "R_LINK_CAPPED": "单条笔记连边超过上限，按上限截断",
+  "R_NO_TEXT_LAYER": "材料无文本层，相关批注不可校正",
+  "R_FILE_ENCRYPTED": "检测到 /Encrypt 加密件：不解密、诚实跳过",
+  "R_FILE_CORRUPT": "文件损坏/截断（缺 %PDF 头或内容流解压失败）：诚实跳过",
+  "R_FILE_NO_EXTRACTOR": "扩展名不在提取链内（如图片、专有格式）：诚实跳过",
+  "R_OCR_LOW_CONFIDENCE": "OCR 平均置信度低于阈值或引文落在低置信片段：降级标注并乘置信度系数",
+  "R_ALIAS_GROUP": "同哈希别名/重复文件组：只提示合并候选",
+  "R_NEAR_DUPLICATE": "同归一化标题不同哈希：近重复提示",
+  "R_VERSION_GROUP": "同一文档多版本按管理性说明归组，canonical 已标出",
+  "R_VERSION_STALE": "批注挂在非 canonical 版本上：给出版本口径提示（quote 在新版仍在/已改写分别说明）",
+  "R_TWO_COLUMN_HINT": "双栏页（x 间距聚类，启发式）：附阅读顺序提示，跨栏引文会逐字失败",
+  "R_OPS_ADVISORY": "恢复/整理操作一律只出建议（ops_log），输入只读，前后哈希留证"
+ },
+ "index_entries": ["by_aspect", "by_tag", "by_file（别名归一到规范文件）", "by_page", "by_version_group", "term_index"],
+ "recall_policy": "BM25 召回低于 lookup_min_bm25_score 即判召回不足：给出缺词清单与扩词建议；不做向量近邻兜底以免误召回无法解释；检索回答只摘录笔记库内容并回链原文，不外加结论"
+}

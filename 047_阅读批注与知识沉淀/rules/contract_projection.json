@@ -1,0 +1,17 @@
+{
+ "version": "0.2.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。未被主流程单独生产的契约字段按本表关键词投影到同名产物分区，并显式标注 projection_of；仍无对应则落 status.unmet。",
+ "rules": [
+  {"keywords": ["annotation", "批注", "高亮", "划线", "标注", "抽取"], "projection": "annotations"},
+  {"keywords": ["note", "笔记", "沉淀", "结构化", "知识", "主结果", "result", "产物"], "projection": "notes"},
+  {"keywords": ["link", "关联", "关系", "图谱"], "projection": "links"},
+  {"keywords": ["index", "检索", "入口", "索引", "召回"], "projection": "index"},
+  {"keywords": ["lookup", "查询", "提问"], "projection": "lookups"},
+  {"keywords": ["orphan", "未分类", "未定维度"], "projection": "orphan_annotations"},
+  {"keywords": ["library", "文件库", "资料库", "盘点", "清单", "inventory", "handoff", "交接"], "projection": "library_report"},
+  {"keywords": ["ops", "操作", "恢复", "修复", "日志", "动作", "整理"], "projection": "ops_log"},
+  {"keywords": ["evidence", "证据", "溯源", "映射", "来源"], "projection": "evidence"},
+  {"keywords": ["status", "状态", "完成"], "projection": "status"}
+ ],
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论；文件库/操作规则排在证据之前，避免「操作证据」类键名被吞。"
+}

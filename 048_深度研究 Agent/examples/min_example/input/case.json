@@ -1,0 +1,86 @@
+{
+ "case_id": "EXAMPLE-048-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：围绕「消息传递图神经网络在单步逆合成预测中的 top-1 准确率上限受数据限制到什么程度、与多步路线规划的评测口径有何差别、现有基准证据能否支撑上限判断」做一次完整深度研究：拆子问题→写检索计划→按计划在给定 6 篇材料上分步检索并留痕→组证据表→写带 evidence_id 回链的结论→指出证据缺口与冲突。",
+ "output_contract": {
+  "research_plan": "问题拆解（要素与子问题树、依赖）+ 检索计划（表达式、来源、顺序/并行、停止条件、预算）",
+  "evidence_table": "证据表：evidence_id / 文献标识 / 原文摘录 / 定位 / 支撑的子问题 / 证据强度",
+  "conclusions": "结论：逐条挂 evidence_id、支持强度、冲突并列、边界说明",
+  "research_gaps": "研究空白：落到具体缺哪类证据与对应 plan_id，不写套话",
+  "evidence_map": "拆解依据、每次工具调用的参数与返回、停止判定、证据定位与可复算公式",
+  "状态说明": "完成/部分完成、无证据子问题、冲突证据、问题要素缺失、不确定性"
+ },
+ "research_question": "消息传递图神经网络在单步逆合成预测中的 top-1 准确率上限受数据限制到什么程度，与多步路线规划的评测口径有何差别，现有基准证据能否支撑其已达上限？",
+ "constraints": {
+  "sources": [
+   "local-corpus"
+  ],
+  "max_records": 6
+ },
+ "materials": [
+  {
+   "record_id": "R1",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "We report single-step retrosynthesis top-1 accuracy of 52.3% on USPTO-50k using a message passing graph neural network with reaction centre classification.",
+   "text": "Ablation shows removing the message passing layer drops top-1 accuracy by 3.4 percentage points.",
+   "year": 2021,
+   "venue": "Journal of Chemical Information and Modeling",
+   "doi": "10.1000/example.2021.001",
+   "type": "journal-article",
+   "source": "local-corpus"
+  },
+  {
+   "record_id": "R2",
+   "title": "Template-free retrosynthesis via graph attention",
+   "abstract": "Template-free single-step retrosynthesis reaches 48.1% top-1 accuracy on USPTO-50k; the reaction centre representation is learned end to end.",
+   "year": 2022,
+   "venue": "Nature Machine Intelligence",
+   "doi": "10.1000/example.2022.014",
+   "type": "journal-article",
+   "source": "local-corpus"
+  },
+  {
+   "record_id": "R3",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "abstract": "Under low data conditions (under 500 training reactions) single-step top-1 accuracy drops by 12 percentage points, which limits the achievable accuracy of message passing models.",
+   "year": 2023,
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2023.055",
+   "type": "journal-article",
+   "source": "local-corpus"
+  },
+  {
+   "record_id": "R4",
+   "title": "Multi-step route planning with learned heuristics",
+   "abstract": "Multi-step route planning is evaluated by route success rate rather than top-1 single-step accuracy, so results are not directly comparable across the two settings.",
+   "year": 2024,
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2024.019",
+   "type": "journal-article",
+   "source": "local-corpus"
+  },
+  {
+   "record_id": "R6",
+   "title": "Re-examining single-step retrosynthesis benchmarks",
+   "abstract": "We reproduce the message passing model on USPTO-50k and obtain single-step top-1 accuracy of 49.0%, lower than the originally reported value, which suggests evaluation leakage.",
+   "year": 2023,
+   "venue": "Journal of Cheminformatics",
+   "doi": "10.1000/example.2023.901",
+   "type": "journal-article",
+   "source": "local-corpus"
+  },
+  {
+   "record_id": "R5",
+   "title": "Deep learning for retrosynthesis: a survey",
+   "abstract": "A survey of deep learning approaches for retrosynthesis, covering template-based and template-free methods.",
+   "year": 2017,
+   "venue": "Chemical Reviews",
+   "doi": "10.1000/example.2017.003",
+   "type": "review",
+   "source": "local-corpus"
+  }
+ ],
+ "source": {
+  "title": "Synthetic interface example (not a test case)",
+  "doi": null
+ }
+}

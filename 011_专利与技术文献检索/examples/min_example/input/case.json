@@ -1,0 +1,272 @@
+{
+ "case_id": "EXAMPLE-011-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：给定 6 条合成专利/技术文献记录与 4 条查询（2 条号码型、2 条主题型），要求号码规范化、族关系、权利要求来源定位与法律状态处置都可复核；随案例附 1 份影印件 PDF、1 份 WO OCR 侧车文本与 1 篇对比文献全文（materials/），影印件用于权项佐证与正文命中；当前官方状态未知，任何确定状态断言都不允许出现。全部号码/申请人均为明显合成样例，不代表任何真实专利结论。",
+ "output_contract": {
+  "candidates": "命中的专利/技术文献、排序与规范化后的号码字段；每条注明来源库、查询日期与来源分级",
+  "field_table": "逐记录的字段表：公开号/申请号/优先权号/优先权日/申请日/公开日/IPC/申请人/族标识，含 ambiguous 标记",
+  "legal_status": "逐记录的法律状态项：取值、是否已核验、依据、来源、查询日期与回官方登记库的复核路径",
+  "evidence_map": "检索式、号码规范化依据、族归并依据、权项定位与去重记录，他人可按记录复核",
+  "状态说明": "法律状态未知、族不穷尽、OCR 边界、受限库与字段缺口；不写成确定结论"
+ },
+ "queries": [
+  {
+   "query_id": "Q1",
+   "type": "number",
+   "value": "US 10,123,456 B2"
+  },
+  {
+   "query_id": "Q2",
+   "type": "number",
+   "value": "US 15/234,567"
+  },
+  {
+   "query_id": "Q3",
+   "type": "topic",
+   "topics": [
+    "solid_state_battery"
+   ],
+   "keywords": [
+    "solid electrolyte"
+   ],
+   "ipc": [
+    "H01M10/0562"
+   ]
+  },
+  {
+   "query_id": "Q4",
+   "type": "topic",
+   "topics": [
+    "mrna_delivery"
+   ],
+   "keywords": [
+    "lipid nanoparticle"
+   ],
+   "ipc": [
+    "A61K9/127"
+   ]
+  }
+ ],
+ "records": [
+  {
+   "record_id": "P1",
+   "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries",
+   "assignee": "SolidEnergy Labs Inc.",
+   "inventors": [
+    "H. Tanaka",
+    "R. Mehta"
+   ],
+   "publication_number": "US 10,123,456 B2",
+   "application_number": "US 15/234,567",
+   "priority_number": "US 62/345,678",
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-11-09",
+   "ipc": [
+    "H01M10/0562",
+    "H01M4/62"
+   ],
+   "cpc": [
+    "H01M10/0562",
+    "H01M2300/0068"
+   ],
+   "abstract": "A garnet-type solid electrolyte layer reduces interfacial resistance in lithium metal batteries and suppresses lithium dendrite growth.",
+   "source_db": "USPTO",
+   "source_tier": "official_office_pdf",
+   "queried_at": "2026-03-01",
+   "ocr": true,
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer having a thickness of 20 to 60 micrometres, wherein the interfacial resistance is below 50 ohm cm2."
+    },
+    {
+     "claim_no": "2",
+     "version": "B2 (granted)",
+     "text": "The solid electrolyte of claim 1, further comprising a lithium metal anode and a lithium dendrite suppression layer."
+    }
+   ],
+   "legal_status_observed": {
+    "value": "granted",
+    "source": "FreePatentsOnline",
+    "date": "2023-04-11"
+   }
+  },
+  {
+   "record_id": "P2",
+   "title": "Garnet-type solid electrolyte with reduced interfacial resistance for lithium metal batteries",
+   "assignee": "SolidEnergy Labs Inc.",
+   "inventors": [
+    "H. Tanaka"
+   ],
+   "publication_number": "US 2021/0123456 A1",
+   "application_number": "US 15/234,567",
+   "priority_number": "US 62/345,678",
+   "priority_date": "2019-05-02",
+   "filing_date": "2020-05-01",
+   "publication_date": "2021-04-29",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "abstract": "Application publication of the garnet-type solid electrolyte for lithium metal batteries.",
+   "source_db": "USPTO",
+   "source_tier": "official_registry",
+   "queried_at": "2026-03-01",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published)",
+     "text": "A solid electrolyte comprising a garnet-type oxide layer, wherein the interfacial resistance is reduced."
+    }
+   ]
+  },
+  {
+   "record_id": "P3",
+   "title": "Sulfide solid electrolyte and method of manufacturing the same",
+   "assignee": "Tohoku Battery Materials KK",
+   "inventors": [
+    "S. Ito"
+   ],
+   "publication_number": "WO 2022/123456 A1",
+   "application_number": "JP 2021-555123",
+   "priority_number": "JP 2020-204355",
+   "priority_date": "2020-12-09",
+   "filing_date": "2021-12-08",
+   "publication_date": "2022-06-16",
+   "ipc": [
+    "H01M10/0562",
+    "H01M10/058"
+   ],
+   "abstract": "A sulfide solid electrolyte for all-solid-state batteries, manufactured by melt quenching, suppressing lithium dendrite formation.",
+   "source_db": "WIPO",
+   "source_tier": "official_office_pdf",
+   "queried_at": "2026-03-01",
+   "ocr": true,
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "A1 (as published, OCR)",
+     "text": "A sulfide solid electrolyte comprising Li2S and P2S5 in a molar ratio of 70:30 to 80:20, wherein ... [OCR boundary]"
+    },
+    {
+     "claim_no": "2",
+     "version": "A1 (as published, OCR)",
+     "text": "The electrolyte of claim 1, further comprising a binder selected from the group consisting of ... [OCR boundary]"
+    }
+   ],
+   "legal_status_observed": {
+    "value": "pending",
+    "source": "Lens.org",
+    "date": "2024-02-20"
+   }
+  },
+  {
+   "record_id": "P4",
+   "title": "Interfacial resistance in garnet solid electrolytes: a comparative study",
+   "assignee": "",
+   "inventors": [
+    "M. Novak",
+    "L. Wu"
+   ],
+   "publication_number": "",
+   "application_number": "",
+   "priority_number": "",
+   "priority_date": "",
+   "filing_date": "",
+   "publication_date": "2023-03-15",
+   "ipc": [],
+   "abstract": "We compare interfacial resistance of garnet-type solid electrolytes and discuss lithium dendrite suppression mechanisms in solid-state batteries.",
+   "source_db": "Crossref",
+   "source_tier": "publisher",
+   "queried_at": "2026-03-01",
+   "claims": [],
+   "doc_type": "journal-article",
+   "fulltext_path": "materials/garnet_comparison_review.txt"
+  },
+  {
+   "record_id": "P5",
+   "title": "Ionizable lipid nanoparticle for mRNA delivery to lung tissue",
+   "assignee": "Helix RNA Therapeutics",
+   "inventors": [
+    "A. Duarte"
+   ],
+   "publication_number": "US 11,456,789 B2",
+   "application_number": "US 16/987,654",
+   "priority_number": "US 62/888,111",
+   "priority_date": "2018-11-20",
+   "filing_date": "2019-11-19",
+   "publication_date": "2023-05-30",
+   "ipc": [
+    "A61K9/127",
+    "A61K48/00"
+   ],
+   "abstract": "An ionizable lipid nanoparticle enables mRNA delivery to lung tissue with reduced liver accumulation.",
+   "source_db": "PatSnap",
+   "source_tier": "third_party_aggregator",
+   "queried_at": "2026-03-01",
+   "restricted": true,
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "B2 (granted)",
+     "text": "A lipid nanoparticle comprising an ionizable lipid, a helper lipid, cholesterol and a PEG lipid, wherein the mRNA payload is delivered to lung tissue."
+    }
+   ],
+   "legal_status_observed": {
+    "value": "granted",
+    "source": "PatSnap",
+    "date": "2024-06-01"
+   }
+  },
+  {
+   "record_id": "P6",
+   "title": "Composite solid electrolyte membrane for solid-state lithium batteries",
+   "assignee": "Northern Grid Storage",
+   "inventors": [
+    "K. Berg"
+   ],
+   "publication_number": "US 10,234,567",
+   "application_number": "US 16/543,210",
+   "priority_number": "",
+   "priority_date": "",
+   "filing_date": "2020-01-14",
+   "publication_date": "2024-01-02",
+   "ipc": [
+    "H01M10/0562"
+   ],
+   "abstract": "A composite solid electrolyte membrane containing garnet particles and a polymer matrix, for solid-state lithium batteries with improved dendrite resistance.",
+   "source_db": "Google Patents",
+   "source_tier": "third_party_aggregator",
+   "queried_at": "2026-03-01",
+   "claims": [
+    {
+     "claim_no": "1",
+     "version": "as provided",
+     "text": "A composite membrane comprising garnet particles dispersed in a polymer matrix."
+    }
+   ]
+  }
+ ],
+ "source": {
+  "title": "Synthetic patent interface example (not a test case)",
+  "doi": null
+ },
+ "materials": [
+  {
+   "record_id": "P1",
+   "path": "materials/US10123456B2.pdf",
+   "kind": "facsimile"
+  },
+  {
+   "record_id": "P3",
+   "path": "materials/WO2022123456A1.ocr.txt",
+   "ocr": true,
+   "kind": "facsimile"
+  },
+  {
+   "record_id": "P4",
+   "path": "materials/garnet_comparison_review.txt",
+   "kind": "literature"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "note": "实际分类色板传入 R；easyplot 以 WCAG 对比度、CIE L* 灰度分离和真实冗余通道做上下文筛查。",
+  "palettes": {
+    "okabe_ito": {
+      "name": "Okabe-Ito / NPG high-contrast subset",
+      "colors": ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E64B35", "#7E6148"],
+      "max_series_before_layout_review": 6,
+      "source_note": "前四色来自 Okabe & Ito 2008，后两色来自 NPG 常用色；均通过本图白色背景/黑色轮廓上下文筛查，颜色不是唯一分组通道"
+    },
+    "correlation_diverging": {
+      "name": "Blue-white-red correlation",
+      "colors": ["#4575B4", "#FFFFFF", "#D73027"],
+      "midpoint": 0,
+      "limits": [-1, 1],
+      "colorbar": true
+    }
+  },
+  "readability": {
+    "tool": "scripts/easyplot_palette_audit.py",
+    "min_gray_delta_cie_lstar": 10,
+    "scatter_cues": ["colour", "marker shape"],
+    "line_cues": ["colour", "linetype", "marker"],
+    "bar_cues": ["position", "readable labels", "dark outline"],
+    "note": "色板筛查是审阅证据，不等同于权威可访问性认证；连续热图另查色标范围与 colorbar"
+  },
+  "fonts": {
+    "default_family": "Arial",
+    "cjk_families": ["PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC"],
+    "note": "由 R/systemfonts 实际探测；默认 Arial，输入中文时使用真实 CJK 字体并记录"
+  }
+}

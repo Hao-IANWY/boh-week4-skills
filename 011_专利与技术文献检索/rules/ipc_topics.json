@@ -1,0 +1,50 @@
+{
+ "version": "0.1.0",
+ "description": "技术主题 → IPC/CPC 分类与检索关键词映射。主题检索式必须同时给分类号与关键词，二者命中分开计分，避免只靠关键词把不同技术主题混成一族。",
+ "topics": {
+  "solid_state_battery": {
+   "label_zh": "固态电池与固态电解质",
+   "ipc_prefixes": ["H01M10/0562", "H01M10/058", "H01M4/62", "H01M10/052"],
+   "keywords": [
+    "solid electrolyte", "solid-state battery", "solid state electrolyte", "lithium dendrite",
+    "garnet electrolyte", "sulfide electrolyte", "oxide electrolyte", "固态电解质", "固态电池", "锂枝晶"
+   ],
+   "exclude_keywords": ["liquid electrolyte only", "aqueous flow battery"]
+  },
+  "mrna_delivery": {
+   "label_zh": "mRNA 递送载体",
+   "ipc_prefixes": ["A61K48/00", "A61K9/127", "C12N15/88"],
+   "keywords": ["lipid nanoparticle", "lnp", "ionizable lipid", "mrna delivery", "脂质纳米颗粒", "可电离脂质"],
+   "exclude_keywords": ["viral vector only"]
+  },
+  "gene_editing": {
+   "label_zh": "基因编辑",
+   "ipc_prefixes": ["C12N15/11", "C12N9/22", "C12N15/90"],
+   "keywords": ["crispr", "cas9", "guide rna", "base editing", "prime editing", "基因编辑"],
+   "exclude_keywords": []
+  },
+  "hydrogen_electrolysis": {
+   "label_zh": "电解水制氢",
+   "ipc_prefixes": ["C25B1/04", "C25B11/04", "C25B9/00"],
+   "keywords": ["electrolyzer", "proton exchange membrane", "alkaline water electrolysis", "析氢", "电解水"],
+   "exclude_keywords": []
+  }
+ },
+ "field_tags": {
+  "TI": "标题",
+  "AB": "摘要",
+  "CLM": "权利要求",
+  "PA": "申请人",
+  "PN": "公开号",
+  "AN": "申请号",
+  "PR": "优先权号",
+  "IPC": "国际专利分类号",
+  "CPC": "合作专利分类号",
+  "PD": "公开日"
+ },
+ "query_templates": {
+  "number": "{field}=({value})",
+  "topic": "(IPC=({ipc}) OR CPC=({ipc})) AND (TI=({kw}) OR AB=({kw}) OR CLM=({kw}))",
+  "assignee_topic": "PA=({assignee}) AND (TI=({kw}) OR AB=({kw}))"
+ }
+}

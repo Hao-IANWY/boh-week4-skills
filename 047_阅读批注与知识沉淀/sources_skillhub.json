@@ -1,0 +1,170 @@
+{
+ "seq": 47,
+ "title": "阅读批注与知识沉淀",
+ "queries": [
+  "pdf annotation",
+  "reading notes highlights"
+ ],
+ "skills": [
+  {
+   "name": "devexpress-office-file-api-pdf-new",
+   "slug": "devexpress-agent-skills-devexpress-office-file-api-pdf-new",
+   "author": "DevExpress",
+   "category": "development",
+   "description": "Create, load, modify, secure, and print PDF documents using the new DevExpress.Docs.Pdf API — a modern object-oriented DOM approach for .NET. Use when building .NET applications that need to programmatically generate or edit PDF files using the new DevExpress PDF Document API (CTP). Also use when someone mentions \"Dev…",
+   "description_zh": null,
+   "repo_url": "https://github.com/DevExpress/agent-skills#plugins~dx-office-file-api~skills~devexpress-office-file-api-pdf-new",
+   "github_stars": 36
+  },
+  {
+   "name": "pdf-co",
+   "slug": "openclaw-skills-pdf-co",
+   "author": "openclaw",
+   "category": "development",
+   "description": "PDF.co API integration with managed OAuth. Convert, merge, split, edit PDFs and extract data. Use this skill when users want to convert PDFs to/from other formats, merge or split PDFs, add watermarks or text, extract text/tables, or parse invoices. For other third party apps, use the api-gateway skill (https://clawhub…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~byungkyu~pdf-co",
+   "github_stars": 3682
+  },
+  {
+   "name": "pdf-co",
+   "slug": "openclaw-skills-byungkyu-pdf-co",
+   "author": "byungkyu",
+   "category": null,
+   "description": "PDF.co API integration with managed OAuth. Convert, merge, split, edit PDFs and extract data. Use this skill when users want to convert PDFs to/from other formats, merge or split PDFs, add watermarks or text, extract text/tables, or parse invoices. For other third party apps, use the api-gateway skill (https://clawhub…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills/tree/main/skills/byungkyu/pdf-co",
+   "github_stars": 0
+  },
+  {
+   "name": "Markdown → PDF Report",
+   "slug": "openclaw-skills-0xcjl-md-pdf-report",
+   "author": "0xcjl",
+   "category": "development",
+   "description": "Convert Markdown research reports / fact-checks / scheme proposals into styled PDFs with native CJK (Chinese) font support. Markdown is the single source of truth; PDF is generated FROM the Markdown. Triggers on \"做个 PDF 报告\", \"转成 PDF\", \"调研报告\", \"fact-check 报告\", \"方案 PDF\", \"scheme 报告\", \"给我 PDF\", \"PDF 版本\", or any long-form…",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/md-pdf-report",
+   "github_stars": 0
+  },
+  {
+   "name": "pdfco",
+   "slug": "vm0-ai-vm0-skills-pdfco",
+   "author": "vm0-ai",
+   "category": "development",
+   "description": "PDF processing API for conversion, extraction, merging, splitting and more",
+   "description_zh": null,
+   "repo_url": "https://github.com/vm0-ai/vm0-skills#pdfco",
+   "github_stars": 51
+  },
+  {
+   "name": "project-note-json-to-epub",
+   "slug": "twhsi-skills-project-note-json-to-epub",
+   "author": "twhsi",
+   "category": "development",
+   "description": "Convert structured project-note JSON manuscripts into validated EPUB and optional Kindle-clickable PDF files. Use when the user asks to turn project notes, book-system JSON, FIRE-indexed notes, Luhmann/Zettelkasten numbered chunks, table-of-contents cards, index cards, cross-linked project notes, or manuscript JSON in…",
+   "description_zh": null,
+   "repo_url": "https://github.com/twhsi/skills#skills~project-note-json-to-epub",
+   "github_stars": 254
+  },
+  {
+   "name": "bib-search-citation",
+   "slug": "bahayonghang-academic-writing-skills-bib-search-citation",
+   "author": "bahayonghang",
+   "category": "research",
+   "description": "Search and cite from local BibTeX/BibLaTeX .bib libraries, including Zotero exports. Use to find, filter, preview, export, or generate LaTeX/Typst citation snippets by topic, author, year, venue, DOI, arXiv ID, keywords, abstract, fields, recency, or claim support. Do not use for manuscript writing or polishing.",
+   "description_zh": null,
+   "repo_url": "https://github.com/bahayonghang/academic-writing-skills/tree/main/academic-writing-skills/bib-search-citation",
+   "github_stars": 408
+  },
+  {
+   "name": "amr-submission",
+   "slug": "brycewang-stanford-awesome-journal-skills-amr-submission",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "Use when running the final pre-submission preflight for an Academy of Management Review (AMR) manuscript — ScholarOne portal, AOM format and length, abstract, anonymization for review, references, ethics/originality, and required files. Theory-only journal; there is no data-availability or replication step.",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills#Academy-of-Management-Review-Skills~skills~amr-submission",
+   "github_stars": 792
+  },
+  {
+   "name": "study-strategy-selector",
+   "slug": "garethmanning-education-agent-skills-study-strategy-selector",
+   "author": "GarethManning",
+   "category": "development",
+   "description": "Select evidence-based study strategies matched to material type, learning goal, and student habits. Use when advising students on revision techniques, homework, or independent study approaches.",
+   "description_zh": null,
+   "repo_url": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/self-regulated-learning/study-strategy-selector",
+   "github_stars": 582
+  },
+  {
+   "name": "vault-normalizer",
+   "slug": "poco-ai-agentero-vault-normalizer",
+   "author": "poco-ai",
+   "category": "development",
+   "description": "Normalize an existing research directory into an Agentero vault layout. Use when reorganizing files, papers, notes, PDFs, TeX sources, marks, assets, or legacy Zotero/Obsidian-style folders to match Agentero directory and catalog conventions.",
+   "description_zh": null,
+   "repo_url": "https://github.com/poco-ai/Agentero#templates~vault~.agents~skills~vault-normalizer",
+   "github_stars": 114
+  },
+  {
+   "name": "litbase",
+   "slug": "aipoch-medical-research-skills-litbase",
+   "author": "aipoch",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#awesome-med-research-skills~Evidence Insight~litbase",
+   "github_stars": 1394
+  },
+  {
+   "name": "exocortex",
+   "slug": "namra98-exocortex",
+   "author": "namra98",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/namra98/exocortex",
+   "github_stars": 1
+  },
+  {
+   "name": "radiology-reader",
+   "slug": "huang-sir1-radiology-skills-radiology-reader",
+   "author": "huang-sir1",
+   "category": "documentation",
+   "description": "Build full-paper Chinese-English side-by-side (中英对照), figure/table-aware, source-grounded Markdown readers for imaging-research papers from PDF, DOI, arXiv, publisher HTML, or pasted text. Use whenever the user asks to translate or read an imaging paper, make 中英文对照/原文对照/全文翻译解读, extract figures/tables (including imagin…",
+   "description_zh": null,
+   "repo_url": "https://github.com/huang-sir1/radiology-skills#radiology-skills~modules~radiology-reader",
+   "github_stars": 1368
+  },
+  {
+   "name": "md2video-audio",
+   "slug": "70v-yoyo-md2video-audio",
+   "author": "70v-Yoyo",
+   "category": "documentation",
+   "description": "将指定Markdown文件一键转换为带真人配音和讲解画面的 MP4 视频。当用户要求把 markdown 转成视频、制作口播视频或音视频合成时自动触发。",
+   "description_zh": null,
+   "repo_url": "https://github.com/70v-Yoyo/md2video-audio-skill",
+   "github_stars": 2
+  },
+  {
+   "name": "immersive-reading",
+   "slug": "ryannli-immersive-reading-immersive-reading",
+   "author": "ryannli",
+   "category": "productivity",
+   "description": "Turn long-form source material into bespoke interactive learning spaces. Use when the user wants to convert a blog post, essay, transcript, note, paper, or other long content into a polished static reader with chapters, sections, quotes, search, highlights, notes, optional bilingual support, light/dark mode, and sourc…",
+   "description_zh": null,
+   "repo_url": "https://github.com/ryannli/immersive-reading#skills~immersive-reading",
+   "github_stars": 45
+  },
+  {
+   "name": "openseo-release-notes",
+   "slug": "every-app-open-seo-openseo-release-notes",
+   "author": "every-app",
+   "category": "development",
+   "description": "Cut an OpenSEO release — bump the version, draft user-facing release notes from commits since the last tag, run a review + subagent-verification pass, and open a \"release: vX.X.X\" PR. Use when the user asks to prepare a release, bump the version, or write release notes.",
+   "description_zh": null,
+   "repo_url": "https://github.com/every-app/open-seo/tree/main/.claude/skills/openseo-release-notes",
+   "github_stars": 10851
+  }
+ ]
+}

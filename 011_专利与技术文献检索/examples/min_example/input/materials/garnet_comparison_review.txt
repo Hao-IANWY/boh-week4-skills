@@ -1,0 +1,12 @@
+Comparative Review: Interfacial Resistance in Garnet Solid Electrolytes
+(SYNTHETIC EXAMPLE REVIEW - not a real paper)
+
+Abstract: We compare interfacial resistance of garnet-type solid electrolytes across
+reporting groups and discuss lithium dendrite suppression mechanisms in solid-state
+batteries. A solid electrolyte with sub-50 ohm cm2 interfacial resistance remains rare.
+
+Section 1: Measurement conventions. Interfacial resistance values for the garnet-type
+solid electrolyte vary with stack pressure and polishing; we normalize before comparison.
+
+Section 2: Dendrite suppression. Lithium dendrite growth in solid-state batteries
+correlates with grain boundary chemistry of the oxide electrolyte.

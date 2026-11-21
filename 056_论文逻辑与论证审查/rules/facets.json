@@ -1,0 +1,45 @@
+{
+ "version": "1.0.0",
+ "description": "056 审查维度（facets）动态绑定：任务指令点名哪些维度就执行哪些，其余显式标 unchecked，不冒充全查。task_cues 命中（子串，归一化后）即视为点名；case 的 review_facets 字段优先级最高；一个都不命中时默认全量审查并如实记录。",
+ "all_markers": ["全面审查", "全部维度", "所有维度", "完整审查", "全查", "六类检查", "full review", "comprehensive", "all facets", "all dimensions"],
+ "facets": {
+  "fact_check": {
+   "label": "事实核验",
+   "task_cues": ["事实核验", "事实", "数值一致", "数据一致", "内部一致", "事实错误", "fact", "factual", "numeric consistency"],
+   "detectors": ["T7_NUM_CROSS_SECTION", "T11_FIGTAB_MISSING", "T12_SIGN_CONFLICT"],
+   "boundary": "只核验稿件内部可复算的事实（数值、图表编号、系数方向）；外部事实需检索，不在本 skill 能力内，缺口进 uncertainty"
+  },
+  "citation_support": {
+   "label": "引用支持",
+   "task_cues": ["引用支持", "引用", "文献支持", "citation", "reference support"],
+   "detectors": ["T8_CONTRADICTORY_EDGE"],
+   "boundary": "离线无法读取被引文献原文：仅检查文内相反证据是否被结论处理；『所引文献是否支持该句』需外部证据，标为待复核"
+  },
+  "method_design": {
+   "label": "方法设计",
+   "task_cues": ["方法设计", "方法", "设计", "研究设计", "method", "design"],
+   "detectors": ["T9_METHOD_ANSWER_GAP"]
+  },
+  "stats_reporting": {
+   "label": "统计报告",
+   "task_cues": ["统计报告", "统计", "统计规范", "报告规范", "statistic", "p 值", "p值", "置信区间", "effect size"],
+   "detectors": ["T10_STATS_REPORTING", "T12_SIGN_CONFLICT", "T14_METHODS_RESULTS_TERMS"]
+  },
+  "argument_chain": {
+   "label": "论证链",
+   "task_cues": ["论证链", "论证", "逻辑", "推理", "论证结构", "argument", "reasoning", "logic", "因果", "强度"],
+   "detectors": ["T1_UNSUPPORTED_CLAIM", "T2_ASSUMPTION_ONLY", "T3_CIRCULAR", "T5_STRENGTH_MISMATCH", "T6_CAUSAL_IN_CORRELATIONAL"]
+  },
+  "section_coherence": {
+   "label": "章节衔接",
+   "task_cues": ["章节衔接", "衔接", "一致性", "跨章节", "承诺", "对应", "coherence", "consistency", "cross-section", "promise"],
+   "detectors": ["T4_PROMISE_UNDELIVERED", "T11_FIGTAB_MISSING", "T13_STRENGTH_DIRECTION_MISMATCH", "T14_METHODS_RESULTS_TERMS"]
+  },
+  "academic_norm": {
+   "label": "学术规范",
+   "task_cues": ["学术规范", "规范", "norm", "reporting standard"],
+   "detectors": ["T10_STATS_REPORTING", "T11_FIGTAB_MISSING"]
+  }
+ },
+ "note": "detector 可能属于多个 facet：任一所属 facet 被点名即执行一次，findings 里记录全部归属；未点名维度不执行也不给结论，只在 facets_status 标 unchecked"
+}

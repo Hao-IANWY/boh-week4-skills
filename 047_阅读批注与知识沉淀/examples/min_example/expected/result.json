@@ -1,0 +1,4573 @@
+{
+ "case_id": "EXAMPLE-047-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "annotation-knowledge-distiller",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-20T11:10:13+0800",
+ "annotations": [
+  {
+   "annotation_id": "A1",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 3,
+   "page_label": "3",
+   "type_raw": "highlight",
+   "type_canonical": "highlight",
+   "type_label": "高亮",
+   "color": "yellow",
+   "color_label": "黄色",
+   "color_meaning": "关键结论/必读",
+   "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "comment": "关键结论：与表 2 的主结果一致",
+   "tags": [
+    "逆合成",
+    "主结果"
+   ],
+   "position": {
+    "rects": [
+     [
+      72,
+      320,
+      480,
+      338
+     ]
+    ]
+   },
+   "position_source": "provided_bbox",
+   "anchor": {
+    "status": "verified",
+    "code": "",
+    "reason": "",
+    "page_match": true,
+    "found_on": [
+     {
+      "page": 3,
+      "page_label": "3",
+      "two_column": false,
+      "char_start": 18,
+      "char_end": 57,
+      "line_from": 3,
+      "line_to": 3
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "corrected_char_range": [
+     18,
+     57
+    ],
+    "corrected_lines": [
+     3,
+     3
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M1"
+   }
+  },
+  {
+   "annotation_id": "A2",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 3,
+   "page_label": "3",
+   "type_raw": "underline",
+   "type_canonical": "underline",
+   "type_label": "划线",
+   "color": "green",
+   "color_label": "绿色",
+   "color_meaning": "方法或方案可复用",
+   "quote": "我们采用消息传递编码器并在反应中心做分类",
+   "comment": "方法可复用：编码器结构可以直接迁移到产率预测",
+   "tags": [
+    "方法",
+    "图神经网络"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "verified",
+    "code": "",
+    "reason": "",
+    "page_match": true,
+    "found_on": [
+     {
+      "page": 3,
+      "page_label": "3",
+      "two_column": false,
+      "char_start": 58,
+      "char_end": 78,
+      "line_from": 4,
+      "line_to": 4
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "corrected_char_range": [
+     58,
+     78
+    ],
+    "corrected_lines": [
+     4,
+     4
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M1"
+   }
+  },
+  {
+   "annotation_id": "A3",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 4,
+   "page_label": "4",
+   "type_raw": "margin_note",
+   "type_canonical": "margin_note",
+   "type_label": "页边批注",
+   "color": "red",
+   "color_label": "红色",
+   "color_meaning": "待验证/存疑/与本文结论冲突",
+   "quote": "该结论在低数据条件下未复现",
+   "comment": "与主结果不一致，需要复核样本量口径",
+   "tags": [
+    "低数据",
+    "待复核"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "page_mismatch",
+    "code": "R_ANCHOR_PAGE_MISMATCH",
+    "reason": "引文实际出现在第 [3] 页（物理页），与批注记录的页 4/标签 4 不一致",
+    "page_match": false,
+    "found_on": [
+     {
+      "page": 3,
+      "page_label": "3",
+      "two_column": false,
+      "char_start": 91,
+      "char_end": 104,
+      "line_from": 5,
+      "line_to": 5
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "corrected_char_range": [
+     91,
+     104
+    ],
+    "corrected_lines": [
+     5,
+     5
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M1"
+   }
+  },
+  {
+   "annotation_id": "A4",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 4,
+   "page_label": "4",
+   "type_raw": "highlight",
+   "type_canonical": "highlight",
+   "type_label": "高亮",
+   "color": "purple",
+   "color_label": null,
+   "color_meaning": null,
+   "quote": "低数据条件下准确率下降 12 个百分点",
+   "comment": "待验证：与主结果的关系还没有解释",
+   "tags": [
+    "低数据"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "verified",
+    "code": "",
+    "reason": "",
+    "page_match": true,
+    "found_on": [
+     {
+      "page": 4,
+      "page_label": "4",
+      "two_column": false,
+      "char_start": 12,
+      "char_end": 31,
+      "line_from": 2,
+      "line_to": 2
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 4,
+    "corrected_page_label": "4",
+    "corrected_char_range": [
+     12,
+     31
+    ],
+    "corrected_lines": [
+     2,
+     2
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M1"
+   }
+  },
+  {
+   "annotation_id": "A5",
+   "file_id": "M3",
+   "path": "scans/2021_handwritten_notes.pdf",
+   "page": 1,
+   "page_label": null,
+   "type_raw": "handwritten",
+   "type_canonical": "handwritten",
+   "type_label": "手写标记",
+   "color": "red",
+   "color_label": "红色",
+   "color_meaning": "待验证/存疑/与本文结论冲突",
+   "quote": "此处推导跳步，需要补中间式",
+   "comment": "",
+   "tags": [
+    "推导"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "unverifiable",
+    "code": "R_ANCHOR_NO_TEXT_LAYER",
+    "reason": "材料无可用文本层（扫描件无侧车/PDF 加密或损坏），引文无法逐字定位；坐标只能沿用批注自带值",
+    "page_match": null,
+    "found_on": [],
+    "material_file_id": "M3",
+    "extraction_gap": "R_NO_TEXT_LAYER"
+   }
+  },
+  {
+   "annotation_id": "A6",
+   "file_id": "M2",
+   "path": "clippings/2020_arxiv_preprint.md",
+   "page": 1,
+   "page_label": null,
+   "type_raw": "scribble",
+   "type_canonical": "unknown_type",
+   "type_label": "未知类型",
+   "color": "blue",
+   "color_label": "蓝色",
+   "color_meaning": "背景与定义",
+   "quote": "预印本版本中该方法称为 MPNN",
+   "comment": "需复核版本差异：命名与正式版不同",
+   "tags": [
+    "版本差异"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "verified",
+    "code": "",
+    "reason": "",
+    "page_match": true,
+    "found_on": [
+     {
+      "page": 1,
+      "page_label": "",
+      "two_column": false,
+      "char_start": 67,
+      "char_end": 83,
+      "line_from": 3,
+      "line_to": 3
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 1,
+    "corrected_page_label": "",
+    "corrected_char_range": [
+     67,
+     83
+    ],
+    "corrected_lines": [
+     3,
+     3
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M2"
+   }
+  },
+  {
+   "annotation_id": "A7",
+   "file_id": "M2",
+   "path": "clippings/2020_arxiv_preprint.md",
+   "page": 1,
+   "page_label": null,
+   "type_raw": "highlight",
+   "type_canonical": "highlight",
+   "type_label": "高亮",
+   "color": "yellow",
+   "color_label": "黄色",
+   "color_meaning": "关键结论/必读",
+   "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "comment": "结论与正式版一致，可作交叉印证",
+   "tags": [
+    "逆合成",
+    "主结果"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "verified",
+    "code": "",
+    "reason": "",
+    "page_match": true,
+    "found_on": [
+     {
+      "page": 1,
+      "page_label": "",
+      "two_column": false,
+      "char_start": 27,
+      "char_end": 66,
+      "line_from": 2,
+      "line_to": 2
+     }
+    ],
+    "occurrences": 1,
+    "corrected_page": 1,
+    "corrected_page_label": "",
+    "corrected_char_range": [
+     27,
+     66
+    ],
+    "corrected_lines": [
+     2,
+     2
+    ],
+    "char_span_checked": true,
+    "two_column_hint": false,
+    "material_file_id": "M2"
+   }
+  },
+  {
+   "annotation_id": "A8",
+   "file_id": "M1",
+   "path": "readings/2022_retrosynthesis_review.pdf",
+   "page": 3,
+   "page_label": "3",
+   "type_raw": "highlight",
+   "type_canonical": "highlight",
+   "type_label": "高亮",
+   "color": "orange",
+   "color_label": "橙色",
+   "color_meaning": "待跟进的问题",
+   "quote": "我们提出了一种新的反应中心表示",
+   "comment": "研究问题：这种表示能否推广到新反应类型",
+   "tags": [
+    "推广性"
+   ],
+   "position": null,
+   "position_source": "char_range_fallback",
+   "anchor": {
+    "status": "not_found",
+    "code": "R_ANCHOR_NOT_FOUND",
+    "reason": "引文在材料正文中找不到（模糊匹配最高相似度 0.6667 低于阈值 0.72；可能 OCR 漂移、跨栏拼接或来自其它版本），不硬挂位置",
+    "page_match": false,
+    "found_on": [],
+    "occurrences": 0,
+    "fuzzy": {
+     "similarity": 0.6667,
+     "page": 3
+    },
+    "material_file_id": "M1"
+   }
+  }
+ ],
+ "notes": [
+  {
+   "note_id": "N001",
+   "annotation_ids": [
+    "A1"
+   ],
+   "aspects": [
+    "conclusion"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "conclusion",
+     "label": "结论",
+     "matched_cues": [
+      "结论"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "关键结论：与表 2 的主结果一致",
+   "support_quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "support_comment": "关键结论：与表 2 的主结果一致",
+   "source": {
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "图神经网络逆合成综述正式版",
+    "extraction_method": "inline_case_json",
+    "declared_page": 3,
+    "declared_page_label": "3",
+    "anchor_status": "verified",
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "char_range": [
+     18,
+     57
+    ],
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "type": "高亮",
+   "type_canonical": "highlight",
+   "color": "yellow",
+   "color_meaning": "关键结论/必读",
+   "tags": [
+    "逆合成",
+    "主结果"
+   ],
+   "ocr_degraded": false,
+   "usable": true,
+   "confidence": 1.0
+  },
+  {
+   "note_id": "N002",
+   "annotation_ids": [
+    "A2"
+   ],
+   "aspects": [
+    "method",
+    "reusable"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "method",
+     "label": "方法",
+     "matched_cues": [
+      "方法"
+     ],
+     "cue_source": "comment"
+    },
+    {
+     "aspect": "reusable",
+     "label": "可复用要点",
+     "matched_cues": [
+      "可复用"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "方法可复用：编码器结构可以直接迁移到产率预测",
+   "support_quote": "我们采用消息传递编码器并在反应中心做分类",
+   "support_comment": "方法可复用：编码器结构可以直接迁移到产率预测",
+   "source": {
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "图神经网络逆合成综述正式版",
+    "extraction_method": "inline_case_json",
+    "declared_page": 3,
+    "declared_page_label": "3",
+    "anchor_status": "verified",
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "char_range": [
+     58,
+     78
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   "type": "划线",
+   "type_canonical": "underline",
+   "color": "green",
+   "color_meaning": "方法或方案可复用",
+   "tags": [
+    "方法",
+    "图神经网络"
+   ],
+   "ocr_degraded": false,
+   "usable": true,
+   "confidence": 1.0
+  },
+  {
+   "note_id": "N003",
+   "annotation_ids": [
+    "A3"
+   ],
+   "aspects": [
+    "caveat"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "caveat",
+     "label": "待验证疑点",
+     "matched_cues": [
+      "不一致"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "与主结果不一致，需要复核样本量口径",
+   "support_quote": "该结论在低数据条件下未复现",
+   "support_comment": "与主结果不一致，需要复核样本量口径",
+   "source": {
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "图神经网络逆合成综述正式版",
+    "extraction_method": "inline_case_json",
+    "declared_page": 4,
+    "declared_page_label": "4",
+    "anchor_status": "page_mismatch",
+    "corrected_page": 3,
+    "corrected_page_label": "3",
+    "char_range": [
+     91,
+     104
+    ],
+    "lines": [
+     5,
+     5
+    ]
+   },
+   "type": "页边批注",
+   "type_canonical": "margin_note",
+   "color": "red",
+   "color_meaning": "待验证/存疑/与本文结论冲突",
+   "tags": [
+    "低数据",
+    "待复核"
+   ],
+   "ocr_degraded": false,
+   "usable": false,
+   "confidence": 0.6
+  },
+  {
+   "note_id": "N004",
+   "annotation_ids": [
+    "A4"
+   ],
+   "aspects": [
+    "caveat"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "caveat",
+     "label": "待验证疑点",
+     "matched_cues": [
+      "待验证"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "待验证：与主结果的关系还没有解释",
+   "support_quote": "低数据条件下准确率下降 12 个百分点",
+   "support_comment": "待验证：与主结果的关系还没有解释",
+   "source": {
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "图神经网络逆合成综述正式版",
+    "extraction_method": "inline_case_json",
+    "declared_page": 4,
+    "declared_page_label": "4",
+    "anchor_status": "verified",
+    "corrected_page": 4,
+    "corrected_page_label": "4",
+    "char_range": [
+     12,
+     31
+    ],
+    "lines": [
+     2,
+     2
+    ]
+   },
+   "type": "高亮",
+   "type_canonical": "highlight",
+   "color": "purple",
+   "color_meaning": null,
+   "tags": [
+    "低数据"
+   ],
+   "ocr_degraded": false,
+   "usable": true,
+   "confidence": 1.0
+  },
+  {
+   "note_id": "N005",
+   "annotation_ids": [
+    "A5"
+   ],
+   "aspects": [
+    "excerpt"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "excerpt",
+     "label": "原文摘录（未定维度）",
+     "matched_cues": []
+    }
+   ],
+   "claim": "此处推导跳步，需要补中间式",
+   "support_quote": "此处推导跳步，需要补中间式",
+   "support_comment": "",
+   "source": {
+    "file_id": "M3",
+    "path": "scans/2021_handwritten_notes.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "手写笔记扫描件",
+    "extraction_method": null,
+    "declared_page": 1,
+    "declared_page_label": null,
+    "anchor_status": "unverifiable",
+    "corrected_page": null,
+    "corrected_page_label": null,
+    "char_range": null,
+    "lines": null
+   },
+   "type": "手写标记",
+   "type_canonical": "handwritten",
+   "color": "red",
+   "color_meaning": "待验证/存疑/与本文结论冲突",
+   "tags": [
+    "推导"
+   ],
+   "ocr_degraded": false,
+   "usable": false,
+   "confidence": 0.2
+  },
+  {
+   "note_id": "N006",
+   "annotation_ids": [
+    "A6"
+   ],
+   "aspects": [
+    "caveat"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "caveat",
+     "label": "待验证疑点",
+     "matched_cues": [
+      "需复核"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "需复核版本差异：命名与正式版不同",
+   "support_quote": "预印本版本中该方法称为 MPNN",
+   "support_comment": "需复核版本差异：命名与正式版不同",
+   "source": {
+    "file_id": "M2",
+    "path": "clippings/2020_arxiv_preprint.md",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "预印本网页剪藏",
+    "extraction_method": "inline_case_json",
+    "declared_page": 1,
+    "declared_page_label": null,
+    "anchor_status": "verified",
+    "corrected_page": 1,
+    "corrected_page_label": "",
+    "char_range": [
+     67,
+     83
+    ],
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "type": "未知类型",
+   "type_canonical": "unknown_type",
+   "color": "blue",
+   "color_meaning": "背景与定义",
+   "tags": [
+    "版本差异"
+   ],
+   "ocr_degraded": false,
+   "usable": true,
+   "confidence": 0.85
+  },
+  {
+   "note_id": "N007",
+   "annotation_ids": [
+    "A7"
+   ],
+   "aspects": [
+    "conclusion"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "conclusion",
+     "label": "结论",
+     "matched_cues": [
+      "结论"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "结论与正式版一致，可作交叉印证",
+   "support_quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+   "support_comment": "结论与正式版一致，可作交叉印证",
+   "source": {
+    "file_id": "M2",
+    "path": "clippings/2020_arxiv_preprint.md",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "预印本网页剪藏",
+    "extraction_method": "inline_case_json",
+    "declared_page": 1,
+    "declared_page_label": null,
+    "anchor_status": "verified",
+    "corrected_page": 1,
+    "corrected_page_label": "",
+    "char_range": [
+     27,
+     66
+    ],
+    "lines": [
+     2,
+     2
+    ]
+   },
+   "type": "高亮",
+   "type_canonical": "highlight",
+   "color": "yellow",
+   "color_meaning": "关键结论/必读",
+   "tags": [
+    "逆合成",
+    "主结果"
+   ],
+   "ocr_degraded": false,
+   "usable": true,
+   "confidence": 1.0
+  },
+  {
+   "note_id": "N008",
+   "annotation_ids": [
+    "A8"
+   ],
+   "aspects": [
+    "question"
+   ],
+   "aspect_details": [
+    {
+     "aspect": "question",
+     "label": "研究问题",
+     "matched_cues": [
+      "问题"
+     ],
+     "cue_source": "comment"
+    }
+   ],
+   "claim": "研究问题：这种表示能否推广到新反应类型",
+   "support_quote": "我们提出了一种新的反应中心表示",
+   "support_comment": "研究问题：这种表示能否推广到新反应类型",
+   "source": {
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "file_sha256": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "图神经网络逆合成综述正式版",
+    "extraction_method": "inline_case_json",
+    "declared_page": 3,
+    "declared_page_label": "3",
+    "anchor_status": "not_found",
+    "corrected_page": null,
+    "corrected_page_label": null,
+    "char_range": null,
+    "lines": null
+   },
+   "type": "高亮",
+   "type_canonical": "highlight",
+   "color": "orange",
+   "color_meaning": "待跟进的问题",
+   "tags": [
+    "推广性"
+   ],
+   "ocr_degraded": false,
+   "usable": false,
+   "confidence": 0.3
+  }
+ ],
+ "links": [
+  {
+   "from": "N001",
+   "to": "N003",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "一致",
+    "主结",
+    "结果",
+    "结论"
+   ],
+   "strength": "strong",
+   "note": "共享 4 个非平凡术语，达连边阈值 2"
+  },
+  {
+   "from": "N001",
+   "to": "N004",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "主结",
+    "准确",
+    "确率",
+    "结果"
+   ],
+   "strength": "strong",
+   "note": "共享 4 个非平凡术语，达连边阈值 2"
+  },
+  {
+   "from": "N001",
+   "to": "N007",
+   "basis": "same_quote_across_versions",
+   "shared_terms": [],
+   "strength": "strong",
+   "note": "同一引文出现在不同文件/版本：按跨版本副本合并，不重复计知识条目"
+  },
+  {
+   "from": "N002",
+   "to": "N008",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "中心",
+    "反应",
+    "应中"
+   ],
+   "strength": "medium",
+   "note": "共享 3 个非平凡术语，达连边阈值 2"
+  },
+  {
+   "from": "N003",
+   "to": "N004",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "与主",
+    "主结",
+    "件下",
+    "低数",
+    "据条",
+    "数据",
+    "条件",
+    "结果"
+   ],
+   "strength": "strong",
+   "note": "共享 8 个非平凡术语，达连边阈值 2"
+  },
+  {
+   "from": "N003",
+   "to": "N007",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "一致",
+    "主结",
+    "结果",
+    "结论"
+   ],
+   "strength": "strong",
+   "note": "共享 4 个非平凡术语，达连边阈值 2"
+  },
+  {
+   "from": "N004",
+   "to": "N007",
+   "basis": "shared_terms",
+   "shared_terms": [
+    "主结",
+    "准确",
+    "确率",
+    "结果"
+   ],
+   "strength": "strong",
+   "note": "共享 4 个非平凡术语，达连边阈值 2"
+  }
+ ],
+ "suppressed_links": [
+  {
+   "from": "N001",
+   "to": "N002",
+   "shared_terms": [
+    "方法"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N001",
+   "to": "N006",
+   "shared_terms": [
+    "方法"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N002",
+   "to": "N006",
+   "shared_terms": [
+    "方法"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N002",
+   "to": "N007",
+   "shared_terms": [
+    "方法"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N003",
+   "to": "N005",
+   "shared_terms": [
+    "需要"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N003",
+   "to": "N006",
+   "shared_terms": [
+    "复核"
+   ],
+   "code": "R_LINK_SUPPRESSED",
+   "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+  },
+  {
+   "from": "N006",
+   "to": "N007",
+   "shared_terms": [
+    "与正",
+    "式版",
+    "方法",
+    "正式"
+   ],
+   "basis": "shared_terms",
+   "code": "R_LINK_CAPPED",
+   "reason": "单条笔记连边已达上限 3，按强度（跨版本同引文 > 共享术语数）贪心保留其余截断"
+  }
+ ],
+ "index": {
+  "by_aspect": {
+   "caveat": [
+    "N003",
+    "N004",
+    "N006"
+   ],
+   "conclusion": [
+    "N001",
+    "N007"
+   ],
+   "excerpt": [
+    "N005"
+   ],
+   "method": [
+    "N002"
+   ],
+   "question": [
+    "N008"
+   ],
+   "reusable": [
+    "N002"
+   ]
+  },
+  "by_tag": {
+   "主结果": [
+    "N001",
+    "N007"
+   ],
+   "低数据": [
+    "N003",
+    "N004"
+   ],
+   "图神经网络": [
+    "N002"
+   ],
+   "待复核": [
+    "N003"
+   ],
+   "推导": [
+    "N005"
+   ],
+   "推广性": [
+    "N008"
+   ],
+   "方法": [
+    "N002"
+   ],
+   "版本差异": [
+    "N006"
+   ],
+   "逆合成": [
+    "N001",
+    "N007"
+   ]
+  },
+  "by_file": {
+   "clippings/2020_arxiv_preprint.md": [
+    "N006",
+    "N007"
+   ],
+   "readings/2022_retrosynthesis_review.pdf": [
+    "N001",
+    "N002",
+    "N003",
+    "N004",
+    "N008"
+   ],
+   "scans/2021_handwritten_notes.pdf": [
+    "N005"
+   ]
+  },
+  "by_page": {
+   "clippings/2020_arxiv_preprint.md#p1": [
+    "N006",
+    "N007"
+   ],
+   "readings/2022_retrosynthesis_review.pdf#p3": [
+    "N001",
+    "N002",
+    "N003",
+    "N008"
+   ],
+   "readings/2022_retrosynthesis_review.pdf#p4": [
+    "N004"
+   ],
+   "scans/2021_handwritten_notes.pdf#p1": [
+    "N005"
+   ]
+  },
+  "by_version_group": {
+   "图神经网络逆合成综述正式版": [
+    "N001",
+    "N002",
+    "N003",
+    "N004",
+    "N008"
+   ],
+   "手写笔记扫描件": [
+    "N005"
+   ],
+   "预印本网页剪藏": [
+    "N006",
+    "N007"
+   ]
+  },
+  "term_index_size": 158,
+  "adjacency": {
+   "N001": [
+    "N003",
+    "N004",
+    "N007"
+   ],
+   "N002": [
+    "N008"
+   ],
+   "N003": [
+    "N001",
+    "N004",
+    "N007"
+   ],
+   "N004": [
+    "N001",
+    "N003",
+    "N007"
+   ],
+   "N007": [
+    "N001",
+    "N003",
+    "N004"
+   ],
+   "N008": [
+    "N002"
+   ]
+  },
+  "entry_points": [
+   "按维度（by_aspect）",
+   "按标签（by_tag）",
+   "按来源文件（by_file，别名归一到规范文件）",
+   "按页（by_page）",
+   "按版本组（by_version_group）",
+   "按术语（term_index，见 evidence.index.term_index_sample）"
+  ],
+  "term_index_sample": {
+   "12": [
+    "N004"
+   ],
+   "52.3": [
+    "N001",
+    "N007"
+   ],
+   "mpnn": [
+    "N006"
+   ],
+   "top-1": [
+    "N001",
+    "N007"
+   ],
+   "uspto-50k": [
+    "N001",
+    "N007"
+   ],
+   "一种": [
+    "N008"
+   ],
+   "一致": [
+    "N001",
+    "N003",
+    "N007"
+   ],
+   "上的": [
+    "N001",
+    "N007"
+   ],
+   "下准": [
+    "N004"
+   ],
+   "下未": [
+    "N003"
+   ],
+   "下降": [
+    "N004"
+   ],
+   "不一": [
+    "N003"
+   ],
+   "不同": [
+    "N006"
+   ],
+   "与主": [
+    "N003",
+    "N004"
+   ],
+   "与正": [
+    "N006",
+    "N007"
+   ],
+   "与表": [
+    "N001"
+   ],
+   "个百": [
+    "N004"
+   ],
+   "中心": [
+    "N002",
+    "N008"
+   ],
+   "中该": [
+    "N006"
+   ],
+   "中间": [
+    "N005"
+   ],
+   "主结": [
+    "N001",
+    "N003",
+    "N004"
+   ],
+   "了一": [
+    "N008"
+   ],
+   "交叉": [
+    "N007"
+   ],
+   "产率": [
+    "N002"
+   ],
+   "以直": [
+    "N002"
+   ],
+   "们提": [
+    "N008"
+   ],
+   "们采": [
+    "N002"
+   ],
+   "件下": [
+    "N003",
+    "N004"
+   ],
+   "传递": [
+    "N002"
+   ],
+   "低数": [
+    "N003",
+    "N004"
+   ],
+   "作交": [
+    "N007"
+   ],
+   "做分": [
+    "N002"
+   ],
+   "关的": [
+    "N001",
+    "N007"
+   ],
+   "关系": [
+    "N004"
+   ],
+   "关键": [
+    "N001"
+   ],
+   "准确": [
+    "N001",
+    "N004",
+    "N007"
+   ],
+   "出了": [
+    "N008"
+   ],
+   "分点": [
+    "N004"
+   ],
+   "分类": [
+    "N002"
+   ],
+   "到产": [
+    "N002"
+   ],
+   "到新": [
+    "N008"
+   ],
+   "印本": [
+    "N006"
+   ],
+   "印证": [
+    "N007"
+   ],
+   "叉印": [
+    "N007"
+   ],
+   "反应": [
+    "N002",
+    "N008"
+   ],
+   "口径": [
+    "N003"
+   ],
+   "可以": [
+    "N002"
+   ],
+   "可作": [
+    "N007"
+   ],
+   "可复": [
+    "N002"
+   ],
+   "名与": [
+    "N006"
+   ],
+   "否推": [
+    "N008"
+   ],
+   "命名": [
+    "N006"
+   ],
+   "器并": [
+    "N002"
+   ],
+   "器结": [
+    "N002"
+   ],
+   "在低": [
+    "N003"
+   ],
+   "在反": [
+    "N002"
+   ],
+   "处推": [
+    "N005"
+   ],
+   "复核": [
+    "N003",
+    "N006"
+   ],
+   "复现": [
+    "N003"
+   ],
+   "复用": [
+    "N002"
+   ]
+  }
+ },
+ "lookups": [
+  {
+   "query_id": "LQ1",
+   "text": "低数据条件下准确率为什么会下降",
+   "hits": [
+    {
+     "note_id": "N004",
+     "score": 12.98,
+     "matched_terms": [
+      "下准",
+      "下降",
+      "件下",
+      "低数",
+      "准确",
+      "据条",
+      "数据",
+      "条件"
+     ],
+     "aspect": "caveat",
+     "usable": true,
+     "source": {
+      "path": "readings/2022_retrosynthesis_review.pdf",
+      "page": 4,
+      "char_range": [
+       12,
+       31
+      ]
+     },
+     "claim": "待验证：与主结果的关系还没有解释",
+     "quote": "低数据条件下准确率下降 12 个百分点"
+    },
+    {
+     "note_id": "N003",
+     "score": 7.3547,
+     "matched_terms": [
+      "件下",
+      "低数",
+      "据条",
+      "数据",
+      "条件"
+     ],
+     "aspect": "caveat",
+     "usable": false,
+     "source": {
+      "path": "readings/2022_retrosynthesis_review.pdf",
+      "page": 3,
+      "char_range": [
+       91,
+       104
+      ]
+     },
+     "claim": "与主结果不一致，需要复核样本量口径",
+     "quote": "该结论在低数据条件下未复现"
+    },
+    {
+     "note_id": "N001",
+     "score": 3.2998,
+     "matched_terms": [
+      "准确",
+      "率为",
+      "确率"
+     ],
+     "aspect": "conclusion",
+     "usable": true,
+     "source": {
+      "path": "readings/2022_retrosynthesis_review.pdf",
+      "page": 3,
+      "char_range": [
+       18,
+       57
+      ]
+     },
+     "claim": "关键结论：与表 2 的主结果一致",
+     "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+    },
+    {
+     "note_id": "N007",
+     "score": 3.1644,
+     "matched_terms": [
+      "准确",
+      "率为",
+      "确率"
+     ],
+     "aspect": "conclusion",
+     "usable": true,
+     "source": {
+      "path": "clippings/2020_arxiv_preprint.md",
+      "page": 1,
+      "char_range": [
+       27,
+       66
+      ]
+     },
+     "claim": "结论与正式版一致，可作交叉印证",
+     "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+    }
+   ],
+   "hit_count": 4,
+   "answer": "库内证据摘录（不外加结论）：N004「待验证：与主结果的关系还没有解释」——引文：“低数据条件下准确率下降 12 个百分点”（readings/2022_retrosynthesis_review.pdf 第4页）；N003「与主结果不一致，需要复核样本量口径」——引文：“该结论在低数据条件下未复现”（readings/2022_retrosynthesis_review.pdf 第3页）",
+   "recall": "ok",
+   "missing_terms": [
+    "为什",
+    "什么",
+    "么会",
+    "会下"
+   ],
+   "min_score": 0.5,
+   "reason_if_empty": ""
+  },
+  {
+   "query_id": "LQ2",
+   "text": "预印本与正式版的命名差异",
+   "hits": [
+    {
+     "note_id": "N006",
+     "score": 12.1281,
+     "matched_terms": [
+      "与正",
+      "印本",
+      "命名",
+      "差异",
+      "式版",
+      "正式",
+      "预印"
+     ],
+     "aspect": "caveat",
+     "usable": true,
+     "source": {
+      "path": "clippings/2020_arxiv_preprint.md",
+      "page": 1,
+      "char_range": [
+       67,
+       83
+      ]
+     },
+     "claim": "需复核版本差异：命名与正式版不同",
+     "quote": "预印本版本中该方法称为 MPNN"
+    },
+    {
+     "note_id": "N007",
+     "score": 3.8362,
+     "matched_terms": [
+      "与正",
+      "式版",
+      "正式"
+     ],
+     "aspect": "conclusion",
+     "usable": true,
+     "source": {
+      "path": "clippings/2020_arxiv_preprint.md",
+      "page": 1,
+      "char_range": [
+       27,
+       66
+      ]
+     },
+     "claim": "结论与正式版一致，可作交叉印证",
+     "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+    }
+   ],
+   "hit_count": 2,
+   "answer": "库内证据摘录（不外加结论）：N006「需复核版本差异：命名与正式版不同」——引文：“预印本版本中该方法称为 MPNN”（clippings/2020_arxiv_preprint.md 第1页）；N007「结论与正式版一致，可作交叉印证」——引文：“模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。”（clippings/2020_arxiv_preprint.md 第1页）",
+   "recall": "ok",
+   "missing_terms": [
+    "本与",
+    "版的",
+    "的命",
+    "名差"
+   ],
+   "min_score": 0.5,
+   "reason_if_empty": ""
+  }
+ ],
+ "orphan_annotations": [
+  {
+   "annotation_id": "A5",
+   "code": "R_ASPECT_UNRESOLVED",
+   "reason": "批注内容未命中任何笔记维度线索词：按原文摘录保留，不臆测维度"
+  }
+ ],
+ "library_report": {
+  "mode": "inline",
+  "root": null,
+  "root_resolution": [
+   "inline（无库目录，使用 case 内联材料）"
+  ],
+  "files_scanned": 0,
+  "inline_entries": 3,
+  "alias_groups": [],
+  "near_duplicate_hints": [],
+  "version_groups": [],
+  "version_confusion_hints": [],
+  "gaps": [
+   {
+    "file_id": "M3",
+    "path": "scans/2021_handwritten_notes.pdf",
+    "code": "R_NO_TEXT_LAYER",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "version_notes_fields": "version_notes, admin_notes, versions"
+ },
+ "ops_log": [
+  {
+   "op": "repair_file_gap",
+   "targets": [
+    "scans/2021_handwritten_notes.pdf"
+   ],
+   "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+   "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR）；本流程诚实跳过，不伪造文本",
+   "input_readonly": true
+  },
+  {
+   "op": "rebuild_index",
+   "targets": [
+    "canonical_files"
+   ],
+   "basis": "哈希清单/别名归一/版本组已重建",
+   "action": "建议检索索引以 canonical 文件为键重建；未执行",
+   "input_readonly": true
+  }
+ ],
+ "evidence_map": {
+  "materials": {
+   "files": [
+    {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "source": "inline",
+     "ext": "pdf",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "n_chars": 233,
+     "ocr_confidence": null,
+     "pages": 2,
+     "has_text_layer": true,
+     "sha256": "3624766db851ebf33eff55cb3e03070349437b29218c70560b9e28f06ba89377",
+     "alias_of": null,
+     "version": "v2",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "year": 2022
+    },
+    {
+     "file_id": "M2",
+     "path": "clippings/2020_arxiv_preprint.md",
+     "source": "inline",
+     "ext": "md",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "n_chars": 93,
+     "ocr_confidence": null,
+     "pages": 1,
+     "has_text_layer": true,
+     "sha256": "7899a707d77594a91b53374aae4fad854afab4314dfe2db8646fb28c47354865",
+     "alias_of": null,
+     "version": "v1",
+     "doc_key": "预印本网页剪藏",
+     "year": 2020
+    },
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "source": "inline",
+     "ext": "pdf",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": null,
+     "n_chars": 0,
+     "ocr_confidence": null,
+     "pages": 0,
+     "has_text_layer": false,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "alias_of": null,
+     "version": "v1",
+     "doc_key": "手写笔记扫描件",
+     "year": 2021
+    }
+   ],
+   "unreadable": [
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "page_label_policy": "物理页=page，印刷页=page_label；缺标签记 label_source=absent，不用物理页冒充印刷页",
+   "extraction_chain": "内联正文 → 侧车 .txt/.ocr.txt（可带 .ocr.json 置信度）→ pdf_min 文本层 → DOCX zip+xml → 纯文本 → 诚实 gap"
+  },
+  "library": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "inline_entries": 3,
+   "alias_groups": [],
+   "near_duplicate_hints": [],
+   "version_groups": [],
+   "version_confusion_hints": [],
+   "gaps": [
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与交接清单"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "two_column_policy": "PDF 页按 x 间距聚类列（启发式），two_column=true 时 found_on 附阅读顺序提示；引文跨栏会逐字失败，走模糊匹配并如实标注"
+  },
+  "handoff": {
+   "manifest_json": "handoff_manifest.json",
+   "manifest_docx": "handoff_manifest.docx",
+   "docx_sha256": "80506d630a914dd8eeb5c472ea4aa4460b8de93bf635fe7114cee6c2053e10c7",
+   "note": "交接清单写在输出目录（/app/output），绝不写回输入库"
+  },
+  "type_color": {
+   "type_table_version": "0.1.0",
+   "types": {
+    "highlight": {
+     "label": "高亮",
+     "aliases": [
+      "highlight",
+      "高亮",
+      "highlight_add",
+      "annotation"
+     ]
+    },
+    "underline": {
+     "label": "划线",
+     "aliases": [
+      "underline",
+      "下划线",
+      "划线",
+      "strikeout"
+     ]
+    },
+    "margin_note": {
+     "label": "页边批注",
+     "aliases": [
+      "margin_note",
+      "margin",
+      "页边批注",
+      "旁注",
+      "note",
+      "text"
+     ]
+    },
+    "handwritten": {
+     "label": "手写标记",
+     "aliases": [
+      "handwritten",
+      "ink",
+      "手写",
+      "手写批注",
+      "pen"
+     ]
+    },
+    "sticky_note": {
+     "label": "便签",
+     "aliases": [
+      "sticky_note",
+      "sticky",
+      "便签",
+      "comment"
+     ]
+    },
+    "region": {
+     "label": "区域框选",
+     "aliases": [
+      "region",
+      "area",
+      "框选",
+      "rect"
+     ]
+    }
+   },
+   "colors": {
+    "yellow": {
+     "label": "黄色",
+     "meaning": "关键结论/必读"
+    },
+    "green": {
+     "label": "绿色",
+     "meaning": "方法或方案可复用"
+    },
+    "red": {
+     "label": "红色",
+     "meaning": "待验证/存疑/与本文结论冲突"
+    },
+    "blue": {
+     "label": "蓝色",
+     "meaning": "背景与定义"
+    },
+    "orange": {
+     "label": "橙色",
+     "meaning": "待跟进的问题"
+    }
+   },
+   "unknown_color_annotations": [
+    "A4"
+   ],
+   "unknown_type_annotations": [
+    "A6"
+   ],
+   "note": "类型先分高亮/划线/页边/手写，再谈语义；未知颜色不猜含义"
+  },
+  "anchors": {
+   "summary": {
+    "verified": 5,
+    "page_mismatch": 1,
+    "unverifiable": 1,
+    "not_found": 1
+   },
+   "per_annotation": [
+    {
+     "annotation_id": "A1",
+     "status": "verified",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      18,
+      57
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A2",
+     "status": "verified",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      58,
+      78
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A3",
+     "status": "page_mismatch",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      91,
+      104
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": "引文实际出现在第 [3] 页（物理页），与批注记录的页 4/标签 4 不一致"
+    },
+    {
+     "annotation_id": "A4",
+     "status": "verified",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "corrected_page": 4,
+     "corrected_char_range": [
+      12,
+      31
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A5",
+     "status": "unverifiable",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": null,
+     "corrected_char_range": null,
+     "char_span_checked": null,
+     "two_column_hint": null,
+     "fuzzy": null,
+     "reason": "材料无可用文本层（扫描件无侧车/PDF 加密或损坏），引文无法逐字定位；坐标只能沿用批注自带值"
+    },
+    {
+     "annotation_id": "A6",
+     "status": "verified",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": 1,
+     "corrected_char_range": [
+      67,
+      83
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A7",
+     "status": "verified",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": 1,
+     "corrected_char_range": [
+      27,
+      66
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A8",
+     "status": "not_found",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": null,
+     "corrected_char_range": null,
+     "char_span_checked": null,
+     "two_column_hint": null,
+     "fuzzy": {
+      "similarity": 0.6667,
+      "page": 3
+     },
+     "reason": "引文在材料正文中找不到（模糊匹配最高相似度 0.6667 低于阈值 0.72；可能 OCR 漂移、跨栏拼接或来自其它版本），不硬挂位置"
+    }
+   ],
+   "method": "引文先在提取文本中做大小写归一逐字定位（命中后自检 char_span 切片与引文一致）；逐字失败降级 difflib 模糊匹配，达阈值如实标 fuzzy_matched（不作字符级锚点），低于阈值记 not_found；页/标签双口径比对；双栏页给阅读顺序提示；OCR 低置信降级"
+  },
+  "notes": {
+   "schema": [
+    "note_id",
+    "annotation_ids",
+    "aspects",
+    "claim",
+    "support_quote",
+    "source",
+    "type",
+    "color",
+    "tags",
+    "ocr_degraded",
+    "usable",
+    "confidence"
+   ],
+   "confidence_formula": "confidence = anchor_status 权重 × 类型系数(未知类型 0.85) × 引文系数(无引文 0.7) × OCR 降级系数(0.8)",
+   "annotation_note_map": {
+    "N001": [
+     "A1"
+    ],
+    "N002": [
+     "A2"
+    ],
+    "N003": [
+     "A3"
+    ],
+    "N004": [
+     "A4"
+    ],
+    "N005": [
+     "A5"
+    ],
+    "N006": [
+     "A6"
+    ],
+    "N007": [
+     "A7"
+    ],
+    "N008": [
+     "A8"
+    ]
+   },
+   "orphan": [
+    {
+     "annotation_id": "A5",
+     "code": "R_ASPECT_UNRESOLVED",
+     "reason": "批注内容未命中任何笔记维度线索词：按原文摘录保留，不臆测维度"
+    }
+   ]
+  },
+  "links": {
+   "rule": "仅在两条笔记共享 ≥link_min_shared_terms 个非平凡术语（或引用同一段原文的跨版本/重复文件副本）时连边；共享 1 个术语一律抑制，防止仅凭一个共用词把笔记连成一片。",
+   "min_shared_terms": 2,
+   "max_per_note": 3,
+   "kept": 7,
+   "suppressed": 7,
+   "suppressed_detail": [
+    {
+     "from": "N001",
+     "to": "N002",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N001",
+     "to": "N006",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N002",
+     "to": "N006",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N002",
+     "to": "N007",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N003",
+     "to": "N005",
+     "shared_terms": [
+      "需要"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N003",
+     "to": "N006",
+     "shared_terms": [
+      "复核"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N006",
+     "to": "N007",
+     "shared_terms": [
+      "与正",
+      "式版",
+      "方法",
+      "正式"
+     ],
+     "basis": "shared_terms",
+     "code": "R_LINK_CAPPED",
+     "reason": "单条笔记连边已达上限 3，按强度（跨版本同引文 > 共享术语数）贪心保留其余截断"
+    }
+   ]
+  },
+  "retrieval": {
+   "entry_points": [
+    "按维度（by_aspect）",
+    "按标签（by_tag）",
+    "按来源文件（by_file，别名归一到规范文件）",
+    "按页（by_page）",
+    "按版本组（by_version_group）",
+    "按术语（term_index，见 evidence.index.term_index_sample）"
+   ],
+   "method": "BM25（kit.bm25_score，文档侧保留词频）+ 摘录式回答 + 原文回链；召回不足给缺词清单",
+   "bm25_params": {
+    "k1": 1.2,
+    "b": 0.75
+   },
+   "lookup_threshold": 0.5,
+   "lookups": [
+    {
+     "query_id": "LQ1",
+     "text": "低数据条件下准确率为什么会下降",
+     "hits": [
+      {
+       "note_id": "N004",
+       "score": 12.98,
+       "matched_terms": [
+        "下准",
+        "下降",
+        "件下",
+        "低数",
+        "准确",
+        "据条",
+        "数据",
+        "条件"
+       ],
+       "aspect": "caveat",
+       "usable": true,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 4,
+        "char_range": [
+         12,
+         31
+        ]
+       },
+       "claim": "待验证：与主结果的关系还没有解释",
+       "quote": "低数据条件下准确率下降 12 个百分点"
+      },
+      {
+       "note_id": "N003",
+       "score": 7.3547,
+       "matched_terms": [
+        "件下",
+        "低数",
+        "据条",
+        "数据",
+        "条件"
+       ],
+       "aspect": "caveat",
+       "usable": false,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 3,
+        "char_range": [
+         91,
+         104
+        ]
+       },
+       "claim": "与主结果不一致，需要复核样本量口径",
+       "quote": "该结论在低数据条件下未复现"
+      },
+      {
+       "note_id": "N001",
+       "score": 3.2998,
+       "matched_terms": [
+        "准确",
+        "率为",
+        "确率"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 3,
+        "char_range": [
+         18,
+         57
+        ]
+       },
+       "claim": "关键结论：与表 2 的主结果一致",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      },
+      {
+       "note_id": "N007",
+       "score": 3.1644,
+       "matched_terms": [
+        "准确",
+        "率为",
+        "确率"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         27,
+         66
+        ]
+       },
+       "claim": "结论与正式版一致，可作交叉印证",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      }
+     ],
+     "hit_count": 4,
+     "answer": "库内证据摘录（不外加结论）：N004「待验证：与主结果的关系还没有解释」——引文：“低数据条件下准确率下降 12 个百分点”（readings/2022_retrosynthesis_review.pdf 第4页）；N003「与主结果不一致，需要复核样本量口径」——引文：“该结论在低数据条件下未复现”（readings/2022_retrosynthesis_review.pdf 第3页）",
+     "recall": "ok",
+     "missing_terms": [
+      "为什",
+      "什么",
+      "么会",
+      "会下"
+     ],
+     "min_score": 0.5,
+     "reason_if_empty": ""
+    },
+    {
+     "query_id": "LQ2",
+     "text": "预印本与正式版的命名差异",
+     "hits": [
+      {
+       "note_id": "N006",
+       "score": 12.1281,
+       "matched_terms": [
+        "与正",
+        "印本",
+        "命名",
+        "差异",
+        "式版",
+        "正式",
+        "预印"
+       ],
+       "aspect": "caveat",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         67,
+         83
+        ]
+       },
+       "claim": "需复核版本差异：命名与正式版不同",
+       "quote": "预印本版本中该方法称为 MPNN"
+      },
+      {
+       "note_id": "N007",
+       "score": 3.8362,
+       "matched_terms": [
+        "与正",
+        "式版",
+        "正式"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         27,
+         66
+        ]
+       },
+       "claim": "结论与正式版一致，可作交叉印证",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      }
+     ],
+     "hit_count": 2,
+     "answer": "库内证据摘录（不外加结论）：N006「需复核版本差异：命名与正式版不同」——引文：“预印本版本中该方法称为 MPNN”（clippings/2020_arxiv_preprint.md 第1页）；N007「结论与正式版一致，可作交叉印证」——引文：“模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。”（clippings/2020_arxiv_preprint.md 第1页）",
+     "recall": "ok",
+     "missing_terms": [
+      "本与",
+      "版的",
+      "的命",
+      "名差"
+     ],
+     "min_score": 0.5,
+     "reason_if_empty": ""
+    }
+   ]
+  },
+  "ops_log": {
+   "entries": [
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "scans/2021_handwritten_notes.pdf"
+     ],
+     "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+     "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR）；本流程诚实跳过，不伪造文本",
+     "input_readonly": true
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "canonical_files"
+     ],
+     "basis": "哈希清单/别名归一/版本组已重建",
+     "action": "建议检索索引以 canonical 文件为键重建；未执行",
+     "input_readonly": true
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议；输入库前后哈希对照见 evidence.library.integrity"
+  }
+ },
+ "状态说明": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "批注抽取与类型/颜色归一",
+   "锚点校正",
+   "笔记结构化",
+   "知识关联与抑制",
+   "检索闭环（BM25+回链）",
+   "恢复建议与交接清单"
+  ],
+  "unmet": [
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的页与引文实际所在页不一致，已给校正页与字符区间"
+   },
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的引文逐字与模糊匹配均未命中，标 not_found 不硬挂位置"
+   },
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的材料无可用文本层，锚点不可校正"
+   },
+   {
+    "item": "文件库提取",
+    "reason": "1 份 R_NO_TEXT_LAYER——诚实跳过，不伪造文本层（详见 evidence.library.gaps）"
+   },
+   {
+    "item": "文件库目录",
+    "reason": "case 未声明文件库目录（materials_root/library_path 等字符串路径），按内联材料处理"
+   }
+  ],
+  "notes": [
+   "1 条批注未命中任何维度线索，按原文摘录保留（不臆测维度）",
+   "7 对候选关联被抑制（共享术语不足或超过单条笔记连边上限）"
+  ]
+ },
+ "result": {
+  "annotations": [
+   {
+    "annotation_id": "A1",
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "page": 3,
+    "page_label": "3",
+    "type_raw": "highlight",
+    "type_canonical": "highlight",
+    "type_label": "高亮",
+    "color": "yellow",
+    "color_label": "黄色",
+    "color_meaning": "关键结论/必读",
+    "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+    "comment": "关键结论：与表 2 的主结果一致",
+    "tags": [
+     "逆合成",
+     "主结果"
+    ],
+    "position": {
+     "rects": [
+      [
+       72,
+       320,
+       480,
+       338
+      ]
+     ]
+    },
+    "position_source": "provided_bbox",
+    "anchor": {
+     "status": "verified",
+     "code": "",
+     "reason": "",
+     "page_match": true,
+     "found_on": [
+      {
+       "page": 3,
+       "page_label": "3",
+       "two_column": false,
+       "char_start": 18,
+       "char_end": 57,
+       "line_from": 3,
+       "line_to": 3
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "corrected_char_range": [
+      18,
+      57
+     ],
+     "corrected_lines": [
+      3,
+      3
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M1"
+    }
+   },
+   {
+    "annotation_id": "A2",
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "page": 3,
+    "page_label": "3",
+    "type_raw": "underline",
+    "type_canonical": "underline",
+    "type_label": "划线",
+    "color": "green",
+    "color_label": "绿色",
+    "color_meaning": "方法或方案可复用",
+    "quote": "我们采用消息传递编码器并在反应中心做分类",
+    "comment": "方法可复用：编码器结构可以直接迁移到产率预测",
+    "tags": [
+     "方法",
+     "图神经网络"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "verified",
+     "code": "",
+     "reason": "",
+     "page_match": true,
+     "found_on": [
+      {
+       "page": 3,
+       "page_label": "3",
+       "two_column": false,
+       "char_start": 58,
+       "char_end": 78,
+       "line_from": 4,
+       "line_to": 4
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "corrected_char_range": [
+      58,
+      78
+     ],
+     "corrected_lines": [
+      4,
+      4
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M1"
+    }
+   },
+   {
+    "annotation_id": "A3",
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "page": 4,
+    "page_label": "4",
+    "type_raw": "margin_note",
+    "type_canonical": "margin_note",
+    "type_label": "页边批注",
+    "color": "red",
+    "color_label": "红色",
+    "color_meaning": "待验证/存疑/与本文结论冲突",
+    "quote": "该结论在低数据条件下未复现",
+    "comment": "与主结果不一致，需要复核样本量口径",
+    "tags": [
+     "低数据",
+     "待复核"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "page_mismatch",
+     "code": "R_ANCHOR_PAGE_MISMATCH",
+     "reason": "引文实际出现在第 [3] 页（物理页），与批注记录的页 4/标签 4 不一致",
+     "page_match": false,
+     "found_on": [
+      {
+       "page": 3,
+       "page_label": "3",
+       "two_column": false,
+       "char_start": 91,
+       "char_end": 104,
+       "line_from": 5,
+       "line_to": 5
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "corrected_char_range": [
+      91,
+      104
+     ],
+     "corrected_lines": [
+      5,
+      5
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M1"
+    }
+   },
+   {
+    "annotation_id": "A4",
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "page": 4,
+    "page_label": "4",
+    "type_raw": "highlight",
+    "type_canonical": "highlight",
+    "type_label": "高亮",
+    "color": "purple",
+    "color_label": null,
+    "color_meaning": null,
+    "quote": "低数据条件下准确率下降 12 个百分点",
+    "comment": "待验证：与主结果的关系还没有解释",
+    "tags": [
+     "低数据"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "verified",
+     "code": "",
+     "reason": "",
+     "page_match": true,
+     "found_on": [
+      {
+       "page": 4,
+       "page_label": "4",
+       "two_column": false,
+       "char_start": 12,
+       "char_end": 31,
+       "line_from": 2,
+       "line_to": 2
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 4,
+     "corrected_page_label": "4",
+     "corrected_char_range": [
+      12,
+      31
+     ],
+     "corrected_lines": [
+      2,
+      2
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M1"
+    }
+   },
+   {
+    "annotation_id": "A5",
+    "file_id": "M3",
+    "path": "scans/2021_handwritten_notes.pdf",
+    "page": 1,
+    "page_label": null,
+    "type_raw": "handwritten",
+    "type_canonical": "handwritten",
+    "type_label": "手写标记",
+    "color": "red",
+    "color_label": "红色",
+    "color_meaning": "待验证/存疑/与本文结论冲突",
+    "quote": "此处推导跳步，需要补中间式",
+    "comment": "",
+    "tags": [
+     "推导"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "unverifiable",
+     "code": "R_ANCHOR_NO_TEXT_LAYER",
+     "reason": "材料无可用文本层（扫描件无侧车/PDF 加密或损坏），引文无法逐字定位；坐标只能沿用批注自带值",
+     "page_match": null,
+     "found_on": [],
+     "material_file_id": "M3",
+     "extraction_gap": "R_NO_TEXT_LAYER"
+    }
+   },
+   {
+    "annotation_id": "A6",
+    "file_id": "M2",
+    "path": "clippings/2020_arxiv_preprint.md",
+    "page": 1,
+    "page_label": null,
+    "type_raw": "scribble",
+    "type_canonical": "unknown_type",
+    "type_label": "未知类型",
+    "color": "blue",
+    "color_label": "蓝色",
+    "color_meaning": "背景与定义",
+    "quote": "预印本版本中该方法称为 MPNN",
+    "comment": "需复核版本差异：命名与正式版不同",
+    "tags": [
+     "版本差异"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "verified",
+     "code": "",
+     "reason": "",
+     "page_match": true,
+     "found_on": [
+      {
+       "page": 1,
+       "page_label": "",
+       "two_column": false,
+       "char_start": 67,
+       "char_end": 83,
+       "line_from": 3,
+       "line_to": 3
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 1,
+     "corrected_page_label": "",
+     "corrected_char_range": [
+      67,
+      83
+     ],
+     "corrected_lines": [
+      3,
+      3
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M2"
+    }
+   },
+   {
+    "annotation_id": "A7",
+    "file_id": "M2",
+    "path": "clippings/2020_arxiv_preprint.md",
+    "page": 1,
+    "page_label": null,
+    "type_raw": "highlight",
+    "type_canonical": "highlight",
+    "type_label": "高亮",
+    "color": "yellow",
+    "color_label": "黄色",
+    "color_meaning": "关键结论/必读",
+    "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+    "comment": "结论与正式版一致，可作交叉印证",
+    "tags": [
+     "逆合成",
+     "主结果"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "verified",
+     "code": "",
+     "reason": "",
+     "page_match": true,
+     "found_on": [
+      {
+       "page": 1,
+       "page_label": "",
+       "two_column": false,
+       "char_start": 27,
+       "char_end": 66,
+       "line_from": 2,
+       "line_to": 2
+      }
+     ],
+     "occurrences": 1,
+     "corrected_page": 1,
+     "corrected_page_label": "",
+     "corrected_char_range": [
+      27,
+      66
+     ],
+     "corrected_lines": [
+      2,
+      2
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "material_file_id": "M2"
+    }
+   },
+   {
+    "annotation_id": "A8",
+    "file_id": "M1",
+    "path": "readings/2022_retrosynthesis_review.pdf",
+    "page": 3,
+    "page_label": "3",
+    "type_raw": "highlight",
+    "type_canonical": "highlight",
+    "type_label": "高亮",
+    "color": "orange",
+    "color_label": "橙色",
+    "color_meaning": "待跟进的问题",
+    "quote": "我们提出了一种新的反应中心表示",
+    "comment": "研究问题：这种表示能否推广到新反应类型",
+    "tags": [
+     "推广性"
+    ],
+    "position": null,
+    "position_source": "char_range_fallback",
+    "anchor": {
+     "status": "not_found",
+     "code": "R_ANCHOR_NOT_FOUND",
+     "reason": "引文在材料正文中找不到（模糊匹配最高相似度 0.6667 低于阈值 0.72；可能 OCR 漂移、跨栏拼接或来自其它版本），不硬挂位置",
+     "page_match": false,
+     "found_on": [],
+     "occurrences": 0,
+     "fuzzy": {
+      "similarity": 0.6667,
+      "page": 3
+     },
+     "material_file_id": "M1"
+    }
+   }
+  ],
+  "notes": [
+   {
+    "note_id": "N001",
+    "annotation_ids": [
+     "A1"
+    ],
+    "aspects": [
+     "conclusion"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "conclusion",
+      "label": "结论",
+      "matched_cues": [
+       "结论"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "关键结论：与表 2 的主结果一致",
+    "support_quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+    "support_comment": "关键结论：与表 2 的主结果一致",
+    "source": {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "extraction_method": "inline_case_json",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "anchor_status": "verified",
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "char_range": [
+      18,
+      57
+     ],
+     "lines": [
+      3,
+      3
+     ]
+    },
+    "type": "高亮",
+    "type_canonical": "highlight",
+    "color": "yellow",
+    "color_meaning": "关键结论/必读",
+    "tags": [
+     "逆合成",
+     "主结果"
+    ],
+    "ocr_degraded": false,
+    "usable": true,
+    "confidence": 1.0
+   },
+   {
+    "note_id": "N002",
+    "annotation_ids": [
+     "A2"
+    ],
+    "aspects": [
+     "method",
+     "reusable"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "method",
+      "label": "方法",
+      "matched_cues": [
+       "方法"
+      ],
+      "cue_source": "comment"
+     },
+     {
+      "aspect": "reusable",
+      "label": "可复用要点",
+      "matched_cues": [
+       "可复用"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "方法可复用：编码器结构可以直接迁移到产率预测",
+    "support_quote": "我们采用消息传递编码器并在反应中心做分类",
+    "support_comment": "方法可复用：编码器结构可以直接迁移到产率预测",
+    "source": {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "extraction_method": "inline_case_json",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "anchor_status": "verified",
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "char_range": [
+      58,
+      78
+     ],
+     "lines": [
+      4,
+      4
+     ]
+    },
+    "type": "划线",
+    "type_canonical": "underline",
+    "color": "green",
+    "color_meaning": "方法或方案可复用",
+    "tags": [
+     "方法",
+     "图神经网络"
+    ],
+    "ocr_degraded": false,
+    "usable": true,
+    "confidence": 1.0
+   },
+   {
+    "note_id": "N003",
+    "annotation_ids": [
+     "A3"
+    ],
+    "aspects": [
+     "caveat"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "caveat",
+      "label": "待验证疑点",
+      "matched_cues": [
+       "不一致"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "与主结果不一致，需要复核样本量口径",
+    "support_quote": "该结论在低数据条件下未复现",
+    "support_comment": "与主结果不一致，需要复核样本量口径",
+    "source": {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "extraction_method": "inline_case_json",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "anchor_status": "page_mismatch",
+     "corrected_page": 3,
+     "corrected_page_label": "3",
+     "char_range": [
+      91,
+      104
+     ],
+     "lines": [
+      5,
+      5
+     ]
+    },
+    "type": "页边批注",
+    "type_canonical": "margin_note",
+    "color": "red",
+    "color_meaning": "待验证/存疑/与本文结论冲突",
+    "tags": [
+     "低数据",
+     "待复核"
+    ],
+    "ocr_degraded": false,
+    "usable": false,
+    "confidence": 0.6
+   },
+   {
+    "note_id": "N004",
+    "annotation_ids": [
+     "A4"
+    ],
+    "aspects": [
+     "caveat"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "caveat",
+      "label": "待验证疑点",
+      "matched_cues": [
+       "待验证"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "待验证：与主结果的关系还没有解释",
+    "support_quote": "低数据条件下准确率下降 12 个百分点",
+    "support_comment": "待验证：与主结果的关系还没有解释",
+    "source": {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "extraction_method": "inline_case_json",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "anchor_status": "verified",
+     "corrected_page": 4,
+     "corrected_page_label": "4",
+     "char_range": [
+      12,
+      31
+     ],
+     "lines": [
+      2,
+      2
+     ]
+    },
+    "type": "高亮",
+    "type_canonical": "highlight",
+    "color": "purple",
+    "color_meaning": null,
+    "tags": [
+     "低数据"
+    ],
+    "ocr_degraded": false,
+    "usable": true,
+    "confidence": 1.0
+   },
+   {
+    "note_id": "N005",
+    "annotation_ids": [
+     "A5"
+    ],
+    "aspects": [
+     "excerpt"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "excerpt",
+      "label": "原文摘录（未定维度）",
+      "matched_cues": []
+     }
+    ],
+    "claim": "此处推导跳步，需要补中间式",
+    "support_quote": "此处推导跳步，需要补中间式",
+    "support_comment": "",
+    "source": {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "手写笔记扫描件",
+     "extraction_method": null,
+     "declared_page": 1,
+     "declared_page_label": null,
+     "anchor_status": "unverifiable",
+     "corrected_page": null,
+     "corrected_page_label": null,
+     "char_range": null,
+     "lines": null
+    },
+    "type": "手写标记",
+    "type_canonical": "handwritten",
+    "color": "red",
+    "color_meaning": "待验证/存疑/与本文结论冲突",
+    "tags": [
+     "推导"
+    ],
+    "ocr_degraded": false,
+    "usable": false,
+    "confidence": 0.2
+   },
+   {
+    "note_id": "N006",
+    "annotation_ids": [
+     "A6"
+    ],
+    "aspects": [
+     "caveat"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "caveat",
+      "label": "待验证疑点",
+      "matched_cues": [
+       "需复核"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "需复核版本差异：命名与正式版不同",
+    "support_quote": "预印本版本中该方法称为 MPNN",
+    "support_comment": "需复核版本差异：命名与正式版不同",
+    "source": {
+     "file_id": "M2",
+     "path": "clippings/2020_arxiv_preprint.md",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "预印本网页剪藏",
+     "extraction_method": "inline_case_json",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "anchor_status": "verified",
+     "corrected_page": 1,
+     "corrected_page_label": "",
+     "char_range": [
+      67,
+      83
+     ],
+     "lines": [
+      3,
+      3
+     ]
+    },
+    "type": "未知类型",
+    "type_canonical": "unknown_type",
+    "color": "blue",
+    "color_meaning": "背景与定义",
+    "tags": [
+     "版本差异"
+    ],
+    "ocr_degraded": false,
+    "usable": true,
+    "confidence": 0.85
+   },
+   {
+    "note_id": "N007",
+    "annotation_ids": [
+     "A7"
+    ],
+    "aspects": [
+     "conclusion"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "conclusion",
+      "label": "结论",
+      "matched_cues": [
+       "结论"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "结论与正式版一致，可作交叉印证",
+    "support_quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。",
+    "support_comment": "结论与正式版一致，可作交叉印证",
+    "source": {
+     "file_id": "M2",
+     "path": "clippings/2020_arxiv_preprint.md",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "预印本网页剪藏",
+     "extraction_method": "inline_case_json",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "anchor_status": "verified",
+     "corrected_page": 1,
+     "corrected_page_label": "",
+     "char_range": [
+      27,
+      66
+     ],
+     "lines": [
+      2,
+      2
+     ]
+    },
+    "type": "高亮",
+    "type_canonical": "highlight",
+    "color": "yellow",
+    "color_meaning": "关键结论/必读",
+    "tags": [
+     "逆合成",
+     "主结果"
+    ],
+    "ocr_degraded": false,
+    "usable": true,
+    "confidence": 1.0
+   },
+   {
+    "note_id": "N008",
+    "annotation_ids": [
+     "A8"
+    ],
+    "aspects": [
+     "question"
+    ],
+    "aspect_details": [
+     {
+      "aspect": "question",
+      "label": "研究问题",
+      "matched_cues": [
+       "问题"
+      ],
+      "cue_source": "comment"
+     }
+    ],
+    "claim": "研究问题：这种表示能否推广到新反应类型",
+    "support_quote": "我们提出了一种新的反应中心表示",
+    "support_comment": "研究问题：这种表示能否推广到新反应类型",
+    "source": {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "file_sha256": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "extraction_method": "inline_case_json",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "anchor_status": "not_found",
+     "corrected_page": null,
+     "corrected_page_label": null,
+     "char_range": null,
+     "lines": null
+    },
+    "type": "高亮",
+    "type_canonical": "highlight",
+    "color": "orange",
+    "color_meaning": "待跟进的问题",
+    "tags": [
+     "推广性"
+    ],
+    "ocr_degraded": false,
+    "usable": false,
+    "confidence": 0.3
+   }
+  ],
+  "links": [
+   {
+    "from": "N001",
+    "to": "N003",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "一致",
+     "主结",
+     "结果",
+     "结论"
+    ],
+    "strength": "strong",
+    "note": "共享 4 个非平凡术语，达连边阈值 2"
+   },
+   {
+    "from": "N001",
+    "to": "N004",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "主结",
+     "准确",
+     "确率",
+     "结果"
+    ],
+    "strength": "strong",
+    "note": "共享 4 个非平凡术语，达连边阈值 2"
+   },
+   {
+    "from": "N001",
+    "to": "N007",
+    "basis": "same_quote_across_versions",
+    "shared_terms": [],
+    "strength": "strong",
+    "note": "同一引文出现在不同文件/版本：按跨版本副本合并，不重复计知识条目"
+   },
+   {
+    "from": "N002",
+    "to": "N008",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "中心",
+     "反应",
+     "应中"
+    ],
+    "strength": "medium",
+    "note": "共享 3 个非平凡术语，达连边阈值 2"
+   },
+   {
+    "from": "N003",
+    "to": "N004",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "与主",
+     "主结",
+     "件下",
+     "低数",
+     "据条",
+     "数据",
+     "条件",
+     "结果"
+    ],
+    "strength": "strong",
+    "note": "共享 8 个非平凡术语，达连边阈值 2"
+   },
+   {
+    "from": "N003",
+    "to": "N007",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "一致",
+     "主结",
+     "结果",
+     "结论"
+    ],
+    "strength": "strong",
+    "note": "共享 4 个非平凡术语，达连边阈值 2"
+   },
+   {
+    "from": "N004",
+    "to": "N007",
+    "basis": "shared_terms",
+    "shared_terms": [
+     "主结",
+     "准确",
+     "确率",
+     "结果"
+    ],
+    "strength": "strong",
+    "note": "共享 4 个非平凡术语，达连边阈值 2"
+   }
+  ],
+  "suppressed_links": [
+   {
+    "from": "N001",
+    "to": "N002",
+    "shared_terms": [
+     "方法"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N001",
+    "to": "N006",
+    "shared_terms": [
+     "方法"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N002",
+    "to": "N006",
+    "shared_terms": [
+     "方法"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N002",
+    "to": "N007",
+    "shared_terms": [
+     "方法"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N003",
+    "to": "N005",
+    "shared_terms": [
+     "需要"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N003",
+    "to": "N006",
+    "shared_terms": [
+     "复核"
+    ],
+    "code": "R_LINK_SUPPRESSED",
+    "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+   },
+   {
+    "from": "N006",
+    "to": "N007",
+    "shared_terms": [
+     "与正",
+     "式版",
+     "方法",
+     "正式"
+    ],
+    "basis": "shared_terms",
+    "code": "R_LINK_CAPPED",
+    "reason": "单条笔记连边已达上限 3，按强度（跨版本同引文 > 共享术语数）贪心保留其余截断"
+   }
+  ],
+  "index": {
+   "by_aspect": {
+    "caveat": [
+     "N003",
+     "N004",
+     "N006"
+    ],
+    "conclusion": [
+     "N001",
+     "N007"
+    ],
+    "excerpt": [
+     "N005"
+    ],
+    "method": [
+     "N002"
+    ],
+    "question": [
+     "N008"
+    ],
+    "reusable": [
+     "N002"
+    ]
+   },
+   "by_tag": {
+    "主结果": [
+     "N001",
+     "N007"
+    ],
+    "低数据": [
+     "N003",
+     "N004"
+    ],
+    "图神经网络": [
+     "N002"
+    ],
+    "待复核": [
+     "N003"
+    ],
+    "推导": [
+     "N005"
+    ],
+    "推广性": [
+     "N008"
+    ],
+    "方法": [
+     "N002"
+    ],
+    "版本差异": [
+     "N006"
+    ],
+    "逆合成": [
+     "N001",
+     "N007"
+    ]
+   },
+   "by_file": {
+    "clippings/2020_arxiv_preprint.md": [
+     "N006",
+     "N007"
+    ],
+    "readings/2022_retrosynthesis_review.pdf": [
+     "N001",
+     "N002",
+     "N003",
+     "N004",
+     "N008"
+    ],
+    "scans/2021_handwritten_notes.pdf": [
+     "N005"
+    ]
+   },
+   "by_page": {
+    "clippings/2020_arxiv_preprint.md#p1": [
+     "N006",
+     "N007"
+    ],
+    "readings/2022_retrosynthesis_review.pdf#p3": [
+     "N001",
+     "N002",
+     "N003",
+     "N008"
+    ],
+    "readings/2022_retrosynthesis_review.pdf#p4": [
+     "N004"
+    ],
+    "scans/2021_handwritten_notes.pdf#p1": [
+     "N005"
+    ]
+   },
+   "by_version_group": {
+    "图神经网络逆合成综述正式版": [
+     "N001",
+     "N002",
+     "N003",
+     "N004",
+     "N008"
+    ],
+    "手写笔记扫描件": [
+     "N005"
+    ],
+    "预印本网页剪藏": [
+     "N006",
+     "N007"
+    ]
+   },
+   "term_index_size": 158,
+   "adjacency": {
+    "N001": [
+     "N003",
+     "N004",
+     "N007"
+    ],
+    "N002": [
+     "N008"
+    ],
+    "N003": [
+     "N001",
+     "N004",
+     "N007"
+    ],
+    "N004": [
+     "N001",
+     "N003",
+     "N007"
+    ],
+    "N007": [
+     "N001",
+     "N003",
+     "N004"
+    ],
+    "N008": [
+     "N002"
+    ]
+   },
+   "entry_points": [
+    "按维度（by_aspect）",
+    "按标签（by_tag）",
+    "按来源文件（by_file，别名归一到规范文件）",
+    "按页（by_page）",
+    "按版本组（by_version_group）",
+    "按术语（term_index，见 evidence.index.term_index_sample）"
+   ],
+   "term_index_sample": {
+    "12": [
+     "N004"
+    ],
+    "52.3": [
+     "N001",
+     "N007"
+    ],
+    "mpnn": [
+     "N006"
+    ],
+    "top-1": [
+     "N001",
+     "N007"
+    ],
+    "uspto-50k": [
+     "N001",
+     "N007"
+    ],
+    "一种": [
+     "N008"
+    ],
+    "一致": [
+     "N001",
+     "N003",
+     "N007"
+    ],
+    "上的": [
+     "N001",
+     "N007"
+    ],
+    "下准": [
+     "N004"
+    ],
+    "下未": [
+     "N003"
+    ],
+    "下降": [
+     "N004"
+    ],
+    "不一": [
+     "N003"
+    ],
+    "不同": [
+     "N006"
+    ],
+    "与主": [
+     "N003",
+     "N004"
+    ],
+    "与正": [
+     "N006",
+     "N007"
+    ],
+    "与表": [
+     "N001"
+    ],
+    "个百": [
+     "N004"
+    ],
+    "中心": [
+     "N002",
+     "N008"
+    ],
+    "中该": [
+     "N006"
+    ],
+    "中间": [
+     "N005"
+    ],
+    "主结": [
+     "N001",
+     "N003",
+     "N004"
+    ],
+    "了一": [
+     "N008"
+    ],
+    "交叉": [
+     "N007"
+    ],
+    "产率": [
+     "N002"
+    ],
+    "以直": [
+     "N002"
+    ],
+    "们提": [
+     "N008"
+    ],
+    "们采": [
+     "N002"
+    ],
+    "件下": [
+     "N003",
+     "N004"
+    ],
+    "传递": [
+     "N002"
+    ],
+    "低数": [
+     "N003",
+     "N004"
+    ],
+    "作交": [
+     "N007"
+    ],
+    "做分": [
+     "N002"
+    ],
+    "关的": [
+     "N001",
+     "N007"
+    ],
+    "关系": [
+     "N004"
+    ],
+    "关键": [
+     "N001"
+    ],
+    "准确": [
+     "N001",
+     "N004",
+     "N007"
+    ],
+    "出了": [
+     "N008"
+    ],
+    "分点": [
+     "N004"
+    ],
+    "分类": [
+     "N002"
+    ],
+    "到产": [
+     "N002"
+    ],
+    "到新": [
+     "N008"
+    ],
+    "印本": [
+     "N006"
+    ],
+    "印证": [
+     "N007"
+    ],
+    "叉印": [
+     "N007"
+    ],
+    "反应": [
+     "N002",
+     "N008"
+    ],
+    "口径": [
+     "N003"
+    ],
+    "可以": [
+     "N002"
+    ],
+    "可作": [
+     "N007"
+    ],
+    "可复": [
+     "N002"
+    ],
+    "名与": [
+     "N006"
+    ],
+    "否推": [
+     "N008"
+    ],
+    "命名": [
+     "N006"
+    ],
+    "器并": [
+     "N002"
+    ],
+    "器结": [
+     "N002"
+    ],
+    "在低": [
+     "N003"
+    ],
+    "在反": [
+     "N002"
+    ],
+    "处推": [
+     "N005"
+    ],
+    "复核": [
+     "N003",
+     "N006"
+    ],
+    "复现": [
+     "N003"
+    ],
+    "复用": [
+     "N002"
+    ]
+   }
+  },
+  "lookups": [
+   {
+    "query_id": "LQ1",
+    "text": "低数据条件下准确率为什么会下降",
+    "hits": [
+     {
+      "note_id": "N004",
+      "score": 12.98,
+      "matched_terms": [
+       "下准",
+       "下降",
+       "件下",
+       "低数",
+       "准确",
+       "据条",
+       "数据",
+       "条件"
+      ],
+      "aspect": "caveat",
+      "usable": true,
+      "source": {
+       "path": "readings/2022_retrosynthesis_review.pdf",
+       "page": 4,
+       "char_range": [
+        12,
+        31
+       ]
+      },
+      "claim": "待验证：与主结果的关系还没有解释",
+      "quote": "低数据条件下准确率下降 12 个百分点"
+     },
+     {
+      "note_id": "N003",
+      "score": 7.3547,
+      "matched_terms": [
+       "件下",
+       "低数",
+       "据条",
+       "数据",
+       "条件"
+      ],
+      "aspect": "caveat",
+      "usable": false,
+      "source": {
+       "path": "readings/2022_retrosynthesis_review.pdf",
+       "page": 3,
+       "char_range": [
+        91,
+        104
+       ]
+      },
+      "claim": "与主结果不一致，需要复核样本量口径",
+      "quote": "该结论在低数据条件下未复现"
+     },
+     {
+      "note_id": "N001",
+      "score": 3.2998,
+      "matched_terms": [
+       "准确",
+       "率为",
+       "确率"
+      ],
+      "aspect": "conclusion",
+      "usable": true,
+      "source": {
+       "path": "readings/2022_retrosynthesis_review.pdf",
+       "page": 3,
+       "char_range": [
+        18,
+        57
+       ]
+      },
+      "claim": "关键结论：与表 2 的主结果一致",
+      "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+     },
+     {
+      "note_id": "N007",
+      "score": 3.1644,
+      "matched_terms": [
+       "准确",
+       "率为",
+       "确率"
+      ],
+      "aspect": "conclusion",
+      "usable": true,
+      "source": {
+       "path": "clippings/2020_arxiv_preprint.md",
+       "page": 1,
+       "char_range": [
+        27,
+        66
+       ]
+      },
+      "claim": "结论与正式版一致，可作交叉印证",
+      "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+     }
+    ],
+    "hit_count": 4,
+    "answer": "库内证据摘录（不外加结论）：N004「待验证：与主结果的关系还没有解释」——引文：“低数据条件下准确率下降 12 个百分点”（readings/2022_retrosynthesis_review.pdf 第4页）；N003「与主结果不一致，需要复核样本量口径」——引文：“该结论在低数据条件下未复现”（readings/2022_retrosynthesis_review.pdf 第3页）",
+    "recall": "ok",
+    "missing_terms": [
+     "为什",
+     "什么",
+     "么会",
+     "会下"
+    ],
+    "min_score": 0.5,
+    "reason_if_empty": ""
+   },
+   {
+    "query_id": "LQ2",
+    "text": "预印本与正式版的命名差异",
+    "hits": [
+     {
+      "note_id": "N006",
+      "score": 12.1281,
+      "matched_terms": [
+       "与正",
+       "印本",
+       "命名",
+       "差异",
+       "式版",
+       "正式",
+       "预印"
+      ],
+      "aspect": "caveat",
+      "usable": true,
+      "source": {
+       "path": "clippings/2020_arxiv_preprint.md",
+       "page": 1,
+       "char_range": [
+        67,
+        83
+       ]
+      },
+      "claim": "需复核版本差异：命名与正式版不同",
+      "quote": "预印本版本中该方法称为 MPNN"
+     },
+     {
+      "note_id": "N007",
+      "score": 3.8362,
+      "matched_terms": [
+       "与正",
+       "式版",
+       "正式"
+      ],
+      "aspect": "conclusion",
+      "usable": true,
+      "source": {
+       "path": "clippings/2020_arxiv_preprint.md",
+       "page": 1,
+       "char_range": [
+        27,
+        66
+       ]
+      },
+      "claim": "结论与正式版一致，可作交叉印证",
+      "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+     }
+    ],
+    "hit_count": 2,
+    "answer": "库内证据摘录（不外加结论）：N006「需复核版本差异：命名与正式版不同」——引文：“预印本版本中该方法称为 MPNN”（clippings/2020_arxiv_preprint.md 第1页）；N007「结论与正式版一致，可作交叉印证」——引文：“模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。”（clippings/2020_arxiv_preprint.md 第1页）",
+    "recall": "ok",
+    "missing_terms": [
+     "本与",
+     "版的",
+     "的命",
+     "名差"
+    ],
+    "min_score": 0.5,
+    "reason_if_empty": ""
+   }
+  ],
+  "orphan_annotations": [
+   {
+    "annotation_id": "A5",
+    "code": "R_ASPECT_UNRESOLVED",
+    "reason": "批注内容未命中任何笔记维度线索词：按原文摘录保留，不臆测维度"
+   }
+  ],
+  "library_report": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "inline_entries": 3,
+   "alias_groups": [],
+   "near_duplicate_hints": [],
+   "version_groups": [],
+   "version_confusion_hints": [],
+   "gaps": [
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "version_notes_fields": "version_notes, admin_notes, versions"
+  },
+  "ops_log": [
+   {
+    "op": "repair_file_gap",
+    "targets": [
+     "scans/2021_handwritten_notes.pdf"
+    ],
+    "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+    "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR）；本流程诚实跳过，不伪造文本",
+    "input_readonly": true
+   },
+   {
+    "op": "rebuild_index",
+    "targets": [
+     "canonical_files"
+    ],
+    "basis": "哈希清单/别名归一/版本组已重建",
+    "action": "建议检索索引以 canonical 文件为键重建；未执行",
+    "input_readonly": true
+   }
+  ]
+ },
+ "evidence": {
+  "materials": {
+   "files": [
+    {
+     "file_id": "M1",
+     "path": "readings/2022_retrosynthesis_review.pdf",
+     "source": "inline",
+     "ext": "pdf",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "n_chars": 233,
+     "ocr_confidence": null,
+     "pages": 2,
+     "has_text_layer": true,
+     "sha256": "3624766db851ebf33eff55cb3e03070349437b29218c70560b9e28f06ba89377",
+     "alias_of": null,
+     "version": "v2",
+     "doc_key": "图神经网络逆合成综述正式版",
+     "year": 2022
+    },
+    {
+     "file_id": "M2",
+     "path": "clippings/2020_arxiv_preprint.md",
+     "source": "inline",
+     "ext": "md",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "n_chars": 93,
+     "ocr_confidence": null,
+     "pages": 1,
+     "has_text_layer": true,
+     "sha256": "7899a707d77594a91b53374aae4fad854afab4314dfe2db8646fb28c47354865",
+     "alias_of": null,
+     "version": "v1",
+     "doc_key": "预印本网页剪藏",
+     "year": 2020
+    },
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "source": "inline",
+     "ext": "pdf",
+     "size": null,
+     "file_sha256": null,
+     "extraction_method": null,
+     "n_chars": 0,
+     "ocr_confidence": null,
+     "pages": 0,
+     "has_text_layer": false,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "alias_of": null,
+     "version": "v1",
+     "doc_key": "手写笔记扫描件",
+     "year": 2021
+    }
+   ],
+   "unreadable": [
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "page_label_policy": "物理页=page，印刷页=page_label；缺标签记 label_source=absent，不用物理页冒充印刷页",
+   "extraction_chain": "内联正文 → 侧车 .txt/.ocr.txt（可带 .ocr.json 置信度）→ pdf_min 文本层 → DOCX zip+xml → 纯文本 → 诚实 gap"
+  },
+  "library": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "inline_entries": 3,
+   "alias_groups": [],
+   "near_duplicate_hints": [],
+   "version_groups": [],
+   "version_confusion_hints": [],
+   "gaps": [
+    {
+     "file_id": "M3",
+     "path": "scans/2021_handwritten_notes.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与交接清单"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "two_column_policy": "PDF 页按 x 间距聚类列（启发式），two_column=true 时 found_on 附阅读顺序提示；引文跨栏会逐字失败，走模糊匹配并如实标注"
+  },
+  "handoff": {
+   "manifest_json": "handoff_manifest.json",
+   "manifest_docx": "handoff_manifest.docx",
+   "docx_sha256": "80506d630a914dd8eeb5c472ea4aa4460b8de93bf635fe7114cee6c2053e10c7",
+   "note": "交接清单写在输出目录（/app/output），绝不写回输入库"
+  },
+  "type_color": {
+   "type_table_version": "0.1.0",
+   "types": {
+    "highlight": {
+     "label": "高亮",
+     "aliases": [
+      "highlight",
+      "高亮",
+      "highlight_add",
+      "annotation"
+     ]
+    },
+    "underline": {
+     "label": "划线",
+     "aliases": [
+      "underline",
+      "下划线",
+      "划线",
+      "strikeout"
+     ]
+    },
+    "margin_note": {
+     "label": "页边批注",
+     "aliases": [
+      "margin_note",
+      "margin",
+      "页边批注",
+      "旁注",
+      "note",
+      "text"
+     ]
+    },
+    "handwritten": {
+     "label": "手写标记",
+     "aliases": [
+      "handwritten",
+      "ink",
+      "手写",
+      "手写批注",
+      "pen"
+     ]
+    },
+    "sticky_note": {
+     "label": "便签",
+     "aliases": [
+      "sticky_note",
+      "sticky",
+      "便签",
+      "comment"
+     ]
+    },
+    "region": {
+     "label": "区域框选",
+     "aliases": [
+      "region",
+      "area",
+      "框选",
+      "rect"
+     ]
+    }
+   },
+   "colors": {
+    "yellow": {
+     "label": "黄色",
+     "meaning": "关键结论/必读"
+    },
+    "green": {
+     "label": "绿色",
+     "meaning": "方法或方案可复用"
+    },
+    "red": {
+     "label": "红色",
+     "meaning": "待验证/存疑/与本文结论冲突"
+    },
+    "blue": {
+     "label": "蓝色",
+     "meaning": "背景与定义"
+    },
+    "orange": {
+     "label": "橙色",
+     "meaning": "待跟进的问题"
+    }
+   },
+   "unknown_color_annotations": [
+    "A4"
+   ],
+   "unknown_type_annotations": [
+    "A6"
+   ],
+   "note": "类型先分高亮/划线/页边/手写，再谈语义；未知颜色不猜含义"
+  },
+  "anchors": {
+   "summary": {
+    "verified": 5,
+    "page_mismatch": 1,
+    "unverifiable": 1,
+    "not_found": 1
+   },
+   "per_annotation": [
+    {
+     "annotation_id": "A1",
+     "status": "verified",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      18,
+      57
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A2",
+     "status": "verified",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      58,
+      78
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A3",
+     "status": "page_mismatch",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "corrected_page": 3,
+     "corrected_char_range": [
+      91,
+      104
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": "引文实际出现在第 [3] 页（物理页），与批注记录的页 4/标签 4 不一致"
+    },
+    {
+     "annotation_id": "A4",
+     "status": "verified",
+     "declared_page": 4,
+     "declared_page_label": "4",
+     "corrected_page": 4,
+     "corrected_char_range": [
+      12,
+      31
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A5",
+     "status": "unverifiable",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": null,
+     "corrected_char_range": null,
+     "char_span_checked": null,
+     "two_column_hint": null,
+     "fuzzy": null,
+     "reason": "材料无可用文本层（扫描件无侧车/PDF 加密或损坏），引文无法逐字定位；坐标只能沿用批注自带值"
+    },
+    {
+     "annotation_id": "A6",
+     "status": "verified",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": 1,
+     "corrected_char_range": [
+      67,
+      83
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A7",
+     "status": "verified",
+     "declared_page": 1,
+     "declared_page_label": null,
+     "corrected_page": 1,
+     "corrected_char_range": [
+      27,
+      66
+     ],
+     "char_span_checked": true,
+     "two_column_hint": false,
+     "fuzzy": null,
+     "reason": ""
+    },
+    {
+     "annotation_id": "A8",
+     "status": "not_found",
+     "declared_page": 3,
+     "declared_page_label": "3",
+     "corrected_page": null,
+     "corrected_char_range": null,
+     "char_span_checked": null,
+     "two_column_hint": null,
+     "fuzzy": {
+      "similarity": 0.6667,
+      "page": 3
+     },
+     "reason": "引文在材料正文中找不到（模糊匹配最高相似度 0.6667 低于阈值 0.72；可能 OCR 漂移、跨栏拼接或来自其它版本），不硬挂位置"
+    }
+   ],
+   "method": "引文先在提取文本中做大小写归一逐字定位（命中后自检 char_span 切片与引文一致）；逐字失败降级 difflib 模糊匹配，达阈值如实标 fuzzy_matched（不作字符级锚点），低于阈值记 not_found；页/标签双口径比对；双栏页给阅读顺序提示；OCR 低置信降级"
+  },
+  "notes": {
+   "schema": [
+    "note_id",
+    "annotation_ids",
+    "aspects",
+    "claim",
+    "support_quote",
+    "source",
+    "type",
+    "color",
+    "tags",
+    "ocr_degraded",
+    "usable",
+    "confidence"
+   ],
+   "confidence_formula": "confidence = anchor_status 权重 × 类型系数(未知类型 0.85) × 引文系数(无引文 0.7) × OCR 降级系数(0.8)",
+   "annotation_note_map": {
+    "N001": [
+     "A1"
+    ],
+    "N002": [
+     "A2"
+    ],
+    "N003": [
+     "A3"
+    ],
+    "N004": [
+     "A4"
+    ],
+    "N005": [
+     "A5"
+    ],
+    "N006": [
+     "A6"
+    ],
+    "N007": [
+     "A7"
+    ],
+    "N008": [
+     "A8"
+    ]
+   },
+   "orphan": [
+    {
+     "annotation_id": "A5",
+     "code": "R_ASPECT_UNRESOLVED",
+     "reason": "批注内容未命中任何笔记维度线索词：按原文摘录保留，不臆测维度"
+    }
+   ]
+  },
+  "links": {
+   "rule": "仅在两条笔记共享 ≥link_min_shared_terms 个非平凡术语（或引用同一段原文的跨版本/重复文件副本）时连边；共享 1 个术语一律抑制，防止仅凭一个共用词把笔记连成一片。",
+   "min_shared_terms": 2,
+   "max_per_note": 3,
+   "kept": 7,
+   "suppressed": 7,
+   "suppressed_detail": [
+    {
+     "from": "N001",
+     "to": "N002",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N001",
+     "to": "N006",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N002",
+     "to": "N006",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N002",
+     "to": "N007",
+     "shared_terms": [
+      "方法"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N003",
+     "to": "N005",
+     "shared_terms": [
+      "需要"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N003",
+     "to": "N006",
+     "shared_terms": [
+      "复核"
+     ],
+     "code": "R_LINK_SUPPRESSED",
+     "reason": "仅共享 1 个术语，低于阈值 2：抑制过度连接"
+    },
+    {
+     "from": "N006",
+     "to": "N007",
+     "shared_terms": [
+      "与正",
+      "式版",
+      "方法",
+      "正式"
+     ],
+     "basis": "shared_terms",
+     "code": "R_LINK_CAPPED",
+     "reason": "单条笔记连边已达上限 3，按强度（跨版本同引文 > 共享术语数）贪心保留其余截断"
+    }
+   ]
+  },
+  "retrieval": {
+   "entry_points": [
+    "按维度（by_aspect）",
+    "按标签（by_tag）",
+    "按来源文件（by_file，别名归一到规范文件）",
+    "按页（by_page）",
+    "按版本组（by_version_group）",
+    "按术语（term_index，见 evidence.index.term_index_sample）"
+   ],
+   "method": "BM25（kit.bm25_score，文档侧保留词频）+ 摘录式回答 + 原文回链；召回不足给缺词清单",
+   "bm25_params": {
+    "k1": 1.2,
+    "b": 0.75
+   },
+   "lookup_threshold": 0.5,
+   "lookups": [
+    {
+     "query_id": "LQ1",
+     "text": "低数据条件下准确率为什么会下降",
+     "hits": [
+      {
+       "note_id": "N004",
+       "score": 12.98,
+       "matched_terms": [
+        "下准",
+        "下降",
+        "件下",
+        "低数",
+        "准确",
+        "据条",
+        "数据",
+        "条件"
+       ],
+       "aspect": "caveat",
+       "usable": true,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 4,
+        "char_range": [
+         12,
+         31
+        ]
+       },
+       "claim": "待验证：与主结果的关系还没有解释",
+       "quote": "低数据条件下准确率下降 12 个百分点"
+      },
+      {
+       "note_id": "N003",
+       "score": 7.3547,
+       "matched_terms": [
+        "件下",
+        "低数",
+        "据条",
+        "数据",
+        "条件"
+       ],
+       "aspect": "caveat",
+       "usable": false,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 3,
+        "char_range": [
+         91,
+         104
+        ]
+       },
+       "claim": "与主结果不一致，需要复核样本量口径",
+       "quote": "该结论在低数据条件下未复现"
+      },
+      {
+       "note_id": "N001",
+       "score": 3.2998,
+       "matched_terms": [
+        "准确",
+        "率为",
+        "确率"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "readings/2022_retrosynthesis_review.pdf",
+        "page": 3,
+        "char_range": [
+         18,
+         57
+        ]
+       },
+       "claim": "关键结论：与表 2 的主结果一致",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      },
+      {
+       "note_id": "N007",
+       "score": 3.1644,
+       "matched_terms": [
+        "准确",
+        "率为",
+        "确率"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         27,
+         66
+        ]
+       },
+       "claim": "结论与正式版一致，可作交叉印证",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      }
+     ],
+     "hit_count": 4,
+     "answer": "库内证据摘录（不外加结论）：N004「待验证：与主结果的关系还没有解释」——引文：“低数据条件下准确率下降 12 个百分点”（readings/2022_retrosynthesis_review.pdf 第4页）；N003「与主结果不一致，需要复核样本量口径」——引文：“该结论在低数据条件下未复现”（readings/2022_retrosynthesis_review.pdf 第3页）",
+     "recall": "ok",
+     "missing_terms": [
+      "为什",
+      "什么",
+      "么会",
+      "会下"
+     ],
+     "min_score": 0.5,
+     "reason_if_empty": ""
+    },
+    {
+     "query_id": "LQ2",
+     "text": "预印本与正式版的命名差异",
+     "hits": [
+      {
+       "note_id": "N006",
+       "score": 12.1281,
+       "matched_terms": [
+        "与正",
+        "印本",
+        "命名",
+        "差异",
+        "式版",
+        "正式",
+        "预印"
+       ],
+       "aspect": "caveat",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         67,
+         83
+        ]
+       },
+       "claim": "需复核版本差异：命名与正式版不同",
+       "quote": "预印本版本中该方法称为 MPNN"
+      },
+      {
+       "note_id": "N007",
+       "score": 3.8362,
+       "matched_terms": [
+        "与正",
+        "式版",
+        "正式"
+       ],
+       "aspect": "conclusion",
+       "usable": true,
+       "source": {
+        "path": "clippings/2020_arxiv_preprint.md",
+        "page": 1,
+        "char_range": [
+         27,
+         66
+        ]
+       },
+       "claim": "结论与正式版一致，可作交叉印证",
+       "quote": "模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。"
+      }
+     ],
+     "hit_count": 2,
+     "answer": "库内证据摘录（不外加结论）：N006「需复核版本差异：命名与正式版不同」——引文：“预印本版本中该方法称为 MPNN”（clippings/2020_arxiv_preprint.md 第1页）；N007「结论与正式版一致，可作交叉印证」——引文：“模板无关的方法在 USPTO-50k 上的 top-1 准确率为 52.3%。”（clippings/2020_arxiv_preprint.md 第1页）",
+     "recall": "ok",
+     "missing_terms": [
+      "本与",
+      "版的",
+      "的命",
+      "名差"
+     ],
+     "min_score": 0.5,
+     "reason_if_empty": ""
+    }
+   ]
+  },
+  "ops_log": {
+   "entries": [
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "scans/2021_handwritten_notes.pdf"
+     ],
+     "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+     "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR）；本流程诚实跳过，不伪造文本",
+     "input_readonly": true
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "canonical_files"
+     ],
+     "basis": "哈希清单/别名归一/版本组已重建",
+     "action": "建议检索索引以 canonical 文件为键重建；未执行",
+     "input_readonly": true
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议；输入库前后哈希对照见 evidence.library.integrity"
+  },
+  "contract": {
+   "annotations": "批注清单：文件+哈希+页（物理页与印刷页）+坐标或字符区间+类型+颜色及其含义+原文片段+校正后的锚点",
+   "notes": "结构化笔记：问题/方法/结论/可复用要点/待验证疑点 + 每条挂 annotation_id + 原文片段 + 来源定位 + 置信度",
+   "links": "笔记间关联及依据（共享术语或同一引文的跨版本副本），被抑制的关联也留记录",
+   "index": "检索入口：按维度/标签/来源文件/页/术语的索引与召回演示",
+   "evidence_map": "类型与颜色表、锚点校正逐条结果、笔记↔批注映射、连边规则与抑制记录、材料哈希",
+   "状态说明": "完成/部分完成、锚点未校正类批注、未知颜色/类型、无文本层材料、不确定性"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-047-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "annotations",
+     "evidence_map",
+     "index",
+     "links",
+     "notes",
+     "状态说明"
+    ]
+   },
+   {
+    "step": "library_intake",
+    "seq": 2,
+    "mode": "inline",
+    "files": 3,
+    "gaps": 1,
+    "alias_groups": 0,
+    "version_groups": 0
+   },
+   {
+    "step": "intake",
+    "seq": 3,
+    "materials": 3,
+    "annotations": 8,
+    "text_gaps": 1
+   },
+   {
+    "step": "handoff_written",
+    "seq": 4,
+    "files": 2
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-047-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "批注抽取与类型/颜色归一",
+   "锚点校正",
+   "笔记结构化",
+   "知识关联与抑制",
+   "检索闭环（BM25+回链）",
+   "恢复建议与交接清单"
+  ],
+  "unmet": [
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的页与引文实际所在页不一致，已给校正页与字符区间"
+   },
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的引文逐字与模糊匹配均未命中，标 not_found 不硬挂位置"
+   },
+   {
+    "item": "锚点校正",
+    "reason": "1 条批注的材料无可用文本层，锚点不可校正"
+   },
+   {
+    "item": "文件库提取",
+    "reason": "1 份 R_NO_TEXT_LAYER——诚实跳过，不伪造文本层（详见 evidence.library.gaps）"
+   },
+   {
+    "item": "文件库目录",
+    "reason": "case 未声明文件库目录（materials_root/library_path 等字符串路径），按内联材料处理"
+   }
+  ],
+  "notes": [
+   "1 条批注未命中任何维度线索，按原文摘录保留（不臆测维度）",
+   "7 对候选关联被抑制（共享术语不足或超过单条笔记连边上限）"
+  ]
+ },
+ "uncertainty": [
+  {
+   "item": "颜色语义",
+   "reason": "1 条批注使用了词表外的颜色，含义留空未猜"
+  },
+  {
+   "item": "批注类型",
+   "reason": "1 条批注的类型不在类型表内，标 unknown_type 未并入高亮"
+  }
+ ]
+}

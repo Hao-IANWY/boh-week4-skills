@@ -1,0 +1,161 @@
+{
+ "seq": 47,
+ "title": "阅读批注与知识沉淀",
+ "category": "资料管理",
+ "queries": [
+  "pdf annotation extraction tool",
+  "highlight annotation knowledge notes",
+  "hypothesis annotation agent"
+ ],
+ "candidates": [
+  {
+   "full_name": "logseq/logseq",
+   "url": "https://github.com/logseq/logseq",
+   "stars": 45648,
+   "desc": "A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV",
+   "topics": [
+    "clojure",
+    "clojurescript",
+    "git",
+    "graph",
+    "knowledge-base",
+    "knowledge-graph"
+   ],
+   "lang": "Clojure",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-11-18T10:43:31Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "obsidianmd/obsidian-releases",
+   "url": "https://github.com/obsidianmd/obsidian-releases",
+   "stars": 23370,
+   "desc": "Community plugins list, theme list, and releases of Obsidian.",
+   "topics": [
+    "bases",
+    "jsoncanvas",
+    "markdown",
+    "md",
+    "obsidian",
+    "obsidian-md"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-11-18T11:20:48Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "zotero/zotero",
+   "url": "https://github.com/zotero/zotero",
+   "stars": 15980,
+   "desc": "Zotero is a free, easy-to-use tool to help you collect, organize, annotate, cite, and share your research sources.",
+   "topics": [],
+   "lang": "JavaScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-17T20:03:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "hypothesis/client",
+   "url": "https://github.com/hypothesis/client",
+   "stars": 744,
+   "desc": "The Hypothesis web-based annotation client.",
+   "topics": [
+    "annotation",
+    "frontend",
+    "hypothesis",
+    "javascript"
+   ],
+   "lang": "Mustache",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-17T15:25:47Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "0xabu/pdfannots",
+   "url": "https://github.com/0xabu/pdfannots",
+   "stars": 676,
+   "desc": "Extracts and formats text annotations from a PDF file",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-12T14:49:41Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "Aryia-Behroziuan/References",
+   "url": "https://github.com/Aryia-Behroziuan/References",
+   "stars": 78,
+   "desc": "Poole, Mackworth & Goebel 1998, p. 1.  Russell & Norvig 2003, p. 55.  Definition of AI as the study of intelligent agents: Poole, Mackworth & Goebel (1998), which provides the version that is used in this article. These…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2022-09-02T16:06:15Z",
+   "via": [
+    "hypothesis annotation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cboulanger/citext",
+   "url": "https://github.com/cboulanger/citext",
+   "stars": 4,
+   "desc": "A web-based annotation tool and frontend for ML-based citation extraction from PDFs based on the AnyStyle library",
+   "topics": [
+    "anystyle",
+    "bibliometric-analysis",
+    "citation-mining",
+    "citations",
+    "references",
+    "textmining"
+   ],
+   "lang": "JavaScript",
+   "license": "GPL-3.0",
+   "pushed_at": "2023-05-19T20:07:04Z",
+   "via": [
+    "pdf annotation extraction tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "KunalKalawant/Engineering-Drawing-",
+   "url": "https://github.com/KunalKalawant/Engineering-Drawing-",
+   "stars": 4,
+   "desc": "Developed a desktop-based engineering drawing analyzer with OCR-driven text extraction, interactive PDF annotation, zoom tools, and CSV export using a modular multi-threaded architecture",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-01-18T10:55:19Z",
+   "via": [
+    "pdf annotation extraction tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Kakauiber/Cat_Highlighter",
+   "url": "https://github.com/Kakauiber/Cat_Highlighter",
+   "stars": 2,
+   "desc": "A Chrome extension for web highlights, page notes, annotations, and knowledge export. 网页与大模型对话页面高亮划线、随手记工具",
+   "topics": [
+    "browser-extension",
+    "browser-tool",
+    "chatgpt",
+    "chrome-extension",
+    "knowledge-management",
+    "markdown"
+   ],
+   "lang": "JavaScript",
+   "license": "MIT",
+   "pushed_at": "2026-09-16T03:12:28Z",
+   "via": [
+    "highlight annotation knowledge notes"
+   ],
+   "seed": false
+  }
+ ]
+}

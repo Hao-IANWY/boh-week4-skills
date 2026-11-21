@@ -1,0 +1,160 @@
+{
+ "seq": 48,
+ "title": "深度研究 Agent",
+ "queries": [
+  "deep research agent",
+  "multi step research agent"
+ ],
+ "skills": [
+  {
+   "name": "deep-research-agent",
+   "slug": "shobcoder-shob-deep-research-agent",
+   "author": "shobcoder",
+   "category": "research",
+   "description": "Comprehensive research agent for in-depth investigation. Use when users ask for deep research, comprehensive analysis, market research, academic surveys, competitive analysis, technology trends, or any topic requiring 100+ source verification. Triggers on requests like \"investigate\", \"research\", \"analyze\", \"create a r…",
+   "description_zh": null,
+   "repo_url": "https://github.com/shobcoder/shob/tree/main/skills/deep-research-agent",
+   "github_stars": 582
+  },
+  {
+   "name": "deep-research",
+   "slug": "brycewang-stanford-auto-empirical-research-skills-deep-research",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "Universal deep research agent team. 13-agent pipeline for rigorous academic research on any topic. 7 modes: full research, quick brief, paper review, lit-review, fact-check, Socratic guided research dialogue, and systematic review with optional meta-analysis. Covers research question formulation, Socratic mentoring, m…",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills#skills~24-Imbad0202-academic-research-skills~deep-research",
+   "github_stars": 2650
+  },
+  {
+   "name": "deep-research",
+   "slug": "imbad0202-academic-research-skills-deep-research",
+   "author": "Imbad0202",
+   "category": "research",
+   "description": "13-agent universal research pipeline with 7 modes: full research, quick brief, paper review, lit-review, fact-check, Socratic dialogue, and systematic review with optional meta-analysis. Covers question formulation, methodology design, source verification, cross-synthesis, and APA 7.0 reporting.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Imbad0202/academic-research-skills#deep-research",
+   "github_stars": 1734
+  },
+  {
+   "name": "deep-research",
+   "slug": "zenobi-us-dotfiles-deep-research",
+   "author": "zenobi-us",
+   "category": "research",
+   "description": "A comprehensive research agent with rigorous methodology for systematic information gathering, verification, and structured documentation.",
+   "description_zh": "一个具有严谨方法论的研究代理，用于系统化信息收集、验证和结构化文档生成。",
+   "repo_url": "https://github.com/zenobi-us/dotfiles#ai~files~skills~research~deep-research",
+   "github_stars": 48
+  },
+  {
+   "name": "deep-research-pro",
+   "slug": "alekseiul-sprut-agent-kit-deep-research-pro",
+   "author": "AlekseiUL",
+   "category": "research",
+   "description": "Multi-source deep research agent. Searches the web, synthesizes findings, and delivers cited reports.",
+   "description_zh": null,
+   "repo_url": "https://github.com/AlekseiUL/sprut-agent-kit/tree/main/skills/deep-research-pro",
+   "github_stars": 64
+  },
+  {
+   "name": "deep-research",
+   "slug": "sanjay3290-ai-skills-deep-research",
+   "author": "sanjay3290",
+   "category": "development",
+   "description": "Execute autonomous multi-step research using Google Gemini Deep Research Agent. Use for: market analysis, competitive landscaping, literature reviews, technical research, due diligence. Takes 2-10 minutes but produces detailed, cited reports. Costs $2-5 per task.",
+   "description_zh": null,
+   "repo_url": "https://github.com/sanjay3290/ai-skills#skills~deep-research",
+   "github_stars": 184
+  },
+  {
+   "name": "gemini-deep-research",
+   "slug": "openclaw-skills-gemini-deep-research",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Perform complex, long-running research tasks using Gemini Deep Research Agent. Use when asked to research topics requiring multi-source synthesis, competitive analysis, market research, or comprehensive technical investigations that benefit from systematic web search and analysis.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~arun-8687~gemini-deep-research",
+   "github_stars": 3682
+  },
+  {
+   "name": "deep-research",
+   "slug": "openclaw-skills-deep-research-plan",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Automated deep research that performs comprehensive multi-source investigation and produces detailed reports with citations. Use when user requests research, investigation, or in-depth analysis of any topic. Capabilities: generate structured research plans, and start sub agent to execute the plan.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~bird-frank~deep-research-plan",
+   "github_stars": 3688
+  },
+  {
+   "name": "comprehensive-research-agent",
+   "slug": "muratcankoylan-agent-skills-for-context-engineering-comprehensive-research-agent",
+   "author": "muratcankoylan",
+   "category": "development",
+   "description": "Ensure thorough validation, error recovery, and transparent reasoning in research tasks with multiple tool calls",
+   "description_zh": null,
+   "repo_url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering#examples-interleaved-thinking-generated_skills-comprehensive-research-agent",
+   "github_stars": 14547
+  },
+  {
+   "name": "Gemini Deep Research",
+   "slug": "openclaw-skills-jirboy-gemini-deep-research-jirboy",
+   "author": "jirboy",
+   "category": "development",
+   "description": "Performs complex, multi-step research on specified topics, synthesizing web data into detailed markdown reports with progress updates, now integrated into re...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/gemini-deep-research-jirboy",
+   "github_stars": 0
+  },
+  {
+   "name": "web-search-exa",
+   "slug": "openclaw-skills-web-search-exa",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Neural web search, content extraction, company and people research, code search, and deep research via the Exa MCP server. Use when you need to: (1) search the web with semantic understanding — not just keywords, (2) find research papers, news, tweets, companies, or people, (3) extract clean content from URLs, (4) fin…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~theishangoswami~web-search-exa",
+   "github_stars": 3729
+  },
+  {
+   "name": "jina",
+   "slug": "openclaw-skills-jina-ai",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Web reading and searching via Jina AI APIs. Fetch clean markdown from URLs (r.jina.ai), web search (s.jina.ai), or deep multi-step research (DeepSearch).",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~adhishthite~jina-ai",
+   "github_stars": 3652
+  },
+  {
+   "name": "deep-research",
+   "slug": "actionbook-actionbook-deep-research",
+   "author": "actionbook",
+   "category": "development",
+   "description": "Deep research and analysis tool. Generates comprehensive HTML reports on any topic, domain, paper, or technology. Use when user asks to research, analyze, investigate, deep-dive, or generate a report on any subject. Supports academic papers (arXiv), technologies, trends, comparisons, and general topics.",
+   "description_zh": null,
+   "repo_url": "https://github.com/actionbook/actionbook#playground~deep-research~skills~deep-research",
+   "github_stars": 1458
+  },
+  {
+   "name": "Claude SDK Expert",
+   "slug": "majiayu000-claude-skill-registry-claude-sdk",
+   "author": "majiayu000",
+   "category": "development",
+   "description": "Build autonomous AI agents using Claude Agent SDK with computer use, tool calling, MCP integration, and production best practices for Anthropic models",
+   "description_zh": null,
+   "repo_url": "https://github.com/majiayu000/claude-skill-registry#skills-data-claude-sdk",
+   "github_stars": 168
+  },
+  {
+   "name": "site",
+   "slug": "knockoutez-wigolo-site",
+   "author": "KnockOutEZ",
+   "category": "frontend",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/KnockOutEZ/wigolo/tree/main/site",
+   "github_stars": 4398
+  }
+ ]
+}

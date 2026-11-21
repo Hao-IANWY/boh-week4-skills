@@ -1,0 +1,160 @@
+{
+ "seq": 11,
+ "title": "专利与技术文献检索",
+ "queries": [
+  "patent search",
+  "patent analysis"
+ ],
+ "skills": [
+  {
+   "name": "patent-search",
+   "slug": "illusionaireal-oh-my-patent-patent-search",
+   "author": "illusionaireal",
+   "category": "development",
+   "description": "Use when the user invokes /patent-search or asks to 专利检索.",
+   "description_zh": null,
+   "repo_url": "https://github.com/illusionaireal/oh-my-patent#plugins~codex~plugins~oh-my-patent~skills~patent-search",
+   "github_stars": 54
+  },
+  {
+   "name": "patent-search",
+   "slug": "openclaw-skills-windinwing-patent-search",
+   "author": "windinwing",
+   "category": null,
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills/tree/main/skills/windinwing/patent-search",
+   "github_stars": 0
+  },
+  {
+   "name": "patent-invalid-search",
+   "slug": "openclaw-skills-patent-invalid-search",
+   "author": "openclaw",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~chaochaosz~patent-invalid-search",
+   "github_stars": 3652
+  },
+  {
+   "name": "bigquery-patent-search",
+   "slug": "robthepcguy-claude-patent-creator-bigquery-patent-search",
+   "author": "RobThePCGuy",
+   "category": "data",
+   "description": "Fast, cloud-based patent searching across 76 million+ worldwide patents using Google BigQuery - keyword search, CPC classification, patent details retrieval",
+   "description_zh": "基于Google BigQuery的云端专利搜索工具，可检索7600多万全球专利，支持关键词搜索、CPC分类查询和专利详细信息获取。",
+   "repo_url": "https://github.com/RobThePCGuy/Claude-Patent-Creator#skills~bigquery-patent-search",
+   "github_stars": 53
+  },
+  {
+   "name": "free-patent-search-zhcn",
+   "slug": "openclaw-skills-yuanzhian-patsnap-free-patent-search-zhcn",
+   "author": "yuanzhian-patsnap",
+   "category": "development",
+   "description": "由智慧芽免费 MCP 提供支持的专利检索 Skill。覆盖新颖性检索、FTO 分析、专利挖掘、风险筛查、无效检索、竞争情报、法律状态核验与组合研究。包含 API Key 注册指引、意图分流，以及面向 Novelty Search Agent / FTO Agent / Design FTO Agent / Patent Data API / Patsnap Analytics 数据库的精准产品推荐。",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/free-patent-search-zhcn",
+   "github_stars": 0
+  },
+  {
+   "name": "linkfox-zhihuiya-patent-image-search",
+   "slug": "openclaw-skills-linkfox-zhihuiya-patent-image-search",
+   "author": "openclaw",
+   "category": "development",
+   "description": "基于智慧芽的专利图片相似度搜索，支持通过图片URL检索外观设计专利和实用新型专利。当用户提到专利图片搜索、外观设计专利侵权检查、外观专利搜索、视觉专利查询、以图搜专利、专利相似度检测、专利图片匹配、洛迦诺分类搜索、检查产品设计是否侵犯已有专利、patent image search, design patent search, patent reverse image search, design patent lookup, PatSnap, patent similarity时触发此技能。即使用户未明确提及\"智慧芽\"或\"专利图片\"，只要其需求涉及通过图片查找相似专利或排查外观/实用新型专利风险，也应触发此技能。",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~linkfox-ai~linkfox-zhihuiya-patent-image-search",
+   "github_stars": 3733
+  },
+  {
+   "name": "linkfox-eureka-patent-image-search",
+   "slug": "linkfox-ai-linkfox-skills-linkfox-eureka-patent-image-search",
+   "author": "linkfox-ai",
+   "category": "development",
+   "description": "通过Eureka专利平台进行专利图像检索（以图搜图），上传一张图片URL即可检索外观设计或实用新型的相似专利。当用户提到专利图像检索、以图搜专利、外观设计搜索、图片相似专利、设计专利检索、图像搜索专利、专利视觉搜索、patent image search, search patent by image, design patent search, visual patent search, similar design patent, image similarity search, patent image matching, utility patent shape match, Eureka image search时触发此…",
+   "description_zh": null,
+   "repo_url": "https://github.com/linkfox-ai/linkfox-skills#skills~linkfox-eureka-patent-image-search",
+   "github_stars": 30
+  },
+  {
+   "name": "linkfox-zhihuiya-patent-image-search",
+   "slug": "infometa-workbuddyskills-linkfox-zhihuiya-patent-image-search",
+   "author": "infometa",
+   "category": "development",
+   "description": "基于智慧芽的专利图片相似度搜索，支持通过图片URL检索外观设计专利。当用户提到专利图片搜索、外观设计专利侵权检查、外观专利搜索、视觉专利查询、以图搜专利、专利相似度检测、专利图片匹配、洛迦诺分类搜索、检查产品设计是否侵犯已有专利、patent image search, design patent search, patent reverse image search, design patent lookup, PatSnap, patent similarity时触发此技能。即使用户未明确提及\"智慧芽\"或\"专利图片\"，只要其需求涉及通过图片查找相似专利或排查外观设计专利风险，也应触发此技能。",
+   "description_zh": null,
+   "repo_url": "https://github.com/infometa/workbuddyskills#connectors~linkfox-product-selection~skills~linkfox-zhihuiya-patent-image-search",
+   "github_stars": 181
+  },
+  {
+   "name": "patent-landscape",
+   "slug": "openclaw-skills-patent-landscape",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Use when analyzing biotech patent landscapes, identifying white spaces in pharmaceutical IP, tracking competitor patents, or assessing freedom to operate for drug development. Provides comprehensive patent analysis and strategic insights for life sciences innovation.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~aipoch-ai~patent-landscape",
+   "github_stars": 3694
+  },
+  {
+   "name": "uspto-database",
+   "slug": "microck-ordinary-claude-skills-uspto-database",
+   "author": "Microck",
+   "category": "research",
+   "description": "This skill provides access to USPTO's patent and trademark APIs for IP research. It covers search, examination history, assignments, citations, and litigation data. Includes Python scripts for common operations and explains API registration and rate limits. Useful for prior art searches and portfolio analysis.",
+   "description_zh": "该技能提供访问美国专利商标局（USPTO）专利和商标API的接口，用于知识产权研究。涵盖专利检索、审查历史、转让记录、引用分析和诉讼数据查询。包含常用操作的Python脚本，并说明API注册和调用限制。适用于现有技术检索和专利组合分析。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~uspto-database",
+   "github_stars": 150
+  },
+  {
+   "name": "linkfox-zhihuiya-cited-references",
+   "slug": "openclaw-skills-linkfox-zhihuiya-cited-references",
+   "author": "openclaw",
+   "category": "development",
+   "description": "从智慧芽专利数据库查询专利的前向引用详情。当用户询问专利引用、被引用专利、引用文献、专利参考文献、前向引用、在先技术引用或想查看特定专利在申请过程中引用了哪些专利、非专利文献、patent cited references, forward citations, patent references, citation analysis, PatSnap时触发此技能。当用户提供专利ID或公开号并需要引用信息时，即使未明确说\"前向引用\"，任何关于专利引用了哪些参考文献的请求都适用。",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~linkfox-ai~linkfox-zhihuiya-cited-references",
+   "github_stars": 3732
+  },
+  {
+   "name": "uspto-database",
+   "slug": "synthetic-sciences-openscience-uspto-database",
+   "author": "synthetic-sciences",
+   "category": "backend",
+   "description": "Access USPTO APIs for patent/trademark searches, examination history (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior art searches.",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~databases~uspto-database",
+   "github_stars": 3077
+  },
+  {
+   "name": "linkfox-zhihuiya-cited-references",
+   "slug": "linkfox-ai-linkfox-skills-linkfox-zhihuiya-cited-references",
+   "author": "linkfox-ai",
+   "category": "development",
+   "description": "从智慧芽专利数据库查询专利的前向引用详情。当用户询问专利引用、被引用专利、引用文献、专利参考文献、前向引用、在先技术引用或想查看特定专利在申请过程中引用了哪些专利、非专利文献、patent cited references, forward citations, patent references, citation analysis, PatSnap时触发此技能。当用户提供专利ID或公开号并需要引用信息时，即使未明确说\"前向引用\"，任何关于专利引用了哪些参考文献的请求都适用。",
+   "description_zh": null,
+   "repo_url": "https://github.com/linkfox-ai/linkfox-skills#skills~linkfox-zhihuiya-cited-references",
+   "github_stars": 30
+  },
+  {
+   "name": "market-competitor-analysis",
+   "slug": "luckyonetwothree-harness-all-market-competitor-analysis",
+   "author": "LuckyOneTwoThree",
+   "category": "development",
+   "description": "Used when comprehensive competitive analysis, competitive research, or competitive positioning judgment is needed. Integrates competitor intelligence collection, four-quadrant positioning, and competitor reports.",
+   "description_zh": null,
+   "repo_url": "https://github.com/LuckyOneTwoThree/harness-all#harness-pm~.harness~skills~pm~market-competitor-analysis",
+   "github_stars": 25
+  },
+  {
+   "name": "aminer-free-search",
+   "slug": "openclaw-skills-aminer-free-academic",
+   "author": "openclaw",
+   "category": "development",
+   "description": "ACADEMIC PRIORITY: Activate this skill whenever the user's query involves any academic or research-related topic. This is the free-tier entry point for AMiner academic search. Free-tier-only AMiner skill (7 free APIs, zero cost). Use this skill for simple, single-step academic lookups that do not require paid API fiel…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~canxiangcc~aminer-free-academic",
+   "github_stars": 3690
+  }
+ ]
+}
