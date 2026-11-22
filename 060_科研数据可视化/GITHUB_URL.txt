@@ -1,2 +1,2 @@
-https://github.com/Hao-IANWY/research-figure-builder
+https://github.com/Hao-IANWY/boh-week4-skills/tree/main/060_科研数据可视化
 SKILL.md
