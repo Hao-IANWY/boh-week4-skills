@@ -1,0 +1,46 @@
+{
+ "version": "0.2.0",
+ "description": "051 代表作选取口径。禁止只用总被引排序：必须同时给出首创候选（长尾）与高被引候选，并写明每条代表的入选理由。趋势主张的代表记录另按 trend_evidence 口径选取（逐字引文 + char_span）。",
+ "period_assignment": {
+  "rule": "按统计窗口均分为 period_count 段，年份落在 [start, end] 闭区间；末段包含最大年份。",
+  "period_count_default": 3
+ },
+ "criteria": {
+  "first_mover": {
+   "label": "阶段内最早出现该主题的工作",
+   "rule": "该阶段内该主题最早年份、且是在整个窗口内该主题的最早 1 篇之一；被引次数不参与该项排序。",
+   "why": "长尾中的方法首创工作往往被引低，只按被引排序会漏掉。"
+  },
+  "most_cited": {
+   "label": "阶段内被引最高（若题录带引用数）",
+   "rule": "citations 字段缺失时不生成该项，并在 uncertainty 登记 citations_unavailable，绝不猜一个数值。",
+   "why": "给出主流关注度锚点，与首创项并置可暴露『高被引 vs 首创』错位。"
+  },
+  "topic_central": {
+   "label": "阶段主题中心工作",
+   "rule": "与阶段内该主题词袋的平均相似度（Jaccard on tokens）最高者。",
+   "why": "代表该阶段的典型做法，避免代表作全是边缘工作。"
+  }
+ },
+ "limits": {
+  "per_period_max": 3,
+  "per_period_min_when_records_ge": 2,
+  "coverage_required": "每个阶段至少 1 条代表作，否则记 gap.code=R_NO_REP"
+ },
+ "citation_bias_guard": {
+  "forbid_single_criterion": true,
+  "must_include_first_mover_when_distinct": true,
+  "note": "若 most_cited 与 first_mover 是不同文献，两条都必须出现，且 representative_works[].criteria 里分别标注。"
+ },
+ "trend_evidence": {
+  "label": "趋势主张的代表记录（每条趋势主张携带）",
+  "max_per_claim": 3,
+  "min_strong": 2,
+  "require_verbatim_quote": true,
+  "rank_by": ["matched_keywords 数降序", "quote 长度降序", "record_id 升序"],
+  "fallback": "证据句不足 min_strong 时按同序补入其余池内记录，quote 取正文最长整句（仍为逐字精确子串）并标 matched_keywords=[]（background）；无任何正文/摘要的记录不得进入代表记录。",
+  "dedupe": "同一记录在同一主张内只出现一次；记录已在池级去重（DOI/标题强归一），此处不再按被引或词频重复加权。",
+  "quote_rule": "quote 必须通过管线内精确子串校验（quote_verified=true），char_span 按 quote_field 内字符区间；校验失败的行标 quote_mismatch 且不得作为趋势主张的代表引文。",
+  "why": "趋势主张必须由证据桶 + 逐字代表记录双重支撑：分桶计数给出『量』的口径，代表记录给出『质』的原文锚点；只报词频/只报计数都不可接受。"
+ }
+}

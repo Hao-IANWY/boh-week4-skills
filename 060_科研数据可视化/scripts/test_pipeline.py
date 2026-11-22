@@ -315,6 +315,110 @@ class PipelineTests(unittest.TestCase):
         finally:
             temporary.cleanup()
 
+    def test_log_axis_semantics(self):
+        rows = []
+        for group in ("G1", "G2", "G3"):
+            for repeat in range(15):
+                value = 10 ** (0.7 + ((repeat * 13 + ord(group[-1])) % 30) / 10)  # 5~4000，约 2.9 个数量级
+                rows.append({"group": group, "value": round(value, 2)})
+        case = {"case_id": "EXAMPLE-060-LOG", "output_contract": {"figures": "图", "data_to_visual_map": "映射", "evidence_map": "证据", "状态说明": "状态"},
+                "dataset": {"columns": ["group", "value"], "rows": rows},
+                "figure_requests": [{"figure_id": "LOG", "purpose": "comparison", "chart_hint": "bar",
+                                     "x": "group", "y": "value", "error_bar": "sd", "log_y": True,
+                                     "title": "对数轴比较"}]}
+        result, out, temporary = self.run_case(case)
+        try:
+            self.assert_complete(result, out, 1)
+            figure = result["figures"]["figures"][0]
+            y_scale = figure["analysis"]["y_scale"]
+            self.assertTrue(y_scale["applied"])
+            self.assertGreaterEqual(y_scale["decades"], 2.0)
+            self.assertIn("log10", figure["caption"]["standalone_text"])
+            # log 轴上均值柱自动改为均值标记（柱长在 log 轴无意义）
+            self.assertEqual(figure["analysis"]["actual_chart_type"], "points_with_mean")
+        finally:
+            temporary.cleanup()
+
+    def test_workorder_suggester_end_to_end(self):
+        temporary = tempfile.TemporaryDirectory(prefix="figure060-sug-")
+        try:
+            root = Path(temporary.name)
+            input_dir = root / "input" / "iris"
+            input_dir.mkdir(parents=True)
+            work_dir = root / "app" / "work"
+            work_dir.mkdir(parents=True)
+            rows = []
+            for species in ("setosa", "versicolor", "virginica"):
+                for i in range(10):
+                    rows.append({"species": species, "petal_length_cm": round(1.4 + i * 0.2 + len(species), 2),
+                                 "petal_width_cm": round(0.2 + i * 0.1 + len(species) * 0.3, 2),
+                                 "sepal_length_cm": round(5.0 + i * 0.1, 2)})
+            import csv as _csv
+            with (input_dir / "iris.sqlite.csv").open("w", newline="", encoding="utf-8") as handle:
+                writer = _csv.DictWriter(handle, fieldnames=["species", "petal_length_cm", "petal_width_cm", "sepal_length_cm"])
+                writer.writeheader()
+                writer.writerows(rows)
+            case = {"case_id": "SUGGEST-E2E", "task_instruction": (
+                "三个物种花瓣长度分布差异怎么呈现？四个测量维度的相关结构如何？"
+                "花瓣长与花瓣宽的关联按物种分色展示并给出拟合。"),
+                    "data_dictionary": {"species": {"label": "物种", "type": "categorical"},
+                                        "petal_length_cm": {"label": "花瓣长度", "type": "continuous", "unit": "cm"},
+                                        "petal_width_cm": {"label": "花瓣宽度", "type": "continuous", "unit": "cm"},
+                                        "sepal_length_cm": {"label": "萼片长度", "type": "continuous", "unit": "cm"}},
+                    "dataset": {"path": "iris.sqlite.csv"},  # 平铺文件名：数据在 input/iris/ 子目录
+                    "output_contract": {"figures": "图", "data_to_visual_map": "映射", "evidence_map": "证据", "状态说明": "状态"}}
+            (work_dir / "case.json").write_text(json.dumps(case, ensure_ascii=False), encoding="utf-8")
+            suggester = HERE / "suggest_workorder.py"
+            proc = subprocess.run([sys.executable, "-B", str(suggester), "--case", str(work_dir / "case.json"),
+                                   "--out", str(work_dir / "work_case.json")],
+                                  capture_output=True, text=True, timeout=60,
+                                  env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+            self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
+            work = json.loads((work_dir / "work_case.json").read_text(encoding="utf-8"))
+            self.assertGreaterEqual(len(work["figure_requests"]), 3)  # 比较/相关/分布/拟合 多意图
+            purposes = {f["purpose"] for f in work["figure_requests"]}
+            self.assertIn("comparison", purposes)
+            self.assertIn("correlation", purposes)
+            fit_figures = [f for f in work["figure_requests"] if f.get("fit_group")]
+            self.assertTrue(fit_figures)  # 拟合意图 → 散点分组拟合
+            out = root / "app" / "output"
+            final = subprocess.run([sys.executable, "-B", str(PIPELINE), "--case", str(work_dir / "work_case.json"),
+                                    "--out", str(out)], capture_output=True, text=True, timeout=300,
+                                   env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+            self.assertEqual(final.returncode, 0, final.stdout + final.stderr)
+            result = json.loads((out / "result.json").read_text(encoding="utf-8"))
+            self.assertEqual(result["status"]["overall"], "complete",
+                             json.dumps(result["status"], ensure_ascii=False))
+        finally:
+            temporary.cleanup()
+
+    def test_environment_resources_yaml_recorded(self):
+        temporary = tempfile.TemporaryDirectory(prefix="figure060-env-")
+        try:
+            root = Path(temporary.name)
+            env_dir = root / "environment"
+            env_dir.mkdir()
+            (env_dir / "resources.yaml").write_text(
+                "tools:\n  - name: scientific-python\n  - name: SQLite\nfonts:\n  - family: Arial\n",
+                encoding="utf-8")
+            rows = [{"x": 1, "y": 2.0}, {"x": 2, "y": 3.0}, {"x": 3, "y": 4.0}]
+            case = {"case_id": "EXAMPLE-060-ENV", "output_contract": {"figures": "图", "data_to_visual_map": "映射", "evidence_map": "证据", "状态说明": "状态"},
+                    "dataset": {"columns": ["x", "y"], "rows": rows},
+                    "figure_requests": [{"figure_id": "ENV", "purpose": "correlation", "x": "x", "y": "y"}]}
+            case_path = root / "case.json"
+            case_path.write_text(json.dumps(case, ensure_ascii=False), encoding="utf-8")
+            out = root / "out"
+            subprocess.run([sys.executable, "-B", str(PIPELINE), "--case", str(case_path), "--out", str(out)],
+                           capture_output=True, text=True, timeout=300,
+                           env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+            deps = json.loads((out / "dependencies.json").read_text(encoding="utf-8"))
+            env_decl = deps.get("environment_declaration") or {}
+            self.assertIn("scientific-python", env_decl.get("declared_tools", []))
+            result = json.loads((out / "result.json").read_text(encoding="utf-8"))
+            self.assertIn("environment_declaration", result["evidence_map"])
+        finally:
+            temporary.cleanup()
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

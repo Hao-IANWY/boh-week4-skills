@@ -327,6 +327,7 @@ def make_plan(case: dict, table: dict, dictionary: dict, reqs: list[dict], rules
             "x_label": x_label, "y_label": y_label, "x_unit": x_unit, "unit": y_unit,
             "title": str(req.get("title") or ""), "panel": str(req.get("panel") or ""),
             "error_bar": str(req.get("error_bar") or "none").lower(),
+            "log_y": bool(req.get("log_y", False)),
             "fit_group": bool(req.get("fit_group", False)),
             "significance": req.get("significance"),
             "data_file": f"figure_{index}.tsv", "analysis_file": f"figure_{index}_analysis.json",
@@ -464,6 +465,9 @@ def caption_for(figure: dict, analysis: dict, preparation: dict) -> dict:
             method = str(sig.get("method") or sig.get("test") or sig.get("correction") or "").strip()
         stats += ("；显著性标记透传自任务提供的统计结果" + (f"（{method}）" if method else "")
                   + "，本 Skill 未计算任何检验")
+    y_scale = analysis.get("y_scale") or {}
+    if y_scale.get("applied"):
+        stats += f"；Y 轴为 log10 刻度（数据全正且跨 {y_scale.get('decades')} 个数量级），等视觉距离代表等比值"
     unit_sizes = {str(item.get("category")): item.get("n") for item in analysis.get("series") or []} if figure.get("unit_id") else {}
     if unit_sizes:
         stats += "；技术读数先在每个独立单位内平均，再以单位均值计算组间摘要"
@@ -521,6 +525,40 @@ def finalize_payload(res: Result, payload: dict) -> None:
             payload["状态说明"].setdefault("gaps", []).extend(item["item"] for item in res.status["unmet"])
 
 
+def probe_environment_declaration(base_dirs) -> dict:
+    """读取 Harbor 运行时声明的 environment/resources.yaml（存在时），并入证据链。
+
+    不假设其内容结构：能解析则提取 fonts/tools 摘要，否则保存原文截断。
+    """
+    for base in base_dirs:
+        for candidate in (Path(base) / "environment" / "resources.yaml",
+                          Path(base) / "resources.yaml"):
+            if candidate.is_file():
+                try:
+                    text = candidate.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+                entry: dict = {"path": str(candidate), "sha256": sha256_text(text)}
+                try:
+                    import yaml  # type: ignore
+                    parsed = yaml.safe_load(text)
+                    if isinstance(parsed, dict):
+                        entry["keys"] = sorted(str(k) for k in parsed)
+                        fonts = parsed.get("fonts")
+                        if isinstance(fonts, list):
+                            entry["declared_fonts"] = [str(f.get("family") or f) if isinstance(f, dict) else str(f)
+                                                       for f in fonts][:20]
+                        tools = parsed.get("tools") or parsed.get("preinstalled")
+                        if isinstance(tools, (list, dict)):
+                            names = list(tools) if isinstance(tools, dict) else [str(t.get("name") or t) if isinstance(t, dict) else str(t) for t in tools]
+                            entry["declared_tools"] = names[:30]
+                except Exception:
+                    entry["excerpt"] = text[:1500]
+                    entry["parse"] = "stored raw excerpt (yaml not parseable in this env)"
+                return entry
+    return {}
+
+
 def run(case: dict, task_text: str, args) -> Result:
     clock = Clock(getattr(args, "budget", 900.0))
     res = Result(case, skill=SKILL, clock=clock)
@@ -549,6 +587,8 @@ def run(case: dict, task_text: str, args) -> Result:
         write_json(out_dir / f"figure_{figure['index']}_spec.json", figure)
     copy_runtime(out_dir)
     probe = probe_dependencies()
+    probe["environment_declaration"] = probe_environment_declaration(
+        [Path(args.case).resolve().parent, *Path(args.case).resolve().parents, Path.cwd(), Path("/input"), Path("/app")])
     write_json(out_dir / "dependencies.json", probe)
     res.log("load_case", rows=len(table["rows"]), requests=len(reqs), routed=len(plan["figures"]))
 
@@ -665,6 +705,7 @@ def run(case: dict, task_text: str, args) -> Result:
     evidence_map = {
         "source": source_meta, "run_plan": "run_plan.json", "data_quality": "data_quality.json",
         "preparation": "preparation.json", "dependencies": "dependencies.json",
+        "environment_declaration": probe.get("environment_declaration") or "not found in runtime (recorded as absent)",
         "rules": {name: {"file": f"rules/{name}.json", "sha256": sha256_file(RULES_DIR / f"{name}.json")} for name in rules},
         "scripts": ["data_prep.sh", "scripts/prepare_data.py", "plot.R", "theme.R", "scripts/normalize_pdf.py", "scripts/audit_outputs.py"],
         "reproduce_commands": ["bash data_prep.sh", "Rscript plot.R", "python3 -B scripts/normalize_pdf.py --plan run_plan.json --out .",

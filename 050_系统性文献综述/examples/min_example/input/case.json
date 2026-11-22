@@ -1,0 +1,151 @@
+{
+ "case_id": "EXAMPLE-050-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：围绕「图神经网络用于单步逆合成预测的准确率水平、低数据泛化与评测口径可比性」跑一条 PRISMA 式系统综述流程：检索式 → 题录级筛选 → 全文级合格性 → 质量评价 → 证据矩阵与结论 → 四阶段计数与排除理由表。",
+ "output_contract": {
+  "search_strategy": "检索要素块、布尔检索式、数据库/字段/时间/语言限制与每库题录数",
+  "screening_log": "两轮（题录级/全文级）逐条筛选结论、criterion_id 与理由码",
+  "prisma_flow": "识别/筛选/合格/纳入四阶段计数 + 各阶段排除理由聚合 + 计数一致性校验",
+  "quality_appraisal": "纳入研究逐维度质量判定（依据位置）、总分与等级、等级对结论的影响",
+  "evidence_matrix": "证据矩阵：record_id + span（字段+整句）+ 主题 + sha256，支撑综合结论",
+  "synthesis": "综合结论：逐条挂 evidence_id、支持强度、冲突并列、边界说明",
+  "evidence_map": "协议版本、检索块、条款、理由码、质量量表、计数一致性、产物自检",
+  "状态说明": "完成/部分完成、纳入集为空、主题无证据、质量偏低、冲突、检索时间未记录等不确定性"
+ },
+ "research_question": "图神经网络用于单步逆合成预测时，报告的 top-1 准确率水平如何，低数据条件下的泛化表现如何，不同研究的评测口径是否可比？",
+ "protocol": {
+  "protocol_id": "PROTO-EXAMPLE-050-GNN-RETRO",
+  "prospective": true,
+  "title": "示例前瞻协议：图神经网络单步逆合成预测（合成示例）",
+  "criteria": [
+   {"id": "C1_YEAR", "stage": "title_abstract", "type": "year_min", "value": 2019, "label": "发表年份 ≥ 2019"},
+   {"id": "C2_TYPE", "stage": "title_abstract", "type": "type_in", "value": ["journal-article", "conference-paper", "preprint", "review"], "label": "文献类型在允许集合内"},
+   {"id": "C3_ABSTRACT", "stage": "title_abstract", "type": "require_abstract", "label": "有摘要"},
+   {"id": "C4_OBJECT", "stage": "title_abstract", "type": "keyword_any", "value": ["逆合成", "retrosynthesis", "反应预测", "reaction"], "label": "对象要素命中"},
+   {"id": "C5_FULLTEXT", "stage": "full_text", "type": "require_fulltext", "label": "全文可得"},
+   {"id": "C6_LANG", "stage": "full_text", "type": "language_in", "value": ["en", "zh"], "label": "全文语言在允许集合内"},
+   {"id": "C7_OUTCOME", "stage": "full_text", "type": "outcome_reported", "value": ["accuracy", "top-1", "yield", "准确率", "产率"], "label": "报告可比结局指标"}
+  ],
+  "reason_codes": {
+   "C1_YEAR": "年份早于时间窗",
+   "C2_TYPE": "文献类型不在允许集合内",
+   "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+   "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+   "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+   "C6_LANG": "全文语言不在允许集合内",
+   "C7_OUTCOME": "未报告可比结局指标"
+  },
+  "primary_reason_order": ["C5_FULLTEXT", "C2_TYPE", "C1_YEAR", "C6_LANG", "C3_ABSTRACT", "C4_OBJECT", "C7_OUTCOME"],
+  "primary_reason_note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数。"
+ },
+ "records": [
+  {
+   "record_id": "R1",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+   "text": "We describe the message passing encoder and training schedule. Limitation: single dataset only, no cross-dataset evaluation.",
+   "year": 2021,
+   "authors": ["A. Kim"],
+   "venue": "Journal of Chemical Information and Modeling",
+   "doi": "10.1000/example.2021.001",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["retrosynthesis", "graph neural network"]
+  },
+  {
+   "record_id": "R2",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "Preprint version of the same graph neural network retrosynthesis study.",
+   "year": 2020,
+   "authors": ["A. Kim"],
+   "venue": "arXiv",
+   "doi": "10.1000/example.2021.001",
+   "type": "preprint",
+   "language": "en",
+   "source": "local-corpus [arxiv]",
+   "keywords": ["retrosynthesis"]
+  },
+  {
+   "record_id": "R3",
+   "title": "Template-free retrosynthesis via graph attention",
+   "abstract": "A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only.",
+   "text": "Training uses graph attention encoders. Limitation: no cross-split evaluation, possible leakage cannot be excluded.",
+   "year": 2022,
+   "authors": ["M. Rossi"],
+   "venue": "Nature Machine Intelligence",
+   "doi": "10.1000/example.2022.014",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["template-free", "retrosynthesis"]
+  },
+  {
+   "record_id": "R4",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "abstract": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+   "text": "We evaluate on three dataset splits and report the accuracy decay curve. Limitation: only one model family tested.",
+   "year": 2023,
+   "authors": ["S. Iyer"],
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2023.055",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["low data", "generalization"]
+  },
+  {
+   "record_id": "R5",
+   "title": "Benchmarking graph neural networks for reaction yield prediction",
+   "abstract": "A benchmark with three dataset splits shows that reported top-1 accuracy differences are largely explained by split choice rather than architecture, which limits comparability.",
+   "year": 2023,
+   "authors": ["Y. Chen"],
+   "venue": "NeurIPS Datasets and Benchmarks",
+   "doi": "10.1000/example.2023.777",
+   "type": "conference-paper",
+   "language": "en",
+   "source": "local-corpus [openreview]",
+   "keywords": ["benchmark", "yield prediction"]
+  },
+  {
+   "record_id": "R6",
+   "title": "Re-examining single-step retrosynthesis benchmarks",
+   "abstract": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+   "text": "Training code and split definitions are released. Limitation: only two datasets re-examined.",
+   "year": 2024,
+   "authors": ["L. Duarte"],
+   "venue": "Journal of Cheminformatics",
+   "doi": "10.1000/example.2024.120",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["benchmark", "reproduction"]
+  },
+  {
+   "record_id": "R7",
+   "title": "Multi-step route planning with learned heuristics",
+   "abstract": "Multi-step route planning is evaluated by route success rate rather than top-1 accuracy, so single-step numbers are not directly comparable.",
+   "year": 2024,
+   "authors": ["F. Lima"],
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2024.019",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["route planning"]
+  },
+  {
+   "record_id": "R8",
+   "title": "Catalytic C-H activation with earth-abundant metals",
+   "abstract": "An experimental study on catalytic C-H activation with no computational retrosynthesis modelling and no accuracy metric.",
+   "year": 2023,
+   "authors": ["P. Novak"],
+   "venue": "ACS Catalysis",
+   "doi": "10.1000/example.2023.088",
+   "type": "journal-article",
+   "language": "en",
+   "source": "local-corpus [crossref]",
+   "keywords": ["catalysis"]
+  }
+ ],
+ "source": {"title": "Synthetic interface example (not a test case)", "doi": null}
+}

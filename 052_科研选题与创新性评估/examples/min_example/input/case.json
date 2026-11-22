@@ -1,0 +1,95 @@
+{
+ "case_id": "EXAMPLE-052-POOL-OBSERVED",
+ "synthetic_notice": "本示例全部记录与设想均为离线合成的教学样例，不代表任何真实研究结论；仅用于演示 skill 接口与最小使用流程，不是正式测试案例。",
+ "task_instruction": "示例（非正式测试案例）：评估两个候选选题方向——「不确定性量化机器学习势函数迁移到硫化物电解质界面」与「预训练视觉 Transformer 用于聚合物电解质膜裂纹分割」——在新颖性（仅池内判定）、前提三分源可行性与有界建议上的表现。",
+ "output_contract": {
+  "研究产物": "逐候选方向的问题陈述 + 创新点判定（pool_observed）+ 条件式可行性 + 四维评估",
+  "证据矩阵": "证据表（evidence_id/record_id/char_span/逐字引文）与每条判断的回链",
+  "不确定性": "冲突证据、无法判定项、池内未见与全球首创的区分、显式假设清单",
+  "状态说明": "完成与未完成部分"
+ },
+ "proposal_request": {
+  "ask": "在约束边界内给出每个候选方向的下一步动作建议（不声称完成实验）",
+  "boundaries": ["不声称已完成实验", "不超出给定记录池与约束范围"]
+ },
+ "protocol": {
+  "protocol_id": "PROTO-EXAMPLE-052",
+  "prospective": true,
+  "inclusion": [
+   {"criterion_id": "IN1", "text": "正文涉及硫化物/界面/晶界/电解质等池内主题", "any_keys": ["sulfide", "interface", "grain", "electrolyte", "界面", "电解质", "晶界"]},
+   {"criterion_id": "IN2", "text": "正文可读且不少于 40 个字符", "body_readable": true, "min_chars": 40}
+  ],
+  "exclusion": [
+   {"criterion_id": "EX1", "text": "协议、手册、术语表等非实证记录", "type_in": ["protocol", "handbook", "glossary"]}
+  ],
+  "stop_conditions": ["每个候选方向连续一轮检索无新增证据即停止"],
+  "search_order": ["D1", "D2"]
+ },
+ "constraints": {
+  "compute": "4×GPU，总预算 20,000 GPU-hour",
+  "duration": "18 个月",
+  "team": "2 名计算材料学博士生 + 1 名电镜工程师",
+  "ethics": "不涉及人体或动物数据，无需伦理审批",
+  "application": "固态电池界面设计与失效预测",
+  "stakeholders": ["电池研发团队", "表征平台"]
+ },
+ "candidate_directions": [
+  {
+   "direction_id": "D1",
+   "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+   "description": "研究对象：硫化物固态电解质界面离子输运。关键变量：界面迁移势垒与不确定性区间宽度。基线：bulk 数据训练的机器学习势函数。预期结论：带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线。可证伪：若界面区外推误差相对基线改善不显著，则该假设不成立。方法：迁移学习加不确定性量化的机器学习势函数。数据：自建界面 DFT 轨迹与表征图像。",
+   "object": "硫化物固态电解质界面（grain boundary 与 interphase）",
+   "variables": ["界面迁移势垒", "不确定性区间宽度", "外推误差"],
+   "baseline": "bulk 数据训练的机器学习势函数",
+   "expected": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+   "falsification": "若界面区外推误差相对基线的改善不显著，则该假设不成立",
+   "method": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+   "data": "自建界面 DFT 轨迹与表征图像",
+   "keys": ["machine learning potential", "interface", "uncertainty"],
+   "application": "固态电池界面设计与失效预测",
+   "claims": [
+    {"id": "D1-C1", "claim": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces"},
+    {"id": "D1-C2", "claim": "We collect in-situ interface trajectories with uncertainty labels and release them as an open annotated dataset for sulfide electrolytes"}
+   ]
+  },
+  {
+   "direction_id": "D2",
+   "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+   "description": "研究对象：聚合物电解质膜中的裂纹扩展。关键变量：裂纹分割 IoU 与标注样本量。基线：从零训练的 U-Net。预期结论：预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线。可证伪：若 IoU 无显著提升，则迁移假设不成立。方法：预训练视觉 Transformer 微调。数据：自建聚合物电解质膜裂纹图像集。",
+   "object": "聚合物电解质膜中的裂纹扩展",
+   "variables": ["裂纹分割 IoU", "标注样本量"],
+   "baseline": "从零训练的 U-Net",
+   "expected": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+   "falsification": "若 IoU 相对从零训练基线无显著提升，则迁移假设不成立",
+   "method": "预训练视觉 Transformer 微调",
+   "data": "自建聚合物电解质膜裂纹图像集",
+   "keys": ["segmentation", "polymer", "crack"],
+   "claims": [
+    {"id": "D2-C1", "claim": "We apply a pretrained vision transformer to crack segmentation in polymer electrolyte films and report failure mode statistics"}
+   ]
+  }
+ ],
+ "records": [
+  {"record_id": "REC01", "title": "Uncertainty-aware machine learning potentials for sulfide interfaces", "type": "journal-article", "year": 2023, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces. Ensemble variance correlates with force error on interface trajectories."},
+  {"record_id": "REC02", "title": "Transfer learning of potentials from bulk to interfaces", "type": "journal-article", "year": 2022, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "We apply transfer learning of machine learning potentials from bulk training data to interface coating problems. The transferred potential is compared against a bulk-trained baseline and reduces interface force error."},
+  {"record_id": "REC03", "title": "Operando characterization of sulfide electrolyte interfaces", "type": "journal-article", "year": 2024, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "Operando XPS and Raman characterization track interphase evolution at sulfide electrolyte interfaces during cycling."},
+  {"record_id": "REC04", "title": "Convolutional segmentation of grain boundaries in solid electrolytes", "type": "journal-article", "year": 2023, "venue": "Synthetic Journal of Materials Vision", "source": "synthetic-local-corpus",
+   "abstract": "We apply a convolutional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and report reusable grain statistics."},
+  {"record_id": "REC05", "title": "Deep learning grain boundary detection in ceramics", "type": "journal-article", "year": 2021, "venue": "Synthetic Journal of Materials Vision", "source": "synthetic-local-corpus",
+   "abstract": "A deep learning pipeline detects grain boundaries in ceramic micrographs and reports an F1 score of 0.91 on the ceramic benchmark."},
+  {"record_id": "REC06", "title": "Space charge layers dominate sulfide interface resistance", "type": "journal-article", "year": 2020, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "Impedance and simulation show that space charge layers dominate interface resistance in sulfide electrolytes."},
+  {"record_id": "REC07", "title": "Compositional screening of fast ionic conductors", "type": "journal-article", "year": 2019, "venue": "Synthetic Journal of Materials Informatics", "source": "synthetic-local-corpus",
+   "abstract": "A data-driven screening ranks candidate fast ionic conductors using compositional descriptors and reports two promising families."},
+  {"record_id": "REC08", "title": "Benchmarking uncertainty quantification for atomistic simulations", "type": "journal-article", "year": 2024, "venue": "Synthetic Journal of Materials Informatics", "source": "synthetic-local-corpus",
+   "abstract": "A benchmark compares uncertainty quantification methods for atomistic simulations of solid interfaces; ensemble and dropout calibrations are evaluated on force and energy error."},
+  {"record_id": "REC09", "title": "Cryo-EM interphase composition in sulfide electrolytes", "type": "journal-article", "year": 2025, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "Cryogenic electron microscopy reveals nanoscale interphase composition at sulfide electrolyte interfaces and quantifies lithium sulfide fractions."},
+  {"record_id": "REC10", "title": "Open benchmark dataset for solid electrolyte conductivity", "type": "journal-article", "year": 2025, "venue": "Synthetic Journal of Power Materials", "source": "synthetic-local-corpus",
+   "abstract": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values."}
+ ],
+ "source": {"title": "Synthetic pool-observed example (not a test case)", "doi": null}
+}

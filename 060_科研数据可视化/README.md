@@ -36,6 +36,9 @@ case + 数据字典 + 出图工单
 | 显著性凭空画星号 | 只透传任务提供的统计结果：配对→括线+标注、单类别→字母，图注注明方法与「未计算任何检验」 |
 | 无 R 环境时整链无图 | matplotlib 降级渲染真实 PNG（300dpi+，含 CJK 字体与类别抖动点），仅 PNG；PDF/SVG 缺口如实记录不伪造 |
 | 缺对照证据 | result.json 内置 `baseline_comparison` 七维度对照（典型失败 vs 本 Skill 处理 vs 证据位置），不虚构基线数字 |
+| 自然语言案例工单质量不稳定 | `suggest_workorder.py` 确定性生成工单建议（关键词→图型路由、字典 label→轴标签、拟合/分色意图→分组拟合），假设逐条留痕，回放方差大幅收敛 |
+| 对数变换当线性轴用 | `log_y` 显式请求 + 资格校验（全正、跨 ≥2 数量级）：10^pretty 刻度、均值柱自动改均值标记、下须线裁剪留痕；不适配保持线性并写明原因 |
+| 环境信息不透明 | 自动探测并记录 `environment/resources.yaml`（Harbor 运行时声明）到 dependencies.json 与 evidence_map |
 | 完整主题擦除逐图微调 | `finish_plot` 支持 `extra_theme`，旋转/字号在 `theme_prism` 之后应用 |
 | 边距检查误伤合格图 | 空白或贴边/裁切（<0.02in）才判失败；<0.1in 仅记 `tight` 标志 |
 | /app/work 转工单后数据路径失效 | 相对路径多基目录回退解析（case 目录→各级 input/→CWD→/input），失败报全部尝试路径 |

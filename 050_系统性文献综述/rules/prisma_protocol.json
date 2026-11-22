@@ -1,0 +1,447 @@
+{
+ "version": "0.2.0",
+ "description": "050 系统性文献综述协议：默认检索要素块、两层纳排条款、理由码、主因顺序、字段级质量量表（not_reported 不判低质量）、协议缺失回退口径、PRISMA 阶段定义与默认主题。真实案例的前瞻协议由 case.json 的 protocol 提供；换领域只改本文件或案例协议。",
+ "search_blocks": [
+  {
+   "id": "B_OBJECT",
+   "label": "研究对象",
+   "required": true,
+   "fields": [
+    "title",
+    "abstract",
+    "keywords"
+   ],
+   "terms": [
+    "逆合成",
+    "retrosynthesis",
+    "反应预测",
+    "reaction prediction",
+    "single-step",
+    "单步"
+   ]
+  },
+  {
+   "id": "B_METHOD",
+   "label": "方法/干预",
+   "required": false,
+   "fields": [
+    "title",
+    "abstract"
+   ],
+   "terms": [
+    "graph neural network",
+    "图神经网络",
+    "gnn",
+    "message passing",
+    "消息传递",
+    "deep learning",
+    "learning"
+   ]
+  },
+  {
+   "id": "B_OUTCOME",
+   "label": "结局指标",
+   "required": false,
+   "fields": [
+    "title",
+    "abstract"
+   ],
+   "terms": [
+    "accuracy",
+    "top-1",
+    "准确率",
+    "yield",
+    "产率",
+    "success rate",
+    "performance"
+   ]
+  },
+  {
+   "id": "B_COMPARATOR",
+   "label": "对照",
+   "required": false,
+   "fields": [
+    "title",
+    "abstract"
+   ],
+   "terms": [
+    "template",
+    "模板",
+    "baseline",
+    "对照",
+    "compared",
+    "versus"
+   ]
+  }
+ ],
+ "limits": {
+  "databases": [
+   "local-corpus"
+  ],
+  "fields": [
+   "title",
+   "abstract",
+   "keywords",
+   "fulltext"
+  ],
+  "year_from": 2019,
+  "year_to": 2026,
+  "languages": [
+   "en",
+   "zh"
+  ],
+  "document_types": [
+   "journal-article",
+   "conference-paper",
+   "preprint",
+   "review"
+  ]
+ },
+ "search_executed_at": "",
+ "criteria": [
+  {
+   "id": "C1_YEAR",
+   "stage": "title_abstract",
+   "type": "year_min",
+   "value": 2019,
+   "label": "发表年份 ≥ 2019"
+  },
+  {
+   "id": "C2_TYPE",
+   "stage": "title_abstract",
+   "type": "type_in",
+   "value": [
+    "journal-article",
+    "conference-paper",
+    "preprint",
+    "review"
+   ],
+   "label": "文献类型在允许集合内"
+  },
+  {
+   "id": "C3_ABSTRACT",
+   "stage": "title_abstract",
+   "type": "require_abstract",
+   "label": "有摘要"
+  },
+  {
+   "id": "C4_OBJECT",
+   "stage": "title_abstract",
+   "type": "keyword_any",
+   "value": [
+    "逆合成",
+    "retrosynthesis",
+    "反应预测",
+    "reaction"
+   ],
+   "label": "对象要素命中"
+  },
+  {
+   "id": "C5_FULLTEXT",
+   "stage": "full_text",
+   "type": "require_fulltext",
+   "label": "全文可得"
+  },
+  {
+   "id": "C6_LANG",
+   "stage": "full_text",
+   "type": "language_in",
+   "value": [
+    "en",
+    "zh"
+   ],
+   "label": "全文语言在允许集合内"
+  },
+  {
+   "id": "C7_OUTCOME",
+   "stage": "full_text",
+   "type": "outcome_reported",
+   "value": [
+    "accuracy",
+    "top-1",
+    "yield",
+    "success rate",
+    "准确率",
+    "产率"
+   ],
+   "label": "报告可比结局指标"
+  }
+ ],
+ "reason_codes": {
+  "C1_YEAR": "年份早于时间窗",
+  "C2_TYPE": "文献类型不在允许集合内",
+  "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+  "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+  "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+  "C6_LANG": "全文语言不在允许集合内",
+  "C7_OUTCOME": "未报告可比结局指标",
+  "R_DUP_DOI": "DOI 归一后重复，识别阶段已删除",
+  "R_DUP_TITLE": "标题+年份强归一后重复（预印本/正式版合并）",
+  "R_THEME_NO_EVIDENCE": "该主题在纳入研究中无可引用证据句",
+  "R_ALL_LOW_QUALITY": "全部纳入研究质量等级为 low",
+  "R_PROTOCOL_MISSING": "case 未提供前瞻性纳排协议（条款、主因顺序），按声明回退口径执行",
+  "R_PROTOCOL_NO_THEMES": "协议缺失时未定义综合主题；不虚构主题，综合留空并声明",
+  "R_INPUT_ERROR": "输入不可读"
+ },
+ "primary_reason_rule": {
+  "strategy": "fixed_order_strictest_first",
+  "order": [
+   "C5_FULLTEXT",
+   "C2_TYPE",
+   "C1_YEAR",
+   "C6_LANG",
+   "C3_ABSTRACT",
+   "C4_OBJECT",
+   "C7_OUTCOME"
+  ],
+  "note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数，保证每条排除记录只落一个原因桶。案例协议可用 primary_reason_order 覆盖。"
+ },
+ "screening_policy": "两轮筛选（题录级 → 全文级）使用同一套条款表；每条记录评估该阶段全部条款并记 criterion_hits；排除只取规则定义的唯一主因；元数据缺失导致不可判定的条款转人工复核队列，不自动排除；不得在筛选途中放宽或新增条款；重复文献只在识别阶段删除。",
+ "manual_review_policy": "undecidable 条款（年份/类型/语言缺失、正文为空、条款类型未知等）不自动排除：记录继续走完流程并标记 needs_manual_review，进入 screening_log.manual_review 队列。自动筛选止步于此，人工复核边界明示。",
+ "fallback_screening": {
+  "criteria": [
+   {
+    "id": "FB_TYPE",
+    "stage": "title_abstract",
+    "type": "type_in",
+    "value": [
+     "journal-article",
+     "conference-paper",
+     "preprint",
+     "review"
+    ],
+    "label": "文献类型在允许集合内（回退口径）"
+   },
+   {
+    "id": "FB_ABSTRACT",
+    "stage": "title_abstract",
+    "type": "require_abstract",
+    "label": "有摘要（或正文可读）"
+   },
+   {
+    "id": "FB_FULLTEXT",
+    "stage": "full_text",
+    "type": "require_fulltext",
+    "label": "全文可得"
+   }
+  ],
+  "reason_codes": {
+   "FB_TYPE": "类型不在回退口径允许集合内",
+   "FB_ABSTRACT": "缺摘要且正文不可得（回退口径）",
+   "FB_FULLTEXT": "全文不可得（回退口径）"
+  },
+  "primary_order": [
+   "FB_TYPE",
+   "FB_ABSTRACT",
+   "FB_FULLTEXT"
+  ],
+  "note": "回退口径只做结构可行性判定（类型/摘要/全文可得），不做主题相关性判定：按此筛选的记录全部标注 fallback=true 并整体进入人工复核队列；综合主题亦不虚构（R_PROTOCOL_NO_THEMES）。"
+ },
+ "quality_scale": {
+  "not_reported_rule": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。",
+  "not_assessable_effect": "该记录条目均未报告，无法分级；不判低质量，也不单独支撑结论，确定性受限",
+  "judgment_weight": {
+   "yes": 2,
+   "partial": 1,
+   "no": 0,
+   "unclear": 0,
+   "not_reported": 0
+  },
+  "levels": [
+   {
+    "level": "high",
+    "min": 0.9
+   },
+   {
+    "level": "moderate",
+    "min": 0.6
+   },
+   {
+    "level": "low",
+    "min": 0.0
+   }
+  ],
+  "level_effect": {
+   "high": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明",
+   "moderate": "需 ≥2 条一致证据才可支撑结论",
+   "low": "只作背景，不单独支撑结论；写进不确定性"
+  },
+  "items": [
+   {
+    "id": "Q1_OBJECTIVE",
+    "label": "研究目标明确",
+    "kind": "cue",
+    "cues": [
+     "we ",
+     "this study",
+     "this trial",
+     "this review",
+     "本文",
+     "本研究",
+     "我们",
+     "aim",
+     "objective"
+    ],
+    "min_hits": 1,
+    "partial_min_hits": 0
+   },
+   {
+    "id": "Q2_SAMPLE",
+    "label": "样本量可核（sample_size）",
+    "kind": "field",
+    "field": "sample_size",
+    "label_missing": "字段 sample_size 未报告"
+   },
+   {
+    "id": "Q3_METHOD",
+    "label": "方法过程可复现（methodology）",
+    "kind": "field",
+    "field": "methodology",
+    "label_missing": "字段 methodology 未报告"
+   },
+   {
+    "id": "Q4_OUTCOME",
+    "label": "结局指标报告完整",
+    "kind": "cue",
+    "cues": [
+     "评分",
+     "score",
+     "%",
+     "下降",
+     "降低",
+     "改善",
+     "显著",
+     "significant",
+     "reduced",
+     "increased",
+     "incidence",
+     "index"
+    ],
+    "min_hits": 1,
+    "partial_min_hits": 0
+   },
+   {
+    "id": "Q5_LIMITATION",
+    "label": "局限与偏倚说明",
+    "kind": "cue",
+    "cues": [
+     "limitation",
+     "局限",
+     "偏倚",
+     "bias",
+     "盲",
+     "blind",
+     "dropout",
+     "脱落",
+     "cannot",
+     "heterogeneous"
+    ],
+    "min_hits": 1,
+    "partial_min_hits": 0
+   }
+  ]
+ },
+ "themes": [
+  {
+   "id": "TH_PERFORMANCE",
+   "label": "单步预测准确率水平",
+   "claim_template": "纳入研究对「{theme}」报告如下",
+   "terms": [
+    "accuracy",
+    "top-1",
+    "准确率",
+    "52.3",
+    "48.1",
+    "49.0"
+   ],
+   "missing_evidence": "需要报告单步 top-1 准确率的原始研究"
+  },
+  {
+   "id": "TH_GENERALIZATION",
+   "label": "低数据与泛化",
+   "claim_template": "纳入研究对「{theme}」报告如下",
+   "terms": [
+    "low data",
+    "低数据",
+    "generalize",
+    "泛化",
+    "cross reaction classes"
+   ],
+   "missing_evidence": "需要低数据条件下的对照实验"
+  },
+  {
+   "id": "TH_EVALUATION",
+   "label": "评测口径与可比性",
+   "claim_template": "纳入研究对「{theme}」报告如下",
+   "terms": [
+    "benchmark",
+    "基准",
+    "split",
+    "划分",
+    "leakage",
+    "comparable",
+    "route success"
+   ],
+   "missing_evidence": "需要说明数据集划分与指标口径的方法学文献"
+  }
+ ],
+ "flow_stages": [
+  {
+   "id": "identification",
+   "label": "识别（Identification）",
+   "desc": "数据库检索数量 + 去重"
+  },
+  {
+   "id": "screening",
+   "label": "筛选（Screening）",
+   "desc": "题录级纳排"
+  },
+  {
+   "id": "eligibility",
+   "label": "合格性（Eligibility）",
+   "desc": "全文级纳排"
+  },
+  {
+   "id": "included",
+   "label": "纳入（Included）",
+   "desc": "进入综合与质量评价"
+  }
+ ],
+ "sentence_terminators": [
+  "。",
+  "！",
+  "？",
+  "!",
+  "?"
+ ],
+ "split_ascii_period": true,
+ "strong_min_high": 2,
+ "context_vocabulary": {
+  "dataset": {
+   "uspto-50k": [
+    "uspto-50k",
+    "uspto 50k",
+    "uspto"
+   ]
+  },
+  "method": {
+   "gnn-message-passing": [
+    "message passing",
+    "消息传递"
+   ],
+   "gnn-graph-attention": [
+    "graph attention",
+    "图注意力"
+   ],
+   "template-free": [
+    "template-free",
+    "模板无关"
+   ],
+   "template-based": [
+    "template-based",
+    "模板法"
+   ]
+  }
+ },
+ "conflict_rule": "同一主题内，两条证据在共享的上下文口径家族（数据集/方法/干预等）下出现同单位不同数值 → numeric_conflict，双列呈现（side_a/side_b 各带逐字引文与数值），不择一、不合并；上下文口径不同的数值差异属异质性，不记冲突。"
+}

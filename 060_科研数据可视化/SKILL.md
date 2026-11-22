@@ -27,23 +27,20 @@ description: 将科研数据表制成可投稿图件：声明式清洗与行级�
    - `error_bar=sd|se|ci95|none`、`fit_group`、`significance`；
    - `venue`、`width_mm`、`height_mm`、`dpi`、`format`/`formats`。
 4. `data_dictionary` 的 `label/type/unit/missing_values/sentinels` 会进入标签、类型和清洗规则。数值型 `-999` 等哨兵必须显式声明，不能全局猜测。数据字典的短 `label` 优先作为热图等坐标轴显示名，原始列名保留在血缘与 analysis。
-5. 若案例只有自然语言任务而缺 `figure_requests`，先由 Agent 在 `/app/work` 生成一个保留原 `case_id`、数据引用和 `output_contract` 的工作案例，只补充结构化工单；相对数据路径无需改写（按第 2 条回退解析），在证据中记录该转换，不伪造数据。工单映射示例（保持任务原文语义，不添加任务没提的结论）：
+5. 若案例只有自然语言任务而缺 `figure_requests`，**先运行确定性建议器生成工作案例**，再复核微调（相对数据路径无需改写，按第 2 条回退解析）：
 
-   任务说「比较三种基因型表达量差异，误差线用标准误」→
-   ```json
-   {"figure_id":"F1","purpose":"comparison","x":"基因型","y":"表达量","error_bar":"se",
-    "x_label":"基因型","y_label":"表达量","title":"三种基因型表达量比较"}
+   ```bash
+   python3 -B /skills/weekly-skill/scripts/suggest_workorder.py \
+     --case /input/case.json --out /app/work/case.json
+   python3 -B /skills/weekly-skill/scripts/pipeline.py \
+     --case /app/work/case.json --task /input/task.md --out /app/output
    ```
-   选图理由写进工单转化记录：purpose=comparison 且显式误差线 → `bar_with_error_points`（均值柱+全部原始点）；拒绝饼图（无序分类不做角度编码）。
 
-   任务说「花瓣长宽的关联按物种分色，给拟合与置信带」→
-   ```json
-   {"figure_id":"F2","purpose":"correlation","x":"petal_length_cm","y":"petal_width_cm",
-    "group":"species","fit_group":true,"x_label":"花瓣长度","y_label":"花瓣宽度"}
-   ```
-   拒绝折线（无序观测不连线）；`fit_group=true` 才分组拟合。
+   建议器从数据字典与任务文本确定性路由（比较/相关/趋势/分布/构成关键词→图型；字典 label→轴标签；拟合/分色意图→散点+分组拟合），所有假设（默认 SD 口径、自动选列等）逐条写入 `workorder_assumptions`。Agent 复核调整后再跑 pipeline，不盲用。内部映射逻辑示例：
 
-   任务说「探索性看全部变量相关结构」→ `{"figure_id":"F3","purpose":"correlation","chart_hint":"heatmap"}`（变量未列则由数据字典连续列自动识别，并记录该决定）。
+   - 「比较三种基因型表达量差异，误差线用标准误」→ `purpose=comparison, x=基因型, y=表达量, error_bar=se`；均值柱+原始点，拒绝饼图（无序分类不做角度编码）。
+   - 「花瓣长宽的关联按物种分色，给拟合与置信带」→ `purpose=correlation, chart_hint=scatter, fit_group=true`；拒绝折线（无序观测不连线）。
+   - 「探索性看全部变量相关结构」→ `chart_hint=heatmap`（变量未点名则用全部连续列，并记录该决定）。
 
 ## 执行
 
@@ -157,6 +154,8 @@ python3 -B scripts/audit_outputs.py --plan run_plan.json --out .
 | 日期刻度密集 | 刻度按画布宽度封顶抽稀，两行式 MM-DD/YYYY 标签 |
 | 请求不支持的导出格式（如 emf） | 记录 `format_gaps` 范围外缺口并交付默认三格式，不判 partial、不静默 |
 | 任务提供显著性结果 | 透传渲染：配对→括线+标注，单类别→组末端字母；图注注明方法与「未计算任何检验」，绝不自造星号 |
+| 任务要求对数轴（log_y） | 原始数据全为正且跨 ≥2 个数量级才启用：10^pretty 刻度、图注声明等比值语义；均值柱自动改为均值标记（柱长在 log 轴无意义）；下须线线性为负时裁剪到轴下限并留痕；数据不适配则保持线性并写明原因 |
+| 环境声明文件 | 存在 `environment/resources.yaml` 时读取并并入 dependencies.json 与 evidence_map（字体/工具清单） |
 | R 包、字体、Pillow、pypdf 缺失 | 保存可复跑材料并明确未完成项；有网络时可按冷启动命令安装后复跑；matplotlib 可用时降级渲染真实 PNG（300dpi+，仅 PNG，PDF/SVG 缺口如实记录不伪造） |
 | 数据文件路径失效 | 按多基目录回退解析；仍失败时报告全部尝试路径 |
 | 单图渲染失败 | 其它图继续；该图写 `status=error` 和真实原因 |

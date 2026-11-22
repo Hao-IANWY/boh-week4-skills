@@ -4,7 +4,7 @@
   "name": "research-figure-builder",
   "version": "0.1.0"
  },
- "generated_at": "2026-11-20T11:55:18+0800",
+ "generated_at": "2026-11-22T14:45:03+0800",
  "figures": {
   "n_requested": 2,
   "n_delivered": 2,
@@ -208,12 +208,12 @@
      "pdf": {
       "file": "figure_1.pdf",
       "exists": true,
-      "bytes": 10715,
-      "sha256": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
+      "bytes": 11238,
+      "sha256": "b66166e2c669885cc5502f90061b1f81190a085f82c647db452d6f52d904d3c1",
       "metadata": {
        "path": "figure_1.pdf",
        "exists": true,
-       "size_bytes": 10715,
+       "size_bytes": 11238,
        "format": "pdf",
        "properties": {
         "pages": 1,
@@ -227,9 +227,9 @@
          }
         ],
         "first_page_fonts": [
-         "ASAVIP+PingFangSC-Semibold",
          "IDTZZE+PingFangSC-Semibold",
          "VRRUSS+PingFangSC-Semibold",
+         "XKCQYB+PingFangSC-Semibold",
          "f-2-0"
         ],
         "pdf_fonts": [
@@ -237,13 +237,13 @@
           "page": 1,
           "resource_name": "/f-0-0",
           "resource_path": "/Resources/Font/f-0-0",
-          "base_font": "ASAVIP+PingFangSC-Semibold",
+          "base_font": "XKCQYB+PingFangSC-Semibold",
           "subtype": "Type0",
           "embedded": true,
           "font_file_keys": [],
           "descendant_fonts": [
            {
-            "base_font": "ASAVIP+PingFangSC-Semibold",
+            "base_font": "XKCQYB+PingFangSC-Semibold",
             "subtype": "CIDFontType0",
             "embedded": true,
             "font_file_keys": [
@@ -341,12 +341,12 @@
      "png": {
       "file": "figure_1.png",
       "exists": true,
-      "bytes": 86037,
-      "sha256": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
+      "bytes": 92520,
+      "sha256": "72c9951358ec10978d5949ac955e060bce0bae11e086fabf49e4bf6a9e2d98e7",
       "metadata": {
        "path": "figure_1.png",
        "exists": true,
-       "size_bytes": 86037,
+       "size_bytes": 92520,
        "format": "png",
        "properties": {
         "format": "PNG",
@@ -419,22 +419,22 @@
      "svg": {
       "file": "figure_1.svg",
       "exists": true,
-      "bytes": 8440,
-      "sha256": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f",
+      "bytes": 8844,
+      "sha256": "f86d164bd7e4479c92b2f620f6930795e79ffe77bb31b0d42f93fac3d24a4fee",
       "metadata": {
        "path": "figure_1.svg",
        "exists": true,
-       "size_bytes": 8440,
+       "size_bytes": 8844,
        "format": "svg",
        "properties": {
         "width_mm": 88.99877777777778,
         "height_mm": 62.00069444444444,
         "viewBox": "0 0 252.28 175.75",
-        "text_elements": 11,
+        "text_elements": 14,
         "image_elements": 0,
         "path_elements": 0,
         "visible_path_instances": 0,
-        "visible_text_instances": 11,
+        "visible_text_instances": 14,
         "text_mode_evidence": "editable-text-present",
         "font_families": [
          "PingFang SC"
@@ -635,18 +635,18 @@
       "figure_1.csv": "f3bda6343ebe23068c1c4b8dad43b834b2581cb01cfdd06978d3de72ded9e0a9",
       "figure_1_lineage.json": "1fb2a37c1bbde450752f242f4fce717c3aec3ae5d3a1213180a5887b5d02ae2b",
       "figure_1_analysis.json": "3a8c5180d9f3b95ac4498764d18ff7bfed23e8da56d9d41486eddf6829839425",
-      "figure_1.pdf": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
-      "figure_1.png": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
-      "figure_1.svg": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f"
+      "figure_1.pdf": "b66166e2c669885cc5502f90061b1f81190a085f82c647db452d6f52d904d3c1",
+      "figure_1.png": "72c9951358ec10978d5949ac955e060bce0bae11e086fabf49e4bf6a9e2d98e7",
+      "figure_1.svg": "f86d164bd7e4479c92b2f620f6930795e79ffe77bb31b0d42f93fac3d24a4fee"
      },
      "after": {
       "figure_1.tsv": "5a43c7517dbfece13ff2586ddba025dfbe24d29890d149933a9e844d1ee445ef",
       "figure_1.csv": "f3bda6343ebe23068c1c4b8dad43b834b2581cb01cfdd06978d3de72ded9e0a9",
       "figure_1_lineage.json": "1fb2a37c1bbde450752f242f4fce717c3aec3ae5d3a1213180a5887b5d02ae2b",
       "figure_1_analysis.json": "3a8c5180d9f3b95ac4498764d18ff7bfed23e8da56d9d41486eddf6829839425",
-      "figure_1.pdf": "265f4b069c9eeef6ab6578cbef80d98afa197561c9b5f9fee7c995e1c4789ae9",
-      "figure_1.png": "1ed443bb458085b85295aca4da88e3bce366003242119d85af3753bddc8f03b3",
-      "figure_1.svg": "7b9de14d1de24c9a80e6359569796592948b2e06bb32f693cfad41a1269e093f"
+      "figure_1.pdf": "b66166e2c669885cc5502f90061b1f81190a085f82c647db452d6f52d904d3c1",
+      "figure_1.png": "72c9951358ec10978d5949ac955e060bce0bae11e086fabf49e4bf6a9e2d98e7",
+      "figure_1.svg": "f86d164bd7e4479c92b2f620f6930795e79ffe77bb31b0d42f93fac3d24a4fee"
      },
      "per_file_sha_match": {
       "figure_1.tsv": true,
@@ -1464,7 +1464,8 @@
     },
     "ready": true,
     "stderr": ""
-   }
+   },
+   "environment_declaration": {}
   },
   "export_policy": {
    "default_formats": [
@@ -1554,6 +1555,7 @@
   "data_quality": "data_quality.json",
   "preparation": "preparation.json",
   "dependencies": "dependencies.json",
+  "environment_declaration": "not found in runtime (recorded as absent)",
   "rules": {
    "chart_choice": {
     "file": "rules/chart_choice.json",
@@ -1672,6 +1674,7 @@
    "data_quality": "data_quality.json",
    "preparation": "preparation.json",
    "dependencies": "dependencies.json",
+   "environment_declaration": "not found in runtime (recorded as absent)",
    "rules": {
     "chart_choice": {
      "file": "rules/chart_choice.json",

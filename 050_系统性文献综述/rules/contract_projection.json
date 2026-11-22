@@ -1,0 +1,16 @@
+{
+ "version": "0.1.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。未被主流程单独生产的契约字段按本表关键词投影到同名产物分区，并显式标注 projection_of；仍无对应则落 status.unmet。",
+ "rules": [
+  {"keywords": ["search", "检索式", "检索策略", "query", "protocol"], "projection": "search_strategy"},
+  {"keywords": ["screen", "筛选", "纳排", "记录", "log"], "projection": "screening_log"},
+  {"keywords": ["prisma", "流程", "计数", "flow", "识别", "纳入"], "projection": "prisma_flow"},
+  {"keywords": ["quality", "质量", "评价", "appraisal", "偏倚"], "projection": "quality_appraisal"},
+  {"keywords": ["evidence", "证据矩阵", "矩阵", "回链", "span"], "projection": "evidence_matrix"},
+  {"keywords": ["synthesis", "综合", "结论", "conclusion", "主结果", "产物"], "projection": "synthesis"},
+  {"keywords": ["conflict", "冲突", "矛盾"], "projection": "conflicts"},
+  {"keywords": ["gap", "空白", "缺口"], "projection": "research_gaps"},
+  {"keywords": ["status", "状态", "完成"], "projection": "status"}
+ ],
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论"
+}

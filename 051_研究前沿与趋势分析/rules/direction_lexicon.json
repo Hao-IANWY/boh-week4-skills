@@ -1,0 +1,107 @@
+{
+ "version": "1.0.0",
+ "description": "048 方向词典：对同一子问题内共享检索键的两条证据做成对方向比对。零效应组优先命中；否定前置词使 ±1 失效（转记 0 并标 negated）；同句正负并存记 mixed 不参与成对判定；同向不记冲突。冲突一律双列（side_a/side_b 各带逐字引文、方向与强度词），不合并、不写「尚存争议」。",
+ "direction_groups": [
+  {
+   "group": "no_effect",
+   "direction": "0",
+   "terms": [
+    "无显著影响",
+    "无显著变化",
+    "无显著差异",
+    "没有显著影响",
+    "差异不显著",
+    "不影响",
+    "无影响",
+    "no effect",
+    "no significant",
+    "no statistically significant",
+    "does not affect",
+    "no difference",
+    "no appreciable"
+   ]
+  },
+  {
+   "group": "increase",
+   "direction": "+1",
+   "terms": [
+    "提高",
+    "升高",
+    "上升",
+    "增加",
+    "提升",
+    "增强",
+    "促进",
+    "改善",
+    "正效应",
+    "increases",
+    "increase",
+    "increased",
+    "enhance",
+    "enhances",
+    "promote",
+    "promotes",
+    "improve",
+    "improves",
+    "elevate",
+    "raises",
+    "higher than"
+   ]
+  },
+  {
+   "group": "decrease",
+   "direction": "-1",
+   "terms": [
+    "降低",
+    "下降",
+    "减少",
+    "抑制",
+    "削弱",
+    "恶化",
+    "负效应",
+    "decreases",
+    "decrease",
+    "decreased",
+    "reduce",
+    "reduces",
+    "inhibit",
+    "inhibits",
+    "impair",
+    "impairs",
+    "lower than",
+    "drops"
+   ]
+  }
+ ],
+ "strength_terms": [
+  "显著",
+  "明显",
+  "大幅",
+  "轻微",
+  "significantly",
+  "markedly",
+  "slightly",
+  "strongly"
+ ],
+ "negation_markers": [
+  "不",
+  "无",
+  "未",
+  "没",
+  "难以",
+  "not ",
+  "no ",
+  "without ",
+  "non-"
+ ],
+ "pair_rules": {
+  "scope": "仅同一子问题内、且两条证据共享至少一个检索键（同主题）时做方向比对；跨子问题不比对",
+  "direction_conflict": "方向 +1 与 -1 成对且共享检索键 → direction_conflict",
+  "zero_vs_direction": "方向 0 与 ±1 并存且共享检索键 → zero_vs_direction（零效应与方向效应并列，口径差异待核）",
+  "mixed": "同一句内正负并存记 direction=mixed，不参与成对判定，另记 uncertainty",
+  "negated": "±1 词项前 6 字符内出现否定前置词 → 该词项失效；全部 ±1 失效时方向转记 0 并标 negated=true",
+  "agreement": "同向（+1/+1、-1/-1、0/0）不记冲突，只在结论边界说明证据一致性",
+  "resolution": "并列双列呈现（side_a/side_b 各带逐字引文、方向与强度词），不择一、不合并、不以「尚存争议」替代双列"
+ },
+ "known_limits": "词典法只做词面方向判定，不解析处理组差异（如「微塑料使其下降」与「加生物炭后回升」共享检索键时可能成对误报）；本仓库以零效应组优先、否定前置、同句 mixed 三道闸收窄，剩余风险记录在 review/048_realtest/REPORT.md。"
+}

@@ -1,0 +1,24 @@
+{
+ "version": "0.2.0",
+ "description": "output_contract 字段名 → 本 skill 产物键的路由表。正式案例字段命名不固定，按本表 + 字段要求文本绑定；未命中者落 not_produced 并记 unmet。按数组顺序匹配，先命中先用。",
+ "virtual_targets": {"evidence": "证据分区视图", "uncertainty": "uncertainty 列表", "status": "status 三段"},
+ "rules": [
+  {"match": ["候选", "选题", "方向", "candidate", "direction", "逐选题"], "target": "candidate_assessments"},
+  {"match": ["问题陈述", "problem", "可证伪", "研究问题", "假设"], "target": "problem_statement"},
+  {"match": ["比较矩阵", "compare", "先验", "prior_art", "已有工作", "related"], "target": "prior_art_matrix"},
+  {"match": ["创新", "novelty", "新颖"], "target": "novelty_assessment"},
+  {"match": ["可行", "feasib", "前提", "资源"], "target": "feasibility_assessment"},
+  {"match": ["价值", "value", "意义"], "target": "value_assessment"},
+  {"match": ["风险", "risk", "失败"], "target": "risk_assessment"},
+  {"match": ["四维", "综合评估", "评估结论", "决策"], "target": "four_dimension_assessment"},
+  {"match": ["证据表", "证据矩阵", "evidence_table"], "target": "evidence_table"},
+  {"match": ["筛选", "screening", "纳排", "协议"], "target": "screening"},
+  {"match": ["冲突", "conflict"], "target": "conflicts"},
+  {"match": ["建议", "proposal", "下一步"], "target": "proposals"},
+  {"match": ["证据", "evidence", "来源定位", "回链"], "target": "evidence"},
+  {"match": ["不确定", "uncertainty", "边界"], "target": "uncertainty"},
+  {"match": ["状态", "status", "异常"], "target": "status"},
+  {"match": ["研究产物", "报告", "评估结果", "结果", "deliverable"], "target": "candidate_assessments"}
+ ],
+ "note": "复合键优先匹配更具体的子产物；证据/不确定性/状态类虚拟键绑定三段式真实内容。"
+}

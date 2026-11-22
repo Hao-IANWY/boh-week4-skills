@@ -1,0 +1,125 @@
+{
+ "case_id": "EXAMPLE-049-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：围绕「图神经网络在逆合成反应预测中的表示学习、模板无关方法与低数据泛化」这批 9 条题录写一份带引用的文献综述草稿：先按标准筛选、主题从文献里归纳、证据逐条回链到原文整句、冲突并列、空白落到具体证据缺口。",
+ "output_contract": {
+  "screening": "纳排标准与逐条筛选记录（纳入/排除 + criterion_id + 理由码）、去重记录",
+  "topics": "主题树：主题/子问题/支撑文献/边界；未归类文献单列",
+  "outline": "大纲：分节标题、每节计划引用的 evidence_id、节的性质（方法/主题/冲突/空白）",
+  "evidence_table": "证据表：evidence_id / 文献标识 / 原文整句 / 定位 / 支撑主题 / 强度",
+  "draft": "分节草稿：每句由原文整句 + [E###] 组成，含证据强度分级与自检（无证据句清单）",
+  "evidence_map": "标准版本、主题术语集、证据↔主题映射、草稿↔证据映射、冲突与产物自检",
+  "状态说明": "完成/部分完成、被排除文献、未归类、无证据主题、产物生成情况、不确定性"
+ },
+ "research_question": "图神经网络在逆合成反应预测中如何表示反应中心，模板无关方法与低数据条件下的泛化表现如何，评测口径是否可比？",
+ "records": [
+  {
+   "record_id": "P1",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis. Message passing over the molecular graph yields reaction centre candidates and reaches 52.3% top-1 accuracy on USPTO-50k.",
+   "year": 2021,
+   "authors": ["A. Kim"],
+   "venue": "Journal of Chemical Information and Modeling",
+   "doi": "10.1000/example.2021.001",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["retrosynthesis", "graph neural network"]
+  },
+  {
+   "record_id": "P2",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "Preprint of the same graph neural network retrosynthesis study with the learned reaction centre representation.",
+   "year": 2020,
+   "authors": ["A. Kim"],
+   "venue": "arXiv",
+   "doi": "10.1000/example.2021.001",
+   "type": "preprint",
+   "language": "en",
+   "keywords": ["retrosynthesis"]
+  },
+  {
+   "record_id": "P3",
+   "title": "Template-free retrosynthesis via graph attention",
+   "abstract": "A template-free model reaches 48.1% top-1 accuracy on USPTO-50k and removes template construction entirely, while template-based baselines remain competitive in low data settings.",
+   "year": 2022,
+   "authors": ["M. Rossi"],
+   "venue": "Nature Machine Intelligence",
+   "doi": "10.1000/example.2022.014",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["template-free", "retrosynthesis"]
+  },
+  {
+   "record_id": "P4",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "abstract": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points, and the representation learned on the reaction centre generalizes poorly across reaction classes.",
+   "year": 2023,
+   "authors": ["S. Iyer"],
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2023.055",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["low data", "generalization"]
+  },
+  {
+   "record_id": "P5",
+   "title": "Benchmarking graph neural networks for reaction yield prediction",
+   "abstract": "A benchmark with three dataset splits shows that reported top-1 accuracy differences are largely explained by split choice rather than architecture.",
+   "year": 2023,
+   "authors": ["Y. Chen"],
+   "venue": "NeurIPS Datasets and Benchmarks",
+   "doi": "10.1000/example.2023.777",
+   "type": "conference-paper",
+   "language": "en",
+   "keywords": ["benchmark", "yield prediction"]
+  },
+  {
+   "record_id": "P6",
+   "title": "Re-examining single-step retrosynthesis benchmarks",
+   "abstract": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits.",
+   "year": 2024,
+   "authors": ["L. Duarte"],
+   "venue": "Journal of Cheminformatics",
+   "doi": "10.1000/example.2024.120",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["benchmark", "reproduction"]
+  },
+  {
+   "record_id": "P7",
+   "title": "Multi-step route planning with learned heuristics",
+   "abstract": "Multi-step route planning is evaluated by route success rate rather than top-1 accuracy, so single-step benchmark numbers are not directly comparable.",
+   "year": 2024,
+   "authors": ["F. Lima"],
+   "venue": "Digital Discovery",
+   "doi": "10.1000/example.2024.019",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["route planning"]
+  },
+  {
+   "record_id": "P8",
+   "title": "Deep learning for retrosynthesis: a survey",
+   "abstract": "A survey covering template-based and template-free retrosynthesis methods and their evaluation practice.",
+   "year": 2024,
+   "authors": ["H. Sato"],
+   "venue": "Chemical Reviews",
+   "doi": "10.1000/example.2024.300",
+   "type": "review",
+   "language": "en",
+   "keywords": ["survey", "retrosynthesis"]
+  },
+  {
+   "record_id": "P9",
+   "title": "Catalytic C-H activation with earth-abundant metals",
+   "abstract": "An experimental study on catalytic C-H activation with no computational retrosynthesis modelling.",
+   "year": 2023,
+   "authors": ["P. Novak"],
+   "venue": "ACS Catalysis",
+   "doi": "10.1000/example.2023.088",
+   "type": "journal-article",
+   "language": "en",
+   "keywords": ["catalysis"]
+  }
+ ],
+ "source": {"title": "Synthetic interface example (not a test case)", "doi": null}
+}

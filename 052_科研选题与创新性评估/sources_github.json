@@ -1,0 +1,261 @@
+{
+ "seq": 52,
+ "title": "科研选题与创新性评估",
+ "category": "深度研究与文献综述",
+ "queries": [
+  "research idea novelty assessment",
+  "novelty evaluation research proposal llm",
+  "scientific idea generation agent"
+ ],
+ "candidates": [
+  {
+   "full_name": "SakanaAI/AI-Scientist",
+   "url": "https://github.com/SakanaAI/AI-Scientist",
+   "stars": 15014,
+   "desc": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery 🧑‍🔬",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": "NOASSERTION",
+   "pushed_at": "2025-12-19T07:46:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "SamuelSchmidgall/AgentLaboratory",
+   "url": "https://github.com/SamuelSchmidgall/AgentLaboratory",
+   "stars": 5932,
+   "desc": "Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2025-08-20T21:46:43Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "HKUDS/AI-Researcher",
+   "url": "https://github.com/HKUDS/AI-Researcher",
+   "stars": 5895,
+   "desc": "[NeurIPS2025] \"AI-Researcher: Autonomous Scientific Innovation\" -- A production-ready version: https://novix.science/chat",
+   "topics": [
+    "ai-researcher"
+   ],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-10-16T06:47:34Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "deer-flow/llm-space",
+   "url": "https://github.com/deer-flow/llm-space",
+   "stars": 2139,
+   "desc": "A desktop app to prototype agent ideas, inspect every harness step, replay failures, and evaluate performance, all in one place. Local-first, cloud-ready for managed agents.",
+   "topics": [
+    "agent",
+    "deer-flow",
+    "develop",
+    "electrobun",
+    "harness",
+    "llm"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-09T08:51:52Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "IceBearAI/LLM-And-More",
+   "url": "https://github.com/IceBearAI/LLM-And-More",
+   "stars": 387,
+   "desc": "LLM-And-More is a professional, plug-and-play, llm trainer and application builder that guides you through the complete LLM workflow from data to evaluation, from training to deployment, from idea to sevice. / LLM-And-M…",
+   "topics": [],
+   "lang": "Go",
+   "license": null,
+   "pushed_at": "2024-07-05T01:33:30Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "KalarisLabs/research-agent-skills",
+   "url": "https://github.com/KalarisLabs/research-agent-skills",
+   "stars": 157,
+   "desc": "Turn any AI agent into a research co-scientist: 280+ open-source agent skills for literature reviews, hypotheses, experimental design, data analysis, paper writing, citation verification and peer review. Claude Code, Co…",
+   "topics": [
+    "academic-research",
+    "academic-writing",
+    "agent-skills",
+    "ai-agents",
+    "bioinformatics",
+    "citation-verification"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-17T08:35:51Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "NoorBayan/Awzan",
+   "url": "https://github.com/NoorBayan/Awzan",
+   "stars": 140,
+   "desc": "Awzān is a detailed dataset capturing all metrical patterns (taf'ilat) of classical Arabic poetic meters, addressing gaps in existing research. It enables advanced tasks like prosody analysis, meter recognition, and poe…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-06-17T00:12:17Z",
+   "via": [
+    "research gap analysis"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "imlrz/DeepResearch-Bench-II",
+   "url": "https://github.com/imlrz/DeepResearch-Bench-II",
+   "stars": 99,
+   "desc": "DeepResearch Bench II (DRB2) is the follow-up to DeepResearch Bench, with a stronger focus on measuring the gap between deep research systems and human experts. It does so by decomposing expert-written reports into hier…",
+   "topics": [
+    "benchmark",
+    "deepresearch",
+    "llm",
+    "llmagent"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-10-19T08:46:07Z",
+   "via": [
+    "research gap analysis"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Aryia-Behroziuan/References",
+   "url": "https://github.com/Aryia-Behroziuan/References",
+   "stars": 78,
+   "desc": "Poole, Mackworth & Goebel 1998, p. 1.  Russell & Norvig 2003, p. 55.  Definition of AI as the study of intelligent agents: Poole, Mackworth & Goebel (1998), which provides the version that is used in this article. These…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2022-09-02T16:06:15Z",
+   "via": [
+    "scientific idea generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "artificial-scientist-lab/SciMuse",
+   "url": "https://github.com/artificial-scientist-lab/SciMuse",
+   "stars": 43,
+   "desc": "Interesting Scientific Idea Generation Using Knowledge Graphs and LLMs: Evaluations with 100 Research Group Leaders",
+   "topics": [
+    "ai4science",
+    "knowledge-graph",
+    "large-language-models",
+    "prediction"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-09-07T20:41:13Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "x66ccff/liveideabench",
+   "url": "https://github.com/x66ccff/liveideabench",
+   "stars": 40,
+   "desc": "[𝐍𝐚𝐭𝐮𝐫𝐞 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬] 🤖💡 LiveIdeaBench: Evaluating LLMs' Scientific Creativity and Idea Generation with Minimal Context",
+   "topics": [
+    "ai-for-science",
+    "ai4science",
+    "benchmark",
+    "creative-ai",
+    "divergent-thinking",
+    "idea-generation"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "MIT",
+   "pushed_at": "2026-04-21T02:04:12Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cxcscmu/IdeaTaste",
+   "url": "https://github.com/cxcscmu/IdeaTaste",
+   "stars": 33,
+   "desc": "IdeaTaste - A benchmark for research taste: let LLM agents propose research ideas, then check how many of them the research area actually went on to do.",
+   "topics": [
+    "ai-scientists",
+    "benchmark",
+    "evaluation",
+    "evaluation-framework",
+    "evaluation-metrics",
+    "idea-generation"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-03T16:31:03Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "LengFeng00/research-gap-finder",
+   "url": "https://github.com/LengFeng00/research-gap-finder",
+   "stars": 23,
+   "desc": "An AI Agent skill for systematic literature analysis, research gap identification, and hypothesis generation",
+   "topics": [],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-03-22T14:47:08Z",
+   "via": [
+    "research gap analysis"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ulab-uiuc/GraphEval",
+   "url": "https://github.com/ulab-uiuc/GraphEval",
+   "stars": 19,
+   "desc": "[ICLR 2025] \"GraphEval: A Lightweight Graph-Based LLM Framework for Idea Evaluation\", Tao Feng, Yihang Sun, Jiaxuan You",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2025-03-18T06:20:14Z",
+   "via": [
+    "idea evaluation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "mangools/seo-skills",
+   "url": "https://github.com/mangools/seo-skills",
+   "stars": 18,
+   "desc": "Mangools SEO skill for Claude: Keyword research, competitor gap analysis and a prioritized content plan built on live Mangools data. Works in Claude chat, Cowork and Claude Code.",
+   "topics": [
+    "agent-skills",
+    "claude",
+    "claude-code",
+    "claude-skills",
+    "content-planning",
+    "keyword-research"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-23T10:34:06Z",
+   "via": [
+    "research gap analysis"
+   ],
+   "seed": false
+  }
+ ]
+}

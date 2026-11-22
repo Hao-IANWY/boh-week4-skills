@@ -1,0 +1,4200 @@
+{
+ "case_id": "EXAMPLE-050-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "systematic-review-prisma",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-22T15:44:18+0800",
+ "search_strategy": {
+  "question": "图神经网络用于单步逆合成预测时，报告的 top-1 准确率水平如何，低数据条件下的泛化表现如何，不同研究的评测口径是否可比？",
+  "elements": {
+   "B_OBJECT": [
+    "单步",
+    "逆合成"
+   ],
+   "B_METHOD": [
+    "图神经网络"
+   ],
+   "B_OUTCOME": [
+    "top-1",
+    "准确率"
+   ]
+  },
+  "blocks": [
+   {
+    "block_id": "B_OBJECT",
+    "label": "研究对象",
+    "matched_in_question": [
+     "单步",
+     "逆合成"
+    ],
+    "terms": [
+     "逆合成",
+     "retrosynthesis",
+     "反应预测",
+     "reaction prediction",
+     "single-step",
+     "单步"
+    ],
+    "boolean": "(逆合成 OR retrosynthesis OR 反应预测 OR reaction prediction OR single-step OR 单步)",
+    "field_scope": [
+     "title",
+     "abstract",
+     "keywords"
+    ]
+   },
+   {
+    "block_id": "B_METHOD",
+    "label": "方法/干预",
+    "matched_in_question": [
+     "图神经网络"
+    ],
+    "terms": [
+     "graph neural network",
+     "图神经网络",
+     "gnn",
+     "message passing",
+     "消息传递",
+     "deep learning",
+     "learning"
+    ],
+    "boolean": "(graph neural network OR 图神经网络 OR gnn OR message passing OR 消息传递 OR deep learning)",
+    "field_scope": [
+     "title",
+     "abstract"
+    ]
+   },
+   {
+    "block_id": "B_OUTCOME",
+    "label": "结局指标",
+    "matched_in_question": [
+     "top-1",
+     "准确率"
+    ],
+    "terms": [
+     "accuracy",
+     "top-1",
+     "准确率",
+     "yield",
+     "产率",
+     "success rate",
+     "performance"
+    ],
+    "boolean": "(accuracy OR top-1 OR 准确率 OR yield OR 产率 OR success rate)",
+    "field_scope": [
+     "title",
+     "abstract"
+    ]
+   }
+  ],
+  "expression": "(逆合成 OR retrosynthesis OR 反应预测 OR reaction prediction OR single-step OR 单步) AND (graph neural network OR 图神经网络 OR gnn OR message passing OR 消息传递 OR deep learning) AND (accuracy OR top-1 OR 准确率 OR yield OR 产率 OR success rate)",
+  "limits": {
+   "databases": [
+    "local-corpus"
+   ],
+   "fields": [
+    "title",
+    "abstract",
+    "keywords",
+    "fulltext"
+   ],
+   "year_from": 2019,
+   "year_to": 2026,
+   "languages": [
+    "en",
+    "zh"
+   ],
+   "document_types": [
+    "journal-article",
+    "conference-paper",
+    "preprint",
+    "review"
+   ]
+  },
+  "databases": [
+   "local-corpus [arxiv]",
+   "local-corpus [crossref]",
+   "local-corpus [openreview]"
+  ],
+  "records_per_source": {
+   "local-corpus [arxiv]": 1,
+   "local-corpus [crossref]": 6,
+   "local-corpus [openreview]": 1
+  },
+  "protocol_status": "registered_prospective",
+  "prospective": true,
+  "executed_at": "",
+  "note": "检索式只在本轮给定的题录集上执行；未联网、未声称覆盖数据库全量"
+ },
+ "screening_log": {
+  "criteria": [
+   {
+    "id": "C1_YEAR",
+    "stage": "title_abstract",
+    "type": "year_min",
+    "value": 2019,
+    "label": "发表年份 ≥ 2019"
+   },
+   {
+    "id": "C2_TYPE",
+    "stage": "title_abstract",
+    "type": "type_in",
+    "value": [
+     "journal-article",
+     "conference-paper",
+     "preprint",
+     "review"
+    ],
+    "label": "文献类型在允许集合内"
+   },
+   {
+    "id": "C3_ABSTRACT",
+    "stage": "title_abstract",
+    "type": "require_abstract",
+    "value": "",
+    "label": "有摘要"
+   },
+   {
+    "id": "C4_OBJECT",
+    "stage": "title_abstract",
+    "type": "keyword_any",
+    "value": [
+     "逆合成",
+     "retrosynthesis",
+     "反应预测",
+     "reaction"
+    ],
+    "label": "对象要素命中"
+   },
+   {
+    "id": "C5_FULLTEXT",
+    "stage": "full_text",
+    "type": "require_fulltext",
+    "value": "",
+    "label": "全文可得"
+   },
+   {
+    "id": "C6_LANG",
+    "stage": "full_text",
+    "type": "language_in",
+    "value": [
+     "en",
+     "zh"
+    ],
+    "label": "全文语言在允许集合内"
+   },
+   {
+    "id": "C7_OUTCOME",
+    "stage": "full_text",
+    "type": "outcome_reported",
+    "value": [
+     "accuracy",
+     "top-1",
+     "yield",
+     "准确率",
+     "产率"
+    ],
+    "label": "报告可比结局指标"
+   }
+  ],
+  "reason_codes": {
+   "C1_YEAR": "年份早于时间窗",
+   "C2_TYPE": "文献类型不在允许集合内",
+   "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+   "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+   "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+   "C6_LANG": "全文语言不在允许集合内",
+   "C7_OUTCOME": "未报告可比结局指标",
+   "R_DUP_DOI": "DOI 归一后重复，识别阶段已删除",
+   "R_DUP_TITLE": "标题+年份强归一后重复（预印本/正式版合并）",
+   "R_THEME_NO_EVIDENCE": "该主题在纳入研究中无可引用证据句",
+   "R_ALL_LOW_QUALITY": "全部纳入研究质量等级为 low",
+   "R_PROTOCOL_MISSING": "case 未提供前瞻性纳排协议（条款、主因顺序），按声明回退口径执行",
+   "R_PROTOCOL_NO_THEMES": "协议缺失时未定义综合主题；不虚构主题，综合留空并声明",
+   "R_INPUT_ERROR": "输入不可读"
+  },
+  "primary_reason_rule": {
+   "order": [
+    "C5_FULLTEXT",
+    "C2_TYPE",
+    "C1_YEAR",
+    "C6_LANG",
+    "C3_ABSTRACT",
+    "C4_OBJECT",
+    "C7_OUTCOME"
+   ],
+   "note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数。"
+  },
+  "stages": [
+   "title_abstract",
+   "full_text"
+  ],
+  "rows": [
+   {
+    "record_id": "R1",
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "year": 2021,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "body_chars": 124,
+    "has_fulltext": true,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     }
+    ],
+    "outcome": "included",
+    "excluded_at_stage": "",
+    "primary_criterion_id": "",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R3",
+    "title": "Template-free retrosynthesis via graph attention",
+    "year": 2022,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "body_chars": 115,
+    "has_fulltext": true,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     }
+    ],
+    "outcome": "included",
+    "excluded_at_stage": "",
+    "primary_criterion_id": "",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R4",
+    "title": "Low-data retrosynthesis: how much training data do we need",
+    "year": 2023,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "body_chars": 114,
+    "has_fulltext": true,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     }
+    ],
+    "outcome": "included",
+    "excluded_at_stage": "",
+    "primary_criterion_id": "",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R5",
+    "title": "Benchmarking graph neural networks for reaction yield prediction",
+    "year": 2023,
+    "type": "conference-paper",
+    "language": "en",
+    "source": "local-corpus [openreview]",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_chars": 176,
+    "has_fulltext": false,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "exclude",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [
+       {
+        "criterion_id": "C5_FULLTEXT",
+        "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+       }
+      ],
+      "primary_criterion_id": "C5_FULLTEXT",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+     }
+    ],
+    "outcome": "excluded",
+    "excluded_at_stage": "full_text",
+    "primary_criterion_id": "C5_FULLTEXT",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R6",
+    "title": "Re-examining single-step retrosynthesis benchmarks",
+    "year": 2024,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "body_chars": 92,
+    "has_fulltext": true,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     }
+    ],
+    "outcome": "included",
+    "excluded_at_stage": "",
+    "primary_criterion_id": "",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R7",
+    "title": "Multi-step route planning with learned heuristics",
+    "year": 2024,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_chars": 140,
+    "has_fulltext": false,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "exclude",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [
+       {
+        "criterion_id": "C4_OBJECT",
+        "reason": "对象/方法/结局要素均未命中（对象要素未命中（题录级判为不相关））"
+       }
+      ],
+      "primary_criterion_id": "C4_OBJECT",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "对象/方法/结局要素均未命中（对象要素未命中（题录级判为不相关））"
+     }
+    ],
+    "outcome": "excluded",
+    "excluded_at_stage": "title_abstract",
+    "primary_criterion_id": "C4_OBJECT",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   },
+   {
+    "record_id": "R8",
+    "title": "Catalytic C-H activation with earth-abundant metals",
+    "year": 2023,
+    "type": "journal-article",
+    "language": "en",
+    "source": "local-corpus [crossref]",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_chars": 120,
+    "has_fulltext": false,
+    "stage_decisions": [
+     {
+      "stage": "title_abstract",
+      "decision": "include",
+      "evaluated_criteria": [
+       "C1_YEAR",
+       "C2_TYPE",
+       "C3_ABSTRACT",
+       "C4_OBJECT"
+      ],
+      "criterion_hits": [],
+      "primary_criterion_id": "",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "通过该阶段全部条款"
+     },
+     {
+      "stage": "full_text",
+      "decision": "exclude",
+      "evaluated_criteria": [
+       "C5_FULLTEXT",
+       "C6_LANG",
+       "C7_OUTCOME"
+      ],
+      "criterion_hits": [
+       {
+        "criterion_id": "C5_FULLTEXT",
+        "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+       }
+      ],
+      "primary_criterion_id": "C5_FULLTEXT",
+      "secondary_hits": [],
+      "undecidable": [],
+      "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+     }
+    ],
+    "outcome": "excluded",
+    "excluded_at_stage": "full_text",
+    "primary_criterion_id": "C5_FULLTEXT",
+    "secondary_hits": [],
+    "needs_manual_review": false,
+    "manual_review_reasons": [],
+    "fallback": false
+   }
+  ],
+  "policy": "两轮筛选（题录级 → 全文级）使用同一套条款表；每条记录评估该阶段全部条款并记 criterion_hits；排除只取规则定义的唯一主因；元数据缺失导致不可判定的条款转人工复核队列，不自动排除；不得在筛选途中放宽或新增条款；重复文献只在识别阶段删除。",
+  "protocol_status": "registered_prospective",
+  "protocol_id": "PROTO-EXAMPLE-050-GNN-RETRO",
+  "fallback": false,
+  "fallback_rows": 0,
+  "manual_review": {
+   "policy": "undecidable 条款（年份/类型/语言缺失、正文为空、条款类型未知等）不自动排除：记录继续走完流程并标记 needs_manual_review，进入 screening_log.manual_review 队列。自动筛选止步于此，人工复核边界明示。",
+   "boundary": "undecidable 条款与回退口径不自动排除；自动筛选止步于此，队列交人工复核",
+   "queue": [],
+   "count": 0
+  }
+ },
+ "prisma_flow": {
+  "stages": [
+   {
+    "id": "identification",
+    "label": "识别（Identification）",
+    "desc": "数据库检索数量 + 去重"
+   },
+   {
+    "id": "screening",
+    "label": "筛选（Screening）",
+    "desc": "题录级纳排"
+   },
+   {
+    "id": "eligibility",
+    "label": "合格性（Eligibility）",
+    "desc": "全文级纳排"
+   },
+   {
+    "id": "included",
+    "label": "纳入（Included）",
+    "desc": "进入综合与质量评价"
+   }
+  ],
+  "identification": {
+   "records_identified": 8,
+   "per_source": {
+    "local-corpus [arxiv]": 1,
+    "local-corpus [crossref]": 6,
+    "local-corpus [openreview]": 1
+   },
+   "duplicates_removed": 1,
+   "duplicates": [
+    {
+     "record_id": "R2",
+     "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+     "code": "R_DUP_DOI",
+     "duplicate_of": "R1"
+    }
+   ],
+   "records_after_dedup": 7
+  },
+  "screening": {
+   "records_screened": 7,
+   "records_excluded": 1,
+   "exclusion_reasons": [
+    {
+     "criterion_id": "C4_OBJECT",
+     "reason": "对象要素未命中（题录级判为不相关）",
+     "count": 1,
+     "record_ids": [
+      "R7"
+     ]
+    }
+   ]
+  },
+  "eligibility": {
+   "records_assessed": 6,
+   "records_excluded": 2,
+   "exclusion_reasons": [
+    {
+     "criterion_id": "C5_FULLTEXT",
+     "reason": "全文不可得，无法做全文级判定",
+     "count": 2,
+     "record_ids": [
+      "R5",
+      "R8"
+     ]
+    }
+   ]
+  },
+  "included": {
+   "records_included": 4,
+   "record_ids": [
+    "R1",
+    "R3",
+    "R4",
+    "R6"
+   ]
+  },
+  "flow_counts": {
+   "identified": 8,
+   "duplicates_removed": 1,
+   "after_dedup": 7,
+   "screened": 7,
+   "excluded_title_abstract": 1,
+   "assessed_full_text": 6,
+   "excluded_full_text": 2,
+   "included": 4
+  },
+  "consistency": {
+   "checks": [
+    {
+     "id": "I1",
+     "identity": "identified = duplicates_removed + after_dedup",
+     "ok": true,
+     "detail": "8 = 1 + 7"
+    },
+    {
+     "id": "I2",
+     "identity": "after_dedup = excluded_title_abstract + assessed_full_text",
+     "ok": true,
+     "detail": "7 = 1 + 6"
+    },
+    {
+     "id": "I3",
+     "identity": "assessed_full_text = excluded_full_text + included",
+     "ok": true,
+     "detail": "6 = 2 + 4"
+    },
+    {
+     "id": "I4",
+     "identity": "sum(screening buckets) = screening.records_excluded",
+     "ok": true,
+     "detail": "1 = 1"
+    },
+    {
+     "id": "I5",
+     "identity": "sum(eligibility buckets) = eligibility.records_excluded",
+     "ok": true,
+     "detail": "2 = 2"
+    },
+    {
+     "id": "I6",
+     "identity": "每条排除记录只落入其阶段的一个原因桶（主因唯一）",
+     "ok": true,
+     "detail": "无重复落桶"
+    },
+    {
+     "id": "I7",
+     "identity": "sum(per_source) = identified",
+     "ok": true,
+     "detail": "8 = 8"
+    }
+   ],
+   "all_closed": true,
+   "included_check": true
+  }
+ },
+ "quality_appraisal": {
+  "scale": {
+   "not_reported_rule": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。",
+   "not_assessable_effect": "该记录条目均未报告，无法分级；不判低质量，也不单独支撑结论，确定性受限",
+   "judgment_weight": {
+    "yes": 2,
+    "partial": 1,
+    "no": 0,
+    "unclear": 0,
+    "not_reported": 0
+   },
+   "levels": [
+    {
+     "level": "high",
+     "min": 0.9
+    },
+    {
+     "level": "moderate",
+     "min": 0.6
+    },
+    {
+     "level": "low",
+     "min": 0.0
+    }
+   ],
+   "level_effect": {
+    "high": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明",
+    "moderate": "需 ≥2 条一致证据才可支撑结论",
+    "low": "只作背景，不单独支撑结论；写进不确定性"
+   },
+   "items": [
+    {
+     "id": "Q1_OBJECTIVE",
+     "label": "研究目标明确",
+     "kind": "cue",
+     "cues": [
+      "we ",
+      "this study",
+      "this trial",
+      "this review",
+      "本文",
+      "本研究",
+      "我们",
+      "aim",
+      "objective"
+     ],
+     "min_hits": 1,
+     "partial_min_hits": 0
+    },
+    {
+     "id": "Q2_SAMPLE",
+     "label": "样本量可核（sample_size）",
+     "kind": "field",
+     "field": "sample_size",
+     "label_missing": "字段 sample_size 未报告"
+    },
+    {
+     "id": "Q3_METHOD",
+     "label": "方法过程可复现（methodology）",
+     "kind": "field",
+     "field": "methodology",
+     "label_missing": "字段 methodology 未报告"
+    },
+    {
+     "id": "Q4_OUTCOME",
+     "label": "结局指标报告完整",
+     "kind": "cue",
+     "cues": [
+      "评分",
+      "score",
+      "%",
+      "下降",
+      "降低",
+      "改善",
+      "显著",
+      "significant",
+      "reduced",
+      "increased",
+      "incidence",
+      "index"
+     ],
+     "min_hits": 1,
+     "partial_min_hits": 0
+    },
+    {
+     "id": "Q5_LIMITATION",
+     "label": "局限与偏倚说明",
+     "kind": "cue",
+     "cues": [
+      "limitation",
+      "局限",
+      "偏倚",
+      "bias",
+      "盲",
+      "blind",
+      "dropout",
+      "脱落",
+      "cannot",
+      "heterogeneous"
+     ],
+     "min_hits": 1,
+     "partial_min_hits": 0
+    }
+   ]
+  },
+  "rows": [
+   {
+    "record_id": "R1",
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "score": 6,
+    "max_score": 6,
+    "ratio": 1.0,
+    "level": "high",
+    "items": [
+     {
+      "item_id": "Q1_OBJECTIVE",
+      "label": "研究目标明确",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "we"
+      ],
+      "basis_location": "R1#abstract/text"
+     },
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 methodology 未报告"
+     },
+     {
+      "item_id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "%"
+      ],
+      "basis_location": "R1#abstract/text"
+     },
+     {
+      "item_id": "Q5_LIMITATION",
+      "label": "局限与偏倚说明",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "limitation"
+      ],
+      "basis_location": "R1#abstract/text"
+     }
+    ],
+    "not_reported_items": [
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "reason": "字段 methodology 未报告"
+     }
+    ],
+    "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+   },
+   {
+    "record_id": "R3",
+    "title": "Template-free retrosynthesis via graph attention",
+    "score": 6,
+    "max_score": 6,
+    "ratio": 1.0,
+    "level": "high",
+    "items": [
+     {
+      "item_id": "Q1_OBJECTIVE",
+      "label": "研究目标明确",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "we"
+      ],
+      "basis_location": "R3#abstract/text"
+     },
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 methodology 未报告"
+     },
+     {
+      "item_id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "%"
+      ],
+      "basis_location": "R3#abstract/text"
+     },
+     {
+      "item_id": "Q5_LIMITATION",
+      "label": "局限与偏倚说明",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "cannot",
+       "limitation"
+      ],
+      "basis_location": "R3#abstract/text"
+     }
+    ],
+    "not_reported_items": [
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "reason": "字段 methodology 未报告"
+     }
+    ],
+    "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+   },
+   {
+    "record_id": "R4",
+    "title": "Low-data retrosynthesis: how much training data do we need",
+    "score": 4,
+    "max_score": 4,
+    "ratio": 1.0,
+    "level": "high",
+    "items": [
+     {
+      "item_id": "Q1_OBJECTIVE",
+      "label": "研究目标明确",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "we"
+      ],
+      "basis_location": "R4#abstract/text"
+     },
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 methodology 未报告"
+     },
+     {
+      "item_id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "依据词未命中",
+      "not_reported_reason": "依据词未命中：按未报告处理，不判 no/低质量"
+     },
+     {
+      "item_id": "Q5_LIMITATION",
+      "label": "局限与偏倚说明",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "limitation"
+      ],
+      "basis_location": "R4#abstract/text"
+     }
+    ],
+    "not_reported_items": [
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "reason": "字段 methodology 未报告"
+     },
+     {
+      "item_id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "reason": "依据词未命中：按未报告处理，不判 no/低质量"
+     }
+    ],
+    "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+   },
+   {
+    "record_id": "R6",
+    "title": "Re-examining single-step retrosynthesis benchmarks",
+    "score": 6,
+    "max_score": 6,
+    "ratio": 1.0,
+    "level": "high",
+    "items": [
+     {
+      "item_id": "Q1_OBJECTIVE",
+      "label": "研究目标明确",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "we"
+      ],
+      "basis_location": "R6#abstract/text"
+     },
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "judgment": "not_reported",
+      "weight": 0,
+      "basis_terms": [],
+      "basis_location": "字段缺失",
+      "not_reported_reason": "字段 methodology 未报告"
+     },
+     {
+      "item_id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "%"
+      ],
+      "basis_location": "R6#abstract/text"
+     },
+     {
+      "item_id": "Q5_LIMITATION",
+      "label": "局限与偏倚说明",
+      "judgment": "yes",
+      "weight": 2,
+      "basis_terms": [
+       "limitation"
+      ],
+      "basis_location": "R6#abstract/text"
+     }
+    ],
+    "not_reported_items": [
+     {
+      "item_id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "reason": "字段 sample_size 未报告"
+     },
+     {
+      "item_id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "reason": "字段 methodology 未报告"
+     }
+    ],
+    "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+   }
+  ],
+  "overall": {
+   "high": 4,
+   "moderate": 0,
+   "low": 0,
+   "not_assessable": 0
+  },
+  "not_reported_total": 9,
+  "boundary_note": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。"
+ },
+ "evidence_matrix": [
+  {
+   "evidence_id": "M001",
+   "theme_id": "TH_PERFORMANCE",
+   "theme": "单步预测准确率水平",
+   "record_id": "R1",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "year": 2021,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+   "char_span": {
+    "start": 0,
+    "end": 182
+   },
+   "quote_verified": true,
+   "sha256_quote": "c55b2611377983a86ce2ff3a1edd90ce26759b6a5135b8580c6e587de4d0d0d9",
+   "matched_terms": [
+    "52.3",
+    "accuracy",
+    "top-1"
+   ],
+   "coverage": 0.5,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-message-passing"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「单步预测准确率水平」报告如下"
+  },
+  {
+   "evidence_id": "M002",
+   "theme_id": "TH_PERFORMANCE",
+   "theme": "单步预测准确率水平",
+   "record_id": "R3",
+   "title": "Template-free retrosynthesis via graph attention",
+   "year": 2022,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only.",
+   "char_span": {
+    "start": 0,
+    "end": 137
+   },
+   "quote_verified": true,
+   "sha256_quote": "838aa0e42cc35e2c1a39bcc1e79eac27a25cf1472730d9493f2deda5adab2c0c",
+   "matched_terms": [
+    "48.1",
+    "accuracy",
+    "top-1"
+   ],
+   "coverage": 0.5,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-graph-attention",
+     "template-free"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「单步预测准确率水平」报告如下"
+  },
+  {
+   "evidence_id": "M003",
+   "theme_id": "TH_PERFORMANCE",
+   "theme": "单步预测准确率水平",
+   "record_id": "R4",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "year": 2023,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+   "char_span": {
+    "start": 0,
+    "end": 176
+   },
+   "quote_verified": true,
+   "sha256_quote": "df153df78a424c5b15e8f7c0d36cdea1cb83c9c97b95f6a7ee5bbc27274e0cf4",
+   "matched_terms": [
+    "accuracy",
+    "top-1"
+   ],
+   "coverage": 0.3333,
+   "context": {},
+   "quality_level": "high",
+   "claim": "纳入研究对「单步预测准确率水平」报告如下"
+  },
+  {
+   "evidence_id": "M004",
+   "theme_id": "TH_PERFORMANCE",
+   "theme": "单步预测准确率水平",
+   "record_id": "R6",
+   "title": "Re-examining single-step retrosynthesis benchmarks",
+   "year": 2024,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+   "char_span": {
+    "start": 0,
+    "end": 147
+   },
+   "quote_verified": true,
+   "sha256_quote": "aebdf6c9904aec0eb54e922829ee348fbdc7b88e39e180e6d820616d1a6bf11d",
+   "matched_terms": [
+    "49.0",
+    "52.3",
+    "accuracy",
+    "top-1"
+   ],
+   "coverage": 0.6667,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-message-passing"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「单步预测准确率水平」报告如下"
+  },
+  {
+   "evidence_id": "M005",
+   "theme_id": "TH_GENERALIZATION",
+   "theme": "低数据与泛化",
+   "record_id": "R4",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "year": 2023,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+   "char_span": {
+    "start": 0,
+    "end": 176
+   },
+   "quote_verified": true,
+   "sha256_quote": "df153df78a424c5b15e8f7c0d36cdea1cb83c9c97b95f6a7ee5bbc27274e0cf4",
+   "matched_terms": [
+    "cross reaction classes",
+    "generalize",
+    "low data"
+   ],
+   "coverage": 0.6,
+   "context": {},
+   "quality_level": "high",
+   "claim": "纳入研究对「低数据与泛化」报告如下"
+  },
+  {
+   "evidence_id": "M006",
+   "theme_id": "TH_EVALUATION",
+   "theme": "评测口径与可比性",
+   "record_id": "R1",
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "year": 2021,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+   "char_span": {
+    "start": 0,
+    "end": 182
+   },
+   "quote_verified": true,
+   "sha256_quote": "c55b2611377983a86ce2ff3a1edd90ce26759b6a5135b8580c6e587de4d0d0d9",
+   "matched_terms": [
+    "split"
+   ],
+   "coverage": 0.1429,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-message-passing"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「评测口径与可比性」报告如下"
+  },
+  {
+   "evidence_id": "M007",
+   "theme_id": "TH_EVALUATION",
+   "theme": "评测口径与可比性",
+   "record_id": "R3",
+   "title": "Template-free retrosynthesis via graph attention",
+   "year": 2022,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "text",
+   "quote": "Limitation: no cross-split evaluation, possible leakage cannot be excluded.",
+   "char_span": {
+    "start": 40,
+    "end": 115
+   },
+   "quote_verified": true,
+   "sha256_quote": "8d7e2b9dfa9a8911c59c6cfc2d214360d7b729904b3cac19cc120d06c3de0e2a",
+   "matched_terms": [
+    "leakage",
+    "split"
+   ],
+   "coverage": 0.2857,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-graph-attention",
+     "template-free"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「评测口径与可比性」报告如下"
+  },
+  {
+   "evidence_id": "M008",
+   "theme_id": "TH_EVALUATION",
+   "theme": "评测口径与可比性",
+   "record_id": "R4",
+   "title": "Low-data retrosynthesis: how much training data do we need",
+   "year": 2023,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "text",
+   "quote": "We evaluate on three dataset splits and report the accuracy decay curve.",
+   "char_span": {
+    "start": 0,
+    "end": 72
+   },
+   "quote_verified": true,
+   "sha256_quote": "031a019b9b5541c3276209ff510bfe7ba9a94f3d7e061b5c38af74d9009f6267",
+   "matched_terms": [
+    "split"
+   ],
+   "coverage": 0.1429,
+   "context": {},
+   "quality_level": "high",
+   "claim": "纳入研究对「评测口径与可比性」报告如下"
+  },
+  {
+   "evidence_id": "M009",
+   "theme_id": "TH_EVALUATION",
+   "theme": "评测口径与可比性",
+   "record_id": "R6",
+   "title": "Re-examining single-step retrosynthesis benchmarks",
+   "year": 2024,
+   "source_file": "inline",
+   "extraction_method": "inline_text",
+   "quote_field": "abstract",
+   "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+   "char_span": {
+    "start": 0,
+    "end": 147
+   },
+   "quote_verified": true,
+   "sha256_quote": "aebdf6c9904aec0eb54e922829ee348fbdc7b88e39e180e6d820616d1a6bf11d",
+   "matched_terms": [
+    "leakage",
+    "split"
+   ],
+   "coverage": 0.2857,
+   "context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-message-passing"
+    ]
+   },
+   "quality_level": "high",
+   "claim": "纳入研究对「评测口径与可比性」报告如下"
+  }
+ ],
+ "synthesis": [
+  {
+   "conclusion_id": "K01",
+   "theme_id": "TH_PERFORMANCE",
+   "statement": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M001] A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only. [M002] Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes. [M003]",
+   "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+   "sentence_map": [
+    {
+     "evidence_id": "M001",
+     "record_id": "R1",
+     "source_file": "inline",
+     "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+     "char_span": {
+      "start": 0,
+      "end": 182
+     }
+    },
+    {
+     "evidence_id": "M002",
+     "record_id": "R3",
+     "source_file": "inline",
+     "quote": "A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only.",
+     "char_span": {
+      "start": 0,
+      "end": 137
+     }
+    },
+    {
+     "evidence_id": "M003",
+     "record_id": "R4",
+     "source_file": "inline",
+     "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+     "char_span": {
+      "start": 0,
+      "end": 176
+     }
+    }
+   ],
+   "evidence_ids": [
+    "M001",
+    "M002",
+    "M003",
+    "M004"
+   ],
+   "support_level": "conflicting",
+   "certainty": {
+    "backing_records": 4,
+    "quality_levels": {
+     "high": 4,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "records_with_not_reported": {
+     "R1": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ],
+     "R3": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ],
+     "R4": [
+      "Q2_SAMPLE",
+      "Q3_METHOD",
+      "Q4_OUTCOME"
+     ],
+     "R6": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ]
+    },
+    "not_assessable_records": [],
+    "note": "确定性按已报告条目计算；未报告条目不计入低质量，但在本说明中列明；未报告条目：{\"R1\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R3\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"], \"R6\": [\"Q2_SAMPLE\", \"Q3_METHOD\"]}"
+   },
+   "conflict_ids": [
+    "C01"
+   ],
+   "dual_column": [
+    {
+     "conflict_id": "C01",
+     "type": "numeric_conflict",
+     "side_a": {
+      "evidence_id": "M001",
+      "record_id": "R1",
+      "source_file": "inline",
+      "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+      "quote_verified": true,
+      "value": "52.3",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     },
+     "side_b": {
+      "evidence_id": "M004",
+      "record_id": "R6",
+      "source_file": "inline",
+      "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+      "quote_verified": true,
+      "value": "49.0",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     }
+    }
+   ],
+   "quality_distribution": {
+    "high": 4,
+    "moderate": 0,
+    "low": 0,
+    "not_assessable": 0
+   },
+   "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+  },
+  {
+   "conclusion_id": "K02",
+   "theme_id": "TH_GENERALIZATION",
+   "statement": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes. [M005]",
+   "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+   "sentence_map": [
+    {
+     "evidence_id": "M005",
+     "record_id": "R4",
+     "source_file": "inline",
+     "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+     "char_span": {
+      "start": 0,
+      "end": 176
+     }
+    }
+   ],
+   "evidence_ids": [
+    "M005"
+   ],
+   "support_level": "moderate",
+   "certainty": {
+    "backing_records": 1,
+    "quality_levels": {
+     "high": 1,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "records_with_not_reported": {
+     "R4": [
+      "Q2_SAMPLE",
+      "Q3_METHOD",
+      "Q4_OUTCOME"
+     ]
+    },
+    "not_assessable_records": [],
+    "note": "确定性按已报告条目计算；未报告条目不计入低质量，但在本说明中列明；未报告条目：{\"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"]}"
+   },
+   "conflict_ids": [],
+   "dual_column": [],
+   "quality_distribution": {
+    "high": 1,
+    "moderate": 0,
+    "low": 0,
+    "not_assessable": 0
+   },
+   "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+  },
+  {
+   "conclusion_id": "K03",
+   "theme_id": "TH_EVALUATION",
+   "statement": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M006] Limitation: no cross-split evaluation, possible leakage cannot be excluded. [M007] We evaluate on three dataset splits and report the accuracy decay curve. [M008]",
+   "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+   "sentence_map": [
+    {
+     "evidence_id": "M006",
+     "record_id": "R1",
+     "source_file": "inline",
+     "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+     "char_span": {
+      "start": 0,
+      "end": 182
+     }
+    },
+    {
+     "evidence_id": "M007",
+     "record_id": "R3",
+     "source_file": "inline",
+     "quote": "Limitation: no cross-split evaluation, possible leakage cannot be excluded.",
+     "char_span": {
+      "start": 40,
+      "end": 115
+     }
+    },
+    {
+     "evidence_id": "M008",
+     "record_id": "R4",
+     "source_file": "inline",
+     "quote": "We evaluate on three dataset splits and report the accuracy decay curve.",
+     "char_span": {
+      "start": 0,
+      "end": 72
+     }
+    }
+   ],
+   "evidence_ids": [
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+   ],
+   "support_level": "moderate",
+   "certainty": {
+    "backing_records": 4,
+    "quality_levels": {
+     "high": 4,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "records_with_not_reported": {
+     "R1": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ],
+     "R3": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ],
+     "R4": [
+      "Q2_SAMPLE",
+      "Q3_METHOD",
+      "Q4_OUTCOME"
+     ],
+     "R6": [
+      "Q2_SAMPLE",
+      "Q3_METHOD"
+     ]
+    },
+    "not_assessable_records": [],
+    "note": "纳入研究存在未报告条目（not_reported），确定性降级；未报告条目：{\"R1\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R3\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"], \"R6\": [\"Q2_SAMPLE\", \"Q3_METHOD\"]}"
+   },
+   "conflict_ids": [],
+   "dual_column": [],
+   "quality_distribution": {
+    "high": 4,
+    "moderate": 0,
+    "low": 0,
+    "not_assessable": 0
+   },
+   "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+  }
+ ],
+ "conflicts": [
+  {
+   "conflict_id": "C01",
+   "type": "numeric_conflict",
+   "theme_id": "TH_PERFORMANCE",
+   "shared_context": {
+    "dataset": [
+     "uspto-50k"
+    ],
+    "method": [
+     "gnn-message-passing"
+    ]
+   },
+   "side_a": {
+    "evidence_id": "M001",
+    "record_id": "R1",
+    "source_file": "inline",
+    "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+    "quote_verified": true,
+    "value": "52.3",
+    "unit": "%",
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    }
+   },
+   "side_b": {
+    "evidence_id": "M004",
+    "record_id": "R6",
+    "source_file": "inline",
+    "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+    "quote_verified": true,
+    "value": "49.0",
+    "unit": "%",
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    }
+   },
+   "detail": "同主题同上下文口径下数值不一致：52.3% vs 49.0%",
+   "resolution": "双列并列呈现（side_a/side_b 各带逐字引文与数值），不择一写入结论；差异写进空白/限制说明，并以 uncertainty 标注未仲裁"
+  }
+ ],
+ "research_gaps": [],
+ "evidence_map": {
+  "protocol": {
+   "version": "0.2.0",
+   "protocol_status": "registered_prospective",
+   "protocol_id": "PROTO-EXAMPLE-050-GNN-RETRO",
+   "prospective": true,
+   "criteria": [
+    {
+     "id": "C1_YEAR",
+     "stage": "title_abstract",
+     "type": "year_min",
+     "value": 2019,
+     "label": "发表年份 ≥ 2019"
+    },
+    {
+     "id": "C2_TYPE",
+     "stage": "title_abstract",
+     "type": "type_in",
+     "value": [
+      "journal-article",
+      "conference-paper",
+      "preprint",
+      "review"
+     ],
+     "label": "文献类型在允许集合内"
+    },
+    {
+     "id": "C3_ABSTRACT",
+     "stage": "title_abstract",
+     "type": "require_abstract",
+     "value": "",
+     "label": "有摘要"
+    },
+    {
+     "id": "C4_OBJECT",
+     "stage": "title_abstract",
+     "type": "keyword_any",
+     "value": [
+      "逆合成",
+      "retrosynthesis",
+      "反应预测",
+      "reaction"
+     ],
+     "label": "对象要素命中"
+    },
+    {
+     "id": "C5_FULLTEXT",
+     "stage": "full_text",
+     "type": "require_fulltext",
+     "value": "",
+     "label": "全文可得"
+    },
+    {
+     "id": "C6_LANG",
+     "stage": "full_text",
+     "type": "language_in",
+     "value": [
+      "en",
+      "zh"
+     ],
+     "label": "全文语言在允许集合内"
+    },
+    {
+     "id": "C7_OUTCOME",
+     "stage": "full_text",
+     "type": "outcome_reported",
+     "value": [
+      "accuracy",
+      "top-1",
+      "yield",
+      "准确率",
+      "产率"
+     ],
+     "label": "报告可比结局指标"
+    }
+   ],
+   "reason_codes": {
+    "C1_YEAR": "年份早于时间窗",
+    "C2_TYPE": "文献类型不在允许集合内",
+    "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+    "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+    "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+    "C6_LANG": "全文语言不在允许集合内",
+    "C7_OUTCOME": "未报告可比结局指标",
+    "R_DUP_DOI": "DOI 归一后重复，识别阶段已删除",
+    "R_DUP_TITLE": "标题+年份强归一后重复（预印本/正式版合并）",
+    "R_THEME_NO_EVIDENCE": "该主题在纳入研究中无可引用证据句",
+    "R_ALL_LOW_QUALITY": "全部纳入研究质量等级为 low",
+    "R_PROTOCOL_MISSING": "case 未提供前瞻性纳排协议（条款、主因顺序），按声明回退口径执行",
+    "R_PROTOCOL_NO_THEMES": "协议缺失时未定义综合主题；不虚构主题，综合留空并声明",
+    "R_INPUT_ERROR": "输入不可读"
+   },
+   "primary_reason_order": [
+    "C5_FULLTEXT",
+    "C2_TYPE",
+    "C1_YEAR",
+    "C6_LANG",
+    "C3_ABSTRACT",
+    "C4_OBJECT",
+    "C7_OUTCOME"
+   ],
+   "primary_reason_note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数。",
+   "source": "case.protocol",
+   "input_gap": null,
+   "fallback_note": "",
+   "recompute": "每条记录的 stage_decisions 可由 criteria 条款顺序重放；主因由 primary_reason_order 唯一确定；undecidable 不参与排除"
+  },
+  "sources_manifest": {
+   "sources": [],
+   "count": 0,
+   "note": "来源文件清单与解析结果；记录通过 source_path/source_id 指到来源文件"
+  },
+  "counts": {
+   "flow_counts": {
+    "identified": 8,
+    "duplicates_removed": 1,
+    "after_dedup": 7,
+    "screened": 7,
+    "excluded_title_abstract": 1,
+    "assessed_full_text": 6,
+    "excluded_full_text": 2,
+    "included": 4
+   },
+   "closure_checks": [
+    {
+     "id": "I1",
+     "identity": "identified = duplicates_removed + after_dedup",
+     "ok": true,
+     "detail": "8 = 1 + 7"
+    },
+    {
+     "id": "I2",
+     "identity": "after_dedup = excluded_title_abstract + assessed_full_text",
+     "ok": true,
+     "detail": "7 = 1 + 6"
+    },
+    {
+     "id": "I3",
+     "identity": "assessed_full_text = excluded_full_text + included",
+     "ok": true,
+     "detail": "6 = 2 + 4"
+    },
+    {
+     "id": "I4",
+     "identity": "sum(screening buckets) = screening.records_excluded",
+     "ok": true,
+     "detail": "1 = 1"
+    },
+    {
+     "id": "I5",
+     "identity": "sum(eligibility buckets) = eligibility.records_excluded",
+     "ok": true,
+     "detail": "2 = 2"
+    },
+    {
+     "id": "I6",
+     "identity": "每条排除记录只落入其阶段的一个原因桶（主因唯一）",
+     "ok": true,
+     "detail": "无重复落桶"
+    },
+    {
+     "id": "I7",
+     "identity": "sum(per_source) = identified",
+     "ok": true,
+     "detail": "8 = 8"
+    }
+   ],
+   "all_closed": true
+  },
+  "matrix_map": {
+   "rows": 9,
+   "per_theme": {
+    "TH_PERFORMANCE": [
+     "M001",
+     "M002",
+     "M003",
+     "M004"
+    ],
+    "TH_GENERALIZATION": [
+     "M005"
+    ],
+    "TH_EVALUATION": [
+     "M006",
+     "M007",
+     "M008",
+     "M009"
+    ]
+   },
+   "quote_verified_rows": 9,
+   "span_rule": "span = quote_field 字段内字符区间 + 整句（逐字），sha256_quote 可复核；source_file + extraction_method 锚定提取文本"
+  },
+  "backlink": {
+   "rule": "回链覆盖率 = 引用了 evidence_id 的结论数 / 非 no_evidence 结论数；引用 id 必须能在 evidence_matrix 解析",
+   "conclusions_total": 3,
+   "conclusions_with_evidence": 3,
+   "coverage": 1.0,
+   "referenced_ids": [
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+   ],
+   "unresolved_ids": []
+  },
+  "quality_boundary": {
+   "rule": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。",
+   "not_reported_total": 9,
+   "records_with_missing_fields": {
+    "R1": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ],
+    "R3": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ],
+    "R4": [
+     "Q2_SAMPLE",
+     "Q3_METHOD",
+     "Q4_OUTCOME"
+    ],
+    "R6": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ]
+   },
+   "not_assessable_records": [],
+   "certainty_cap": "strong 且存在 not_reported → 降为 moderate；存在 not_assessable → 降为 weak；冲突 → conflicting"
+  },
+  "manual_review": {
+   "policy": "undecidable 条款（年份/类型/语言缺失、正文为空、条款类型未知等）不自动排除：记录继续走完流程并标记 needs_manual_review，进入 screening_log.manual_review 队列。自动筛选止步于此，人工复核边界明示。",
+   "boundary": "undecidable 条款与回退口径不自动排除；自动筛选止步于此，队列交人工复核",
+   "queue": [],
+   "count": 0
+  },
+  "conflicts": {
+   "rule": "同一主题内，两条证据在共享的上下文口径家族（数据集/方法/干预等）下出现同单位不同数值 → numeric_conflict，双列呈现（side_a/side_b 各带逐字引文与数值），不择一、不合并；上下文口径不同的数值差异属异质性，不记冲突。",
+   "items": [
+    {
+     "conflict_id": "C01",
+     "type": "numeric_conflict",
+     "theme_id": "TH_PERFORMANCE",
+     "shared_context": {
+      "dataset": [
+       "uspto-50k"
+      ],
+      "method": [
+       "gnn-message-passing"
+      ]
+     },
+     "side_a": {
+      "evidence_id": "M001",
+      "record_id": "R1",
+      "source_file": "inline",
+      "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+      "quote_verified": true,
+      "value": "52.3",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     },
+     "side_b": {
+      "evidence_id": "M004",
+      "record_id": "R6",
+      "source_file": "inline",
+      "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+      "quote_verified": true,
+      "value": "49.0",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     },
+     "detail": "同主题同上下文口径下数值不一致：52.3% vs 49.0%",
+     "resolution": "双列并列呈现（side_a/side_b 各带逐字引文与数值），不择一写入结论；差异写进空白/限制说明，并以 uncertainty 标注未仲裁"
+    }
+   ]
+  },
+  "artifacts": [
+   "protocol.json",
+   {
+    "file": "prisma_flow.xlsx",
+    "sheets": 4,
+    "self_check": "xlsx 4 个工作表均非空"
+   }
+  ],
+  "plan_file": {
+   "file": "protocol.json",
+   "prospective": true,
+   "note": "前瞻协议先于筛选与质量评价落盘（优先 work 目录，不可写时回退 out 目录）"
+  },
+  "scope": {
+   "records_seen": 8,
+   "no_network": true,
+   "note": "只在给定题录集上执行检索式；未联网、未声称覆盖数据库全量"
+  }
+ },
+ "状态说明": {
+  "overall": "complete",
+  "completed": [
+   "前瞻协议落盘",
+   "检索式构建",
+   "去重与识别计数",
+   "两轮纳排筛选（主因唯一）",
+   "人工复核边界",
+   "质量评价（not_reported 边界）",
+   "证据矩阵与冲突双列",
+   "PRISMA 计数链与综合结论"
+  ],
+  "unmet": [],
+  "notes": [
+   "TH_PERFORMANCE 存在数值冲突（M001 × M004，C01），已双列呈现不择一",
+   "识别阶段删除 1 条重复题录（DOI/标题归一去重）"
+  ]
+ },
+ "result": {
+  "search_strategy": {
+   "question": "图神经网络用于单步逆合成预测时，报告的 top-1 准确率水平如何，低数据条件下的泛化表现如何，不同研究的评测口径是否可比？",
+   "elements": {
+    "B_OBJECT": [
+     "单步",
+     "逆合成"
+    ],
+    "B_METHOD": [
+     "图神经网络"
+    ],
+    "B_OUTCOME": [
+     "top-1",
+     "准确率"
+    ]
+   },
+   "blocks": [
+    {
+     "block_id": "B_OBJECT",
+     "label": "研究对象",
+     "matched_in_question": [
+      "单步",
+      "逆合成"
+     ],
+     "terms": [
+      "逆合成",
+      "retrosynthesis",
+      "反应预测",
+      "reaction prediction",
+      "single-step",
+      "单步"
+     ],
+     "boolean": "(逆合成 OR retrosynthesis OR 反应预测 OR reaction prediction OR single-step OR 单步)",
+     "field_scope": [
+      "title",
+      "abstract",
+      "keywords"
+     ]
+    },
+    {
+     "block_id": "B_METHOD",
+     "label": "方法/干预",
+     "matched_in_question": [
+      "图神经网络"
+     ],
+     "terms": [
+      "graph neural network",
+      "图神经网络",
+      "gnn",
+      "message passing",
+      "消息传递",
+      "deep learning",
+      "learning"
+     ],
+     "boolean": "(graph neural network OR 图神经网络 OR gnn OR message passing OR 消息传递 OR deep learning)",
+     "field_scope": [
+      "title",
+      "abstract"
+     ]
+    },
+    {
+     "block_id": "B_OUTCOME",
+     "label": "结局指标",
+     "matched_in_question": [
+      "top-1",
+      "准确率"
+     ],
+     "terms": [
+      "accuracy",
+      "top-1",
+      "准确率",
+      "yield",
+      "产率",
+      "success rate",
+      "performance"
+     ],
+     "boolean": "(accuracy OR top-1 OR 准确率 OR yield OR 产率 OR success rate)",
+     "field_scope": [
+      "title",
+      "abstract"
+     ]
+    }
+   ],
+   "expression": "(逆合成 OR retrosynthesis OR 反应预测 OR reaction prediction OR single-step OR 单步) AND (graph neural network OR 图神经网络 OR gnn OR message passing OR 消息传递 OR deep learning) AND (accuracy OR top-1 OR 准确率 OR yield OR 产率 OR success rate)",
+   "limits": {
+    "databases": [
+     "local-corpus"
+    ],
+    "fields": [
+     "title",
+     "abstract",
+     "keywords",
+     "fulltext"
+    ],
+    "year_from": 2019,
+    "year_to": 2026,
+    "languages": [
+     "en",
+     "zh"
+    ],
+    "document_types": [
+     "journal-article",
+     "conference-paper",
+     "preprint",
+     "review"
+    ]
+   },
+   "databases": [
+    "local-corpus [arxiv]",
+    "local-corpus [crossref]",
+    "local-corpus [openreview]"
+   ],
+   "records_per_source": {
+    "local-corpus [arxiv]": 1,
+    "local-corpus [crossref]": 6,
+    "local-corpus [openreview]": 1
+   },
+   "protocol_status": "registered_prospective",
+   "prospective": true,
+   "executed_at": "",
+   "note": "检索式只在本轮给定的题录集上执行；未联网、未声称覆盖数据库全量"
+  },
+  "screening_log": {
+   "criteria": [
+    {
+     "id": "C1_YEAR",
+     "stage": "title_abstract",
+     "type": "year_min",
+     "value": 2019,
+     "label": "发表年份 ≥ 2019"
+    },
+    {
+     "id": "C2_TYPE",
+     "stage": "title_abstract",
+     "type": "type_in",
+     "value": [
+      "journal-article",
+      "conference-paper",
+      "preprint",
+      "review"
+     ],
+     "label": "文献类型在允许集合内"
+    },
+    {
+     "id": "C3_ABSTRACT",
+     "stage": "title_abstract",
+     "type": "require_abstract",
+     "value": "",
+     "label": "有摘要"
+    },
+    {
+     "id": "C4_OBJECT",
+     "stage": "title_abstract",
+     "type": "keyword_any",
+     "value": [
+      "逆合成",
+      "retrosynthesis",
+      "反应预测",
+      "reaction"
+     ],
+     "label": "对象要素命中"
+    },
+    {
+     "id": "C5_FULLTEXT",
+     "stage": "full_text",
+     "type": "require_fulltext",
+     "value": "",
+     "label": "全文可得"
+    },
+    {
+     "id": "C6_LANG",
+     "stage": "full_text",
+     "type": "language_in",
+     "value": [
+      "en",
+      "zh"
+     ],
+     "label": "全文语言在允许集合内"
+    },
+    {
+     "id": "C7_OUTCOME",
+     "stage": "full_text",
+     "type": "outcome_reported",
+     "value": [
+      "accuracy",
+      "top-1",
+      "yield",
+      "准确率",
+      "产率"
+     ],
+     "label": "报告可比结局指标"
+    }
+   ],
+   "reason_codes": {
+    "C1_YEAR": "年份早于时间窗",
+    "C2_TYPE": "文献类型不在允许集合内",
+    "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+    "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+    "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+    "C6_LANG": "全文语言不在允许集合内",
+    "C7_OUTCOME": "未报告可比结局指标",
+    "R_DUP_DOI": "DOI 归一后重复，识别阶段已删除",
+    "R_DUP_TITLE": "标题+年份强归一后重复（预印本/正式版合并）",
+    "R_THEME_NO_EVIDENCE": "该主题在纳入研究中无可引用证据句",
+    "R_ALL_LOW_QUALITY": "全部纳入研究质量等级为 low",
+    "R_PROTOCOL_MISSING": "case 未提供前瞻性纳排协议（条款、主因顺序），按声明回退口径执行",
+    "R_PROTOCOL_NO_THEMES": "协议缺失时未定义综合主题；不虚构主题，综合留空并声明",
+    "R_INPUT_ERROR": "输入不可读"
+   },
+   "primary_reason_rule": {
+    "order": [
+     "C5_FULLTEXT",
+     "C2_TYPE",
+     "C1_YEAR",
+     "C6_LANG",
+     "C3_ABSTRACT",
+     "C4_OBJECT",
+     "C7_OUTCOME"
+    ],
+    "note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数。"
+   },
+   "stages": [
+    "title_abstract",
+    "full_text"
+   ],
+   "rows": [
+    {
+     "record_id": "R1",
+     "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+     "year": 2021,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_text",
+     "body_chars": 124,
+     "has_fulltext": true,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      }
+     ],
+     "outcome": "included",
+     "excluded_at_stage": "",
+     "primary_criterion_id": "",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R3",
+     "title": "Template-free retrosynthesis via graph attention",
+     "year": 2022,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_text",
+     "body_chars": 115,
+     "has_fulltext": true,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      }
+     ],
+     "outcome": "included",
+     "excluded_at_stage": "",
+     "primary_criterion_id": "",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R4",
+     "title": "Low-data retrosynthesis: how much training data do we need",
+     "year": 2023,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_text",
+     "body_chars": 114,
+     "has_fulltext": true,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      }
+     ],
+     "outcome": "included",
+     "excluded_at_stage": "",
+     "primary_criterion_id": "",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R5",
+     "title": "Benchmarking graph neural networks for reaction yield prediction",
+     "year": 2023,
+     "type": "conference-paper",
+     "language": "en",
+     "source": "local-corpus [openreview]",
+     "source_file": "inline",
+     "extraction_method": "inline_abstract",
+     "body_chars": 176,
+     "has_fulltext": false,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "exclude",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [
+        {
+         "criterion_id": "C5_FULLTEXT",
+         "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+        }
+       ],
+       "primary_criterion_id": "C5_FULLTEXT",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+      }
+     ],
+     "outcome": "excluded",
+     "excluded_at_stage": "full_text",
+     "primary_criterion_id": "C5_FULLTEXT",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R6",
+     "title": "Re-examining single-step retrosynthesis benchmarks",
+     "year": 2024,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_text",
+     "body_chars": 92,
+     "has_fulltext": true,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      }
+     ],
+     "outcome": "included",
+     "excluded_at_stage": "",
+     "primary_criterion_id": "",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R7",
+     "title": "Multi-step route planning with learned heuristics",
+     "year": 2024,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_abstract",
+     "body_chars": 140,
+     "has_fulltext": false,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "exclude",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [
+        {
+         "criterion_id": "C4_OBJECT",
+         "reason": "对象/方法/结局要素均未命中（对象要素未命中（题录级判为不相关））"
+        }
+       ],
+       "primary_criterion_id": "C4_OBJECT",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "对象/方法/结局要素均未命中（对象要素未命中（题录级判为不相关））"
+      }
+     ],
+     "outcome": "excluded",
+     "excluded_at_stage": "title_abstract",
+     "primary_criterion_id": "C4_OBJECT",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    },
+    {
+     "record_id": "R8",
+     "title": "Catalytic C-H activation with earth-abundant metals",
+     "year": 2023,
+     "type": "journal-article",
+     "language": "en",
+     "source": "local-corpus [crossref]",
+     "source_file": "inline",
+     "extraction_method": "inline_abstract",
+     "body_chars": 120,
+     "has_fulltext": false,
+     "stage_decisions": [
+      {
+       "stage": "title_abstract",
+       "decision": "include",
+       "evaluated_criteria": [
+        "C1_YEAR",
+        "C2_TYPE",
+        "C3_ABSTRACT",
+        "C4_OBJECT"
+       ],
+       "criterion_hits": [],
+       "primary_criterion_id": "",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "通过该阶段全部条款"
+      },
+      {
+       "stage": "full_text",
+       "decision": "exclude",
+       "evaluated_criteria": [
+        "C5_FULLTEXT",
+        "C6_LANG",
+        "C7_OUTCOME"
+       ],
+       "criterion_hits": [
+        {
+         "criterion_id": "C5_FULLTEXT",
+         "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+        }
+       ],
+       "primary_criterion_id": "C5_FULLTEXT",
+       "secondary_hits": [],
+       "undecidable": [],
+       "reason": "全文不可得（内联/侧车/PDF/DOCX/直读均未取得正文）（全文不可得，无法做全文级判定）"
+      }
+     ],
+     "outcome": "excluded",
+     "excluded_at_stage": "full_text",
+     "primary_criterion_id": "C5_FULLTEXT",
+     "secondary_hits": [],
+     "needs_manual_review": false,
+     "manual_review_reasons": [],
+     "fallback": false
+    }
+   ],
+   "policy": "两轮筛选（题录级 → 全文级）使用同一套条款表；每条记录评估该阶段全部条款并记 criterion_hits；排除只取规则定义的唯一主因；元数据缺失导致不可判定的条款转人工复核队列，不自动排除；不得在筛选途中放宽或新增条款；重复文献只在识别阶段删除。",
+   "protocol_status": "registered_prospective",
+   "protocol_id": "PROTO-EXAMPLE-050-GNN-RETRO",
+   "fallback": false,
+   "fallback_rows": 0,
+   "manual_review": {
+    "policy": "undecidable 条款（年份/类型/语言缺失、正文为空、条款类型未知等）不自动排除：记录继续走完流程并标记 needs_manual_review，进入 screening_log.manual_review 队列。自动筛选止步于此，人工复核边界明示。",
+    "boundary": "undecidable 条款与回退口径不自动排除；自动筛选止步于此，队列交人工复核",
+    "queue": [],
+    "count": 0
+   }
+  },
+  "prisma_flow": {
+   "stages": [
+    {
+     "id": "identification",
+     "label": "识别（Identification）",
+     "desc": "数据库检索数量 + 去重"
+    },
+    {
+     "id": "screening",
+     "label": "筛选（Screening）",
+     "desc": "题录级纳排"
+    },
+    {
+     "id": "eligibility",
+     "label": "合格性（Eligibility）",
+     "desc": "全文级纳排"
+    },
+    {
+     "id": "included",
+     "label": "纳入（Included）",
+     "desc": "进入综合与质量评价"
+    }
+   ],
+   "identification": {
+    "records_identified": 8,
+    "per_source": {
+     "local-corpus [arxiv]": 1,
+     "local-corpus [crossref]": 6,
+     "local-corpus [openreview]": 1
+    },
+    "duplicates_removed": 1,
+    "duplicates": [
+     {
+      "record_id": "R2",
+      "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+      "code": "R_DUP_DOI",
+      "duplicate_of": "R1"
+     }
+    ],
+    "records_after_dedup": 7
+   },
+   "screening": {
+    "records_screened": 7,
+    "records_excluded": 1,
+    "exclusion_reasons": [
+     {
+      "criterion_id": "C4_OBJECT",
+      "reason": "对象要素未命中（题录级判为不相关）",
+      "count": 1,
+      "record_ids": [
+       "R7"
+      ]
+     }
+    ]
+   },
+   "eligibility": {
+    "records_assessed": 6,
+    "records_excluded": 2,
+    "exclusion_reasons": [
+     {
+      "criterion_id": "C5_FULLTEXT",
+      "reason": "全文不可得，无法做全文级判定",
+      "count": 2,
+      "record_ids": [
+       "R5",
+       "R8"
+      ]
+     }
+    ]
+   },
+   "included": {
+    "records_included": 4,
+    "record_ids": [
+     "R1",
+     "R3",
+     "R4",
+     "R6"
+    ]
+   },
+   "flow_counts": {
+    "identified": 8,
+    "duplicates_removed": 1,
+    "after_dedup": 7,
+    "screened": 7,
+    "excluded_title_abstract": 1,
+    "assessed_full_text": 6,
+    "excluded_full_text": 2,
+    "included": 4
+   },
+   "consistency": {
+    "checks": [
+     {
+      "id": "I1",
+      "identity": "identified = duplicates_removed + after_dedup",
+      "ok": true,
+      "detail": "8 = 1 + 7"
+     },
+     {
+      "id": "I2",
+      "identity": "after_dedup = excluded_title_abstract + assessed_full_text",
+      "ok": true,
+      "detail": "7 = 1 + 6"
+     },
+     {
+      "id": "I3",
+      "identity": "assessed_full_text = excluded_full_text + included",
+      "ok": true,
+      "detail": "6 = 2 + 4"
+     },
+     {
+      "id": "I4",
+      "identity": "sum(screening buckets) = screening.records_excluded",
+      "ok": true,
+      "detail": "1 = 1"
+     },
+     {
+      "id": "I5",
+      "identity": "sum(eligibility buckets) = eligibility.records_excluded",
+      "ok": true,
+      "detail": "2 = 2"
+     },
+     {
+      "id": "I6",
+      "identity": "每条排除记录只落入其阶段的一个原因桶（主因唯一）",
+      "ok": true,
+      "detail": "无重复落桶"
+     },
+     {
+      "id": "I7",
+      "identity": "sum(per_source) = identified",
+      "ok": true,
+      "detail": "8 = 8"
+     }
+    ],
+    "all_closed": true,
+    "included_check": true
+   }
+  },
+  "quality_appraisal": {
+   "scale": {
+    "not_reported_rule": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。",
+    "not_assessable_effect": "该记录条目均未报告，无法分级；不判低质量，也不单独支撑结论，确定性受限",
+    "judgment_weight": {
+     "yes": 2,
+     "partial": 1,
+     "no": 0,
+     "unclear": 0,
+     "not_reported": 0
+    },
+    "levels": [
+     {
+      "level": "high",
+      "min": 0.9
+     },
+     {
+      "level": "moderate",
+      "min": 0.6
+     },
+     {
+      "level": "low",
+      "min": 0.0
+     }
+    ],
+    "level_effect": {
+     "high": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明",
+     "moderate": "需 ≥2 条一致证据才可支撑结论",
+     "low": "只作背景，不单独支撑结论；写进不确定性"
+    },
+    "items": [
+     {
+      "id": "Q1_OBJECTIVE",
+      "label": "研究目标明确",
+      "kind": "cue",
+      "cues": [
+       "we ",
+       "this study",
+       "this trial",
+       "this review",
+       "本文",
+       "本研究",
+       "我们",
+       "aim",
+       "objective"
+      ],
+      "min_hits": 1,
+      "partial_min_hits": 0
+     },
+     {
+      "id": "Q2_SAMPLE",
+      "label": "样本量可核（sample_size）",
+      "kind": "field",
+      "field": "sample_size",
+      "label_missing": "字段 sample_size 未报告"
+     },
+     {
+      "id": "Q3_METHOD",
+      "label": "方法过程可复现（methodology）",
+      "kind": "field",
+      "field": "methodology",
+      "label_missing": "字段 methodology 未报告"
+     },
+     {
+      "id": "Q4_OUTCOME",
+      "label": "结局指标报告完整",
+      "kind": "cue",
+      "cues": [
+       "评分",
+       "score",
+       "%",
+       "下降",
+       "降低",
+       "改善",
+       "显著",
+       "significant",
+       "reduced",
+       "increased",
+       "incidence",
+       "index"
+      ],
+      "min_hits": 1,
+      "partial_min_hits": 0
+     },
+     {
+      "id": "Q5_LIMITATION",
+      "label": "局限与偏倚说明",
+      "kind": "cue",
+      "cues": [
+       "limitation",
+       "局限",
+       "偏倚",
+       "bias",
+       "盲",
+       "blind",
+       "dropout",
+       "脱落",
+       "cannot",
+       "heterogeneous"
+      ],
+      "min_hits": 1,
+      "partial_min_hits": 0
+     }
+    ]
+   },
+   "rows": [
+    {
+     "record_id": "R1",
+     "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+     "score": 6,
+     "max_score": 6,
+     "ratio": 1.0,
+     "level": "high",
+     "items": [
+      {
+       "item_id": "Q1_OBJECTIVE",
+       "label": "研究目标明确",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "we"
+       ],
+       "basis_location": "R1#abstract/text"
+      },
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 methodology 未报告"
+      },
+      {
+       "item_id": "Q4_OUTCOME",
+       "label": "结局指标报告完整",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "%"
+       ],
+       "basis_location": "R1#abstract/text"
+      },
+      {
+       "item_id": "Q5_LIMITATION",
+       "label": "局限与偏倚说明",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "limitation"
+       ],
+       "basis_location": "R1#abstract/text"
+      }
+     ],
+     "not_reported_items": [
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "reason": "字段 methodology 未报告"
+      }
+     ],
+     "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+    },
+    {
+     "record_id": "R3",
+     "title": "Template-free retrosynthesis via graph attention",
+     "score": 6,
+     "max_score": 6,
+     "ratio": 1.0,
+     "level": "high",
+     "items": [
+      {
+       "item_id": "Q1_OBJECTIVE",
+       "label": "研究目标明确",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "we"
+       ],
+       "basis_location": "R3#abstract/text"
+      },
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 methodology 未报告"
+      },
+      {
+       "item_id": "Q4_OUTCOME",
+       "label": "结局指标报告完整",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "%"
+       ],
+       "basis_location": "R3#abstract/text"
+      },
+      {
+       "item_id": "Q5_LIMITATION",
+       "label": "局限与偏倚说明",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "cannot",
+        "limitation"
+       ],
+       "basis_location": "R3#abstract/text"
+      }
+     ],
+     "not_reported_items": [
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "reason": "字段 methodology 未报告"
+      }
+     ],
+     "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+    },
+    {
+     "record_id": "R4",
+     "title": "Low-data retrosynthesis: how much training data do we need",
+     "score": 4,
+     "max_score": 4,
+     "ratio": 1.0,
+     "level": "high",
+     "items": [
+      {
+       "item_id": "Q1_OBJECTIVE",
+       "label": "研究目标明确",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "we"
+       ],
+       "basis_location": "R4#abstract/text"
+      },
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 methodology 未报告"
+      },
+      {
+       "item_id": "Q4_OUTCOME",
+       "label": "结局指标报告完整",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "依据词未命中",
+       "not_reported_reason": "依据词未命中：按未报告处理，不判 no/低质量"
+      },
+      {
+       "item_id": "Q5_LIMITATION",
+       "label": "局限与偏倚说明",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "limitation"
+       ],
+       "basis_location": "R4#abstract/text"
+      }
+     ],
+     "not_reported_items": [
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "reason": "字段 methodology 未报告"
+      },
+      {
+       "item_id": "Q4_OUTCOME",
+       "label": "结局指标报告完整",
+       "reason": "依据词未命中：按未报告处理，不判 no/低质量"
+      }
+     ],
+     "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+    },
+    {
+     "record_id": "R6",
+     "title": "Re-examining single-step retrosynthesis benchmarks",
+     "score": 6,
+     "max_score": 6,
+     "ratio": 1.0,
+     "level": "high",
+     "items": [
+      {
+       "item_id": "Q1_OBJECTIVE",
+       "label": "研究目标明确",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "we"
+       ],
+       "basis_location": "R6#abstract/text"
+      },
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "judgment": "not_reported",
+       "weight": 0,
+       "basis_terms": [],
+       "basis_location": "字段缺失",
+       "not_reported_reason": "字段 methodology 未报告"
+      },
+      {
+       "item_id": "Q4_OUTCOME",
+       "label": "结局指标报告完整",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "%"
+       ],
+       "basis_location": "R6#abstract/text"
+      },
+      {
+       "item_id": "Q5_LIMITATION",
+       "label": "局限与偏倚说明",
+       "judgment": "yes",
+       "weight": 2,
+       "basis_terms": [
+        "limitation"
+       ],
+       "basis_location": "R6#abstract/text"
+      }
+     ],
+     "not_reported_items": [
+      {
+       "item_id": "Q2_SAMPLE",
+       "label": "样本量可核（sample_size）",
+       "reason": "字段 sample_size 未报告"
+      },
+      {
+       "item_id": "Q3_METHOD",
+       "label": "方法过程可复现（methodology）",
+       "reason": "字段 methodology 未报告"
+      }
+     ],
+     "effect_on_conclusion": "在已报告条目上可支撑结论；not_reported 条目须在确定性说明中列明"
+    }
+   ],
+   "overall": {
+    "high": 4,
+    "moderate": 0,
+    "low": 0,
+    "not_assessable": 0
+   },
+   "not_reported_total": 9,
+   "boundary_note": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。"
+  },
+  "evidence_matrix": [
+   {
+    "evidence_id": "M001",
+    "theme_id": "TH_PERFORMANCE",
+    "theme": "单步预测准确率水平",
+    "record_id": "R1",
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "year": 2021,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+    "char_span": {
+     "start": 0,
+     "end": 182
+    },
+    "quote_verified": true,
+    "sha256_quote": "c55b2611377983a86ce2ff3a1edd90ce26759b6a5135b8580c6e587de4d0d0d9",
+    "matched_terms": [
+     "52.3",
+     "accuracy",
+     "top-1"
+    ],
+    "coverage": 0.5,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「单步预测准确率水平」报告如下"
+   },
+   {
+    "evidence_id": "M002",
+    "theme_id": "TH_PERFORMANCE",
+    "theme": "单步预测准确率水平",
+    "record_id": "R3",
+    "title": "Template-free retrosynthesis via graph attention",
+    "year": 2022,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only.",
+    "char_span": {
+     "start": 0,
+     "end": 137
+    },
+    "quote_verified": true,
+    "sha256_quote": "838aa0e42cc35e2c1a39bcc1e79eac27a25cf1472730d9493f2deda5adab2c0c",
+    "matched_terms": [
+     "48.1",
+     "accuracy",
+     "top-1"
+    ],
+    "coverage": 0.5,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-graph-attention",
+      "template-free"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「单步预测准确率水平」报告如下"
+   },
+   {
+    "evidence_id": "M003",
+    "theme_id": "TH_PERFORMANCE",
+    "theme": "单步预测准确率水平",
+    "record_id": "R4",
+    "title": "Low-data retrosynthesis: how much training data do we need",
+    "year": 2023,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+    "char_span": {
+     "start": 0,
+     "end": 176
+    },
+    "quote_verified": true,
+    "sha256_quote": "df153df78a424c5b15e8f7c0d36cdea1cb83c9c97b95f6a7ee5bbc27274e0cf4",
+    "matched_terms": [
+     "accuracy",
+     "top-1"
+    ],
+    "coverage": 0.3333,
+    "context": {},
+    "quality_level": "high",
+    "claim": "纳入研究对「单步预测准确率水平」报告如下"
+   },
+   {
+    "evidence_id": "M004",
+    "theme_id": "TH_PERFORMANCE",
+    "theme": "单步预测准确率水平",
+    "record_id": "R6",
+    "title": "Re-examining single-step retrosynthesis benchmarks",
+    "year": 2024,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+    "char_span": {
+     "start": 0,
+     "end": 147
+    },
+    "quote_verified": true,
+    "sha256_quote": "aebdf6c9904aec0eb54e922829ee348fbdc7b88e39e180e6d820616d1a6bf11d",
+    "matched_terms": [
+     "49.0",
+     "52.3",
+     "accuracy",
+     "top-1"
+    ],
+    "coverage": 0.6667,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「单步预测准确率水平」报告如下"
+   },
+   {
+    "evidence_id": "M005",
+    "theme_id": "TH_GENERALIZATION",
+    "theme": "低数据与泛化",
+    "record_id": "R4",
+    "title": "Low-data retrosynthesis: how much training data do we need",
+    "year": 2023,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+    "char_span": {
+     "start": 0,
+     "end": 176
+    },
+    "quote_verified": true,
+    "sha256_quote": "df153df78a424c5b15e8f7c0d36cdea1cb83c9c97b95f6a7ee5bbc27274e0cf4",
+    "matched_terms": [
+     "cross reaction classes",
+     "generalize",
+     "low data"
+    ],
+    "coverage": 0.6,
+    "context": {},
+    "quality_level": "high",
+    "claim": "纳入研究对「低数据与泛化」报告如下"
+   },
+   {
+    "evidence_id": "M006",
+    "theme_id": "TH_EVALUATION",
+    "theme": "评测口径与可比性",
+    "record_id": "R1",
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "year": 2021,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+    "char_span": {
+     "start": 0,
+     "end": 182
+    },
+    "quote_verified": true,
+    "sha256_quote": "c55b2611377983a86ce2ff3a1edd90ce26759b6a5135b8580c6e587de4d0d0d9",
+    "matched_terms": [
+     "split"
+    ],
+    "coverage": 0.1429,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「评测口径与可比性」报告如下"
+   },
+   {
+    "evidence_id": "M007",
+    "theme_id": "TH_EVALUATION",
+    "theme": "评测口径与可比性",
+    "record_id": "R3",
+    "title": "Template-free retrosynthesis via graph attention",
+    "year": 2022,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "text",
+    "quote": "Limitation: no cross-split evaluation, possible leakage cannot be excluded.",
+    "char_span": {
+     "start": 40,
+     "end": 115
+    },
+    "quote_verified": true,
+    "sha256_quote": "8d7e2b9dfa9a8911c59c6cfc2d214360d7b729904b3cac19cc120d06c3de0e2a",
+    "matched_terms": [
+     "leakage",
+     "split"
+    ],
+    "coverage": 0.2857,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-graph-attention",
+      "template-free"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「评测口径与可比性」报告如下"
+   },
+   {
+    "evidence_id": "M008",
+    "theme_id": "TH_EVALUATION",
+    "theme": "评测口径与可比性",
+    "record_id": "R4",
+    "title": "Low-data retrosynthesis: how much training data do we need",
+    "year": 2023,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "text",
+    "quote": "We evaluate on three dataset splits and report the accuracy decay curve.",
+    "char_span": {
+     "start": 0,
+     "end": 72
+    },
+    "quote_verified": true,
+    "sha256_quote": "031a019b9b5541c3276209ff510bfe7ba9a94f3d7e061b5c38af74d9009f6267",
+    "matched_terms": [
+     "split"
+    ],
+    "coverage": 0.1429,
+    "context": {},
+    "quality_level": "high",
+    "claim": "纳入研究对「评测口径与可比性」报告如下"
+   },
+   {
+    "evidence_id": "M009",
+    "theme_id": "TH_EVALUATION",
+    "theme": "评测口径与可比性",
+    "record_id": "R6",
+    "title": "Re-examining single-step retrosynthesis benchmarks",
+    "year": 2024,
+    "source_file": "inline",
+    "extraction_method": "inline_text",
+    "quote_field": "abstract",
+    "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+    "char_span": {
+     "start": 0,
+     "end": 147
+    },
+    "quote_verified": true,
+    "sha256_quote": "aebdf6c9904aec0eb54e922829ee348fbdc7b88e39e180e6d820616d1a6bf11d",
+    "matched_terms": [
+     "leakage",
+     "split"
+    ],
+    "coverage": 0.2857,
+    "context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    },
+    "quality_level": "high",
+    "claim": "纳入研究对「评测口径与可比性」报告如下"
+   }
+  ],
+  "synthesis": [
+   {
+    "conclusion_id": "K01",
+    "theme_id": "TH_PERFORMANCE",
+    "statement": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M001] A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only. [M002] Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes. [M003]",
+    "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+    "sentence_map": [
+     {
+      "evidence_id": "M001",
+      "record_id": "R1",
+      "source_file": "inline",
+      "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+      "char_span": {
+       "start": 0,
+       "end": 182
+      }
+     },
+     {
+      "evidence_id": "M002",
+      "record_id": "R3",
+      "source_file": "inline",
+      "quote": "A template-free model reports 48.1% top-1 accuracy on USPTO-50k and compares against template baselines; we evaluate a single split only.",
+      "char_span": {
+       "start": 0,
+       "end": 137
+      }
+     },
+     {
+      "evidence_id": "M003",
+      "record_id": "R4",
+      "source_file": "inline",
+      "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+      "char_span": {
+       "start": 0,
+       "end": 176
+      }
+     }
+    ],
+    "evidence_ids": [
+     "M001",
+     "M002",
+     "M003",
+     "M004"
+    ],
+    "support_level": "conflicting",
+    "certainty": {
+     "backing_records": 4,
+     "quality_levels": {
+      "high": 4,
+      "moderate": 0,
+      "low": 0,
+      "not_assessable": 0
+     },
+     "records_with_not_reported": {
+      "R1": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ],
+      "R3": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ],
+      "R4": [
+       "Q2_SAMPLE",
+       "Q3_METHOD",
+       "Q4_OUTCOME"
+      ],
+      "R6": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ]
+     },
+     "not_assessable_records": [],
+     "note": "确定性按已报告条目计算；未报告条目不计入低质量，但在本说明中列明；未报告条目：{\"R1\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R3\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"], \"R6\": [\"Q2_SAMPLE\", \"Q3_METHOD\"]}"
+    },
+    "conflict_ids": [
+     "C01"
+    ],
+    "dual_column": [
+     {
+      "conflict_id": "C01",
+      "type": "numeric_conflict",
+      "side_a": {
+       "evidence_id": "M001",
+       "record_id": "R1",
+       "source_file": "inline",
+       "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+       "quote_verified": true,
+       "value": "52.3",
+       "unit": "%",
+       "context": {
+        "dataset": [
+         "uspto-50k"
+        ],
+        "method": [
+         "gnn-message-passing"
+        ]
+       }
+      },
+      "side_b": {
+       "evidence_id": "M004",
+       "record_id": "R6",
+       "source_file": "inline",
+       "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+       "quote_verified": true,
+       "value": "49.0",
+       "unit": "%",
+       "context": {
+        "dataset": [
+         "uspto-50k"
+        ],
+        "method": [
+         "gnn-message-passing"
+        ]
+       }
+      }
+     }
+    ],
+    "quality_distribution": {
+     "high": 4,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+   },
+   {
+    "conclusion_id": "K02",
+    "theme_id": "TH_GENERALIZATION",
+    "statement": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes. [M005]",
+    "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+    "sentence_map": [
+     {
+      "evidence_id": "M005",
+      "record_id": "R4",
+      "source_file": "inline",
+      "quote": "Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes.",
+      "char_span": {
+       "start": 0,
+       "end": 176
+      }
+     }
+    ],
+    "evidence_ids": [
+     "M005"
+    ],
+    "support_level": "moderate",
+    "certainty": {
+     "backing_records": 1,
+     "quality_levels": {
+      "high": 1,
+      "moderate": 0,
+      "low": 0,
+      "not_assessable": 0
+     },
+     "records_with_not_reported": {
+      "R4": [
+       "Q2_SAMPLE",
+       "Q3_METHOD",
+       "Q4_OUTCOME"
+      ]
+     },
+     "not_assessable_records": [],
+     "note": "确定性按已报告条目计算；未报告条目不计入低质量，但在本说明中列明；未报告条目：{\"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"]}"
+    },
+    "conflict_ids": [],
+    "dual_column": [],
+    "quality_distribution": {
+     "high": 1,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+   },
+   {
+    "conclusion_id": "K03",
+    "theme_id": "TH_EVALUATION",
+    "statement": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M006] Limitation: no cross-split evaluation, possible leakage cannot be excluded. [M007] We evaluate on three dataset splits and report the accuracy decay curve. [M008]",
+    "statement_rule": "结论 = 纳入研究原文整句 + 证据标记（≤3 条，逐句对应 sentence_map），不改写、不外推",
+    "sentence_map": [
+     {
+      "evidence_id": "M006",
+      "record_id": "R1",
+      "source_file": "inline",
+      "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+      "char_span": {
+       "start": 0,
+       "end": 182
+      }
+     },
+     {
+      "evidence_id": "M007",
+      "record_id": "R3",
+      "source_file": "inline",
+      "quote": "Limitation: no cross-split evaluation, possible leakage cannot be excluded.",
+      "char_span": {
+       "start": 40,
+       "end": 115
+      }
+     },
+     {
+      "evidence_id": "M008",
+      "record_id": "R4",
+      "source_file": "inline",
+      "quote": "We evaluate on three dataset splits and report the accuracy decay curve.",
+      "char_span": {
+       "start": 0,
+       "end": 72
+      }
+     }
+    ],
+    "evidence_ids": [
+     "M006",
+     "M007",
+     "M008",
+     "M009"
+    ],
+    "support_level": "moderate",
+    "certainty": {
+     "backing_records": 4,
+     "quality_levels": {
+      "high": 4,
+      "moderate": 0,
+      "low": 0,
+      "not_assessable": 0
+     },
+     "records_with_not_reported": {
+      "R1": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ],
+      "R3": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ],
+      "R4": [
+       "Q2_SAMPLE",
+       "Q3_METHOD",
+       "Q4_OUTCOME"
+      ],
+      "R6": [
+       "Q2_SAMPLE",
+       "Q3_METHOD"
+      ]
+     },
+     "not_assessable_records": [],
+     "note": "纳入研究存在未报告条目（not_reported），确定性降级；未报告条目：{\"R1\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R3\": [\"Q2_SAMPLE\", \"Q3_METHOD\"], \"R4\": [\"Q2_SAMPLE\", \"Q3_METHOD\", \"Q4_OUTCOME\"], \"R6\": [\"Q2_SAMPLE\", \"Q3_METHOD\"]}"
+    },
+    "conflict_ids": [],
+    "dual_column": [],
+    "quality_distribution": {
+     "high": 4,
+     "moderate": 0,
+     "low": 0,
+     "not_assessable": 0
+    },
+    "boundary": "结论仅适用于本轮纳入研究覆盖的对象与结局；未纳入的来源不在本结论范围内"
+   }
+  ],
+  "conflicts": [
+   {
+    "conflict_id": "C01",
+    "type": "numeric_conflict",
+    "theme_id": "TH_PERFORMANCE",
+    "shared_context": {
+     "dataset": [
+      "uspto-50k"
+     ],
+     "method": [
+      "gnn-message-passing"
+     ]
+    },
+    "side_a": {
+     "evidence_id": "M001",
+     "record_id": "R1",
+     "source_file": "inline",
+     "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+     "quote_verified": true,
+     "value": "52.3",
+     "unit": "%",
+     "context": {
+      "dataset": [
+       "uspto-50k"
+      ],
+      "method": [
+       "gnn-message-passing"
+      ]
+     }
+    },
+    "side_b": {
+     "evidence_id": "M004",
+     "record_id": "R6",
+     "source_file": "inline",
+     "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+     "quote_verified": true,
+     "value": "49.0",
+     "unit": "%",
+     "context": {
+      "dataset": [
+       "uspto-50k"
+      ],
+      "method": [
+       "gnn-message-passing"
+      ]
+     }
+    },
+    "detail": "同主题同上下文口径下数值不一致：52.3% vs 49.0%",
+    "resolution": "双列并列呈现（side_a/side_b 各带逐字引文与数值），不择一写入结论；差异写进空白/限制说明，并以 uncertainty 标注未仲裁"
+   }
+  ],
+  "research_gaps": []
+ },
+ "evidence": {
+  "protocol": {
+   "version": "0.2.0",
+   "protocol_status": "registered_prospective",
+   "protocol_id": "PROTO-EXAMPLE-050-GNN-RETRO",
+   "prospective": true,
+   "criteria": [
+    {
+     "id": "C1_YEAR",
+     "stage": "title_abstract",
+     "type": "year_min",
+     "value": 2019,
+     "label": "发表年份 ≥ 2019"
+    },
+    {
+     "id": "C2_TYPE",
+     "stage": "title_abstract",
+     "type": "type_in",
+     "value": [
+      "journal-article",
+      "conference-paper",
+      "preprint",
+      "review"
+     ],
+     "label": "文献类型在允许集合内"
+    },
+    {
+     "id": "C3_ABSTRACT",
+     "stage": "title_abstract",
+     "type": "require_abstract",
+     "value": "",
+     "label": "有摘要"
+    },
+    {
+     "id": "C4_OBJECT",
+     "stage": "title_abstract",
+     "type": "keyword_any",
+     "value": [
+      "逆合成",
+      "retrosynthesis",
+      "反应预测",
+      "reaction"
+     ],
+     "label": "对象要素命中"
+    },
+    {
+     "id": "C5_FULLTEXT",
+     "stage": "full_text",
+     "type": "require_fulltext",
+     "value": "",
+     "label": "全文可得"
+    },
+    {
+     "id": "C6_LANG",
+     "stage": "full_text",
+     "type": "language_in",
+     "value": [
+      "en",
+      "zh"
+     ],
+     "label": "全文语言在允许集合内"
+    },
+    {
+     "id": "C7_OUTCOME",
+     "stage": "full_text",
+     "type": "outcome_reported",
+     "value": [
+      "accuracy",
+      "top-1",
+      "yield",
+      "准确率",
+      "产率"
+     ],
+     "label": "报告可比结局指标"
+    }
+   ],
+   "reason_codes": {
+    "C1_YEAR": "年份早于时间窗",
+    "C2_TYPE": "文献类型不在允许集合内",
+    "C3_ABSTRACT": "缺摘要，题录级无法判定（记不可判定，不等于不相关）",
+    "C4_OBJECT": "对象要素未命中（题录级判为不相关）",
+    "C5_FULLTEXT": "全文不可得，无法做全文级判定",
+    "C6_LANG": "全文语言不在允许集合内",
+    "C7_OUTCOME": "未报告可比结局指标",
+    "R_DUP_DOI": "DOI 归一后重复，识别阶段已删除",
+    "R_DUP_TITLE": "标题+年份强归一后重复（预印本/正式版合并）",
+    "R_THEME_NO_EVIDENCE": "该主题在纳入研究中无可引用证据句",
+    "R_ALL_LOW_QUALITY": "全部纳入研究质量等级为 low",
+    "R_PROTOCOL_MISSING": "case 未提供前瞻性纳排协议（条款、主因顺序），按声明回退口径执行",
+    "R_PROTOCOL_NO_THEMES": "协议缺失时未定义综合主题；不虚构主题，综合留空并声明",
+    "R_INPUT_ERROR": "输入不可读"
+   },
+   "primary_reason_order": [
+    "C5_FULLTEXT",
+    "C2_TYPE",
+    "C1_YEAR",
+    "C6_LANG",
+    "C3_ABSTRACT",
+    "C4_OBJECT",
+    "C7_OUTCOME"
+   ],
+   "primary_reason_note": "同一记录同一阶段命中多条排除条款时，主因取本表最先命中者；其余命中记入 secondary_hits，不重复计数。",
+   "source": "case.protocol",
+   "input_gap": null,
+   "fallback_note": "",
+   "recompute": "每条记录的 stage_decisions 可由 criteria 条款顺序重放；主因由 primary_reason_order 唯一确定；undecidable 不参与排除"
+  },
+  "sources_manifest": {
+   "sources": [],
+   "count": 0,
+   "note": "来源文件清单与解析结果；记录通过 source_path/source_id 指到来源文件"
+  },
+  "counts": {
+   "flow_counts": {
+    "identified": 8,
+    "duplicates_removed": 1,
+    "after_dedup": 7,
+    "screened": 7,
+    "excluded_title_abstract": 1,
+    "assessed_full_text": 6,
+    "excluded_full_text": 2,
+    "included": 4
+   },
+   "closure_checks": [
+    {
+     "id": "I1",
+     "identity": "identified = duplicates_removed + after_dedup",
+     "ok": true,
+     "detail": "8 = 1 + 7"
+    },
+    {
+     "id": "I2",
+     "identity": "after_dedup = excluded_title_abstract + assessed_full_text",
+     "ok": true,
+     "detail": "7 = 1 + 6"
+    },
+    {
+     "id": "I3",
+     "identity": "assessed_full_text = excluded_full_text + included",
+     "ok": true,
+     "detail": "6 = 2 + 4"
+    },
+    {
+     "id": "I4",
+     "identity": "sum(screening buckets) = screening.records_excluded",
+     "ok": true,
+     "detail": "1 = 1"
+    },
+    {
+     "id": "I5",
+     "identity": "sum(eligibility buckets) = eligibility.records_excluded",
+     "ok": true,
+     "detail": "2 = 2"
+    },
+    {
+     "id": "I6",
+     "identity": "每条排除记录只落入其阶段的一个原因桶（主因唯一）",
+     "ok": true,
+     "detail": "无重复落桶"
+    },
+    {
+     "id": "I7",
+     "identity": "sum(per_source) = identified",
+     "ok": true,
+     "detail": "8 = 8"
+    }
+   ],
+   "all_closed": true
+  },
+  "matrix_map": {
+   "rows": 9,
+   "per_theme": {
+    "TH_PERFORMANCE": [
+     "M001",
+     "M002",
+     "M003",
+     "M004"
+    ],
+    "TH_GENERALIZATION": [
+     "M005"
+    ],
+    "TH_EVALUATION": [
+     "M006",
+     "M007",
+     "M008",
+     "M009"
+    ]
+   },
+   "quote_verified_rows": 9,
+   "span_rule": "span = quote_field 字段内字符区间 + 整句（逐字），sha256_quote 可复核；source_file + extraction_method 锚定提取文本"
+  },
+  "backlink": {
+   "rule": "回链覆盖率 = 引用了 evidence_id 的结论数 / 非 no_evidence 结论数；引用 id 必须能在 evidence_matrix 解析",
+   "conclusions_total": 3,
+   "conclusions_with_evidence": 3,
+   "coverage": 1.0,
+   "referenced_ids": [
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+   ],
+   "unresolved_ids": []
+  },
+  "quality_boundary": {
+   "rule": "结构化字段缺失或依据词未命中 → judgment=not_reported：不计入总分与分母、不判低质量，单列 not_reported_fields；全部条目未报告 → not_assessable（无法分级）。确定性表述随 not_reported/not_assessable 如实降级。",
+   "not_reported_total": 9,
+   "records_with_missing_fields": {
+    "R1": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ],
+    "R3": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ],
+    "R4": [
+     "Q2_SAMPLE",
+     "Q3_METHOD",
+     "Q4_OUTCOME"
+    ],
+    "R6": [
+     "Q2_SAMPLE",
+     "Q3_METHOD"
+    ]
+   },
+   "not_assessable_records": [],
+   "certainty_cap": "strong 且存在 not_reported → 降为 moderate；存在 not_assessable → 降为 weak；冲突 → conflicting"
+  },
+  "manual_review": {
+   "policy": "undecidable 条款（年份/类型/语言缺失、正文为空、条款类型未知等）不自动排除：记录继续走完流程并标记 needs_manual_review，进入 screening_log.manual_review 队列。自动筛选止步于此，人工复核边界明示。",
+   "boundary": "undecidable 条款与回退口径不自动排除；自动筛选止步于此，队列交人工复核",
+   "queue": [],
+   "count": 0
+  },
+  "conflicts": {
+   "rule": "同一主题内，两条证据在共享的上下文口径家族（数据集/方法/干预等）下出现同单位不同数值 → numeric_conflict，双列呈现（side_a/side_b 各带逐字引文与数值），不择一、不合并；上下文口径不同的数值差异属异质性，不记冲突。",
+   "items": [
+    {
+     "conflict_id": "C01",
+     "type": "numeric_conflict",
+     "theme_id": "TH_PERFORMANCE",
+     "shared_context": {
+      "dataset": [
+       "uspto-50k"
+      ],
+      "method": [
+       "gnn-message-passing"
+      ]
+     },
+     "side_a": {
+      "evidence_id": "M001",
+      "record_id": "R1",
+      "source_file": "inline",
+      "quote": "We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits.",
+      "quote_verified": true,
+      "value": "52.3",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     },
+     "side_b": {
+      "evidence_id": "M004",
+      "record_id": "R6",
+      "source_file": "inline",
+      "quote": "We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, indicating evaluation leakage between splits.",
+      "quote_verified": true,
+      "value": "49.0",
+      "unit": "%",
+      "context": {
+       "dataset": [
+        "uspto-50k"
+       ],
+       "method": [
+        "gnn-message-passing"
+       ]
+      }
+     },
+     "detail": "同主题同上下文口径下数值不一致：52.3% vs 49.0%",
+     "resolution": "双列并列呈现（side_a/side_b 各带逐字引文与数值），不择一写入结论；差异写进空白/限制说明，并以 uncertainty 标注未仲裁"
+    }
+   ]
+  },
+  "artifacts": [
+   "protocol.json",
+   {
+    "file": "prisma_flow.xlsx",
+    "sheets": 4,
+    "self_check": "xlsx 4 个工作表均非空"
+   }
+  ],
+  "plan_file": {
+   "file": "protocol.json",
+   "prospective": true,
+   "note": "前瞻协议先于筛选与质量评价落盘（优先 work 目录，不可写时回退 out 目录）"
+  },
+  "scope": {
+   "records_seen": 8,
+   "no_network": true,
+   "note": "只在给定题录集上执行检索式；未联网、未声称覆盖数据库全量"
+  },
+  "contract": {
+   "search_strategy": "检索要素块、布尔检索式、数据库/字段/时间/语言限制与每库题录数",
+   "screening_log": "两轮（题录级/全文级）逐条筛选结论、criterion_id 与理由码",
+   "prisma_flow": "识别/筛选/合格/纳入四阶段计数 + 各阶段排除理由聚合 + 计数一致性校验",
+   "quality_appraisal": "纳入研究逐维度质量判定（依据位置）、总分与等级、等级对结论的影响",
+   "evidence_matrix": "证据矩阵：record_id + span（字段+整句）+ 主题 + sha256，支撑综合结论",
+   "synthesis": "综合结论：逐条挂 evidence_id、支持强度、冲突并列、边界说明",
+   "evidence_map": "协议版本、检索块、条款、理由码、质量量表、计数一致性、产物自检",
+   "状态说明": "完成/部分完成、纳入集为空、主题无证据、质量偏低、冲突、检索时间未记录等不确定性"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-050-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "evidence_map",
+     "evidence_matrix",
+     "prisma_flow",
+     "quality_appraisal",
+     "screening_log",
+     "search_strategy",
+     "synthesis",
+     "状态说明"
+    ]
+   },
+   {
+    "step": "intake",
+    "seq": 2,
+    "sources": 0,
+    "records": 8,
+    "question_chars": 62
+   },
+   {
+    "step": "protocol_written",
+    "seq": 3,
+    "status": "registered_prospective",
+    "criteria": 7
+   },
+   {
+    "step": "screen",
+    "seq": 4,
+    "protocol": "registered_prospective",
+    "identified": 8,
+    "excluded_ta": 1,
+    "assessed_ft": 6,
+    "included": 4
+   },
+   {
+    "step": "synthesize",
+    "seq": 5,
+    "evidence": 9,
+    "conflicts": 1,
+    "conclusions": 3,
+    "gaps": 0
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-050-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "complete",
+  "completed": [
+   "前瞻协议落盘",
+   "检索式构建",
+   "去重与识别计数",
+   "两轮纳排筛选（主因唯一）",
+   "人工复核边界",
+   "质量评价（not_reported 边界）",
+   "证据矩阵与冲突双列",
+   "PRISMA 计数链与综合结论"
+  ],
+  "unmet": [],
+  "notes": [
+   "TH_PERFORMANCE 存在数值冲突（M001 × M004，C01），已双列呈现不择一",
+   "识别阶段删除 1 条重复题录（DOI/标题归一去重）"
+  ]
+ },
+ "uncertainty": [
+  {
+   "item": "冲突:C01",
+   "reason": "同主题同上下文口径下数值不一致：52.3% vs 49.0%；双方口径差异未仲裁，以双列并列交付"
+  },
+  {
+   "item": "质量评价受限",
+   "reason": "纳入研究共有 9 项条目因缺字段/缺依据词记 not_reported（不计入低质量）；结论确定性已按证据受限降级，详见 synthesis[].certainty"
+  },
+  {
+   "item": "检索执行时间",
+   "reason": "本轮为离线给定题录集，未记录真实数据库检索时间；正式使用时应写明检索日期与数据库"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "version": "0.2.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。未被主流程单独生产的契约字段按本表关键词投影到同名产物分区，并显式标注 projection_of；仍无对应则落 status.unmet。",
+ "rules": [
+  {"keywords": ["screening", "筛选", "纳排", "纳入", "排除"], "projection": "screening"},
+  {"keywords": ["topic", "主题", "归纳", "聚类"], "projection": "topics"},
+  {"keywords": ["outline", "大纲", "结构", "章节"], "projection": "outline"},
+  {"keywords": ["evidence", "证据表", "引用", "回链"], "projection": "evidence_table"},
+  {"keywords": ["draft", "草稿", "综述", "正文", "写作", "主结果", "产物"], "projection": "draft"},
+  {"keywords": ["conflict", "冲突", "分歧", "争议"], "projection": "conflicts"},
+  {"keywords": ["gap", "空白", "缺口", "展望"], "projection": "research_gaps"},
+  {"keywords": ["coverage", "覆盖", "边界"], "projection": "coverage"},
+  {"keywords": ["unassigned", "未归类", "未聚类", "其他"], "projection": "coverage"},
+  {"keywords": ["status", "状态", "完成"], "projection": "status"}
+ ],
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论"
+}

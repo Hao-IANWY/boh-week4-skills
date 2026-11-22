@@ -1,0 +1,25 @@
+{
+ "version": "0.2.0",
+ "description": "output_contract 字段名 → 本 skill 产物键的路由表。正式案例的字段命名不固定，pipeline 按本表（以及字段要求文本）把已算出的产物绑定到合同字段；表内未命中的键一律落 not_produced 并记 status.unmet，不用推测值填充。",
+ "virtual_targets": {
+  "evidence": "evidence 记录（本 skill 汇总的证据分区视图）",
+  "uncertainty": "uncertainty 列表",
+  "status": "status 三段（overall/completed/unmet/notes）"
+ },
+ "rules": [
+  {"match": ["拐点", "inflection", "时间趋势", "temporal", "年度", "产出量", "增长率"], "target": "temporal_trends"},
+  {"match": ["前沿", "趋势判定", "frontier", "新兴主题"], "target": "frontier_trends"},
+  {"match": ["词频", "热度", "heat", "keyword"], "target": "keyword_heat"},
+  {"match": ["筛选", "screening", "纳排", "协议"], "target": "screening"},
+  {"match": ["快照", "语料边界", "coverage", "scope"], "target": "snapshot_scope"},
+  {"match": ["主题演化", "演化", "evolution", "阶段划分", "主题归属"], "target": "topic_evolution"},
+  {"match": ["代表作", "代表性", "representative", "奠基", "首创"], "target": "representative_works"},
+  {"match": ["空白", "gap", "未解", "机会"], "target": "research_gaps"},
+  {"match": ["证据表", "evidence_table", "逐字"], "target": "evidence_table"},
+  {"match": ["证据矩阵", "证据回链", "evidence_map", "证据", "来源定位", "定位"], "target": "evidence"},
+  {"match": ["不确定", "uncertainty", "限制", "边界", "冲突"], "target": "uncertainty"},
+  {"match": ["状态", "status", "运行", "异常"], "target": "status"},
+  {"match": ["研究产物", "报告", "综述", "结果", "deliverable", "产物", "分析"], "target": "研究产物"}
+ ],
+ "note": "规则按数组顺序匹配，先命中先用；『研究产物』放在最后，避免把『研究产物-证据矩阵』这类复合键误绑到主产物。"
+}

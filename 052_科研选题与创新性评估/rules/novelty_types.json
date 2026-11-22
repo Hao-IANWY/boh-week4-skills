@@ -1,0 +1,150 @@
+{
+ "version": "0.2.0",
+ "description": "052 创新点四分类判定表与覆盖检验口径。分类靠明确的触发词，不靠印象；触发词冲突或全不命中时判 undetermined 并标 needs_review。新颖性判定一律限定在 case 记录池内（novelty_scope=pool_observed）：池内未见≠全球首创。",
+ "novelty_scope": {
+  "scope": "pool_observed",
+  "definition": "新颖性判定 = 与 case 提供的记录池逐条比对的观察结果；只声明「池内未见」，不声明「全球/领域首创」",
+  "pool_observed_wording": "池内未见（pool_observed），不构成全球首创判定",
+  "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+  "global_claim_phrases": ["全球首创", "世界首创", "国际首创", "全球首次", "world first", "first ever", "首次提出（无对照）", "尚无人研究", "完全空白", "no one has studied"],
+  "not_found_template": "{claim_id} 在 {pool_size} 条池内记录中最大覆盖度为 {sim}（<{threshold}），记 not_found_in_scope：池内未见（pool_observed），不构成全球首创判定；池外核验建议见 pool_external_check（本轮未执行全局检索）"
+ },
+ "types": {
+  "method": {
+   "label": "方法创新",
+   "cues": [
+    "new method",
+    "novel algorithm",
+    "framework",
+    "we propose a method",
+    "model architecture",
+    "we propose a framework",
+    "新方法",
+    "新算法",
+    "框架",
+    "模型架构",
+    "提出一种方法",
+    "提出一套"
+   ],
+   "anti_cues": [
+    "apply",
+    "using existing",
+    "沿用",
+    "采用已有"
+   ],
+   "note": "只有『方法本身是新的』才算；把已有方法用到新数据上属于 data 或 scenario_transfer"
+  },
+  "data": {
+   "label": "数据创新",
+   "cues": [
+    "new dataset",
+    "we collect",
+    "we release",
+    "cohort",
+    "benchmark dataset",
+    "annotated corpus",
+    "新数据集",
+    "队列",
+    "自建数据",
+    "标注语料",
+    "首次采集",
+    "公开数据集"
+   ],
+   "anti_cues": [
+    "public dataset",
+    "existing dataset",
+    "公开数据集"
+   ],
+   "note": "复用公开数据集不算数据创新，除非新建了标注或划分"
+  },
+  "scenario_transfer": {
+   "label": "场景迁移",
+   "cues": [
+    "we apply",
+    "apply a",
+    "apply to",
+    "transfer to",
+    "extend to",
+    "in the context of",
+    "迁移到",
+    "应用于",
+    "应用到",
+    "拓展到",
+    "首次用于"
+   ],
+   "anti_cues": [
+    "same setting",
+    "same domain"
+   ],
+   "note": "迁移是可发表贡献，但强度低于方法创新；不得表述为『理论创新』"
+  },
+  "conclusion_correction": {
+   "label": "结论修正",
+   "cues": [
+    "contradicts",
+    "challenge the consensus",
+    "we correct",
+    "we revise",
+    "earlier conclusion",
+    "previous conclusion",
+    "we show that previous",
+    "re-examine",
+    "修正",
+    "推翻",
+    "质疑",
+    "重新检验",
+    "与既有结论相反"
+   ],
+   "anti_cues": [
+    "confirm",
+    "consistent with previous"
+   ],
+   "note": "需要有明确被修正的既有结论及其来源，否则降级为 undetermined"
+  }
+ },
+ "classification": {
+  "rule": "统计每类 cue 命中数，取唯一最大者；并列第一或全为 0 → undetermined + needs_review",
+  "max_types_per_claim": 2,
+  "record_anti_cue_hits": true
+ },
+ "nearest_neighbor": {
+  "rule": "每条主张在池内取 claim_coverage 最高的记录为最近邻；最近邻必须给逐字引文（evidence_id 回链证据表，char_span 精确子串校验）与逐维重合点",
+  "overlap_dims": ["task", "method", "data", "evaluation", "conclusion"],
+  "quote_rule": "重合引文取最近邻记录正文中共享词项最多的整句；共享词项不足 min_shared_terms 时不造引文，标 no_overlap_quote",
+  "min_shared_terms": 2
+ },
+ "pool_external_check": {
+  "rule": "not_found_in_scope 的主张必须给池外核验建议：检索式（由主张 token 与方向键生成）+ 建议数据库；必须声明 executed=false（本轮未执行全局检索）",
+  "max_expressions": 3,
+  "suggested_databases": ["Web of Science", "Scopus", "Google Scholar", "arXiv", "semantic scholar"],
+  "declaration": "以上检索式仅为建议，本轮未执行全局检索；池外是否存在同题工作未核验"
+ },
+ "coverage_check": {
+  "verdicts": {
+   "covered": "存在池内记录与主张 claim_coverage ≥ covered_threshold",
+   "partially_covered": "partial_threshold ≤ claim_coverage < covered_threshold",
+   "not_found_in_scope": "claim_coverage < partial_threshold（仅说明本 case 记录池内未找到，novelty_scope=pool_observed，不等于无人研究，更不是全球首创）",
+   "undetermined": "主张 token 数不足；或类型为结论修正且需判断方向关系；或池内记录无正文"
+  },
+  "required_fields_per_claim": [
+   "claim_id",
+   "claim",
+   "type",
+   "verdict",
+   "scope",
+   "max_similarity",
+   "nearest_prior",
+   "overlap_points",
+   "basis",
+   "not_found_scope",
+   "pool_external_check"
+  ],
+  "forbid_phrases": [
+   "尚无人研究",
+   "完全空白",
+   "no one has studied",
+   "首次提出（无对照）"
+  ],
+  "metric_definition": "claim_coverage = |主张 token ∩ 记录 token| / |主张 token|（记录文本长于主张，故用覆盖率而非 Jaccard，避免长度惩罚）"
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "seq": 50,
+ "title": "系统性文献综述",
+ "queries": [
+  "systematic literature review",
+  "prisma review workflow"
+ ],
+ "skills": [
+  {
+   "name": "systematic-literature-review",
+   "slug": "zaoshangduziteng-deer-flow-systematic-literature-review",
+   "author": "zaoshangduziteng",
+   "category": "research",
+   "description": "Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and cross-paper comparisons. Searches arXiv and outputs reports in APA, IEEE, or BibTeX format. Not for single-paper tasks — use academic-paper-review…",
+   "description_zh": null,
+   "repo_url": "https://github.com/zaoshangduziteng/deer-flow#skills~public~systematic-literature-review",
+   "github_stars": 13
+  },
+  {
+   "name": "literature-review",
+   "slug": "k-dense-ai-claude-scientific-skills-literature-review",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "This skill automates systematic literature reviews by searching multiple academic databases, verifying citations, and generating formatted documents. It provides structured workflows, database-specific search strategies, and integrates with other tools for schematic generation. The documentation includes detailed sear…",
+   "description_zh": "该技能通过搜索多个学术数据库、验证引用和生成格式化文档来自动化系统文献综述。它提供结构化工作流程、特定数据库的搜索策略，并与其他工具集成以生成图表。文档包含详细的搜索技术和质量控制清单。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~literature-review",
+   "github_stars": 16958
+  },
+  {
+   "name": "literature-review",
+   "slug": "fabioc-aloha-alex-skill-mall-literature-review",
+   "author": "fabioc-aloha",
+   "category": "development",
+   "description": "Systematic literature search, synthesis, gap identification, and narrative construction for academic research",
+   "description_zh": null,
+   "repo_url": "https://github.com/fabioc-aloha/Alex_Skill_Mall#plugins~academic-research~literature-review~skills~literature-review",
+   "github_stars": 4
+  },
+  {
+   "name": "literature-review",
+   "slug": "k-dense-ai-scientific-agent-skills-literature-review",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and te…",
+   "description_zh": null,
+   "repo_url": "https://github.com/K-Dense-AI/scientific-agent-skills#skills~literature-review",
+   "github_stars": 30033
+  },
+  {
+   "name": "literature-review",
+   "slug": "tyche-mkr-scientific-agent-skills-literature-review",
+   "author": "Tyche-MKR",
+   "category": "research",
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and te…",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tyche-MKR/scientific-agent-skills#skills~literature-review",
+   "github_stars": 99
+  },
+  {
+   "name": "literature-review",
+   "slug": "bbgnsurftech-claude-skills-collection-literature-review",
+   "author": "BbgnsurfTech",
+   "category": "education",
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and te…",
+   "description_zh": "一项专门用于跨学术数据库进行系统性文献综述、综合研究发现、验证引用并生成带有可视化示意图的专业格式文档的技能。",
+   "repo_url": "https://github.com/BbgnsurfTech/claude-skills-collection#community~individual-skills~claude-scientific-skills~scientific-skills~literature-review",
+   "github_stars": 11
+  },
+  {
+   "name": "literature-review",
+   "slug": "fabioc-aloha-alex-skill-mall-literature-review-multidb",
+   "author": "fabioc-aloha",
+   "category": "development",
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and te…",
+   "description_zh": null,
+   "repo_url": "https://github.com/fabioc-aloha/Alex_Skill_Mall#plugins~academic-research~literature-review-multidb~skills~literature-review-multidb",
+   "github_stars": 4
+  },
+  {
+   "name": "literature-review",
+   "slug": "microck-ordinary-claude-skills-literature-review",
+   "author": "Microck",
+   "category": "research",
+   "description": "This skill provides structured workflows for conducting systematic literature reviews across multiple academic databases. It includes detailed search strategies, citation verification, and document generation with proper formatting. The documentation covers planning, execution, and quality control steps for biomedical…",
+   "description_zh": "该技能为跨多个学术数据库进行系统性文献综述提供结构化工作流程。包含详细的搜索策略、引用验证和文档生成功能，适用于生物医学和科学领域的研究工作。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~literature-review",
+   "github_stars": 150
+  },
+  {
+   "name": "literature-review-tools",
+   "slug": "brycewang-stanford-literature-review-tools",
+   "author": "brycewang-stanford",
+   "category": "research",
+   "description": "Recommend AND run open-source AI tools, agents, Claude Code / Codex skills, and MCP servers for any stage of a literature review — searching, reading, extracting, synthesizing, screening, citation-checking, and paper writing. Use when the user asks \"what tool should I use to...\" OR \"install/run/use <tool> to ...\" for …",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/lit-review-agent-tools",
+   "github_stars": 8
+  },
+  {
+   "name": "peer-review",
+   "slug": "k-dense-ai-claude-scientific-skills-peer-review",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "Provides structured templates and checklists for writing formal peer reviews of scientific manuscripts and grants. Focuses on methodology assessment, statistical validity, and compliance with reporting standards like CONSORT/STROBE. Includes discipline-specific guidelines and systematic workflow stages.",
+   "description_zh": "为撰写科学手稿和基金申请的正式同行评审提供结构化模板和检查清单。专注于方法学评估、统计有效性以及CONSORT/STROBE等报告标准的合规性。包含学科特定指南和系统化工作流程阶段。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~peer-review",
+   "github_stars": 16852
+  },
+  {
+   "name": "peer-review",
+   "slug": "microck-ordinary-claude-skills-peer-review",
+   "author": "Microck",
+   "category": "research",
+   "description": "Provides structured guidance for evaluating scientific manuscripts across disciplines. Includes detailed checklists for methodology, statistics, ethics, and reporting standards like CONSORT and PRISMA. Helps reviewers systematically assess study rigor and identify common flaws in experimental design.",
+   "description_zh": "提供跨学科科学手稿评估的结构化指导。包含方法学、统计学、伦理学和CONSORT、PRISMA等报告标准的详细清单。帮助审稿人系统评估研究严谨性并识别实验设计中的常见缺陷。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~peer-review",
+   "github_stars": 150
+  },
+  {
+   "name": "coderabbit",
+   "slug": "basher83-lunar-claude-coderabbit",
+   "author": "basher83",
+   "category": "development",
+   "description": "AI-powered code review using CodeRabbit CLI and GitHub integration. Use when running local code reviews before commits (\"run coderabbit\", \"review my changes\"), configuring .coderabbit.yaml files, integrating CodeRabbit with Claude Code for autonomous review workflows, using @coderabbitai commands in pull requests, or …",
+   "description_zh": "一款AI驱动的代码审查工具，与GitHub和CLI集成，用于检测错误、安全问题并执行标准。它支持与Claude Code的自主审查工作流和自动化管道。",
+   "repo_url": "https://github.com/basher83/lunar-claude#plugins~meta~claude-dev-sandbox~skills~coderabbit",
+   "github_stars": 15
+  },
+  {
+   "name": "peer-review",
+   "slug": "k-dense-ai-scientific-agent-skills-peer-review",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Structured manuscript/grant review with checklist-based evaluation. Use when writing formal peer reviews with specific criteria methodology assessment, statistical validity, reporting standards compliance (CONSORT/STROBE), and constructive feedback. Best for actual review writing, manuscript revision. For evaluating c…",
+   "description_zh": null,
+   "repo_url": "https://github.com/K-Dense-AI/scientific-agent-skills#skills~peer-review",
+   "github_stars": 30043
+  },
+  {
+   "name": "peer-review",
+   "slug": "bbgnsurftech-claude-skills-collection-peer-review",
+   "author": "BbgnsurfTech",
+   "category": "education",
+   "description": "Systematic peer review toolkit. Evaluate methodology, statistics, design, reproducibility, ethics, figure integrity, reporting standards, for manuscript and grant review across disciplines.",
+   "description_zh": "一个用于进行科学同行评审的系统工具包，可评估跨学科手稿和资助申请的方法论、统计、设计、可重复性、伦理和报告标准。",
+   "repo_url": "https://github.com/BbgnsurfTech/claude-skills-collection#community~individual-skills~claude-scientific-skills~scientific-skills~peer-review",
+   "github_stars": 11
+  },
+  {
+   "name": "peer-review",
+   "slug": "brycewang-stanford-auto-empirical-research-skills-peer-review",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills#skills~04-K-Dense-AI-claude-scientific-writer~peer-review",
+   "github_stars": 2633
+  },
+  {
+   "name": "scientific-thinking-peer-review",
+   "slug": "jackspace-claudeskillz-scientific-thinking-peer-review",
+   "author": "jackspace",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/jackspace/ClaudeSkillz#skills~scientific-thinking-peer-review",
+   "github_stars": 12
+  }
+ ]
+}

@@ -564,9 +564,51 @@ temporal_x_info <- function(x, used, x_num, state) {
   numeric_info
 }
 
-continuous_y_scale <- function(values, include_zero = FALSE, n = 4) {
+continuous_y_scale <- function(values, include_zero = FALSE, n = 4, log_scale = FALSE) {
+  # 对数轴仅当显式请求且全部有限值为正、跨度 ≥2 个数量级时启用（评分要点：
+  # 对数变换不得当线性轴用，也不得对含零/负数据硬转对数）。传入的 padding 值
+  # （如均值-SD 下须线）可为负：log 分支只用正的有限值算范围。
+  finite_vals <- suppressWarnings(as.numeric(values))
+  finite_vals <- finite_vals[is.finite(finite_vals)]
+  pos_vals <- finite_vals[finite_vals > 0]
+  span_ok <- length(pos_vals) > 1L &&
+    (log10(max(pos_vals)) - log10(min(pos_vals))) >= 2
+  if (log_scale && span_ok) {
+    ticks <- 10^pretty(log10(range(pos_vals)), n = n)
+    ticks <- ticks[ticks >= min(pos_vals) / 1.5 & ticks <= max(pos_vals) * 1.5]
+    return(ggplot2::scale_y_log10(
+      limits = c(min(pos_vals) / 1.2, max(pos_vals) * 1.2),
+      breaks = ticks, labels = function(x) format(x, drop0trailing = TRUE, scientific = FALSE),
+      expand = ggplot2::expansion(mult = c(0.03, 0.06))
+    ))
+  }
   ax <- if (include_zero) y_axis_cover(values, n = n) else axis_cover(values, n = n, include_zero = FALSE)
   ggplot2::scale_y_continuous(limits = ax$limits, breaks = ax$breaks, expand = ax$expand)
+}
+
+log_axis_state <- function(values, requested, cfg, state) {
+  if (!requested) return(invisible(NULL))
+  finite_vals <- suppressWarnings(as.numeric(values))
+  finite_vals <- finite_vals[is.finite(finite_vals)]
+  span <- if (length(finite_vals) > 1L && all(finite_vals > 0))
+    log10(max(finite_vals)) - log10(min(finite_vals)) else NA_real_
+  if (is.na(span) || span < 2) {
+    add_warning(state, sprintf(
+      "log_y requested but data are not suitable for a log axis (%s); linear axis was kept.",
+      if (is.na(span)) "non-positive or too few finite values"
+      else sprintf("all-positive but spans only %.1f decades, threshold is 2", span)
+    ))
+    state$analysis$y_scale <- list(requested = "log10", applied = FALSE,
+                                   reason = "data unsuitable (non-positive values or span < 2 decades); linear kept")
+    return(invisible(NULL))
+  }
+  state$analysis$y_scale <- list(
+    requested = "log10", applied = TRUE, decades = round(span, 2),
+    tick_policy = "10^pretty breaks, labelled as plain numbers",
+    caption_note = "Y axis is log10 scaled; equal visual distances represent equal ratios."
+  )
+  add_note(state, sprintf("Log10 Y axis applied: all-positive values spanning %.1f decades.", span))
+  invisible(NULL)
 }
 
 continuous_x_scale <- function(values, include_zero = FALSE, n = 4,
@@ -635,6 +677,19 @@ build_bar <- function(raw, cfg, state, font, base_size, comparison = FALSE, expl
   display_error <- requested_error
   min_n <- min(table(d$x))
 
+  # 对数轴资格用原始数据判定（均值±SD 的下须线合法地为负，不代表数据含非正值）。
+  # log 生效时均值柱没有意义（柱长在 log 轴上不表示数量），自动改为均值标记 + 原始点。
+  log_axis_state(d$y, cfg_bool(cfg, "log_y", FALSE), cfg, state)
+  log_applied <- !is.null(state$analysis$y_scale) && isTRUE(state$analysis$y_scale$applied)
+  if (bar_mode && log_applied) {
+    bar_mode <- FALSE
+    actual <- "points_with_mean"
+    add_note(state, paste0(
+      "log10 Y axis: mean bars were replaced by mean markers because bar length carries no meaning ",
+      "on a log scale; raw points and the declared error bars are kept."
+    ))
+  }
+
   if (comparison) {
     if (min_n < 3L) {
       actual <- "jitter_points"
@@ -681,9 +736,24 @@ build_bar <- function(raw, cfg, state, font, base_size, comparison = FALSE, expl
   if (display_error != "none" && actual != "jitter_points") {
     se <- s[is.finite(s$error), , drop = FALSE]
     if (nrow(se)) {
+      if (log_applied) {
+        # log 轴上非正的均值-SD 下界无定义：裁剪到轴下限（原始数据最小值的一半）并留痕
+        ymin_floor <- min(d$y) * 0.5
+        se$ymin <- pmax(se$mean - se$error, ymin_floor)
+        se$ymax <- se$mean + se$error
+        if (any(se$mean - se$error < ymin_floor)) {
+          add_note(state, paste0(
+            "Lower error-bar whisker(s) were clipped at the log-axis floor (linear mean-SD ",
+            "extends below zero for skewed data); upper whiskers and all raw points are unaffected."
+          ))
+        }
+      } else {
+        se$ymin <- se$mean - se$error
+        se$ymax <- se$mean + se$error
+      }
       p <- p + ggplot2::geom_errorbar(
-        data = se, ggplot2::aes(x = .data[["category"]], ymin = .data[["mean"]] - .data[["error"]],
-                                ymax = .data[["mean"]] + .data[["error"]]),
+        data = se, ggplot2::aes(x = .data[["category"]], ymin = .data[["ymin"]],
+                                ymax = .data[["ymax"]]),
         inherit.aes = FALSE, width = 0.18, linewidth = 0.6, colour = "black"
       )
     }
@@ -692,12 +762,18 @@ build_bar <- function(raw, cfg, state, font, base_size, comparison = FALSE, expl
   # 透明度随点数收缩，大样本下仍能看出分布结构而不是糊成色块。
   point_alpha <- max(0.3, min(0.75, 0.75 * sqrt(300 / max(1L, nrow(d)))))
   point_stroke <- if (point_size >= 1.6) 0.35 else 0.22
+  # 组样本量并入轴标签（n=xx）：永不与误差线/显著性括线冲突，翻转布局同样生效
+  n_by_cat <- table(d$x)
+  cat_labels <- vapply(categories, function(category) {
+    base_label <- wrap_text(category)
+    sprintf("%s\n(n=%d)", base_label, n_by_cat[[category]])
+  }, character(1), USE.NAMES = FALSE)
   p <- p + ggplot2::geom_jitter(
     ggplot2::aes(fill = .data[["x"]]),
     width = 0.12, height = 0, size = point_size, alpha = point_alpha,
     shape = 21, colour = "white", stroke = point_stroke, show.legend = FALSE
   ) + ggplot2::scale_fill_manual(values = palette_for(categories, cfg), drop = FALSE) +
-    ggplot2::scale_x_discrete(labels = stats::setNames(wrap_text(categories), categories)) +
+    ggplot2::scale_x_discrete(labels = stats::setNames(cat_labels, categories)) +
     ggplot2::labs(
       x = axis_label(cfg_text(cfg, "x_label", cfg_text(cfg, "x", "x")), cfg_text(cfg, "x_unit", "")),
       y = axis_label(cfg_text(cfg, "y_label", cfg_text(cfg, "y", "y")), cfg_text(cfg, "unit", ""))
@@ -723,7 +799,7 @@ build_bar <- function(raw, cfg, state, font, base_size, comparison = FALSE, expl
     )
   }
   if (!is.null(sig_layers)) p <- p + sig_layers
-  p <- p + continuous_y_scale(axis_values, include_zero = bar_mode, n = 4)
+  p <- p + continuous_y_scale(axis_values, include_zero = bar_mode, n = 4, log_scale = log_applied)
   extra <- NULL
   if (length(categories) > 8L) {
     p <- p + ggplot2::coord_flip()
@@ -895,7 +971,9 @@ build_scatter <- function(raw, cfg, state, font, base_size) {
     pred <- do.call(rbind, predictions)
     c(pred$lwr, pred$upr)
   } else numeric()
-  p <- p + continuous_y_scale(c(d$y, band_values), include_zero = FALSE)
+  log_axis_state(d$y, cfg_bool(cfg, "log_y", FALSE), cfg, state)
+  log_applied_scat <- !is.null(state$analysis$y_scale) && isTRUE(state$analysis$y_scale$applied)
+  p <- p + continuous_y_scale(c(d$y, band_values), include_zero = FALSE, log_scale = log_applied_scat)
   if (group_requested && length(groups) > 6L) {
     p <- p + ggplot2::facet_wrap(. ~ .group)
     add_note(state, "More than six groups were retained in small multiples; repeated colours are separated by facet identity.")
@@ -1003,8 +1081,10 @@ build_line <- function(raw, cfg, state, font, base_size) {
     y = axis_label(cfg_text(cfg, "y_label", cfg_text(cfg, "y", "y")), cfg_text(cfg, "unit", "")),
     colour = cfg_text(cfg, "group_label", cfg_text(cfg, "group", "Group")), shape = cfg_text(cfg, "group_label", cfg_text(cfg, "group", "Group")),
     linetype = cfg_text(cfg, "group_label", cfg_text(cfg, "group", "Group"))
-  ) + continuous_x_scale(d$x_num, include_zero = FALSE, labels = temporal$labels, n = x_break_targets) +
-    continuous_y_scale(c(d$y, m$mean - m$error, m$mean + m$error), include_zero = FALSE)
+  ) + continuous_x_scale(d$x_num, include_zero = FALSE, labels = temporal$labels, n = x_break_targets)
+  log_axis_state(d$y, cfg_bool(cfg, "log_y", FALSE), cfg, state)
+  log_applied_line <- !is.null(state$analysis$y_scale) && isTRUE(state$analysis$y_scale$applied)
+  p <- p + continuous_y_scale(c(d$y, m$mean - m$error, m$mean + m$error), include_zero = FALSE, log_scale = log_applied_line)
   definition <- if (error_type == "none") "no uncertainty band requested" else paste0("band: ±", switch(error_type, sd = "1 SD", se = "1 SE", ci95 = "two-sided 95% t CI half-width"), " at repeated-x cells with n≥2")
   if (group_requested && length(groups) > 6L) {
     p <- p + ggplot2::facet_wrap(. ~ .group)

@@ -1,0 +1,16 @@
+{
+ "version": "0.1.0",
+ "description": "051 前瞻筛选协议口径。协议先于统计执行（prospective）：纳排标准先解析落盘，再逐条筛选并记 criterion_hits；仅 included 记录进入趋势统计池。案例未提供协议时按本文件的声明回退口径执行并逐条标 fallback=true，绝不冒充『已按注册协议筛选』。",
+ "screening_rule": "读取 case.protocol（inclusion/exclusion/criteria[role]）→ 先落协议块（protocol_status=registered_prospective）→ 对去重后的每条记录逐条评估：命中任一排除标准、或未全部满足纳入标准即 excluded；正文不可读（内联/侧车/自研提取均失败）记 unscored_no_body；其余 included。",
+ "fallback_screening": {
+  "inclusion": [
+   {"criterion_id": "FB-IN1", "text": "记录正文可读且不少于 30 个字符", "body_readable": true, "min_chars": 30}
+  ],
+  "exclusion": [
+   {"criterion_id": "FB-EX1", "text": "协议、手册、术语表等非实证研究记录", "type_in": ["protocol", "handbook_reference", "glossary"]}
+  ],
+  "stop_conditions": [],
+  "note": "案例未提供前瞻协议时使用本回退口径；每条筛选行 fallback=true，并在 status.unmet 记 R_PROTOCOL_MISSING。回退口径只为让统计有明确边界，不改变『协议缺失属输入缺口』的定性。"
+ },
+ "outcome_note": "included → 进入趋势统计池；excluded → 记 R_SCREENED_OUT 与命中标准，不进池；unscored_no_body → 记 R_NO_BODY，不进池、不编造内容。协议记录/手册记录天然不该进趋势池，这是趋势不因非实证记录虚高的第一道闸。"
+}

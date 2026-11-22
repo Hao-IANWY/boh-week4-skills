@@ -1,0 +1,68 @@
+{
+ "version": "0.2.0",
+ "description": "052 选题四维评估（新颖性/可行性/价值/风险）的打分参数，逐候选方向复算。所有分数由可数特征线性组合得到，禁止主观印象分；每个分数都带 score_basis 原始计数；分数全部可按本文件重算。",
+ "dimensions": {
+  "novelty": {
+   "label": "新颖性",
+   "weight": 0.3,
+   "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）",
+   "fallback_when_no_claims": "undetermined（无创新主张时不给分）"
+  },
+  "feasibility": {
+   "label": "可行性",
+   "weight": 0.3,
+   "formula": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告",
+   "levels": {
+    "supported": "无 assumption 前提且至少一条 task_given",
+    "conditional": "存在 assumption 前提：结论写「若 P 成立则…」",
+    "unconstrained": "constraints 缺失：不给『可行』结论，建议降为方向级"
+   },
+   "undetermined_rule": "premises 全部为 assumption 时记 conditional/low 并说明缺哪类资源"
+  },
+  "value": {
+   "label": "价值",
+   "weight": 0.25,
+   "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+   "signal_rules": {
+    "gap_signal": "有 claim 判 not_found_in_scope(pool_observed) 且未被判 covered → 1；全部 partially_covered → 0.5；全部 covered → 0",
+    "application_signal": "case/候选方向给出 application/stakeholders/use_case 且与领域相关 → 1；仅方向文本提到 → 0.5；无 → 0",
+    "method_reuse_signal": "claim 类型含 method 或 data → 1；仅 scenario_transfer 或 conclusion_correction → 0.5；无 claim → 0"
+   }
+  },
+  "risk": {
+   "label": "风险",
+   "weight": 0.15,
+   "inverted": true,
+   "formula": "risk = clamp(sum(risk.weight) / risk_max_total)，risk.weight 见 risk_weights；assumption 前提、被覆盖主张、骑在冲突证据上的方向分别计入；risk 高表示失败风险大，不是好事",
+   "note": "风险分与可行性分不合并成单一总分，必须并置报告，避免用总分掩盖前提缺口"
+  }
+ },
+ "premise_strength": {
+  "task_given": 1.0,
+  "record_evidence": 0.7,
+  "explicit_assumption": 0.0,
+  "note": "强度外置可复算：record_evidence 低于 task_given（池内证据是观察不是承诺），assumption 为 0"
+ },
+ "similarity": {
+  "tokenizer": "kit.tokens：英文按词、中文按二元组，去重",
+  "metric": "claim_coverage = |claim_tokens ∩ record_tokens| / |claim_tokens|（记录文本长于主张，故不用 Jaccard，避免长度惩罚）",
+  "covered_threshold": 0.5,
+  "partial_threshold": 0.25,
+  "min_claim_tokens": 5,
+  "note": "低于 min_claim_tokens 的主张无法稳定比对，判 undetermined 并计入 uncertainty，不冒充判定"
+ },
+ "risk_weights": {
+  "premise_unsupported": 1.0,
+  "claim_covered_by_prior_art": 1.0,
+  "evidence_conflict": 0.8,
+  "scope_mismatch": 0.5,
+  "data_access_missing": 1.0,
+  "ethics_approval_missing": 0.8
+ },
+ "risk_max_total": 4.0,
+ "verdict_bands": {
+  "strong": 0.7,
+  "moderate": 0.45,
+  "weak": 0.2
+ }
+}

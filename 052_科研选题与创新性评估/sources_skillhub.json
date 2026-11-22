@@ -1,0 +1,170 @@
+{
+ "seq": 52,
+ "title": "科研选题与创新性评估",
+ "queries": [
+  "novelty assessment",
+  "research idea generation"
+ ],
+ "skills": [
+  {
+   "name": "novelty-assessment",
+   "slug": "lingzhi227-agent-research-skills-novelty-assessment",
+   "author": "lingzhi227",
+   "category": "research",
+   "description": "Assess research idea novelty through systematic literature search. Multi-round search-evaluate loops with harsh critic persona. Binary novel/not-novel decision with justification. Use before committing to a research direction.",
+   "description_zh": null,
+   "repo_url": "https://github.com/lingzhi227/agent-research-skills/tree/main/skills/novelty-assessment",
+   "github_stars": 263
+  },
+  {
+   "name": "novelty-check",
+   "slug": "wanshuiyin-auto-claude-code-research-in-sleep-novelty-check",
+   "author": "wanshuiyin",
+   "category": "development",
+   "description": "Verify research idea novelty against recent literature. Use when user says \"查新\", \"novelty check\", \"有没有人做过\", \"check novelty\", or wants to verify a research idea is novel before implementing.",
+   "description_zh": null,
+   "repo_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#skills~skills-codex-gemini-review~novelty-check",
+   "github_stars": 14288
+  },
+  {
+   "name": "patent-novelty-check",
+   "slug": "wanshuiyin-auto-claude-code-research-in-sleep-patent-novelty-check",
+   "author": "wanshuiyin",
+   "category": "development",
+   "description": "Assess patent novelty and non-obviousness against prior art. Use when user says \"专利查新\", \"patent novelty\", \"可专利性评估\", \"patentability check\", or wants to evaluate if an invention is patentable.",
+   "description_zh": null,
+   "repo_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#skills~skills-codex~patent-novelty-check",
+   "github_stars": 14414
+  },
+  {
+   "name": "novelty-vs-feasibility-assessor",
+   "slug": "aipoch-medical-research-skills-novelty-vs-feasibility-assessor",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Assesses whether a medical research topic is worth starting now by separating true novelty from pseudo-novelty, auditing real feasibility under stated resource constraints, and forcing a concrete start / narrow / redesign / stop decision. Always require explicit assumptions and never fabricate references, datasets, re…",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#awesome-med-research-skills~Evidence Insight~novelty-vs-feasibility-assessor",
+   "github_stars": 1394
+  },
+  {
+   "name": "novelty-check",
+   "slug": "tai609-nebulamat-novelty-check-9dc0a4ef0f",
+   "author": "Tai609",
+   "category": "development",
+   "description": "Verify research idea novelty against recent literature. Use when user says \"查新\", \"novelty check\", \"有没有人做过\", \"check novelty\", or wants to verify a research idea is novel before implementing.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~novelty-check",
+   "github_stars": 92
+  },
+  {
+   "name": "aris-novelty-check",
+   "slug": "tai609-nebulamat-aris-novelty-check-59f3ef19f1",
+   "author": "Tai609",
+   "category": "development",
+   "description": "Verify research idea novelty against recent literature. Use when user says \"查新\", \"novelty check\", \"有没有人做过\", \"check novelty\", or wants to verify a research idea is novel before implementing.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~skills-nebulamat~aris-novelty-check",
+   "github_stars": 92
+  },
+  {
+   "name": "aris-patent-novelty-check",
+   "slug": "tai609-nebulamat-aris-patent-novelty-check-60e4a65d02",
+   "author": "Tai609",
+   "category": "development",
+   "description": "Assess patent novelty and non-obviousness against prior art. Use when user says \"专利查新\", \"patent novelty\", \"可专利性评估\", \"patentability check\", or wants to evaluate if an invention is patentable.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~skills-nebulamat~aris-patent-novelty-check",
+   "github_stars": 92
+  },
+  {
+   "name": "horizon-aurora",
+   "slug": "yujie-jason-zhang-horizon-academic-writing-horizon-aurora-af0083e29b",
+   "author": "yujie-jason-zhang",
+   "category": "development",
+   "description": "Manuscript-level academic polishing for English research papers and Chinese-to-English academic translation, with first-class LaTeX/TeX support. Use when asked to polish, proofread, copy-edit, language-edit, or reduce AI-sounding prose in a research manuscript whose scientific content is substantially settled. Reads t…",
+   "description_zh": null,
+   "repo_url": "https://github.com/yujie-jason-zhang/horizon-academic-writing#skills~horizon-aurora",
+   "github_stars": 66
+  },
+  {
+   "name": "idea-generation",
+   "slug": "lingzhi227-agent-research-skills-idea-generation",
+   "author": "lingzhi227",
+   "category": "ai-ml",
+   "description": "Generate novel research ideas with iterative refinement and novelty checking against literature. Score ideas on Interestingness, Feasibility, and Novelty. Use when brainstorming research directions or validating idea novelty.",
+   "description_zh": null,
+   "repo_url": "https://github.com/lingzhi227/agent-research-skills/tree/main/skills/idea-generation",
+   "github_stars": 263
+  },
+  {
+   "name": "light-idea-generation",
+   "slug": "light0305-light-skills-light-idea-generation",
+   "author": "Light0305",
+   "category": "development",
+   "description": "Light 科研主线第 3 步·提 idea:从模糊方向/数据/文献**结构化发散**(激发算子系统生成,不是泛泛头脑风暴) → 产**值得做且做得成的分层候选 idea**(moonshot 冲刺/solid 稳妥/safe 保底),每个必答**为什么值得做·创新点· 比现有强在哪·解决什么具体问题·能投什么层次**,且**提出时就自带撞车前置自查**(最像的前作+delta,吃上游 literature-search 领域地图)。何时用:用户问\"这个方向/数据能做什么\" / 要创新点·研究思路·选题·突破口 / 帮我想 idea / brainstorm research ideas / 这 idea 行不行(先生成再送 id…",
+   "description_zh": null,
+   "repo_url": "https://github.com/Light0305/Light-skills#skills~light-idea-generation",
+   "github_stars": 451
+  },
+  {
+   "name": "denario",
+   "slug": "k-dense-ai-claude-scientific-skills-denario",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "Denario automates scientific research workflows from data analysis to LaTeX paper generation using a multi-agent system. It guides users through idea generation, methodology development, computational experiments, and publication formatting with examples for time-series and ML projects.",
+   "description_zh": "Denario 是一个多智能体系统，用于自动化从数据分析到 LaTeX 论文生成的科学研究工作流。它引导用户完成从想法生成、方法开发、计算实验到期刊格式排版的完整流程，并提供了时间序列和机器学习项目的具体示例。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~denario",
+   "github_stars": 16952
+  },
+  {
+   "name": "research-ideation",
+   "slug": "camusgit-evoquant-research-ideation",
+   "author": "CamusGIT",
+   "category": "research",
+   "description": "Quant-focused research ideation pipeline: scope selection (3 stages) → anchor-first literature grounding → single-core idea generation → iterative refinement → ELO tournament ranking (Final = N+R+C−D) → update evo-memory → user selects direction → expand into manuscript-quality proposal. Optimized for incremental, anc…",
+   "description_zh": null,
+   "repo_url": "https://github.com/CamusGIT/EvoQuant#EvoQuant~skills~research-ideation",
+   "github_stars": 152
+  },
+  {
+   "name": "idea-creator",
+   "slug": "tai609-nebulamat-idea-creator-ee169eeece",
+   "author": "Tai609",
+   "category": "research",
+   "description": "Generate and rank research ideas given a broad direction. Use when user says \"找idea\", \"brainstorm ideas\", \"generate research ideas\", \"what can we work on\", or wants to explore a research area for publishable directions.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~idea-creator",
+   "github_stars": 92
+  },
+  {
+   "name": "idea-creator",
+   "slug": "wanshuiyin-auto-claude-code-research-in-sleep-idea-creator",
+   "author": "wanshuiyin",
+   "category": "research",
+   "description": "Generate and rank research ideas given a broad direction. Use when user says \"找idea\", \"brainstorm ideas\", \"generate research ideas\", \"what can we work on\", or wants to explore a research area for publishable directions.",
+   "description_zh": null,
+   "repo_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#skills~skills-codex-gemini-review~idea-creator",
+   "github_stars": 14288
+  },
+  {
+   "name": "aris-idea-creator",
+   "slug": "tai609-nebulamat-aris-idea-creator-b89c2cb631",
+   "author": "Tai609",
+   "category": "research",
+   "description": "Generate and rank research ideas given a broad direction. Use when user says \"找idea\", \"brainstorm ideas\", \"generate research ideas\", \"what can we work on\", or wants to explore a research area for publishable directions.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~skills-nebulamat~aris-idea-creator",
+   "github_stars": 92
+  },
+  {
+   "name": "idea-evaluator",
+   "slug": "poco-ai-agentero-idea-evaluator",
+   "author": "poco-ai",
+   "category": "development",
+   "description": "Evaluates a preliminary research idea against a five-dimension framework (Higher, Faster, Stronger, Cheaper, Broader) plus idea-lifecycle and student-capability matching, paradigm-shift probing, and a fatal-flaws audit. Returns a reviewer-style verdict; non-STEM ideas route to substitute frameworks. Use when the user …",
+   "description_zh": null,
+   "repo_url": "https://github.com/poco-ai/Agentero#templates~vault~.agents~skills~idea-evaluator",
+   "github_stars": 114
+  }
+ ]
+}

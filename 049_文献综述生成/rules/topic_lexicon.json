@@ -1,0 +1,26 @@
+{
+ "version": "0.1.0",
+ "description": "049 主题术语集与主题边界。主题只能从这批文献与术语集的交集长出来；术语集覆盖到但文献集没有的主题，记为 R_TOPIC_NOT_COVERED 的空白，而不是凭空写一节。",
+ "topics": [
+  {"id": "T1_REPRESENTATION", "label": "反应中心与分子表示",
+   "question": "用什么表示反应物与反应中心，表示方式如何影响预测",
+   "boundary": "只覆盖表示学习与反应中心建模；不含检索式筛选与实验验证",
+   "terms": ["reaction centre", "reaction center", "representation", "表示", "message passing", "图神经网络", "graph neural network", "gnn"]},
+  {"id": "T2_TEMPLATE_FREE", "label": "模板无关方法",
+   "question": "模板无关方法相对模板方法的取舍在哪里",
+   "boundary": "只覆盖模板无关/模板法的建模差异；不含多步规划",
+   "terms": ["template-free", "template free", "模板无关", "template-based", "模板法", "graph attention"]},
+  {"id": "T3_LOW_DATA", "label": "低数据与泛化能力",
+   "question": "训练数据规模对准确率的影响有多大",
+   "boundary": "只覆盖数据规模与泛化的实证结果；不含数据清洗",
+   "terms": ["low data", "low-data", "few shot", "data scarcity", "低数据", "样本量", "generaliz", "泛化"]},
+  {"id": "T4_EVALUATION", "label": "评测口径与基准",
+   "question": "不同工作的评测口径是否可比",
+   "boundary": "只覆盖指标与数据集口径；不含具体模型实现",
+   "terms": ["benchmark", "基准", "evaluation", "评测", "top-1", "accuracy", "准确率", "route success", "划分"]}
+ ],
+ "notes": {
+  "multi_label": "一篇文献可同时支撑多个主题（跨主题是常态），不做互斥划分",
+  "no_forcing": "未命中任何术语集的文献进未归类桶，并在空白分析中说明，不硬塞进最近似的主题"
+ }
+}

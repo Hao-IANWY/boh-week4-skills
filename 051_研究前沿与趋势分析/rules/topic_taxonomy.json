@@ -1,0 +1,48 @@
+{
+ "version": "0.1.0",
+ "description": "题录主题归并词表。每条题录按命中关键词多标签归属主题；词表可替换为案例自带词表（case.json 的 topic_taxonomy 优先）。未命中任何主题的题录记为 untagged，不计入主题占比分母，但计入年度产出量。",
+ "matching": {
+  "case_insensitive": true,
+  "substring_match": true,
+  "multi_label": true,
+  "max_topics_per_record": 3
+ },
+ "topics": {
+  "interface_engineering": {
+   "label_zh": "界面工程",
+   "keywords": ["interface", "interphase", "界面", "界面层", "interfacial", "surface coating", "wetting", "润湿"]
+  },
+  "solid_electrolyte": {
+   "label_zh": "固态电解质",
+   "keywords": ["solid electrolyte", "solid-state electrolyte", "garnet", "llzo", "sulfide electrolyte", "polymer electrolyte", "固态电解质", "硫化物电解质", "石榴石"]
+  },
+  "ion_transport": {
+   "label_zh": "离子输运",
+   "keywords": ["ionic conductivity", "ion transport", "migration barrier", "离子电导", "离子输运", "迁移势垒", "transference number"]
+  },
+  "dendrite_mechanism": {
+   "label_zh": "枝晶与失效机制",
+   "keywords": ["dendrite", "lithium filament", "short circuit", "plating", "枝晶", "锂枝晶", "短路", "沉积形貌"]
+  },
+  "characterization": {
+   "label_zh": "表征方法",
+   "keywords": ["xps", "nmr", "cryo-em", "tomography", "impedance spectroscopy", "原位表征", "谱学", "表征"]
+  },
+  "computation": {
+   "label_zh": "计算与模拟",
+   "keywords": ["dft", "molecular dynamics", "machine learning potential", "first-principles", "计算", "分子动力学", "第一性原理", "机器学习势"]
+  },
+  "cell_integration": {
+   "label_zh": "电芯集成与工程化",
+   "keywords": ["full cell", "pouch cell", "stack pressure", "scale-up", "电芯", "软包", "堆叠压力", "工程化", "manufacturing"]
+  },
+  "sustainability": {
+   "label_zh": "可持续与回收",
+   "keywords": ["recycling", "sustainability", "life cycle", "回收", "可持续", "生命周期"]
+  }
+ },
+ "alias_notes": [
+  "同一概念的不同写法（interphase / interlayer / 中间相）统一挂到 interface_engineering，避免术语漂移把同一主题拆成两个。",
+  "词表未覆盖的新术语会使计入 untagged；untagged 率超过 thresholds.untagged_rate_alert 时必须在 uncertainty 中登记『词表可能截断新兴主题』。"
+ ]
+}

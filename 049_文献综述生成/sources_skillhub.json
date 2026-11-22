@@ -1,0 +1,170 @@
+{
+ "seq": 49,
+ "title": "文献综述生成",
+ "queries": [
+  "literature review generation",
+  "survey writing"
+ ],
+ "skills": [
+  {
+   "name": "paper-assembly",
+   "slug": "lingzhi227-agent-research-skills-paper-assembly",
+   "author": "lingzhi227",
+   "category": "ai-ml",
+   "description": "Orchestrate the full paper pipeline end-to-end. Manage state propagation between phases (literature → plan → code → experiments → figures → tables → writing → review), support checkpointing and resumption. Use for assembling a complete paper from components.",
+   "description_zh": null,
+   "repo_url": "https://github.com/lingzhi227/agent-research-skills/tree/main/skills/paper-assembly",
+   "github_stars": 263
+  },
+  {
+   "name": "research-proposal",
+   "slug": "brycewang-stanford-auto-empirical-research-skills-research-proposal",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills#skills~02-luwill-research-skills~research-proposal",
+   "github_stars": 2633
+  },
+  {
+   "name": "researchclaw",
+   "slug": "openclaw-skills-researchclaw",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Autonomous research pipeline skill for Claude Code. Given a research topic, orchestrates 23 stages end-to-end: literature review, hypothesis generation, experiment design, code generation & sandbox execution, statistical analysis, paper writing, multi-agent peer review, and conference-ready LaTeX export. No babysittin…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~dongsheng123132~researchclaw",
+   "github_stars": 3688
+  },
+  {
+   "name": "literature-review",
+   "slug": "microck-ordinary-claude-skills-literature-review",
+   "author": "Microck",
+   "category": "research",
+   "description": "This skill provides structured workflows for conducting systematic literature reviews across multiple academic databases. It includes detailed search strategies, citation verification, and document generation with proper formatting. The documentation covers planning, execution, and quality control steps for biomedical…",
+   "description_zh": "该技能为跨多个学术数据库进行系统性文献综述提供结构化工作流程。包含详细的搜索策略、引用验证和文档生成功能，适用于生物医学和科学领域的研究工作。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~literature-review",
+   "github_stars": 150
+  },
+  {
+   "name": "literature-review",
+   "slug": "k-dense-ai-claude-scientific-skills-literature-review",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "This skill automates systematic literature reviews by searching multiple academic databases, verifying citations, and generating formatted documents. It provides structured workflows, database-specific search strategies, and integrates with other tools for schematic generation. The documentation includes detailed sear…",
+   "description_zh": "该技能通过搜索多个学术数据库、验证引用和生成格式化文档来自动化系统文献综述。它提供结构化工作流程、特定数据库的搜索策略，并与其他工具集成以生成图表。文档包含详细的搜索技术和质量控制清单。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~literature-review",
+   "github_stars": 16958
+  },
+  {
+   "name": "hypothesis-generation",
+   "slug": "k-dense-ai-claude-scientific-skills-hypothesis-generation",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "This skill provides a structured workflow for generating scientific hypotheses from observations. It guides users through literature search, evidence synthesis, hypothesis formulation, prediction development, and experimental design. Outputs are formatted as LaTeX documents with visual schematics, following a systemat…",
+   "description_zh": "该技能提供了一个从观察结果生成科学假设的结构化工作流程。它引导用户完成文献检索、证据综合、假设构建、预测开发和实验设计。输出为包含可视化示意图的LaTeX文档，遵循系统化的科学方法。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~hypothesis-generation",
+   "github_stars": 16953
+  },
+  {
+   "name": "hypothesis-generation",
+   "slug": "microck-ordinary-claude-skills-hypothesis-generation",
+   "author": "Microck",
+   "category": "research",
+   "description": "This skill provides a structured template for generating and testing scientific hypotheses. It guides users through literature review, hypothesis formulation, experimental design, and prediction making. The output follows a standardized format suitable for research proposals or study planning.",
+   "description_zh": "该技能提供了一个生成和检验科学假设的结构化模板。它引导用户完成文献综述、假设提出、实验设计和预测制定。输出遵循标准化格式，适用于研究提案或实验规划。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_all~claude-scientific-skills~scientific-skills~hypothesis-generation",
+   "github_stars": 149
+  },
+  {
+   "name": "literature-review",
+   "slug": "k-dense-ai-scientific-agent-skills-literature-review",
+   "author": "K-Dense-AI",
+   "category": "development",
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and te…",
+   "description_zh": null,
+   "repo_url": "https://github.com/K-Dense-AI/scientific-agent-skills#skills~literature-review",
+   "github_stars": 30033
+  },
+  {
+   "name": "prose-writer",
+   "slug": "willoscar-research-units-pipeline-skills-prose-writer",
+   "author": "WILLOSCAR",
+   "category": "development",
+   "description": "Write `output/DRAFT.md` (or `output/SNAPSHOT.md`) from an approved outline and evidence packs, using only verified citation keys from `citations/ref.bib`. **Trigger**: write draft, prose writer, snapshot, survey writing, 写综述, 生成草稿, section-by-section drafting. **Use when**: structure is approved (`DECISIONS.md` has `A…",
+   "description_zh": null,
+   "repo_url": "https://github.com/WILLOSCAR/research-units-pipeline-skills#.codex~skills~prose-writer",
+   "github_stars": 380
+  },
+  {
+   "name": "paper-audit",
+   "slug": "bahayonghang-academic-writing-skills-paper-audit",
+   "author": "bahayonghang",
+   "category": "security",
+   "description": "Reviewer-style audit and submission gate for academic papers in .tex, .typ, or .pdf. Use for peer-review critique, readiness/gate decisions, blocker triage, revision roadmaps, journal-style reports, and re-audits. Do not use for source editing, sentence polishing, bibliography search, or compile repair.",
+   "description_zh": null,
+   "repo_url": "https://github.com/bahayonghang/academic-writing-skills/tree/main/academic-writing-skills/paper-audit",
+   "github_stars": 408
+  },
+  {
+   "name": "dedupe-rank",
+   "slug": "willoscar-research-units-pipeline-skills-dedupe-rank",
+   "author": "WILLOSCAR",
+   "category": "development",
+   "description": "Dedupe and rank a raw paper set (`papers/papers_raw.jsonl`) to produce `papers/papers_dedup.jsonl` and `papers/core_set.csv`. **Trigger**: dedupe, rank, core set, 去重, 排序, 精选论文, 核心集合. **Use when**: 检索后需要把广覆盖集合收敛成可管理的 core set（用于 taxonomy/outline/mapping）。 **Skip if**: 已经有人手工整理了稳定的 `papers/core_set.csv`（无需再次 churn）。 **N…",
+   "description_zh": null,
+   "repo_url": "https://github.com/WILLOSCAR/research-units-pipeline-skills#.codex~skills~dedupe-rank",
+   "github_stars": 380
+  },
+  {
+   "name": "research-survey",
+   "slug": "camusgit-evoquant-research-survey",
+   "author": "CamusGIT",
+   "category": "research",
+   "description": "Generates structured literature survey reports from collected papers using a multi-stage pipeline: outline generation (query-type adaptive) → draft survey → section-by-section expansion → summary section refinement → final assembly. Produces survey-grade output with taxonomy-based method analysis, LaTeX formalizations…",
+   "description_zh": null,
+   "repo_url": "https://github.com/CamusGIT/EvoQuant#EvoQuant~skills~research-survey",
+   "github_stars": 152
+  },
+  {
+   "name": "medical-imaging-review",
+   "slug": "aipoch-medical-research-skills-medical-imaging-review",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Write comprehensive literature reviews for medical imaging AI research. Use when writing survey papers, systematic reviews, or literature analyses on topics like segmentation, detection, classification in CT, MRI, X-ray, ultrasound, or pathology imaging. Triggers on requests f...",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#scientific-skills~Academic Writing~medical-imaging-review",
+   "github_stars": 1397
+  },
+  {
+   "name": "section-mapper",
+   "slug": "willoscar-research-units-pipeline-skills-section-mapper",
+   "author": "WILLOSCAR",
+   "category": "development",
+   "description": "Map papers from the core set to each outline subsection and write `outline/mapping.tsv` with coverage tracking. **Trigger**: section mapper, mapping.tsv, coverage, paper-to-section mapping, 论文映射, 覆盖率. **Use when**: structure 阶段（C2），已有 `papers/core_set.csv` + `outline/outline.yml`，需要确保每小节有足够支持论文再进入 evidence/writing。 **…",
+   "description_zh": null,
+   "repo_url": "https://github.com/WILLOSCAR/research-units-pipeline-skills#.codex~skills~section-mapper",
+   "github_stars": 380
+  },
+  {
+   "name": "medical-imaging-review",
+   "slug": "brycewang-stanford-auto-empirical-research-skills-medical-imaging-review",
+   "author": "brycewang-stanford",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills#skills~02-luwill-research-skills~medical-imaging-review",
+   "github_stars": 2633
+  },
+  {
+   "name": "super-research",
+   "slug": "xiaomimimo-mimo-code-super-research",
+   "author": "XiaomiMiMo",
+   "category": "research",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/XiaomiMiMo/MiMo-Code#packages~opencode~src~skill~builtin~.bundle~super-research",
+   "github_stars": 12649
+  }
+ ]
+}

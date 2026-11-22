@@ -1,0 +1,429 @@
+{
+ "seq": 49,
+ "title": "文献综述生成",
+ "category": "深度研究与文献综述",
+ "queries": [
+  "literature review generation agent",
+  "automatic literature review writing",
+  "survey generation llm"
+ ],
+ "candidates": [
+  {
+   "full_name": "stanford-oval/storm",
+   "url": "https://github.com/stanford-oval/storm",
+   "stars": 31907,
+   "desc": "An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations.",
+   "topics": [
+    "agentic-rag",
+    "deep-research",
+    "emnlp2024",
+    "knowledge-curation",
+    "large-language-models",
+    "naacl"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2025-09-30T18:07:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "Future-House/paper-qa",
+   "url": "https://github.com/Future-House/paper-qa",
+   "stars": 9620,
+   "desc": "High accuracy RAG for answering questions from scientific documents with citations",
+   "topics": [
+    "ai",
+    "rag",
+    "science",
+    "search"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-16T16:16:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "asinghcsu/AgenticRAG-Survey",
+   "url": "https://github.com/asinghcsu/AgenticRAG-Survey",
+   "stars": 1749,
+   "desc": "Agentic-RAG explores advanced Retrieval-Augmented Generation systems enhanced with AI LLM agents.",
+   "topics": [
+    "agentic",
+    "agentic-ai",
+    "agentic-framework",
+    "agentic-pattern",
+    "agentic-rag",
+    "agentic-workflow"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2025-10-20T00:30:31Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "DEEP-PolyU/Awesome-LLM-based-Text2SQL",
+   "url": "https://github.com/DEEP-PolyU/Awesome-LLM-based-Text2SQL",
+   "stars": 1380,
+   "desc": "[TKDE2025] Next-Generation Database Interfaces: A Survey of LLM-based Text-to-SQL | A curated list of resources (surveys, papers, benchmarks, and opensource projects) on large language model-based text-to-SQL.",
+   "topics": [
+    "awesome",
+    "awesome-text-to-sql",
+    "awesome-text2sql",
+    "database",
+    "large-language-models",
+    "llms"
+   ],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-08-03T00:50:21Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "WenyuChiou/ai-research-skills",
+   "url": "https://github.com/WenyuChiou/ai-research-skills",
+   "stars": 676,
+   "desc": "Universal SKILL.md catalog for research workflows: literature review, research design, project memory, manuscript writing, and cross-agent delegation for Claude Code, Codex, Gemini, Cursor, OpenClaw, and generic AI clie…",
+   "topics": [
+    "academic-writing",
+    "agentic-ai",
+    "agentskills",
+    "ai-research",
+    "ai-skills",
+    "claude-code"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T12:44:56Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "llm-lab-org/Multimodal-RAG-Survey",
+   "url": "https://github.com/llm-lab-org/Multimodal-RAG-Survey",
+   "stars": 546,
+   "desc": "A Survey on Multimodal Retrieval-Augmented Generation",
+   "topics": [
+    "multimodal-learning",
+    "rag",
+    "retrieval-augmented-generation"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-11-07T07:05:13Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "AutoSurveys/AutoSurvey",
+   "url": "https://github.com/AutoSurveys/AutoSurvey",
+   "stars": 480,
+   "desc": "",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-02-07T01:56:15Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "lingzhi227/agent-research-skills",
+   "url": "https://github.com/lingzhi227/agent-research-skills",
+   "stars": 470,
+   "desc": "Skills for Claude Code — deep-research: systematic academic literature review",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-02-27T04:11:14Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "jindongli-Ai/Next-Generation-LLM-based-Recommender-Systems-Survey",
+   "url": "https://github.com/jindongli-Ai/Next-Generation-LLM-based-Recommender-Systems-Survey",
+   "stars": 257,
+   "desc": "The official GitHub page for the survey paper \"Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond\". And this paper is under review.",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-04-14T14:14:36Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ShZhao27208/Aut_Sci_Write",
+   "url": "https://github.com/ShZhao27208/Aut_Sci_Write",
+   "stars": 220,
+   "desc": "Academic research skills suite for AI Agent — literature search/download (WoS+Elsevier+Springer), PDF   extraction, figure cropping, review writing, Zotero sync, and PPT/Html generation.",
+   "topics": [
+    "academic-research",
+    "agent",
+    "claude-code",
+    "codex",
+    "llm-tools",
+    "openclaw"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-08-13T16:05:26Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "juyongjiang/CodeLLMSurvey",
+   "url": "https://github.com/juyongjiang/CodeLLMSurvey",
+   "stars": 203,
+   "desc": "[TOSEM'25] The official GitHub page for the survey paper \"A Survey on Large Language Models for Code Generation\".",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2025-07-13T00:59:50Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "tanfiona/LLM-on-Tabular-Data-Prediction-Table-Understanding-Data-Generation",
+   "url": "https://github.com/tanfiona/LLM-on-Tabular-Data-Prediction-Table-Understanding-Data-Generation",
+   "stars": 198,
+   "desc": "Repository for collecting and categorizing papers outlined in our survey paper: \"Large Language Models on Tabular Data -- A Survey\".",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2024-10-12T10:33:12Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "littlelelephant/literature-review-agent",
+   "url": "https://github.com/littlelelephant/literature-review-agent",
+   "stars": 120,
+   "desc": "A LangGraph-powered agent for literature search, evidence screening, outline generation, and evidence-grounded review writing.",
+   "topics": [],
+   "lang": "Python",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-08-02T14:04:49Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "tririver/arc",
+   "url": "https://github.com/tririver/arc",
+   "stars": 117,
+   "desc": "Agent Research Copilot (ARC) is a set of skills and tools (CLI) for theoretical physics literature review, idea generation and performing calculations.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-15T05:19:38Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "JinchengGao-Infty/FWMA",
+   "url": "https://github.com/JinchengGao-Infty/FWMA",
+   "stars": 58,
+   "desc": "End-to-end AI literature review automation: crawl, screen, download, multi-agent review, and report generation",
+   "topics": [
+    "ai-agents",
+    "literature-review",
+    "mcp",
+    "python",
+    "research-automation"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-03-22T12:22:06Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Zsun79/LitReviewSkill",
+   "url": "https://github.com/Zsun79/LitReviewSkill",
+   "stars": 30,
+   "desc": "LitReview Skill is an installable agent skill for end-to-end literature review generation. It helps agents conduct literature reviews with a well-designed and widely used review framework so the search process is broad,…",
+   "topics": [
+    "agent-skills",
+    "claude-skills",
+    "codex-skills",
+    "literature-review",
+    "research-agents",
+    "skill-md"
+   ],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-06-08T03:15:48Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "TechnicolorGUO/InteractiveSurvey",
+   "url": "https://github.com/TechnicolorGUO/InteractiveSurvey",
+   "stars": 25,
+   "desc": "InteractiveSurvey: An LLM-based Personalized and Interactive Survey Paper Generation System",
+   "topics": [
+    "ai4research",
+    "autosurvey",
+    "deepresearch",
+    "large-language-model",
+    "literature-review",
+    "llm"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2025-10-27T13:56:57Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "jie-jw-wu/Survey-CodeLLM4LowResource-DSL",
+   "url": "https://github.com/jie-jw-wu/Survey-CodeLLM4LowResource-DSL",
+   "stars": 20,
+   "desc": "A Survey on LLM-based Code Generation for Low-Resource and Domain-Specific Programming Languages",
+   "topics": [
+    "artificial-intelligence",
+    "code-generation",
+    "code-llms",
+    "large-language-models",
+    "software-engineering"
+   ],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-06-11T20:04:13Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "lira-workflow/auto-review-writing",
+   "url": "https://github.com/lira-workflow/auto-review-writing",
+   "stars": 19,
+   "desc": "Repository for LiRA: A Multi-Agent Framework for Reliable and Readable Literature Review Generation.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-03-25T20:34:32Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ai-agi/LLMs-Enhanced-Long-Text-Generation-Survey",
+   "url": "https://github.com/ai-agi/LLMs-Enhanced-Long-Text-Generation-Survey",
+   "stars": 17,
+   "desc": "Long Form NLG Generation  Based on Large Language Models",
+   "topics": [],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2024-01-31T14:44:01Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Linking-ai/Awesome-Efficient-Inference-LLM-RL-Agent",
+   "url": "https://github.com/Linking-ai/Awesome-Efficient-Inference-LLM-RL-Agent",
+   "stars": 16,
+   "desc": "🚀 First survey bridging LLM, RL, and Agentic Eras — 100+ papers on efficient inference from static generation to systematic reasoning and action.",
+   "topics": [],
+   "lang": null,
+   "license": "MIT",
+   "pushed_at": "2026-05-13T00:47:33Z",
+   "via": [
+    "survey generation llm"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dongyangli-del/NeuroFlow-Agent",
+   "url": "https://github.com/dongyangli-del/NeuroFlow-Agent",
+   "stars": 4,
+   "desc": "A self-evolving NeuroAI agent framework for BCI research, integrating literature review, idea generation, experiment planning, and reusable research workflows.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-09-30T04:12:08Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "onekyuu/seele-scholar-agent",
+   "url": "https://github.com/onekyuu/seele-scholar-agent",
+   "stars": 3,
+   "desc": "📝 LangGraph-based academic paper writing agent with literature retrieval, outline planning, section drafting, review loops, consistency checks, and reference generation.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-23T02:35:30Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Iyyappan-S/Scriptorium",
+   "url": "https://github.com/Iyyappan-S/Scriptorium",
+   "stars": 3,
+   "desc": "Scriptorium AI is a production-ready, multi-agent academic research assistant designed to automate literature reviews, stress-test academic claims, and simulate citation integrity. Built for modern researchers, it pairs…",
+   "topics": [],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-09-27T03:45:47Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "thillai-c/agentic-research-assistant",
+   "url": "https://github.com/thillai-c/agentic-research-assistant",
+   "stars": 2,
+   "desc": "Multi-agent AI system that automates academic research, literature review, and research paper generation using advanced LLM agents.",
+   "topics": [
+    "agentic-ai",
+    "ai-agents",
+    "groq",
+    "langchain",
+    "llama",
+    "llm"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2025-08-20T00:43:30Z",
+   "via": [
+    "literature review generation agent"
+   ],
+   "seed": false
+  }
+ ]
+}

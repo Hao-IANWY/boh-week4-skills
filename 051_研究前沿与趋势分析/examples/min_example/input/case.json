@@ -1,0 +1,458 @@
+{
+ "case_id": "EXAMPLE-051-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：围绕硫化物/石榴石固态电解质界面工程，分析 2019–2025 年产出趋势、主题演化、各阶段代表作与研究空白，并说明统计口径。",
+ "output_contract": {
+  "研究产物": "趋势表、演化序列、代表作清单与空白清单",
+  "证据矩阵": "每条主张的证据回链",
+  "不确定性": "口径、冲突与不可判定项",
+  "状态说明": "完成与未完成部分"
+ },
+ "constraints": {
+  "year_from": 2019,
+  "year_to": 2025
+ },
+ "topic": "solid-state electrolyte interface engineering: interphase, ion transport, dendrite",
+ "records": [
+  {
+   "id": "R01",
+   "title": "Interphase formation in garnet solid electrolytes probed by XPS",
+   "abstract": "We probe interphase formation at the garnet/lithium interface with XPS and relate it to interfacial resistance.",
+   "year": 2020,
+   "keywords": [
+    "interphase",
+    "garnet solid electrolyte",
+    "xps",
+    "interface"
+   ],
+   "citations": 210,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r01"
+  },
+  {
+   "id": "R02",
+   "title": "Dendrite penetration through grain boundaries in LLZO",
+   "abstract": "Lithium dendrites penetrate along grain boundaries of LLZO and cause short circuit; we quantify the critical current density.",
+   "year": 2019,
+   "keywords": [
+    "dendrite",
+    "llzo",
+    "short circuit"
+   ],
+   "citations": 340,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r02"
+  },
+  {
+   "id": "R03",
+   "title": "Ionic conductivity of sulfide solid electrolytes at low temperature",
+   "abstract": "Ionic conductivity of sulfide solid electrolytes drops sharply at low temperature; transport mechanisms are discussed.",
+   "year": 2019,
+   "keywords": [
+    "sulfide electrolyte",
+    "ionic conductivity",
+    "low temperature"
+   ],
+   "citations": 120,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r03"
+  },
+  {
+   "id": "R04",
+   "title": "Wetting of lithium metal on garnet surfaces",
+   "abstract": "Lithium wetting on garnet surfaces governs interfacial contact; we compare surface treatments.",
+   "year": 2020,
+   "keywords": [
+    "wetting",
+    "garnet",
+    "interface"
+   ],
+   "citations": 180,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r04"
+  },
+  {
+   "id": "R05",
+   "title": "Operando optical microscopy of lithium plating",
+   "abstract": "Operando optical microscopy resolves plating morphology in situ during cycling.",
+   "year": 2020,
+   "keywords": [
+    "operando",
+    "plating",
+    "characterization"
+   ],
+   "citations": 95,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r05"
+  },
+  {
+   "id": "R06",
+   "title": "Interfacial resistance and dendrite nucleation in garnet cells",
+   "abstract": "Dendrite nucleation correlates with interfacial resistance in garnet cells.",
+   "year": 2021,
+   "keywords": [
+    "interface",
+    "interphase",
+    "dendrite",
+    "llzo"
+   ],
+   "citations": 160,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r06"
+  },
+  {
+   "id": "R07",
+   "title": "Phase stability of sulfide electrolytes against lithium",
+   "abstract": "Phase stability of sulfide electrolytes against lithium metal is examined with diffraction.",
+   "year": 2023,
+   "keywords": [
+    "sulfide electrolyte",
+    "solid electrolyte"
+   ],
+   "citations": 140,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r07"
+  },
+  {
+   "id": "R08",
+   "title": "Impedance spectroscopy of grain boundaries in solid electrolytes",
+   "abstract": "Impedance spectroscopy separates grain and grain-boundary contributions in solid electrolytes.",
+   "year": 2021,
+   "keywords": [
+    "impedance spectroscopy",
+    "characterization",
+    "solid electrolyte"
+   ],
+   "citations": 130,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r08"
+  },
+  {
+   "id": "R09",
+   "title": "Machine learning potential for ion transport in sulfide electrolytes",
+   "abstract": "A machine learning potential reproduces ion transport in sulfide electrolytes; however, the transferability to interfaces remains unclear.",
+   "year": 2022,
+   "keywords": [
+    "machine learning potential",
+    "ion transport",
+    "sulfide electrolyte"
+   ],
+   "citations": 90,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r09"
+  },
+  {
+   "id": "R10",
+   "title": "Operando tomography of lithium filament growth",
+   "abstract": "Operando tomography tracks lithium filament growth inside the electrolyte in situ.",
+   "year": 2021,
+   "keywords": [
+    "tomography",
+    "dendrite",
+    "in situ",
+    "characterization"
+   ],
+   "citations": 150,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r10"
+  },
+  {
+   "id": "R11",
+   "title": "Dendrite nucleation correlated with interfacial resistance in garnet cells",
+   "abstract": "Interfacial resistance and dendrite nucleation are measured across garnet cells and correlated.",
+   "year": 2022,
+   "keywords": [
+    "interface",
+    "interphase",
+    "dendrite",
+    "llzo"
+   ],
+   "citations": 130,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r11"
+  },
+  {
+   "id": "R12",
+   "title": "DFT study of migration barriers at the LLZO interface",
+   "abstract": "DFT calculations give migration barriers for ion transport across the LLZO interface.",
+   "year": 2022,
+   "keywords": [
+    "dft",
+    "migration barrier",
+    "llzo",
+    "interface",
+    "ion transport"
+   ],
+   "citations": 110,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r12"
+  },
+  {
+   "id": "R13",
+   "title": "Cryo-EM imaging of interphases in solid-state cells",
+   "abstract": "Cryo-EM resolves beam-sensitive interphases at the nanoscale.",
+   "year": 2021,
+   "keywords": [
+    "cryo-em",
+    "interphase",
+    "characterization",
+    "interface"
+   ],
+   "citations": 75,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r13"
+  },
+  {
+   "id": "R14",
+   "title": "Molecular dynamics of ion transport across the interphase",
+   "abstract": "Molecular dynamics quantifies ion transport across a modelled interphase.",
+   "year": 2022,
+   "keywords": [
+    "molecular dynamics",
+    "ion transport",
+    "interphase"
+   ],
+   "citations": 95,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r14"
+  },
+  {
+   "id": "R15",
+   "title": "Compressive stress effects on lithium plating morphology",
+   "abstract": "Applied compressive stress changes plating morphology and delays filament onset.",
+   "year": 2022,
+   "keywords": [
+    "plating",
+    "dendrite",
+    "morphology"
+   ],
+   "citations": 60,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r15"
+  },
+  {
+   "id": "R16",
+   "title": "Photocatalytic CO2 reduction on titania",
+   "abstract": "Photocatalytic CO2 reduction on titania under visible light.",
+   "year": 2022,
+   "keywords": [
+    "photocatalysis"
+   ],
+   "citations": 30,
+   "type": "journal-article",
+   "venue": "Journal of Photocatalysis",
+   "source": "crossref",
+   "doi": "10.1000/example.r16"
+  },
+  {
+   "id": "R17",
+   "title": "Polymer electrolyte interfaces for fast charging",
+   "abstract": "Polymer electrolyte interfaces enable fast charging; interfacial stability is the limiting factor.",
+   "year": 2022,
+   "keywords": [
+    "polymer electrolyte",
+    "fast charging",
+    "interface"
+   ],
+   "citations": 88,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r17"
+  },
+  {
+   "id": "R19",
+   "title": "Ionic conductivity benchmarking across laboratories",
+   "abstract": "Round-robin ionic conductivity measurements disagree across laboratories; the origin remains unclear.",
+   "year": 2023,
+   "keywords": [
+    "ionic conductivity",
+    "ion transport"
+   ],
+   "citations": 41,
+   "type": "journal-article",
+   "venue": "Solid State Ionics",
+   "source": "crossref",
+   "doi": "10.1000/example.r19"
+  },
+  {
+   "id": "R19P",
+   "title": "Ionic conductivity benchmarking across laboratories",
+   "abstract": "Preprint of the conductivity benchmarking study.",
+   "year": 2022,
+   "keywords": [
+    "ionic conductivity",
+    "ion transport"
+   ],
+   "citations": 0,
+   "type": "preprint",
+   "venue": "arXiv",
+   "source": "arxiv",
+   "doi": "10.1000/example.r19p"
+  },
+  {
+   "id": "R20",
+   "title": "Pouch cell integration of sulfide electrolytes with high areal loading",
+   "abstract": "Pouch cells with sulfide electrolytes reach high areal loading; scale-up losses are quantified.",
+   "year": 2024,
+   "keywords": [
+    "pouch cell",
+    "sulfide electrolyte",
+    "high areal loading",
+    "scale-up"
+   ],
+   "citations": 40,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r20"
+  },
+  {
+   "id": "R21",
+   "title": "Machine learning potential accelerated screening of interface coatings",
+   "abstract": "Machine learning potentials accelerate screening of interface coatings for sulfide electrolytes.",
+   "year": 2025,
+   "keywords": [
+    "machine learning potential",
+    "interface",
+    "coating",
+    "sulfide electrolyte"
+   ],
+   "citations": 55,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r21"
+  },
+  {
+   "id": "R22",
+   "title": "Dendrite suppression by interphase engineering in pouch cells",
+   "abstract": "Interphase engineering suppresses dendrite growth in pouch cells.",
+   "year": 2024,
+   "keywords": [
+    "dendrite",
+    "interphase",
+    "pouch cell",
+    "interface",
+    "sulfide electrolyte"
+   ],
+   "citations": 70,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r22"
+  },
+  {
+   "id": "R23",
+   "title": "In situ NMR of ion transport in composite cathodes",
+   "abstract": "In situ NMR resolves ion transport in composite cathodes during cycling.",
+   "year": 2025,
+   "keywords": [
+    "nmr",
+    "ion transport",
+    "in situ",
+    "composite cathode",
+    "characterization"
+   ],
+   "citations": 35,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r23"
+  },
+  {
+   "id": "R24",
+   "title": "Recycling of garnet solid electrolytes",
+   "abstract": "Garnet solid electrolytes can be recycled, but the field lacks a validated closed-loop route.",
+   "year": 2025,
+   "keywords": [
+    "recycling",
+    "sustainability",
+    "garnet"
+   ],
+   "citations": 12,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r24"
+  },
+  {
+   "id": "R25",
+   "title": "Interphase evolution under high voltage in sulfide cells",
+   "abstract": "Interphase evolution under high voltage remains challenging for sulfide cells.",
+   "year": 2025,
+   "keywords": [
+    "interphase",
+    "high voltage",
+    "sulfide electrolyte",
+    "interface"
+   ],
+   "citations": 20,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r25"
+  },
+  {
+   "id": "R26",
+   "title": "Dendrite-free plating enabled by interphase design",
+   "abstract": "Designed interphases deliver dendrite-free plating at high current density.",
+   "year": 2025,
+   "keywords": [
+    "dendrite",
+    "interphase",
+    "interface"
+   ],
+   "citations": 18,
+   "type": "journal-article",
+   "venue": "Journal of Solid-State Batteries",
+   "source": "crossref",
+   "doi": "10.1000/example.r26"
+  },
+  {
+   "id": "R30",
+   "title": "Record whose year fields are all empty",
+   "abstract": "A record with no usable year field, kept to show honest missing-year accounting for ionic conductivity topics.",
+   "keywords": [
+    "ionic conductivity"
+   ],
+   "type": "journal-article",
+   "venue": "Unknown",
+   "source": "manual",
+   "doi": "10.1000/example.r30"
+  }
+ ],
+ "source": {
+  "title": "Synthetic interface example (not a test case)",
+  "doi": null
+ }
+}

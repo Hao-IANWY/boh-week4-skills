@@ -1,0 +1,81 @@
+{
+ "version": "0.2.0",
+ "description": "052 可行性前提清单：每个前提必须落到三分源之一——task_given（case 约束字段）、record_evidence（池内证据，必须带 evidence_id 回链证据表）、explicit_assumption（无来源，进条件式降级与风险分）；不允许写『技术路线可行』这种没有前提的结论。",
+ "source_types": {
+  "task_given": "case 的 constraints/resources（或候选方向自带约束）中明确给出的字段（最强）",
+  "record_evidence": "候选方向的证据表中有匹配 evidence_cues 的池内证据；必须带 evidence_id，且引文经 char_span 精确子串校验（强度受限：池内证据≠任务承诺）",
+  "explicit_assumption": "无任何来源，纯显式假设：结论必须写成「若 P 成立则…」，并计入风险分"
+ },
+ "source_priority": ["task_given", "record_evidence", "explicit_assumption"],
+ "premises": [
+  {
+   "id": "P_DATA",
+   "label": "数据可得",
+   "check_keys": ["data_access", "data", "datasets", "data_source"],
+   "statement": "研究所需数据可获取且质量满足分析要求",
+   "evidence_cues": ["数据集", "队列", "自建数据", "标注语料", "dataset", "cohort", "corpus", "采集"],
+   "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+   "risk_code": "data_access_missing"
+  },
+  {
+   "id": "P_COMPUTE",
+   "label": "算力/设备可得",
+   "check_keys": ["compute", "gpu", "instrument", "equipment", "lab_access"],
+   "statement": "所需算力或实验设备可在项目周期内获得",
+   "evidence_cues": ["算力", "设备", "仪器", "实验平台", "gpu", "GPU", "cluster", "workstation"],
+   "risk_if_false": "实验规模需缩减或改为模拟验证",
+   "risk_code": "premise_unsupported"
+  },
+  {
+   "id": "P_TIME",
+   "label": "周期可控",
+   "check_keys": ["duration", "timeline", "deadline", "months", "time_minutes"],
+   "statement": "在给定周期内可完成关键实验与写作",
+   "evidence_cues": ["周期", "个月", "周", "时间窗", "months", "timeline", "deadline"],
+   "risk_if_false": "需裁剪研究范围或分期交付",
+   "risk_code": "premise_unsupported"
+  },
+  {
+   "id": "P_SKILL",
+   "label": "方法能力具备",
+   "check_keys": ["team", "skills", "expertise", "collaborators"],
+   "statement": "团队具备所需方法学能力或有明确合作者",
+   "evidence_cues": ["团队", "合作", "博士", "工程师", "方法学", "team", "collaborator", "expertise"],
+   "risk_if_false": "需引入合作者或改用熟悉方法",
+   "risk_code": "premise_unsupported"
+  },
+  {
+   "id": "P_ETHICS",
+   "label": "伦理与合规",
+   "check_keys": ["ethics", "irb", "consent", "approval", "privacy"],
+   "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+   "evidence_cues": ["伦理", "知情同意", "批件", "irb", "IRB", "ethics", "consent"],
+   "risk_if_false": "不得开展相关数据采集",
+   "risk_code": "ethics_approval_missing"
+  },
+  {
+   "id": "P_BASELINE",
+   "label": "可比基线存在",
+   "check_keys": ["baseline", "comparison", "benchmark", "control"],
+   "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+   "evidence_cues": ["基线", "对照", "空白配方", "blank", "baseline", "control", "benchmark", "对照组"],
+   "risk_if_false": "结论无法证伪，创新性判定失效",
+   "risk_code": "premise_unsupported"
+  }
+ ],
+ "conditional_rule": {
+  "degradation": [
+   {"level": "supported", "condition": "全部前提 source ∈ {task_given, record_evidence} 且至少一条 task_given", "template": "在 {labels} 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）"},
+   {"level": "conditional", "condition": "存在 explicit_assumption 前提", "template": "若 {assumption_ids} 成立则可行；{assumption_labels} 无来源，启动前需先补：{next_actions}"},
+   {"level": "unconstrained", "condition": "case 未提供任何 constraints/resources 字段", "template": "constraints 缺失：无可依约束，全部前提只能按显式假设处理，不能给出『可行』结论；建议只能给到方向级"}
+  ],
+  "must_report_supported_ratio": true,
+  "forbid_single_sentence_conclusion": true,
+  "note": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+ },
+ "reporting": {
+  "must_report_supported_ratio": true,
+  "forbid_single_sentence_conclusion": true,
+  "note": "可行性结论必须是条件式：在 A、B 成立的前提下可行；A 若缺，则需先做 C。"
+ }
+}

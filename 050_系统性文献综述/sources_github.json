@@ -1,0 +1,194 @@
+{
+ "seq": 50,
+ "title": "系统性文献综述",
+ "category": "深度研究与文献综述",
+ "queries": [
+  "systematic review automation tool",
+  "systematic literature review llm pipeline",
+  "PRISMA 2020 flow diagram generator"
+ ],
+ "candidates": [
+  {
+   "full_name": "ChaokunHong/MetaScreener",
+   "url": "https://github.com/ChaokunHong/MetaScreener",
+   "stars": 1340,
+   "desc": "AI-powered tool for efficient abstract and PDF screening in systematic reviews.",
+   "topics": [
+    "deepseek",
+    "deepseek-llm",
+    "literature-screening",
+    "llama4scout",
+    "llm",
+    "metaanalysis"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-06-11T17:36:39Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "asreview/asreview",
+   "url": "https://github.com/asreview/asreview",
+   "stars": 1077,
+   "desc": "Active learning for systematic reviews",
+   "topics": [
+    "active-learning",
+    "asreview",
+    "deep-learning",
+    "language-model",
+    "learning-algorithms",
+    "literature"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-16T16:46:27Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "vitorfs/parsifal",
+   "url": "https://github.com/vitorfs/parsifal",
+   "stars": 531,
+   "desc": "Parsifal is a tool to assist researchers to perform Systematic Literature Reviews",
+   "topics": [
+    "academic",
+    "django",
+    "publishing",
+    "research",
+    "scientific-publications",
+    "systematic-literature-reviews"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-05-05T06:15:46Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "nealhaddaway/citationchaser",
+   "url": "https://github.com/nealhaddaway/citationchaser",
+   "stars": 164,
+   "desc": "Perform forward and backward citation chasing as part of an evidence synthesis project",
+   "topics": [
+    "bibliometrics",
+    "citation-chasing",
+    "evidence-synthesis",
+    "information-retrieval",
+    "literature-review",
+    "meta-analysis"
+   ],
+   "lang": "R",
+   "license": null,
+   "pushed_at": "2025-03-21T06:43:19Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "elizagrames/litsearchr",
+   "url": "https://github.com/elizagrames/litsearchr",
+   "stars": 128,
+   "desc": "litsearchr is an R package to partially automate search term selection for systematic reviews using keyword co-occurrence networks. In addition to identifying search terms, it can write Boolean searches and translate th…",
+   "topics": [],
+   "lang": "R",
+   "license": null,
+   "pushed_at": "2021-04-07T02:29:27Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "mjwestgate/revtools",
+   "url": "https://github.com/mjwestgate/revtools",
+   "stars": 61,
+   "desc": "Tools to support research synthesis in R",
+   "topics": [],
+   "lang": "R",
+   "license": null,
+   "pushed_at": "2026-07-07T21:59:39Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "CarinaSchoppe/PRISMA-Literature-Review-Pipeline-Automation-Tool",
+   "url": "https://github.com/CarinaSchoppe/PRISMA-Literature-Review-Pipeline-Automation-Tool",
+   "stars": 14,
+   "desc": "AI-powered literature review tool that automatically searches academic databases, collects research papers, expands results via citation networks, and analyzes titles and abstracts for relevance. It ranks papers, downlo…",
+   "topics": [],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-06-17T07:44:11Z",
+   "via": [
+    "systematic review automation tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "htlin222/prisma-automation",
+   "url": "https://github.com/htlin222/prisma-automation",
+   "stars": 10,
+   "desc": "Automate systematic review and meta-analysis workflows with PRISMA compliance — multi-database search (PubMed, Scopus, Embase, Cochrane), deduplication, screening, and flow diagram generation in Python and R",
+   "topics": [
+    "automation",
+    "bioinformatics",
+    "clinical-research",
+    "cochrane-api",
+    "data-extraction",
+    "embase-api"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-04T14:28:05Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "sanatladkat/auto-slr-screener",
+   "url": "https://github.com/sanatladkat/auto-slr-screener",
+   "stars": 5,
+   "desc": "An automated, fault-tolerant pipeline for screening Systematic Literature Review (SLR) papers using Large Language Models (LLM). Features strict logic enforcement and API key rotation.",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-12-26T04:47:26Z",
+   "via": [
+    "systematic literature review llm pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "SisonkeBiotik-Africa/Systematic-Review-Automation",
+   "url": "https://github.com/SisonkeBiotik-Africa/Systematic-Review-Automation",
+   "stars": 4,
+   "desc": "A set of Python tools for the automation of the main tasks for the creation and refinement of bibliometric studies and systematic reviews",
+   "topics": [],
+   "lang": "Python",
+   "license": "GPL-2.0",
+   "pushed_at": "2021-10-29T12:17:55Z",
+   "via": [
+    "systematic review automation tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "htlin222/llm-in-med",
+   "url": "https://github.com/htlin222/llm-in-med",
+   "stars": 2,
+   "desc": "LLM-powered systematic literature review pipeline for clinical medicine—generates submission-ready manuscripts with PRISMA 2020 compliance, parallel writing agents, validated citations, and quality audit loops.",
+   "topics": [
+    "academic-publishing",
+    "ai-agents",
+    "biomedical-nlp",
+    "clinical-medicine",
+    "literature-mining",
+    "manuscript-generation"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-04T14:27:44Z",
+   "via": [
+    "systematic literature review llm pipeline"
+   ],
+   "seed": false
+  }
+ ]
+}

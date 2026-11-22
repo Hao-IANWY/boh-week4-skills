@@ -1,0 +1,34 @@
+{
+ "version": "0.1.0",
+ "description": "052 理由码：每条被排除/降级/无法判定的对象都挂一个 code，评审可按码复核。",
+ "codes": {
+  "R_NO_IDEA": "case 未给出可解析的研究设想，问题陈述无法字段化",
+  "R_NO_POOL": "未提供先验工作题录集合，创新性判定无对照",
+  "R_DUP_TITLE": "先验工作去重：标题强归一后相同",
+  "R_SHORT_CLAIM": "创新主张 token 过少，无法稳定比对（判 undetermined）",
+  "R_NO_ABS": "先验工作缺摘要，只能按标题比对（判 undetermined 或降低置信）",
+  "R_COVERED": "创新主张已被先验工作覆盖",
+  "R_PARTIAL": "创新主张被部分覆盖",
+  "R_NOT_IN_SCOPE": "本 case 题录集合内未找到相似工作（不等于无人研究）",
+  "R_ASSUMPTION": "可行性前提无来源，已标为 assumption",
+  "R_CONSTRAINT_OK": "可行性前提在 case 约束中有明确来源",
+  "R_SCOPE_MISMATCH": "主张适用范围与先验工作对象/尺度不一致",
+  "R_CONFLICT": "证据之间存在冲突结论",
+  "R_DIRECTION": "结论修正类主张需判断与既有结论的方向（支持/反驳），词面相似不足以判定"
+ },
+ "severity": {
+  "R_NO_IDEA": "hard",
+  "R_NO_POOL": "hard",
+  "R_DUP_TITLE": "hard",
+  "R_SHORT_CLAIM": "info",
+  "R_NO_ABS": "soft",
+  "R_COVERED": "soft",
+  "R_PARTIAL": "soft",
+  "R_NOT_IN_SCOPE": "info",
+  "R_ASSUMPTION": "soft",
+  "R_CONSTRAINT_OK": "info",
+  "R_SCOPE_MISMATCH": "soft",
+  "R_CONFLICT": "soft",
+  "R_DIRECTION": "info"
+ }
+}

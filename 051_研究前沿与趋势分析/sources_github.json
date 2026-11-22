@@ -1,0 +1,147 @@
+{
+ "seq": 51,
+ "title": "研究前沿与趋势分析",
+ "category": "深度研究与文献综述",
+ "queries": [
+  "research trend analysis bibliometrics",
+  "topic trend mining scholarly data",
+  "citation trend forecasting tool"
+ ],
+ "candidates": [
+  {
+   "full_name": "MaartenGr/BERTopic",
+   "url": "https://github.com/MaartenGr/BERTopic",
+   "stars": 7965,
+   "desc": "Leveraging BERT and c-TF-IDF to create easily interpretable topics.",
+   "topics": [
+    "bert",
+    "ldavis",
+    "machine-learning",
+    "nlp",
+    "sentence-embeddings",
+    "topic"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-14T08:56:22Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "lda-project/lda",
+   "url": "https://github.com/lda-project/lda",
+   "stars": 1316,
+   "desc": "Topic modeling with latent Dirichlet allocation using Gibbs sampling",
+   "topics": [],
+   "lang": "Python",
+   "license": "MPL-2.0",
+   "pushed_at": "2024-07-29T19:05:40Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "massimoaria/bibliometrix",
+   "url": "https://github.com/massimoaria/bibliometrix",
+   "stars": 676,
+   "desc": "An R-tool for comprehensive science mapping analysis. A package for quantitative research in scientometrics and bibliometrics.",
+   "topics": [
+    "bibliometric-analysis",
+    "bibliometrics",
+    "citation",
+    "citation-network",
+    "citations",
+    "co-authors"
+   ],
+   "lang": "R",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-09T17:53:31Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "pybliometrics-dev/pybliometrics",
+   "url": "https://github.com/pybliometrics-dev/pybliometrics",
+   "stars": 510,
+   "desc": "Python-based API-Wrapper to access Scopus",
+   "topics": [
+    "api-wrapper",
+    "bibliometrics",
+    "scopus",
+    "scopus-api"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-10T09:52:32Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "J535D165/pyalex",
+   "url": "https://github.com/J535D165/pyalex",
+   "stars": 434,
+   "desc": "A Python library for OpenAlex (openalex.org)",
+   "topics": [
+    "openalex",
+    "openalexapi",
+    "publications",
+    "research",
+    "scholarly-articles",
+    "scholarly-metadata"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-05T23:02:40Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "jlmayorgaco/ml-biblio-synth-tool",
+   "url": "https://github.com/jlmayorgaco/ml-biblio-synth-tool",
+   "stars": 6,
+   "desc": "A tool that integrates with Zotero to automate bibliometric analysis using Machine Learning and NLP. It identifies trends, key topics, and relationships between documents, providing reports with visualizations to stream…",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": "LGPL-2.1",
+   "pushed_at": "2025-11-15T13:37:19Z",
+   "via": [
+    "research trend analysis bibliometrics"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ata381/BibMedEd",
+   "url": "https://github.com/ata381/BibMedEd",
+   "stars": 3,
+   "desc": "Open-source bibliometric analysis platform for medical education research. Search PubMed & OpenAlex, analyze trends, visualize networks, export PRISMA-compliant methodology logs.",
+   "topics": [
+    "academic-research",
+    "bibliometric-analysis",
+    "bibliometrics",
+    "citation-analysis",
+    "d3js",
+    "docker"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T05:05:23Z",
+   "via": [
+    "research trend analysis bibliometrics"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "danyIkram/generative-ai-research-analysis",
+   "url": "https://github.com/danyIkram/generative-ai-research-analysis",
+   "stars": 2,
+   "desc": "Text mining and bibliometric analysis of Generative AI research trends using datasets from OpenAlex and ArXiv. Includes preprocessing, TF-IDF, keyword centrality, and LDA topic modeling.",
+   "topics": [],
+   "lang": "Jupyter Notebook",
+   "license": null,
+   "pushed_at": "2025-09-03T17:11:16Z",
+   "via": [
+    "research trend analysis bibliometrics"
+   ],
+   "seed": false
+  }
+ ]
+}

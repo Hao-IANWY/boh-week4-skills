@@ -1,0 +1,50 @@
+{
+ "version": "1.0.0",
+ "description": "049 主题聚类规则：综述主题由纳入记录内容的证据聚类生成（词表提取 → 词项-记录集 → Jaccard 合并 → 判别性命名），不从固定学科模板套用；案例显式声明主题锚点（themes）时优先，未达证据阈值的主题在综述中如实标注薄弱。",
+ "term_extraction": {
+  "cjk_gram_min": 2,
+  "cjk_gram_max": 8,
+  "min_ascii_len": 3,
+  "min_df": 2,
+  "max_df_ratio": 1.0,
+  "max_terms": 24,
+  "maximal_prune": true,
+  "edge_particles": "的了和与或在是从把使由以中上下前后时及其等该此为于并而把被各约则"
+ },
+ "clustering": {
+  "merge_jaccard": 0.6,
+  "min_cluster_size": 2
+ },
+ "naming": {
+  "top_k_terms": 3,
+  "label_rule": "主题标签 = 簇内词项按（df 降序、词长降序、字典序）取前 3 个，用「×」连接；词表与标签只来自纳入记录内容，不含任何学科模板词",
+  "question_template": "围绕「{label}」的文献证据说明了什么、是否存在分歧",
+  "boundary_template": "只覆盖与「{label}」共现的记录内证据；不外推到语料外文献，不混入其他主题的结论"
+ },
+ "thin_topic": {
+  "min_evidence_for_full_section": 2,
+  "code": "R_TOPIC_THIN_EVIDENCE",
+  "note": "证据行数低于阈值的主题在综述中显式标注薄弱：写明已有证据与缺失证据类型，不硬凑通用框架章节，不写成确定性结论"
+ },
+ "stop_terms": [
+  "the", "and", "for", "with", "from", "that", "this", "are", "was", "were", "been", "have", "has", "had",
+  "not", "can", "may", "its", "our", "their", "which", "into", "than", "then", "also", "such", "between",
+  "during", "after", "before", "under", "over", "about", "across", "based", "using", "used", "results",
+  "study", "studies", "showed", "show", "shown", "paper", "propose", "proposed", "however", "these",
+  "those", "when", "while", "where", "both", "each", "more", "most", "less", "least", "very", "only",
+  "same", "other", "others", "because", "although", "therefore", "thus", "hence", "against", "without",
+  "within", "among", "amongst", "toward", "towards", "upon", "via", "due", "etc", "et", "al", "vs",
+  "approximately", "respectively", "compared", "group", "groups", "case", "cases", "test", "tests",
+  "testing", "author", "authors", "review", "reports", "report", "rather", "instead", "still",
+  "合成样例", "合成", "样例", "表明", "显示", "结果", "数据", "报告", "作者", "采用", "进行", "通过",
+  "作为", "基于", "相关", "不同", "相同", "同一", "出现", "观察", "分析", "变化", "影响", "效应",
+  "提高", "降低", "下降", "升高", "增加", "减少", "提升", "增强", "减弱", "改善", "抑制", "促进",
+  "该研究", "研究进展", "说明", "显著", "差异", "形成", "导致", "造成", "引起", "归因",
+  "源于", "认为", "提示", "决定", "同时", "此外", "其中", "仍然", "仍", "研究", "个百分点"
+ ],
+ "notes": {
+  "multi_label": "一条记录可同时支撑多个主题（跨主题是常态），不做互斥划分",
+  "no_forcing": "未进入任何聚类的记录单列为未聚类记录并进覆盖声明与空白分析，不硬塞进最近的主题",
+  "data_driven": "词表、聚类与命名只来自纳入记录内容（title+abstract+text+keywords 的归一文本）；声明主题锚点也必须以记录文本命中为准，无命中的锚点如实记为未覆盖"
+ }
+}

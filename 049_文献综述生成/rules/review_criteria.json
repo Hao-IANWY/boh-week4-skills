@@ -1,0 +1,75 @@
+{
+ "version": "0.2.0",
+ "description": "049 纳排协议回退口径、筛选/去重规则、写作阈值与冲突口径。案例提供前瞻协议（protocol）时按协议逐条筛选并记 criterion_hits；协议缺失时按本表声明回退口径执行并逐条标注 fallback=true，不冒充已按协议筛选。",
+ "screening_rule": "前瞻协议（prospective）：协议先随计划写入 work/plan.json，再对每条记录逐条筛选；每条记录记 criterion_hits（命中/未命中哪条纳入/排除标准）；去重在协议筛选之后执行；仅通过协议与去重的记录进入主题聚类与证据表",
+ "fallback_screening": {
+  "declared_in": "rules/review_criteria.json#fallback_screening",
+  "note": "案例未提供协议时的声明回退口径：记录正文可读（内联/侧车/自研 PDF/DOCX 提取成功且非空）即纳入；随后执行 DOI 与标题+年份去重；每条筛选记录标注 fallback=true",
+  "inclusion": [
+   {
+    "criterion_id": "FB-IN1",
+    "text": "记录正文可读（提取成功且非空）",
+    "body_readable": true
+   }
+  ],
+  "exclusion": [],
+  "stop_conditions": [
+   "全部记录完成一次筛选即停止"
+  ]
+ },
+ "dedupe_rule": "去重发生在协议筛选之后：DOI 归一（去 https://doi.org/ 前缀）相同 → R_DUP_DOI；标题+年份强归一相同 → R_DUP_TITLE（预印本/正式版合并）；保留首见，重复记录改判 excluded 并记录 dedupe_of=保留记录 id",
+ "thresholds": {
+  "min_topic_terms_per_quote": 1,
+  "max_quotes_per_record_per_topic": 1,
+  "established_min_evidence": 2,
+  "strength_rule": "established = 同主题 ≥2 条证据且无冲突；suggestive = 1 条证据；contested = 同主题证据方向相反或数值不一致（双列呈现，不合并）"
+ },
+ "sentence_terminators": [
+  "。",
+  "！",
+  "？",
+  ";",
+  "；"
+ ],
+ "split_ascii_period": true,
+ "split_period_rule": "ASCII 句点仅在其前后都不是数字（避开 52.3 类小数）且后随空白/行尾时切句",
+ "numeric_units": [
+  "%",
+  "个百分点",
+  "pp",
+  "倍",
+  "分",
+  "v",
+  "mv",
+  "w/mk",
+  "kw/mk",
+  "mpa",
+  "kn/m",
+  "mg/dm2"
+ ],
+ "conflict_rule": "同一主题内、共享至少一个主题术语的两条证据才比对：方向词典（rules/direction_lexicon.json）成对判定 direction_conflict（+1×-1）与 zero_vs_direction（0×±1）；数值冲突只在同单位不同数值且可比口径词表（context_vocabulary，可选）各 组口径词同时命中时判定（numeric_conflict），未声明口径词表时退回共享主题术语口径。冲突一律双列（side_a/side_b 各带逐字引文、方向与强度词），不择一、不合并、不以「尚存争议」替代双列。",
+ "context_vocabulary": {
+  "dataset": [
+   "uspto-50k",
+   "uspto"
+  ],
+  "method": [
+   "message passing",
+   "graph neural network",
+   "template-free",
+   "template-based",
+   "graph attention"
+  ]
+ },
+ "draft_rule": "综述草稿的每个实质句只能由「纳入记录原文整句 + [E###]」构成；只允许出现不含科学判断的数据/状态陈述句（筛选计数、聚类口径、薄证据声明、覆盖声明），逐条列于 draft.audit.data_statements；证据不足的主题写成薄弱声明与缺口，不补写正文。",
+ "reason_codes": {
+  "R_PROTOCOL_MISSING": "case.json 未提供前瞻性筛选协议，已按声明回退口径筛选",
+  "R_DUP_DOI": "DOI 归一后与已保留记录相同（保留首见）",
+  "R_DUP_TITLE": "标题+年份强归一后与已保留记录相同（预印本/正式版合并，保留首见）",
+  "R_TOPIC_THIN_EVIDENCE": "主题证据行数低于完整小节阈值，综述显式标注证据薄弱",
+  "R_TOPIC_NO_EVIDENCE": "主题有支撑记录但抽不出可引用证据句",
+  "R_TOPIC_UNASSIGNED": "纳入记录未进入任何主题聚类，单列不硬塞",
+  "R_SUBQUESTION_NOT_COVERED": "案例声明的主题锚点在语料内无支撑文献，记入未覆盖清单与覆盖声明",
+  "R_INPUT_ERROR": "输入不可读"
+ }
+}

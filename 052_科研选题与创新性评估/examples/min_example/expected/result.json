@@ -1,0 +1,5701 @@
+{
+ "case_id": "EXAMPLE-052-POOL-OBSERVED",
+ "skill": {
+  "name": "research-idea-novelty-assessment",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-22T15:46:10+0800",
+ "candidate_assessments": [
+  {
+   "direction_id": "D1",
+   "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+   "source": "case.candidate_directions",
+   "problem_statement": {
+    "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+    "object": "硫化物固态电解质界面（grain boundary 与 interphase）",
+    "key_variables": [
+     "界面迁移势垒",
+     "不确定性区间宽度",
+     "外推误差"
+    ],
+    "baseline": "bulk 数据训练的机器学习势函数",
+    "expected_conclusion": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+    "falsification_condition": "若界面区外推误差相对基线的改善不显著，则该假设不成立",
+    "method": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+    "data": "自建界面 DFT 轨迹与表征图像",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions",
+    "note": "缺失字段不猜：由 Agent 在 report 中向用户回问，或由用户补 case 字段后重跑"
+   },
+   "novelty": {
+    "direction_id": "D1",
+    "scope": "pool_observed",
+    "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+    "claims": [
+     {
+      "claim_id": "D1-C1",
+      "direction_id": "D1",
+      "claim": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "method",
+      "type_label": "方法创新",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "framework",
+        "we propose a framework"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "covered",
+      "code": "R_COVERED",
+      "max_similarity": 1.0,
+      "nearest_prior": {
+       "record_id": "REC01",
+       "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+       "year": 2023,
+       "venue": "Synthetic Journal of Power Materials",
+       "similarity": 1.0,
+       "overlap_terms": [
+        "calibrated",
+        "electrolyte",
+        "for",
+        "framework",
+        "interfaces",
+        "learning",
+        "machine",
+        "potentials"
+       ],
+       "quote_evidence_ids": [
+        "E005"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+        "prior_side": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "no_overlap",
+        "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+        "prior_side": "a framework for training machine learning potentials with calibrated uncertainty",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建界面 DFT 轨迹与表征图像",
+        "prior_side": "variance correlates with force error on interface trajectories",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC01《Uncertainty-aware machine learning poten》覆盖度 1.0 ≥ 0.5：主张已被池内工作覆盖（scope=pool_observed）；重合词 ['calibrated', 'electrolyte', 'for', 'framework', 'interfaces', 'learning', 'machine', 'potentials']"
+     },
+     {
+      "claim_id": "D1-C2",
+      "direction_id": "D1",
+      "claim": "We collect in-situ interface trajectories with uncertainty labels and release them as an open annotated dataset for sulfide electrolytes",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "data",
+      "type_label": "数据创新",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "we collect"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.3684,
+      "nearest_prior": {
+       "record_id": "REC10",
+       "title": "Open benchmark dataset for solid electrolyte conductivity",
+       "year": 2025,
+       "venue": "Synthetic Journal of Power Materials",
+       "similarity": 0.3684,
+       "overlap_terms": [
+        "an",
+        "dataset",
+        "for",
+        "open",
+        "release",
+        "we",
+        "with"
+       ],
+       "quote_evidence_ids": [
+        "E006"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+        "prior_side": "Open benchmark dataset for solid electrolyte conductivity",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "prior_not_reported",
+        "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建界面 DFT 轨迹与表征图像",
+        "prior_side": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC10《Open benchmark dataset for solid electro》覆盖度 0.3684 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+     }
+    ],
+    "verdict_counts": {
+     "covered": 1,
+     "partially_covered": 1,
+     "not_found_in_scope": 0,
+     "undetermined": 0
+    },
+    "mean_max_similarity": 0.6842,
+    "score": 0.3158,
+    "band": "弱",
+    "pool_size": 9,
+    "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）"
+   },
+   "feasibility": {
+    "direction_id": "D1",
+    "premises": [
+     {
+      "direction_id": "D1",
+      "premise_id": "P_DATA",
+      "label": "数据可得",
+      "statement": "研究所需数据可获取且质量满足分析要求",
+      "source": "record_evidence",
+      "evidence_id": "E007",
+      "basis": "池内证据 E007（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+      "risk_code": "data_access_missing",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_COMPUTE",
+      "label": "算力/设备可得",
+      "statement": "所需算力或实验设备可在项目周期内获得",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "supported": true,
+      "risk_if_false": "实验规模需缩减或改为模拟验证",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_TIME",
+      "label": "周期可控",
+      "statement": "在给定周期内可完成关键实验与写作",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.duration = 18 个月",
+      "supported": true,
+      "risk_if_false": "需裁剪研究范围或分期交付",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_SKILL",
+      "label": "方法能力具备",
+      "statement": "团队具备所需方法学能力或有明确合作者",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "supported": true,
+      "risk_if_false": "需引入合作者或改用熟悉方法",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_ETHICS",
+      "label": "伦理与合规",
+      "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "supported": true,
+      "risk_if_false": "不得开展相关数据采集",
+      "risk_code": "ethics_approval_missing",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_BASELINE",
+      "label": "可比基线存在",
+      "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+      "source": "record_evidence",
+      "evidence_id": "E008",
+      "basis": "池内证据 E008（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "结论无法证伪，创新性判定失效",
+      "risk_code": "premise_unsupported",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     }
+    ],
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提",
+    "assumption_ids": [],
+    "supported_ids": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "score_basis": {
+     "strength_sum": 5.4,
+     "total": 6,
+     "rule": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告"
+    },
+    "constraints_present": true,
+    "note": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+   },
+   "value": {
+    "score": 0.6,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 0.5,
+     "method_reuse_signal": 1.0
+    },
+    "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+    "basis": {
+     "claim_verdicts": [
+      "covered",
+      "partially_covered"
+     ],
+     "application_field_present": true,
+     "claim_types": [
+      "data",
+      "method"
+     ]
+    },
+    "note": "价值分只反映『与池内工作的差距 + 是否有明确应用对象』，不代表真实社会或经济价值"
+   },
+   "risk": {
+    "score": 0.375,
+    "items": [
+     {
+      "direction_id": "D1",
+      "risk": "主张 D1-C1 已被池内工作覆盖（REC01）",
+      "code": "claim_covered_by_prior_art",
+      "weight": 1.0,
+      "impact": "最接近工作：Uncertainty-aware machine learning potentials for sulfide interfaces",
+      "mitigation": "改述贡献边界（缩到未被覆盖的子问题）或补差异化实验"
+     },
+     {
+      "direction_id": "D1",
+      "risk": "主张 D1-C2 被池内工作部分覆盖",
+      "code": "scope_mismatch",
+      "weight": 0.5,
+      "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+      "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+     }
+    ],
+    "weight_sum": 1.5,
+    "max_total": 4.0,
+    "note": "风险分高=失败风险大，与可行性分并置阅读，不并入单一总分；冲突条目两侧引文逐字保留"
+   },
+   "four_dimension": {
+    "novelty": {
+     "score": 0.3158,
+     "band": "弱",
+     "verdict_counts": {
+      "covered": 1,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.6842（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.6,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 0.5,
+      "method_reuse_signal": 1.0
+     }
+    },
+    "risk": {
+     "score": 0.375,
+     "weight_sum": 1.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   }
+  },
+  {
+   "direction_id": "D2",
+   "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+   "source": "case.candidate_directions",
+   "problem_statement": {
+    "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+    "object": "聚合物电解质膜中的裂纹扩展",
+    "key_variables": [
+     "裂纹分割 IoU",
+     "标注样本量"
+    ],
+    "baseline": "从零训练的 U-Net",
+    "expected_conclusion": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+    "falsification_condition": "若 IoU 相对从零训练基线无显著提升，则迁移假设不成立",
+    "method": "预训练视觉 Transformer 微调",
+    "data": "自建聚合物电解质膜裂纹图像集",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions",
+    "note": "缺失字段不猜：由 Agent 在 report 中向用户回问，或由用户补 case 字段后重跑"
+   },
+   "novelty": {
+    "direction_id": "D2",
+    "scope": "pool_observed",
+    "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+    "claims": [
+     {
+      "claim_id": "D2-C1",
+      "direction_id": "D2",
+      "claim": "We apply a pretrained vision transformer to crack segmentation in polymer electrolyte films and report failure mode statistics",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "scenario_transfer",
+      "type_label": "场景迁移",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "we apply",
+        "apply a"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.4118,
+      "nearest_prior": {
+       "record_id": "REC04",
+       "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+       "year": 2023,
+       "venue": "Synthetic Journal of Materials Vision",
+       "similarity": 0.4118,
+       "overlap_terms": [
+        "and",
+        "apply",
+        "in",
+        "report",
+        "segmentation",
+        "to",
+        "we"
+       ],
+       "quote_evidence_ids": [
+        "E009"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "聚合物电解质膜中的裂纹扩展",
+        "prior_side": "Convolutional segmentation of grain boundaries in solid electrolytes",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "no_overlap",
+        "direction_side": "预训练视觉 Transformer 微调",
+        "prior_side": "a convolutional segmentation network to electron microscopy images of grain boun",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建聚合物电解质膜裂纹图像集",
+        "prior_side": "ional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and rep",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC04《Convolutional segmentation of grain boun》覆盖度 0.4118 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+     }
+    ],
+    "verdict_counts": {
+     "covered": 0,
+     "partially_covered": 1,
+     "not_found_in_scope": 0,
+     "undetermined": 0
+    },
+    "mean_max_similarity": 0.4118,
+    "score": 0.5882,
+    "band": "中",
+    "pool_size": 9,
+    "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）"
+   },
+   "feasibility": {
+    "direction_id": "D2",
+    "premises": [
+     {
+      "direction_id": "D2",
+      "premise_id": "P_DATA",
+      "label": "数据可得",
+      "statement": "研究所需数据可获取且质量满足分析要求",
+      "source": "record_evidence",
+      "evidence_id": "E010",
+      "basis": "池内证据 E010（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+      "risk_code": "data_access_missing",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_COMPUTE",
+      "label": "算力/设备可得",
+      "statement": "所需算力或实验设备可在项目周期内获得",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "supported": true,
+      "risk_if_false": "实验规模需缩减或改为模拟验证",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_TIME",
+      "label": "周期可控",
+      "statement": "在给定周期内可完成关键实验与写作",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.duration = 18 个月",
+      "supported": true,
+      "risk_if_false": "需裁剪研究范围或分期交付",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_SKILL",
+      "label": "方法能力具备",
+      "statement": "团队具备所需方法学能力或有明确合作者",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "supported": true,
+      "risk_if_false": "需引入合作者或改用熟悉方法",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_ETHICS",
+      "label": "伦理与合规",
+      "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "supported": true,
+      "risk_if_false": "不得开展相关数据采集",
+      "risk_code": "ethics_approval_missing",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_BASELINE",
+      "label": "可比基线存在",
+      "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+      "source": "record_evidence",
+      "evidence_id": "E011",
+      "basis": "池内证据 E011（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "结论无法证伪，创新性判定失效",
+      "risk_code": "premise_unsupported",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     }
+    ],
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提",
+    "assumption_ids": [],
+    "supported_ids": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "score_basis": {
+     "strength_sum": 5.4,
+     "total": 6,
+     "rule": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告"
+    },
+    "constraints_present": true,
+    "note": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+   },
+   "value": {
+    "score": 0.65,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 1.0,
+     "method_reuse_signal": 0.5
+    },
+    "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+    "basis": {
+     "claim_verdicts": [
+      "partially_covered"
+     ],
+     "application_field_present": true,
+     "claim_types": [
+      "scenario_transfer"
+     ]
+    },
+    "note": "价值分只反映『与池内工作的差距 + 是否有明确应用对象』，不代表真实社会或经济价值"
+   },
+   "risk": {
+    "score": 0.125,
+    "items": [
+     {
+      "direction_id": "D2",
+      "risk": "主张 D2-C1 被池内工作部分覆盖",
+      "code": "scope_mismatch",
+      "weight": 0.5,
+      "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+      "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+     }
+    ],
+    "weight_sum": 0.5,
+    "max_total": 4.0,
+    "note": "风险分高=失败风险大，与可行性分并置阅读，不并入单一总分；冲突条目两侧引文逐字保留"
+   },
+   "four_dimension": {
+    "novelty": {
+     "score": 0.5882,
+     "band": "中",
+     "verdict_counts": {
+      "covered": 0,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.4118（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.65,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 1.0,
+      "method_reuse_signal": 0.5
+     }
+    },
+    "risk": {
+     "score": 0.125,
+     "weight_sum": 0.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   }
+  }
+ ],
+ "problem_statement": {
+  "directions": [
+   {
+    "direction_id": "D1",
+    "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+    "object": "硫化物固态电解质界面（grain boundary 与 interphase）",
+    "key_variables": [
+     "界面迁移势垒",
+     "不确定性区间宽度",
+     "外推误差"
+    ],
+    "baseline": "bulk 数据训练的机器学习势函数",
+    "expected_conclusion": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+    "falsification_condition": "若界面区外推误差相对基线的改善不显著，则该假设不成立",
+    "method": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+    "data": "自建界面 DFT 轨迹与表征图像",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions"
+   },
+   {
+    "direction_id": "D2",
+    "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+    "object": "聚合物电解质膜中的裂纹扩展",
+    "key_variables": [
+     "裂纹分割 IoU",
+     "标注样本量"
+    ],
+    "baseline": "从零训练的 U-Net",
+    "expected_conclusion": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+    "falsification_condition": "若 IoU 相对从零训练基线无显著提升，则迁移假设不成立",
+    "method": "预训练视觉 Transformer 微调",
+    "data": "自建聚合物电解质膜裂纹图像集",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions"
+   }
+  ],
+  "note": "缺失字段不猜：由 Agent 在 report 中向用户回问，或由用户补 case 字段后重跑"
+ },
+ "prior_art_matrix": {
+  "dimensions": [
+   "task",
+   "method",
+   "data",
+   "evaluation",
+   "conclusion"
+  ],
+  "rows": [
+   {
+    "record_id": "REC01",
+    "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+    "year": 2023,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+    "method": "a framework for training machine learning potentials with calibrated uncertainty",
+    "data": "variance correlates with force error on interface trajectories",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "abstract_inferred",
+     "data": "abstract_inferred",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 1.0
+   },
+   {
+    "record_id": "REC04",
+    "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+    "year": 2023,
+    "venue": "Synthetic Journal of Materials Vision",
+    "task": "Convolutional segmentation of grain boundaries in solid electrolytes",
+    "method": "a convolutional segmentation network to electron microscopy images of grain boun",
+    "data": "ional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and rep",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "abstract_inferred",
+     "data": "abstract_inferred",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.4118
+   },
+   {
+    "record_id": "REC02",
+    "title": "Transfer learning of potentials from bulk to interfaces",
+    "year": 2022,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Transfer learning of potentials from bulk to interfaces",
+    "method": "transfer learning of machine learning potentials from bulk training data to inte",
+    "data": "未报告",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "abstract_inferred",
+     "data": "missing",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['data', 'evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.4
+   },
+   {
+    "record_id": "REC10",
+    "title": "Open benchmark dataset for solid electrolyte conductivity",
+    "year": 2025,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Open benchmark dataset for solid electrolyte conductivity",
+    "method": "未报告",
+    "data": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "abstract_inferred",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.3684
+   },
+   {
+    "record_id": "REC08",
+    "title": "Benchmarking uncertainty quantification for atomistic simulations",
+    "year": 2024,
+    "venue": "Synthetic Journal of Materials Informatics",
+    "task": "Benchmarking uncertainty quantification for atomistic simulations",
+    "method": "未报告",
+    "data": "A benchmark compares uncertainty quantification methods for a",
+    "evaluation": "ensemble and dropout calibrations are evaluated on force and energy error",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "abstract_inferred",
+     "evaluation": "abstract_inferred",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.2667
+   },
+   {
+    "record_id": "REC03",
+    "title": "Operando characterization of sulfide electrolyte interfaces",
+    "year": 2024,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Operando characterization of sulfide electrolyte interfaces",
+    "method": "未报告",
+    "data": "未报告",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "missing",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'data', 'evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.2
+   },
+   {
+    "record_id": "REC09",
+    "title": "Cryo-EM interphase composition in sulfide electrolytes",
+    "year": 2025,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Cryo-EM interphase composition in sulfide electrolytes",
+    "method": "未报告",
+    "data": "未报告",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "missing",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'data', 'evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.2
+   },
+   {
+    "record_id": "REC06",
+    "title": "Space charge layers dominate sulfide interface resistance",
+    "year": 2020,
+    "venue": "Synthetic Journal of Power Materials",
+    "task": "Space charge layers dominate sulfide interface resistance",
+    "method": "未报告",
+    "data": "未报告",
+    "evaluation": "未报告",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "missing",
+     "evaluation": "missing",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'data', 'evaluation', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.1579
+   },
+   {
+    "record_id": "REC05",
+    "title": "Deep learning grain boundary detection in ceramics",
+    "year": 2021,
+    "venue": "Synthetic Journal of Materials Vision",
+    "task": "Deep learning grain boundary detection in ceramics",
+    "method": "未报告",
+    "data": "ning pipeline detects grain boundaries in ceramic micrographs and reports an F1 score of 0",
+    "evaluation": "s in ceramic micrographs and reports an F1 score of 0",
+    "conclusion": "未报告",
+    "dimension_sources": {
+     "task": "title_as_task",
+     "method": "missing",
+     "data": "abstract_inferred",
+     "evaluation": "abstract_inferred",
+     "conclusion": "missing"
+    },
+    "directly_comparable": false,
+    "not_comparable_reason": "题录未提供 ['method', 'conclusion']，无法逐维对齐",
+    "similarity_to_best_claim": 0.1176
+   }
+  ],
+  "directly_comparable_count": 0,
+  "truncated": 0,
+  "note": "维度来源逐格标注：explicit=题录直接给出；abstract_inferred=按句式规则抽取（可能不完整）；title_as_task=题名近似任务；missing=未报告。不可直接比较的原因逐条给出，不推测内容。"
+ },
+ "novelty_assessment": {
+  "scope": "pool_observed",
+  "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+  "pool_size": 9,
+  "claims": [
+   {
+    "claim_id": "D1-C1",
+    "direction_id": "D1",
+    "claim": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces",
+    "origin": "case.claims",
+    "scope": "pool_observed",
+    "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+    "type": "method",
+    "type_label": "方法创新",
+    "type_confidence": "determined",
+    "type_basis": {
+     "cues": [
+      "framework",
+      "we propose a framework"
+     ],
+     "anti_cues": []
+    },
+    "verdict": "covered",
+    "code": "R_COVERED",
+    "max_similarity": 1.0,
+    "nearest_prior": {
+     "record_id": "REC01",
+     "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+     "year": 2023,
+     "venue": "Synthetic Journal of Power Materials",
+     "similarity": 1.0,
+     "overlap_terms": [
+      "calibrated",
+      "electrolyte",
+      "for",
+      "framework",
+      "interfaces",
+      "learning",
+      "machine",
+      "potentials"
+     ],
+     "quote_evidence_ids": [
+      "E005"
+     ],
+     "no_overlap_quote": false
+    },
+    "overlap_points": [
+     {
+      "dim": "task",
+      "status": "no_overlap",
+      "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+      "prior_side": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+      "prior_dim_source": "title_as_task",
+      "shared_terms": []
+     },
+     {
+      "dim": "method",
+      "status": "no_overlap",
+      "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+      "prior_side": "a framework for training machine learning potentials with calibrated uncertainty",
+      "prior_dim_source": "abstract_inferred",
+      "shared_terms": []
+     },
+     {
+      "dim": "data",
+      "status": "no_overlap",
+      "direction_side": "自建界面 DFT 轨迹与表征图像",
+      "prior_side": "variance correlates with force error on interface trajectories",
+      "prior_dim_source": "abstract_inferred",
+      "shared_terms": []
+     },
+     {
+      "dim": "evaluation",
+      "status": "prior_not_reported",
+      "direction_side": null,
+      "prior_side": null,
+      "shared_terms": []
+     },
+     {
+      "dim": "conclusion",
+      "status": "prior_not_reported",
+      "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+      "prior_side": null,
+      "shared_terms": []
+     }
+    ],
+    "pool_external_check": null,
+    "basis": "与最近邻 REC01《Uncertainty-aware machine learning poten》覆盖度 1.0 ≥ 0.5：主张已被池内工作覆盖（scope=pool_observed）；重合词 ['calibrated', 'electrolyte', 'for', 'framework', 'interfaces', 'learning', 'machine', 'potentials']"
+   },
+   {
+    "claim_id": "D1-C2",
+    "direction_id": "D1",
+    "claim": "We collect in-situ interface trajectories with uncertainty labels and release them as an open annotated dataset for sulfide electrolytes",
+    "origin": "case.claims",
+    "scope": "pool_observed",
+    "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+    "type": "data",
+    "type_label": "数据创新",
+    "type_confidence": "determined",
+    "type_basis": {
+     "cues": [
+      "we collect"
+     ],
+     "anti_cues": []
+    },
+    "verdict": "partially_covered",
+    "code": "R_PARTIAL",
+    "max_similarity": 0.3684,
+    "nearest_prior": {
+     "record_id": "REC10",
+     "title": "Open benchmark dataset for solid electrolyte conductivity",
+     "year": 2025,
+     "venue": "Synthetic Journal of Power Materials",
+     "similarity": 0.3684,
+     "overlap_terms": [
+      "an",
+      "dataset",
+      "for",
+      "open",
+      "release",
+      "we",
+      "with"
+     ],
+     "quote_evidence_ids": [
+      "E006"
+     ],
+     "no_overlap_quote": false
+    },
+    "overlap_points": [
+     {
+      "dim": "task",
+      "status": "no_overlap",
+      "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+      "prior_side": "Open benchmark dataset for solid electrolyte conductivity",
+      "prior_dim_source": "title_as_task",
+      "shared_terms": []
+     },
+     {
+      "dim": "method",
+      "status": "prior_not_reported",
+      "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+      "prior_side": null,
+      "shared_terms": []
+     },
+     {
+      "dim": "data",
+      "status": "no_overlap",
+      "direction_side": "自建界面 DFT 轨迹与表征图像",
+      "prior_side": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering",
+      "prior_dim_source": "abstract_inferred",
+      "shared_terms": []
+     },
+     {
+      "dim": "evaluation",
+      "status": "prior_not_reported",
+      "direction_side": null,
+      "prior_side": null,
+      "shared_terms": []
+     },
+     {
+      "dim": "conclusion",
+      "status": "prior_not_reported",
+      "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+      "prior_side": null,
+      "shared_terms": []
+     }
+    ],
+    "pool_external_check": null,
+    "basis": "与最近邻 REC10《Open benchmark dataset for solid electro》覆盖度 0.3684 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+   },
+   {
+    "claim_id": "D2-C1",
+    "direction_id": "D2",
+    "claim": "We apply a pretrained vision transformer to crack segmentation in polymer electrolyte films and report failure mode statistics",
+    "origin": "case.claims",
+    "scope": "pool_observed",
+    "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+    "type": "scenario_transfer",
+    "type_label": "场景迁移",
+    "type_confidence": "determined",
+    "type_basis": {
+     "cues": [
+      "we apply",
+      "apply a"
+     ],
+     "anti_cues": []
+    },
+    "verdict": "partially_covered",
+    "code": "R_PARTIAL",
+    "max_similarity": 0.4118,
+    "nearest_prior": {
+     "record_id": "REC04",
+     "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+     "year": 2023,
+     "venue": "Synthetic Journal of Materials Vision",
+     "similarity": 0.4118,
+     "overlap_terms": [
+      "and",
+      "apply",
+      "in",
+      "report",
+      "segmentation",
+      "to",
+      "we"
+     ],
+     "quote_evidence_ids": [
+      "E009"
+     ],
+     "no_overlap_quote": false
+    },
+    "overlap_points": [
+     {
+      "dim": "task",
+      "status": "no_overlap",
+      "direction_side": "聚合物电解质膜中的裂纹扩展",
+      "prior_side": "Convolutional segmentation of grain boundaries in solid electrolytes",
+      "prior_dim_source": "title_as_task",
+      "shared_terms": []
+     },
+     {
+      "dim": "method",
+      "status": "no_overlap",
+      "direction_side": "预训练视觉 Transformer 微调",
+      "prior_side": "a convolutional segmentation network to electron microscopy images of grain boun",
+      "prior_dim_source": "abstract_inferred",
+      "shared_terms": []
+     },
+     {
+      "dim": "data",
+      "status": "no_overlap",
+      "direction_side": "自建聚合物电解质膜裂纹图像集",
+      "prior_side": "ional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and rep",
+      "prior_dim_source": "abstract_inferred",
+      "shared_terms": []
+     },
+     {
+      "dim": "evaluation",
+      "status": "prior_not_reported",
+      "direction_side": null,
+      "prior_side": null,
+      "shared_terms": []
+     },
+     {
+      "dim": "conclusion",
+      "status": "prior_not_reported",
+      "direction_side": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+      "prior_side": null,
+      "shared_terms": []
+     }
+    ],
+    "pool_external_check": null,
+    "basis": "与最近邻 REC04《Convolutional segmentation of grain boun》覆盖度 0.4118 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+   }
+  ],
+  "verdict_counts": {
+   "covered": 1,
+   "partially_covered": 2,
+   "not_found_in_scope": 0,
+   "undetermined": 0
+  },
+  "mean_max_similarity": 0.5934,
+  "score": 0.4066,
+  "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』"
+ },
+ "feasibility_assessment": {
+  "premises": [
+   {
+    "direction_id": "D1",
+    "premise_id": "P_DATA",
+    "label": "数据可得",
+    "statement": "研究所需数据可获取且质量满足分析要求",
+    "source": "record_evidence",
+    "evidence_id": "E007",
+    "basis": "池内证据 E007（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+    "supported": true,
+    "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+    "risk_code": "data_access_missing",
+    "strength": 0.7,
+    "code": "R_RECORD_EVIDENCE"
+   },
+   {
+    "direction_id": "D1",
+    "premise_id": "P_COMPUTE",
+    "label": "算力/设备可得",
+    "statement": "所需算力或实验设备可在项目周期内获得",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+    "supported": true,
+    "risk_if_false": "实验规模需缩减或改为模拟验证",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D1",
+    "premise_id": "P_TIME",
+    "label": "周期可控",
+    "statement": "在给定周期内可完成关键实验与写作",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.duration = 18 个月",
+    "supported": true,
+    "risk_if_false": "需裁剪研究范围或分期交付",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D1",
+    "premise_id": "P_SKILL",
+    "label": "方法能力具备",
+    "statement": "团队具备所需方法学能力或有明确合作者",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+    "supported": true,
+    "risk_if_false": "需引入合作者或改用熟悉方法",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D1",
+    "premise_id": "P_ETHICS",
+    "label": "伦理与合规",
+    "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+    "supported": true,
+    "risk_if_false": "不得开展相关数据采集",
+    "risk_code": "ethics_approval_missing",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D1",
+    "premise_id": "P_BASELINE",
+    "label": "可比基线存在",
+    "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+    "source": "record_evidence",
+    "evidence_id": "E008",
+    "basis": "池内证据 E008（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+    "supported": true,
+    "risk_if_false": "结论无法证伪，创新性判定失效",
+    "risk_code": "premise_unsupported",
+    "strength": 0.7,
+    "code": "R_RECORD_EVIDENCE"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_DATA",
+    "label": "数据可得",
+    "statement": "研究所需数据可获取且质量满足分析要求",
+    "source": "record_evidence",
+    "evidence_id": "E010",
+    "basis": "池内证据 E010（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+    "supported": true,
+    "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+    "risk_code": "data_access_missing",
+    "strength": 0.7,
+    "code": "R_RECORD_EVIDENCE"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_COMPUTE",
+    "label": "算力/设备可得",
+    "statement": "所需算力或实验设备可在项目周期内获得",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+    "supported": true,
+    "risk_if_false": "实验规模需缩减或改为模拟验证",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_TIME",
+    "label": "周期可控",
+    "statement": "在给定周期内可完成关键实验与写作",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.duration = 18 个月",
+    "supported": true,
+    "risk_if_false": "需裁剪研究范围或分期交付",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_SKILL",
+    "label": "方法能力具备",
+    "statement": "团队具备所需方法学能力或有明确合作者",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+    "supported": true,
+    "risk_if_false": "需引入合作者或改用熟悉方法",
+    "risk_code": "premise_unsupported",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_ETHICS",
+    "label": "伦理与合规",
+    "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+    "source": "task_given",
+    "evidence_id": null,
+    "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+    "supported": true,
+    "risk_if_false": "不得开展相关数据采集",
+    "risk_code": "ethics_approval_missing",
+    "strength": 1.0,
+    "code": "R_TASK_GIVEN"
+   },
+   {
+    "direction_id": "D2",
+    "premise_id": "P_BASELINE",
+    "label": "可比基线存在",
+    "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+    "source": "record_evidence",
+    "evidence_id": "E011",
+    "basis": "池内证据 E011（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+    "supported": true,
+    "risk_if_false": "结论无法证伪，创新性判定失效",
+    "risk_code": "premise_unsupported",
+    "strength": 0.7,
+    "code": "R_RECORD_EVIDENCE"
+   }
+  ],
+  "per_direction": [
+   {
+    "direction_id": "D1",
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提",
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "constraints_present": true,
+    "assumption_ids": []
+   },
+   {
+    "direction_id": "D2",
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提",
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "constraints_present": true,
+    "assumption_ids": []
+   }
+  ],
+  "rule": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+ },
+ "value_assessment": {
+  "per_direction": [
+   {
+    "direction_id": "D1",
+    "score": 0.6,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 0.5,
+     "method_reuse_signal": 1.0
+    }
+   },
+   {
+    "direction_id": "D2",
+    "score": 0.65,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 1.0,
+     "method_reuse_signal": 0.5
+    }
+   }
+  ],
+  "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档"
+ },
+ "risk_assessment": {
+  "items": [
+   {
+    "direction_id": "D1",
+    "risk": "主张 D1-C1 已被池内工作覆盖（REC01）",
+    "code": "claim_covered_by_prior_art",
+    "weight": 1.0,
+    "impact": "最接近工作：Uncertainty-aware machine learning potentials for sulfide interfaces",
+    "mitigation": "改述贡献边界（缩到未被覆盖的子问题）或补差异化实验"
+   },
+   {
+    "direction_id": "D1",
+    "risk": "主张 D1-C2 被池内工作部分覆盖",
+    "code": "scope_mismatch",
+    "weight": 0.5,
+    "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+    "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+   },
+   {
+    "direction_id": "D2",
+    "risk": "主张 D2-C1 被池内工作部分覆盖",
+    "code": "scope_mismatch",
+    "weight": 0.5,
+    "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+    "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+   }
+  ],
+  "per_direction": [
+   {
+    "direction_id": "D1",
+    "score": 0.375,
+    "weight_sum": 1.5
+   },
+   {
+    "direction_id": "D2",
+    "score": 0.125,
+    "weight_sum": 0.5
+   }
+  ],
+  "rule": "risk = clamp(sum(risk.weight) / risk_max_total)，risk.weight 见 risk_weights；assumption 前提、被覆盖主张、骑在冲突证据上的方向分别计入；risk 高表示失败风险大，不是好事"
+ },
+ "four_dimension_assessment": {
+  "directions": [
+   {
+    "direction_id": "D1",
+    "novelty": {
+     "score": 0.3158,
+     "band": "弱",
+     "verdict_counts": {
+      "covered": 1,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.6842（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.6,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 0.5,
+      "method_reuse_signal": 1.0
+     }
+    },
+    "risk": {
+     "score": 0.375,
+     "weight_sum": 1.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   },
+   {
+    "direction_id": "D2",
+    "novelty": {
+     "score": 0.5882,
+     "band": "中",
+     "verdict_counts": {
+      "covered": 0,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.4118（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.65,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 1.0,
+      "method_reuse_signal": 0.5
+     }
+    },
+    "risk": {
+     "score": 0.125,
+     "weight_sum": 0.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   }
+  ],
+  "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+ },
+ "decision_package": {
+  "per_direction": [
+   {
+    "direction_id": "D1",
+    "可以启动的前提": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "启动前必须补齐": [],
+    "必须先改的表述": [
+     "D1-C1"
+    ],
+    "必须先复核的冲突": []
+   },
+   {
+    "direction_id": "D2",
+    "可以启动的前提": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "启动前必须补齐": [],
+    "必须先改的表述": [],
+    "必须先复核的冲突": []
+   }
+  ],
+  "note": "决策包逐方向给出：可启动前提 / 启动前必须补齐 / 必须先改的表述 / 必须先复核的冲突"
+ },
+ "evidence_table": [
+  {
+   "evidence_id": "E001",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC01",
+   "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+   "year": 2023,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces.",
+   "char_span": {
+    "start": 0,
+    "end": 142
+   },
+   "quote_verified": true,
+   "body_sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC01#text",
+    "char_span": {
+     "start": 0,
+     "end": 142
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "machine learning potential",
+    "uncertainty"
+   ],
+   "key_coverage": 1.0,
+   "strength": "direct",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "1bf918d0e1b7cf36429d9193d577fef2e31751806ae19d39a47abcaa6e46fdaf"
+  },
+  {
+   "evidence_id": "E002",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply transfer learning of machine learning potentials from bulk training data to interface coating problems.",
+   "char_span": {
+    "start": 0,
+    "end": 112
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 0,
+     "end": 112
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "machine learning potential"
+   ],
+   "key_coverage": 0.5672,
+   "strength": "indirect",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "48869677050d334c5afb60fb1e033dceae634cbf05f5453d573a188914d2906f"
+  },
+  {
+   "evidence_id": "E003",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC08",
+   "title": "Benchmarking uncertainty quantification for atomistic simulations",
+   "year": 2024,
+   "venue": "Synthetic Journal of Materials Informatics",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "A benchmark compares uncertainty quantification methods for atomistic simulations of solid interfaces;",
+   "char_span": {
+    "start": 0,
+    "end": 102
+   },
+   "quote_verified": true,
+   "body_sha256": "819b8266f7ed5fe6299309355c6fa22b0bf73f1381be6c21d41179f2cfba2df9",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC08#text",
+    "char_span": {
+     "start": 0,
+     "end": 102
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "uncertainty"
+   ],
+   "key_coverage": 0.5672,
+   "strength": "indirect",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "50068e1d3720d16fecc77ff18151eac38fa1ca7787643b3a596e60a83bd7fdb5"
+  },
+  {
+   "evidence_id": "E004",
+   "use": "retrieval",
+   "direction_id": "D2",
+   "record_id": "REC04",
+   "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+   "year": 2023,
+   "venue": "Synthetic Journal of Materials Vision",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply a convolutional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and report reusable grain statistics.",
+   "char_span": {
+    "start": 0,
+    "end": 155
+   },
+   "quote_verified": true,
+   "body_sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC04#text",
+    "char_span": {
+     "start": 0,
+     "end": 155
+    }
+   },
+   "matched_terms": [
+    "segmentation"
+   ],
+   "key_coverage": 1.0,
+   "strength": "direct",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "5702523fecd8e53f13107a492f429839814004f37a41a4fdb4d1dd8d814beda1"
+  },
+  {
+   "evidence_id": "E005",
+   "use": "novelty_overlap",
+   "direction_id": "D1",
+   "record_id": "REC01",
+   "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+   "year": 2023,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces.",
+   "char_span": {
+    "start": 0,
+    "end": 142
+   },
+   "quote_verified": true,
+   "body_sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC01#text",
+    "char_span": {
+     "start": 0,
+     "end": 142
+    }
+   },
+   "matched_terms": [
+    "calibrated",
+    "electrolyte",
+    "for",
+    "framework",
+    "interfaces",
+    "learning",
+    "machine",
+    "potentials",
+    "propose",
+    "quantification",
+    "sulfide",
+    "training",
+    "uncertainty",
+    "we",
+    "with"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "1bf918d0e1b7cf36429d9193d577fef2e31751806ae19d39a47abcaa6e46fdaf"
+  },
+  {
+   "evidence_id": "E006",
+   "use": "novelty_overlap",
+   "direction_id": "D1",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "an",
+    "dataset",
+    "for",
+    "open",
+    "release",
+    "we",
+    "with"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E007",
+   "use": "premise_evidence",
+   "direction_id": "D1",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "dataset"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E008",
+   "use": "premise_evidence",
+   "direction_id": "D1",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "The transferred potential is compared against a bulk-trained baseline and reduces interface force error.",
+   "char_span": {
+    "start": 113,
+    "end": 217
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 113,
+     "end": 217
+    }
+   },
+   "matched_terms": [
+    "baseline"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": "-1",
+    "terms": [
+     "reduce",
+     "reduces"
+    ],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "d46ed631decc10dc1a96684b1ead1803d3f337ba6f303d4b9187524a69e782e9"
+  },
+  {
+   "evidence_id": "E009",
+   "use": "novelty_overlap",
+   "direction_id": "D2",
+   "record_id": "REC04",
+   "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+   "year": 2023,
+   "venue": "Synthetic Journal of Materials Vision",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply a convolutional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and report reusable grain statistics.",
+   "char_span": {
+    "start": 0,
+    "end": 155
+   },
+   "quote_verified": true,
+   "body_sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC04#text",
+    "char_span": {
+     "start": 0,
+     "end": 155
+    }
+   },
+   "matched_terms": [
+    "and",
+    "apply",
+    "in",
+    "report",
+    "segmentation",
+    "to",
+    "we"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "5702523fecd8e53f13107a492f429839814004f37a41a4fdb4d1dd8d814beda1"
+  },
+  {
+   "evidence_id": "E010",
+   "use": "premise_evidence",
+   "direction_id": "D2",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "dataset"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E011",
+   "use": "premise_evidence",
+   "direction_id": "D2",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "The transferred potential is compared against a bulk-trained baseline and reduces interface force error.",
+   "char_span": {
+    "start": 113,
+    "end": 217
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 113,
+     "end": 217
+    }
+   },
+   "matched_terms": [
+    "baseline"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": "-1",
+    "terms": [
+     "reduce",
+     "reduces"
+    ],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "d46ed631decc10dc1a96684b1ead1803d3f337ba6f303d4b9187524a69e782e9"
+  }
+ ],
+ "screening": {
+  "protocol_status": "registered_prospective",
+  "protocol_id": "PROTO-EXAMPLE-052",
+  "prospective": true,
+  "order_note": "先落盘协议与计划（plan.json），后对每条记录逐条筛选并记 criterion_hits；仅 included 记录进入检索、新颖性比对与前提取证",
+  "counts": {
+   "screened": 10,
+   "included": 9,
+   "excluded": 1,
+   "unscored_no_body": 0
+  },
+  "records": [
+   {
+    "record_id": "REC01",
+    "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+    "body_chars": 215,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte",
+       "interface",
+       "sulfide"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=215"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC02",
+    "title": "Transfer learning of potentials from bulk to interfaces",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+    "body_chars": 217,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "interface"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=217"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC03",
+    "title": "Operando characterization of sulfide electrolyte interfaces",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "d7e1921eed18dcf83760046c53c3eeb6081229bde33bfddf9003876feb7c7398",
+    "body_chars": 116,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte",
+       "interface",
+       "sulfide"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=116"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC04",
+    "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+    "body_chars": 155,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte",
+       "grain"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=155"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC05",
+    "title": "Deep learning grain boundary detection in ceramics",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "f8b0364f16fb87d7e30868cfed7343d760f70a1f93917cab23da40d278368ff6",
+    "body_chars": 130,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "grain"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=130"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC06",
+    "title": "Space charge layers dominate sulfide interface resistance",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "bbd22ca8dd255c0592489a692beffce00e4803f106e53eb285d97ad17d0cb68b",
+    "body_chars": 109,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte",
+       "interface",
+       "sulfide"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=109"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC07",
+    "title": "Compositional screening of fast ionic conductors",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "b3b3f4a3099e84705b4e4cee706a3e9f206cc8de07c03d492c52923ebf1cad40",
+    "body_chars": 129,
+    "outcome": "excluded",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": false,
+      "matched_terms": []
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=129"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "未满足纳入标准 IN1"
+   },
+   {
+    "record_id": "REC08",
+    "title": "Benchmarking uncertainty quantification for atomistic simulations",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "819b8266f7ed5fe6299309355c6fa22b0bf73f1381be6c21d41179f2cfba2df9",
+    "body_chars": 177,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "interface"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=177"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC09",
+    "title": "Cryo-EM interphase composition in sulfide electrolytes",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "7cd4713e6cb2d7d514eefdf95702faeee5a522838106a9102b8b21f4d9e4838a",
+    "body_chars": 146,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte",
+       "interface",
+       "sulfide"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=146"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   },
+   {
+    "record_id": "REC10",
+    "title": "Open benchmark dataset for solid electrolyte conductivity",
+    "type": "journal-article",
+    "source_file": "inline",
+    "extraction_method": "inline_abstract",
+    "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+    "body_chars": 138,
+    "outcome": "included",
+    "inclusion_hits": [
+     {
+      "criterion_id": "IN1",
+      "matched": true,
+      "matched_terms": [
+       "electrolyte"
+      ]
+     },
+     {
+      "criterion_id": "IN2",
+      "matched": true,
+      "matched_terms": [
+       "body_chars=138"
+      ]
+     }
+    ],
+    "exclusion_hits": [
+     {
+      "criterion_id": "EX1",
+      "matched": false,
+      "matched_terms": []
+     }
+    ],
+    "fallback": false,
+    "reason": "满足全部纳入标准"
+   }
+  ]
+ },
+ "conflicts": {
+  "count": 0,
+  "items": [],
+  "resolution": "并列双列呈现（side_a/side_b 各带逐字引文、方向与强度词），不择一、不合并、不以「尚存争议」替代双列",
+  "note": "count=0 表示本轮同方向证据无方向/数值冲突，非未检查"
+ },
+ "proposals": {
+  "requested": true,
+  "count": 1,
+  "items": [
+   {
+    "proposal_id": "PR01",
+    "direction_id": "D1",
+    "kind": "revise_claim_boundary",
+    "statement": "约束内建议：主张 D1-C1 已被池内工作 REC01 覆盖，建议改述贡献边界或补差异化实验后再启动。",
+    "basis": {
+     "claim_id": "D1-C1",
+     "verdict": "covered",
+     "evidence_ids": [
+      "E005"
+     ],
+     "conflict_ids": []
+    },
+    "constraint_refs": [
+     {
+      "ref": "application",
+      "value": "固态电池界面设计与失效预测"
+     },
+     {
+      "ref": "compute",
+      "value": "4×GPU，总预算 20,000 GPU-hour"
+     },
+     {
+      "ref": "duration",
+      "value": "18 个月"
+     },
+     {
+      "ref": "ethics",
+      "value": "不涉及人体或动物数据，无需伦理审批"
+     },
+     {
+      "ref": "stakeholders",
+      "value": [
+       "电池研发团队",
+       "表征平台"
+      ]
+     },
+     {
+      "ref": "team",
+      "value": "2 名计算材料学博士生 + 1 名电镜工程师"
+     }
+    ],
+    "not_claimed": [
+     "不声称已完成实验",
+     "不声称覆盖全局完备性",
+     "不越过给定来源与约束范围",
+     "不声称已完成实验",
+     "不超出给定记录池与约束范围"
+    ]
+   }
+  ],
+  "rule": "有界研究建议逐条引用 constraints；constraints 缺失时只给方向级建议并声明「无约束可依」；一律 not_claimed：不声称已完成实验、不声称全局完备、不越给定来源与约束范围",
+  "note": "逐条引用 constraints 且 not_claimed；constraints 缺失时只给方向级建议并声明无约束可依"
+ },
+ "研究产物": [
+  {
+   "direction_id": "D1",
+   "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+   "source": "case.candidate_directions",
+   "problem_statement": {
+    "title": "不确定性量化机器学习势函数迁移到硫化物电解质界面",
+    "object": "硫化物固态电解质界面（grain boundary 与 interphase）",
+    "key_variables": [
+     "界面迁移势垒",
+     "不确定性区间宽度",
+     "外推误差"
+    ],
+    "baseline": "bulk 数据训练的机器学习势函数",
+    "expected_conclusion": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+    "falsification_condition": "若界面区外推误差相对基线的改善不显著，则该假设不成立",
+    "method": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+    "data": "自建界面 DFT 轨迹与表征图像",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions",
+    "note": "缺失字段不猜：由 Agent 在 report 中向用户回问，或由用户补 case 字段后重跑"
+   },
+   "novelty": {
+    "direction_id": "D1",
+    "scope": "pool_observed",
+    "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+    "claims": [
+     {
+      "claim_id": "D1-C1",
+      "direction_id": "D1",
+      "claim": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "method",
+      "type_label": "方法创新",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "framework",
+        "we propose a framework"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "covered",
+      "code": "R_COVERED",
+      "max_similarity": 1.0,
+      "nearest_prior": {
+       "record_id": "REC01",
+       "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+       "year": 2023,
+       "venue": "Synthetic Journal of Power Materials",
+       "similarity": 1.0,
+       "overlap_terms": [
+        "calibrated",
+        "electrolyte",
+        "for",
+        "framework",
+        "interfaces",
+        "learning",
+        "machine",
+        "potentials"
+       ],
+       "quote_evidence_ids": [
+        "E005"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+        "prior_side": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "no_overlap",
+        "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+        "prior_side": "a framework for training machine learning potentials with calibrated uncertainty",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建界面 DFT 轨迹与表征图像",
+        "prior_side": "variance correlates with force error on interface trajectories",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC01《Uncertainty-aware machine learning poten》覆盖度 1.0 ≥ 0.5：主张已被池内工作覆盖（scope=pool_observed）；重合词 ['calibrated', 'electrolyte', 'for', 'framework', 'interfaces', 'learning', 'machine', 'potentials']"
+     },
+     {
+      "claim_id": "D1-C2",
+      "direction_id": "D1",
+      "claim": "We collect in-situ interface trajectories with uncertainty labels and release them as an open annotated dataset for sulfide electrolytes",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "data",
+      "type_label": "数据创新",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "we collect"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.3684,
+      "nearest_prior": {
+       "record_id": "REC10",
+       "title": "Open benchmark dataset for solid electrolyte conductivity",
+       "year": 2025,
+       "venue": "Synthetic Journal of Power Materials",
+       "similarity": 0.3684,
+       "overlap_terms": [
+        "an",
+        "dataset",
+        "for",
+        "open",
+        "release",
+        "we",
+        "with"
+       ],
+       "quote_evidence_ids": [
+        "E006"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "硫化物固态电解质界面（grain boundary 与 interphase）",
+        "prior_side": "Open benchmark dataset for solid electrolyte conductivity",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "prior_not_reported",
+        "direction_side": "迁移学习加不确定性量化（ensemble/贝叶斯）的机器学习势函数",
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建界面 DFT 轨迹与表征图像",
+        "prior_side": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "带不确定性量化的迁移势函数在界面区外推误差显著低于 bulk 基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC10《Open benchmark dataset for solid electro》覆盖度 0.3684 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+     }
+    ],
+    "verdict_counts": {
+     "covered": 1,
+     "partially_covered": 1,
+     "not_found_in_scope": 0,
+     "undetermined": 0
+    },
+    "mean_max_similarity": 0.6842,
+    "score": 0.3158,
+    "band": "弱",
+    "pool_size": 9,
+    "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）"
+   },
+   "feasibility": {
+    "direction_id": "D1",
+    "premises": [
+     {
+      "direction_id": "D1",
+      "premise_id": "P_DATA",
+      "label": "数据可得",
+      "statement": "研究所需数据可获取且质量满足分析要求",
+      "source": "record_evidence",
+      "evidence_id": "E007",
+      "basis": "池内证据 E007（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+      "risk_code": "data_access_missing",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_COMPUTE",
+      "label": "算力/设备可得",
+      "statement": "所需算力或实验设备可在项目周期内获得",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "supported": true,
+      "risk_if_false": "实验规模需缩减或改为模拟验证",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_TIME",
+      "label": "周期可控",
+      "statement": "在给定周期内可完成关键实验与写作",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.duration = 18 个月",
+      "supported": true,
+      "risk_if_false": "需裁剪研究范围或分期交付",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_SKILL",
+      "label": "方法能力具备",
+      "statement": "团队具备所需方法学能力或有明确合作者",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "supported": true,
+      "risk_if_false": "需引入合作者或改用熟悉方法",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_ETHICS",
+      "label": "伦理与合规",
+      "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "supported": true,
+      "risk_if_false": "不得开展相关数据采集",
+      "risk_code": "ethics_approval_missing",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D1",
+      "premise_id": "P_BASELINE",
+      "label": "可比基线存在",
+      "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+      "source": "record_evidence",
+      "evidence_id": "E008",
+      "basis": "池内证据 E008（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "结论无法证伪，创新性判定失效",
+      "risk_code": "premise_unsupported",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     }
+    ],
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提",
+    "assumption_ids": [],
+    "supported_ids": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "score_basis": {
+     "strength_sum": 5.4,
+     "total": 6,
+     "rule": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告"
+    },
+    "constraints_present": true,
+    "note": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+   },
+   "value": {
+    "score": 0.6,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 0.5,
+     "method_reuse_signal": 1.0
+    },
+    "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+    "basis": {
+     "claim_verdicts": [
+      "covered",
+      "partially_covered"
+     ],
+     "application_field_present": true,
+     "claim_types": [
+      "data",
+      "method"
+     ]
+    },
+    "note": "价值分只反映『与池内工作的差距 + 是否有明确应用对象』，不代表真实社会或经济价值"
+   },
+   "risk": {
+    "score": 0.375,
+    "items": [
+     {
+      "direction_id": "D1",
+      "risk": "主张 D1-C1 已被池内工作覆盖（REC01）",
+      "code": "claim_covered_by_prior_art",
+      "weight": 1.0,
+      "impact": "最接近工作：Uncertainty-aware machine learning potentials for sulfide interfaces",
+      "mitigation": "改述贡献边界（缩到未被覆盖的子问题）或补差异化实验"
+     },
+     {
+      "direction_id": "D1",
+      "risk": "主张 D1-C2 被池内工作部分覆盖",
+      "code": "scope_mismatch",
+      "weight": 0.5,
+      "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+      "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+     }
+    ],
+    "weight_sum": 1.5,
+    "max_total": 4.0,
+    "note": "风险分高=失败风险大，与可行性分并置阅读，不并入单一总分；冲突条目两侧引文逐字保留"
+   },
+   "four_dimension": {
+    "novelty": {
+     "score": 0.3158,
+     "band": "弱",
+     "verdict_counts": {
+      "covered": 1,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.6842（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E007, E008），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.6,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 0.5,
+      "method_reuse_signal": 1.0
+     }
+    },
+    "risk": {
+     "score": 0.375,
+     "weight_sum": 1.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   }
+  },
+  {
+   "direction_id": "D2",
+   "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+   "source": "case.candidate_directions",
+   "problem_statement": {
+    "title": "预训练视觉 Transformer 用于聚合物电解质膜裂纹分割",
+    "object": "聚合物电解质膜中的裂纹扩展",
+    "key_variables": [
+     "裂纹分割 IoU",
+     "标注样本量"
+    ],
+    "baseline": "从零训练的 U-Net",
+    "expected_conclusion": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+    "falsification_condition": "若 IoU 相对从零训练基线无显著提升，则迁移假设不成立",
+    "method": "预训练视觉 Transformer 微调",
+    "data": "自建聚合物电解质膜裂纹图像集",
+    "evaluation": null,
+    "missing_fields": [],
+    "completeness": 1.0,
+    "source": "case.candidate_directions",
+    "note": "缺失字段不猜：由 Agent 在 report 中向用户回问，或由用户补 case 字段后重跑"
+   },
+   "novelty": {
+    "direction_id": "D2",
+    "scope": "pool_observed",
+    "scope_statement": "新颖性判定限定在本 case 记录池内（pool_observed）；池外是否存在同题工作未核验，本轮未执行全局检索",
+    "claims": [
+     {
+      "claim_id": "D2-C1",
+      "direction_id": "D2",
+      "claim": "We apply a pretrained vision transformer to crack segmentation in polymer electrolyte films and report failure mode statistics",
+      "origin": "case.claims",
+      "scope": "pool_observed",
+      "not_found_scope": "仅在本 case 记录池内比对；未联网检索，不能推断『无人研究』",
+      "type": "scenario_transfer",
+      "type_label": "场景迁移",
+      "type_confidence": "determined",
+      "type_basis": {
+       "cues": [
+        "we apply",
+        "apply a"
+       ],
+       "anti_cues": []
+      },
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.4118,
+      "nearest_prior": {
+       "record_id": "REC04",
+       "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+       "year": 2023,
+       "venue": "Synthetic Journal of Materials Vision",
+       "similarity": 0.4118,
+       "overlap_terms": [
+        "and",
+        "apply",
+        "in",
+        "report",
+        "segmentation",
+        "to",
+        "we"
+       ],
+       "quote_evidence_ids": [
+        "E009"
+       ],
+       "no_overlap_quote": false
+      },
+      "overlap_points": [
+       {
+        "dim": "task",
+        "status": "no_overlap",
+        "direction_side": "聚合物电解质膜中的裂纹扩展",
+        "prior_side": "Convolutional segmentation of grain boundaries in solid electrolytes",
+        "prior_dim_source": "title_as_task",
+        "shared_terms": []
+       },
+       {
+        "dim": "method",
+        "status": "no_overlap",
+        "direction_side": "预训练视觉 Transformer 微调",
+        "prior_side": "a convolutional segmentation network to electron microscopy images of grain boun",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "data",
+        "status": "no_overlap",
+        "direction_side": "自建聚合物电解质膜裂纹图像集",
+        "prior_side": "ional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and rep",
+        "prior_dim_source": "abstract_inferred",
+        "shared_terms": []
+       },
+       {
+        "dim": "evaluation",
+        "status": "prior_not_reported",
+        "direction_side": null,
+        "prior_side": null,
+        "shared_terms": []
+       },
+       {
+        "dim": "conclusion",
+        "status": "prior_not_reported",
+        "direction_side": "预训练 Transformer 在小样本条件下的裂纹分割 IoU 高于从零训练基线",
+        "prior_side": null,
+        "shared_terms": []
+       }
+      ],
+      "pool_external_check": null,
+      "basis": "与最近邻 REC04《Convolutional segmentation of grain boun》覆盖度 0.4118 ∈ [0.25, 0.5)：主张被池内工作部分覆盖（scope=pool_observed）；需在比较矩阵中写明差异维度"
+     }
+    ],
+    "verdict_counts": {
+     "covered": 0,
+     "partially_covered": 1,
+     "not_found_in_scope": 0,
+     "undetermined": 0
+    },
+    "mean_max_similarity": 0.4118,
+    "score": 0.5882,
+    "band": "中",
+    "pool_size": 9,
+    "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）"
+   },
+   "feasibility": {
+    "direction_id": "D2",
+    "premises": [
+     {
+      "direction_id": "D2",
+      "premise_id": "P_DATA",
+      "label": "数据可得",
+      "statement": "研究所需数据可获取且质量满足分析要求",
+      "source": "record_evidence",
+      "evidence_id": "E010",
+      "basis": "池内证据 E010（REC10）：We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositi；命中 cue ['dataset']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "无法进入实验阶段；需先做可得性验证（小样本试跑）",
+      "risk_code": "data_access_missing",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_COMPUTE",
+      "label": "算力/设备可得",
+      "statement": "所需算力或实验设备可在项目周期内获得",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "supported": true,
+      "risk_if_false": "实验规模需缩减或改为模拟验证",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_TIME",
+      "label": "周期可控",
+      "statement": "在给定周期内可完成关键实验与写作",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.duration = 18 个月",
+      "supported": true,
+      "risk_if_false": "需裁剪研究范围或分期交付",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_SKILL",
+      "label": "方法能力具备",
+      "statement": "团队具备所需方法学能力或有明确合作者",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "supported": true,
+      "risk_if_false": "需引入合作者或改用熟悉方法",
+      "risk_code": "premise_unsupported",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_ETHICS",
+      "label": "伦理与合规",
+      "statement": "涉及人或敏感数据时有伦理批件与知情同意",
+      "source": "task_given",
+      "evidence_id": null,
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "supported": true,
+      "risk_if_false": "不得开展相关数据采集",
+      "risk_code": "ethics_approval_missing",
+      "strength": 1.0,
+      "code": "R_TASK_GIVEN"
+     },
+     {
+      "direction_id": "D2",
+      "premise_id": "P_BASELINE",
+      "label": "可比基线存在",
+      "statement": "存在可复现的对照或基线，用于判定主张是否成立",
+      "source": "record_evidence",
+      "evidence_id": "E011",
+      "basis": "池内证据 E011（REC02）：The transferred potential is compared against a bulk-trained baseline and reduces interface force er；命中 cue ['baseline']（强度受限：池内证据≠任务承诺）",
+      "supported": true,
+      "risk_if_false": "结论无法证伪，创新性判定失效",
+      "risk_code": "premise_unsupported",
+      "strength": 0.7,
+      "code": "R_RECORD_EVIDENCE"
+     }
+    ],
+    "level": "supported",
+    "conditional_conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提",
+    "assumption_ids": [],
+    "supported_ids": [
+     "P_DATA",
+     "P_COMPUTE",
+     "P_TIME",
+     "P_SKILL",
+     "P_ETHICS",
+     "P_BASELINE"
+    ],
+    "supported_ratio": 1.0,
+    "score": 0.9,
+    "score_basis": {
+     "strength_sum": 5.4,
+     "total": 6,
+     "rule": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告"
+    },
+    "constraints_present": true,
+    "note": "可行性结论必须是条件式且随前提强度降级：task_given > record_evidence > explicit_assumption；有假设前提时必须写「若 P 成立则…」。"
+   },
+   "value": {
+    "score": 0.65,
+    "signals": {
+     "gap_signal": 0.5,
+     "application_signal": 1.0,
+     "method_reuse_signal": 0.5
+    },
+    "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+    "basis": {
+     "claim_verdicts": [
+      "partially_covered"
+     ],
+     "application_field_present": true,
+     "claim_types": [
+      "scenario_transfer"
+     ]
+    },
+    "note": "价值分只反映『与池内工作的差距 + 是否有明确应用对象』，不代表真实社会或经济价值"
+   },
+   "risk": {
+    "score": 0.125,
+    "items": [
+     {
+      "direction_id": "D2",
+      "risk": "主张 D2-C1 被池内工作部分覆盖",
+      "code": "scope_mismatch",
+      "weight": 0.5,
+      "impact": "需要明确与最近工作的差异维度（任务/方法/数据/评价）",
+      "mitigation": "在比较矩阵里补一列差异说明，并写进引言"
+     }
+    ],
+    "weight_sum": 0.5,
+    "max_total": 4.0,
+    "note": "风险分高=失败风险大，与可行性分并置阅读，不并入单一总分；冲突条目两侧引文逐字保留"
+   },
+   "four_dimension": {
+    "novelty": {
+     "score": 0.5882,
+     "band": "中",
+     "verdict_counts": {
+      "covered": 0,
+      "partially_covered": 1,
+      "not_found_in_scope": 0,
+      "undetermined": 0
+     },
+     "basis": "mean_max_similarity=0.4118（pool_observed）"
+    },
+    "feasibility": {
+     "score": 0.9,
+     "level": "supported",
+     "supported_ratio": 1.0,
+     "conclusion": "在 数据可得、算力/设备可得、周期可控、方法能力具备、伦理与合规、可比基线存在 均有来源的前提下可行（record_evidence 条目强度受限于池内证据，非任务承诺）；其中 P_DATA、P_BASELINE 来自池内证据（E010, E011），强度低于任务给定前提"
+    },
+    "value": {
+     "score": 0.65,
+     "signals": {
+      "gap_signal": 0.5,
+      "application_signal": 1.0,
+      "method_reuse_signal": 0.5
+     }
+    },
+    "risk": {
+     "score": 0.125,
+     "weight_sum": 0.5
+    },
+    "weights": {
+     "novelty": 0.3,
+     "feasibility": 0.3,
+     "value": 0.25,
+     "risk": 0.15
+    },
+    "note": "四维并置，不合成单一总分：新颖性与可行性的取舍必须由决策者看到原始计数后再定"
+   }
+  }
+ ],
+ "证据矩阵": [
+  {
+   "evidence_id": "E001",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC01",
+   "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+   "year": 2023,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces.",
+   "char_span": {
+    "start": 0,
+    "end": 142
+   },
+   "quote_verified": true,
+   "body_sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC01#text",
+    "char_span": {
+     "start": 0,
+     "end": 142
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "machine learning potential",
+    "uncertainty"
+   ],
+   "key_coverage": 1.0,
+   "strength": "direct",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "1bf918d0e1b7cf36429d9193d577fef2e31751806ae19d39a47abcaa6e46fdaf"
+  },
+  {
+   "evidence_id": "E002",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply transfer learning of machine learning potentials from bulk training data to interface coating problems.",
+   "char_span": {
+    "start": 0,
+    "end": 112
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 0,
+     "end": 112
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "machine learning potential"
+   ],
+   "key_coverage": 0.5672,
+   "strength": "indirect",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "48869677050d334c5afb60fb1e033dceae634cbf05f5453d573a188914d2906f"
+  },
+  {
+   "evidence_id": "E003",
+   "use": "retrieval",
+   "direction_id": "D1",
+   "record_id": "REC08",
+   "title": "Benchmarking uncertainty quantification for atomistic simulations",
+   "year": 2024,
+   "venue": "Synthetic Journal of Materials Informatics",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "A benchmark compares uncertainty quantification methods for atomistic simulations of solid interfaces;",
+   "char_span": {
+    "start": 0,
+    "end": 102
+   },
+   "quote_verified": true,
+   "body_sha256": "819b8266f7ed5fe6299309355c6fa22b0bf73f1381be6c21d41179f2cfba2df9",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC08#text",
+    "char_span": {
+     "start": 0,
+     "end": 102
+    }
+   },
+   "matched_terms": [
+    "interface",
+    "uncertainty"
+   ],
+   "key_coverage": 0.5672,
+   "strength": "indirect",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "50068e1d3720d16fecc77ff18151eac38fa1ca7787643b3a596e60a83bd7fdb5"
+  },
+  {
+   "evidence_id": "E004",
+   "use": "retrieval",
+   "direction_id": "D2",
+   "record_id": "REC04",
+   "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+   "year": 2023,
+   "venue": "Synthetic Journal of Materials Vision",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply a convolutional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and report reusable grain statistics.",
+   "char_span": {
+    "start": 0,
+    "end": 155
+   },
+   "quote_verified": true,
+   "body_sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC04#text",
+    "char_span": {
+     "start": 0,
+     "end": 155
+    }
+   },
+   "matched_terms": [
+    "segmentation"
+   ],
+   "key_coverage": 1.0,
+   "strength": "direct",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "5702523fecd8e53f13107a492f429839814004f37a41a4fdb4d1dd8d814beda1"
+  },
+  {
+   "evidence_id": "E005",
+   "use": "novelty_overlap",
+   "direction_id": "D1",
+   "record_id": "REC01",
+   "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+   "year": 2023,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We propose a framework for training machine learning potentials with calibrated uncertainty quantification for sulfide electrolyte interfaces.",
+   "char_span": {
+    "start": 0,
+    "end": 142
+   },
+   "quote_verified": true,
+   "body_sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC01#text",
+    "char_span": {
+     "start": 0,
+     "end": 142
+    }
+   },
+   "matched_terms": [
+    "calibrated",
+    "electrolyte",
+    "for",
+    "framework",
+    "interfaces",
+    "learning",
+    "machine",
+    "potentials",
+    "propose",
+    "quantification",
+    "sulfide",
+    "training",
+    "uncertainty",
+    "we",
+    "with"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "1bf918d0e1b7cf36429d9193d577fef2e31751806ae19d39a47abcaa6e46fdaf"
+  },
+  {
+   "evidence_id": "E006",
+   "use": "novelty_overlap",
+   "direction_id": "D1",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "an",
+    "dataset",
+    "for",
+    "open",
+    "release",
+    "we",
+    "with"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E007",
+   "use": "premise_evidence",
+   "direction_id": "D1",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "dataset"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E008",
+   "use": "premise_evidence",
+   "direction_id": "D1",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "The transferred potential is compared against a bulk-trained baseline and reduces interface force error.",
+   "char_span": {
+    "start": 113,
+    "end": 217
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 113,
+     "end": 217
+    }
+   },
+   "matched_terms": [
+    "baseline"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": "-1",
+    "terms": [
+     "reduce",
+     "reduces"
+    ],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "d46ed631decc10dc1a96684b1ead1803d3f337ba6f303d4b9187524a69e782e9"
+  },
+  {
+   "evidence_id": "E009",
+   "use": "novelty_overlap",
+   "direction_id": "D2",
+   "record_id": "REC04",
+   "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+   "year": 2023,
+   "venue": "Synthetic Journal of Materials Vision",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We apply a convolutional segmentation network to electron microscopy images of grain boundaries in solid electrolytes and report reusable grain statistics.",
+   "char_span": {
+    "start": 0,
+    "end": 155
+   },
+   "quote_verified": true,
+   "body_sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC04#text",
+    "char_span": {
+     "start": 0,
+     "end": 155
+    }
+   },
+   "matched_terms": [
+    "and",
+    "apply",
+    "in",
+    "report",
+    "segmentation",
+    "to",
+    "we"
+   ],
+   "key_coverage": 1.0,
+   "strength": "overlap",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "5702523fecd8e53f13107a492f429839814004f37a41a4fdb4d1dd8d814beda1"
+  },
+  {
+   "evidence_id": "E010",
+   "use": "premise_evidence",
+   "direction_id": "D2",
+   "record_id": "REC10",
+   "title": "Open benchmark dataset for solid electrolyte conductivity",
+   "year": 2025,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "We release an open benchmark dataset for solid electrolyte ionic conductivity covering 200 compositions with measured conductivity values.",
+   "char_span": {
+    "start": 0,
+    "end": 138
+   },
+   "quote_verified": true,
+   "body_sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC10#text",
+    "char_span": {
+     "start": 0,
+     "end": 138
+    }
+   },
+   "matched_terms": [
+    "dataset"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": null,
+    "terms": [],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "627a5045c1b03f35c9b424852b16cba2940836c9afa8bc3418aad958e725f0c1"
+  },
+  {
+   "evidence_id": "E011",
+   "use": "premise_evidence",
+   "direction_id": "D2",
+   "record_id": "REC02",
+   "title": "Transfer learning of potentials from bulk to interfaces",
+   "year": 2022,
+   "venue": "Synthetic Journal of Power Materials",
+   "doi": "",
+   "type": "journal-article",
+   "source": "synthetic-local-corpus",
+   "source_file": "inline",
+   "extraction_method": "inline_abstract",
+   "quote_field": "text",
+   "quote": "The transferred potential is compared against a bulk-trained baseline and reduces interface force error.",
+   "char_span": {
+    "start": 113,
+    "end": 217
+   },
+   "quote_verified": true,
+   "body_sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+   "location": {
+    "field": "text",
+    "page": null,
+    "record_pointer": "REC02#text",
+    "char_span": {
+     "start": 113,
+     "end": 217
+    }
+   },
+   "matched_terms": [
+    "baseline"
+   ],
+   "key_coverage": 0.125,
+   "strength": "premise",
+   "direction": {
+    "value": "-1",
+    "terms": [
+     "reduce",
+     "reduces"
+    ],
+    "strength_terms": [],
+    "negated": false
+   },
+   "sha256_quote": "d46ed631decc10dc1a96684b1ead1803d3f337ba6f303d4b9187524a69e782e9"
+  }
+ ],
+ "不确定性": [
+  {
+   "item": "创新性",
+   "reason": "['D1-C1'] 已被池内工作覆盖：需改述贡献边界，不能按原表述投稿"
+  },
+  {
+   "item": "文献覆盖",
+   "reason": "未联网：新颖性只在 case 记录池内判定（pool_observed），池外同题工作可能已存在；not_found_in_scope 已附池外核验建议（未执行）"
+  },
+  {
+   "item": "相似度口径",
+   "reason": "token 覆盖率对同义改写不敏感；跨语言工作可能被低估相似度"
+  }
+ ],
+ "状态说明": {
+  "overall": "complete",
+  "completed": [
+   "来源/记录双结构摄入",
+   "候选方向字段化",
+   "前瞻协议落盘",
+   "逐条筛选留痕",
+   "逐方向检索取证",
+   "证据表与引文校验",
+   "池内新颖性评估（pool_observed）",
+   "前提三分源与条件式可行性",
+   "冲突双列与风险登记",
+   "价值与风险并置",
+   "四维评分与决策包",
+   "有界研究建议"
+  ],
+  "unmet": [],
+  "notes": [
+   "方向 D1 前提 P_DATA 来自池内证据（E007），强度低于任务给定前提",
+   "方向 D1 前提 P_BASELINE 来自池内证据（E008），强度低于任务给定前提",
+   "方向 D2 前提 P_DATA 来自池内证据（E010），强度低于任务给定前提",
+   "方向 D2 前提 P_BASELINE 来自池内证据（E011），强度低于任务给定前提",
+   "契约字段 研究产物 绑定自产物分区 candidate_assessments",
+   "契约字段 证据矩阵 绑定自产物分区 evidence_table",
+   "契约字段 不确定性 绑定自三段式 uncertainty",
+   "契约字段 状态说明 绑定自三段式 status"
+  ]
+ },
+ "evidence": {
+  "sources_manifest": {
+   "sources": [],
+   "count": 0,
+   "note": "来源文件清单与解析结果；记录通过 source_path/source_id 指到来源文件"
+  },
+  "protocol": {
+   "protocol_status": "registered_prospective",
+   "protocol_id": "PROTO-EXAMPLE-052",
+   "prospective": true,
+   "inclusion": [
+    {
+     "criterion_id": "IN1",
+     "text": "正文涉及硫化物/界面/晶界/电解质等池内主题",
+     "all_keys": [],
+     "any_keys": [
+      "sulfide",
+      "interface",
+      "grain",
+      "electrolyte",
+      "界面",
+      "电解质",
+      "晶界"
+     ],
+     "type_in": [],
+     "body_readable": false,
+     "min_chars": 0
+    },
+    {
+     "criterion_id": "IN2",
+     "text": "正文可读且不少于 40 个字符",
+     "all_keys": [],
+     "any_keys": [],
+     "type_in": [],
+     "body_readable": true,
+     "min_chars": 40
+    }
+   ],
+   "exclusion": [
+    {
+     "criterion_id": "EX1",
+     "text": "协议、手册、术语表等非实证记录",
+     "all_keys": [],
+     "any_keys": [],
+     "type_in": [
+      "protocol",
+      "handbook",
+      "glossary"
+     ],
+     "body_readable": false,
+     "min_chars": 0
+    }
+   ],
+   "stop_conditions": [
+    "每个候选方向连续一轮检索无新增证据即停止"
+   ],
+   "search_order": [
+    "D1",
+    "D2"
+   ],
+   "source": "case.protocol",
+   "input_gap": null,
+   "fallback": null
+  },
+  "screening": {
+   "counts": {
+    "screened": 10,
+    "included": 9,
+    "excluded": 1,
+    "unscored_no_body": 0
+   },
+   "rule": "前瞻协议（prospective）：协议先写入 work/plan.json 再逐条筛选；每条记录记 criterion_hits（命中/未命中哪条标准）；仅 included 记录进入检索与新颖性比对；协议缺失记 R_PROTOCOL_MISSING 并按声明回退口径筛选（fallback=true），不冒充已按协议筛选",
+   "fallback": null,
+   "input_gap": null
+  },
+  "execution": {
+   "tool_calls": [
+    {
+     "seq": 1,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC01",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 215,
+      "sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+      "error": ""
+     }
+    },
+    {
+     "seq": 2,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC02",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 217,
+      "sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+      "error": ""
+     }
+    },
+    {
+     "seq": 3,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC03",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 116,
+      "sha256": "d7e1921eed18dcf83760046c53c3eeb6081229bde33bfddf9003876feb7c7398",
+      "error": ""
+     }
+    },
+    {
+     "seq": 4,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC04",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 155,
+      "sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+      "error": ""
+     }
+    },
+    {
+     "seq": 5,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC05",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 130,
+      "sha256": "f8b0364f16fb87d7e30868cfed7343d760f70a1f93917cab23da40d278368ff6",
+      "error": ""
+     }
+    },
+    {
+     "seq": 6,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC06",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 109,
+      "sha256": "bbd22ca8dd255c0592489a692beffce00e4803f106e53eb285d97ad17d0cb68b",
+      "error": ""
+     }
+    },
+    {
+     "seq": 7,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC07",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 129,
+      "sha256": "b3b3f4a3099e84705b4e4cee706a3e9f206cc8de07c03d492c52923ebf1cad40",
+      "error": ""
+     }
+    },
+    {
+     "seq": 8,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC08",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 177,
+      "sha256": "819b8266f7ed5fe6299309355c6fa22b0bf73f1381be6c21d41179f2cfba2df9",
+      "error": ""
+     }
+    },
+    {
+     "seq": 9,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC09",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 146,
+      "sha256": "7cd4713e6cb2d7d514eefdf95702faeee5a522838106a9102b8b21f4d9e4838a",
+      "error": ""
+     }
+    },
+    {
+     "seq": 10,
+     "tool": "source_extract",
+     "params": {
+      "record_id": "REC10",
+      "source_ref": "",
+      "priority": [
+       "inline_text",
+       "inline_abstract",
+       "sidecar_txt",
+       "sidecar_ocr_txt",
+       "pdf_extract",
+       "docx_xml",
+       "file_read",
+       "missing"
+      ]
+     },
+     "result": {
+      "method": "inline_abstract",
+      "n_chars": 138,
+      "sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+      "error": ""
+     }
+    },
+    {
+     "seq": 11,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC01",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 12,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC02",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 13,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC03",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 14,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC04",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 15,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC05",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 16,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC06",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 17,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC07",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "excluded",
+      "reason": "未满足纳入标准 IN1"
+     }
+    },
+    {
+     "seq": 18,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC08",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 19,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC09",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 20,
+     "tool": "protocol_screen",
+     "params": {
+      "record_id": "REC10",
+      "protocol_id": "PROTO-EXAMPLE-052",
+      "inclusion": [
+       "IN1",
+       "IN2"
+      ],
+      "exclusion": [
+       "EX1"
+      ],
+      "fallback": false
+     },
+     "result": {
+      "outcome": "included",
+      "reason": "满足全部纳入标准"
+     }
+    },
+    {
+     "seq": 21,
+     "tool": "local_retrieve",
+     "params": {
+      "plan_id": "PL-D1",
+      "keys": [
+       "machine learning potential",
+       "interface",
+       "uncertainty"
+      ],
+      "keys_present_in_corpus": [
+       "machine learning potential",
+       "interface",
+       "uncertainty"
+      ],
+      "absent_keys": [],
+      "expression": "machine learning potential OR interface OR uncertainty",
+      "top_k": 6,
+      "min_score": 0.3,
+      "min_coverage": 0.3,
+      "scoring": "record_score = 0.5·min(bm25,1) + 0.5·idf_coverage(keys)；多字键先做 token 展开（CJK 二元组）再进 BM25 与键级命中判定",
+      "corpus_records": 9
+     },
+     "result": {
+      "hits": 4,
+      "new_evidence": 4,
+      "rounds": 2,
+      "stopped_by": "no_new_evidence",
+      "top": [
+       {
+        "record_id": "REC01",
+        "score": 1.0,
+        "coverage": 1.0,
+        "bm25": 6.7988
+       },
+       {
+        "record_id": "REC02",
+        "score": 0.7836,
+        "coverage": 0.5672,
+        "bm25": 7.4479
+       },
+       {
+        "record_id": "REC05",
+        "score": 0.7164,
+        "coverage": 0.4328,
+        "bm25": 1.6455
+       },
+       {
+        "record_id": "REC08",
+        "score": 0.7164,
+        "coverage": 0.4328,
+        "bm25": 2.1433
+       }
+      ]
+     }
+    },
+    {
+     "seq": 22,
+     "tool": "local_retrieve",
+     "params": {
+      "plan_id": "PL-D2",
+      "keys": [
+       "segmentation",
+       "polymer",
+       "crack"
+      ],
+      "keys_present_in_corpus": [
+       "segmentation"
+      ],
+      "absent_keys": [
+       "polymer",
+       "crack"
+      ],
+      "expression": "segmentation OR polymer OR crack",
+      "top_k": 6,
+      "min_score": 0.3,
+      "min_coverage": 0.3,
+      "scoring": "record_score = 0.5·min(bm25,1) + 0.5·idf_coverage(keys)；多字键先做 token 展开（CJK 二元组）再进 BM25 与键级命中判定",
+      "corpus_records": 9
+     },
+     "result": {
+      "hits": 1,
+      "new_evidence": 1,
+      "rounds": 2,
+      "stopped_by": "no_new_evidence",
+      "top": [
+       {
+        "record_id": "REC04",
+        "score": 1.0,
+        "coverage": 1.0,
+        "bm25": 2.9599
+       }
+      ]
+     }
+    },
+    {
+     "seq": 23,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "retrieval",
+      "direction_id": "D1",
+      "record_id": "REC01",
+      "field": "text",
+      "matched_terms": [
+       "interface",
+       "machine learning potential",
+       "uncertainty"
+      ]
+     },
+     "result": {
+      "evidence_id": "E001",
+      "char_span": {
+       "start": 0,
+       "end": 142
+      },
+      "quote_chars": 142,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 24,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E001",
+      "record_id": "REC01",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 25,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "retrieval",
+      "direction_id": "D1",
+      "record_id": "REC02",
+      "field": "text",
+      "matched_terms": [
+       "interface",
+       "machine learning potential"
+      ]
+     },
+     "result": {
+      "evidence_id": "E002",
+      "char_span": {
+       "start": 0,
+       "end": 112
+      },
+      "quote_chars": 112,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 26,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E002",
+      "record_id": "REC02",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 27,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "retrieval",
+      "direction_id": "D1",
+      "record_id": "REC08",
+      "field": "text",
+      "matched_terms": [
+       "interface",
+       "uncertainty"
+      ]
+     },
+     "result": {
+      "evidence_id": "E003",
+      "char_span": {
+       "start": 0,
+       "end": 102
+      },
+      "quote_chars": 102,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 28,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E003",
+      "record_id": "REC08",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "819b8266f7ed5fe6299309355c6fa22b0bf73f1381be6c21d41179f2cfba2df9",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 29,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "retrieval",
+      "direction_id": "D2",
+      "record_id": "REC04",
+      "field": "text",
+      "matched_terms": [
+       "segmentation"
+      ]
+     },
+     "result": {
+      "evidence_id": "E004",
+      "char_span": {
+       "start": 0,
+       "end": 155
+      },
+      "quote_chars": 155,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 30,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E004",
+      "record_id": "REC04",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 31,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "novelty_overlap",
+      "direction_id": "D1",
+      "record_id": "REC01",
+      "field": "text",
+      "matched_terms": [
+       "calibrated",
+       "electrolyte",
+       "for",
+       "framework",
+       "interfaces",
+       "learning",
+       "machine",
+       "potentials",
+       "propose",
+       "quantification",
+       "sulfide",
+       "training",
+       "uncertainty",
+       "we",
+       "with"
+      ]
+     },
+     "result": {
+      "evidence_id": "E005",
+      "char_span": {
+       "start": 0,
+       "end": 142
+      },
+      "quote_chars": 142,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 32,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E005",
+      "record_id": "REC01",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "1d1625f3f0c2d81ea4c6e77a85b78d52c7151aacdf638f35ff7500439330c4f6",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 33,
+     "tool": "novelty_compare",
+     "params": {
+      "direction_id": "D1",
+      "claim_id": "D1-C1",
+      "pool_size": 9,
+      "claim_tokens": 15,
+      "thresholds": {
+       "covered": 0.5,
+       "partial": 0.25
+      }
+     },
+     "result": {
+      "verdict": "covered",
+      "code": "R_COVERED",
+      "max_similarity": 1.0,
+      "nearest_record_id": "REC01",
+      "overlap_quote_evidence_ids": [
+       "E005"
+      ]
+     }
+    },
+    {
+     "seq": 34,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "novelty_overlap",
+      "direction_id": "D1",
+      "record_id": "REC10",
+      "field": "text",
+      "matched_terms": [
+       "an",
+       "dataset",
+       "for",
+       "open",
+       "release",
+       "we",
+       "with"
+      ]
+     },
+     "result": {
+      "evidence_id": "E006",
+      "char_span": {
+       "start": 0,
+       "end": 138
+      },
+      "quote_chars": 138,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 35,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E006",
+      "record_id": "REC10",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 36,
+     "tool": "novelty_compare",
+     "params": {
+      "direction_id": "D1",
+      "claim_id": "D1-C2",
+      "pool_size": 9,
+      "claim_tokens": 19,
+      "thresholds": {
+       "covered": 0.5,
+       "partial": 0.25
+      }
+     },
+     "result": {
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.3684,
+      "nearest_record_id": "REC10",
+      "overlap_quote_evidence_ids": [
+       "E006"
+      ]
+     }
+    },
+    {
+     "seq": 37,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "premise_evidence",
+      "direction_id": "D1",
+      "record_id": "REC10",
+      "field": "text",
+      "matched_terms": [
+       "dataset"
+      ]
+     },
+     "result": {
+      "evidence_id": "E007",
+      "char_span": {
+       "start": 0,
+       "end": 138
+      },
+      "quote_chars": 138,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 38,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E007",
+      "record_id": "REC10",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 39,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_DATA",
+      "check_keys": [
+       "data_access",
+       "data",
+       "datasets",
+       "data_source"
+      ],
+      "evidence_cues": [
+       "数据集",
+       "队列",
+       "自建数据",
+       "标注语料",
+       "dataset",
+       "cohort",
+       "corpus",
+       "采集"
+      ]
+     },
+     "result": {
+      "source": "record_evidence",
+      "evidence_id": "E007",
+      "record_id": "REC10"
+     }
+    },
+    {
+     "seq": 40,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_COMPUTE",
+      "check_keys": [
+       "compute",
+       "gpu",
+       "instrument",
+       "equipment",
+       "lab_access"
+      ],
+      "evidence_cues": [
+       "算力",
+       "设备",
+       "仪器",
+       "实验平台",
+       "gpu",
+       "GPU",
+       "cluster",
+       "workstation"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 41,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_TIME",
+      "check_keys": [
+       "duration",
+       "timeline",
+       "deadline",
+       "months",
+       "time_minutes"
+      ],
+      "evidence_cues": [
+       "周期",
+       "个月",
+       "周",
+       "时间窗",
+       "months",
+       "timeline",
+       "deadline"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.duration = 18 个月",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 42,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_SKILL",
+      "check_keys": [
+       "team",
+       "skills",
+       "expertise",
+       "collaborators"
+      ],
+      "evidence_cues": [
+       "团队",
+       "合作",
+       "博士",
+       "工程师",
+       "方法学",
+       "team",
+       "collaborator",
+       "expertise"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 43,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_ETHICS",
+      "check_keys": [
+       "ethics",
+       "irb",
+       "consent",
+       "approval",
+       "privacy"
+      ],
+      "evidence_cues": [
+       "伦理",
+       "知情同意",
+       "批件",
+       "irb",
+       "IRB",
+       "ethics",
+       "consent"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 44,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "premise_evidence",
+      "direction_id": "D1",
+      "record_id": "REC02",
+      "field": "text",
+      "matched_terms": [
+       "baseline"
+      ]
+     },
+     "result": {
+      "evidence_id": "E008",
+      "char_span": {
+       "start": 113,
+       "end": 217
+      },
+      "quote_chars": 104,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 45,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E008",
+      "record_id": "REC02",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 46,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D1",
+      "premise_id": "P_BASELINE",
+      "check_keys": [
+       "baseline",
+       "comparison",
+       "benchmark",
+       "control"
+      ],
+      "evidence_cues": [
+       "基线",
+       "对照",
+       "空白配方",
+       "blank",
+       "baseline",
+       "control",
+       "benchmark",
+       "对照组"
+      ]
+     },
+     "result": {
+      "source": "record_evidence",
+      "evidence_id": "E008",
+      "record_id": "REC02"
+     }
+    },
+    {
+     "seq": 47,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "novelty_overlap",
+      "direction_id": "D2",
+      "record_id": "REC04",
+      "field": "text",
+      "matched_terms": [
+       "and",
+       "apply",
+       "in",
+       "report",
+       "segmentation",
+       "to",
+       "we"
+      ]
+     },
+     "result": {
+      "evidence_id": "E009",
+      "char_span": {
+       "start": 0,
+       "end": 155
+      },
+      "quote_chars": 155,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 48,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E009",
+      "record_id": "REC04",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "2d2920f8ac0d95081d7c7660b17b7288857f2326f2c2a180d1542fb34e08b82c",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 49,
+     "tool": "novelty_compare",
+     "params": {
+      "direction_id": "D2",
+      "claim_id": "D2-C1",
+      "pool_size": 9,
+      "claim_tokens": 17,
+      "thresholds": {
+       "covered": 0.5,
+       "partial": 0.25
+      }
+     },
+     "result": {
+      "verdict": "partially_covered",
+      "code": "R_PARTIAL",
+      "max_similarity": 0.4118,
+      "nearest_record_id": "REC04",
+      "overlap_quote_evidence_ids": [
+       "E009"
+      ]
+     }
+    },
+    {
+     "seq": 50,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "premise_evidence",
+      "direction_id": "D2",
+      "record_id": "REC10",
+      "field": "text",
+      "matched_terms": [
+       "dataset"
+      ]
+     },
+     "result": {
+      "evidence_id": "E010",
+      "char_span": {
+       "start": 0,
+       "end": 138
+      },
+      "quote_chars": 138,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 51,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E010",
+      "record_id": "REC10",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "1665febd8db577d92c796258e94c989b33a6fcb7d973da8ed27c15c4b54b71c2",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 52,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_DATA",
+      "check_keys": [
+       "data_access",
+       "data",
+       "datasets",
+       "data_source"
+      ],
+      "evidence_cues": [
+       "数据集",
+       "队列",
+       "自建数据",
+       "标注语料",
+       "dataset",
+       "cohort",
+       "corpus",
+       "采集"
+      ]
+     },
+     "result": {
+      "source": "record_evidence",
+      "evidence_id": "E010",
+      "record_id": "REC10"
+     }
+    },
+    {
+     "seq": 53,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_COMPUTE",
+      "check_keys": [
+       "compute",
+       "gpu",
+       "instrument",
+       "equipment",
+       "lab_access"
+      ],
+      "evidence_cues": [
+       "算力",
+       "设备",
+       "仪器",
+       "实验平台",
+       "gpu",
+       "GPU",
+       "cluster",
+       "workstation"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.compute = 4×GPU，总预算 20,000 GPU-hour",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 54,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_TIME",
+      "check_keys": [
+       "duration",
+       "timeline",
+       "deadline",
+       "months",
+       "time_minutes"
+      ],
+      "evidence_cues": [
+       "周期",
+       "个月",
+       "周",
+       "时间窗",
+       "months",
+       "timeline",
+       "deadline"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.duration = 18 个月",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 55,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_SKILL",
+      "check_keys": [
+       "team",
+       "skills",
+       "expertise",
+       "collaborators"
+      ],
+      "evidence_cues": [
+       "团队",
+       "合作",
+       "博士",
+       "工程师",
+       "方法学",
+       "team",
+       "collaborator",
+       "expertise"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.team = 2 名计算材料学博士生 + 1 名电镜工程师",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 56,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_ETHICS",
+      "check_keys": [
+       "ethics",
+       "irb",
+       "consent",
+       "approval",
+       "privacy"
+      ],
+      "evidence_cues": [
+       "伦理",
+       "知情同意",
+       "批件",
+       "irb",
+       "IRB",
+       "ethics",
+       "consent"
+      ]
+     },
+     "result": {
+      "source": "task_given",
+      "basis": "case.constraints.ethics = 不涉及人体或动物数据，无需伦理审批",
+      "evidence_id": null
+     }
+    },
+    {
+     "seq": 57,
+     "tool": "evidence_extract",
+     "params": {
+      "use": "premise_evidence",
+      "direction_id": "D2",
+      "record_id": "REC02",
+      "field": "text",
+      "matched_terms": [
+       "baseline"
+      ]
+     },
+     "result": {
+      "evidence_id": "E011",
+      "char_span": {
+       "start": 113,
+       "end": 217
+      },
+      "quote_chars": 104,
+      "source_file": "inline"
+     }
+    },
+    {
+     "seq": 58,
+     "tool": "quote_verify",
+     "params": {
+      "evidence_id": "E011",
+      "record_id": "REC02",
+      "source_file": "inline",
+      "field": "text"
+     },
+     "result": {
+      "exact_substring": true,
+      "sha256": "fb6939ca09c225234b17bad8c9ae90ddf8a3ade04bbfe4edfab53934729b0b2a",
+      "verdict": "verified"
+     }
+    },
+    {
+     "seq": 59,
+     "tool": "premise_check",
+     "params": {
+      "direction_id": "D2",
+      "premise_id": "P_BASELINE",
+      "check_keys": [
+       "baseline",
+       "comparison",
+       "benchmark",
+       "control"
+      ],
+      "evidence_cues": [
+       "基线",
+       "对照",
+       "空白配方",
+       "blank",
+       "baseline",
+       "control",
+       "benchmark",
+       "对照组"
+      ]
+     },
+     "result": {
+      "source": "record_evidence",
+      "evidence_id": "E011",
+      "record_id": "REC02"
+     }
+    }
+   ],
+   "corpus": [
+    {
+     "record_id": "REC01",
+     "title": "Uncertainty-aware machine learning potentials for sulfide interfaces",
+     "year": 2023,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC02",
+     "title": "Transfer learning of potentials from bulk to interfaces",
+     "year": 2022,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC03",
+     "title": "Operando characterization of sulfide electrolyte interfaces",
+     "year": 2024,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC04",
+     "title": "Convolutional segmentation of grain boundaries in solid electrolytes",
+     "year": 2023,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC05",
+     "title": "Deep learning grain boundary detection in ceramics",
+     "year": 2021,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC06",
+     "title": "Space charge layers dominate sulfide interface resistance",
+     "year": 2020,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC07",
+     "title": "Compositional screening of fast ionic conductors",
+     "year": 2019,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": false
+    },
+    {
+     "record_id": "REC08",
+     "title": "Benchmarking uncertainty quantification for atomistic simulations",
+     "year": 2024,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC09",
+     "title": "Cryo-EM interphase composition in sulfide electrolytes",
+     "year": 2025,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    },
+    {
+     "record_id": "REC10",
+     "title": "Open benchmark dataset for solid electrolyte conductivity",
+     "year": 2025,
+     "type": "journal-article",
+     "source": "synthetic-local-corpus",
+     "extraction_method": "inline_abstract",
+     "included": true
+    }
+   ],
+   "recompute": "record_score = 0.5·min(bm25,1) + 0.5·idf_coverage(keys)；claim_coverage = |claim_tokens ∩ record_tokens| / |claim_tokens|；每条 tool_call 的 params 可原样重放"
+  },
+  "evidence_table_map": {
+   "rows": 11,
+   "per_direction": {
+    "D1": [
+     "E001",
+     "E002",
+     "E003",
+     "E005",
+     "E006",
+     "E007",
+     "E008"
+    ],
+    "D2": [
+     "E004",
+     "E009",
+     "E010",
+     "E011"
+    ]
+   },
+   "use_counts": {
+    "novelty_overlap": 3,
+    "premise_evidence": 4,
+    "retrieval": 4
+   },
+   "quote_rule": "证据句必须是记录正文的逐字整句；source_file + char_span（按 quote_field 字段内字符区间）+ 精确子串校验；binary 来源（PDF/DOCX）以 body_sha256 锚定提取文本"
+  },
+  "novelty": {
+   "scope": "pool_observed",
+   "pool_size": 9,
+   "rule": "新颖性判定只在 case 记录池内做（novelty_scope=pool_observed）：每条主张给最近邻记录、逐维重合点与逐字引文；not_found_in_scope 只写「池内未见（pool_observed）」，绝不写成全球首创；同时给池外核验建议（检索式 + 数据库建议）并声明本轮未执行全局检索",
+   "nearest_neighbor_rule": "每条主张在池内取 claim_coverage 最高的记录为最近邻；最近邻必须给逐字引文（evidence_id 回链证据表，char_span 精确子串校验）与逐维重合点",
+   "referenced_quote_ids": [
+    "E005",
+    "E006",
+    "E009"
+   ],
+   "unresolved_quote_ids": []
+  },
+  "premises": {
+   "rule": "可行性前提逐条标 source=task_given（case.constraints 有字段）| record_evidence（池内证据，必须带 evidence_id 且引文可复核）| explicit_assumption（无来源）；结论随前提强度降级：有假设前提时写「若 P 成立则…」",
+   "source_priority": [
+    "task_given",
+    "record_evidence",
+    "explicit_assumption"
+   ],
+   "strength": {
+    "task_given": 1.0,
+    "record_evidence": 0.7,
+    "explicit_assumption": 0.0,
+    "note": "强度外置可复算：record_evidence 低于 task_given（池内证据是观察不是承诺），assumption 为 0"
+   },
+   "referenced_evidence_ids": [
+    "E007",
+    "E008",
+    "E010",
+    "E011"
+   ],
+   "unresolved_evidence_ids": []
+  },
+  "backlink": {
+   "rule": "回链：前提 record_evidence 与新颖性重合引文引用的 evidence_id 必须能在证据表解析且 quote 校验通过",
+   "referenced_ids": [
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011"
+   ],
+   "unresolved_ids": [],
+   "quote_verified_rows": 11,
+   "quote_rows_total": 11
+  },
+  "conflicts": {
+   "rule": "同候选方向内共享检索键的证据方向词典成对比对，冲突双列（side_a/side_b 各带逐字引文、方向与强度词）；骑在冲突证据上的候选方向，风险条目如实标注两侧引文，不仲裁、不合并",
+   "items": []
+  },
+  "proposals": {
+   "requested": true,
+   "rule": "有界研究建议逐条引用 constraints；constraints 缺失时只给方向级建议并声明「无约束可依」；一律 not_claimed：不声称已完成实验、不声称全局完备、不越给定来源与约束范围",
+   "items": [
+    {
+     "proposal_id": "PR01",
+     "direction_id": "D1",
+     "kind": "revise_claim_boundary",
+     "statement": "约束内建议：主张 D1-C1 已被池内工作 REC01 覆盖，建议改述贡献边界或补差异化实验后再启动。",
+     "basis": {
+      "claim_id": "D1-C1",
+      "verdict": "covered",
+      "evidence_ids": [
+       "E005"
+      ],
+      "conflict_ids": []
+     },
+     "constraint_refs": [
+      {
+       "ref": "application",
+       "value": "固态电池界面设计与失效预测"
+      },
+      {
+       "ref": "compute",
+       "value": "4×GPU，总预算 20,000 GPU-hour"
+      },
+      {
+       "ref": "duration",
+       "value": "18 个月"
+      },
+      {
+       "ref": "ethics",
+       "value": "不涉及人体或动物数据，无需伦理审批"
+      },
+      {
+       "ref": "stakeholders",
+       "value": [
+        "电池研发团队",
+        "表征平台"
+       ]
+      },
+      {
+       "ref": "team",
+       "value": "2 名计算材料学博士生 + 1 名电镜工程师"
+      }
+     ],
+     "not_claimed": [
+      "不声称已完成实验",
+      "不声称覆盖全局完备性",
+      "不越过给定来源与约束范围",
+      "不声称已完成实验",
+      "不超出给定记录池与约束范围"
+     ]
+    }
+   ]
+  },
+  "exclusions": [],
+  "artifacts": [
+   "plan.json"
+  ],
+  "plan_file": {
+   "file": "plan.json",
+   "prospective": true,
+   "note": "协议/方向/筛选顺序先于筛选与打分落盘（优先 work 目录，不可写时回退 out 目录）"
+  },
+  "scope": {
+   "sources": [
+    "local-corpus"
+   ],
+   "novelty_scope": "pool_observed",
+   "note": "本轮只在给定记录池内检索与比对；不联网、不虚构工具调用；novelty_scope=pool_observed：池内未见≠全球首创；本示例全部记录与设想均为离线合成的教学样例，不代表任何真实研究结论；仅用于演示 skill 接口与最小使用流程，不是正式测试案例。"
+  },
+  "similarity": {
+   "tokenizer": "kit.tokens：英文按词、中文按二元组，去重",
+   "metric": "claim_coverage = |claim_tokens ∩ record_tokens| / |claim_tokens|（记录文本长于主张，故不用 Jaccard，避免长度惩罚）",
+   "covered_threshold": 0.5,
+   "partial_threshold": 0.25,
+   "min_claim_tokens": 5,
+   "note": "低于 min_claim_tokens 的主张无法稳定比对，判 undetermined 并计入 uncertainty，不冒充判定"
+  },
+  "rules": {
+   "dimensions": {
+    "novelty": {
+     "label": "新颖性",
+     "weight": 0.3,
+     "formula": "novelty = 1 - mean(claim_coverage of 可判定主张)；undetermined 主张不计入均值但单独计数；novelty_scope=pool_observed（只在 case 记录池内判定，分数不代表领域空白概率）",
+     "fallback_when_no_claims": "undetermined（无创新主张时不给分）"
+    },
+    "feasibility": {
+     "label": "可行性",
+     "weight": 0.3,
+     "formula": "feasibility = Σ(premise.strength) / total_premises；strength 按 premise_strength 取值（task_given=1.0、record_evidence=0.7、explicit_assumption=0.0）；supported_ratio = count(source≠explicit_assumption) / total 单独报告",
+     "levels": {
+      "supported": "无 assumption 前提且至少一条 task_given",
+      "conditional": "存在 assumption 前提：结论写「若 P 成立则…」",
+      "unconstrained": "constraints 缺失：不给『可行』结论，建议降为方向级"
+     },
+     "undetermined_rule": "premises 全部为 assumption 时记 conditional/low 并说明缺哪类资源"
+    },
+    "value": {
+     "label": "价值",
+     "weight": 0.25,
+     "formula": "value = 0.5*gap_signal + 0.3*application_signal + 0.2*method_reuse_signal，三个 signal 均为 0/0.5/1 三档",
+     "signal_rules": {
+      "gap_signal": "有 claim 判 not_found_in_scope(pool_observed) 且未被判 covered → 1；全部 partially_covered → 0.5；全部 covered → 0",
+      "application_signal": "case/候选方向给出 application/stakeholders/use_case 且与领域相关 → 1；仅方向文本提到 → 0.5；无 → 0",
+      "method_reuse_signal": "claim 类型含 method 或 data → 1；仅 scenario_transfer 或 conclusion_correction → 0.5；无 claim → 0"
+     }
+    },
+    "risk": {
+     "label": "风险",
+     "weight": 0.15,
+     "inverted": true,
+     "formula": "risk = clamp(sum(risk.weight) / risk_max_total)，risk.weight 见 risk_weights；assumption 前提、被覆盖主张、骑在冲突证据上的方向分别计入；risk 高表示失败风险大，不是好事",
+     "note": "风险分与可行性分不合并成单一总分，必须并置报告，避免用总分掩盖前提缺口"
+    }
+   },
+   "risk_weights": {
+    "premise_unsupported": 1.0,
+    "claim_covered_by_prior_art": 1.0,
+    "evidence_conflict": 0.8,
+    "scope_mismatch": 0.5,
+    "data_access_missing": 1.0,
+    "ethics_approval_missing": 0.8
+   },
+   "premise_ids": [
+    "P_DATA",
+    "P_COMPUTE",
+    "P_TIME",
+    "P_SKILL",
+    "P_ETHICS",
+    "P_BASELINE"
+   ],
+   "premise_strength": {
+    "task_given": 1.0,
+    "record_evidence": 0.7,
+    "explicit_assumption": 0.0,
+    "note": "强度外置可复算：record_evidence 低于 task_given（池内证据是观察不是承诺），assumption 为 0"
+   },
+   "verdict_bands": {
+    "strong": 0.7,
+    "moderate": 0.45,
+    "weak": 0.2
+   }
+  },
+  "contract": {
+   "研究产物": "逐候选方向的问题陈述 + 创新点判定（pool_observed）+ 条件式可行性 + 四维评估",
+   "证据矩阵": "证据表（evidence_id/record_id/char_span/逐字引文）与每条判断的回链",
+   "不确定性": "冲突证据、无法判定项、池内未见与全球首创的区分、显式假设清单",
+   "状态说明": "完成与未完成部分"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-052-POOL-OBSERVED",
+    "contract_keys": [
+     "不确定性",
+     "状态说明",
+     "研究产物",
+     "证据矩阵"
+    ]
+   },
+   {
+    "step": "intake",
+    "seq": 2,
+    "sources": 0,
+    "records": 10,
+    "directions": 2
+   },
+   {
+    "step": "plan_written",
+    "seq": 3,
+    "artifacts": [
+     "plan.json"
+    ]
+   },
+   {
+    "step": "screen",
+    "seq": 4,
+    "protocol": "registered_prospective",
+    "screened": 10,
+    "included": 9,
+    "excluded": 1,
+    "unscored_no_body": 0
+   },
+   {
+    "step": "assess_direction",
+    "seq": 5,
+    "direction_id": "D1",
+    "claims": 2,
+    "premises": 6
+   },
+   {
+    "step": "assess_direction",
+    "seq": 6,
+    "direction_id": "D2",
+    "claims": 1,
+    "premises": 6
+   },
+   {
+    "step": "execute",
+    "seq": 7,
+    "tool_calls": 59,
+    "evidence": 11,
+    "conflicts": 0,
+    "proposals": 1
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-052-POOL-OBSERVED"
+  ]
+ },
+ "status": {
+  "overall": "complete",
+  "completed": [
+   "来源/记录双结构摄入",
+   "候选方向字段化",
+   "前瞻协议落盘",
+   "逐条筛选留痕",
+   "逐方向检索取证",
+   "证据表与引文校验",
+   "池内新颖性评估（pool_observed）",
+   "前提三分源与条件式可行性",
+   "冲突双列与风险登记",
+   "价值与风险并置",
+   "四维评分与决策包",
+   "有界研究建议"
+  ],
+  "unmet": [],
+  "notes": [
+   "方向 D1 前提 P_DATA 来自池内证据（E007），强度低于任务给定前提",
+   "方向 D1 前提 P_BASELINE 来自池内证据（E008），强度低于任务给定前提",
+   "方向 D2 前提 P_DATA 来自池内证据（E010），强度低于任务给定前提",
+   "方向 D2 前提 P_BASELINE 来自池内证据（E011），强度低于任务给定前提",
+   "契约字段 研究产物 绑定自产物分区 candidate_assessments",
+   "契约字段 证据矩阵 绑定自产物分区 evidence_table",
+   "契约字段 不确定性 绑定自三段式 uncertainty",
+   "契约字段 状态说明 绑定自三段式 status"
+  ]
+ },
+ "uncertainty": [
+  {
+   "item": "创新性",
+   "reason": "['D1-C1'] 已被池内工作覆盖：需改述贡献边界，不能按原表述投稿"
+  },
+  {
+   "item": "文献覆盖",
+   "reason": "未联网：新颖性只在 case 记录池内判定（pool_observed），池外同题工作可能已存在；not_found_in_scope 已附池外核验建议（未执行）"
+  },
+  {
+   "item": "相似度口径",
+   "reason": "token 覆盖率对同义改写不敏感；跨语言工作可能被低估相似度"
+  }
+ ]
+}

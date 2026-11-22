@@ -168,6 +168,18 @@ def resolve_table_ref(ref, base_dir="."):
     for candidate in candidates:
         if candidate.exists():
             return candidate, candidates
+    # 精确候选全部落空：按文件名在各级 input/ 下递归搜索（限深 4，首个命中即用），
+    # 兜住"原案例与数据同目录（平铺引用）但工作案例被迁移"的情形。
+    name = raw.name
+    for base in bases:
+        search_root = base / "input" if (base / "input").is_dir() else base
+        try:
+            if search_root.is_dir():
+                for hit in sorted(search_root.rglob(name)):
+                    if hit.is_file() and len(hit.relative_to(search_root).parts) <= 4:
+                        return hit, candidates + [hit]
+        except OSError:
+            continue
     return candidates[0], candidates
 
 

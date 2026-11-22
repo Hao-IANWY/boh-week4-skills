@@ -1,0 +1,160 @@
+{
+ "seq": 51,
+ "title": "研究前沿与趋势分析",
+ "queries": [
+  "research trend analysis",
+  "bibliometrics trend"
+ ],
+ "skills": [
+  {
+   "name": "openalex-database",
+   "slug": "k-dense-ai-claude-scientific-skills-openalex-database",
+   "author": "K-Dense-AI",
+   "category": "research",
+   "description": "Provides Python tools to query OpenAlex's 240M+ scholarly works database for literature searches, citation tracking, research trend analysis, and bibliometric studies. Includes helper functions for common academic workflows like finding papers by author/institution and analyzing open access publications.",
+   "description_zh": "提供Python工具查询OpenAlex的2.4亿+学术文献数据库，支持文献检索、引文追踪、研究趋势分析和文献计量研究。包含作者/机构论文查找、开放获取分析等常用学术工作流辅助函数。",
+   "repo_url": "https://github.com/K-Dense-AI/claude-scientific-skills#scientific-skills~openalex-database",
+   "github_stars": 16962
+  },
+  {
+   "name": "research-ideation",
+   "slug": "galaxy-dawn-claude-scholar-research-ideation",
+   "author": "Galaxy-Dawn",
+   "category": "research",
+   "description": "This skill should be used when the user asks to \"brainstorm research ideas\", \"use 5W1H framework\", \"identify research gaps\", \"conduct gap analysis\", \"start research project\", \"conduct literature review\", \"define research question\", \"select research method\", \"plan research\", or mentions research project initiation phas…",
+   "description_zh": null,
+   "repo_url": "https://github.com/Galaxy-Dawn/claude-scholar#skills~research-ideation",
+   "github_stars": 5046
+  },
+  {
+   "name": "shorts-generator",
+   "slug": "openclaw-skills-mtsatryan-ah-shorts-generator",
+   "author": "mtsatryan",
+   "category": "development",
+   "description": "You are an AI-powered Short-Form Video Content Generator specializing in creating viral YouTube Shorts, TikTok videos, Instagram Reels, and. Use when: video...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/ah-shorts-generator",
+   "github_stars": 0
+  },
+  {
+   "name": "trend-researcher",
+   "slug": "davepoon-buildwithclaude-trend-researcher",
+   "author": "davepoon",
+   "category": "design",
+   "description": "This skill automates UI/UX trend research by navigating to Dribbble, taking screenshots, and analyzing design patterns. It identifies color schemes, typography, and layout trends to inform design decisions. The workflow includes fallback options when browser tools are unavailable.",
+   "description_zh": "该技能通过自动访问Dribbble、截图并分析设计模式来研究UI/UX趋势。它能识别色彩方案、排版和布局趋势，为设计决策提供参考。当浏览器工具不可用时，提供备用方案。",
+   "repo_url": "https://github.com/davepoon/buildwithclaude#plugins~frontend-design-pro~skills~trend-researcher",
+   "github_stars": 2666
+  },
+  {
+   "name": "content-trend-researcher",
+   "slug": "alirezarezvani-claude-code-skill-factory-content-trend-researcher",
+   "author": "alirezarezvani",
+   "category": "development",
+   "description": "Advanced content and topic research skill that analyzes trends across Google Analytics, Google Trends, Substack, Medium, Reddit, LinkedIn, X, blogs, podcasts, and YouTube to generate data-driven article outlines based on user intent analysis",
+   "description_zh": "该技能通过分析谷歌趋势、Reddit、YouTube等平台的内容趋势，生成文章大纲。它能识别用户意图模式和内容空白，为创作者提供结构化建议，帮助用数据验证内容创意。",
+   "repo_url": "https://github.com/alirezarezvani/claude-code-skill-factory#generated-skills-content-trend-researcher",
+   "github_stars": 653
+  },
+  {
+   "name": "deep-research-notebooklm",
+   "slug": "davila7-claude-code-templates-deep-research-notebooklm",
+   "author": "davila7",
+   "category": "research",
+   "description": "Deep research skill powered by NotebookLM MCP. Conducts structured multi-source research (market analysis, competitive intel, trend analysis, prospect research) using Google NotebookLM as the research engine, then delivers formatted briefs and optional studio artifacts (slides, audio podcasts, videos, infographics, re…",
+   "description_zh": null,
+   "repo_url": "https://github.com/davila7/claude-code-templates#cli-tool~components~skills~ai-research~deep-research-notebooklm",
+   "github_stars": 30118
+  },
+  {
+   "name": "📡 Knowledge & Trends Engine",
+   "slug": "openclaw-skills-bustes01-knowledge-and-trends-engine",
+   "author": "bustes01",
+   "category": "development",
+   "description": "Knowledge accumulation and tech trend analysis engine. Periodically summarizes learned concepts from user interactions, parses content from videos/articles/i...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/knowledge-and-trends-engine",
+   "github_stars": 0
+  },
+  {
+   "name": "funding-trend-forecaster",
+   "slug": "openclaw-skills-funding-trend-forecaster",
+   "author": "openclaw",
+   "category": "Grant",
+   "description": "Predict funding trend shifts using NLP analysis of grant abstracts from NIH, NSF, and Horizon Europe",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~aipoch-ai~funding-trend-forecaster",
+   "github_stars": 3689
+  },
+  {
+   "name": "openalex-database",
+   "slug": "microck-ordinary-claude-skills-openalex-database",
+   "author": "Microck",
+   "category": "research",
+   "description": "Provides Python tools for querying OpenAlex, a database of 240M+ scholarly works. Includes client for API calls and helper functions for common research tasks like finding papers by author, analyzing publication trends, and identifying open access publications. Emphasizes best practices like using email for rate limit…",
+   "description_zh": "提供查询OpenAlex学术数据库的Python工具，包含API客户端和常用研究查询辅助函数。支持按作者、机构查找论文，分析发表趋势，识别开放获取文献。强调使用邮箱提升速率限制、两步实体查询等最佳实践。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_categorized~astronomy-physics~openalex-database",
+   "github_stars": 150
+  },
+  {
+   "name": "preprint-surveillance-finder",
+   "slug": "aipoch-medical-research-skills-preprint-surveillance-finder",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Tracks the latest preprints and emerging research topics related to your topic across bioRxiv, medRxiv, and arXiv. Use when a user wants to discover what is being published right now before it reaches journals, monitor competitor directions, spot new methodology trends, or get an early-warning scan of a research area.…",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#awesome-med-research-skills~Evidence Insight~preprint-surveillance-finder",
+   "github_stars": 1394
+  },
+  {
+   "name": "academic-highlight-generator",
+   "slug": "aipoch-medical-research-skills-academic-highlight-generator",
+   "author": "aipoch",
+   "category": "development",
+   "description": "Generates submission-ready Elsevier/SCI Highlights from manuscript text or extracted PDF/DOCX/TXT content. Use when a user needs 3-5 concise, evidence-grounded highlight bullets for a research paper, review, meta-analysis, case report, or bioinformatics manuscript.",
+   "description_zh": null,
+   "repo_url": "https://github.com/aipoch/medical-research-skills#scientific-skills~Academic Writing~academic-highlight-generator",
+   "github_stars": 1395
+  },
+  {
+   "name": "openalex-database",
+   "slug": "synthetic-sciences-openscience-openalex-database",
+   "author": "synthetic-sciences",
+   "category": "data",
+   "description": "Query and analyze scholarly literature using the OpenAlex database. This skill should be used when searching for academic papers, analyzing research trends, finding works by authors or institutions, tracking citations, discovering open access publications, or conducting bibliometric analysis across 240M+ scholarly wor…",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~databases~openalex-database",
+   "github_stars": 3077
+  },
+  {
+   "name": "citation-chasing-mapping",
+   "slug": "openclaw-skills-citation-chasing-mapping",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Use when identifying seminal papers in a research field, mapping research lineage and intellectual heritage, discovering related work through reference tracking, or finding potential collaborators through co-citation analysis. Maps citation networks to trace research evolution, identify influential papers, and discove…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~aipoch-ai~citation-chasing-mapping",
+   "github_stars": 3686
+  },
+  {
+   "name": "recherche-doctrine",
+   "slug": "lawve-ai-awesome-legal-skills-doctrinal-research-allison-fiorentino",
+   "author": "lawve-ai",
+   "category": "development",
+   "description": "Recherche académique dans les bases de données de doctrine juridique française, européenne et internationale. Utiliser cette skill lorsque l'utilisateur demande de rechercher des articles de doctrine, des thèses, des ouvrages académiques, ou des travaux universitaires en droit — y compris en droit comparé. Sources pri…",
+   "description_zh": null,
+   "repo_url": "https://github.com/lawve-ai/awesome-legal-skills#skills~doctrinal-research-allison-fiorentino",
+   "github_stars": 572
+  },
+  {
+   "name": "citations",
+   "slug": "zimoliao-scholaraio-citations",
+   "author": "ZimoLiao",
+   "category": "development",
+   "description": "View top-cited papers ranking and refetch citation counts from APIs. Use when the user asks about highly cited papers, citation rankings, or wants to update citation data.",
+   "description_zh": null,
+   "repo_url": "https://github.com/ZimoLiao/scholaraio#.claude~skills~citations",
+   "github_stars": 254
+  }
+ ]
+}

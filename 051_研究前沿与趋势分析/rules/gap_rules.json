@@ -1,0 +1,125 @@
+{
+ "version": "0.2.0",
+ "description": "051 研究空白判据。核心立场：检索不到 ≠ 领域空白。空白只从零证据（或仅弱证据）的检索缺口推导；每条 gap 必须带『检索范围 + 排除条件 + 需要什么证据才能升级为结论』三件套。",
+ "gap_types": {
+  "retrieval_gap": {
+   "label": "零证据子问题（检索缺口，复用 048 口径）",
+   "basis": "zero_evidence",
+   "claim_strength": "本池内该子问题零达阈值证据，属检索缺口，不构成领域空白结论",
+   "upgrade_requires": "按该子问题检索式扩库复检仍零命中，或补充该类型材料后重跑并复核",
+   "weak_basis": "weak_evidence",
+   "weak_claim_strength": "本池内仅有 1 条弱关联记录，不足以下任何子问题结论",
+   "weak_upgrade_requires": "补充 ≥2 条直接对应的原始研究或数据表后重跑"
+  },
+  "coverage_gap": {
+   "label": "覆盖缺口（某主题在某时间窗零命中）",
+   "min_other_period_records": 2,
+   "claim_strength": "检索范围限制，不构成领域空白结论",
+   "upgrade_requires": "扩大词表/换库复检仍零命中，且能在综述或基金指南中找到该主题被提出的证据"
+  },
+  "unresolved_problem": {
+   "label": "被反复提出但未见收敛的问题",
+   "min_marker_records": 2,
+   "claim_strength": "仅说明本 case 题录集合中该类表述反复出现，不等于无人解决",
+   "upgrade_requires": "逐篇读全文确认同一问题未被解决，并排除术语差异导致的漏检"
+  },
+  "scope_gap": {
+   "label": "方法/对象/尺度维度的证据缺口",
+   "min_absent_axis_share": 0.05,
+   "claim_strength": "该轴在题录集合中近乎缺席，可能是检索式未覆盖该轴",
+   "upgrade_requires": "用该轴关键词单独检索并记录命中数为 0"
+  }
+ },
+ "problem_markers": [
+  "remains challenging",
+  "remains unclear",
+  "is still unclear",
+  "poorly understood",
+  "limited understanding",
+  "lack of",
+  "lacks",
+  "rarely reported",
+  "not well understood",
+  "尚未解决",
+  "仍不清楚",
+  "缺乏",
+  "鲜有报道",
+  "有待",
+  "瓶颈"
+ ],
+ "scope_axes": {
+  "object": {
+   "label": "研究对象",
+   "terms": [
+    "coin cell",
+    "pouch cell",
+    "thin film",
+    "single crystal",
+    "composite cathode",
+    "软包",
+    "扣式电池",
+    "单晶",
+    "复合正极",
+    "薄膜"
+   ]
+  },
+  "scale": {
+   "label": "时空尺度",
+   "terms": [
+    "atomic scale",
+    "mesoscale",
+    "continuum",
+    "in situ",
+    "operando",
+    "原子尺度",
+    "介观",
+    "连续介质",
+    "原位",
+    "工况"
+   ]
+  },
+  "condition": {
+   "label": "工况条件",
+   "terms": [
+    "low temperature",
+    "high voltage",
+    "fast charging",
+    "high areal loading",
+    "低温",
+    "高电压",
+    "快充",
+    "高面载量"
+   ]
+  },
+  "data_practice": {
+   "label": "数据与可复现实践",
+   "terms": [
+    "open dataset",
+    "data availability",
+    "reproducibility",
+    "benchmark dataset",
+    "开放数据",
+    "数据可用性",
+    "可复现",
+    "代码可用"
+   ]
+  }
+ },
+ "reporting": {
+  "must_include_fields": [
+   "type",
+   "claim_strength",
+   "evidence_record_ids",
+   "retrieval_scope",
+   "exclusions",
+   "upgrade_requires",
+   "needs_review"
+  ],
+  "forbid_phrases": [
+   "该领域无人研究",
+   "尚属空白",
+   "no one has studied"
+  ],
+  "note": "forbid_phrases 命中即视为越界表述，pipeline 会在输出中做一次自检并把命中写进 uncertainty。"
+ }
+}

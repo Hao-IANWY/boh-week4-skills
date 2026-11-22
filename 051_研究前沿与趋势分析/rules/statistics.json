@@ -1,0 +1,124 @@
+{
+ "version": "0.2.0",
+ "description": "051 时间切片统计、证据桶与趋势判定的全部参数。代码不出现魔法数，任何人按本文件可复算 result.json 里的每个统计量。",
+ "window": {
+  "fallback_start": "min_year_in_records",
+  "fallback_end": "max_year_in_records",
+  "pad_missing_years_with_zero": true,
+  "note": "时间窗优先取 case.constraints.year_from/year_to，其次取题录的实际年份跨度；窗内缺年份补 0，窗外的题录一律排除并记 reason_code=R_OUT_OF_WINDOW。"
+ },
+ "trend_buckets": {
+  "bucket_width_years": 2,
+  "min_buckets_with_records": 2,
+  "note": "证据桶=按 bucket_width_years 把统计窗口切成连续年份闭区间。每条趋势主张必须给出逐桶计数表（count + record_ids）；有记录桶数 < min_buckets_with_records 时不做时间方向判定，只作池内计数观察。"
+ },
+ "trend_verdict": {
+  "thin_max_records": 1,
+  "rising_min_last_bucket_count": 2,
+  "rising_min_bucket_gain": 1,
+  "rising_min_late_early_share_gap": 0.1,
+  "established_min_records": 2,
+  "established_min_first_bucket_count": 2,
+  "established_min_early_share": 0.6,
+  "frontier_new_start_min_bucket_index": 1,
+  "frontier_min_near_bucket_count": 2,
+  "frontier_base_stat": "median",
+  "claim_scope": "pool_snapshot",
+  "verdict_rules": {
+   "thin": "池内记录数 ≤ thin_max_records → verdict=thin，只报计数、不写趋势句（记 R_EVIDENCE_THIN）。",
+   "no_year_data": "主题记录年份字段全缺 → verdict=no_year_data，只报池内计数并显式声明，不做时间趋势。",
+   "rising": "有记录桶数 ≥ min_buckets_with_records，且末桶计数 ≥ rising_min_last_bucket_count、较首个非空桶增量 ≥ rising_min_bucket_gain、后半窗占比高出前半窗 ≥ rising_min_late_early_share_gap。",
+   "established": "有记录桶数 ≥ min_buckets_with_records，且前半窗桶占比 ≥ established_min_early_share、首个非空桶计数 ≥ established_min_first_bucket_count。established 只描述『记录集中于早期桶』的池内快照分布，不下『已衰退/全局成熟』结论；是否回落由 topic_evolution 事件按其阈值另行判定。",
+   "flat": "未达 rising/established 阈值时的兜底判定：仅报桶计数，不判方向。",
+   "frontier": "前沿候选 = rising 且新起（首个非空桶序号 ≥ frontier_new_start_min_bucket_index，即第一个证据桶零记录）、近桶计数 ≥ frontier_min_near_bucket_count、且近桶计数高于既有主题（established 或首桶有记录者）近桶计数的 frontier_base_stat 值；基数对比数值必须写进 claim，比较不成立时如实判非前沿并写明原因。"
+  }
+ },
+ "keyword_heat": {
+  "min_raw_hits_to_audit": 3,
+  "collapse_max_distinct_records": 1,
+  "collapse_max_single_bucket_records": 1,
+  "note": "词频热度只作审计对照：raw_hits 是未去重的词面出现次数，distinct_records/buckets_covered 是去重后的记录级分布。raw_hits ≥ min_raw_hits_to_audit 且 distinct_records ≤ collapse_max_distinct_records（或全部记录落在同一桶且 distinct_records ≤ collapse_max_single_bucket_records）时标 heat_collapse——词频高不冒充趋势；趋势主张一律按记录级证据桶计算，任何主张不得以 raw_hits 作为趋势依据。"
+ },
+ "evidence_quotes": {
+  "sentence_terminators": ["。", "！", "？", ";", "；"],
+  "split_ascii_period": true,
+  "note": "逐字证据句切分口径：中文终止符直接切句；ASCII 句点仅在前 后为数字时保留（小数点不切句）。证据 quote 必须是记录正文字段的精确子串，char_span 按 quote_field 内字符区间，管线内逐条校验 quote_verified。"
+ },
+ "year_policy": {
+  "default_primary": "journal",
+  "series": [
+   "journal",
+   "online",
+   "preprint"
+  ],
+  "field_map": {
+   "journal": [
+    "year",
+    "issue_year",
+    "publication_year",
+    "见刊年"
+   ],
+   "online": [
+    "online_year",
+    "year_online",
+    "online_first_year",
+    "在线发表年"
+   ],
+   "preprint": [
+    "preprint_year",
+    "arxiv_year",
+    "预印本年"
+   ]
+  },
+  "missing_policy": "主序列字段缺失时回落到 year 并标记 year_imputed=true；全部缺失记 year_missing，从时间序列中剔除但计入 year_missing_count，不允许静默丢弃。",
+  "max_imputed_rate_for_trend_claim": 0.25
+ },
+ "growth": {
+  "min_years_for_cagr": 3,
+  "cagr_formula": "(count_end / count_start) ** (1 / (year_end - year_start)) - 1",
+  "yoy_floor": 1,
+  "yoy_note": "同比增速的分母下限取 1，避免 0 基准导致无穷大；分母被修正的年份在 yoy_floor_applied 中列明。"
+ },
+ "inflection": {
+  "smooth_window": 3,
+  "min_abs_acceleration": 1.0,
+  "persist_side_years": 2,
+  "break_rel_change": 0.4,
+  "labels": {
+   "peak": "增速由正转负（峰值型拐点）",
+   "rebound": "增速由负转正（回升型拐点）",
+   "volatility": "未达持续变化阈值，按离散波动处理"
+  },
+  "note": "拐点=加速度方向翻转处的极值年；持久性判据=该极值年两侧各 persist_side_years 年的水平均值相对变化是否达到 break_rel_change。未达阈值者记为离散波动。拐点只是统计形态，不等同因果归因。"
+ },
+ "topic_share": {
+  "denominator": "period_tagged_records",
+  "min_records_for_share": 3,
+  "note": "主题占比分母是该时间窗内已成功打主题标签的题录数；分母 < min_records_for_share 时该窗占比不参与演化事件判定，只报计数。"
+ },
+ "thresholds": {
+  "emergence_share": 0.12,
+  "emergence_prior_max_share": 0.02,
+  "growing_delta_share": 0.08,
+  "declining_delta_share": -0.08,
+  "merge_jaccard": 0.35,
+  "split_pair_jaccard_max": 0.0,
+  "split_branch_min_share": 0.3,
+  "untagged_rate_alert": 0.3,
+  "min_records_for_trend_claim": 10,
+  "min_topic_records_for_event": 2,
+  "emergence_min_records": 2,
+  "declining_min_peak_records": 2,
+  "merge_min_topic_records": 2,
+  "split_min_base": 5,
+  "split_min_topic_share": 0.2,
+  "note_split": "分裂事件要求：阶段内该主题 ≥5 条、至少 2 个分支各占 ≥30%、且至少一对分支完全不相交（Jaccard=0）。条件苛刻是有意的——关键词共现不足以支撑更细的拆分判断。",
+  "note_thin_guard": "池内记录数 < min_topic_records_for_event 的主题不产生任何演化事件，单列 evidence_thin（薄证据主题不作趋势/演化主张）；年份全缺的主题不产生时间类演化事件，单列 year_data_missing。"
+ },
+ "dedupe": {
+  "doi_normalized_first": true,
+  "title_norm_secondary": true,
+  "keep": "first_seen_with_richest_fields",
+  "note": "预印本与正式版同题时保留正式版，预印本年份记入 preprint 序列，避免同一工作被计两次抬高产出量。"
+ }
+}
