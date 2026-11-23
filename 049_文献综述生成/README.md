@@ -18,6 +18,17 @@ python3 -B /skills/weekly-skill/scripts/validate.py \
 > 分类：深度研究与文献综述 ｜ 赛题：challenge-e97137c9 ｜ ARMI：ARMI:2611.000091v1 ｜ [详情页](https://play.bohrium.com/challenge/challenge-e97137c9)
 > 起点调研数据：`sources_github.json`（GitHub 仓库检索+精选种子，含 stars/license/pushed_at）、`sources_skillhub.json`（SkillHub 现成 skill 语义检索）
 
+## 0.1 证据约束综合层（本轮新增）
+
+确定性管线负责“可复核”，模型负责“会综合”，两者用同一张证据表衔接：
+
+1. 管线写出 `result.json` 后，自动把证据压缩成 `/app/work/synthesis_input.json`（记录、逐字引文、冲突、空白、筛选计数与本题统计）。
+2. Harness 模型按 `rules/synthesis_prompt.md` 写 `/app/work/synthesis.json`：每个实质句以 `[E###]`/`[M###]` 回链，数字必须能在所引引文回查，冲突并列，薄弱主题标注。
+3. 回跑管线，`merge_synthesis.py` 校验引用 ID、段落引用覆盖、带单位/小数数字的回查与冲突留痕；通过才写 `review.md` 与 `synthesis_audit.json`，不通过保留 `report.md` 并打印违规。
+4. 无模型或综合稿未通过时，`report.md` 是确定性回退；两条产物同源，不会出现“正文引文与证据表对不上”。
+
+这一层的作用是把“摘要拼接”换成“有证据约束的综合”：模型可以组织主题、比较口径、写边界，但不能引入证据表外的文献、数字或结论。
+
 ## 1. 题目要点（读 detail.md 后提炼）
 
 - **任务**：在一批真实文献上依次完成"按标准筛选 → 归纳成有依据的主题 → 组织可逐条回链的证据 → 写出每句都能指回具体文献的草稿"，并把冲突证据与研究空白落到具体缺口上。题面明确不负责单篇精读、翻译、润色、选刊与事实层面的学术审查。

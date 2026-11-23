@@ -18,6 +18,17 @@ python3 -B /skills/weekly-skill/scripts/validate.py \
 > 分类：深度研究与文献综述 ｜ 赛题：challenge-041f89c5 ｜ ARMI:2611.000094v1 ｜ [详情页](https://play.bohrium.com/challenge/challenge-041f89c5)
 > 起点调研数据：`sources_github.json`（GitHub 仓库检索+精选种子，含 stars/license/pushed_at）、`sources_skillhub.json`（SkillHub 现成 skill 语义检索）
 
+## 0.1 证据约束综合层（本轮新增）
+
+确定性管线负责“可复核”，模型负责“会综合”，两者用同一张证据表衔接：
+
+1. 管线写出 `result.json` 后，自动把证据压缩成 `/app/work/synthesis_input.json`（记录、逐字引文、冲突、空白、筛选计数与本题统计）。
+2. Harness 模型按 `rules/synthesis_prompt.md` 写 `/app/work/synthesis.json`：每个实质句以 `[E###]`/`[M###]` 回链，数字必须能在所引引文回查，冲突并列，薄弱主题标注。
+3. 回跑管线，`merge_synthesis.py` 校验引用 ID、段落引用覆盖、带单位/小数数字的回查与冲突留痕；通过才写 `review.md` 与 `synthesis_audit.json`，不通过保留 `report.md` 并打印违规。
+4. 无模型或综合稿未通过时，`report.md` 是确定性回退；两条产物同源，不会出现“正文引文与证据表对不上”。
+
+这一层的作用是把“摘要拼接”换成“有证据约束的综合”：模型可以组织主题、比较口径、写边界，但不能引入证据表外的文献、数字或结论。
+
 ## 1. 题目要点（读 detail.md 后提炼）
 
 - **任务**：交付一个可被官方 DeepSeek Harness 加载的 Skill，把「模糊的研究设想」推进成可决策的选题评估：研究问题定义、已有工作比较、创新点识别、可行性判断四件事同时交付且互相一致；3 个固定案例，不加载/加载各跑 3 次对照。
