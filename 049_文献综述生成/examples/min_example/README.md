@@ -2,6 +2,7 @@
 
 - `input/case.json`：**合成**案例，9 条题录（含同 DOI 预印本 P2、无关催化文献 P9、多步路线规划 P7），研究问题覆盖表示学习 / 模板无关 / 低数据泛化 / 评测口径。
 - `expected/result.json`：由 `scripts/pipeline.py` 真实运行产生，作为回归基线（**不是手写答案**）。同次运行还会生成 `review_draft.docx`（可编辑草稿）。
+- `expected/report.md`：由 `scripts/render_report.py` 从同一份 `result.json` 投影生成的人类可读研究产物，与机器契约同源；正式运行时写到 `/app/output/report.md`。
 
 ```bash
 cd answer/049_文献综述生成

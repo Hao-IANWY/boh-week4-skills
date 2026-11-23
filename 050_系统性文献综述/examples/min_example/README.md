@@ -2,6 +2,7 @@
 
 - `input/case.json`：**合成**案例，8 条题录（含 1 条同 DOI 预印本 R2、2 条无全文的 R5/R8、2 条无关文献 R7/R8），研究问题覆盖准确率水平 / 低数据泛化 / 评测口径。
 - `expected/result.json`：由 `scripts/pipeline.py` 真实运行产生，作为回归基线（**不是手写答案**）。同次运行还会生成 `prisma_flow.xlsx`（四个工作表）。
+- `expected/report.md`：由 `scripts/render_report.py` 从同一份 `result.json` 投影生成的人类可读研究产物，与机器契约同源；正式运行时写到 `/app/output/report.md`。
 
 ```bash
 cd answer/050_系统性文献综述

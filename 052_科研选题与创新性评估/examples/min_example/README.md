@@ -4,6 +4,7 @@
   D2「预训练视觉 Transformer 用于聚合物电解质膜裂纹分割」）+ 前瞻筛选协议（IN1/IN2/EX1，其中
   REC07 被 IN1 剔除）+ 6 项资源约束 + 10 条池内记录（内联 abstract，无外部文件）。
 - `expected/result.json`：由 `scripts/pipeline.py` 真实运行产生，作为回归基线（不是手写答案）。
+- `expected/report.md`：由 `scripts/render_report.py` 从同一份 `result.json` 投影生成的人类可读研究产物，与机器契约同源；正式运行时写到 `/app/output/report.md`。
 
 ```bash
 cd answer/052_科研选题与创新性评估

@@ -35,6 +35,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -155,6 +156,8 @@ def resolve_body(item: dict, bases: list) -> dict:
         return _body_info("", "missing", "", "record_has_no_text_and_no_source_path")
     resolved, cands = resolve_ref(ref, bases)
     if not resolved.is_file():
+        resolved = next((c for c in cands if c.is_file()), resolved)
+    if not resolved.is_file():
         return _body_info("", "missing", str(resolved),
                           "source_file_not_found: " + " | ".join(str(c) for c in cands[:4]))
     suffix = resolved.suffix.lower()
@@ -204,6 +207,35 @@ def collect_sources(case: dict, bases: list) -> list:
             except OSError:
                 entry["sha256"] = ""
         out.append(entry)
+    if not out:
+        # 兜底：case 未声明 sources 时扫描案例目录与 /input 的实际材料，避免把“未列出”当成“没有材料”。
+        skip_names = {"case.json", "task.md", "TASK.md", "plan.json", "result.json", "report.md"}
+        skip_parts = {"scripts", "rules", "examples", "__pycache__", ".git", "output", "out", "work"}
+        seen_paths, scan_dirs = set(), []
+        for base in ([Path(bases[0])] if bases else []) + [Path("/input")]:
+            if base.is_dir() and all(str(base) != str(x) for x in scan_dirs):
+                scan_dirs.append(base)
+        for base in scan_dirs:
+            try:
+                candidates = sorted(base.rglob("*"))
+            except OSError:
+                continue
+            for p in candidates:
+                if len(out) >= 50:
+                    break
+                if not p.is_file() or p.name in skip_names:
+                    continue
+                if p.suffix.lower() not in {".pdf", ".docx", ".txt", ".md", ".csv", ".json"}:
+                    continue
+                if any(part in skip_parts for part in p.parts):
+                    continue
+                key = str(p.resolve())
+                if key in seen_paths:
+                    continue
+                seen_paths.add(key)
+                out.append({"source_id": f"SRC{len(out) + 1:02d}", "title": p.stem, "path": str(p),
+                            "type": p.suffix.lstrip("."), "exists": True, "resolved_path": str(p),
+                            "sha256": hashlib.sha256(p.read_bytes()).hexdigest()})
     return out
 
 
@@ -250,6 +282,21 @@ def collect_records(case: dict, bases: list, sources: list) -> list:
             "conclusion": str(first_present(item, "conclusion", "finding", "result", default="")),
             "version": str(first_present(item, "version", default="") or ""),
         })
+    if not out and sources:
+        # 兜底：case 只给来源文件清单、未给 records 时，把每个可读来源当作一条记录。
+        for src in sources:
+            if not src.get("exists"):
+                continue
+            ref = str(src.get("path") or "")
+            info = resolve_body({"source_path": ref, "title": src.get("title", "")}, bases)
+            out.append({
+                "record_id": f"REC{len(out) + 1:02d}", "title": str(src.get("title") or Path(ref).stem),
+                "abstract": "", "text": info["text"], "body": info,
+                "source_ref": ref, "source_id": str(src.get("source_id") or ""),
+                "source_file": info["source_file"], "pages": [], "year": None, "venue": "", "doi": "",
+                "type": str(src.get("type") or ""), "source": "", "task": "", "method": "", "data": "",
+                "evaluation": "", "conclusion": "", "version": "",
+            })
     return out
 
 
@@ -1952,6 +1999,11 @@ def main(argv=None) -> int:
                          ensure_ascii=False))
         return 0
     path = res.emit(args.out)
+    try:
+        from render_report import render_file
+        render_file(path, Path(args.out) / "report.md")
+    except Exception as exc:  # noqa: BLE001
+        print(json.dumps({"report_warning": f"{type(exc).__name__}: {exc}"}, ensure_ascii=False))
     novelty = payload.get("novelty_assessment", {})
     print(json.dumps({"ok": True, "result": str(path), "status": payload["status"]["overall"],
                       "directions": len(payload.get("candidate_assessments", [])),

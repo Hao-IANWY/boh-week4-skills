@@ -2,6 +2,7 @@
 
 - `input/case.json`：**合成**案例，6 篇题录（含复现研究 R6、综述 R5、多步路线规划 R4），研究问题含 对象/方法/指标/限制/比较/证据要求 多要素。
 - `expected/result.json`：由 `scripts/pipeline.py` 真实运行产生，作为回归基线（**不是手写答案**）。同目录运行还会生成 `plan.json`（计划 + 执行记录）。
+- `expected/report.md`：由 `scripts/render_report.py` 从同一份 `result.json` 投影生成的人类可读研究产物，与机器契约同源；正式运行时写到 `/app/output/report.md`。
 
 ```bash
 cd "answer/048_深度研究 Agent"

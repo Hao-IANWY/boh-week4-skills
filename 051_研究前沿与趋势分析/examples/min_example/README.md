@@ -2,6 +2,7 @@
 
 - `input/case.json`：**合成**案例，27 条题录（固态电解质界面工程 2019–2025），其中 1 条为同题预印本（演示标题级去重）、1 条无任何年份字段（演示缺失记账）；无前瞻协议字段（演示 `R_PROTOCOL_MISSING` + 声明回退口径）。
 - `expected/result.json`：由 `scripts/pipeline.py` 真实运行产生，作为回归基线（不是手写答案）。
+- `expected/report.md`：由 `scripts/render_report.py` 从同一份 `result.json` 投影生成的人类可读研究产物，与机器契约同源；正式运行时写到 `/app/output/report.md`。
 
 ```bash
 cd answer/051_研究前沿与趋势分析

@@ -17,6 +17,19 @@ description: 把不能一次答完的研究问题跑成可复核的多步研究�
 
 不适用：单篇文献逐句精读、方法学与统计审查、全文翻译与写作润色（属相邻课题）。
 
+## 执行（Harbor 运行时，先跑这一条）
+
+正式案例的输入固定在 `/input`，Skill 安装在 `/skills/weekly-skill`，产物写到 `/app/output`。直接运行：
+
+```bash
+python3 -B /skills/weekly-skill/scripts/pipeline.py \
+  --case /input/case.json --work /app/work --out /app/output
+python3 -B /skills/weekly-skill/scripts/validate.py \
+  --case /input/case.json --result /app/output/result.json
+```
+
+管线同时写出 `result.json`（机器契约与证据台账）、`report.md`（人类可读研究产物）和 `plan.json`（前瞻计划与协议）。若 `/skills/weekly-skill` 不存在，先用 `find /skills /app /opt -maxdepth 5 -name pipeline.py` 定位实际安装目录，再用绝对路径运行；不得因路径不存在而跳过执行，也不得用示例结果冒充正式结果。`validate.py` 返回非零时保留已产出的 `result.json` 与 `report.md`，按 `status.unmet` 说明缺口，不伪造通过。
+
 ## 输入
 
 | 位置 | 内容 |

@@ -1,5 +1,16 @@
 # 052｜科研选题与创新性评估
 
+## 0. 快速开始（Harbor 正式运行）
+
+```bash
+python3 -B /skills/weekly-skill/scripts/pipeline.py \
+  --case /input/case.json --work /app/work --out /app/output
+python3 -B /skills/weekly-skill/scripts/validate.py \
+  --case /input/case.json --result /app/output/result.json
+```
+
+产物：`/app/output/result.json`（契约与证据台账）、`/app/output/report.md`（人类可读研究产物）、`/app/work/plan.json`（前瞻计划与协议）。本地最小示例见 `examples/min_example/`；示例为合成材料，不代表正式案例结论。
+
 > **已实现可运行 Skill**：同目录 `SKILL.md` + `scripts/pipeline.py` + `rules/` + `examples/min_example/`；验收 `python3 answer/_shared/verify.py --only 052`；工程标准见 `answer/_shared/README.md`。本文以下内容为**开源起点调研**（为什么选这些仓库、怎么改）。
 
 > 分类：深度研究与文献综述 ｜ 赛题：challenge-041f89c5 ｜ ARMI:2611.000094v1 ｜ [详情页](https://play.bohrium.com/challenge/challenge-041f89c5)
