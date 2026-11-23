@@ -17,18 +17,42 @@ description: 把不能一次答完的研究问题跑成可复核的多步研究�
 
 不适用：单篇文献逐句精读、方法学与统计审查、全文翻译与写作润色（属相邻课题）。
 
-## 执行（Harbor 运行时，先跑这一条）
+## 执行（Harbor 运行时，按顺序走完）
 
-正式案例的输入固定在 `/input`，Skill 安装在 `/skills/weekly-skill`，产物写到 `/app/output`。直接运行：
+正式案例的输入固定在 `/input`，Skill 安装在 `/skills/weekly-skill`，产物写到 `/app/output`。分四步，前两步不能省。
+
+### 1. 确定性管线（筛选、证据、冲突、空白）
 
 ```bash
 python3 -B /skills/weekly-skill/scripts/pipeline.py \
   --case /input/case.json --work /app/work --out /app/output
+```
+
+产出 `result.json`、`report.md`，以及 `/app/work/synthesis_input.json`（压缩后的证据表，供下一步用）。
+
+### 2. 模型综合（Harness 提供模型时必做）
+
+读 `/app/work/synthesis_input.json` 和 `/skills/weekly-skill/rules/synthesis_prompt.md`，写 `/app/work/synthesis.json`。硬约束：每个实质句以 `[E###]` 结尾；不引入证据表外的文献、数字、结论；带单位或小数的数字必须能在所引引文回查；冲突并列；薄弱主题标注；主题从记录内容归纳，3–6 个，不用通用框架。
+
+### 3. 回跑管线：校验综合稿并生成 review.md
+
+```bash
+python3 -B /skills/weekly-skill/scripts/pipeline.py \
+  --case /input/case.json --work /app/work --out /app/output
+```
+
+第二次运行检测到 `synthesis.json` 后自动调用 `merge_synthesis.py`：通过则写 `review.md` 与 `synthesis_audit.json`；不通过则保留 `report.md` 并打印违规（引用不存在、段落无引用、数字回查失败），按提示修正后重跑。没有模型或模型未产出时，`report.md` 仍是可交付的确定性投影，不得把 `review.md` 伪造成已通过。
+
+### 4. 契约校验
+
+```bash
 python3 -B /skills/weekly-skill/scripts/validate.py \
   --case /input/case.json --result /app/output/result.json
 ```
 
-管线同时写出 `result.json`（机器契约与证据台账）、`report.md`（人类可读研究产物）和 `plan.json`（前瞻计划与协议）。若 `/skills/weekly-skill` 不存在，先用 `find /skills /app /opt -maxdepth 5 -name pipeline.py` 定位实际安装目录，再用绝对路径运行；不得因路径不存在而跳过执行，也不得用示例结果冒充正式结果。`validate.py` 返回非零时保留已产出的 `result.json` 与 `report.md`，按 `status.unmet` 说明缺口，不伪造通过。
+若 `/skills/weekly-skill` 不存在，先用 `find /skills /app /opt -maxdepth 5 -name pipeline.py` 定位实际安装目录，再用绝对路径运行；不得因路径不存在而跳过执行，也不得用示例结果冒充正式结果。`validate.py` 返回非零时保留已产出的 `result.json`、`report.md`、`review.md`，按 `status.unmet` 说明缺口。
+
+- 本题要点：048 的综合稿按子问题组织：每个子问题给“已知证据—方向—边界”；没有证据的子问题写进 gaps，不用套话填满。
 
 ## 输入
 
@@ -62,6 +86,8 @@ python3 -B /skills/weekly-skill/scripts/validate.py \
 | 证据记录 | `evidence.sources_manifest` / `decomposition` / `protocol` / `screening` / `execution`（`tool_calls`：screen/retrieve/extract/verify 全参数与返回）/ `evidence_table_map` / `backlink`（回链覆盖率与未解析 id）/ `conflicts` / `proposals` / `artifacts` / `plan_file` / `scope` / `run_log` / `contract` | 回链覆盖率 = 引用 evidence_id 的结论数 / 非 no_evidence 结论数 |
 | 状态说明 | `status.overall`、`status.completed`、`status.unmet`、`status.notes`、`uncertainty[]` | 协议缺失、正文不可读、引文校验失败、冲突、弱证据逐条列明 |
 | 旁产物 | `work/plan.json`（不可写时 `out/plan.json`） | 计划与协议先于筛选执行落盘，供第三方复核时序与口径 |
+
+人类可读产物：`report.md`（确定性投影，始终生成）与 `review.md`（模型综合稿，经 `merge_synthesis.py` 校验引用与数字后生成；无模型或校验失败时以 `report.md` 为准）。`synthesis_audit.json` 记录引用覆盖、未用证据与违规项，便于复核。
 
 ## 异常处理
 

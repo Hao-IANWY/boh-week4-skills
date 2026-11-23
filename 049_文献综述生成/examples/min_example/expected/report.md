@@ -3,7 +3,7 @@
 - **案例标识**：`EXAMPLE-049-NOT-A-TEST-CASE`
 - **Skill**：`literature-review-writer` v0.1.0
 - **运行状态**：`partial`
-- **生成时间**：2026-11-22T15:46:27+0800
+- **生成时间**：2026-11-23T18:33:58+0800
 
 > 本报告由 Skill 的确定性管线从 `result.json` 投影生成；结论、引文与定位均取自同一批结构化字段，不在此处新增主张。
 
@@ -66,22 +66,22 @@ Message passing over the molecular graph yields reaction centre candidates and r
 We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis. [E007] A survey covering template-based and template-free retrosynthesis methods and their evaluation practice. [E008] An experimental study on catalytic C-H activation with no computational retrosynthesis modelling. [E009]
 
 ## single-step×uspto-50k×reaction
-Message passing over the molecular graph yields reaction centre candidates and reaches 52.3% top-1 accuracy on USPTO-50k. [E010] A template-free model reaches 48.1% top-1 accuracy on USPTO-50k and removes template construction entirely, while template-based baselines remain competitive in low data settings. [E011] Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points, and the representation learned on the reaction centre generalizes poorly across reaction classes. [E012] We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits. [E013] Multi-step route planning is evaluated by route success rate rather than top-1 accuracy, so single-step benchmark numbers are not directly comparable. [E014]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E010、E011、E012、E013、E014。
 
 ## benchmark×splits
-A benchmark with three dataset splits shows that reported top-1 accuracy differences are largely explained by split choice rather than architecture. [E015] We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits. [E016] Multi-step route planning is evaluated by route success rate rather than top-1 accuracy, so single-step benchmark numbers are not directly comparable. [E017]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E015、E016、E017。
 
 ## data×low
-A template-free model reaches 48.1% top-1 accuracy on USPTO-50k and removes template construction entirely, while template-based baselines remain competitive in low data settings. [E018] Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points, and the representation learned on the reaction centre generalizes poorly across reaction classes. [E019] A benchmark with three dataset splits shows that reported top-1 accuracy differences are largely explained by split choice rather than architecture. [E020]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E018、E019、E020。
 
 ## model
-A template-free model reaches 48.1% top-1 accuracy on USPTO-50k and removes template construction entirely, while template-based baselines remain competitive in low data settings. [E021] We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits. [E022] An experimental study on catalytic C-H activation with no computational retrosynthesis modelling. [E023]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E021、E022、E023。
 
 ## evaluation
-We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits. [E024] A survey covering template-based and template-free retrosynthesis methods and their evaluation practice. [E025]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E024、E025。
 
 ## template-based
-A template-free model reaches 48.1% top-1 accuracy on USPTO-50k and removes template construction entirely, while template-based baselines remain competitive in low data settings. [E026] A survey covering template-based and template-free retrosynthesis methods and their evaluation practice. [E027]
+本节证据均已在其他小节逐字引用，不重复列出；交叉引用：E026、E027。
 
 ## 分歧与冲突证据
 一方面，Message passing over the molecular graph yields reaction centre candidates and reaches 52.3% top-1 accuracy on USPTO-50k. [E001]（方向 None，强度词 无）；另一方面，We reproduce the message passing model on USPTO-50k and obtain 49.0% top-1 accuracy instead of 52.3%, which indicates evaluation leakage between splits. [E005]（方向 None，强度词 无）。同主题同单位数值不一致：52.3% vs 49.0%（共享术语 ['accuracy', 'top-1']）。（同证据对也出现在主题 T03）

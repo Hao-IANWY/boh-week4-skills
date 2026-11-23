@@ -65,6 +65,7 @@ from kit import (  # noqa: E402
     write_json,
 )
 import pdf_min  # noqa: E402
+from normalize import normalize_case  # noqa: E402
 
 SKILL = "research-idea-novelty-assessment"
 RULES = Path(__file__).resolve().parent.parent / "rules"
@@ -1575,6 +1576,7 @@ def check_input_phrasing(directions: list, novelty_cfg: dict) -> list:
 # 主流程
 # --------------------------------------------------------------------------------------
 def run(case: dict, task_text: str, args) -> Result:
+    case = normalize_case(case)
     rules = load_rules()
     scoring, novelty_cfg, premise_cfg = rules["scoring"], rules["novelty"], rules["premise"]
     codes, cfg = rules["codes"], rules["protocol"]
@@ -1982,6 +1984,43 @@ def _write_input_error(args, exc: Exception) -> int:
     return 2
 
 
+def _synthesis_hooks(args, result_path, payload):
+    """可选 LLM 综合：生成 synthesis_input.json；若 work/synthesis.json 存在，校验并写 review.md。
+
+    确定性管线不调用模型；模型由 Harness 提供。该钩子只负责把证据压缩成输入、校验模型输出，
+    校验不过时保留确定性 report.md，不静默放行未挂证据的段落。
+    """
+    import subprocess
+    work = Path(getattr(args, "work", ".") or ".")
+    out = Path(getattr(args, "out", ".") or ".")
+    here = Path(__file__).parent
+    info = {}
+    try:
+        work.mkdir(parents=True, exist_ok=True)
+        proc = subprocess.run([sys.executable, str(here / "make_synthesis_input.py"),
+                               "--result", str(result_path),
+                               "--out", str(work / "synthesis_input.json"),
+                               "--case", str(getattr(args, "case", ""))],
+                              capture_output=True, text=True, timeout=60)
+        info["synthesis_input"] = str(work / "synthesis_input.json") if proc.returncode == 0 else "failed"
+    except Exception as exc:  # noqa: BLE001
+        info["synthesis_input"] = f"{type(exc).__name__}: {exc}"
+    syn = work / "synthesis.json"
+    if syn.is_file():
+        try:
+            proc = subprocess.run([sys.executable, str(here / "merge_synthesis.py"),
+                                   "--result", str(result_path), "--synthesis", str(syn),
+                                   "--out", str(out / "review.md"),
+                                   "--audit-out", str(out / "synthesis_audit.json")],
+                                  capture_output=True, text=True, timeout=60)
+            info["review"] = str(out / "review.md") if proc.returncode == 0 else "rejected"
+            if proc.returncode != 0:
+                info["review_detail"] = (proc.stdout or proc.stderr or "")[:500]
+        except Exception as exc:  # noqa: BLE001
+            info["review_detail"] = f"{type(exc).__name__}: {exc}"
+    return info
+
+
 def main(argv=None) -> int:
     args = parse_args(argv)
     if args.self_check:
@@ -2012,6 +2051,13 @@ def main(argv=None) -> int:
                       "conflicts": payload.get("conflicts", {}).get("count", 0),
                       "proposals": payload.get("proposals", {}).get("count", 0),
                       "novelty_scope": novelty.get("scope")}, ensure_ascii=False))
+    try:
+        _extra = _synthesis_hooks(args, path, payload)
+        if _extra:
+            print(json.dumps({"synthesis": _extra}, ensure_ascii=False))
+    except Exception:  # noqa: BLE001
+        pass
+
     return 0
 
 

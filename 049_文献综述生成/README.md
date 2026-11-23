@@ -11,6 +11,8 @@ python3 -B /skills/weekly-skill/scripts/validate.py \
 
 产物：`/app/output/result.json`（契约与证据台账）、`/app/output/report.md`（人类可读研究产物）、`/app/work/plan.json`（前瞻计划与协议）。本地最小示例见 `examples/min_example/`；示例为合成材料，不代表正式案例结论。
 
+正式运行分四步：确定性管线 → 模型读 `work/synthesis_input.json` 写 `work/synthesis.json` → 回跑管线校验引用/数字并生成 `review.md` → `validate.py`。详见 `SKILL.md` 的“执行”节；无模型或校验失败时，`report.md` 是可交付的确定性回退。
+
 > **已实现可运行 Skill**：同目录 `SKILL.md` + `scripts/pipeline.py` + `rules/` + `examples/min_example/`；验收 `python3 answer/_shared/verify.py --only 049`；工程标准见 `answer/_shared/README.md`。本文以下内容为**开源起点调研**（为什么选这些仓库、怎么改）。
 
 > 分类：深度研究与文献综述 ｜ 赛题：challenge-e97137c9 ｜ ARMI：ARMI:2611.000091v1 ｜ [详情页](https://play.bohrium.com/challenge/challenge-e97137c9)

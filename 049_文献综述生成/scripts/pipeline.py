@@ -59,6 +59,7 @@ from kit import (  # noqa: E402
 )
 import pdf_min  # noqa: E402
 from office_min import read_docx_text, write_docx  # noqa: E402
+from normalize import normalize_case  # noqa: E402
 
 SKILL = "literature-review-writer"
 RULES = Path(__file__).resolve().parent.parent / "rules"
@@ -631,6 +632,22 @@ def induce_topics(included: list, clustering_cfg: dict, declared: list) -> tuple
     rtm = record_term_map(included, vocab)
     clusters, _singletons, _term_sets = cluster_topics(rtm, vocab, clustering_cfg)
     topics = []
+    if not clusters and len(included) >= 2:
+        # 小语料回退：词表在 df 阈值下为空（如仅 2 条记录）时，用标题/摘要中的高频实词
+        # 形成一个覆盖全部纳入记录的主题，避免整篇综述塌成空结果；标签仍只来自记录内容。
+        stop = {norm(x) for x in as_list(clustering_cfg.get("stop_terms", []))}
+        counts = {}
+        for rec in included:
+            text = norm(rec["title"] + " " + rec.get("abstract", ""))
+            words = {w for w in _ASCII_WORD.findall(text) if len(w) >= 4 and w not in stop}
+            if not words:
+                words = {g for g in re.findall(r"[\u4e00-\u9fff]{2,4}", text) if g not in stop}
+            for w in words:
+                counts[w] = counts.get(w, 0) + 1
+        fb_terms = sorted(counts, key=lambda w: (-counts[w], -len(w), w))[:6] or ["study"]
+        clusters = [{"terms": fb_terms, "support": [r["record_id"] for r in included]}]
+        rtm = {r["record_id"]: fb_terms for r in included}
+        vocab = {w: 1 for w in fb_terms}
     ordered = sorted(clusters, key=lambda c: (-len(c["support"]), c["terms"][0]))
     for i, c in enumerate(ordered, start=1):
         label = label_for_terms(c["terms"], vocab, clustering_cfg)
@@ -1009,6 +1026,7 @@ def build_draft(outline: list, topics_by_id: dict, rows_by_id: dict, conflicts: 
                 coverage: dict, unassigned: list, cfg: dict) -> dict:
     sections = []
     statements = []
+    used_quotes: set = set()
     for sec in outline:
         paragraphs = []
         extra = {"topic_id": sec.get("topic_id", ""), "question": sec.get("question", ""),
@@ -1019,7 +1037,16 @@ def build_draft(outline: list, topics_by_id: dict, rows_by_id: dict, conflicts: 
             statements.append({"section_id": sec["section_id"], "text": text})
         elif sec["kind"] in ("topic", "thin_topic"):
             t = topics_by_id[sec["topic_id"]]
-            ev = [rows_by_id[e] for e in sec["evidence_ids"]]
+            ev_all = [rows_by_id[e] for e in sec["evidence_ids"]]
+            ev, cross_refs = [], []
+            for row in ev_all:
+                # 薄弱小节只有一两条证据，重复也必须保留，否则会把仅有的支撑句删掉。
+                if sec["kind"] != "thin_topic" and row["sha256_quote"] in used_quotes:
+                    cross_refs.append(row["evidence_id"])
+                else:
+                    if sec["kind"] != "thin_topic":
+                        used_quotes.add(row["sha256_quote"])
+                    ev.append(row)
             if ev:
                 sentences = [{"text": e["quote"], "evidence_ids": [e["evidence_id"]],
                               "strength": "contested" if e["evidence_id"] in contested_ids else t["support_level"]}
@@ -1028,7 +1055,16 @@ def build_draft(outline: list, topics_by_id: dict, rows_by_id: dict, conflicts: 
                                    "paragraph_text": " ".join(f"{s['text']} [{s['evidence_ids'][0]}]"
                                                               for s in sentences)})
             else:
-                text = f"该主题的支撑记录抽不出可引用证据句（R_TOPIC_NO_EVIDENCE），按缺口处理，不补写正文。"
+                if cross_refs:
+                    text = ("本节证据均已在其他小节逐字引用，不重复列出；交叉引用："
+                            + "、".join(cross_refs) + "。")
+                else:
+                    text = f"该主题的支撑记录抽不出可引用证据句（R_TOPIC_NO_EVIDENCE），按缺口处理，不补写正文。"
+                paragraphs.append({"kind": "statement_paragraph", "sentences": [], "paragraph_text": text})
+                statements.append({"section_id": sec["section_id"], "text": text})
+            if cross_refs and ev:
+                text = ("交叉引用：" + "、".join(cross_refs)
+                        + " 已在其他小节逐字引用，此处不重复，以免同一段原文被当作多条独立证据。")
                 paragraphs.append({"kind": "statement_paragraph", "sentences": [], "paragraph_text": text})
                 statements.append({"section_id": sec["section_id"], "text": text})
             if sec["kind"] == "thin_topic":
@@ -1088,6 +1124,7 @@ def build_draft(outline: list, topics_by_id: dict, rows_by_id: dict, conflicts: 
 # 主流程
 # --------------------------------------------------------------------------------------
 def run(case: dict, task_text: str, args) -> Result:
+    case = normalize_case(case)
     rules = load_rules()
     criteria, clustering_cfg, direction_rules = rules["criteria"], rules["clustering"], rules["direction"]
     res = Result(case, skill=SKILL, clock=Clock(getattr(args, "budget", 900.0)))
@@ -1383,6 +1420,43 @@ def _write_input_error(args, exc: Exception) -> int:
     return 2
 
 
+def _synthesis_hooks(args, result_path, payload):
+    """可选 LLM 综合：生成 synthesis_input.json；若 work/synthesis.json 存在，校验并写 review.md。
+
+    确定性管线不调用模型；模型由 Harness 提供。该钩子只负责把证据压缩成输入、校验模型输出，
+    校验不过时保留确定性 report.md，不静默放行未挂证据的段落。
+    """
+    import subprocess
+    work = Path(getattr(args, "work", ".") or ".")
+    out = Path(getattr(args, "out", ".") or ".")
+    here = Path(__file__).parent
+    info = {}
+    try:
+        work.mkdir(parents=True, exist_ok=True)
+        proc = subprocess.run([sys.executable, str(here / "make_synthesis_input.py"),
+                               "--result", str(result_path),
+                               "--out", str(work / "synthesis_input.json"),
+                               "--case", str(getattr(args, "case", ""))],
+                              capture_output=True, text=True, timeout=60)
+        info["synthesis_input"] = str(work / "synthesis_input.json") if proc.returncode == 0 else "failed"
+    except Exception as exc:  # noqa: BLE001
+        info["synthesis_input"] = f"{type(exc).__name__}: {exc}"
+    syn = work / "synthesis.json"
+    if syn.is_file():
+        try:
+            proc = subprocess.run([sys.executable, str(here / "merge_synthesis.py"),
+                                   "--result", str(result_path), "--synthesis", str(syn),
+                                   "--out", str(out / "review.md"),
+                                   "--audit-out", str(out / "synthesis_audit.json")],
+                                  capture_output=True, text=True, timeout=60)
+            info["review"] = str(out / "review.md") if proc.returncode == 0 else "rejected"
+            if proc.returncode != 0:
+                info["review_detail"] = (proc.stdout or proc.stderr or "")[:500]
+        except Exception as exc:  # noqa: BLE001
+            info["review_detail"] = f"{type(exc).__name__}: {exc}"
+    return info
+
+
 def main(argv=None) -> int:
     args = parse_args(argv)
     if args.self_check:
@@ -1412,6 +1486,13 @@ def main(argv=None) -> int:
                       "evidence": len(payload.get("evidence_table", [])),
                       "conflicts": payload.get("conflicts", {}).get("count", 0),
                       "gaps": payload.get("research_gaps", {}).get("count", 0)}, ensure_ascii=False))
+    try:
+        _extra = _synthesis_hooks(args, path, payload)
+        if _extra:
+            print(json.dumps({"synthesis": _extra}, ensure_ascii=False))
+    except Exception:  # noqa: BLE001
+        pass
+
     return 0
 
 
