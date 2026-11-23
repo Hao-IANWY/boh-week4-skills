@@ -1,0 +1,4661 @@
+{
+ "case_id": "EXAMPLE-043-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "research-file-library",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-23T18:37:33+0800",
+ "主结果": {
+  "status": "partial",
+  "library_mode": {
+   "root": "library",
+   "root_tried": [
+    "library",
+    "library"
+   ],
+   "documents": 6,
+   "sidecars_excluded": 0,
+   "sidecars": []
+  },
+  "directory_tree": [
+   "library/",
+   "  PROJ-A/",
+   "    2023/",
+   "      analysis_note/",
+   "        PROJ-A_2023_analysis_note_01.md",
+   "    2024/",
+   "      analysis_note/",
+   "        PROJ-A_2024_analysis_note_01.md",
+   "        PROJ-A_2024_analysis_note_02.md",
+   "      raw_data/",
+   "        PROJ-A_2024_raw_data_01-alias1.csv",
+   "        PROJ-A_2024_raw_data_01.csv",
+   "  supplement/",
+   "    UNDATED/",
+   "      binary/",
+   "        supplement_UNDATED_binary_01.bin"
+  ],
+  "files": [
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "bytes": 111,
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "1",
+     "kind": "analysis_note",
+     "title": "分析稿 v1（2024-05）",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "bytes": 281,
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "2",
+     "kind": "analysis_note",
+     "title": "分析稿 v2（2024-07）",
+     "owner": "博士生A",
+     "instrument": "原位DRIFTS",
+     "note": "v2 为当前有效分析稿",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "PROJ-A/2024_raw/exp_run01.csv",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "archive/2023_final_报告.md",
+    "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "bytes": 143,
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "year": "2023",
+     "project": "PROJ-A",
+     "kind": "analysis_note",
+     "title": "2023 年度结题报告（归档件）",
+     "owner": "课题组",
+     "note": "结题归档件",
+     "seq": ""
+    },
+    "field_provenance": {
+     "year": "人工给定[archive/2023_final_报告.md]",
+     "project": "人工给定[archive/2023_final_报告.md]",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[archive/2023_final_报告.md]",
+     "note": "人工给定[archive/2023_final_报告.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "supplement/scan_page.bin",
+    "target_path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "bytes": 30,
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".bin",
+    "decodable_utf8": false,
+    "extraction_method": null,
+    "extraction_gap_code": "R_FILE_NO_EXTRACTOR",
+    "duplicate_of": "",
+    "metadata": {
+     "project": "supplement",
+     "kind": "binary",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "目录名解析",
+     "kind": "扩展名推断",
+     "year": "未知",
+     "title": "未知"
+    },
+    "fill_rate": 0.5,
+    "in_library": true
+   }
+  ],
+  "counts": {
+   "source_files": 6,
+   "in_library": 6,
+   "already_present": 0,
+   "skipped": 1,
+   "sidecars": 0,
+   "duplicate_groups": 1,
+   "version_chains": 1,
+   "extraction_gaps": 1,
+   "conflicts": 0
+  },
+  "duplicate_groups": [
+   {
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "count": 2,
+    "canonical": "PROJ-A/2024_raw/exp_run01.csv",
+    "aliases": [
+     "PROJ-A/2024_raw/exp_run01 (1).csv"
+    ],
+    "rule": "同 SHA-256 异名 = 完全重复/别名；canonical = 非诱饵名（copy/backup/latest 降权）→ 名归一最短 → mtime 最早 → 路径字典序"
+   }
+  ],
+  "near_duplicate_hints": [],
+  "version_chains": [
+   {
+    "identity": "analysis.md",
+    "count": 2,
+    "version_note_source": "filename_pattern",
+    "canonical": {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "version": "v2"
+    },
+    "supersedes": [
+     "PROJ-A/2024_analysis/analysis_v1.md",
+     "PROJ-A/2024_analysis/analysis_v2.md"
+    ],
+    "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+    "chain": [
+     {
+      "order": 1,
+      "path": "PROJ-A/2024_analysis/analysis_v1.md",
+      "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+      "version": "v1",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 111,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": null
+     },
+     {
+      "order": 2,
+      "path": "PROJ-A/2024_analysis/analysis_v2.md",
+      "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+      "version": "v2",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 281,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": {
+       "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+       "bytes_delta": 170,
+       "same_content": false,
+       "lines_added": 5,
+       "lines_removed": 2,
+       "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+      }
+     }
+    ],
+    "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+   }
+  ],
+  "naming_plan": [
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "02"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01.csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "archive/2023_final_报告.md",
+    "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2023",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "supplement/scan_page.bin",
+    "target": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+    "fields_used": {
+     "project": "supplement",
+     "year": "UNDATED",
+     "kind": "binary",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "alias",
+    "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+    "canonical_source": "PROJ-A/2024_raw/exp_run01.csv",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data"
+    },
+    "template_error": ""
+   }
+  ],
+  "index": [
+   {
+    "id": "39041329",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v1（2024-05）",
+    "terms": [
+     "analysis_v1.md",
+     "v1",
+     "2024-05",
+     "r01",
+     "r03",
+     "80.7",
+     "分析",
+     "析稿",
+     "初版",
+     "三组",
+     "组数",
+     "数据",
+     "据的",
+     "的选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "值约",
+     "未做",
+     "做平",
+     "平行",
+     "行实",
+     "实验"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "9e71ed66",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v2（2024-07）",
+    "terms": [
+     "analysis_v2.md",
+     "v2",
+     "2024-07",
+     "v1",
+     "r01",
+     "r03",
+     "80.7",
+     "1.9",
+     "250",
+     "78.4",
+     "240",
+     "分析",
+     "析稿",
+     "基础",
+     "础上",
+     "上补",
+     "补充",
+     "三组",
+     "组数",
+     "数据",
+     "据选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "标准",
+     "准差",
+     "个百",
+     "百分",
+     "分点",
+     "性降",
+     "降至",
+     "提示",
+     "示温",
+     "温度",
+     "度敏",
+     "敏感",
+     "结论",
+     "需要",
+     "要在",
+     "下补",
+     "补做",
+     "做两",
+     "两组",
+     "组平",
+     "平行",
+     "行实",
+     "实验",
+     "验后",
+     "后再",
+     "再定",
+     "定工",
+     "工艺",
+     "艺窗",
+     "窗口"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "e67c879e",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01",
+     "csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "0f84e279",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01.csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "6b3531e5",
+    "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "source_path": "archive/2023_final_报告.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2023",
+    "title": "2023 年度结题报告（归档件）",
+    "terms": [
+     "2023_final_",
+     "md",
+     "2023",
+     "12",
+     "proj-a",
+     "2024_raw",
+     "报告",
+     "年度",
+     "度结",
+     "结题",
+     "题报",
+     "归档",
+     "档件",
+     "本年",
+     "度完",
+     "完成",
+     "成催",
+     "催化",
+     "化剂",
+     "剂筛",
+     "筛选",
+     "形成",
+     "成配",
+     "配方",
+     "方清",
+     "清单",
+     "数据",
+     "据存",
+     "存放",
+     "放于"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "b65103a0",
+    "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "source_path": "supplement/scan_page.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "kind": "binary",
+    "project": "supplement",
+    "year": "",
+    "title": "",
+    "terms": [
+     "scan_page.bin"
+    ],
+    "searchable": false,
+    "extraction_method": null
+   }
+  ],
+  "requests": [
+   {
+    "request": "Q1",
+    "type": "search",
+    "text": "240 ℃ 选择性 原始数据",
+    "hits": [
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+      "score": 4,
+      "sha256": "00c3ce38e833",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+      "score": 3,
+      "sha256": "86b1a1ed9cf9",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+      "score": 1,
+      "sha256": "35346e66ad29",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     }
+    ],
+    "hit_count": 5
+   },
+   {
+    "request": "Q2",
+    "type": "duplicate",
+    "text": "找出内容完全相同的重复文件",
+    "duplicate_groups": 1,
+    "aliases": 1
+   },
+   {
+    "request": "Q3",
+    "type": "version",
+    "text": "analysis_v2.md 的版本关系与回退点",
+    "version_chain": [
+     {
+      "identity": "analysis.md",
+      "count": 2,
+      "version_note_source": "filename_pattern",
+      "canonical": {
+       "path": "PROJ-A/2024_analysis/analysis_v2.md",
+       "version": "v2"
+      },
+      "supersedes": [
+       "PROJ-A/2024_analysis/analysis_v1.md",
+       "PROJ-A/2024_analysis/analysis_v2.md"
+      ],
+      "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+      "chain": [
+       {
+        "order": 1,
+        "path": "PROJ-A/2024_analysis/analysis_v1.md",
+        "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+        "version": "v1",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 111,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": null
+       },
+       {
+        "order": 2,
+        "path": "PROJ-A/2024_analysis/analysis_v2.md",
+        "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+        "version": "v2",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 281,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": {
+         "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+         "bytes_delta": 170,
+         "same_content": false,
+         "lines_added": 5,
+         "lines_removed": 2,
+         "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+        }
+       }
+      ],
+      "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+     }
+    ],
+    "restore_hint": "按 chain 顺序回取：latest/canonical 为当前有效版本，回退时复制上一 order 的文件并保留原 sha256"
+   }
+  ],
+  "convention": {
+   "directory_template": "{project}/{year}/{kind}",
+   "naming_template": "{project}_{year}_{kind}_{seq}{ext}",
+   "exclude": [
+    ".git",
+    "__pycache__",
+    ".DS_Store"
+   ]
+  }
+ },
+ "证据": {
+  "source_root": "library",
+  "hashes": [
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "archive/2023_final_报告.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "supplement/scan_page.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   }
+  ],
+  "journal": [
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_analysis/analysis_v1.md",
+    "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_analysis/analysis_v2.md",
+    "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_raw/exp_run01.csv",
+    "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "archive/2023_final_报告.md",
+    "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "supplement/scan_page.bin",
+    "to": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "verified": true
+   }
+  ],
+  "journal_count": 6,
+  "metadata_provenance": {
+   "PROJ-A/2024_analysis/analysis_v1.md": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "version": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "内容提取"
+   },
+   "PROJ-A/2024_analysis/analysis_v2.md": {
+    "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "version": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "内容提取",
+    "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+   },
+   "PROJ-A/2024_raw/exp_run01 (1).csv": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "seq": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "未知"
+   },
+   "PROJ-A/2024_raw/exp_run01.csv": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "seq": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "未知"
+   },
+   "archive/2023_final_报告.md": {
+    "year": "人工给定[archive/2023_final_报告.md]",
+    "project": "人工给定[archive/2023_final_报告.md]",
+    "kind": "扩展名推断",
+    "title": "内容提取",
+    "owner": "人工给定[archive/2023_final_报告.md]",
+    "note": "人工给定[archive/2023_final_报告.md]"
+   },
+   "supplement/scan_page.bin": {
+    "project": "目录名解析",
+    "kind": "扩展名推断",
+    "year": "未知",
+    "title": "未知"
+   }
+  },
+  "field_conflicts": {
+   "archive/2023_final_报告.md": [
+    {
+     "field": "project",
+     "kept": "PROJ-A",
+     "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+     "dropped": "archive",
+     "dropped_provenance": "目录名解析"
+    }
+   ]
+  },
+  "canonical_rule": "同哈希组内：名字（去扩展名、强归一）最短 → mtime 最早 → 路径字典序；输出 canonical 与 aliases",
+  "extraction": [
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "method": "plain_text",
+    "n_chars": 55,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "method": "plain_text",
+    "n_chars": 137,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "method": "plain_text",
+    "n_chars": 101,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01.csv",
+    "method": "plain_text",
+    "n_chars": 101,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "archive/2023_final_报告.md",
+    "method": "plain_text",
+    "n_chars": 69,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "supplement/scan_page.bin",
+    "method": null,
+    "n_chars": 0,
+    "gap_code": "R_FILE_NO_EXTRACTOR",
+    "gap": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+    "ocr_confidence": null
+   }
+  ],
+  "integrity": {
+   "root": "library",
+   "files": 7,
+   "rechecked": 7,
+   "hashes_unchanged": true,
+   "changed": [],
+   "input_modified": false,
+   "policy": "输入库全程只读：本流程只向 --out 写落库树与清单，绝不改写输入库"
+  },
+  "archive_manifest": {
+   "tree": "out/library",
+   "file_count": 6,
+   "total_bytes": 767,
+   "files": [
+    {
+     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "bytes": 143
+    },
+    {
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "bytes": 111
+    },
+    {
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "bytes": 281
+    },
+    {
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101
+    },
+    {
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101
+    },
+    {
+     "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "bytes": 30
+    }
+   ],
+   "hash_algorithm": "sha256",
+   "verify": {
+    "checked": 6,
+    "mismatch": [],
+    "missing": [],
+    "ok": true
+   }
+  },
+  "ops_log": {
+   "entries": [
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v1.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v2.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+     "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01.csv"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "archive/2023_final_报告.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "supplement/scan_page.bin"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+     "action": "建议入库到 out/library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01 (1).csv"
+     ],
+     "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+     "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "merge_duplicate_candidates",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01.csv",
+      "PROJ-A/2024_raw/exp_run01 (1).csv"
+     ],
+     "basis": "SHA-256 完全一致（a75fbb4ab961b02f…）：内容相同、仅文件名不同",
+     "action": "建议保留规范名 PROJ-A/2024_raw/exp_run01.csv，其余移入重复归档目录；本流程未执行任何改名/删除（输入只读）",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "consolidate_versions",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v1.md",
+      "PROJ-A/2024_analysis/analysis_v2.md"
+     ],
+     "basis": "版本组 analysis.md（来源=filename_pattern）；canonical=v2（PROJ-A/2024_analysis/analysis_v2.md）",
+     "action": "建议旧版只读归档、引用统一指向 canonical；本流程未执行归并",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "supplement/scan_page.bin"
+     ],
+     "basis": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+     "action": "建议人工修复（代码 R_FILE_NO_EXTRACTOR：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR 侧车）；文本提取已诚实跳过，未伪造内容",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "out/library"
+     ],
+     "basis": "哈希清单/别名归一/版本组已重建",
+     "action": "建议检索索引以 canonical 文件为键重建；索引已写入本结果（不额外改文件）",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "rollback_ready",
+     "targets": [
+      "out/library"
+     ],
+     "basis": "本轮全部操作为新建复制，源库零改动（见 integrity）",
+     "action": "回滚 = 删除 out/library 整树；无需恢复源文件",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议（scope=suggestion_only，input_readonly=true）：未执行改名/合并/删除，输入库前后哈希对照见 integrity"
+  },
+  "version_notes_source": "version_notes, admin_notes, versions",
+  "script_version": "0.2.0",
+  "operation_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-043-NOT-A-TEST-CASE",
+    "contract": [
+     "失败与恢复",
+     "操作证据",
+     "资料结果"
+    ]
+   },
+   {
+    "step": "workorder",
+    "seq": 2,
+    "root": "library",
+    "root_tried": 2,
+    "exclude": 3,
+    "requests": 3,
+    "companion_rows": 0,
+    "version_notes": 0
+   },
+   {
+    "step": "inventory",
+    "seq": 3,
+    "files": 6,
+    "skipped": 1,
+    "sidecars": 0
+   },
+   {
+    "step": "extract",
+    "seq": 4,
+    "extracted": 5,
+    "gaps": 1,
+    "methods": [
+     "plain_text"
+    ]
+   },
+   {
+    "step": "dedupe",
+    "seq": 5,
+    "groups": 1,
+    "aliases": 1
+   },
+   {
+    "step": "versions",
+    "seq": 6,
+    "chains": 1,
+    "conflicts": 0,
+    "near_dups": 0
+   },
+   {
+    "step": "metadata",
+    "seq": 7,
+    "files": 6,
+    "avg_fill": 0.85,
+    "field_conflicts": 1
+   },
+   {
+    "step": "plan",
+    "seq": 8,
+    "targets": 6,
+    "name_collisions": 0
+   },
+   {
+    "step": "apply",
+    "seq": 9,
+    "copied": 6,
+    "noop": 0,
+    "conflicts": 0
+   },
+   {
+    "step": "archive",
+    "seq": 10,
+    "files": 6,
+    "total_bytes": 767,
+    "hashes_unchanged": true,
+    "verify_ok": true
+   },
+   {
+    "step": "index",
+    "seq": 11,
+    "entries": 6,
+    "searchable": 5
+   },
+   {
+    "step": "requests",
+    "seq": 12,
+    "count": 3
+   },
+   {
+    "step": "ops",
+    "seq": 13,
+    "entries": 11
+   },
+   {
+    "step": "report",
+    "seq": 14,
+    "status": "partial",
+    "issues": 3
+   }
+  ]
+ },
+ "失败与恢复": {
+  "overall": "partial",
+  "skipped": [
+   {
+    "path": "supplement/empty_placeholder.md",
+    "code": "S_EMPTY_FILE",
+    "reason": "0 字节文件，哈希无区分度，未入库"
+   }
+  ],
+  "conflicts": [],
+  "issues": [
+   {
+    "code": "S_EMPTY_FILE",
+    "item": "supplement/empty_placeholder.md",
+    "detail": "0 字节文件，哈希无区分度，未入库"
+   },
+   {
+    "code": "R_FILE_NO_EXTRACTOR",
+    "item": "supplement/scan_page.bin",
+    "detail": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取"
+   },
+   {
+    "code": "W_FIELD_CONFLICT",
+    "item": "1 处",
+    "detail": "伴随表/人工给定与文件名解析等来源冲突：按出处分级取舍，明细见 操作证据.field_conflicts"
+   }
+  ],
+  "version_note_gaps": [],
+  "low_fill_rate_files": [
+   {
+    "path": "supplement/scan_page.bin",
+    "fill_rate": 0.5,
+    "absent_fields": [
+     "year",
+     "title"
+    ]
+   }
+  ],
+  "recovery": {
+   "rollback": {
+    "scope": "本轮只在 out/library 下新建文件，源库零改动（integrity.hashes_unchanged 为证）",
+    "steps": [
+     "确认没有其他进程在使用 out/library",
+     "删除 out/library 整棵新建树即可完全回滚（无覆盖、无移动，无需恢复源文件）",
+     "如需逐条回滚：按 journal 中的 op=copy 记录，仅删除该 to 路径"
+    ],
+    "verification": "回滚后对 library.root 全量重算 sha256，应与本结果 操作证据.hashes 逐条一致"
+   },
+   "restore_points": [
+    {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "previous": "PROJ-A/2024_analysis/analysis_v1.md"
+    }
+   ],
+   "skipped": [
+    {
+     "path": "supplement/empty_placeholder.md",
+     "code": "S_EMPTY_FILE",
+     "reason": "0 字节文件，哈希无区分度，未入库"
+    }
+   ],
+   "conflicts": [],
+   "reproduce": {
+    "command": "python3 -B scripts/pipeline.py --case <case.json> --out <out_dir>",
+    "script_version": "0.2.0",
+    "rules": [
+     "rules/dedupe.json",
+     "rules/field_dictionary.json",
+     "rules/convention.json"
+    ],
+    "determinism": "遍历排序、规范件选择、目标路径生成均为确定性规则；同一输入产出同一清单"
+   }
+  }
+ },
+ "main_result": {
+  "status": "partial",
+  "library_mode": {
+   "root": "library",
+   "root_tried": [
+    "library",
+    "library"
+   ],
+   "documents": 6,
+   "sidecars_excluded": 0,
+   "sidecars": []
+  },
+  "directory_tree": [
+   "library/",
+   "  PROJ-A/",
+   "    2023/",
+   "      analysis_note/",
+   "        PROJ-A_2023_analysis_note_01.md",
+   "    2024/",
+   "      analysis_note/",
+   "        PROJ-A_2024_analysis_note_01.md",
+   "        PROJ-A_2024_analysis_note_02.md",
+   "      raw_data/",
+   "        PROJ-A_2024_raw_data_01-alias1.csv",
+   "        PROJ-A_2024_raw_data_01.csv",
+   "  supplement/",
+   "    UNDATED/",
+   "      binary/",
+   "        supplement_UNDATED_binary_01.bin"
+  ],
+  "files": [
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "bytes": 111,
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "1",
+     "kind": "analysis_note",
+     "title": "分析稿 v1（2024-05）",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "bytes": 281,
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "2",
+     "kind": "analysis_note",
+     "title": "分析稿 v2（2024-07）",
+     "owner": "博士生A",
+     "instrument": "原位DRIFTS",
+     "note": "v2 为当前有效分析稿",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "PROJ-A/2024_raw/exp_run01.csv",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "archive/2023_final_报告.md",
+    "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "bytes": 143,
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "year": "2023",
+     "project": "PROJ-A",
+     "kind": "analysis_note",
+     "title": "2023 年度结题报告（归档件）",
+     "owner": "课题组",
+     "note": "结题归档件",
+     "seq": ""
+    },
+    "field_provenance": {
+     "year": "人工给定[archive/2023_final_报告.md]",
+     "project": "人工给定[archive/2023_final_报告.md]",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[archive/2023_final_报告.md]",
+     "note": "人工给定[archive/2023_final_报告.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "supplement/scan_page.bin",
+    "target_path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "bytes": 30,
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".bin",
+    "decodable_utf8": false,
+    "extraction_method": null,
+    "extraction_gap_code": "R_FILE_NO_EXTRACTOR",
+    "duplicate_of": "",
+    "metadata": {
+     "project": "supplement",
+     "kind": "binary",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "目录名解析",
+     "kind": "扩展名推断",
+     "year": "未知",
+     "title": "未知"
+    },
+    "fill_rate": 0.5,
+    "in_library": true
+   }
+  ],
+  "counts": {
+   "source_files": 6,
+   "in_library": 6,
+   "already_present": 0,
+   "skipped": 1,
+   "sidecars": 0,
+   "duplicate_groups": 1,
+   "version_chains": 1,
+   "extraction_gaps": 1,
+   "conflicts": 0
+  },
+  "duplicate_groups": [
+   {
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "count": 2,
+    "canonical": "PROJ-A/2024_raw/exp_run01.csv",
+    "aliases": [
+     "PROJ-A/2024_raw/exp_run01 (1).csv"
+    ],
+    "rule": "同 SHA-256 异名 = 完全重复/别名；canonical = 非诱饵名（copy/backup/latest 降权）→ 名归一最短 → mtime 最早 → 路径字典序"
+   }
+  ],
+  "near_duplicate_hints": [],
+  "version_chains": [
+   {
+    "identity": "analysis.md",
+    "count": 2,
+    "version_note_source": "filename_pattern",
+    "canonical": {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "version": "v2"
+    },
+    "supersedes": [
+     "PROJ-A/2024_analysis/analysis_v1.md",
+     "PROJ-A/2024_analysis/analysis_v2.md"
+    ],
+    "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+    "chain": [
+     {
+      "order": 1,
+      "path": "PROJ-A/2024_analysis/analysis_v1.md",
+      "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+      "version": "v1",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 111,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": null
+     },
+     {
+      "order": 2,
+      "path": "PROJ-A/2024_analysis/analysis_v2.md",
+      "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+      "version": "v2",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 281,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": {
+       "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+       "bytes_delta": 170,
+       "same_content": false,
+       "lines_added": 5,
+       "lines_removed": 2,
+       "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+      }
+     }
+    ],
+    "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+   }
+  ],
+  "naming_plan": [
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "02"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01.csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "archive/2023_final_报告.md",
+    "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2023",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "supplement/scan_page.bin",
+    "target": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+    "fields_used": {
+     "project": "supplement",
+     "year": "UNDATED",
+     "kind": "binary",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "alias",
+    "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+    "canonical_source": "PROJ-A/2024_raw/exp_run01.csv",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data"
+    },
+    "template_error": ""
+   }
+  ],
+  "index": [
+   {
+    "id": "39041329",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v1（2024-05）",
+    "terms": [
+     "analysis_v1.md",
+     "v1",
+     "2024-05",
+     "r01",
+     "r03",
+     "80.7",
+     "分析",
+     "析稿",
+     "初版",
+     "三组",
+     "组数",
+     "数据",
+     "据的",
+     "的选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "值约",
+     "未做",
+     "做平",
+     "平行",
+     "行实",
+     "实验"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "9e71ed66",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v2（2024-07）",
+    "terms": [
+     "analysis_v2.md",
+     "v2",
+     "2024-07",
+     "v1",
+     "r01",
+     "r03",
+     "80.7",
+     "1.9",
+     "250",
+     "78.4",
+     "240",
+     "分析",
+     "析稿",
+     "基础",
+     "础上",
+     "上补",
+     "补充",
+     "三组",
+     "组数",
+     "数据",
+     "据选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "标准",
+     "准差",
+     "个百",
+     "百分",
+     "分点",
+     "性降",
+     "降至",
+     "提示",
+     "示温",
+     "温度",
+     "度敏",
+     "敏感",
+     "结论",
+     "需要",
+     "要在",
+     "下补",
+     "补做",
+     "做两",
+     "两组",
+     "组平",
+     "平行",
+     "行实",
+     "实验",
+     "验后",
+     "后再",
+     "再定",
+     "定工",
+     "工艺",
+     "艺窗",
+     "窗口"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "e67c879e",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01",
+     "csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "0f84e279",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01.csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "6b3531e5",
+    "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "source_path": "archive/2023_final_报告.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2023",
+    "title": "2023 年度结题报告（归档件）",
+    "terms": [
+     "2023_final_",
+     "md",
+     "2023",
+     "12",
+     "proj-a",
+     "2024_raw",
+     "报告",
+     "年度",
+     "度结",
+     "结题",
+     "题报",
+     "归档",
+     "档件",
+     "本年",
+     "度完",
+     "完成",
+     "成催",
+     "催化",
+     "化剂",
+     "剂筛",
+     "筛选",
+     "形成",
+     "成配",
+     "配方",
+     "方清",
+     "清单",
+     "数据",
+     "据存",
+     "存放",
+     "放于"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "b65103a0",
+    "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "source_path": "supplement/scan_page.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "kind": "binary",
+    "project": "supplement",
+    "year": "",
+    "title": "",
+    "terms": [
+     "scan_page.bin"
+    ],
+    "searchable": false,
+    "extraction_method": null
+   }
+  ],
+  "requests": [
+   {
+    "request": "Q1",
+    "type": "search",
+    "text": "240 ℃ 选择性 原始数据",
+    "hits": [
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+      "score": 4,
+      "sha256": "00c3ce38e833",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+      "score": 3,
+      "sha256": "86b1a1ed9cf9",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+      "score": 1,
+      "sha256": "35346e66ad29",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     }
+    ],
+    "hit_count": 5
+   },
+   {
+    "request": "Q2",
+    "type": "duplicate",
+    "text": "找出内容完全相同的重复文件",
+    "duplicate_groups": 1,
+    "aliases": 1
+   },
+   {
+    "request": "Q3",
+    "type": "version",
+    "text": "analysis_v2.md 的版本关系与回退点",
+    "version_chain": [
+     {
+      "identity": "analysis.md",
+      "count": 2,
+      "version_note_source": "filename_pattern",
+      "canonical": {
+       "path": "PROJ-A/2024_analysis/analysis_v2.md",
+       "version": "v2"
+      },
+      "supersedes": [
+       "PROJ-A/2024_analysis/analysis_v1.md",
+       "PROJ-A/2024_analysis/analysis_v2.md"
+      ],
+      "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+      "chain": [
+       {
+        "order": 1,
+        "path": "PROJ-A/2024_analysis/analysis_v1.md",
+        "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+        "version": "v1",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 111,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": null
+       },
+       {
+        "order": 2,
+        "path": "PROJ-A/2024_analysis/analysis_v2.md",
+        "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+        "version": "v2",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 281,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": {
+         "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+         "bytes_delta": 170,
+         "same_content": false,
+         "lines_added": 5,
+         "lines_removed": 2,
+         "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+        }
+       }
+      ],
+      "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+     }
+    ],
+    "restore_hint": "按 chain 顺序回取：latest/canonical 为当前有效版本，回退时复制上一 order 的文件并保留原 sha256"
+   }
+  ],
+  "convention": {
+   "directory_template": "{project}/{year}/{kind}",
+   "naming_template": "{project}_{year}_{kind}_{seq}{ext}",
+   "exclude": [
+    ".git",
+    "__pycache__",
+    ".DS_Store"
+   ]
+  }
+ },
+ "资料结果": {
+  "status": "partial",
+  "library_mode": {
+   "root": "library",
+   "root_tried": [
+    "library",
+    "library"
+   ],
+   "documents": 6,
+   "sidecars_excluded": 0,
+   "sidecars": []
+  },
+  "directory_tree": [
+   "library/",
+   "  PROJ-A/",
+   "    2023/",
+   "      analysis_note/",
+   "        PROJ-A_2023_analysis_note_01.md",
+   "    2024/",
+   "      analysis_note/",
+   "        PROJ-A_2024_analysis_note_01.md",
+   "        PROJ-A_2024_analysis_note_02.md",
+   "      raw_data/",
+   "        PROJ-A_2024_raw_data_01-alias1.csv",
+   "        PROJ-A_2024_raw_data_01.csv",
+   "  supplement/",
+   "    UNDATED/",
+   "      binary/",
+   "        supplement_UNDATED_binary_01.bin"
+  ],
+  "files": [
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "bytes": 111,
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "1",
+     "kind": "analysis_note",
+     "title": "分析稿 v1（2024-05）",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "bytes": 281,
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "version": "2",
+     "kind": "analysis_note",
+     "title": "分析稿 v2（2024-07）",
+     "owner": "博士生A",
+     "instrument": "原位DRIFTS",
+     "note": "v2 为当前有效分析稿",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "PROJ-A/2024_raw/exp_run01.csv",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "bytes": 101,
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".csv",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "seq": "01",
+     "kind": "raw_data"
+    },
+    "field_provenance": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "fill_rate": 0.8,
+    "in_library": true
+   },
+   {
+    "source_path": "archive/2023_final_报告.md",
+    "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "bytes": 143,
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".md",
+    "decodable_utf8": true,
+    "extraction_method": "plain_text",
+    "extraction_gap_code": null,
+    "duplicate_of": "",
+    "metadata": {
+     "year": "2023",
+     "project": "PROJ-A",
+     "kind": "analysis_note",
+     "title": "2023 年度结题报告（归档件）",
+     "owner": "课题组",
+     "note": "结题归档件",
+     "seq": ""
+    },
+    "field_provenance": {
+     "year": "人工给定[archive/2023_final_报告.md]",
+     "project": "人工给定[archive/2023_final_报告.md]",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[archive/2023_final_报告.md]",
+     "note": "人工给定[archive/2023_final_报告.md]"
+    },
+    "fill_rate": 1.0,
+    "in_library": true
+   },
+   {
+    "source_path": "supplement/scan_page.bin",
+    "target_path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "bytes": 30,
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26",
+    "ext": ".bin",
+    "decodable_utf8": false,
+    "extraction_method": null,
+    "extraction_gap_code": "R_FILE_NO_EXTRACTOR",
+    "duplicate_of": "",
+    "metadata": {
+     "project": "supplement",
+     "kind": "binary",
+     "seq": ""
+    },
+    "field_provenance": {
+     "project": "目录名解析",
+     "kind": "扩展名推断",
+     "year": "未知",
+     "title": "未知"
+    },
+    "fill_rate": 0.5,
+    "in_library": true
+   }
+  ],
+  "counts": {
+   "source_files": 6,
+   "in_library": 6,
+   "already_present": 0,
+   "skipped": 1,
+   "sidecars": 0,
+   "duplicate_groups": 1,
+   "version_chains": 1,
+   "extraction_gaps": 1,
+   "conflicts": 0
+  },
+  "duplicate_groups": [
+   {
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "count": 2,
+    "canonical": "PROJ-A/2024_raw/exp_run01.csv",
+    "aliases": [
+     "PROJ-A/2024_raw/exp_run01 (1).csv"
+    ],
+    "rule": "同 SHA-256 异名 = 完全重复/别名；canonical = 非诱饵名（copy/backup/latest 降权）→ 名归一最短 → mtime 最早 → 路径字典序"
+   }
+  ],
+  "near_duplicate_hints": [],
+  "version_chains": [
+   {
+    "identity": "analysis.md",
+    "count": 2,
+    "version_note_source": "filename_pattern",
+    "canonical": {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "version": "v2"
+    },
+    "supersedes": [
+     "PROJ-A/2024_analysis/analysis_v1.md",
+     "PROJ-A/2024_analysis/analysis_v2.md"
+    ],
+    "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+    "chain": [
+     {
+      "order": 1,
+      "path": "PROJ-A/2024_analysis/analysis_v1.md",
+      "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+      "version": "v1",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 111,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": null
+     },
+     {
+      "order": 2,
+      "path": "PROJ-A/2024_analysis/analysis_v2.md",
+      "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+      "version": "v2",
+      "version_basis": "filename_pattern",
+      "note_inherited_from": null,
+      "mtime": "2026-11-18T22:42:26",
+      "bytes": 281,
+      "admin_note": "",
+      "duplicate_of": "",
+      "diff_vs_previous": {
+       "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+       "bytes_delta": 170,
+       "same_content": false,
+       "lines_added": 5,
+       "lines_removed": 2,
+       "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+      }
+     }
+    ],
+    "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+   }
+  ],
+  "naming_plan": [
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v1.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_analysis/analysis_v2.md",
+    "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "analysis_note",
+     "seq": "02"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01.csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "archive/2023_final_报告.md",
+    "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2023",
+     "kind": "analysis_note",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "supplement/scan_page.bin",
+    "target": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "role": "canonical",
+    "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+    "fields_used": {
+     "project": "supplement",
+     "year": "UNDATED",
+     "kind": "binary",
+     "seq": "01"
+    },
+    "template_error": ""
+   },
+   {
+    "source": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "role": "alias",
+    "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+    "canonical_source": "PROJ-A/2024_raw/exp_run01.csv",
+    "fields_used": {
+     "project": "PROJ-A",
+     "year": "2024",
+     "kind": "raw_data"
+    },
+    "template_error": ""
+   }
+  ],
+  "index": [
+   {
+    "id": "39041329",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v1（2024-05）",
+    "terms": [
+     "analysis_v1.md",
+     "v1",
+     "2024-05",
+     "r01",
+     "r03",
+     "80.7",
+     "分析",
+     "析稿",
+     "初版",
+     "三组",
+     "组数",
+     "数据",
+     "据的",
+     "的选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "值约",
+     "未做",
+     "做平",
+     "平行",
+     "行实",
+     "实验"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "9e71ed66",
+    "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "分析稿 v2（2024-07）",
+    "terms": [
+     "analysis_v2.md",
+     "v2",
+     "2024-07",
+     "v1",
+     "r01",
+     "r03",
+     "80.7",
+     "1.9",
+     "250",
+     "78.4",
+     "240",
+     "分析",
+     "析稿",
+     "基础",
+     "础上",
+     "上补",
+     "补充",
+     "三组",
+     "组数",
+     "数据",
+     "据选",
+     "选择",
+     "择性",
+     "性均",
+     "均值",
+     "标准",
+     "准差",
+     "个百",
+     "百分",
+     "分点",
+     "性降",
+     "降至",
+     "提示",
+     "示温",
+     "温度",
+     "度敏",
+     "敏感",
+     "结论",
+     "需要",
+     "要在",
+     "下补",
+     "补做",
+     "做两",
+     "两组",
+     "组平",
+     "平行",
+     "行实",
+     "实验",
+     "验后",
+     "后再",
+     "再定",
+     "定工",
+     "工艺",
+     "艺窗",
+     "窗口"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "e67c879e",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01",
+     "csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "0f84e279",
+    "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "kind": "raw_data",
+    "project": "PROJ-A",
+    "year": "2024",
+    "title": "",
+    "terms": [
+     "exp_run01.csv",
+     "run_id",
+     "temperature_c",
+     "pressure_mpa",
+     "selectivity_pct",
+     "r01",
+     "240",
+     "3.0",
+     "82.1",
+     "r02",
+     "81.7",
+     "r03",
+     "250",
+     "78.4"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "6b3531e5",
+    "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "source_path": "archive/2023_final_报告.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "kind": "analysis_note",
+    "project": "PROJ-A",
+    "year": "2023",
+    "title": "2023 年度结题报告（归档件）",
+    "terms": [
+     "2023_final_",
+     "md",
+     "2023",
+     "12",
+     "proj-a",
+     "2024_raw",
+     "报告",
+     "年度",
+     "度结",
+     "结题",
+     "题报",
+     "归档",
+     "档件",
+     "本年",
+     "度完",
+     "完成",
+     "成催",
+     "催化",
+     "化剂",
+     "剂筛",
+     "筛选",
+     "形成",
+     "成配",
+     "配方",
+     "方清",
+     "清单",
+     "数据",
+     "据存",
+     "存放",
+     "放于"
+    ],
+    "searchable": true,
+    "extraction_method": "plain_text"
+   },
+   {
+    "id": "b65103a0",
+    "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "source_path": "supplement/scan_page.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "kind": "binary",
+    "project": "supplement",
+    "year": "",
+    "title": "",
+    "terms": [
+     "scan_page.bin"
+    ],
+    "searchable": false,
+    "extraction_method": null
+   }
+  ],
+  "requests": [
+   {
+    "request": "Q1",
+    "type": "search",
+    "text": "240 ℃ 选择性 原始数据",
+    "hits": [
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+      "score": 4,
+      "sha256": "00c3ce38e833",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+      "score": 3,
+      "sha256": "86b1a1ed9cf9",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+      "score": 1,
+      "sha256": "35346e66ad29",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+      "score": 1,
+      "sha256": "a75fbb4ab961",
+      "searchable": true
+     }
+    ],
+    "hit_count": 5
+   },
+   {
+    "request": "Q2",
+    "type": "duplicate",
+    "text": "找出内容完全相同的重复文件",
+    "duplicate_groups": 1,
+    "aliases": 1
+   },
+   {
+    "request": "Q3",
+    "type": "version",
+    "text": "analysis_v2.md 的版本关系与回退点",
+    "version_chain": [
+     {
+      "identity": "analysis.md",
+      "count": 2,
+      "version_note_source": "filename_pattern",
+      "canonical": {
+       "path": "PROJ-A/2024_analysis/analysis_v2.md",
+       "version": "v2"
+      },
+      "supersedes": [
+       "PROJ-A/2024_analysis/analysis_v1.md",
+       "PROJ-A/2024_analysis/analysis_v2.md"
+      ],
+      "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+      "chain": [
+       {
+        "order": 1,
+        "path": "PROJ-A/2024_analysis/analysis_v1.md",
+        "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+        "version": "v1",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 111,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": null
+       },
+       {
+        "order": 2,
+        "path": "PROJ-A/2024_analysis/analysis_v2.md",
+        "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+        "version": "v2",
+        "version_basis": "filename_pattern",
+        "note_inherited_from": null,
+        "mtime": "2026-11-18T22:42:26",
+        "bytes": 281,
+        "admin_note": "",
+        "duplicate_of": "",
+        "diff_vs_previous": {
+         "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+         "bytes_delta": 170,
+         "same_content": false,
+         "lines_added": 5,
+         "lines_removed": 2,
+         "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+        }
+       }
+      ],
+      "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+     }
+    ],
+    "restore_hint": "按 chain 顺序回取：latest/canonical 为当前有效版本，回退时复制上一 order 的文件并保留原 sha256"
+   }
+  ],
+  "convention": {
+   "directory_template": "{project}/{year}/{kind}",
+   "naming_template": "{project}_{year}_{kind}_{seq}{ext}",
+   "exclude": [
+    ".git",
+    "__pycache__",
+    ".DS_Store"
+   ]
+  }
+ },
+ "操作证据": {
+  "source_root": "library",
+  "hashes": [
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "archive/2023_final_报告.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   },
+   {
+    "path": "supplement/scan_page.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "mode": "0o644",
+    "mtime": "2026-11-18T22:42:26"
+   }
+  ],
+  "journal": [
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_analysis/analysis_v1.md",
+    "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+    "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+    "bytes": 111,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_analysis/analysis_v2.md",
+    "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+    "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+    "bytes": 281,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_raw/exp_run01.csv",
+    "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "archive/2023_final_报告.md",
+    "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+    "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+    "bytes": 143,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "supplement/scan_page.bin",
+    "to": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+    "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+    "bytes": 30,
+    "verified": true
+   },
+   {
+    "op": "copy",
+    "from": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+    "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+    "bytes": 101,
+    "verified": true
+   }
+  ],
+  "journal_count": 6,
+  "metadata_provenance": {
+   "PROJ-A/2024_analysis/analysis_v1.md": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "version": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "内容提取"
+   },
+   "PROJ-A/2024_analysis/analysis_v2.md": {
+    "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "version": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "内容提取",
+    "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+    "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+   },
+   "PROJ-A/2024_raw/exp_run01 (1).csv": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "seq": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "未知"
+   },
+   "PROJ-A/2024_raw/exp_run01.csv": {
+    "project": "文件名解析",
+    "year": "文件名解析",
+    "seq": "文件名解析",
+    "kind": "扩展名推断",
+    "title": "未知"
+   },
+   "archive/2023_final_报告.md": {
+    "year": "人工给定[archive/2023_final_报告.md]",
+    "project": "人工给定[archive/2023_final_报告.md]",
+    "kind": "扩展名推断",
+    "title": "内容提取",
+    "owner": "人工给定[archive/2023_final_报告.md]",
+    "note": "人工给定[archive/2023_final_报告.md]"
+   },
+   "supplement/scan_page.bin": {
+    "project": "目录名解析",
+    "kind": "扩展名推断",
+    "year": "未知",
+    "title": "未知"
+   }
+  },
+  "field_conflicts": {
+   "archive/2023_final_报告.md": [
+    {
+     "field": "project",
+     "kept": "PROJ-A",
+     "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+     "dropped": "archive",
+     "dropped_provenance": "目录名解析"
+    }
+   ]
+  },
+  "canonical_rule": "同哈希组内：名字（去扩展名、强归一）最短 → mtime 最早 → 路径字典序；输出 canonical 与 aliases",
+  "extraction": [
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v1.md",
+    "method": "plain_text",
+    "n_chars": 55,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_analysis/analysis_v2.md",
+    "method": "plain_text",
+    "n_chars": 137,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+    "method": "plain_text",
+    "n_chars": 101,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "PROJ-A/2024_raw/exp_run01.csv",
+    "method": "plain_text",
+    "n_chars": 101,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "archive/2023_final_报告.md",
+    "method": "plain_text",
+    "n_chars": 69,
+    "gap_code": null,
+    "gap": null,
+    "ocr_confidence": null
+   },
+   {
+    "path": "supplement/scan_page.bin",
+    "method": null,
+    "n_chars": 0,
+    "gap_code": "R_FILE_NO_EXTRACTOR",
+    "gap": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+    "ocr_confidence": null
+   }
+  ],
+  "integrity": {
+   "root": "library",
+   "files": 7,
+   "rechecked": 7,
+   "hashes_unchanged": true,
+   "changed": [],
+   "input_modified": false,
+   "policy": "输入库全程只读：本流程只向 --out 写落库树与清单，绝不改写输入库"
+  },
+  "archive_manifest": {
+   "tree": "out/library",
+   "file_count": 6,
+   "total_bytes": 767,
+   "files": [
+    {
+     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "bytes": 143
+    },
+    {
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "bytes": 111
+    },
+    {
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "bytes": 281
+    },
+    {
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101
+    },
+    {
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101
+    },
+    {
+     "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "bytes": 30
+    }
+   ],
+   "hash_algorithm": "sha256",
+   "verify": {
+    "checked": 6,
+    "mismatch": [],
+    "missing": [],
+    "ok": true
+   }
+  },
+  "ops_log": {
+   "entries": [
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v1.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v2.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+     "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01.csv"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "archive/2023_final_报告.md"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+     "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "supplement/scan_page.bin"
+     ],
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+     "action": "建议入库到 out/library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "ingest_suggestion",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01 (1).csv"
+     ],
+     "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+     "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "merge_duplicate_candidates",
+     "targets": [
+      "PROJ-A/2024_raw/exp_run01.csv",
+      "PROJ-A/2024_raw/exp_run01 (1).csv"
+     ],
+     "basis": "SHA-256 完全一致（a75fbb4ab961b02f…）：内容相同、仅文件名不同",
+     "action": "建议保留规范名 PROJ-A/2024_raw/exp_run01.csv，其余移入重复归档目录；本流程未执行任何改名/删除（输入只读）",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "consolidate_versions",
+     "targets": [
+      "PROJ-A/2024_analysis/analysis_v1.md",
+      "PROJ-A/2024_analysis/analysis_v2.md"
+     ],
+     "basis": "版本组 analysis.md（来源=filename_pattern）；canonical=v2（PROJ-A/2024_analysis/analysis_v2.md）",
+     "action": "建议旧版只读归档、引用统一指向 canonical；本流程未执行归并",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "supplement/scan_page.bin"
+     ],
+     "basis": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+     "action": "建议人工修复（代码 R_FILE_NO_EXTRACTOR：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR 侧车）；文本提取已诚实跳过，未伪造内容",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "out/library"
+     ],
+     "basis": "哈希清单/别名归一/版本组已重建",
+     "action": "建议检索索引以 canonical 文件为键重建；索引已写入本结果（不额外改文件）",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    },
+    {
+     "op": "rollback_ready",
+     "targets": [
+      "out/library"
+     ],
+     "basis": "本轮全部操作为新建复制，源库零改动（见 integrity）",
+     "action": "回滚 = 删除 out/library 整树；无需恢复源文件",
+     "input_readonly": true,
+     "executed": false,
+     "scope": "suggestion_only"
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议（scope=suggestion_only，input_readonly=true）：未执行改名/合并/删除，输入库前后哈希对照见 integrity"
+  },
+  "version_notes_source": "version_notes, admin_notes, versions",
+  "script_version": "0.2.0",
+  "operation_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-043-NOT-A-TEST-CASE",
+    "contract": [
+     "失败与恢复",
+     "操作证据",
+     "资料结果"
+    ]
+   },
+   {
+    "step": "workorder",
+    "seq": 2,
+    "root": "library",
+    "root_tried": 2,
+    "exclude": 3,
+    "requests": 3,
+    "companion_rows": 0,
+    "version_notes": 0
+   },
+   {
+    "step": "inventory",
+    "seq": 3,
+    "files": 6,
+    "skipped": 1,
+    "sidecars": 0
+   },
+   {
+    "step": "extract",
+    "seq": 4,
+    "extracted": 5,
+    "gaps": 1,
+    "methods": [
+     "plain_text"
+    ]
+   },
+   {
+    "step": "dedupe",
+    "seq": 5,
+    "groups": 1,
+    "aliases": 1
+   },
+   {
+    "step": "versions",
+    "seq": 6,
+    "chains": 1,
+    "conflicts": 0,
+    "near_dups": 0
+   },
+   {
+    "step": "metadata",
+    "seq": 7,
+    "files": 6,
+    "avg_fill": 0.85,
+    "field_conflicts": 1
+   },
+   {
+    "step": "plan",
+    "seq": 8,
+    "targets": 6,
+    "name_collisions": 0
+   },
+   {
+    "step": "apply",
+    "seq": 9,
+    "copied": 6,
+    "noop": 0,
+    "conflicts": 0
+   },
+   {
+    "step": "archive",
+    "seq": 10,
+    "files": 6,
+    "total_bytes": 767,
+    "hashes_unchanged": true,
+    "verify_ok": true
+   },
+   {
+    "step": "index",
+    "seq": 11,
+    "entries": 6,
+    "searchable": 5
+   },
+   {
+    "step": "requests",
+    "seq": 12,
+    "count": 3
+   },
+   {
+    "step": "ops",
+    "seq": 13,
+    "entries": 11
+   },
+   {
+    "step": "report",
+    "seq": 14,
+    "status": "partial",
+    "issues": 3
+   }
+  ]
+ },
+ "result": {
+  "主结果": {
+   "status": "partial",
+   "library_mode": {
+    "root": "library",
+    "root_tried": [
+     "library",
+     "library"
+    ],
+    "documents": 6,
+    "sidecars_excluded": 0,
+    "sidecars": []
+   },
+   "directory_tree": [
+    "library/",
+    "  PROJ-A/",
+    "    2023/",
+    "      analysis_note/",
+    "        PROJ-A_2023_analysis_note_01.md",
+    "    2024/",
+    "      analysis_note/",
+    "        PROJ-A_2024_analysis_note_01.md",
+    "        PROJ-A_2024_analysis_note_02.md",
+    "      raw_data/",
+    "        PROJ-A_2024_raw_data_01-alias1.csv",
+    "        PROJ-A_2024_raw_data_01.csv",
+    "  supplement/",
+    "    UNDATED/",
+    "      binary/",
+    "        supplement_UNDATED_binary_01.bin"
+   ],
+   "files": [
+    {
+     "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+     "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "bytes": 111,
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".md",
+     "decodable_utf8": true,
+     "extraction_method": "plain_text",
+     "extraction_gap_code": null,
+     "duplicate_of": "",
+     "metadata": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "version": "1",
+      "kind": "analysis_note",
+      "title": "分析稿 v1（2024-05）",
+      "seq": ""
+     },
+     "field_provenance": {
+      "project": "文件名解析",
+      "year": "文件名解析",
+      "version": "文件名解析",
+      "kind": "扩展名推断",
+      "title": "内容提取"
+     },
+     "fill_rate": 1.0,
+     "in_library": true
+    },
+    {
+     "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "target_path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "bytes": 281,
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".md",
+     "decodable_utf8": true,
+     "extraction_method": "plain_text",
+     "extraction_gap_code": null,
+     "duplicate_of": "",
+     "metadata": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "version": "2",
+      "kind": "analysis_note",
+      "title": "分析稿 v2（2024-07）",
+      "owner": "博士生A",
+      "instrument": "原位DRIFTS",
+      "note": "v2 为当前有效分析稿",
+      "seq": ""
+     },
+     "field_provenance": {
+      "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+      "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+      "version": "文件名解析",
+      "kind": "扩展名推断",
+      "title": "内容提取",
+      "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+      "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+      "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+     },
+     "fill_rate": 1.0,
+     "in_library": true
+    },
+    {
+     "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "bytes": 101,
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".csv",
+     "decodable_utf8": true,
+     "extraction_method": "plain_text",
+     "extraction_gap_code": null,
+     "duplicate_of": "PROJ-A/2024_raw/exp_run01.csv",
+     "metadata": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "seq": "01",
+      "kind": "raw_data"
+     },
+     "field_provenance": {
+      "project": "文件名解析",
+      "year": "文件名解析",
+      "seq": "文件名解析",
+      "kind": "扩展名推断",
+      "title": "未知"
+     },
+     "fill_rate": 0.8,
+     "in_library": true
+    },
+    {
+     "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+     "target_path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "bytes": 101,
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".csv",
+     "decodable_utf8": true,
+     "extraction_method": "plain_text",
+     "extraction_gap_code": null,
+     "duplicate_of": "",
+     "metadata": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "seq": "01",
+      "kind": "raw_data"
+     },
+     "field_provenance": {
+      "project": "文件名解析",
+      "year": "文件名解析",
+      "seq": "文件名解析",
+      "kind": "扩展名推断",
+      "title": "未知"
+     },
+     "fill_rate": 0.8,
+     "in_library": true
+    },
+    {
+     "source_path": "archive/2023_final_报告.md",
+     "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "bytes": 143,
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".md",
+     "decodable_utf8": true,
+     "extraction_method": "plain_text",
+     "extraction_gap_code": null,
+     "duplicate_of": "",
+     "metadata": {
+      "year": "2023",
+      "project": "PROJ-A",
+      "kind": "analysis_note",
+      "title": "2023 年度结题报告（归档件）",
+      "owner": "课题组",
+      "note": "结题归档件",
+      "seq": ""
+     },
+     "field_provenance": {
+      "year": "人工给定[archive/2023_final_报告.md]",
+      "project": "人工给定[archive/2023_final_报告.md]",
+      "kind": "扩展名推断",
+      "title": "内容提取",
+      "owner": "人工给定[archive/2023_final_报告.md]",
+      "note": "人工给定[archive/2023_final_报告.md]"
+     },
+     "fill_rate": 1.0,
+     "in_library": true
+    },
+    {
+     "source_path": "supplement/scan_page.bin",
+     "target_path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "bytes": 30,
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26",
+     "ext": ".bin",
+     "decodable_utf8": false,
+     "extraction_method": null,
+     "extraction_gap_code": "R_FILE_NO_EXTRACTOR",
+     "duplicate_of": "",
+     "metadata": {
+      "project": "supplement",
+      "kind": "binary",
+      "seq": ""
+     },
+     "field_provenance": {
+      "project": "目录名解析",
+      "kind": "扩展名推断",
+      "year": "未知",
+      "title": "未知"
+     },
+     "fill_rate": 0.5,
+     "in_library": true
+    }
+   ],
+   "counts": {
+    "source_files": 6,
+    "in_library": 6,
+    "already_present": 0,
+    "skipped": 1,
+    "sidecars": 0,
+    "duplicate_groups": 1,
+    "version_chains": 1,
+    "extraction_gaps": 1,
+    "conflicts": 0
+   },
+   "duplicate_groups": [
+    {
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "count": 2,
+     "canonical": "PROJ-A/2024_raw/exp_run01.csv",
+     "aliases": [
+      "PROJ-A/2024_raw/exp_run01 (1).csv"
+     ],
+     "rule": "同 SHA-256 异名 = 完全重复/别名；canonical = 非诱饵名（copy/backup/latest 降权）→ 名归一最短 → mtime 最早 → 路径字典序"
+    }
+   ],
+   "near_duplicate_hints": [],
+   "version_chains": [
+    {
+     "identity": "analysis.md",
+     "count": 2,
+     "version_note_source": "filename_pattern",
+     "canonical": {
+      "path": "PROJ-A/2024_analysis/analysis_v2.md",
+      "version": "v2"
+     },
+     "supersedes": [
+      "PROJ-A/2024_analysis/analysis_v1.md",
+      "PROJ-A/2024_analysis/analysis_v2.md"
+     ],
+     "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+     "chain": [
+      {
+       "order": 1,
+       "path": "PROJ-A/2024_analysis/analysis_v1.md",
+       "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+       "version": "v1",
+       "version_basis": "filename_pattern",
+       "note_inherited_from": null,
+       "mtime": "2026-11-18T22:42:26",
+       "bytes": 111,
+       "admin_note": "",
+       "duplicate_of": "",
+       "diff_vs_previous": null
+      },
+      {
+       "order": 2,
+       "path": "PROJ-A/2024_analysis/analysis_v2.md",
+       "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+       "version": "v2",
+       "version_basis": "filename_pattern",
+       "note_inherited_from": null,
+       "mtime": "2026-11-18T22:42:26",
+       "bytes": 281,
+       "admin_note": "",
+       "duplicate_of": "",
+       "diff_vs_previous": {
+        "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+        "bytes_delta": 170,
+        "same_content": false,
+        "lines_added": 5,
+        "lines_removed": 2,
+        "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+       }
+      }
+     ],
+     "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+    }
+   ],
+   "naming_plan": [
+    {
+     "source": "PROJ-A/2024_analysis/analysis_v1.md",
+     "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "role": "canonical",
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+     "fields_used": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "kind": "analysis_note",
+      "seq": "01"
+     },
+     "template_error": ""
+    },
+    {
+     "source": "PROJ-A/2024_analysis/analysis_v2.md",
+     "target": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "role": "canonical",
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+     "fields_used": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "kind": "analysis_note",
+      "seq": "02"
+     },
+     "template_error": ""
+    },
+    {
+     "source": "PROJ-A/2024_raw/exp_run01.csv",
+     "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "role": "canonical",
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+     "fields_used": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "kind": "raw_data",
+      "seq": "01"
+     },
+     "template_error": ""
+    },
+    {
+     "source": "archive/2023_final_报告.md",
+     "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "role": "canonical",
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+     "fields_used": {
+      "project": "PROJ-A",
+      "year": "2023",
+      "kind": "analysis_note",
+      "seq": "01"
+     },
+     "template_error": ""
+    },
+    {
+     "source": "supplement/scan_page.bin",
+     "target": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "role": "canonical",
+     "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+     "fields_used": {
+      "project": "supplement",
+      "year": "UNDATED",
+      "kind": "binary",
+      "seq": "01"
+     },
+     "template_error": ""
+    },
+    {
+     "source": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "target": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "role": "alias",
+     "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+     "canonical_source": "PROJ-A/2024_raw/exp_run01.csv",
+     "fields_used": {
+      "project": "PROJ-A",
+      "year": "2024",
+      "kind": "raw_data"
+     },
+     "template_error": ""
+    }
+   ],
+   "index": [
+    {
+     "id": "39041329",
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "source_path": "PROJ-A/2024_analysis/analysis_v1.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "bytes": 111,
+     "kind": "analysis_note",
+     "project": "PROJ-A",
+     "year": "2024",
+     "title": "分析稿 v1（2024-05）",
+     "terms": [
+      "analysis_v1.md",
+      "v1",
+      "2024-05",
+      "r01",
+      "r03",
+      "80.7",
+      "分析",
+      "析稿",
+      "初版",
+      "三组",
+      "组数",
+      "数据",
+      "据的",
+      "的选",
+      "选择",
+      "择性",
+      "性均",
+      "均值",
+      "值约",
+      "未做",
+      "做平",
+      "平行",
+      "行实",
+      "实验"
+     ],
+     "searchable": true,
+     "extraction_method": "plain_text"
+    },
+    {
+     "id": "9e71ed66",
+     "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "source_path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "bytes": 281,
+     "kind": "analysis_note",
+     "project": "PROJ-A",
+     "year": "2024",
+     "title": "分析稿 v2（2024-07）",
+     "terms": [
+      "analysis_v2.md",
+      "v2",
+      "2024-07",
+      "v1",
+      "r01",
+      "r03",
+      "80.7",
+      "1.9",
+      "250",
+      "78.4",
+      "240",
+      "分析",
+      "析稿",
+      "基础",
+      "础上",
+      "上补",
+      "补充",
+      "三组",
+      "组数",
+      "数据",
+      "据选",
+      "选择",
+      "择性",
+      "性均",
+      "均值",
+      "标准",
+      "准差",
+      "个百",
+      "百分",
+      "分点",
+      "性降",
+      "降至",
+      "提示",
+      "示温",
+      "温度",
+      "度敏",
+      "敏感",
+      "结论",
+      "需要",
+      "要在",
+      "下补",
+      "补做",
+      "做两",
+      "两组",
+      "组平",
+      "平行",
+      "行实",
+      "实验",
+      "验后",
+      "后再",
+      "再定",
+      "定工",
+      "工艺",
+      "艺窗",
+      "窗口"
+     ],
+     "searchable": true,
+     "extraction_method": "plain_text"
+    },
+    {
+     "id": "e67c879e",
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "source_path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "kind": "raw_data",
+     "project": "PROJ-A",
+     "year": "2024",
+     "title": "",
+     "terms": [
+      "exp_run01",
+      "csv",
+      "run_id",
+      "temperature_c",
+      "pressure_mpa",
+      "selectivity_pct",
+      "r01",
+      "240",
+      "3.0",
+      "82.1",
+      "r02",
+      "81.7",
+      "r03",
+      "250",
+      "78.4"
+     ],
+     "searchable": true,
+     "extraction_method": "plain_text"
+    },
+    {
+     "id": "0f84e279",
+     "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "source_path": "PROJ-A/2024_raw/exp_run01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "kind": "raw_data",
+     "project": "PROJ-A",
+     "year": "2024",
+     "title": "",
+     "terms": [
+      "exp_run01.csv",
+      "run_id",
+      "temperature_c",
+      "pressure_mpa",
+      "selectivity_pct",
+      "r01",
+      "240",
+      "3.0",
+      "82.1",
+      "r02",
+      "81.7",
+      "r03",
+      "250",
+      "78.4"
+     ],
+     "searchable": true,
+     "extraction_method": "plain_text"
+    },
+    {
+     "id": "6b3531e5",
+     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "source_path": "archive/2023_final_报告.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "bytes": 143,
+     "kind": "analysis_note",
+     "project": "PROJ-A",
+     "year": "2023",
+     "title": "2023 年度结题报告（归档件）",
+     "terms": [
+      "2023_final_",
+      "md",
+      "2023",
+      "12",
+      "proj-a",
+      "2024_raw",
+      "报告",
+      "年度",
+      "度结",
+      "结题",
+      "题报",
+      "归档",
+      "档件",
+      "本年",
+      "度完",
+      "完成",
+      "成催",
+      "催化",
+      "化剂",
+      "剂筛",
+      "筛选",
+      "形成",
+      "成配",
+      "配方",
+      "方清",
+      "清单",
+      "数据",
+      "据存",
+      "存放",
+      "放于"
+     ],
+     "searchable": true,
+     "extraction_method": "plain_text"
+    },
+    {
+     "id": "b65103a0",
+     "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "source_path": "supplement/scan_page.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "bytes": 30,
+     "kind": "binary",
+     "project": "supplement",
+     "year": "",
+     "title": "",
+     "terms": [
+      "scan_page.bin"
+     ],
+     "searchable": false,
+     "extraction_method": null
+    }
+   ],
+   "requests": [
+    {
+     "request": "Q1",
+     "type": "search",
+     "text": "240 ℃ 选择性 原始数据",
+     "hits": [
+      {
+       "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+       "score": 4,
+       "sha256": "00c3ce38e833",
+       "searchable": true
+      },
+      {
+       "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+       "score": 3,
+       "sha256": "86b1a1ed9cf9",
+       "searchable": true
+      },
+      {
+       "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+       "score": 1,
+       "sha256": "35346e66ad29",
+       "searchable": true
+      },
+      {
+       "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+       "score": 1,
+       "sha256": "a75fbb4ab961",
+       "searchable": true
+      },
+      {
+       "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+       "score": 1,
+       "sha256": "a75fbb4ab961",
+       "searchable": true
+      }
+     ],
+     "hit_count": 5
+    },
+    {
+     "request": "Q2",
+     "type": "duplicate",
+     "text": "找出内容完全相同的重复文件",
+     "duplicate_groups": 1,
+     "aliases": 1
+    },
+    {
+     "request": "Q3",
+     "type": "version",
+     "text": "analysis_v2.md 的版本关系与回退点",
+     "version_chain": [
+      {
+       "identity": "analysis.md",
+       "count": 2,
+       "version_note_source": "filename_pattern",
+       "canonical": {
+        "path": "PROJ-A/2024_analysis/analysis_v2.md",
+        "version": "v2"
+       },
+       "supersedes": [
+        "PROJ-A/2024_analysis/analysis_v1.md",
+        "PROJ-A/2024_analysis/analysis_v2.md"
+       ],
+       "latest": "PROJ-A/2024_analysis/analysis_v2.md",
+       "chain": [
+        {
+         "order": 1,
+         "path": "PROJ-A/2024_analysis/analysis_v1.md",
+         "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+         "version": "v1",
+         "version_basis": "filename_pattern",
+         "note_inherited_from": null,
+         "mtime": "2026-11-18T22:42:26",
+         "bytes": 111,
+         "admin_note": "",
+         "duplicate_of": "",
+         "diff_vs_previous": null
+        },
+        {
+         "order": 2,
+         "path": "PROJ-A/2024_analysis/analysis_v2.md",
+         "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+         "version": "v2",
+         "version_basis": "filename_pattern",
+         "note_inherited_from": null,
+         "mtime": "2026-11-18T22:42:26",
+         "bytes": 281,
+         "admin_note": "",
+         "duplicate_of": "",
+         "diff_vs_previous": {
+          "supersedes": "PROJ-A/2024_analysis/analysis_v1.md",
+          "bytes_delta": 170,
+          "same_content": false,
+          "lines_added": 5,
+          "lines_removed": 2,
+          "note": "v1 → v2：按行政性版本说明/文件名模式排序的差异说明"
+         }
+        }
+       ],
+       "policy": "canonical=版本序最大（final>vN>draft，并列非副本/非诱饵名优先）；旧版只读归档建议，不删除"
+      }
+     ],
+     "restore_hint": "按 chain 顺序回取：latest/canonical 为当前有效版本，回退时复制上一 order 的文件并保留原 sha256"
+    }
+   ],
+   "convention": {
+    "directory_template": "{project}/{year}/{kind}",
+    "naming_template": "{project}_{year}_{kind}_{seq}{ext}",
+    "exclude": [
+     ".git",
+     "__pycache__",
+     ".DS_Store"
+    ]
+   }
+  },
+  "证据": {
+   "source_root": "library",
+   "hashes": [
+    {
+     "path": "PROJ-A/2024_analysis/analysis_v1.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "bytes": 111,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    },
+    {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "bytes": 281,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    },
+    {
+     "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    },
+    {
+     "path": "PROJ-A/2024_raw/exp_run01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    },
+    {
+     "path": "archive/2023_final_报告.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "bytes": 143,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    },
+    {
+     "path": "supplement/scan_page.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "bytes": 30,
+     "mode": "0o644",
+     "mtime": "2026-11-18T22:42:26"
+    }
+   ],
+   "journal": [
+    {
+     "op": "copy",
+     "from": "PROJ-A/2024_analysis/analysis_v1.md",
+     "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+     "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+     "bytes": 111,
+     "verified": true
+    },
+    {
+     "op": "copy",
+     "from": "PROJ-A/2024_analysis/analysis_v2.md",
+     "to": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+     "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+     "bytes": 281,
+     "verified": true
+    },
+    {
+     "op": "copy",
+     "from": "PROJ-A/2024_raw/exp_run01.csv",
+     "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "verified": true
+    },
+    {
+     "op": "copy",
+     "from": "archive/2023_final_报告.md",
+     "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+     "bytes": 143,
+     "verified": true
+    },
+    {
+     "op": "copy",
+     "from": "supplement/scan_page.bin",
+     "to": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+     "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+     "bytes": 30,
+     "verified": true
+    },
+    {
+     "op": "copy",
+     "from": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "to": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+     "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+     "bytes": 101,
+     "verified": true
+    }
+   ],
+   "journal_count": 6,
+   "metadata_provenance": {
+    "PROJ-A/2024_analysis/analysis_v1.md": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取"
+    },
+    "PROJ-A/2024_analysis/analysis_v2.md": {
+     "project": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "year": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "version": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "instrument": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]",
+     "note": "人工给定[PROJ-A/2024_analysis/analysis_v2.md]"
+    },
+    "PROJ-A/2024_raw/exp_run01 (1).csv": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "PROJ-A/2024_raw/exp_run01.csv": {
+     "project": "文件名解析",
+     "year": "文件名解析",
+     "seq": "文件名解析",
+     "kind": "扩展名推断",
+     "title": "未知"
+    },
+    "archive/2023_final_报告.md": {
+     "year": "人工给定[archive/2023_final_报告.md]",
+     "project": "人工给定[archive/2023_final_报告.md]",
+     "kind": "扩展名推断",
+     "title": "内容提取",
+     "owner": "人工给定[archive/2023_final_报告.md]",
+     "note": "人工给定[archive/2023_final_报告.md]"
+    },
+    "supplement/scan_page.bin": {
+     "project": "目录名解析",
+     "kind": "扩展名推断",
+     "year": "未知",
+     "title": "未知"
+    }
+   },
+   "field_conflicts": {
+    "archive/2023_final_报告.md": [
+     {
+      "field": "project",
+      "kept": "PROJ-A",
+      "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+      "dropped": "archive",
+      "dropped_provenance": "目录名解析"
+     }
+    ]
+   },
+   "canonical_rule": "同哈希组内：名字（去扩展名、强归一）最短 → mtime 最早 → 路径字典序；输出 canonical 与 aliases",
+   "extraction": [
+    {
+     "path": "PROJ-A/2024_analysis/analysis_v1.md",
+     "method": "plain_text",
+     "n_chars": 55,
+     "gap_code": null,
+     "gap": null,
+     "ocr_confidence": null
+    },
+    {
+     "path": "PROJ-A/2024_analysis/analysis_v2.md",
+     "method": "plain_text",
+     "n_chars": 137,
+     "gap_code": null,
+     "gap": null,
+     "ocr_confidence": null
+    },
+    {
+     "path": "PROJ-A/2024_raw/exp_run01 (1).csv",
+     "method": "plain_text",
+     "n_chars": 101,
+     "gap_code": null,
+     "gap": null,
+     "ocr_confidence": null
+    },
+    {
+     "path": "PROJ-A/2024_raw/exp_run01.csv",
+     "method": "plain_text",
+     "n_chars": 101,
+     "gap_code": null,
+     "gap": null,
+     "ocr_confidence": null
+    },
+    {
+     "path": "archive/2023_final_报告.md",
+     "method": "plain_text",
+     "n_chars": 69,
+     "gap_code": null,
+     "gap": null,
+     "ocr_confidence": null
+    },
+    {
+     "path": "supplement/scan_page.bin",
+     "method": null,
+     "n_chars": 0,
+     "gap_code": "R_FILE_NO_EXTRACTOR",
+     "gap": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+     "ocr_confidence": null
+    }
+   ],
+   "integrity": {
+    "root": "library",
+    "files": 7,
+    "rechecked": 7,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读：本流程只向 --out 写落库树与清单，绝不改写输入库"
+   },
+   "archive_manifest": {
+    "tree": "out/library",
+    "file_count": 6,
+    "total_bytes": 767,
+    "files": [
+     {
+      "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
+      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
+      "bytes": 143
+     },
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md",
+      "sha256": "86b1a1ed9cf9178728021c3c2240bea31a515955ecbbae18de14476a8831cc38",
+      "bytes": 111
+     },
+     {
+      "path": "library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md",
+      "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+      "bytes": 281
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv",
+      "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+      "bytes": 101
+     },
+     {
+      "path": "library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv",
+      "sha256": "a75fbb4ab961b02f90e94cd50717023eb275748bfe7751ed02668bd510d181b5",
+      "bytes": 101
+     },
+     {
+      "path": "library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin",
+      "sha256": "0f6d049bd4a675effc6006e20350041d985ab06f7dfe70c15e6b0848b14303cc",
+      "bytes": 30
+     }
+    ],
+    "hash_algorithm": "sha256",
+    "verify": {
+     "checked": 6,
+     "mismatch": [],
+     "missing": [],
+     "ok": true
+    }
+   },
+   "ops_log": {
+    "entries": [
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "PROJ-A/2024_analysis/analysis_v1.md"
+      ],
+      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=01）",
+      "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "PROJ-A/2024_analysis/analysis_v2.md"
+      ],
+      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=analysis_note, seq=02）",
+      "action": "建议入库到 out/library/PROJ-A/2024/analysis_note/PROJ-A_2024_analysis_note_02.md（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "PROJ-A/2024_raw/exp_run01.csv"
+      ],
+      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2024, kind=raw_data, seq=01）",
+      "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "archive/2023_final_报告.md"
+      ],
+      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
+      "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "supplement/scan_page.bin"
+      ],
+      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=supplement, year=UNDATED, kind=binary, seq=01）",
+      "action": "建议入库到 out/library/supplement/UNDATED/binary/supplement_UNDATED_binary_01.bin（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "ingest_suggestion",
+      "targets": [
+       "PROJ-A/2024_raw/exp_run01 (1).csv"
+      ],
+      "basis": "完全重复副本（同 SHA-256）：沿用规范件 PROJ-A/2024_raw/exp_run01.csv 的目标路径加 -alias1",
+      "action": "建议入库到 out/library/PROJ-A/2024/raw_data/PROJ-A_2024_raw_data_01-alias1.csv（本流程已复制并哈希核验）；源文件保持原位只读",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "merge_duplicate_candidates",
+      "targets": [
+       "PROJ-A/2024_raw/exp_run01.csv",
+       "PROJ-A/2024_raw/exp_run01 (1).csv"
+      ],
+      "basis": "SHA-256 完全一致（a75fbb4ab961b02f…）：内容相同、仅文件名不同",
+      "action": "建议保留规范名 PROJ-A/2024_raw/exp_run01.csv，其余移入重复归档目录；本流程未执行任何改名/删除（输入只读）",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "consolidate_versions",
+      "targets": [
+       "PROJ-A/2024_analysis/analysis_v1.md",
+       "PROJ-A/2024_analysis/analysis_v2.md"
+      ],
+      "basis": "版本组 analysis.md（来源=filename_pattern）；canonical=v2（PROJ-A/2024_analysis/analysis_v2.md）",
+      "action": "建议旧版只读归档、引用统一指向 canonical；本流程未执行归并",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "repair_file_gap",
+      "targets": [
+       "supplement/scan_page.bin"
+      ],
+      "basis": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取",
+      "action": "建议人工修复（代码 R_FILE_NO_EXTRACTOR：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR 侧车）；文本提取已诚实跳过，未伪造内容",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "rebuild_index",
+      "targets": [
+       "out/library"
+      ],
+      "basis": "哈希清单/别名归一/版本组已重建",
+      "action": "建议检索索引以 canonical 文件为键重建；索引已写入本结果（不额外改文件）",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     },
+     {
+      "op": "rollback_ready",
+      "targets": [
+       "out/library"
+      ],
+      "basis": "本轮全部操作为新建复制，源库零改动（见 integrity）",
+      "action": "回滚 = 删除 out/library 整树；无需恢复源文件",
+      "input_readonly": true,
+      "executed": false,
+      "scope": "suggestion_only"
+     }
+    ],
+    "executed": false,
+    "note": "全部为建议（scope=suggestion_only，input_readonly=true）：未执行改名/合并/删除，输入库前后哈希对照见 integrity"
+   },
+   "version_notes_source": "version_notes, admin_notes, versions",
+   "script_version": "0.2.0",
+   "operation_log": [
+    {
+     "step": "load_case",
+     "seq": 1,
+     "case_id": "EXAMPLE-043-NOT-A-TEST-CASE",
+     "contract": [
+      "失败与恢复",
+      "操作证据",
+      "资料结果"
+     ]
+    },
+    {
+     "step": "workorder",
+     "seq": 2,
+     "root": "library",
+     "root_tried": 2,
+     "exclude": 3,
+     "requests": 3,
+     "companion_rows": 0,
+     "version_notes": 0
+    },
+    {
+     "step": "inventory",
+     "seq": 3,
+     "files": 6,
+     "skipped": 1,
+     "sidecars": 0
+    },
+    {
+     "step": "extract",
+     "seq": 4,
+     "extracted": 5,
+     "gaps": 1,
+     "methods": [
+      "plain_text"
+     ]
+    },
+    {
+     "step": "dedupe",
+     "seq": 5,
+     "groups": 1,
+     "aliases": 1
+    },
+    {
+     "step": "versions",
+     "seq": 6,
+     "chains": 1,
+     "conflicts": 0,
+     "near_dups": 0
+    },
+    {
+     "step": "metadata",
+     "seq": 7,
+     "files": 6,
+     "avg_fill": 0.85,
+     "field_conflicts": 1
+    },
+    {
+     "step": "plan",
+     "seq": 8,
+     "targets": 6,
+     "name_collisions": 0
+    },
+    {
+     "step": "apply",
+     "seq": 9,
+     "copied": 6,
+     "noop": 0,
+     "conflicts": 0
+    },
+    {
+     "step": "archive",
+     "seq": 10,
+     "files": 6,
+     "total_bytes": 767,
+     "hashes_unchanged": true,
+     "verify_ok": true
+    },
+    {
+     "step": "index",
+     "seq": 11,
+     "entries": 6,
+     "searchable": 5
+    },
+    {
+     "step": "requests",
+     "seq": 12,
+     "count": 3
+    },
+    {
+     "step": "ops",
+     "seq": 13,
+     "entries": 11
+    },
+    {
+     "step": "report",
+     "seq": 14,
+     "status": "partial",
+     "issues": 3
+    }
+   ]
+  },
+  "失败与恢复": {
+   "overall": "partial",
+   "skipped": [
+    {
+     "path": "supplement/empty_placeholder.md",
+     "code": "S_EMPTY_FILE",
+     "reason": "0 字节文件，哈希无区分度，未入库"
+    }
+   ],
+   "conflicts": [],
+   "issues": [
+    {
+     "code": "S_EMPTY_FILE",
+     "item": "supplement/empty_placeholder.md",
+     "detail": "0 字节文件，哈希无区分度，未入库"
+    },
+    {
+     "code": "R_FILE_NO_EXTRACTOR",
+     "item": "supplement/scan_page.bin",
+     "detail": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取"
+    },
+    {
+     "code": "W_FIELD_CONFLICT",
+     "item": "1 处",
+     "detail": "伴随表/人工给定与文件名解析等来源冲突：按出处分级取舍，明细见 操作证据.field_conflicts"
+    }
+   ],
+   "version_note_gaps": [],
+   "low_fill_rate_files": [
+    {
+     "path": "supplement/scan_page.bin",
+     "fill_rate": 0.5,
+     "absent_fields": [
+      "year",
+      "title"
+     ]
+    }
+   ],
+   "recovery": {
+    "rollback": {
+     "scope": "本轮只在 out/library 下新建文件，源库零改动（integrity.hashes_unchanged 为证）",
+     "steps": [
+      "确认没有其他进程在使用 out/library",
+      "删除 out/library 整棵新建树即可完全回滚（无覆盖、无移动，无需恢复源文件）",
+      "如需逐条回滚：按 journal 中的 op=copy 记录，仅删除该 to 路径"
+     ],
+     "verification": "回滚后对 library.root 全量重算 sha256，应与本结果 操作证据.hashes 逐条一致"
+    },
+    "restore_points": [
+     {
+      "path": "PROJ-A/2024_analysis/analysis_v2.md",
+      "sha256": "00c3ce38e83358944efeacf927357d57062207081cc81a3fe283e04cdd29bb35",
+      "previous": "PROJ-A/2024_analysis/analysis_v1.md"
+     }
+    ],
+    "skipped": [
+     {
+      "path": "supplement/empty_placeholder.md",
+      "code": "S_EMPTY_FILE",
+      "reason": "0 字节文件，哈希无区分度，未入库"
+     }
+    ],
+    "conflicts": [],
+    "reproduce": {
+     "command": "python3 -B scripts/pipeline.py --case <case.json> --out <out_dir>",
+     "script_version": "0.2.0",
+     "rules": [
+      "rules/dedupe.json",
+      "rules/field_dictionary.json",
+      "rules/convention.json"
+     ],
+     "determinism": "遍历排序、规范件选择、目标路径生成均为确定性规则；同一输入产出同一清单"
+    }
+   }
+  }
+ },
+ "evidence": {
+  "contract": {
+   "资料结果": "目录树、逐文件清单（含元数据与目标路径）、重复组、版本链、可检索索引、命名计划",
+   "操作证据": "每文件 sha256/大小/权限/mtime、操作日志、模板与规则版本、元数据字段出处",
+   "失败与恢复": "跳过清单及原因、冲突处置、非 UTF-8 与元数据缺口、回滚步骤与恢复点；不得把未完成写成完成"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-043-NOT-A-TEST-CASE",
+    "contract": [
+     "失败与恢复",
+     "操作证据",
+     "资料结果"
+    ]
+   },
+   {
+    "step": "workorder",
+    "seq": 2,
+    "root": "library",
+    "root_tried": 2,
+    "exclude": 3,
+    "requests": 3,
+    "companion_rows": 0,
+    "version_notes": 0
+   },
+   {
+    "step": "inventory",
+    "seq": 3,
+    "files": 6,
+    "skipped": 1,
+    "sidecars": 0
+   },
+   {
+    "step": "extract",
+    "seq": 4,
+    "extracted": 5,
+    "gaps": 1,
+    "methods": [
+     "plain_text"
+    ]
+   },
+   {
+    "step": "dedupe",
+    "seq": 5,
+    "groups": 1,
+    "aliases": 1
+   },
+   {
+    "step": "versions",
+    "seq": 6,
+    "chains": 1,
+    "conflicts": 0,
+    "near_dups": 0
+   },
+   {
+    "step": "metadata",
+    "seq": 7,
+    "files": 6,
+    "avg_fill": 0.85,
+    "field_conflicts": 1
+   },
+   {
+    "step": "plan",
+    "seq": 8,
+    "targets": 6,
+    "name_collisions": 0
+   },
+   {
+    "step": "apply",
+    "seq": 9,
+    "copied": 6,
+    "noop": 0,
+    "conflicts": 0
+   },
+   {
+    "step": "archive",
+    "seq": 10,
+    "files": 6,
+    "total_bytes": 767,
+    "hashes_unchanged": true,
+    "verify_ok": true
+   },
+   {
+    "step": "index",
+    "seq": 11,
+    "entries": 6,
+    "searchable": 5
+   },
+   {
+    "step": "requests",
+    "seq": 12,
+    "count": 3
+   },
+   {
+    "step": "ops",
+    "seq": 13,
+    "entries": 11
+   },
+   {
+    "step": "report",
+    "seq": 14,
+    "status": "partial",
+    "issues": 3
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-043-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "partial",
+  "completed": [
+   "inventory",
+   "extract",
+   "dedupe",
+   "version_chain",
+   "metadata",
+   "plan",
+   "apply",
+   "archive_verify",
+   "index",
+   "ops_log",
+   "recovery_plan"
+  ],
+  "unmet": [
+   {
+    "item": "S_EMPTY_FILE:supplement/empty_placeholder.md",
+    "reason": "0 字节文件，哈希无区分度，未入库"
+   },
+   {
+    "item": "R_FILE_NO_EXTRACTOR:supplement/scan_page.bin",
+    "reason": "非 UTF-8 二进制且无侧车文本：按字节哈希入库，内容未抽取"
+   },
+   {
+    "item": "W_FIELD_CONFLICT:1 处",
+    "reason": "伴随表/人工给定与文件名解析等来源冲突：按出处分级取舍，明细见 操作证据.field_conflicts"
+   }
+  ],
+  "notes": [
+   "源库只读（integrity.hashes_unchanged=True）；本轮新建/确认 6 个落库文件、1 个跳过、0 个落库冲突、0 个版本冲突、1 个提取缺口，全部入清单"
+  ]
+ },
+ "uncertainty": []
+}

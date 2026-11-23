@@ -1,0 +1,170 @@
+{
+ "seq": 43,
+ "title": "科研资料库与文件管理",
+ "queries": [
+  "research file management",
+  "knowledge base organizer"
+ ],
+ "skills": [
+  {
+   "name": ".claude",
+   "slug": "jackneil-wepublic-defender-claude",
+   "author": "jackneil",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/jackneil/wepublic_defender#.claude",
+   "github_stars": 2
+  },
+  {
+   "name": "deep-research",
+   "slug": "glebis-claude-skills-deep-research",
+   "author": "glebis",
+   "category": "development",
+   "description": "This skill should be used when conducting comprehensive research on any topic using the OpenAI Deep Research API. It automates prompt enhancement through interactive clarifying questions, saves research parameters, and executes deep research with web search capabilities. Use when the user asks for in-depth analysis, i…",
+   "description_zh": null,
+   "repo_url": "https://github.com/glebis/claude-skills#deep-research",
+   "github_stars": 76
+  },
+  {
+   "name": "quant-experiment-runtime",
+   "slug": "camusgit-evoquant-quant-experiment-runtime",
+   "author": "CamusGIT",
+   "category": "research",
+   "description": "Quant research experiment executor: discover an offline source database under the workdir's code-repo, build a panel, run a Research Artifact's entry point to compute research-object values, and evaluate IC/ICIR/RANKIC/coverage metrics. Runtime = Experiment Executor; it runs a Research Artifact via a Python-native Ent…",
+   "description_zh": null,
+   "repo_url": "https://github.com/CamusGIT/EvoQuant#EvoQuant~skills~quant-experiment-runtime",
+   "github_stars": 152
+  },
+  {
+   "name": "uxr-observer",
+   "slug": "openclaw-skills-ethnoai",
+   "author": "openclaw",
+   "category": "development",
+   "description": "An embedded UX research skill that deeply studies how users interact with OpenClaw through passive ethnographic observation, structured micro-surveys, and retrospective task analysis. It tracks every interaction, infers use cases and unmet needs, measures cost, detects friction and delight signals, captures verbatim u…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~giulianomorse~ethnoai",
+   "github_stars": 3652
+  },
+  {
+   "name": "psi",
+   "slug": "siviter-xyz-dot-agent-psi",
+   "author": "siviter-xyz",
+   "category": "development",
+   "description": "Plan-spec-implement workflow for structured development. Only use when explicitly directed by user or when mentioned in project AGENTS.md file. Generates ephemeral plans in ~/.dot-agent/, applies specs to project docs, then implements test-first.",
+   "description_zh": null,
+   "repo_url": "https://github.com/siviter-xyz/dot-agent/tree/main/skills/psi",
+   "github_stars": 20
+  },
+  {
+   "name": "planning",
+   "slug": "samhvw8-dotfiles-planning",
+   "author": "samhvw8",
+   "category": "development",
+   "description": "Technical implementation planning and architecture design. Capabilities: feature planning, system architecture, technical evaluation, implementation roadmaps, requirement breakdown, trade-off analysis, codebase analysis, solution design. Actions: plan, architect, design, evaluate, breakdown technical solutions. Keywor…",
+   "description_zh": "该技能为软件开发创建详细的技术实施计划，包括架构设计、功能规划和实施路线图，同时遵循核心工程原则。",
+   "repo_url": "https://github.com/samhvw8/dotfiles#dot_claude~skills~planning",
+   "github_stars": 12
+  },
+  {
+   "name": "planning",
+   "slug": "the1studio-theone-training-skills-planning",
+   "author": "The1Studio",
+   "category": "development",
+   "description": "Use when you need to plan technical solutions that are scalable, secure, and maintainable.",
+   "description_zh": "通过研究、代码库分析、解决方案设计和全面文档，为可扩展、安全且可维护的系统创建详细的技术实施计划。",
+   "repo_url": "https://github.com/The1Studio/theone-training-skills#.claude~skills~planning",
+   "github_stars": 59
+  },
+  {
+   "name": "planning",
+   "slug": "congdon1207-agents-md-planning",
+   "author": "CongDon1207",
+   "category": "development",
+   "description": "Use when you need to plan technical solutions that are scalable, secure, and maintainable.",
+   "description_zh": "此Claude技能专注于为软件项目创建详细的技术实施方案，通过研究、分析和结构化文档，确保方案的可扩展性、安全性和可维护性。",
+   "repo_url": "https://github.com/CongDon1207/AGENTS.md#.codex~skills~planning",
+   "github_stars": 9
+  },
+  {
+   "name": "Fragment Thoughts Organizer En",
+   "slug": "openclaw-skills-sheyuy-fragment-thoughts-organizer-en",
+   "author": "sheyuy",
+   "category": "development",
+   "description": "Catch stray thoughts, half-sentences, overheard snippets, people, places, links, and gut feelings throughout the day; file them into a same-day archive that...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/fragment-thoughts-organizer-en",
+   "github_stars": 0
+  },
+  {
+   "name": "obsidian-knowledge-organizer",
+   "slug": "openclaw-skills-obsidian-knowledge-organizer",
+   "author": "openclaw",
+   "category": "development",
+   "description": "An OpenClaw- and Codex-compatible Obsidian knowledge organization skill for importing articles, organizing notes, applying tags, archiving content, generating summaries, and suggesting related notes.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~cjke84~obsidian-knowledge-organizer",
+   "github_stars": 3689
+  },
+  {
+   "name": "material-organizer",
+   "slug": "orkas-ai-orkas-9be6fda271a5",
+   "author": "Orkas-AI",
+   "category": "data",
+   "description": "Organize user-provided materials or local folders into traceable notes, knowledge cards, categories, indexes, and cleanup plans. Use this skill whenever the user asks to organize multiple links, files, snippets, research materials, downloads, personal knowledge flow materials, or a local directory.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Orkas-AI/Orkas/tree/main/resources/builtin/marketplace/skills/9be6fda271a5",
+   "github_stars": 1088
+  },
+  {
+   "name": "knowledge-synthesizer",
+   "slug": "zenobi-us-dotfiles-knowledge-synthesizer",
+   "author": "zenobi-us",
+   "category": "meta",
+   "description": "A specialized agent for extracting insights from multi-agent interactions. It analyzes workflows, identifies patterns, and builds a knowledge graph to suggest improvements. It integrates with vector and graph databases to store and retrieve learnings.",
+   "description_zh": "一个专门从多智能体交互中提取见解的专家。它分析工作流、识别模式并构建知识图谱以提出改进建议，通过向量和图数据库集成来存储和检索学习成果。",
+   "repo_url": "https://github.com/zenobi-us/dotfiles#ai~files~skills~experts~meta-orchestration~knowledge-synthesizer",
+   "github_stars": 48
+  },
+  {
+   "name": "knowledge-synthesizer",
+   "slug": "openclaw-skills-mtsatryan-ah-knowledge-synthesizer",
+   "author": "mtsatryan",
+   "category": "development",
+   "description": "Expert knowledge synthesizer specializing in extracting insights from multi-agent interactions, identifying patterns, and building collective intelligence. M...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/ah-knowledge-synthesizer",
+   "github_stars": 0
+  },
+  {
+   "name": "agent-organizer",
+   "slug": "zenobi-us-dotfiles-agent-organizer",
+   "author": "zenobi-us",
+   "category": "meta",
+   "description": "This skill coordinates multiple AI agents for complex tasks. It breaks down work, selects suitable agents based on capabilities, and manages task execution. It includes checklists for agent selection, dependency handling, and performance monitoring.",
+   "description_zh": "该技能用于协调多个AI代理完成复杂任务。它能分解工作、根据能力匹配合适的代理、并管理任务执行流程。包含代理选择、依赖关系处理和性能监控的检查清单。",
+   "repo_url": "https://github.com/zenobi-us/dotfiles#ai~files~skills~experts~meta-orchestration~agent-organizer",
+   "github_stars": 48
+  },
+  {
+   "name": "Doc Setup",
+   "slug": "openclaw-skills-brauliodiasribeiro-doc-setup",
+   "author": "brauliodiasribeiro",
+   "category": "development",
+   "description": "Organize, summarize, and index technical documentation from any source (GitHub repos, websites, manuals) into a structured second-brain format. Use when the...",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/doc-setup",
+   "github_stars": 0
+  },
+  {
+   "name": "context-manager",
+   "slug": "zenobi-us-dotfiles-context-manager",
+   "author": "zenobi-us",
+   "category": "meta",
+   "description": "This skill manages shared state and context across multiple AI agents, focusing on fast retrieval (<100ms), strong consistency, and secure storage. It integrates with Redis, Elasticsearch, and vector databases to handle project metadata, task history, and agent interactions. The skill provides structured workflows for…",
+   "description_zh": "该技能用于管理多个AI代理之间的共享状态和上下文，专注于快速检索（<100毫秒）、强一致性和安全存储。它集成了Redis、Elasticsearch和向量数据库，处理项目元数据、任务历史和代理交互。技能提供了架构分析、实施和监控分布式上下文系统的结构化工作流程。",
+   "repo_url": "https://github.com/zenobi-us/dotfiles#ai~files~skills~experts~meta-orchestration~context-manager",
+   "github_stars": 48
+  }
+ ]
+}

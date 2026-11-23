@@ -1,0 +1,26 @@
+{
+ "version": "0.1.0",
+ "description": "045 主题标签词表：每个规范标签带同义词（含中英对照与缩写）与上位标签。命中即归并到规范名，保证同义合并、控制标签粒度、抑制标签爆炸。",
+ "normalization": {
+  "canonical_first": true,
+  "merge_policy": "同义词命中全部并入 canonical 标签，merged_from 留痕；同一标签同一文档只出现一次",
+  "granularity_cap": "每份文档最多保留 max_tags 个标签（见 classification_rules.json），按置信度截断",
+  "parent_policy": "上位标签只作层级提示，不自动打给文档，避免上下位重复计数"
+ },
+ "tags": [
+  {"tag": "逆合成预测", "parent": "反应预测", "weight": 1.2, "synonyms": ["retrosynthesis", "retro-synthesis", "逆合成", "single-step retrosynthesis"]},
+  {"tag": "图神经网络", "parent": "机器学习方法", "weight": 1.2, "synonyms": ["graph neural network", "gnn", "gnns", "图神经", "message passing"]},
+  {"tag": "分子性质预测", "parent": "机器学习任务", "weight": 1.0, "synonyms": ["molecular property prediction", "property prediction", "分子性质"]},
+  {"tag": "反应产率预测", "parent": "机器学习任务", "weight": 1.0, "synonyms": ["yield prediction", "产率预测", "reaction yield"]},
+  {"tag": "基准数据集", "parent": "数据资源", "weight": 1.0, "synonyms": ["benchmark", "基准", "uspTO-50k", "open splits", "数据集划分"]},
+  {"tag": "催化反应", "parent": "反应类型", "weight": 1.0, "synonyms": ["catalysis", "catalytic", "催化", "c-h activation"]},
+  {"tag": "单细胞测序", "parent": "实验方法", "weight": 1.0, "synonyms": ["single-cell", "scrna-seq", "单细胞"]},
+  {"tag": "蛋白结构", "parent": "研究对象", "weight": 1.0, "synonyms": ["protein structure", "protein folding", "蛋白质结构", "alphafold"]},
+  {"tag": "成像参数", "parent": "实验条件", "weight": 1.0, "synonyms": ["imaging", "confocal", "曝光时间", "共聚焦"]},
+  {"tag": "缓液配方", "parent": "实验材料", "weight": 1.0, "synonyms": ["buffer", "缓冲液", "ripa", "triton x-100"]}
+ ],
+ "notes": {
+  "tag_explosion_guard": "max_tags + 同义合并 + 上位标签不重复计数，三道闸共同抑制标签爆炸",
+  "unknown_terms": "词表外术语不产生新标签（宁可少打，不凭模型想象扩充词表）；需要扩充时改本文件并升 version"
+ }
+}

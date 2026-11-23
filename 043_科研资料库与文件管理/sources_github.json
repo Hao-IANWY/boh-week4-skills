@@ -1,0 +1,323 @@
+{
+ "seq": 43,
+ "title": "科研资料库与文件管理",
+ "category": "资料管理",
+ "queries": [
+  "research file management skill agent",
+  "personal knowledge base file organizer",
+  "obsidian vault mcp server"
+ ],
+ "candidates": [
+  {
+   "full_name": "paperless-ngx/paperless-ngx",
+   "url": "https://github.com/paperless-ngx/paperless-ngx",
+   "stars": 48250,
+   "desc": "A community-supported supercharged document management system: scan, index and archive all your documents",
+   "topics": [
+    "ai",
+    "angular",
+    "archiving",
+    "django",
+    "dms",
+    "document-management"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-18T12:18:04Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "logseq/logseq",
+   "url": "https://github.com/logseq/logseq",
+   "stars": 45648,
+   "desc": "A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV",
+   "topics": [
+    "clojure",
+    "clojurescript",
+    "git",
+    "graph",
+    "knowledge-base",
+    "knowledge-graph"
+   ],
+   "lang": "Clojure",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-11-18T10:43:31Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "kovidgoyal/calibre",
+   "url": "https://github.com/kovidgoyal/calibre",
+   "stars": 26464,
+   "desc": "The official source code repository for the calibre ebook manager",
+   "topics": [
+    "calibre",
+    "ebook",
+    "ebook-formats",
+    "ebook-manager",
+    "ebook-reader",
+    "ebooks"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-18T02:51:08Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "AgriciDaniel/claude-obsidian",
+   "url": "https://github.com/AgriciDaniel/claude-obsidian",
+   "stars": 16587,
+   "desc": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge manageme…",
+   "topics": [
+    "agent-skills",
+    "ai-note-taking",
+    "ai-second-brain",
+    "claude-code",
+    "claude-code-skill",
+    "claude-memory"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-25T22:24:31Z",
+   "via": [
+    "personal knowledge base file organizer"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "zotero/zotero",
+   "url": "https://github.com/zotero/zotero",
+   "stars": 15980,
+   "desc": "Zotero is a free, easy-to-use tool to help you collect, organize, annotate, cite, and share your research sources.",
+   "topics": [],
+   "lang": "JavaScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-17T20:03:21Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "TagStudioDev/TagStudio",
+   "url": "https://github.com/TagStudioDev/TagStudio",
+   "stars": 7303,
+   "desc": "A User-Focused Photo & File Management System",
+   "topics": [
+    "document-management-system",
+    "file-manager",
+    "metadata",
+    "organizer",
+    "photo-gallery",
+    "photo-organizer"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-14T18:36:44Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "coddingtonbear/obsidian-local-rest-api",
+   "url": "https://github.com/coddingtonbear/obsidian-local-rest-api",
+   "stars": 3166,
+   "desc": "A secure REST API and Model Context Protocol (MCP) server for your vault.",
+   "topics": [],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-10-17T16:30:40Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "bitbonsai/mcpvault",
+   "url": "https://github.com/bitbonsai/mcpvault",
+   "stars": 1725,
+   "desc": "A lightweight Model Context Protocol (MCP) server for safe Obsidian vault access",
+   "topics": [],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-16T12:06:49Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cyanheads/obsidian-mcp-server",
+   "url": "https://github.com/cyanheads/obsidian-mcp-server",
+   "stars": 712,
+   "desc": "Read, write, search, and surgically edit Obsidian vault notes, tags, and frontmatter via MCP. STDIO or Streamable HTTP.",
+   "topics": [
+    "ai-agents",
+    "ai-tools",
+    "bun",
+    "cyanheads",
+    "knowledge-base",
+    "mcp"
+   ],
+   "lang": "TypeScript",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-11T09:00:15Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "itechmeat/open-second-brain",
+   "url": "https://github.com/itechmeat/open-second-brain",
+   "stars": 603,
+   "desc": "Local-first 🧠 memory for Hermes Agent that lives in your Obsidian vault and remembers project context. Nightly 😴 dream passes turn repeat corrections into confirmed preferences with measurable confidence. Adapters ship …",
+   "topics": [],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T23:42:28Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "aaronsb/obsidian-mcp-plugin",
+   "url": "https://github.com/aaronsb/obsidian-mcp-plugin",
+   "stars": 471,
+   "desc": "High-performance Model Context Protocol (MCP) server for Obsidian that provides AI tools with direct vault access through semantic operations and HTTP transport.",
+   "topics": [
+    "ai",
+    "claude",
+    "knowledge-graph",
+    "mcp",
+    "model-context-protocol",
+    "obsidian"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-15T19:51:51Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "jimprosser/obsidian-web-mcp",
+   "url": "https://github.com/jimprosser/obsidian-web-mcp",
+   "stars": 191,
+   "desc": "Secure remote MCP server for Obsidian vaults -- access your notes from Claude, your phone, or any MCP client, anywhere. OAuth 2.0 auth, Cloudflare Tunnel, atomic writes safe for Obsidian Sync.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-16T20:56:15Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "devwhodevs/engraph",
+   "url": "https://github.com/devwhodevs/engraph",
+   "stars": 175,
+   "desc": "Local knowledge graph for AI agents. Hybrid search + MCP server for Obsidian vaults.",
+   "topics": [
+    "ai-agents",
+    "knowledge-graph",
+    "local-first",
+    "mcp",
+    "obsidian",
+    "rag"
+   ],
+   "lang": "Rust",
+   "license": "MIT",
+   "pushed_at": "2026-05-27T16:00:14Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Epistates/turbovault",
+   "url": "https://github.com/Epistates/turbovault",
+   "stars": 158,
+   "desc": "Markdown and OFM SDK w/ MCP server that transforms your Obsidian vault into an intelligent knowledge system",
+   "topics": [
+    "ai",
+    "markdown",
+    "mcp",
+    "mcp-server",
+    "ofm",
+    "rust"
+   ],
+   "lang": "Rust",
+   "license": "MIT",
+   "pushed_at": "2026-11-14T09:05:47Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "flowing-abyss/obsidian-hybrid-search",
+   "url": "https://github.com/flowing-abyss/obsidian-hybrid-search",
+   "stars": 126,
+   "desc": "Hybrid search for Obsidian vaults via plugin, CLI, and MCP server",
+   "topics": [
+    "mcp",
+    "obsidian",
+    "search",
+    "semantic-search",
+    "sqlite",
+    "vector-search"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-16T05:09:07Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "takeshy/obsidian-local-llm-hub",
+   "url": "https://github.com/takeshy/obsidian-local-llm-hub",
+   "stars": 96,
+   "desc": "All-in-one local AI hub for Obsidian — LLM chat with vault tools, MCP servers, RAG, workflow automation, encryption, and edit history. Fully private, no cloud required.",
+   "topics": [
+    "local-llm",
+    "memo-app",
+    "obsidian-plugin",
+    "rag",
+    "workflow-automation"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T06:43:03Z",
+   "via": [
+    "obsidian vault mcp server"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "7SteveJohn/FileButler",
+   "url": "https://github.com/7SteveJohn/FileButler",
+   "stars": 2,
+   "desc": "Local-first Windows file manager and personal knowledge base. Everything-style search, RAG over local documents, semantic image search and OCR — with undoable file organizing. Runs on Ollama, LM Studio or any OpenAI-com…",
+   "topics": [
+    "ai-assistant",
+    "desktop-app",
+    "duplicate-files",
+    "file-manager",
+    "file-organizer",
+    "full-text-search"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T06:39:17Z",
+   "via": [
+    "personal knowledge base file organizer"
+   ],
+   "seed": false
+  }
+ ]
+}

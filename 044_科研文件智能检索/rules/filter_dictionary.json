@@ -1,0 +1,89 @@
+{
+ "version": "0.2.0",
+ "description": "044 硬过滤字段字典。题面要求年份/项目号/文件类型/实验批次/版本/权限等条件作为硬约束执行；本表规定每个过滤字段的取值来源、比较方式与失败理由码。无法判定时一律视为不满足，不放宽。",
+ "evaluation_policy": "硬约束逐文件逐条判定：元数据缺失 → satisfiable=false + code；不允许为了让结果非空而删除条件、扩大取值或改用模糊匹配。判定表逐条写入 result.evidence.filters.per_query。",
+ "filters": {
+  "year_from": {
+   "type": "int_min",
+   "source": "metadata",
+   "key": "year",
+   "code": "R_FILTER_YEAR"
+  },
+  "year_to": {
+   "type": "int_max",
+   "source": "metadata",
+   "key": "year",
+   "code": "R_FILTER_YEAR"
+  },
+  "project_ids": {
+   "type": "in_list",
+   "source": "metadata",
+   "key": "project_id",
+   "code": "R_FILTER_PROJECT"
+  },
+  "batch_ids": {
+   "type": "in_list",
+   "source": "metadata",
+   "key": "batch",
+   "code": "R_FILTER_BATCH"
+  },
+  "file_types": {
+   "type": "in_list_lower",
+   "source": "derived",
+   "key": "extension",
+   "code": "R_FILTER_TYPE"
+  },
+  "versions": {
+   "type": "in_list",
+   "source": "metadata",
+   "key": "version",
+   "code": "R_FILTER_VERSION"
+  },
+  "permissions": {
+   "type": "in_list",
+   "source": "metadata",
+   "key": "permission",
+   "code": "R_FILTER_PERMISSION"
+  },
+  "exclude_scanned": {
+   "type": "not_true",
+   "source": "metadata",
+   "key": "scanned",
+   "code": "R_FILTER_SCANNED"
+  },
+  "require_version": {
+   "type": "exists",
+   "source": "metadata",
+   "key": "version",
+   "code": "R_FILTER_VERSION"
+  },
+  "require_year": {
+   "type": "exists",
+   "source": "metadata",
+   "key": "year",
+   "code": "R_FILTER_YEAR"
+  }
+ },
+ "codes": {
+  "R_FILTER_YEAR": "文件年份不在提问给定的时间窗内，或年份字段缺失",
+  "R_FILTER_PROJECT": "文件不属于提问指定的项目编号",
+  "R_FILTER_BATCH": "文件不属于提问指定的实验批次",
+  "R_FILTER_TYPE": "文件扩展名不在提问允许的类型集合内",
+  "R_FILTER_VERSION": "文件版本不在允许集合内，或版本字段缺失",
+  "R_FILTER_PERMISSION": "文件权限不满足提问要求（如只允许 rw）",
+  "R_FILTER_SCANNED": "提问要求排除扫描件，而该文件被标记为 scanned=true",
+  "R_FILTER_UNSUPPORTED": "提问使用了本表未定义的过滤字段；不做模糊处理，按不满足记",
+  "R_FILTER_METADATA_MISSING": "元数据缺失导致条件无法判定（统一按不满足处理）",
+  "R_NO_HIT_IN_SCOPE": "通过硬过滤的语料内没有任何 chunk 达到分数与词命中阈值",
+  "R_FILTERS_EXCLUDE_ALL": "硬过滤把全部文件排除，检索集为空（不得放宽条件）",
+  "R_DUP_FILE": "与首见文件 sha256 完全相同的副本，不作为独立命中来源",
+  "R_NO_TEXT_LAYER": "文件无文本层（扫描件/加密/损坏），未进入语料；不得记为已检索",
+  "R_QUOTE_MISMATCH": "回链片段在规范化原文中逐字复核失败，定位降级为不确定",
+  "R_FILTER_BLOCKED_HITS": "库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容",
+  "R_FILE_ENCRYPTED": "PDF 检测到 /Encrypt（加密件）：本流程不做解密，诚实跳过文本提取，不计为已检索",
+  "R_FILE_CORRUPT": "文件损坏/截断（内容流解压失败或无内容流）：诚实跳过，建议换源",
+  "R_FILE_NO_EXTRACTOR": "扩展名不在侧车/PDF/DOCX/纯文本提取链内：无可用提取器，诚实跳过",
+  "R_FILE_NO_PERMISSION": "文件存在但无读权限（chmod/ACL 拒绝）：不进入语料，如实标记，绝不绕过权限"
+ },
+ "empty_result_policy": "空结果必须给出：过滤判定表 + 被拦下的候选 + R_FILTERS_EXCLUDE_ALL / R_NO_HIT_IN_SCOPE 之一，并写明「库内无依据」而非「不存在」。"
+}

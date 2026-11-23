@@ -1,0 +1,106 @@
+{
+ "version": "0.2.0",
+ "description": "045 分类/标签/命名的阈值与权重。代码内不出现魔法数；改动任一参数必须重跑示例并更新 expected/result.json。0.2.0：新增文件库模式理由码与库策略（真实文件库工单）。",
+ "field_weights": {
+  "title": 2.0,
+  "keywords": 1.5,
+  "venue": 1.5,
+  "abstract": 1.2,
+  "body": 1.0
+ },
+ "saturation_k": 0.8,
+ "thresholds": {
+  "high_confidence": 0.6,
+  "review_confidence": 0.35,
+  "max_type_labels": 2,
+  "max_tags": 4,
+  "min_tag_confidence": 0.3
+ },
+ "confidence_formula": "confidence = raw / (raw + saturation_k)，raw = Σ(term_weight × field_weight) + Σ(metadata_rule.weight) − Σ(negative_term × field_weight)",
+ "naming": {
+  "library_root": "library",
+  "archive_root": "archive",
+  "default_dir_template": "{root}/{doc_type}/{year}",
+  "default_name_template": "{author}-{year}-{title}.{ext}",
+  "title_max_chars": 40,
+  "filename_max_chars": 120,
+  "null_tokens": {
+   "author": "zz-author",
+   "year": "nd",
+   "venue": "zz-venue",
+   "doc_type": "unclassified",
+   "project": "zz-project",
+   "title": "untitled"
+  },
+  "degrade_rule": "任何字段缺失 → 用 null_token 占位并把 degraded=true、missing_fields 列名；严禁补造作者/年份/期刊/DOI"
+ },
+ "version_roles": {
+  "supplementary": [
+   "supplementary",
+   "supporting information",
+   "补充材料"
+  ],
+  "preprint": [
+   "preprint",
+   "arxiv",
+   "biorxiv",
+   "medrxiv",
+   "预印本"
+  ],
+  "journal": [
+   "journal-article",
+   "journal",
+   "期刊"
+  ],
+  "conference": [
+   "conference",
+   "proceedings"
+  ],
+  "dataset": [
+   "dataset",
+   "数据集"
+  ],
+  "other": []
+ },
+ "reason_codes": {
+  "R_UNCLASSIFIED": "所有类别置信度低于 review 阈值，落未分类单列，给最接近候选",
+  "R_LOW_CONFIDENCE": "置信度落在 review 档，需人工确认后再入目录",
+  "R_NO_TEXT": "无标题/摘要/正文也无旁路文本，未参与分类",
+  "R_METADATA_MISSING": "命名/目录所需字段缺失，已用 null_token 占位并标 degraded",
+  "R_DUP_FILE": "正文哈希与首见文件相同，操作计划标 archive_duplicate，不覆盖不删除",
+  "R_VERSION_FAMILY": "同 DOI 或标题+第一作者相同的多版本，需按角色区分，不当独立文献",
+  "R_SKIP_MISSING": "apply 时源文件不存在，跳过并留计划",
+  "R_SKIP_CONFLICT": "apply 时目标已存在，跳过不覆盖",
+  "R_SKIP_OSERROR": "apply 时操作系统报错，跳过并保留原因",
+  "R_FILE_ENCRYPTED": "PDF 检测到 /Encrypt：不解密，诚实跳过并建议人工提供口令",
+  "R_FILE_CORRUPT": "内容流解压失败/文件截断：诚实跳过并建议换源",
+  "R_NO_TEXT_LAYER": "扫描件无文本层且无侧车：诚实跳过并建议补 OCR 侧车",
+  "R_FILE_NO_EXTRACTOR": "扩展名不在 侧车/PDF/DOCX/纯文本 链内：诚实跳过并建议转码",
+  "R_FILE_NO_PERMISSION": "文件存在但当前进程不可读：诚实跳过并建议提升权限",
+  "R_FILENAME_GARBLE": "文件名疑似乱码（替换字符/latin-1 误解码残迹）：保留原文件，命名以标题为准，入人工确认队列",
+  "R_NAME_CONFLICT": "目标名与库内既有不同内容文件冲突：禁止覆盖，转人工确认队列",
+  "R_NEAR_DUPLICATE": "同归一化标题但内容哈希不同：近重复，人工确认是否版本/修订",
+  "R_APPLY_READONLY": "文件库模式下 --apply 一律拒绝：输入库只读，操作仅作建议"
+ },
+ "operation_policy": {
+  "default_mode": "dry_run",
+  "apply_flag": "--apply",
+  "scope": "只处理 work 目录内真实存在的文件；目标冲突不覆盖",
+  "idempotency": "同一输入重复运行生成同一 dst 与同一 idempotency_key；已落位文件不再产生新操作",
+  "rollback": "每步 rollback 给出逆操作（move_rename / move 两种）",
+  "library_mode": "文件库模式（case 声明库目录）下所有操作仅作建议落 ops_log：绝不改写输入库，前后逐文件 SHA-256 对照留证；--apply 一律拒绝（R_APPLY_READONLY）",
+  "resume": "提取失败/权限不足等文件进 unprocessed 清单（含建议处置），修复后重跑同一 case 即续跑；未处理项绝不静默丢弃",
+  "version_policy": "预印本/正式版/修订版/补充材料全部保留不删除；canonical=正式版角色优先、管理性版本序最大；归档/合并只写建议"
+ },
+ "version_role_rank": {
+  "journal": 0,
+  "conference": 1,
+  "thesis": 1,
+  "dataset": 1,
+  "patent": 1,
+  "preprint": 2,
+  "supplementary": 3,
+  "other": 4,
+  "duplicate": 5
+ }
+}

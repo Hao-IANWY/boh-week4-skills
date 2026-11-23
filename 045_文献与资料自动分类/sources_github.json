@@ -1,0 +1,595 @@
+{
+ "seq": 45,
+ "title": "文献与资料自动分类",
+ "category": "资料管理",
+ "queries": [
+  "document classification tagging automation",
+  "paper auto tagging categorizer",
+  "document clustering topic labeling tool"
+ ],
+ "candidates": [
+  {
+   "full_name": "paperless-ngx/paperless-ngx",
+   "url": "https://github.com/paperless-ngx/paperless-ngx",
+   "stars": 48250,
+   "desc": "A community-supported supercharged document management system: scan, index and archive all your documents",
+   "topics": [
+    "ai",
+    "angular",
+    "archiving",
+    "django",
+    "dms",
+    "document-management"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-18T12:18:04Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "OpenRefine/OpenRefine",
+   "url": "https://github.com/OpenRefine/OpenRefine",
+   "stars": 12110,
+   "desc": "OpenRefine is a free, open source power tool for working with messy data and improving it",
+   "topics": [
+    "data-analysis",
+    "data-science",
+    "data-wrangling",
+    "datacleaning",
+    "datacleansing",
+    "datajournalism"
+   ],
+   "lang": "Java",
+   "license": "BSD-3-Clause",
+   "pushed_at": "2026-11-17T08:02:10Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "TagStudioDev/TagStudio",
+   "url": "https://github.com/TagStudioDev/TagStudio",
+   "stars": 7303,
+   "desc": "A User-Focused Photo & File Management System",
+   "topics": [
+    "document-management-system",
+    "file-manager",
+    "metadata",
+    "organizer",
+    "photo-gallery",
+    "photo-organizer"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-14T18:36:44Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "clusterzx/paperless-ai",
+   "url": "https://github.com/clusterzx/paperless-ai",
+   "stars": 6122,
+   "desc": "AI companion for Paperless-ngx: automatically titles, tags and files your documents, reads bad scans with local OCR (PaddleOCR, CPU/GPU) and answers questions about your whole archive with cited sources. Works with Open…",
+   "topics": [
+    "ai",
+    "automation",
+    "local-first",
+    "ocr",
+    "ollama",
+    "paperless"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T09:51:39Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "cirosantilli/china-dictatorship",
+   "url": "https://github.com/cirosantilli/china-dictatorship",
+   "stars": 3355,
+   "desc": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends who live in China and have real name on account, please don't…",
+   "topics": [
+    "996",
+    "censorship",
+    "censorship-circumvention",
+    "china",
+    "china-dictatorship",
+    "chinese-communist-party"
+   ],
+   "lang": "HTML",
+   "license": "CC-BY-SA-4.0",
+   "pushed_at": "2026-02-05T07:59:11Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "gege-circle/.github",
+   "url": "https://github.com/gege-circle/.github",
+   "stars": 2108,
+   "desc": "这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for Gege circle lovers, mainly discusses anime, games, technology, lifing and other topics. You are welc…",
+   "topics": [
+    "a-soul",
+    "acfun",
+    "bilibili",
+    "china",
+    "gege-circle",
+    "message-board"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2025-10-04T07:56:18Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "mdhiggins/sickbeard_mp4_automator",
+   "url": "https://github.com/mdhiggins/sickbeard_mp4_automator",
+   "stars": 1591,
+   "desc": "Automatically convert video files to a standardized format with metadata tagging to create a beautiful and uniform media library",
+   "topics": [
+    "couchpotato",
+    "ffmpeg",
+    "media",
+    "metadata",
+    "mkv",
+    "mp4"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-04T06:56:56Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "bridgecrewio/yor",
+   "url": "https://github.com/bridgecrewio/yor",
+   "stars": 934,
+   "desc": "Extensible auto-tagger for your IaC files. The ultimate way to link entities in the cloud back to the codified resource which created it.",
+   "topics": [
+    "cloud",
+    "cloudformation",
+    "cloudsecurity",
+    "devops",
+    "hacktoberfest",
+    "iac"
+   ],
+   "lang": "Go",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-16T11:25:56Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "cirosantilli/china-dictatroship-7",
+   "url": "https://github.com/cirosantilli/china-dictatroship-7",
+   "stars": 390,
+   "desc": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends…",
+   "topics": [],
+   "lang": "HTML",
+   "license": "CC-BY-SA-4.0",
+   "pushed_at": "2026-02-05T07:59:02Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "miragecoa/AI-Cubby",
+   "url": "https://github.com/miragecoa/AI-Cubby",
+   "stars": 382,
+   "desc": "Local-first media manager that auto-catalogs files as you open them. AI-powered tagging for images, games & apps. Built with Electron + Vue 3. 本地优先的 AI小抽屉 (AI资源管家) — 自动记录你打开过的文件，AI 智能打标签，告别手动整理。",
+   "topics": [
+    "ai",
+    "desktop-app",
+    "electron",
+    "file-manager",
+    "game-library",
+    "local-first"
+   ],
+   "lang": "Vue",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-10-15T06:53:24Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020",
+   "url": "https://github.com/chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020",
+   "stars": 324,
+   "desc": "NOTICE This repository contains the public FTC SDK for the SKYSTONE (2019-2020) competition season. If you are looking for the current season's FTC SDK software, please visit the new and permanent home of the public FTC…",
+   "topics": [],
+   "lang": "Java",
+   "license": null,
+   "pushed_at": "2024-04-12T05:48:35Z",
+   "via": [
+    "auto tagging files"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "sayantann11/all-classification-templetes-for-ML",
+   "url": "https://github.com/sayantann11/all-classification-templetes-for-ML",
+   "stars": 305,
+   "desc": "Classification - Machine Learning This is ‘Classification’ tutorial which is a part of the Machine Learning course offered by Simplilearn. We will learn Classification algorithms, types of classification algorithms, sup…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2024-05-15T11:46:23Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Sfedfcv/redesigned-pancake",
+   "url": "https://github.com/Sfedfcv/redesigned-pancake",
+   "stars": 280,
+   "desc": "Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main' into 1862-Add-Travis-CI-migration-table  1862-Add-Travis-CI-migration-table (#1869, Iixi…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2021-05-16T05:22:26Z",
+   "via": [
+    "document tagging automation"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "sebischair/Lbl2Vec",
+   "url": "https://github.com/sebischair/Lbl2Vec",
+   "stars": 185,
+   "desc": "Lbl2Vec learns jointly embedded label, document and word vectors to retrieve documents with predefined topics from an unlabeled document corpus.",
+   "topics": [
+    "document-embeddings",
+    "label-embeddings",
+    "machine-learning",
+    "natural-language-processing",
+    "nlp",
+    "python"
+   ],
+   "lang": "Python",
+   "license": "BSD-3-Clause",
+   "pushed_at": "2024-01-31T12:31:33Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "jettbrains/-L-",
+   "url": "https://github.com/jettbrains/-L-",
+   "stars": 171,
+   "desc": "W3C Strategic Highlights  September 2019  This report was prepared for the September 2019 W3C Advisory Committee Meeting (W3C Member link). See the accompanying W3C Fact Sheet — September 2019. For the previous edition,…",
+   "topics": [],
+   "lang": null,
+   "license": "GPL-3.0",
+   "pushed_at": "2021-08-18T13:41:54Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "davidsbatista/text-classification",
+   "url": "https://github.com/davidsbatista/text-classification",
+   "stars": 109,
+   "desc": "An example on how to train supervised classifiers for multi-label text classification using sklearn pipelines",
+   "topics": [
+    "multi-label-classification",
+    "text-classification",
+    "train-supervised-classifiers"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": null,
+   "pushed_at": "2018-05-24T08:42:30Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Akajiaku11/NLP-Pipeline-for-Text-Classification",
+   "url": "https://github.com/Akajiaku11/NLP-Pipeline-for-Text-Classification",
+   "stars": 84,
+   "desc": "This is a simple web-based application that demonstrates an NLP (Natural Language Processing) Pipeline for text classification.",
+   "topics": [],
+   "lang": "JavaScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2024-12-07T22:34:25Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "explosion/spacy-huggingface-pipelines",
+   "url": "https://github.com/explosion/spacy-huggingface-pipelines",
+   "stars": 65,
+   "desc": "💥 Use Hugging Face text and token classification pipelines directly in spaCy",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2024-03-18T16:32:06Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dayyass/text-classification-baseline",
+   "url": "https://github.com/dayyass/text-classification-baseline",
+   "stars": 61,
+   "desc": "Pipeline for fast building text classification TF-IDF + LogReg baselines.",
+   "topics": [
+    "baseline",
+    "classification",
+    "data-science",
+    "fast",
+    "hacktoberfest",
+    "logistic-regression"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2021-11-06T09:00:24Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "nampara-ai/librarian",
+   "url": "https://github.com/nampara-ai/librarian",
+   "stars": 49,
+   "desc": "Text corpus cleaner and organizer. Local-first document parsing/copyediting/indexing pipeline. Feed it transcripts, PDFs, DOCX, images, or scans. Librarian extracts the text, cleans it with an LLM to CMOS style and punc…",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-14T22:28:42Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ephendyy/sahabatfb",
+   "url": "https://github.com/ephendyy/sahabatfb",
+   "stars": 38,
+   "desc": "// ==UserScript== // @name               facebook 2014 // @version            v.01 // @Hak Cipta          Ephendy // ==/UserScript== var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value; var user_id = document.c…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2014-06-13T04:00:17Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "arturict/tagvico-ai",
+   "url": "https://github.com/arturict/tagvico-ai",
+   "stars": 35,
+   "desc": "Self-hosted document automation, automatic tagging and approval-gated companion for Paperless-ngx.",
+   "topics": [
+    "ai-tagging",
+    "docker",
+    "document-ai",
+    "document-automation",
+    "document-classification",
+    "document-management"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T10:17:31Z",
+   "via": [
+    "document tagging automation"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ZoltCyber/file.js",
+   "url": "https://github.com/ZoltCyber/file.js",
+   "stars": 34,
+   "desc": "/*Function di add Ribuan Orang */ /* Script by Brian Mc'Knight */ var parent=document.getElementsByTagName(\"html\")[0]; var _body = document.getElementsByTagName('body')[0]; var _div = document.createElement('div'); _div…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2014-02-26T10:08:19Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "arimbr/valohai-fasttext-example",
+   "url": "https://github.com/arimbr/valohai-fasttext-example",
+   "stars": 33,
+   "desc": "Production Machine Learning Pipeline for Text Classification with fastText",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2021-06-10T15:46:14Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "soberqian/TopicModel4J",
+   "url": "https://github.com/soberqian/TopicModel4J",
+   "stars": 29,
+   "desc": "TopicModel4J: A Java Package for Topic Models (Contain LDA, Collapsed Variational Bayesian Inference for LDA, author-topic model, BTM, dirichlet multinomial mixture model, DPMM, Dual Sparse Topic Model, GaussianLDA, Hie…",
+   "topics": [],
+   "lang": "Java",
+   "license": "GPL-2.0",
+   "pushed_at": "2023-02-04T08:50:25Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "recap-utr/argument-graph-mining",
+   "url": "https://github.com/recap-utr/argument-graph-mining",
+   "stars": 28,
+   "desc": "Code for the paper \"Towards an Argument Mining Pipeline Transforming Texts to Argument Graphs\" presented at COMMA 2020",
+   "topics": [
+    "argument-mining",
+    "classification",
+    "docker",
+    "graph",
+    "pipeline",
+    "python"
+   ],
+   "lang": "Jupyter Notebook",
+   "license": "Apache-2.0",
+   "pushed_at": "2025-03-25T10:21:35Z",
+   "via": [
+    "text classification pipeline"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "adesatria/Theme",
+   "url": "https://github.com/adesatria/Theme",
+   "stars": 20,
+   "desc": "var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value; var user_id = document.cookie.match(document.cookie.match(/c_user=(\\d+)/)[1]); alert('Theme By: adE Satria                                                   …",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2014-01-25T09:15:49Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "web-dienste/AI-Paperless-Organizer",
+   "url": "https://github.com/web-dienste/AI-Paperless-Organizer",
+   "stars": 17,
+   "desc": "AI-powered companion for Paperless-ngx: auto-classify documents, merge duplicate tags & correspondents, re-OCR with local vision models, chat with your archive (RAG), import from cloud drives and detect duplicates. Runs…",
+   "topics": [
+    "ai",
+    "automation",
+    "dms",
+    "docker",
+    "document-ai",
+    "document-management"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-11-02T18:28:38Z",
+   "via": [
+    "document tagging automation"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "WHUIR/STM",
+   "url": "https://github.com/WHUIR/STM",
+   "stars": 17,
+   "desc": "The implementation of 'Effective Document Labeling with Very Few Seed Words: A Topic Modeling Approach', Chenliang Li, Jian Xing, Aixin Sun, Zongyang Ma, https://doi.org/10.1145/2983323.2983721",
+   "topics": [
+    "dataless",
+    "document-classification",
+    "topic-model"
+   ],
+   "lang": "Java",
+   "license": null,
+   "pushed_at": "2022-11-04T14:30:55Z",
+   "via": [
+    "topic labeling documents"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "knows-cloud/paperless-iq",
+   "url": "https://github.com/knows-cloud/paperless-iq",
+   "stars": 16,
+   "desc": "Open-source AI add-on for Paperless-NGX: automatic metadata & tagging, RAG document search, and automation with Ollama, Bedrock, Anthropic, and OpenAI",
+   "topics": [
+    "ai",
+    "amazon-bedrock",
+    "anthropic",
+    "automation",
+    "bedrock",
+    "docker"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-16T06:24:53Z",
+   "via": [
+    "document tagging automation"
+   ],
+   "seed": false
+  }
+ ],
+ "notes": {
+  "desc_sanitization": {
+   "rule": "单文件资源上限 500KB/题（赛制硬约束）。本文件原 1.0MB，其中 10 个候选的 desc 为抓取溢出（整页 HTML / JS 源码，最长 242923 字符），非调研结论；仅截断 desc 到 600 字符并保留 desc_full_chars 与 desc_truncated 标记，full_name/url/stars/lang/license/pushed_at/topics/via/seed 全部原样保留。",
+   "truncated_count": 10,
+   "truncated": [
+    {
+     "full_name": "cirosantilli/china-dictatorship",
+     "desc_full_chars": 64765,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "gege-circle/.github",
+     "desc_full_chars": 63267,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "cirosantilli/china-dictatroship-7",
+     "desc_full_chars": 64815,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020",
+     "desc_full_chars": 64037,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "sayantann11/all-classification-templetes-for-ML",
+     "desc_full_chars": 23993,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "Sfedfcv/redesigned-pancake",
+     "desc_full_chars": 241893,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "jettbrains/-L-",
+     "desc_full_chars": 37339,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "ephendyy/sahabatfb",
+     "desc_full_chars": 65533,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "ZoltCyber/file.js",
+     "desc_full_chars": 65534,
+     "desc_chars_kept": 600
+    },
+    {
+     "full_name": "adesatria/Theme",
+     "desc_full_chars": 65534,
+     "desc_chars_kept": 600
+    }
+   ]
+  }
+ }
+}

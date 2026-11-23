@@ -1,0 +1,204 @@
+{
+ "case_id": "EXAMPLE-045-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：对 9 份混杂的科研资料做批量整理——判定文献类型、打主题标签、按模板生成目录与文件名、识别重复下载与预印本/正式版/补充材料三种版本角色，输出可回滚的批量操作计划；无法判定类别的文件单列，不强行归类。",
+ "output_contract": {
+  "classification": "每份文件的类型归属与依据、标签集与命中出处、目录与新文件名（原名→新名）、重复组、版本族与角色、未处理项",
+  "unclassified": "未分类文件单列：理由码、最接近候选与置信度、缺失字段",
+  "evidence_map": "规则表版本、阈值与权重、逐条命中的术语/字段/偏移、标签归并记录、哈希分组、操作日志与逆操作",
+  "状态说明": "完成/部分完成、不可读文件、低置信待复核、重复与版本处置、不确定性"
+ },
+ "library": {
+  "root": "library",
+  "note": "示例材料内联在 files[]，不写盘；--apply 才真正移动工作区文件"
+ },
+ "files": [
+  {
+   "doc_id": "D1",
+   "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+   "name": "Retrosynthesis Prediction with GNN.pdf",
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "journal-article"
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "We present a graph neural network for single-step retrosynthesis. Message passing over the molecular graph yields reaction centre candidates, evaluated on USPTO-50k.",
+   "keywords": [
+    "retrosynthesis",
+    "graph neural network",
+    "message passing"
+   ],
+   "text": "Abstract\nReceived 12 March 2021\nKeywords: retrosynthesis; graph neural network\nReferences\n1. Example et al. 2019.\ndoi:10.1000/example.2021.001"
+  },
+  {
+   "doc_id": "D2",
+   "path": "downloads/arxiv_2020.1234.pdf",
+   "name": "arxiv_2020.1234.pdf",
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "doi": "10.1000/example.2021.001",
+    "type": "preprint"
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "Preprint of the same graph neural network retrosynthesis study; message passing encoder, evaluated on USPTO-50k.",
+   "keywords": [
+    "retrosynthesis",
+    "gnn"
+   ],
+   "text": "arXiv:2020.1234v1 [cs.LG] 预印本\nAbstract\nThis preprint has not been peer reviewed."
+  },
+  {
+   "doc_id": "D3",
+   "path": "downloads/neurips_bench_2023.pdf",
+   "name": "neurips_bench_2023.pdf",
+   "metadata": {
+    "authors": [
+     "Y. Chen"
+    ],
+    "year": 2023,
+    "venue": "NeurIPS Datasets and Benchmarks",
+    "doi": "10.1000/example.2023.777",
+    "type": "conference-paper"
+   },
+   "title": "Benchmarking Graph Neural Networks for Reaction Yield Prediction",
+   "abstract": "A benchmark of graph neural networks on reaction yield prediction with message passing baselines and open splits.",
+   "keywords": [
+    "benchmark",
+    "yield prediction",
+    "gnn"
+   ],
+   "text": "Proceedings of the NeurIPS Datasets and Benchmarks Track 2023\nAbstract\nWe release benchmark splits."
+  },
+  {
+   "doc_id": "D4",
+   "path": "downloads/zenodo_usp50k_splits.zip",
+   "name": "zenodo_usp50k_splits.zip",
+   "metadata": {
+    "authors": [
+     "Y. Chen"
+    ],
+    "year": 2023,
+    "venue": "Zenodo",
+    "doi": "10.5281/example.2023.042",
+    "type": "dataset"
+   },
+   "title": "USPTO-50k open splits dataset",
+   "abstract": "Dataset of open train/validation/test splits for retrosynthesis benchmarking, archived on Zenodo.",
+   "keywords": [
+    "dataset",
+    "benchmark"
+   ],
+   "text": "Data availability: this dataset is archived on Zenodo. 数据集说明：train/valid/test 划分文件。"
+  },
+  {
+   "doc_id": "D5",
+   "path": "downloads/si_example_2021.pdf",
+   "name": "si_example_2021.pdf",
+   "metadata": {
+    "authors": [
+     "A. Kim"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "supplementary-material"
+   },
+   "title": "Supporting Information for Retrosynthesis Prediction with GNN",
+   "abstract": "Supplementary materials: 附图 S1-S6 与附表 S2 的完整数据。",
+   "keywords": [
+    "supplementary"
+   ],
+   "text": "Supporting Information\n附图 S1：反应中心分布\n附表 S2：USPTO-50k 划分统计"
+  },
+  {
+   "doc_id": "D6",
+   "path": "downloads/thesis_zhang_2022.pdf",
+   "name": "thesis_zhang_2022.pdf",
+   "metadata": {
+    "authors": [
+     "张伟"
+    ],
+    "year": 2022,
+    "venue": "某大学",
+    "doi": "",
+    "type": "thesis"
+   },
+   "title": "图神经网络在逆合成预测中的应用研究",
+   "abstract": "本学位论文研究图神经网络与消息传递在逆合成反应预测中的应用，第五章给出 USPTO-50k 上的对比实验。",
+   "keywords": [
+    "图神经网络",
+    "逆合成"
+   ],
+   "text": "博士学位论文\n导师：李某某\n答辩日期：2022 年 5 月"
+  },
+  {
+   "doc_id": "D7",
+   "path": "downloads/2023_fall_group_meeting_notes.md",
+   "name": "2023_fall_group_meeting_notes.md",
+   "metadata": {
+    "authors": [],
+    "year": 2023,
+    "venue": "",
+    "doi": "",
+    "type": ""
+   },
+   "title": "课题组分工会安排（2023 秋）",
+   "abstract": "记录课题组内部的分工会安排与会务分工。",
+   "keywords": [],
+   "text": "组织分工\n1. 报名 international conference 的行程与会务分工\n2. 仪器采购进度\n3. 下次组会时间"
+  },
+  {
+   "doc_id": "D8",
+   "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+   "name": "Retrosynthesis Prediction with GNN (1).pdf",
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "journal-article"
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "abstract": "We present a graph neural network for single-step retrosynthesis. Message passing over the molecular graph yields reaction centre candidates, evaluated on USPTO-50k.",
+   "keywords": [
+    "retrosynthesis",
+    "graph neural network",
+    "message passing"
+   ],
+   "text": "Abstract\nReceived 12 March 2021\nKeywords: retrosynthesis; graph neural network\nReferences\n1. Example et al. 2019.\ndoi:10.1000/example.2021.001"
+  },
+  {
+   "doc_id": "D9",
+   "path": "scans/2019_paper_notes.pdf",
+   "name": "2019_paper_notes.pdf",
+   "metadata": {
+    "authors": [],
+    "year": 2019,
+    "venue": "",
+    "doi": "",
+    "type": "",
+    "scanned": true
+   },
+   "title": "",
+   "abstract": "",
+   "text": ""
+  }
+ ],
+ "source": {
+  "title": "Synthetic interface example (not a test case)",
+  "doi": null
+ }
+}

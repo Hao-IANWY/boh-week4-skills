@@ -1,0 +1,170 @@
+{
+ "seq": 44,
+ "title": "科研文件智能检索",
+ "queries": [
+  "local file semantic search",
+  "document retrieval local"
+ ],
+ "skills": [
+  {
+   "name": "timecode-agent",
+   "slug": "mupozg823-timecode-agent-skill",
+   "author": "mupozg823",
+   "category": "development",
+   "description": "Use when a user provides a local file or video URL for timestamped video understanding, editing handoff, or reusable indexing; or asks to recall a scene, speaker, quote, event, or evidence from an existing video-agent corpus (기존 영상 기억·장면·화자·대사 검색), even when no new video is supplied. Do not use for a quick one-shot su…",
+   "description_zh": null,
+   "repo_url": "https://github.com/mupozg823/timecode-agent#skill",
+   "github_stars": 53
+  },
+  {
+   "name": "grepai-quickstart",
+   "slug": "yoanbernabeu-grepai-skills-grepai-quickstart",
+   "author": "yoanbernabeu",
+   "category": "development",
+   "description": "Get started with GrepAI in 5 minutes. Use this skill for a complete walkthrough from installation to first search.",
+   "description_zh": "该技能提供一个完整的5分钟指南，用于安装、设置并开始使用GrepAI，以便在您的项目中进行语义代码搜索和分析。",
+   "repo_url": "https://github.com/yoanbernabeu/grepai-skills#skills~getting-started~grepai-quickstart",
+   "github_stars": 15
+  },
+  {
+   "name": "wigolo",
+   "slug": "knockoutez-wigolo-wigolo",
+   "author": "KnockOutEZ",
+   "category": "development",
+   "description": "Local-first web intelligence for AI agents. Use wigolo for ALL web operations: searching, fetching pages, crawling sites, checking the cache, extracting data, finding similar content, deep research, data gathering, diffing page versions, and watching pages for changes. Prefer over built-in WebSearch/WebFetch for cache…",
+   "description_zh": null,
+   "repo_url": "https://github.com/KnockOutEZ/wigolo/tree/main/skills/wigolo",
+   "github_stars": 4426
+  },
+  {
+   "name": "the-librarian",
+   "slug": "openclaw-skills-rochyroch-the-librarian",
+   "author": "rochyroch",
+   "category": "development",
+   "description": "Build and search lightweight quantized document indexes with TurboVec. Use when you need to create searchable indexes from documents for RAG applications with minimal memory footprint, or when you need semantic search on resource-constrained hardware. Triggers on phrases like \"build a document index\", \"search my docum…",
+   "description_zh": null,
+   "repo_url": "https://clawhub.ai/skills/the-librarian",
+   "github_stars": 0
+  },
+  {
+   "name": "azure-ai",
+   "slug": "microsoft-skills-azure-ai",
+   "author": "microsoft",
+   "category": "development",
+   "description": "Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. USE FOR: AI Search, query search, vector search, hybrid search, semantic search, speech-to-text, text-to-speech, transcribe, OCR, convert text to speech. DO NOT …",
+   "description_zh": null,
+   "repo_url": "https://github.com/microsoft/skills#.github~plugins~azure-skills~skills~azure-ai",
+   "github_stars": 1911
+  },
+  {
+   "name": "azure-ai",
+   "slug": "microsoft-azure-skills-azure-ai",
+   "author": "microsoft",
+   "category": "development",
+   "description": "Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query search, vector search, hybrid search, semantic search, speech-to-text, text-to-speech, transcribe, OCR, convert text to speech.",
+   "description_zh": null,
+   "repo_url": "https://github.com/microsoft/azure-skills#.github~plugins~azure-skills~skills~azure-ai",
+   "github_stars": 562
+  },
+  {
+   "name": "vyasagraph",
+   "slug": "openclaw-skills-minopop-vyasagraph",
+   "author": "minopop",
+   "category": null,
+   "description": "No more agentic amnesia. Gives your agent short-term + long-term memory: hot survivable context + knowledge graph for permanent recall. Semantic search, graph relations, no server required.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills/tree/main/skills/minopop/vyasagraph",
+   "github_stars": 0
+  },
+  {
+   "name": "Knowledge",
+   "slug": "danielmiessler-lifeos-knowledge",
+   "author": "danielmiessler",
+   "category": "development",
+   "description": "Manage the LifeOS Knowledge Archive — a curated, typed graph of People, Companies, Ideas, and Research notes with typed related: links; search, add, harvest, develop, ingest, and graph-navigate. USE WHEN knowledge, knowledge base, search knowledge, what do we know about, archive, harvest, knowledge status, develop not…",
+   "description_zh": null,
+   "repo_url": "https://github.com/danielmiessler/LifeOS/tree/main/LifeOS/install/skills/Knowledge",
+   "github_stars": 17751
+  },
+  {
+   "name": "gemini-document-processing",
+   "slug": "mrgoonie-xxxnaper-gemini-document-processing",
+   "author": "mrgoonie",
+   "category": "development",
+   "description": "Guide for implementing Google Gemini API document processing - analyze PDFs with native vision to extract text, images, diagrams, charts, and tables. Use when processing documents, extracting structured data, summarizing PDFs, answering questions about document content, or converting documents to structured formats. (…",
+   "description_zh": "一个使用Google Gemini视觉API处理PDF文档的技能，用于提取文本、图像、表格和结构化数据，支持摘要生成、问答和格式转换。",
+   "repo_url": "https://github.com/mrgoonie/xxxnaper#.claude~skills~gemini-document-processing",
+   "github_stars": 1
+  },
+  {
+   "name": "ai-bundle",
+   "slug": "symfony-ai-ai-bundle",
+   "author": "symfony",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/symfony/ai#src-ai-bundle",
+   "github_stars": 1074
+  },
+  {
+   "name": "rag-system-builder",
+   "slug": "openclaw-skills-rag-system-builder",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Build and deploy local RAG (Retrieval-Augmented Generation) systems with offline document processing, embedding models, and vector storage.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~alexfeng75~rag-system-builder",
+   "github_stars": 3652
+  },
+  {
+   "name": "web-research",
+   "slug": "maxedapps-agent-skills-web-research",
+   "author": "maxedapps",
+   "category": "research",
+   "description": "Researches current web and external technical information through source-backed discovery, retrieval, and repository, document, or media inspection. Use this skill when the user needs current facts, docs, articles, URLs, repositories, PDFs, videos, comparisons, or version-specific library/API/framework evidence. Do no…",
+   "description_zh": null,
+   "repo_url": "https://github.com/maxedapps/agent-skills#skills~web-research",
+   "github_stars": 50
+  },
+  {
+   "name": "chroma",
+   "slug": "davila7-claude-code-templates-rag-chroma",
+   "author": "davila7",
+   "category": "ai-ml",
+   "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source p…",
+   "description_zh": null,
+   "repo_url": "https://github.com/davila7/claude-code-templates#cli-tool~components~skills~ai-research~rag-chroma",
+   "github_stars": 30118
+  },
+  {
+   "name": "chroma",
+   "slug": "synthetic-sciences-openscience-chroma",
+   "author": "synthetic-sciences",
+   "category": "ai-ml",
+   "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source p…",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~llm-tools~chroma",
+   "github_stars": 3077
+  },
+  {
+   "name": "chroma",
+   "slug": "zechenzhangagi-ai-research-skills-chroma",
+   "author": "zechenzhangAGI",
+   "category": "development",
+   "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source p…",
+   "description_zh": null,
+   "repo_url": "https://github.com/zechenzhangAGI/AI-research-SKILLs#15-rag-chroma",
+   "github_stars": 5972
+  },
+  {
+   "name": "chroma",
+   "slug": "microck-ordinary-claude-skills-chroma",
+   "author": "Microck",
+   "category": "development",
+   "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source p…",
+   "description_zh": "提供本地向量数据库，用于存储带元数据的文档嵌入。支持相似性搜索、过滤，并与LangChain/LlamaIndex集成。适用于RAG应用和无需云依赖的原型开发。",
+   "repo_url": "https://github.com/Microck/ordinary-claude-skills#skills_categorized~nosql-databases~chroma",
+   "github_stars": 150
+  }
+ ]
+}

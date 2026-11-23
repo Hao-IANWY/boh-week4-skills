@@ -1,0 +1,495 @@
+{
+ "seq": 46,
+ "title": "科研知识库问答",
+ "category": "资料管理",
+ "queries": [
+  "knowledge base question answering mcp",
+  "notebooklm alternative open source",
+  "rag knowledge base agent skill"
+ ],
+ "candidates": [
+  {
+   "full_name": "open-webui/open-webui",
+   "url": "https://github.com/open-webui/open-webui",
+   "stars": 159005,
+   "desc": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+   "topics": [
+    "ai",
+    "llm",
+    "llm-ui",
+    "llm-webui",
+    "llms",
+    "mcp"
+   ],
+   "lang": "Svelte",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-18T11:47:28Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "infiniflow/ragflow",
+   "url": "https://github.com/infiniflow/ragflow",
+   "stars": 94378,
+   "desc": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
+   "topics": [
+    "agent-harness",
+    "agent-native-database",
+    "agentic-ai",
+    "agentic-retrieval",
+    "agentic-search",
+    "ai"
+   ],
+   "lang": "Go",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-18T11:28:53Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "run-llama/llama_index",
+   "url": "https://github.com/run-llama/llama_index",
+   "stars": 52941,
+   "desc": "LlamaIndex is the document processing platform for AI",
+   "topics": [
+    "agents",
+    "application",
+    "data",
+    "fine-tuning",
+    "framework",
+    "llamaindex"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-14T02:26:05Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "khoj-ai/khoj",
+   "url": "https://github.com/khoj-ai/khoj",
+   "stars": 38170,
+   "desc": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemin…",
+   "topics": [
+    "agent",
+    "ai",
+    "assistant",
+    "chat",
+    "chatgpt",
+    "emacs"
+   ],
+   "lang": "Python",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-08-02T01:55:40Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "MODSetter/SurfSense",
+   "url": "https://github.com/MODSetter/SurfSense",
+   "stars": 16892,
+   "desc": "Air-gapped, privacy-focused, open-source NotebookLM alternative. AI agent that researches, transforms, and edits your documents. Join our Discord: https://discord.gg/ejRNvftDp9",
+   "topics": [
+    "agent",
+    "agents",
+    "ai",
+    "notebooklm",
+    "notebooklm-alternative",
+    "rag"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-14T06:28:48Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "PleasePrompto/notebooklm-skill",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "stars": 7797,
+   "desc": "Use this skill to enable Claude Code to communicate directly with your Google NotebookLM notebooks. Query your uploaded documents and get source-grounded, citation-backed answers from Gemini. Features browser automation…",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-09-10T07:43:47Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "souzatharsis/podcastfy",
+   "url": "https://github.com/souzatharsis/podcastfy",
+   "stars": 6827,
+   "desc": "An Open Source Python alternative to NotebookLM's podcast feature: Transforming Multimodal Content into Captivating Multilingual Audio Conversations with GenAI",
+   "topics": [
+    "elevenlabs",
+    "gemini",
+    "genai",
+    "notebooklm",
+    "openai",
+    "podcast"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-05-04T14:49:10Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "run-llama/notebookllama",
+   "url": "https://github.com/run-llama/notebookllama",
+   "stars": 1985,
+   "desc": "A fully open-source, LlamaCloud-backed alternative to NotebookLM",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-03-02T08:58:20Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "theaiautomators/insights-lm-public",
+   "url": "https://github.com/theaiautomators/insights-lm-public",
+   "stars": 659,
+   "desc": "Open-source, self-hosted alternative to NotebookLM. Chat with your documents, generate audio summaries, and ground AI in your own sources—built with Supabase and N8N on a React frontend.",
+   "topics": [
+    "loveable",
+    "n8n",
+    "notebooklm",
+    "rag",
+    "rag-chatbot",
+    "react"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-01-16T13:45:31Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "SourceWeft/SourceWeft",
+   "url": "https://github.com/SourceWeft/SourceWeft",
+   "stars": 516,
+   "desc": "Open-source, self-hostable alternative to ChatGPT and NotebookLM — agents, skills, MCP, and cited knowledge in one AI workstation. Your models, your infrastructure. Includes public MCP server and agent skills directorie…",
+   "topics": [
+    "agentic-ai",
+    "agentic-rag",
+    "agents",
+    "ai",
+    "ai-agents",
+    "chatbot"
+   ],
+   "lang": "TypeScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-18T05:34:33Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "smallnest/notex",
+   "url": "https://github.com/smallnest/notex",
+   "stars": 245,
+   "desc": "An open-source alternative to NotebookLM",
+   "topics": [],
+   "lang": "Go",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-03-23T03:35:25Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "theaiautomators/insights-lm-local-package",
+   "url": "https://github.com/theaiautomators/insights-lm-local-package",
+   "stars": 227,
+   "desc": "Open-source, fully private and local alternative to NotebookLM. Chat with your documents, generate audio summaries, and ground AI in your own sources—built with Supabase, N8N on a React frontend using Ollama for local i…",
+   "topics": [
+    "coqui-tts",
+    "local",
+    "n8n",
+    "notebooklm",
+    "ollama",
+    "private"
+   ],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2025-09-12T09:40:10Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "open-biz/OpenBookLM",
+   "url": "https://github.com/open-biz/OpenBookLM",
+   "stars": 137,
+   "desc": "Open Source alternative to NoteBookLM from Google",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-01T16:26:40Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "tom1030507/OpenNotebookLM",
+   "url": "https://github.com/tom1030507/OpenNotebookLM",
+   "stars": 127,
+   "desc": "Self-hosted alternative to Google's NotebookLM: import PDFs, web pages and YouTube transcripts, then get answers with citations back to the source. Hybrid dense + BM25 retrieval over a local SQLite database, with Claude…",
+   "topics": [
+    "bm25",
+    "embeddings",
+    "fastapi",
+    "hybrid-search",
+    "llm",
+    "nextjs"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-16T11:51:31Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "better-vault/better-vault",
+   "url": "https://github.com/better-vault/better-vault",
+   "stars": 105,
+   "desc": "Open-source NotebookLM alternative. Chat with your sources with citations, and turn them into reports, flashcards, quizzes, mind maps and slide decks, with your own OpenAI, Anthropic or Gemini key or local Ollama / LM S…",
+   "topics": [
+    "ai",
+    "ai-sdk",
+    "anthropic",
+    "byok",
+    "flashcards",
+    "gemini"
+   ],
+   "lang": "TypeScript",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-17T20:33:56Z",
+   "via": [
+    "notebooklm alternative open source"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "ryanjoachim/mcp-rtfm",
+   "url": "https://github.com/ryanjoachim/mcp-rtfm",
+   "stars": 34,
+   "desc": "Ever been told to RTFM only to find there is no FM to R? MCP-RTFM helps you CREATE the F*ing Manual that people keep telling everyone to read! Transform your non-existent or unreadable docs into an intelligent, searchab…",
+   "topics": [],
+   "lang": "JavaScript",
+   "license": null,
+   "pushed_at": "2026-04-20T00:02:31Z",
+   "via": [
+    "knowledge base question answering mcp"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "wmentor/go-magnetar",
+   "url": "https://github.com/wmentor/go-magnetar",
+   "stars": 29,
+   "desc": "An AI smart shell (agent) with integrated tools, skills and an optional knowledge base. Chat with any OpenAI-compatible LLM, use built-in integrations (web search, Confluence, JIRA, GitHub, GitLab and more), index docum…",
+   "topics": [
+    "ai-agent",
+    "ai-assistant",
+    "ai-harness",
+    "ai-tools",
+    "cli",
+    "confluence"
+   ],
+   "lang": "Go",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T09:47:08Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Radulepy/mcp-ai-agents-template",
+   "url": "https://github.com/Radulepy/mcp-ai-agents-template",
+   "stars": 7,
+   "desc": "A Model Context Protocol (MCP) TypeScript template with multi agents that can send Emails, schedule meetings and answer knowledge-base related questions.",
+   "topics": [
+    "ai-agents",
+    "ai-multi-agent",
+    "gemini-agents",
+    "mcp-agent",
+    "mcp-agents",
+    "mcp-email-calendar"
+   ],
+   "lang": "TypeScript",
+   "license": null,
+   "pushed_at": "2025-06-21T17:08:11Z",
+   "via": [
+    "knowledge base question answering mcp"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Cashcoin123/Cashcoin123",
+   "url": "https://github.com/Cashcoin123/Cashcoin123",
+   "stars": 7,
+   "desc": "# Application card: GitHub Copilot Chat  Learn how to use GitHub Copilot Chat responsibly by understanding its purposes, capabilities, and limitations.  ## What is an Application Card?  <!-- Do not modify this text.--> …",
+   "topics": [
+    "config",
+    "github-config"
+   ],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-10-05T01:50:18Z",
+   "via": [
+    "knowledge base question answering mcp"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "LCccode/Karpathy-wiki-graph",
+   "url": "https://github.com/LCccode/Karpathy-wiki-graph",
+   "stars": 6,
+   "desc": "Enterprise-grade knowledge base agent with interactive knowledge graph. CLI-atomic, drop-in skill for Claude Code / OpenClaw. Turn any folder (Word/PDF/Excel/PPT) into a three-layer wiki: articles + concepts + vis-netwo…",
+   "topics": [
+    "ai-agents",
+    "claude",
+    "claude-code",
+    "claudecode",
+    "cli",
+    "graph"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-04-28T09:50:21Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dev-core-busy/jarvis",
+   "url": "https://github.com/dev-core-busy/jarvis",
+   "stars": 6,
+   "desc": "🖱️ AI Mouse: ask your Windows screen · 🛡️ Hardened to BSI requirements (IT-Grundschutz APP.3.1, TR-02102) · Self-hosted autonomous AI agent for Linux — multi-LLM, real desktop control (VNC), WhatsApp, RAG knowledge base…",
+   "topics": [
+    "ai-agent",
+    "anthropic",
+    "autonomous-agent",
+    "bsi",
+    "desktop-automation",
+    "fastapi"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2026-11-18T12:22:10Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "q8886b/loom-ai-knowledge-network",
+   "url": "https://github.com/q8886b/loom-ai-knowledge-network",
+   "stars": 4,
+   "desc": "Loom is a local-first cognitive harness and an AI cognitive architecture. Sources form an AI knowledge network and agent knowledge graph: agent skills let agents digest, synthesize, and return vetted insights. For Zette…",
+   "topics": [
+    "agent-skills",
+    "ai-agents",
+    "ai-knowledge-network",
+    "ai-second-brain",
+    "claude-code",
+    "codex"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-08-20T10:40:02Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "piexian/elin-decompile-toolkit",
+   "url": "https://github.com/piexian/elin-decompile-toolkit",
+   "stars": 3,
+   "desc": "Agent Skill: extract official data from Elin and decompile its source - official Chinese names, mechanics verification, version diffing, RAG knowledge base",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-11-15T14:53:11Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Albert-Libra/nanobot-zotero-bridge",
+   "url": "https://github.com/Albert-Libra/nanobot-zotero-bridge",
+   "stars": 3,
+   "desc": "🐈 nanobot agent skill — turn your Zotero library into an AI-searchable knowledge base. L0→L3 paper processing pipeline (metadata → abstract → full-text → LLM summary) with FTS5 + RAG hybrid search. Agent cites your pape…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-06-01T12:52:06Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "jeezy05/Math_Agent_AIPlanet",
+   "url": "https://github.com/jeezy05/Math_Agent_AIPlanet",
+   "stars": 2,
+   "desc": "Math Agent is an agentic Retrieval-Augmented Generation (RAG) system designed to replicate a mathematical professor. It answers math questions with step-by-step solutions, using a knowledge base, web search (MCP), guard…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-07-23T15:49:47Z",
+   "via": [
+    "knowledge base question answering mcp"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "vilius04/obsidian-rag-skill",
+   "url": "https://github.com/vilius04/obsidian-rag-skill",
+   "stars": 2,
+   "desc": "This skill helps an agent build and maintain a lightweight knowledge base in Obsidian",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-11-17T07:06:20Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Cdexs/myagentrag",
+   "url": "https://github.com/Cdexs/myagentrag",
+   "stars": 2,
+   "desc": "A local RAG knowledge base skill designed specifically for Agents: ingest videos, web pages, documents, and audio recordings, with three-way hybrid retrieval and one-click jump to audio/video source timestamp。专为Agent 设计…",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-09-14T15:28:44Z",
+   "via": [
+    "rag knowledge base agent skill"
+   ],
+   "seed": false
+  }
+ ]
+}

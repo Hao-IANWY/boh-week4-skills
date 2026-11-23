@@ -1,0 +1,72 @@
+{
+ "case_id": "EXAMPLE-046-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：在一个 6 文件的小知识库上回答 3 个问题——裂解缓冲液的 Triton X-100 终浓度、共聚焦成像的曝光时间、细胞冻存所用 DMSO 浓度；每个关键论断必须挂到具体文件/版本/页/段落/字符区间，证据冲突要并列，库内无依据要直说缺什么。",
+ "output_contract": {
+  "answers": "逐个问题的答案：断言级引用（文件+版本+哈希+页+章节+行区间+整句原文）、证据强度、三态结论（有据/冲突/库内无据）、缺失要素",
+  "evidence_map": "建库台账、chunk 边界、检索 trace、去重与版本处置、引用规则与强度定义；他人可据此复跑同一问答",
+  "状态说明": "完成/部分完成、缺证问题、不可读文件、版本差异与冲突证据、不确定性"
+ },
+ "knowledge_base": {"root": "library", "note": "示例材料内联在 files[]，不依赖磁盘"},
+ "questions": [
+  {"question_id": "Q1", "text": "细胞裂解缓冲液里 Triton X-100 的终浓度是多少"},
+  {"question_id": "Q2", "text": "共聚焦成像的曝光时间设置为多少毫秒"},
+  {"question_id": "Q3", "text": "细胞冻存时使用的 DMSO 终浓度是多少"}
+ ],
+ "files": [
+  {
+   "file_id": "K1",
+   "path": "library/P-17/assay/2022-03_裂解缓冲液记录_v2.md",
+   "file_type": "md",
+   "metadata": {"year": 2022, "version": "v2", "project_id": "P-17", "permission": "rw", "batch": "B-03"},
+   "pages": [
+    {
+     "page": 12,
+     "page_label": "12",
+     "text": "# 3 实验方法\n## 3.2 裂解缓冲液配方\n本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂混合片，终浓度为每 10 mL 一片。"
+    }
+   ]
+  },
+  {
+   "file_id": "K2",
+   "path": "library/P-17/assay/2022-03_裂解缓冲液记录_v2_副本.md",
+   "file_type": "md",
+   "metadata": {"year": 2022, "version": "v2", "project_id": "P-17", "permission": "rw", "batch": "B-03"},
+   "pages": [
+    {
+     "page": 12,
+     "page_label": "12",
+     "text": "# 3 实验方法\n## 3.2 裂解缓冲液配方\n本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂混合片，终浓度为每 10 mL 一片。"
+    }
+   ]
+  },
+  {
+   "file_id": "K3",
+   "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+   "file_type": "md",
+   "metadata": {"year": 2021, "version": "v1", "project_id": "P-17", "permission": "r", "batch": "B-01"},
+   "text": "# 2 缓冲液配方\n早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。\n该版本已被 2022-03 的 v2 方案替代，仅保留用于追溯。"
+  },
+  {
+   "file_id": "K4",
+   "path": "library/P-17/imaging/2024_共聚焦成像参数.md",
+   "file_type": "md",
+   "metadata": {"year": 2024, "version": "v1", "project_id": "P-17", "permission": "rw"},
+   "text": "# 1 成像参数\n共聚焦成像曝光时间设置为 200 ms，激光功率 20%，Z 步进 0.5 µm。\n每张图取 3 次平均以降低噪声，针孔设为 1 AU。"
+  },
+  {
+   "file_id": "K5",
+   "path": "library/P-09/2023_动物实验伦理批件摘要.md",
+   "file_type": "md",
+   "metadata": {"year": 2023, "version": "v1", "project_id": "P-09", "permission": "r"},
+   "text": "# 伦理审批\n本项目动物实验已获伦理委员会批准，批件编号 IACUC-2023-017。\n批准范围包含小鼠饲养与行为学测试，不含细胞实验。"
+  },
+  {
+   "file_id": "K6",
+   "path": "library/scans/2020_手写试剂清单.pdf",
+   "file_type": "pdf",
+   "metadata": {"year": 2020, "version": "v1", "project_id": "P-17", "permission": "rw", "scanned": true},
+   "note": "扫描件无文本层；需 ocr-tool 产出旁路文本后再入库"
+  }
+ ],
+ "source": {"title": "Synthetic interface example (not a test case)", "doi": null}
+}

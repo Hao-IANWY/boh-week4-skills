@@ -4,7 +4,7 @@
   "name": "literature-review-writer",
   "version": "0.1.0"
  },
- "generated_at": "2026-11-23T18:33:58+0800",
+ "generated_at": "2026-11-23T18:45:44+0800",
  "screening": {
   "protocol_status": "missing_fallback_declared",
   "protocol_id": "",
@@ -262,6 +262,29 @@
     "dedupe_of": ""
    }
   ],
+  "search_log": {
+   "queries": [
+    {
+     "query": "*",
+     "terms": [],
+     "hit_count": 9,
+     "record_ids": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+     ],
+     "note": "池内全量扫描；未联网，不声称数据库覆盖"
+    }
+   ],
+   "pool_size": 9,
+   "note": "检索式由协议 inclusion.any_keys 与声明主题词生成；命中数为池内扫描结果，未联网，不代表数据库总命中；全量扫描行用于证明没有静默丢记录。"
+  },
   "input_gap": {
    "code": "R_PROTOCOL_MISSING",
    "detail": "case.json 未提供前瞻性筛选协议（纳排标准、停止条件）",
@@ -2354,6 +2377,29 @@
    },
    "rule": "前瞻协议（prospective）：协议先随计划写入 work/plan.json，再对每条记录逐条筛选；每条记录记 criterion_hits（命中/未命中哪条纳入/排除标准）；去重在协议筛选之后执行；仅通过协议与去重的记录进入主题聚类与证据表",
    "dedupe_rule": "去重发生在协议筛选之后：DOI 归一（去 https://doi.org/ 前缀）相同 → R_DUP_DOI；标题+年份强归一相同 → R_DUP_TITLE（预印本/正式版合并）；保留首见，重复记录改判 excluded 并记录 dedupe_of=保留记录 id",
+   "search_log": {
+    "queries": [
+     {
+      "query": "*",
+      "terms": [],
+      "hit_count": 9,
+      "record_ids": [
+       "P1",
+       "P2",
+       "P3",
+       "P4",
+       "P5",
+       "P6",
+       "P7",
+       "P8",
+       "P9"
+      ],
+      "note": "池内全量扫描；未联网，不声称数据库覆盖"
+     }
+    ],
+    "pool_size": 9,
+    "note": "检索式由协议 inclusion.any_keys 与声明主题词生成；命中数为池内扫描结果，未联网，不代表数据库总命中；全量扫描行用于证明没有静默丢记录。"
+   },
    "fallback": {
     "declared_in": "rules/review_criteria.json#fallback_screening",
     "note": "案例未提供协议时的声明回退口径：记录正文可读（内联/侧车/自研 PDF/DOCX 提取成功且非空）即纳入；随后执行 DOI 与标题+年份去重；每条筛选记录标注 fallback=true"
@@ -4492,6 +4538,29 @@
      "dedupe_of": ""
     }
    ],
+   "search_log": {
+    "queries": [
+     {
+      "query": "*",
+      "terms": [],
+      "hit_count": 9,
+      "record_ids": [
+       "P1",
+       "P2",
+       "P3",
+       "P4",
+       "P5",
+       "P6",
+       "P7",
+       "P8",
+       "P9"
+      ],
+      "note": "池内全量扫描；未联网，不声称数据库覆盖"
+     }
+    ],
+    "pool_size": 9,
+    "note": "检索式由协议 inclusion.any_keys 与声明主题词生成；命中数为池内扫描结果，未联网，不代表数据库总命中；全量扫描行用于证明没有静默丢记录。"
+   },
    "input_gap": {
     "code": "R_PROTOCOL_MISSING",
     "detail": "case.json 未提供前瞻性筛选协议（纳排标准、停止条件）",
@@ -6585,6 +6654,29 @@
    },
    "rule": "前瞻协议（prospective）：协议先随计划写入 work/plan.json，再对每条记录逐条筛选；每条记录记 criterion_hits（命中/未命中哪条纳入/排除标准）；去重在协议筛选之后执行；仅通过协议与去重的记录进入主题聚类与证据表",
    "dedupe_rule": "去重发生在协议筛选之后：DOI 归一（去 https://doi.org/ 前缀）相同 → R_DUP_DOI；标题+年份强归一相同 → R_DUP_TITLE（预印本/正式版合并）；保留首见，重复记录改判 excluded 并记录 dedupe_of=保留记录 id",
+   "search_log": {
+    "queries": [
+     {
+      "query": "*",
+      "terms": [],
+      "hit_count": 9,
+      "record_ids": [
+       "P1",
+       "P2",
+       "P3",
+       "P4",
+       "P5",
+       "P6",
+       "P7",
+       "P8",
+       "P9"
+      ],
+      "note": "池内全量扫描；未联网，不声称数据库覆盖"
+     }
+    ],
+    "pool_size": 9,
+    "note": "检索式由协议 inclusion.any_keys 与声明主题词生成；命中数为池内扫描结果，未联网，不代表数据库总命中；全量扫描行用于证明没有静默丢记录。"
+   },
    "fallback": {
     "declared_in": "rules/review_criteria.json#fallback_screening",
     "note": "案例未提供协议时的声明回退口径：记录正文可读（内联/侧车/自研 PDF/DOCX 提取成功且非空）即纳入；随后执行 DOI 与标题+年份去重；每条筛选记录标注 fallback=true"

@@ -1,0 +1,68 @@
+{
+ "version": "0.2.0",
+ "description": "043 元数据字段字典：字段 → 判据 → 出处分级。抽不到就记「未知」，不许按文件名猜；来源冲突按出处分级取舍并如实记录。",
+ "required_fields": [
+  "project",
+  "year",
+  "kind",
+  "title"
+ ],
+ "filename_patterns": {
+  "project": {
+   "regex": "(PROJ[-_]?[A-Za-z0-9]+)"
+  },
+  "year": {
+   "regex": "(20\\d{2})"
+  },
+  "version": {
+   "regex": "[_-][vV](\\d+)"
+  },
+  "seq": {
+   "regex": "(?:run|R)(\\d{2})"
+  }
+ },
+ "ext_kinds": {
+  ".csv": "raw_data",
+  ".tsv": "raw_data",
+  ".xlsx": "raw_data",
+  ".json": "raw_data",
+  ".md": "analysis_note",
+  ".txt": "analysis_note",
+  ".docx": "document",
+  ".pdf": "document",
+  ".pptx": "document",
+  ".py": "code",
+  ".r": "code",
+  ".m": "code",
+  ".png": "image",
+  ".jpg": "image",
+  ".tif": "image",
+  ".tiff": "image",
+  ".bin": "binary",
+  ".zip": "archive",
+  ".tar": "archive",
+  ".gz": "archive"
+ },
+ "provenance_precedence": [
+  "人工给定（manifest_supplement，可靠性最高）",
+  "伴随表（库内 metadata.csv/manifest.csv/metadata.json/manifest.json 或 case 的 metadata_table 等引用）",
+  "内容提取（正文首行标题，依赖提取成功）",
+  "文件名解析（正则，可能被人改过名）",
+  "目录名解析（上级目录，可靠性中）",
+  "扩展名推断（数据类型，可靠性高但只覆盖 kind）",
+  "未知（多路都抽不到：记缺口，绝不补造）"
+ ],
+ "provenance_levels": {
+  "filename": "文件名解析：从文件名/路径正则抽出，可靠性中（可能被人改过名）",
+  "directory": "目录名解析：从上级目录名抽出，可靠性中",
+  "extension": "扩展名推断：由扩展名推断数据类型，可靠性高",
+  "content": "内容提取：从文件内容首行抽取（标题），可靠性高但依赖可解码/可提取",
+  "companion": "伴随表：来自库内 CSV/JSON 伴随表或 case 引用的伴随表文件",
+  "manual": "人工给定：来自 manifest_supplement（人工录入），可靠性最高",
+  "alias": "别名继承：同 SHA-256 副本从规范件继承字段，可靠性随规范件",
+  "absent": "未知：多路都抽不到，记为缺口，不猜"
+ },
+ "conflict_policy": "不同来源给出不同值时按 provenance_precedence 高者优先；被舍弃值与双方出处记入 field_conflicts（不静默覆盖）",
+ "fill_rate_threshold": 0.75,
+ "notes": "fill_rate < 0.75 的文件进 failure_recovery.low_fill_rate_files，提示人工补录；字段出处是每个字段的必答项"
+}

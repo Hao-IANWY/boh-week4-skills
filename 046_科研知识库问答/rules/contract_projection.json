@@ -1,0 +1,15 @@
+{
+ "version": "0.2.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。未被主流程单独生产的契约字段按本表关键词投影到同名产物分区，并显式标注 projection_of；仍无对应则落 status.unmet。规则按数组顺序匹配，先声明的优先（文件库/操作须排在证据类之前，防「操作证据」类键名被 evidence 吞掉）。",
+ "rules": [
+  {"keywords": ["文件库", "盘点", "台账", "库清单", "library", "registry", "库存"], "projection": "library_report"},
+  {"keywords": ["操作", "恢复", "索引", "rebuild", "ops", "归档", "修复"], "projection": "ops_log"},
+  {"keywords": ["answer", "qa", "问答", "回答", "答案", "主结果", "result", "deliverable", "产物"], "projection": "answers"},
+  {"keywords": ["insufficient", "缺证", "无据", "无法回答", "缺口"], "projection": "insufficient"},
+  {"keywords": ["conflict", "冲突", "矛盾"], "projection": "conflicts"},
+  {"keywords": ["coverage", "覆盖", "召回"], "projection": "coverage"},
+  {"keywords": ["evidence", "证据", "引用", "citation", "来源", "溯源", "映射"], "projection": "evidence"},
+  {"keywords": ["status", "状态", "完成"], "projection": "status"}
+ ],
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论"
+}

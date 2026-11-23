@@ -474,35 +474,145 @@ BODIES = {
 }
 
 
+def _stmt(x):
+    if isinstance(x, dict):
+        return x.get("statement") or x.get("claim") or x.get("text") or ""
+    return str(x) if x is not None else ""
+
+
+def _first_sentence(x):
+    text = _stmt(x).strip()
+    for sep in ("。", "！", "？", ". "):
+        i = text.find(sep)
+        if 0 < i < 220:
+            return text[: i + len(sep)]
+    return text
+
+
+def _direction_counts(rows):
+    out = {"+1": 0, "-1": 0, "0": 0, "mixed": 0, "unknown": 0}
+    for e in rows:
+        d = e.get("direction")
+        v = d.get("value") if isinstance(d, dict) else d
+        v = str(v) if v is not None else ""
+        if v in ("+1", "1", "positive"):
+            out["+1"] += 1
+        elif v in ("-1", "negative"):
+            out["-1"] += 1
+        elif v in ("0", "zero"):
+            out["0"] += 1
+        elif v in ("mixed", "±1"):
+            out["mixed"] += 1
+        else:
+            out["unknown"] += 1
+    return out
+
+
+def _year_span(rows):
+    years = []
+    for e in rows:
+        y = e.get("year")
+        try:
+            y = int(y)
+        except (TypeError, ValueError):
+            continue
+        if 1900 <= y <= 2100:
+            years.append(y)
+    return (min(years), max(years)) if years else (None, None)
+
+
 def summary_block(payload):
+    """摘要：只重排 result.json 的计数、方向、年份与判定，不新增证据外结论。"""
     skill = (payload.get("skill") or {}).get("name", "")
     counts = (payload.get("screening") or {}).get("counts") or {}
-    n_ev = len(payload.get("evidence_table") or payload.get("evidence_matrix") or [])
+    rows = payload.get("evidence_table") or payload.get("evidence_matrix") or []
+    n_ev = len(rows)
     conf = payload.get("conflicts")
     n_conf = conf.get("count") if isinstance(conf, dict) else len(conf or [])
     gaps = payload.get("research_gaps")
     n_gap = gaps.get("count") if isinstance(gaps, dict) else len(gaps or [])
     lines = ["## 摘要", ""]
     if counts:
-        lines.append(f"- 材料与筛选：筛查 {s(counts.get('screened'))} 条，纳入 {s(counts.get('included'))} 条，排除 {s(counts.get('excluded'))} 条。")
+        lines.append(f"- 材料与筛选：筛查 {s(counts.get('screened'))} 条，纳入 {s(counts.get('included'))} 条，"
+                     f"排除 {s(counts.get('excluded'))} 条。")
     if n_ev:
-        lines.append(f"- 证据台账：{n_ev} 条带定位的逐字证据。")
+        verified = sum(1 for e in rows if e.get("quote_verified", True))
+        y0, y1 = _year_span(rows)
+        span = f"，年份跨度 {y0}–{y1}" if y0 else ""
+        lines.append(f"- 证据台账：{n_ev} 条带定位的逐字证据（校验通过 {verified}/{n_ev}{span}）。")
+        d = _direction_counts(rows)
+        lines.append(f"- 方向分布：正向 {d['+1']} 条、负向 {d['-1']} 条、零效应 {d['0']} 条、"
+                     f"混合 {d['mixed']} 条、未判定 {d['unknown']} 条。")
     lines.append(f"- 冲突证据：{s(n_conf, '0')} 组（双列呈现）；研究空白：{s(n_gap, '0')} 项。")
-    key = []
     if skill == "deep-research-agent":
-        key = [c.get("statement") for c in (payload.get("conclusions") or [])[:3]]
+        subs = (payload.get("research_plan") or {}).get("subquestions") or []
+        if subs:
+            lines.append(f"- 问题拆解：{len(subs)} 个子问题；检索计划 {len((payload.get('search_plan') or {}).get('steps') or [])} 步。")
+        key = [_first_sentence(c) for c in (payload.get("conclusions") or [])[:3]]
     elif skill == "literature-review-writer":
-        labels = [t.get("label") for t in (payload.get("topics") or [])[:4]]
+        topics = payload.get("topics") or []
+        labels = [t.get("label") for t in topics[:5]]
         if labels:
-            lines.append("- 主要主题：" + "；".join(s(x) for x in labels))
+            lines.append(f"- 主题覆盖：{len(topics)} 个主题；" + "；".join(s(x) for x in labels))
+        thin = [t.get("label") for t in topics if t.get("thin")]
+        if thin:
+            lines.append("- 证据薄弱主题：" + "；".join(s(x) for x in thin))
+        sl = (payload.get("screening") or {}).get("search_log") or {}
+        qs = sl.get("queries") or []
+        if qs:
+            main = next((q for q in qs if q.get("query") != "*"), qs[0])
+            lines.append(f"- 检索覆盖：{len(qs)} 条检索式；主检索式 `{clip(main.get('query'), 80)}` "
+                         f"命中 {s(main.get('hit_count'))} 条，池内全量 {s(sl.get('pool_size'))} 条（未联网）。")
+        key = []
     elif skill == "systematic-review-prisma":
-        key = [k.get("statement") for k in (payload.get("synthesis") or [])[:3]]
+        pf = payload.get("prisma_flow") or {}
+        ident = (pf.get("identification") or {}).get("records_identified")
+        incl = (pf.get("included") or {}).get("records_included")
+        closed = (pf.get("consistency") or {}).get("all_closed")
+        if ident is not None or incl is not None:
+            lines.append(f"- PRISMA 计数链：识别 {s(ident)} → 纳入 {s(incl)}；恒等式自检 {s(closed)}。")
+        qa = payload.get("quality_appraisal")
+        if isinstance(qa, dict):
+            qa = qa.get("rows") or []
+        qa = qa or []
+        if qa:
+            levels = {}
+            for q in qa:
+                lv = s((q.get("level") or q.get("quality_level")), "未评") if isinstance(q, dict) else "未评"
+                levels[lv] = levels.get(lv, 0) + 1
+            lines.append("- 质量分布：" + "；".join(f"{k} {v} 条" for k, v in sorted(levels.items())))
+        key = []
     elif skill == "research-frontier-trend-analysis":
-        key = [c.get("claim") for c in ((payload.get("frontier_trends") or {}).get("claims") or [])[:3]]
+        tt = payload.get("temporal_trends") or {}
+        win = tt.get("window") or {}
+        if win:
+            lines.append(f"- 时间窗口：{s(win.get('start'))}–{s(win.get('end'))}；"
+                         f"计数单位：{clip(tt.get('counting_unit'), 80)}")
+        claims = (payload.get("frontier_trends") or {}).get("claims") or []
+        if claims:
+            verdicts = {}
+            for c in claims:
+                v = s(c.get("verdict"), "unknown")
+                verdicts[v] = verdicts.get(v, 0) + 1
+            lines.append(f"- 主题判定：{len(claims)} 个主题；" + "；".join(f"{k} {v}" for k, v in sorted(verdicts.items())))
+        key = [_first_sentence(c) for c in claims[:2]]
     elif skill == "research-idea-novelty-assessment":
-        key = [f"{s(c.get('direction_id'))}：{s((c.get('novelty') or {}).get('scope'))}" for c in (payload.get("candidate_assessments") or [])]
+        cas = payload.get("candidate_assessments") or []
+        if cas:
+            lines.append(f"- 候选方向：{len(cas)} 个。")
+            verdicts = {}
+            for c in cas:
+                for cl in ((c.get("novelty") or {}).get("claims") or []):
+                    v = s(cl.get("verdict"), "unknown")
+                    verdicts[v] = verdicts.get(v, 0) + 1
+            if verdicts:
+                lines.append("- 新颖性判定：" + "；".join(f"{k} {v} 条" for k, v in sorted(verdicts.items())))
+        key = []
     for k in key:
-        lines.append(f"- {clip(k, 220)}")
+        if k:
+            lines.append(f"- {clip(k, 220)}")
+    lines.append("")
+    lines.append("> 本摘要只重排 `result.json` 的计数、方向、年份与判定；证据与边界见后续各节，不在此处新增结论。")
     lines.append("")
     return "\n".join(lines)
 

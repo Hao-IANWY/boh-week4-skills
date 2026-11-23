@@ -1,0 +1,25 @@
+{
+ "version": "0.2.0",
+ "description": "043 重复与版本判定：一律按内容哈希，不看文件名；版本组按行政性版本说明优先、文件名模式回退；canonical=版本序最大、并列非副本/诱饵名降权。",
+ "content_hash": "sha256（分块读，不整文件入内存）",
+ "canonical_rule": "同哈希组内：名字（去扩展名、强归一）最短 → mtime 最早 → 路径字典序；输出 canonical 与 aliases",
+ "canonical_rule_alias": "同 SHA-256 异名 = 完全重复/别名；canonical = 非诱饵名（copy/backup/latest 降权）→ 名归一最短 → mtime 最早 → 路径字典序",
+ "version_pattern": "[_-][vV](\\d+)",
+ "version_pattern_loose": "(?i)(?:^|[^a-z])(v|rev)[._ -]?(\\d+)",
+ "bait_pattern": "copy|backup|latest（诱饵/副本词：canonical 选择时降权，不按文件名 latest 推断版本新旧）",
+ "version_rank": "final > v<n>/rev<n>（数字大者优先）> draft > 其他；同序并列时非副本、非诱饵名优先",
+ "identity_key": "去版本号与副本标记后强归一的文件名 + 扩展名（版本组回退判据）；行政性版本说明的 doc 字段优先",
+ "version_note_keys": ["version_notes", "admin_notes", "versions"],
+ "diff_fields": ["supersedes", "bytes_delta", "same_content", "lines_added", "lines_removed"],
+ "dup_vs_version": [
+  "哈希相同 = 重复（alias 副本、改过名的备份、下载重复）",
+  "同身份（版本说明 doc 或去版本词文件名）异哈希 = 版本（v1→v2、补充分析）",
+  "同身份但版本信息不足 = 近重复提示，不强行成链",
+  "哈希不同且身份不同 = 不同文件，不强行合并"
+ ],
+ "notes": [
+  "绝不按文件名判重复：xxx(1).pdf 与 xxx.pdf 只有在哈希相同才算重复",
+  "绝不按 mtime 判版本先后：mtime 会被拷贝/同步改写，只作同版本号时的次序依据",
+  "绝不按文件名 latest 推断最新：latest 系误命名时以行政性版本说明与内容为准，冲突显式 W_VERSION_CONFLICT"
+ ]
+}

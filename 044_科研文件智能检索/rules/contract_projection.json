@@ -1,0 +1,89 @@
+{
+ "version": "0.2.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。凡未被主流程单独生产的契约字段，按本表关键词投影到同名产物分区；投影内容为真实计算结果，并显式标注 projection_of；仍无对应则落 status.unmet，不用推测值填充。",
+ "rules": [
+  {
+   "keywords": [
+    "match",
+    "hit",
+    "命中",
+    "检索结果",
+    "查找",
+    "定位结果",
+    "result",
+    "结果",
+    "回答"
+   ],
+   "projection": "matches"
+  },
+  {
+   "keywords": [
+    "query",
+    "提问",
+    "问题",
+    "plan",
+    "计划"
+   ],
+   "projection": "query_views"
+  },
+  {
+   "keywords": [
+    "gap",
+    "缺口",
+    "遗漏",
+    "未命中"
+   ],
+   "projection": "gaps"
+  },
+  {
+   "keywords": [
+    "excluded",
+    "排除",
+    "跳过",
+    "失败"
+   ],
+   "projection": "excluded_files"
+  },
+  {
+   "keywords": [
+    "文件库",
+    "盘点",
+    "library",
+    "清单"
+   ],
+   "projection": "library_report"
+  },
+  {
+   "keywords": [
+    "操作",
+    "恢复",
+    "索引",
+    "ops",
+    "工单"
+   ],
+   "projection": "ops_log"
+  },
+  {
+   "keywords": [
+    "evidence",
+    "证据",
+    "来源",
+    "溯源",
+    "provenance",
+    "trace",
+    "映射"
+   ],
+   "projection": "evidence"
+  },
+  {
+   "keywords": [
+    "status",
+    "状态",
+    "完成"
+   ],
+   "projection": "status"
+  }
+ ],
+ "order": "按本表自上而下匹配，命中即停；evidence/status 由 Result 三段式直接提供，不重复投影",
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论；文件库/操作投影排在 evidence 前，防「操作证据」类键名被吞"
+}

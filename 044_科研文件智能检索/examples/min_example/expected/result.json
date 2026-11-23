@@ -1,0 +1,3608 @@
+{
+ "case_id": "EXAMPLE-044-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "research-file-retrieval",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-23T18:33:47+0800",
+ "query_plan": {
+  "queries": [
+   {
+    "query_id": "Q1",
+    "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+    "keys": [
+     "triton",
+     "x-100",
+     "细胞",
+     "胞裂",
+     "裂解",
+     "解缓",
+     "缓冲",
+     "冲液",
+     "液里",
+     "和脱",
+     "脱氧",
+     "氧胆"
+    ],
+    "expanded_keys": [
+     {
+      "key": "lysis",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "buffer",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "液配",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "配方",
+      "via": "expansion:lysis_buffer"
+     }
+    ],
+    "filters": {
+     "project_ids": [
+      "P-17"
+     ],
+     "file_types": [
+      "md"
+     ],
+     "year_from": 2021,
+     "exclude_scanned": true
+    }
+   },
+   {
+    "query_id": "Q2",
+    "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+    "keys": [
+     "共聚",
+     "聚焦",
+     "焦成",
+     "成像",
+     "像的",
+     "的曝",
+     "曝光",
+     "光时",
+     "时间",
+     "间和",
+     "和激",
+     "激光"
+    ],
+    "expanded_keys": [
+     {
+      "key": "电池",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "功率",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "battery",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "power",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "adaptation",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "confocal",
+      "via": "expansion:confocal"
+     },
+     {
+      "key": "exposure",
+      "via": "expansion:exposure_time"
+     },
+     {
+      "key": "time",
+      "via": "expansion:exposure_time"
+     }
+    ],
+    "filters": {
+     "project_ids": [
+      "P-17"
+     ],
+     "file_types": [
+      "md"
+     ]
+    }
+   }
+  ],
+  "stop_rule": "语料遍历完即停；命中不足不放宽硬过滤",
+  "skill": "research-file-retrieval"
+ },
+ "gaps": [
+  {
+   "query_id": "Q2",
+   "code": "R_FILTER_BLOCKED_HITS",
+   "reason": "库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容",
+   "next_action": "核对过滤条件是否过严或缺元数据；不得为凑结果放宽硬约束",
+   "files_passing_filters": 2,
+   "blocked_hit_count": 1,
+   "coverage_note": "注意：本库另有 1 个文件因权限/加密/损坏/无文本层未进入语料：空结果不能断定库内无支撑，只能说明可检索语料内无支撑",
+   "filters_unsatisfied_files": [
+    "F4"
+   ]
+  }
+ ],
+ "excluded_files": [
+  {
+   "file_id": "F2",
+   "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+   "code": "R_DUP_FILE",
+   "reason": "与首见文件 sha256 完全相同的副本，不作为独立命中来源",
+   "duplicate_of": "library/P-17/assay/2022-03_裂解缓冲液记录.md"
+  },
+  {
+   "file_id": "F5",
+   "path": "library/P-17/scan/2020_手写配方.pdf",
+   "code": "R_NO_TEXT_LAYER",
+   "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+  }
+ ],
+ "matches": [
+  {
+   "query_id": "Q1",
+   "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+   "hits": [
+    {
+     "rank": 1,
+     "query_id": "Q1",
+     "chunk_id": "C0001",
+     "score": 0.9758,
+     "score_breakdown": {
+      "bm25": 9.697,
+      "bm25_norm": 1.0,
+      "term_match": 0.9167,
+      "proximity": 0.9833,
+      "proximity_span": 1,
+      "heading_hit": 1.0,
+      "weights": {
+       "bm25": 0.45,
+       "term_match": 0.25,
+       "proximity": 0.2,
+       "heading": 0.1
+      }
+     },
+     "matched_keys": [
+      {
+       "term": "triton",
+       "via": "original"
+      },
+      {
+       "term": "x-100",
+       "via": "original"
+      },
+      {
+       "term": "冲液",
+       "via": "original"
+      },
+      {
+       "term": "氧胆",
+       "via": "original"
+      },
+      {
+       "term": "液配",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "term": "细胞",
+       "via": "original"
+      },
+      {
+       "term": "缓冲",
+       "via": "original"
+      },
+      {
+       "term": "胞裂",
+       "via": "original"
+      },
+      {
+       "term": "脱氧",
+       "via": "original"
+      },
+      {
+       "term": "裂解",
+       "via": "original"
+      },
+      {
+       "term": "解缓",
+       "via": "original"
+      },
+      {
+       "term": "配方",
+       "via": "expansion:lysis_buffer"
+      }
+     ],
+     "covered_groups": [
+      "lysis_buffer"
+     ],
+     "file": {
+      "file_id": "F1",
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+      "file_type": "md",
+      "extraction_method": "inline_case_json",
+      "project_id": "P-17",
+      "year": 2022,
+      "version": "v2"
+     },
+     "location": {
+      "page": 12,
+      "page_label": "12",
+      "label_source": "explicit",
+      "section_path": [
+       "3 实验方法",
+       "3.2 裂解缓冲液配方"
+      ],
+      "line_from": 3,
+      "line_to": 5,
+      "char_range": [
+       24,
+       213
+      ],
+      "two_column_hint": false,
+      "read_order": null
+     },
+     "paragraph_first_sentence": "本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。",
+     "quote": "本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂…",
+     "quote_check": {
+      "exact_match": true,
+      "checked_in": "canonical_text",
+      "char_offset": 24
+     },
+     "filters_satisfied": true
+    },
+    {
+     "rank": 2,
+     "query_id": "Q1",
+     "chunk_id": "C0007",
+     "score": 0.8029,
+     "score_breakdown": {
+      "bm25": 6.8679,
+      "bm25_norm": 0.7082,
+      "term_match": 0.75,
+      "proximity": 0.9833,
+      "proximity_span": 1,
+      "heading_hit": 1.0,
+      "weights": {
+       "bm25": 0.45,
+       "term_match": 0.25,
+       "proximity": 0.2,
+       "heading": 0.1
+      }
+     },
+     "matched_keys": [
+      {
+       "term": "triton",
+       "via": "original"
+      },
+      {
+       "term": "x-100",
+       "via": "original"
+      },
+      {
+       "term": "冲液",
+       "via": "original"
+      },
+      {
+       "term": "氧胆",
+       "via": "original"
+      },
+      {
+       "term": "液配",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "term": "缓冲",
+       "via": "original"
+      },
+      {
+       "term": "脱氧",
+       "via": "original"
+      },
+      {
+       "term": "配方",
+       "via": "expansion:lysis_buffer"
+      }
+     ],
+     "covered_groups": [
+      "lysis_buffer"
+     ],
+     "file": {
+      "file_id": "F3",
+      "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+      "sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+      "file_type": "md",
+      "extraction_method": "inline_case_json",
+      "project_id": "P-17",
+      "year": 2021,
+      "version": "v1"
+     },
+     "location": {
+      "page": 1,
+      "page_label": "",
+      "label_source": "absent",
+      "section_path": [
+       "2 缓冲液配方"
+      ],
+      "line_from": 2,
+      "line_to": 3,
+      "char_range": [
+       10,
+       82
+      ],
+      "two_column_hint": false,
+      "read_order": null
+     },
+     "paragraph_first_sentence": "早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。",
+     "quote": "早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。\n该版本已被 2022-03 的 v2 方案替代，仅保留用于追溯。",
+     "quote_check": {
+      "exact_match": true,
+      "checked_in": "canonical_text",
+      "char_offset": 10
+     },
+     "filters_satisfied": true,
+     "version_hint": {
+      "kind": "stale_version",
+      "anchored_version": "v1",
+      "canonical_path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "canonical_version": "v2",
+      "note": "命中落在非 canonical 版本 v1 上：版本口径必须保留，canonical 为 v2（library/P-17/assay/2022-03_裂解缓冲液记录.md），不得把旧版内容当作最新版证据"
+     }
+    },
+    {
+     "rank": 3,
+     "query_id": "Q1",
+     "chunk_id": "C0002",
+     "score": 0.4041,
+     "score_breakdown": {
+      "bm25": 1.3284,
+      "bm25_norm": 0.137,
+      "term_match": 0.5833,
+      "proximity": 0.9833,
+      "proximity_span": 1,
+      "heading_hit": 0.0,
+      "weights": {
+       "bm25": 0.45,
+       "term_match": 0.25,
+       "proximity": 0.2,
+       "heading": 0.1
+      }
+     },
+     "matched_keys": [
+      {
+       "term": "冲液",
+       "via": "original"
+      },
+      {
+       "term": "缓冲",
+       "via": "original"
+      }
+     ],
+     "covered_groups": [
+      "lysis_buffer"
+     ],
+     "file": {
+      "file_id": "F1",
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+      "file_type": "md",
+      "extraction_method": "inline_case_json",
+      "project_id": "P-17",
+      "year": 2022,
+      "version": "v2"
+     },
+     "location": {
+      "page": 12,
+      "page_label": "12",
+      "label_source": "explicit",
+      "section_path": [
+       "3 实验方法",
+       "3.3 上样与电泳"
+      ],
+      "line_from": 7,
+      "line_to": 7,
+      "char_range": [
+       227,
+       271
+      ],
+      "two_column_hint": false,
+      "read_order": null
+     },
+     "paragraph_first_sentence": "样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。",
+     "quote": "样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。",
+     "quote_check": {
+      "exact_match": true,
+      "checked_in": "canonical_text",
+      "char_offset": 227
+     },
+     "filters_satisfied": true
+    }
+   ],
+   "hit_count": 3
+  },
+  {
+   "query_id": "Q2",
+   "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+   "hits": [],
+   "hit_count": 0
+  }
+ ],
+ "query_views": [
+  {
+   "query_id": "Q1",
+   "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+   "keys": [
+    "triton",
+    "x-100",
+    "细胞",
+    "胞裂",
+    "裂解",
+    "解缓",
+    "缓冲",
+    "冲液",
+    "液里",
+    "和脱",
+    "脱氧",
+    "氧胆"
+   ],
+   "expanded_keys": [
+    {
+     "key": "lysis",
+     "via": "expansion:lysis_buffer"
+    },
+    {
+     "key": "buffer",
+     "via": "expansion:lysis_buffer"
+    },
+    {
+     "key": "液配",
+     "via": "expansion:lysis_buffer"
+    },
+    {
+     "key": "配方",
+     "via": "expansion:lysis_buffer"
+    }
+   ],
+   "groups_hit": [
+    {
+     "group": "lysis_buffer",
+     "terms": [
+      "裂解缓冲液",
+      "lysis buffer",
+      "缓冲液配方"
+     ]
+    }
+   ],
+   "filters": {
+    "project_ids": [
+     "P-17"
+    ],
+    "file_types": [
+     "md"
+    ],
+    "year_from": 2021,
+    "exclude_scanned": true
+   },
+   "files_considered": 3,
+   "files_passing_filters": 2,
+   "hits": 3,
+   "excluded_by_filters": [
+    {
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "codes": [
+      "R_FILTER_PROJECT"
+     ],
+     "reasons": [
+      "文件不属于提问指定的项目编号"
+     ]
+    }
+   ],
+   "blocked_by_filters_top": [
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "score": 0.0,
+     "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+    }
+   ],
+   "filtered_but_relevant": [
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "score": 0.0,
+     "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+    }
+   ],
+   "duplicate_copies_of_hits": [
+    {
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+     "kind": "duplicate_copy",
+     "note": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md 与命中文件 library/P-17/assay/2022-03_裂解缓冲液记录.md SHA-256 相同（别名/副本）：已合并为单一证据源，不作独立命中计数"
+    }
+   ],
+   "top_scores": [
+    {
+     "chunk_id": "C0001",
+     "score": 0.9758,
+     "bm25": 9.697,
+     "term_match": 0.9167,
+     "covered_groups": [
+      "lysis_buffer"
+     ]
+    },
+    {
+     "chunk_id": "C0007",
+     "score": 0.8029,
+     "bm25": 6.8679,
+     "term_match": 0.75,
+     "covered_groups": [
+      "lysis_buffer"
+     ]
+    },
+    {
+     "chunk_id": "C0002",
+     "score": 0.4041,
+     "bm25": 1.3284,
+     "term_match": 0.5833,
+     "covered_groups": [
+      "lysis_buffer"
+     ]
+    },
+    {
+     "chunk_id": "C0003",
+     "score": 0.3002,
+     "bm25": 1.3963,
+     "term_match": 0.5417,
+     "covered_groups": [
+      "lysis_buffer"
+     ]
+    },
+    {
+     "chunk_id": "C0008",
+     "score": 0.0,
+     "bm25": 0.0,
+     "term_match": 0.0,
+     "covered_groups": []
+    }
+   ]
+  },
+  {
+   "query_id": "Q2",
+   "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+   "keys": [
+    "共聚",
+    "聚焦",
+    "焦成",
+    "成像",
+    "像的",
+    "的曝",
+    "曝光",
+    "光时",
+    "时间",
+    "间和",
+    "和激",
+    "激光"
+   ],
+   "expanded_keys": [
+    {
+     "key": "电池",
+     "via": "expansion:battery_power"
+    },
+    {
+     "key": "功率",
+     "via": "expansion:battery_power"
+    },
+    {
+     "key": "battery",
+     "via": "expansion:battery_power"
+    },
+    {
+     "key": "power",
+     "via": "expansion:battery_power"
+    },
+    {
+     "key": "adaptation",
+     "via": "expansion:battery_power"
+    },
+    {
+     "key": "confocal",
+     "via": "expansion:confocal"
+    },
+    {
+     "key": "exposure",
+     "via": "expansion:exposure_time"
+    },
+    {
+     "key": "time",
+     "via": "expansion:exposure_time"
+    }
+   ],
+   "groups_hit": [
+    {
+     "group": "battery_power",
+     "terms": [
+      "电池",
+      "功率",
+      "battery",
+      "power adaptation"
+     ]
+    },
+    {
+     "group": "confocal",
+     "terms": [
+      "共聚焦",
+      "confocal"
+     ]
+    },
+    {
+     "group": "exposure_time",
+     "terms": [
+      "曝光时间",
+      "曝光",
+      "exposure time"
+     ]
+    }
+   ],
+   "filters": {
+    "project_ids": [
+     "P-17"
+    ],
+    "file_types": [
+     "md"
+    ]
+   },
+   "files_considered": 3,
+   "files_passing_filters": 2,
+   "hits": 0,
+   "excluded_by_filters": [
+    {
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "codes": [
+      "R_FILTER_PROJECT"
+     ],
+     "reasons": [
+      "文件不属于提问指定的项目编号"
+     ]
+    }
+   ],
+   "blocked_by_filters_top": [
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "score": 0.955,
+     "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+    }
+   ],
+   "filtered_but_relevant": [
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "score": 0.955,
+     "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+    }
+   ],
+   "duplicate_copies_of_hits": [],
+   "top_scores": [
+    {
+     "chunk_id": "C0008",
+     "score": 0.955,
+     "bm25": 13.9017,
+     "term_match": 0.8333,
+     "covered_groups": [
+      "battery_power",
+      "confocal",
+      "exposure_time"
+     ]
+    },
+    {
+     "chunk_id": "C0001",
+     "score": 0.0,
+     "bm25": 0.0,
+     "term_match": 0.0,
+     "covered_groups": []
+    },
+    {
+     "chunk_id": "C0002",
+     "score": 0.0,
+     "bm25": 0.0,
+     "term_match": 0.0,
+     "covered_groups": []
+    },
+    {
+     "chunk_id": "C0003",
+     "score": 0.0,
+     "bm25": 0.0,
+     "term_match": 0.0,
+     "covered_groups": []
+    },
+    {
+     "chunk_id": "C0007",
+     "score": 0.0,
+     "bm25": 0.0,
+     "term_match": 0.0,
+     "covered_groups": []
+    }
+   ]
+  }
+ ],
+ "library_report": {
+  "mode": "inline",
+  "root": null,
+  "root_resolution": [
+   "library",
+   "<case_dir>/../library",
+   "<work>/library",
+   "<cwd>/library",
+   "/input/library"
+  ],
+  "files_scanned": 0,
+  "inline_entries": 5,
+  "files": [
+   {
+    "file_id": "F4",
+    "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+    "file_type": "md",
+    "size": null,
+    "readable": null,
+    "file_sha256": null,
+    "extraction_method": "inline_case_json",
+    "text_sha256": "a1a005b8e10beaf27b0423e36495992c52b0e8d71a94dbb1ecf197143b7de84f",
+    "n_chars": 75,
+    "pages": 1,
+    "ocr_confidence": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "2024共聚焦成像参数",
+    "status": "ok"
+   },
+   {
+    "file_id": "F1",
+    "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+    "file_type": "md",
+    "size": null,
+    "readable": null,
+    "file_sha256": null,
+    "extraction_method": "inline_case_json",
+    "text_sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+    "n_chars": 352,
+    "pages": 2,
+    "ocr_confidence": null,
+    "alias_of": null,
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "裂解缓冲液体系",
+    "status": "ok"
+   },
+   {
+    "file_id": "F2",
+    "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+    "file_type": "md",
+    "size": null,
+    "readable": null,
+    "file_sha256": null,
+    "extraction_method": "inline_case_json",
+    "text_sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+    "n_chars": 352,
+    "pages": 2,
+    "ocr_confidence": null,
+    "alias_of": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+    "version": "v2",
+    "version_basis": "metadata",
+    "doc_key": "裂解缓冲液体系",
+    "status": "ok"
+   },
+   {
+    "file_id": "F3",
+    "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+    "file_type": "md",
+    "size": null,
+    "readable": null,
+    "file_sha256": null,
+    "extraction_method": "inline_case_json",
+    "text_sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+    "n_chars": 81,
+    "pages": 1,
+    "ocr_confidence": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "裂解缓冲液体系",
+    "status": "ok"
+   },
+   {
+    "file_id": "F5",
+    "path": "library/P-17/scan/2020_手写配方.pdf",
+    "file_type": "pdf",
+    "size": null,
+    "readable": null,
+    "file_sha256": null,
+    "extraction_method": null,
+    "text_sha256": null,
+    "n_chars": 0,
+    "pages": 0,
+    "ocr_confidence": null,
+    "alias_of": null,
+    "version": "v1",
+    "version_basis": "metadata",
+    "doc_key": "2020手写配方",
+    "status": "gap:R_NO_TEXT_LAYER"
+   }
+  ],
+  "alias_groups": [
+   {
+    "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+    "kind": "alias_or_duplicate",
+    "canonical": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+    "members": [
+     "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+    ],
+    "size": null,
+    "note": "同 SHA-256 不同文件名：完全重复/别名文件（canonical 优先非 copy/backup/latest 命名；合并为单一证据源，副本不进检索语料，不计独立命中）"
+   }
+  ],
+  "version_groups": [
+   {
+    "doc_key": "裂解缓冲液体系",
+    "canonical": {
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "version": "v2"
+    },
+    "members": [
+     {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "version": "v2",
+      "basis": "metadata",
+      "note": ""
+     },
+     {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+      "version": "v2",
+      "basis": "metadata",
+      "note": ""
+     },
+     {
+      "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+      "version": "v1",
+      "basis": "metadata",
+      "note": ""
+     }
+    ],
+    "note_source": "mixed",
+    "policy": "canonical=管理性版本序最大者（final>v(n)>draft，并列时非副本优先）；旧版只读归档，不删除"
+   }
+  ],
+  "gaps": [
+   {
+    "file_id": "F5",
+    "path": "library/P-17/scan/2020_手写配方.pdf",
+    "code": "R_NO_TEXT_LAYER",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "version_notes_fields": "version_notes, admin_notes, versions",
+  "integrity": {
+   "files": 0,
+   "rechecked": 0,
+   "hashes_unchanged": true,
+   "changed": [],
+   "input_modified": false,
+   "policy": "输入库全程只读；本流程只在输出目录写 result.json 与 ops_log.json"
+  }
+ },
+ "ops_log": [
+  {
+   "op": "merge_duplicate_candidates",
+   "targets": [
+    "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+    "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+   ],
+   "basis": "SHA-256 完全一致（e0b31d1aeb0d6b58…）：内容相同、仅文件名不同（别名/完全重复）",
+   "action": "建议保留规范名 library/P-17/assay/2022-03_裂解缓冲液记录.md，其余移入重复归档目录；本流程未执行任何改名/删除",
+   "input_readonly": true
+  },
+  {
+   "op": "consolidate_versions",
+   "targets": [
+    "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+    "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+    "library/P-17/protocol/2021-06_裂解方案_v1.md"
+   ],
+   "basis": "管理性版本说明/元数据归组 裂解缓冲液体系；canonical=v2（library/P-17/assay/2022-03_裂解缓冲液记录.md）",
+   "action": "建议旧版只读归档、检索口径以 canonical 为准；未执行",
+   "input_readonly": true
+  },
+  {
+   "op": "repair_file_gap",
+   "targets": [
+    "library/P-17/scan/2020_手写配方.pdf"
+   ],
+   "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+   "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR、权限件需授权）；本流程诚实跳过，不伪造文本",
+   "input_readonly": true
+  },
+  {
+   "op": "rebuild_index",
+   "targets": [
+    "canonical_files"
+   ],
+   "basis": "文件清单+哈希清单已重建（见 manifest.files），别名归一/版本组已归档",
+   "action": "建议检索索引以 canonical 文件为键重建；未执行",
+   "input_readonly": true
+  },
+  {
+   "op": "verify_input_integrity",
+   "targets": [
+    "input_library"
+   ],
+   "basis": "流程前后逐文件 SHA-256 对照：rechecked=0，hashes_unchanged=True",
+   "action": "输入库只读核验已通过；若 changed 非空须立即人工介入",
+   "input_readonly": true
+  }
+ ],
+ "evidence_map": {
+  "index": {
+   "build_params": {
+    "max_lines_per_chunk": 5,
+    "min_chars_per_chunk": 20,
+    "page_break_markers": [
+     "\\f",
+     "[[page:N|label]]"
+    ],
+    "note": "标题行不进 chunk 正文，只进 section_path；chunk 边界 = 标题切换 / 满 max_lines / 页结束"
+   },
+   "heading_patterns": [
+    "markdown",
+    "cn_chapter",
+    "cn_section",
+    "numbered",
+    "standard_sections"
+   ],
+   "files": [
+    {
+     "file_id": "F1",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "pages": 2,
+     "page_labels": [
+      "12",
+      "13"
+     ],
+     "label_sources": [
+      "explicit"
+     ],
+     "two_column_pages": [],
+     "chunks": 3,
+     "chars": 352,
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F2",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+     "pages": 2,
+     "page_labels": [
+      "12",
+      "13"
+     ],
+     "label_sources": [
+      "explicit"
+     ],
+     "two_column_pages": [],
+     "chunks": 3,
+     "chars": 352,
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F3",
+     "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+     "pages": 1,
+     "page_labels": [
+      null
+     ],
+     "label_sources": [
+      "absent"
+     ],
+     "two_column_pages": [],
+     "chunks": 1,
+     "chars": 81,
+     "sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "pages": 1,
+     "page_labels": [
+      null
+     ],
+     "label_sources": [
+      "absent"
+     ],
+     "two_column_pages": [],
+     "chunks": 1,
+     "chars": 75,
+     "sha256": "a1a005b8e10beaf27b0423e36495992c52b0e8d71a94dbb1ecf197143b7de84f",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F5",
+     "path": "library/P-17/scan/2020_手写配方.pdf",
+     "pages": 0,
+     "chunks": 0,
+     "chars": 0,
+     "page_labels": [],
+     "label_sources": []
+    }
+   ],
+   "chunks_total": 8,
+   "chunks_retrievable": 5,
+   "chunk_table": [
+    {
+     "chunk_id": "C0001",
+     "file_id": "F1",
+     "page": 12,
+     "page_label": "12",
+     "section_path": [
+      "3 实验方法",
+      "3.2 裂解缓冲液配方"
+     ],
+     "line_from": 3,
+     "line_to": 5,
+     "two_column": false,
+     "char_range": [
+      24,
+      213
+     ],
+     "chars": 189
+    },
+    {
+     "chunk_id": "C0002",
+     "file_id": "F1",
+     "page": 12,
+     "page_label": "12",
+     "section_path": [
+      "3 实验方法",
+      "3.3 上样与电泳"
+     ],
+     "line_from": 7,
+     "line_to": 7,
+     "two_column": false,
+     "char_range": [
+      227,
+      271
+     ],
+     "chars": 43
+    },
+    {
+     "chunk_id": "C0003",
+     "file_id": "F1",
+     "page": 13,
+     "page_label": "13",
+     "section_path": [
+      "3.4 裂解效率检查"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      285,
+      353
+     ],
+     "chars": 67
+    },
+    {
+     "chunk_id": "C0007",
+     "file_id": "F3",
+     "page": 1,
+     "page_label": "",
+     "section_path": [
+      "2 缓冲液配方"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      10,
+      82
+     ],
+     "chars": 71
+    },
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "page": 1,
+     "page_label": "",
+     "section_path": [
+      "1 成像参数"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      9,
+      76
+     ],
+     "chars": 66
+    }
+   ]
+  },
+  "retrieval": {
+   "queries": [
+    {
+     "query_id": "Q1",
+     "keys": [
+      "triton",
+      "x-100",
+      "细胞",
+      "胞裂",
+      "裂解",
+      "解缓",
+      "缓冲",
+      "冲液",
+      "液里",
+      "和脱",
+      "脱氧",
+      "氧胆"
+     ],
+     "expanded_keys": [
+      {
+       "key": "lysis",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "buffer",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "液配",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "配方",
+       "via": "expansion:lysis_buffer"
+      }
+     ],
+     "groups_hit": [
+      {
+       "group": "lysis_buffer",
+       "terms": [
+        "裂解缓冲液",
+        "lysis buffer",
+        "缓冲液配方"
+       ]
+      }
+     ],
+     "keys_full": [
+      "triton",
+      "x-100",
+      "细胞",
+      "胞裂",
+      "裂解",
+      "解缓",
+      "缓冲",
+      "冲液",
+      "液里",
+      "和脱",
+      "脱氧",
+      "氧胆",
+      "lysis",
+      "buffer",
+      "液配",
+      "配方"
+     ],
+     "chunks_scored": 5,
+     "top": [
+      {
+       "chunk_id": "C0001",
+       "score": 0.9758,
+       "bm25": 9.697,
+       "term_match": 0.9167,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0007",
+       "score": 0.8029,
+       "bm25": 6.8679,
+       "term_match": 0.75,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0002",
+       "score": 0.4041,
+       "bm25": 1.3284,
+       "term_match": 0.5833,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0003",
+       "score": 0.3002,
+       "bm25": 1.3963,
+       "term_match": 0.5417,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0008",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      }
+     ]
+    },
+    {
+     "query_id": "Q2",
+     "keys": [
+      "共聚",
+      "聚焦",
+      "焦成",
+      "成像",
+      "像的",
+      "的曝",
+      "曝光",
+      "光时",
+      "时间",
+      "间和",
+      "和激",
+      "激光"
+     ],
+     "expanded_keys": [
+      {
+       "key": "电池",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "功率",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "battery",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "power",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "adaptation",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "confocal",
+       "via": "expansion:confocal"
+      },
+      {
+       "key": "exposure",
+       "via": "expansion:exposure_time"
+      },
+      {
+       "key": "time",
+       "via": "expansion:exposure_time"
+      }
+     ],
+     "groups_hit": [
+      {
+       "group": "battery_power",
+       "terms": [
+        "电池",
+        "功率",
+        "battery",
+        "power adaptation"
+       ]
+      },
+      {
+       "group": "confocal",
+       "terms": [
+        "共聚焦",
+        "confocal"
+       ]
+      },
+      {
+       "group": "exposure_time",
+       "terms": [
+        "曝光时间",
+        "曝光",
+        "exposure time"
+       ]
+      }
+     ],
+     "keys_full": [
+      "共聚",
+      "聚焦",
+      "焦成",
+      "成像",
+      "像的",
+      "的曝",
+      "曝光",
+      "光时",
+      "时间",
+      "间和",
+      "和激",
+      "激光",
+      "电池",
+      "功率",
+      "battery",
+      "power",
+      "adaptation",
+      "confocal",
+      "exposure",
+      "time"
+     ],
+     "chunks_scored": 5,
+     "top": [
+      {
+       "chunk_id": "C0008",
+       "score": 0.955,
+       "bm25": 13.9017,
+       "term_match": 0.8333,
+       "covered_groups": [
+        "battery_power",
+        "confocal",
+        "exposure_time"
+       ]
+      },
+      {
+       "chunk_id": "C0001",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0002",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0003",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0007",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      }
+     ]
+    }
+   ],
+   "scoring": {
+    "weights": {
+     "bm25": 0.45,
+     "term_match": 0.25,
+     "proximity": 0.2,
+     "heading": 0.1
+    },
+    "bm25": {
+     "k1": 1.2,
+     "b": 0.75
+    },
+    "proximity_window_chars": 60,
+    "max_query_terms": 12,
+    "normalize": "bm25_norm = bm25 / max(bm25 in this query over all chunks)",
+    "formula": "score = 0.45·bm25_norm + 0.25·term_match + 0.20·proximity + 0.10·heading_hit"
+   },
+   "thresholds": {
+    "min_score": 0.18,
+    "min_term_match": 0.2,
+    "max_hits_per_query": 3,
+    "quote_chars": 160
+   },
+   "query_expansion": {
+    "enabled": true,
+    "policy": "词表驱动的概念级扩展：词表任一词（归一后）是查询文本子串，或其词元集合 ⊆ 查询词元，即触发该组；组内所有词的词元加入 BM25 词元集合，并在 term_match 里按「概念」计一次覆盖（组内任一变体命中即覆盖）。每个扩展词元带 via=expansion:<group> 出处，逐条可解释。词表只收稳定的专业缩写/同义/上下位对，宁缺毋滥：触发错了只会稀释分数，不会凭空造命中。",
+    "groups": [
+     {
+      "id": "sampling_rate",
+      "terms": [
+       "采样率",
+       "sampling rate",
+       "sample rate"
+      ],
+      "note": "中英同义：采样率 = sampling/sample rate"
+     },
+     {
+      "id": "acoustic_monitoring",
+      "terms": [
+       "声学监测",
+       "passive acoustic monitoring",
+       "PAM"
+      ],
+      "note": "缩写：PAM = passive acoustic monitoring"
+     },
+     {
+      "id": "hydrophone",
+      "terms": [
+       "水听器",
+       "hydrophone"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "pcr",
+      "terms": [
+       "PCR",
+       "聚合酶链式反应",
+       "polymerase chain reaction"
+      ],
+      "note": "缩写：PCR = polymerase chain reaction"
+     },
+     {
+      "id": "edna",
+      "terms": [
+       "eDNA",
+       "环境DNA",
+       "environmental DNA",
+       "宏条形码",
+       "metabarcoding"
+      ],
+      "note": "缩写+上下位：eDNA 上下位概念含 metabarcoding 宏条形码"
+     },
+     {
+      "id": "detection_latency",
+      "terms": [
+       "检测延迟",
+       "延迟",
+       "detection latency",
+       "latency"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "battery_power",
+      "terms": [
+       "电池",
+       "功率",
+       "battery",
+       "power adaptation"
+      ],
+      "note": "中英同义：功耗/功率自适应"
+     },
+     {
+      "id": "fixed_interval",
+      "terms": [
+       "固定间隔",
+       "fixed interval"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "lysis_buffer",
+      "terms": [
+       "裂解缓冲液",
+       "lysis buffer",
+       "缓冲液配方"
+      ],
+      "note": "中英同义+上下位"
+     },
+     {
+      "id": "confocal",
+      "terms": [
+       "共聚焦",
+       "confocal"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "exposure_time",
+      "terms": [
+       "曝光时间",
+       "曝光",
+       "exposure time"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "calibration",
+      "terms": [
+       "校准",
+       "标定",
+       "calibration"
+      ],
+      "note": "同义+中英"
+     },
+     {
+      "id": "ctd",
+      "terms": [
+       "CTD",
+       "温盐深",
+       "conductivity temperature depth"
+      ],
+      "note": "缩写：CTD = conductivity-temperature-depth"
+     }
+    ]
+   },
+   "recompute": "score = w_bm25·bm25_norm + w_match·term_match + w_prox·proximity + w_head·heading；bm25_norm = bm25 / max(bm25)；term_match = 均值(原始词命中率, 扩展组覆盖率)，无扩展组时=原始词命中率（组内任一变体命中即覆盖，跨语言对齐不被表面词元稀释）"
+  },
+  "filters": {
+   "dictionary": {
+    "year_from": {
+     "type": "int_min",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    },
+    "year_to": {
+     "type": "int_max",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    },
+    "project_ids": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "project_id",
+     "code": "R_FILTER_PROJECT"
+    },
+    "batch_ids": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "batch",
+     "code": "R_FILTER_BATCH"
+    },
+    "file_types": {
+     "type": "in_list_lower",
+     "source": "derived",
+     "key": "extension",
+     "code": "R_FILTER_TYPE"
+    },
+    "versions": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "version",
+     "code": "R_FILTER_VERSION"
+    },
+    "permissions": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "permission",
+     "code": "R_FILTER_PERMISSION"
+    },
+    "exclude_scanned": {
+     "type": "not_true",
+     "source": "metadata",
+     "key": "scanned",
+     "code": "R_FILTER_SCANNED"
+    },
+    "require_version": {
+     "type": "exists",
+     "source": "metadata",
+     "key": "version",
+     "code": "R_FILTER_VERSION"
+    },
+    "require_year": {
+     "type": "exists",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    }
+   },
+   "codes": {
+    "R_FILTER_YEAR": "文件年份不在提问给定的时间窗内，或年份字段缺失",
+    "R_FILTER_PROJECT": "文件不属于提问指定的项目编号",
+    "R_FILTER_BATCH": "文件不属于提问指定的实验批次",
+    "R_FILTER_TYPE": "文件扩展名不在提问允许的类型集合内",
+    "R_FILTER_VERSION": "文件版本不在允许集合内，或版本字段缺失",
+    "R_FILTER_PERMISSION": "文件权限不满足提问要求（如只允许 rw）",
+    "R_FILTER_SCANNED": "提问要求排除扫描件，而该文件被标记为 scanned=true",
+    "R_FILTER_UNSUPPORTED": "提问使用了本表未定义的过滤字段；不做模糊处理，按不满足记",
+    "R_FILTER_METADATA_MISSING": "元数据缺失导致条件无法判定（统一按不满足处理）",
+    "R_NO_HIT_IN_SCOPE": "通过硬过滤的语料内没有任何 chunk 达到分数与词命中阈值",
+    "R_FILTERS_EXCLUDE_ALL": "硬过滤把全部文件排除，检索集为空（不得放宽条件）",
+    "R_DUP_FILE": "与首见文件 sha256 完全相同的副本，不作为独立命中来源",
+    "R_NO_TEXT_LAYER": "文件无文本层（扫描件/加密/损坏），未进入语料；不得记为已检索",
+    "R_QUOTE_MISMATCH": "回链片段在规范化原文中逐字复核失败，定位降级为不确定",
+    "R_FILTER_BLOCKED_HITS": "库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容",
+    "R_FILE_ENCRYPTED": "PDF 检测到 /Encrypt（加密件）：本流程不做解密，诚实跳过文本提取，不计为已检索",
+    "R_FILE_CORRUPT": "文件损坏/截断（内容流解压失败或无内容流）：诚实跳过，建议换源",
+    "R_FILE_NO_EXTRACTOR": "扩展名不在侧车/PDF/DOCX/纯文本提取链内：无可用提取器，诚实跳过",
+    "R_FILE_NO_PERMISSION": "文件存在但无读权限（chmod/ACL 拒绝）：不进入语料，如实标记，绝不绕过权限"
+   },
+   "per_query": [
+    {
+     "query_id": "Q1",
+     "excluded": [
+      {
+       "file_id": "F4",
+       "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+       "codes": [
+        "R_FILTER_PROJECT"
+       ],
+       "reasons": [
+        "文件不属于提问指定的项目编号"
+       ]
+      }
+     ],
+     "passing": 2,
+     "considered": 3
+    },
+    {
+     "query_id": "Q2",
+     "excluded": [
+      {
+       "file_id": "F4",
+       "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+       "codes": [
+        "R_FILTER_PROJECT"
+       ],
+       "reasons": [
+        "文件不属于提问指定的项目编号"
+       ]
+      }
+     ],
+     "passing": 2,
+     "considered": 3
+    }
+   ],
+   "policy": "硬约束逐文件逐条判定：元数据缺失 → satisfiable=false + code；不允许为了让结果非空而删除条件、扩大取值或改用模糊匹配。判定表逐条写入 result.evidence.filters.per_query。"
+  },
+  "dedupe": {
+   "hash_alias_groups": [
+    {
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "kind": "alias_or_duplicate",
+     "canonical": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "members": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+     ],
+     "size": null,
+     "note": "同 SHA-256 不同文件名：完全重复/别名文件（canonical 优先非 copy/backup/latest 命名；合并为单一证据源，副本不进检索语料，不计独立命中）"
+    }
+   ],
+   "aliases": {
+    "F2": "library/P-17/assay/2022-03_裂解缓冲液记录.md"
+   },
+   "version_groups": [
+    {
+     "doc_key": "裂解缓冲液体系",
+     "canonical": {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "version": "v2"
+     },
+     "members": [
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+       "version": "v1",
+       "basis": "metadata",
+       "note": ""
+      }
+     ],
+     "note_source": "mixed",
+     "policy": "canonical=管理性版本序最大者（final>v(n)>draft，并列时非副本优先）；旧版只读归档，不删除"
+    }
+   ],
+   "policy": "同哈希异名归并为单一证据源（alias_of）；版本组 canonical=版本序最大者；副本/旧版不作独立命中，命中非 canonical 版本时给 stale_version 提示"
+  },
+  "unreadable": [
+   {
+    "file_id": "F5",
+    "path": "library/P-17/scan/2020_手写配方.pdf",
+    "code": "R_NO_TEXT_LAYER",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "library": {
+   "mode": "inline",
+   "root_resolution": [
+    "library",
+    "<case_dir>/../library",
+    "<work>/library",
+    "<cwd>/library",
+    "/input/library"
+   ],
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与 ops_log.json"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "two_column_policy": "PDF 页按 x 间距聚类列（启发式），two_column=true 时命中附阅读顺序提示；跨栏段落不强行拼接，如实标注",
+   "gap_policy": "加密/损坏/无文本层/无提取器/无权限分别记码，不静默跳过、不伪造文本、不计为已检索"
+  },
+  "canonical_text": "每个文件按 \\f 与 [[page:N|label]] 切页后以换行拼接；line_from/line_to 为页内 1 基线号，char_range 为该拼接文本中的字符区间，quote_check.exact_match 用该文本逐字复核",
+  "ops_log": {
+   "entries": [
+    {
+     "op": "merge_duplicate_candidates",
+     "targets": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+     ],
+     "basis": "SHA-256 完全一致（e0b31d1aeb0d6b58…）：内容相同、仅文件名不同（别名/完全重复）",
+     "action": "建议保留规范名 library/P-17/assay/2022-03_裂解缓冲液记录.md，其余移入重复归档目录；本流程未执行任何改名/删除",
+     "input_readonly": true
+    },
+    {
+     "op": "consolidate_versions",
+     "targets": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+      "library/P-17/protocol/2021-06_裂解方案_v1.md"
+     ],
+     "basis": "管理性版本说明/元数据归组 裂解缓冲液体系；canonical=v2（library/P-17/assay/2022-03_裂解缓冲液记录.md）",
+     "action": "建议旧版只读归档、检索口径以 canonical 为准；未执行",
+     "input_readonly": true
+    },
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "library/P-17/scan/2020_手写配方.pdf"
+     ],
+     "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+     "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR、权限件需授权）；本流程诚实跳过，不伪造文本",
+     "input_readonly": true
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "canonical_files"
+     ],
+     "basis": "文件清单+哈希清单已重建（见 manifest.files），别名归一/版本组已归档",
+     "action": "建议检索索引以 canonical 文件为键重建；未执行",
+     "input_readonly": true
+    },
+    {
+     "op": "verify_input_integrity",
+     "targets": [
+      "input_library"
+     ],
+     "basis": "流程前后逐文件 SHA-256 对照：rechecked=0，hashes_unchanged=True",
+     "action": "输入库只读核验已通过；若 changed 非空须立即人工介入",
+     "input_readonly": true
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议；输入库前后哈希对照见 evidence.library.integrity"
+  },
+  "ops_log_file": {
+   "path": "ops_log.json",
+   "entries": 5,
+   "note": "恢复/索引建议清单写在输出目录，绝不写回输入库"
+  }
+ },
+ "状态说明": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "切页分块",
+   "去重与版本组",
+   "硬过滤执行",
+   "四因子检索（含词表扩展）",
+   "回链锚点自检",
+   "恢复/索引建议与只读核验"
+  ],
+  "unmet": [
+   {
+    "item": "提问命中:Q2",
+    "reason": "R_FILTER_BLOCKED_HITS — 库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容"
+   },
+   {
+    "item": "文件库提取",
+    "reason": "1 份 R_NO_TEXT_LAYER——诚实跳过，不伪造文本层（详见 evidence.unreadable）"
+   }
+  ],
+  "notes": [
+   "1 组同哈希文件已合并为单一证据源（alias_of，不重复计命中）",
+   "1 个版本组存在多版本文件，canonical 与版本口径写入 evidence.dedupe.version_groups"
+  ]
+ },
+ "result": {
+  "matches": [
+   {
+    "query_id": "Q1",
+    "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+    "hits": [
+     {
+      "rank": 1,
+      "query_id": "Q1",
+      "chunk_id": "C0001",
+      "score": 0.9758,
+      "score_breakdown": {
+       "bm25": 9.697,
+       "bm25_norm": 1.0,
+       "term_match": 0.9167,
+       "proximity": 0.9833,
+       "proximity_span": 1,
+       "heading_hit": 1.0,
+       "weights": {
+        "bm25": 0.45,
+        "term_match": 0.25,
+        "proximity": 0.2,
+        "heading": 0.1
+       }
+      },
+      "matched_keys": [
+       {
+        "term": "triton",
+        "via": "original"
+       },
+       {
+        "term": "x-100",
+        "via": "original"
+       },
+       {
+        "term": "冲液",
+        "via": "original"
+       },
+       {
+        "term": "氧胆",
+        "via": "original"
+       },
+       {
+        "term": "液配",
+        "via": "expansion:lysis_buffer"
+       },
+       {
+        "term": "细胞",
+        "via": "original"
+       },
+       {
+        "term": "缓冲",
+        "via": "original"
+       },
+       {
+        "term": "胞裂",
+        "via": "original"
+       },
+       {
+        "term": "脱氧",
+        "via": "original"
+       },
+       {
+        "term": "裂解",
+        "via": "original"
+       },
+       {
+        "term": "解缓",
+        "via": "original"
+       },
+       {
+        "term": "配方",
+        "via": "expansion:lysis_buffer"
+       }
+      ],
+      "covered_groups": [
+       "lysis_buffer"
+      ],
+      "file": {
+       "file_id": "F1",
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+       "file_type": "md",
+       "extraction_method": "inline_case_json",
+       "project_id": "P-17",
+       "year": 2022,
+       "version": "v2"
+      },
+      "location": {
+       "page": 12,
+       "page_label": "12",
+       "label_source": "explicit",
+       "section_path": [
+        "3 实验方法",
+        "3.2 裂解缓冲液配方"
+       ],
+       "line_from": 3,
+       "line_to": 5,
+       "char_range": [
+        24,
+        213
+       ],
+       "two_column_hint": false,
+       "read_order": null
+      },
+      "paragraph_first_sentence": "本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。",
+      "quote": "本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂…",
+      "quote_check": {
+       "exact_match": true,
+       "checked_in": "canonical_text",
+       "char_offset": 24
+      },
+      "filters_satisfied": true
+     },
+     {
+      "rank": 2,
+      "query_id": "Q1",
+      "chunk_id": "C0007",
+      "score": 0.8029,
+      "score_breakdown": {
+       "bm25": 6.8679,
+       "bm25_norm": 0.7082,
+       "term_match": 0.75,
+       "proximity": 0.9833,
+       "proximity_span": 1,
+       "heading_hit": 1.0,
+       "weights": {
+        "bm25": 0.45,
+        "term_match": 0.25,
+        "proximity": 0.2,
+        "heading": 0.1
+       }
+      },
+      "matched_keys": [
+       {
+        "term": "triton",
+        "via": "original"
+       },
+       {
+        "term": "x-100",
+        "via": "original"
+       },
+       {
+        "term": "冲液",
+        "via": "original"
+       },
+       {
+        "term": "氧胆",
+        "via": "original"
+       },
+       {
+        "term": "液配",
+        "via": "expansion:lysis_buffer"
+       },
+       {
+        "term": "缓冲",
+        "via": "original"
+       },
+       {
+        "term": "脱氧",
+        "via": "original"
+       },
+       {
+        "term": "配方",
+        "via": "expansion:lysis_buffer"
+       }
+      ],
+      "covered_groups": [
+       "lysis_buffer"
+      ],
+      "file": {
+       "file_id": "F3",
+       "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+       "sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+       "file_type": "md",
+       "extraction_method": "inline_case_json",
+       "project_id": "P-17",
+       "year": 2021,
+       "version": "v1"
+      },
+      "location": {
+       "page": 1,
+       "page_label": "",
+       "label_source": "absent",
+       "section_path": [
+        "2 缓冲液配方"
+       ],
+       "line_from": 2,
+       "line_to": 3,
+       "char_range": [
+        10,
+        82
+       ],
+       "two_column_hint": false,
+       "read_order": null
+      },
+      "paragraph_first_sentence": "早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。",
+      "quote": "早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。\n该版本已被 2022-03 的 v2 方案替代，仅保留用于追溯。",
+      "quote_check": {
+       "exact_match": true,
+       "checked_in": "canonical_text",
+       "char_offset": 10
+      },
+      "filters_satisfied": true,
+      "version_hint": {
+       "kind": "stale_version",
+       "anchored_version": "v1",
+       "canonical_path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "canonical_version": "v2",
+       "note": "命中落在非 canonical 版本 v1 上：版本口径必须保留，canonical 为 v2（library/P-17/assay/2022-03_裂解缓冲液记录.md），不得把旧版内容当作最新版证据"
+      }
+     },
+     {
+      "rank": 3,
+      "query_id": "Q1",
+      "chunk_id": "C0002",
+      "score": 0.4041,
+      "score_breakdown": {
+       "bm25": 1.3284,
+       "bm25_norm": 0.137,
+       "term_match": 0.5833,
+       "proximity": 0.9833,
+       "proximity_span": 1,
+       "heading_hit": 0.0,
+       "weights": {
+        "bm25": 0.45,
+        "term_match": 0.25,
+        "proximity": 0.2,
+        "heading": 0.1
+       }
+      },
+      "matched_keys": [
+       {
+        "term": "冲液",
+        "via": "original"
+       },
+       {
+        "term": "缓冲",
+        "via": "original"
+       }
+      ],
+      "covered_groups": [
+       "lysis_buffer"
+      ],
+      "file": {
+       "file_id": "F1",
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+       "file_type": "md",
+       "extraction_method": "inline_case_json",
+       "project_id": "P-17",
+       "year": 2022,
+       "version": "v2"
+      },
+      "location": {
+       "page": 12,
+       "page_label": "12",
+       "label_source": "explicit",
+       "section_path": [
+        "3 实验方法",
+        "3.3 上样与电泳"
+       ],
+       "line_from": 7,
+       "line_to": 7,
+       "char_range": [
+        227,
+        271
+       ],
+       "two_column_hint": false,
+       "read_order": null
+      },
+      "paragraph_first_sentence": "样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。",
+      "quote": "样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。",
+      "quote_check": {
+       "exact_match": true,
+       "checked_in": "canonical_text",
+       "char_offset": 227
+      },
+      "filters_satisfied": true
+     }
+    ],
+    "hit_count": 3
+   },
+   {
+    "query_id": "Q2",
+    "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+    "hits": [],
+    "hit_count": 0
+   }
+  ],
+  "query_views": [
+   {
+    "query_id": "Q1",
+    "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+    "keys": [
+     "triton",
+     "x-100",
+     "细胞",
+     "胞裂",
+     "裂解",
+     "解缓",
+     "缓冲",
+     "冲液",
+     "液里",
+     "和脱",
+     "脱氧",
+     "氧胆"
+    ],
+    "expanded_keys": [
+     {
+      "key": "lysis",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "buffer",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "液配",
+      "via": "expansion:lysis_buffer"
+     },
+     {
+      "key": "配方",
+      "via": "expansion:lysis_buffer"
+     }
+    ],
+    "groups_hit": [
+     {
+      "group": "lysis_buffer",
+      "terms": [
+       "裂解缓冲液",
+       "lysis buffer",
+       "缓冲液配方"
+      ]
+     }
+    ],
+    "filters": {
+     "project_ids": [
+      "P-17"
+     ],
+     "file_types": [
+      "md"
+     ],
+     "year_from": 2021,
+     "exclude_scanned": true
+    },
+    "files_considered": 3,
+    "files_passing_filters": 2,
+    "hits": 3,
+    "excluded_by_filters": [
+     {
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "codes": [
+       "R_FILTER_PROJECT"
+      ],
+      "reasons": [
+       "文件不属于提问指定的项目编号"
+      ]
+     }
+    ],
+    "blocked_by_filters_top": [
+     {
+      "chunk_id": "C0008",
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "score": 0.0,
+      "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+     }
+    ],
+    "filtered_but_relevant": [
+     {
+      "chunk_id": "C0008",
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "score": 0.0,
+      "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+     }
+    ],
+    "duplicate_copies_of_hits": [
+     {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+      "kind": "duplicate_copy",
+      "note": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md 与命中文件 library/P-17/assay/2022-03_裂解缓冲液记录.md SHA-256 相同（别名/副本）：已合并为单一证据源，不作独立命中计数"
+     }
+    ],
+    "top_scores": [
+     {
+      "chunk_id": "C0001",
+      "score": 0.9758,
+      "bm25": 9.697,
+      "term_match": 0.9167,
+      "covered_groups": [
+       "lysis_buffer"
+      ]
+     },
+     {
+      "chunk_id": "C0007",
+      "score": 0.8029,
+      "bm25": 6.8679,
+      "term_match": 0.75,
+      "covered_groups": [
+       "lysis_buffer"
+      ]
+     },
+     {
+      "chunk_id": "C0002",
+      "score": 0.4041,
+      "bm25": 1.3284,
+      "term_match": 0.5833,
+      "covered_groups": [
+       "lysis_buffer"
+      ]
+     },
+     {
+      "chunk_id": "C0003",
+      "score": 0.3002,
+      "bm25": 1.3963,
+      "term_match": 0.5417,
+      "covered_groups": [
+       "lysis_buffer"
+      ]
+     },
+     {
+      "chunk_id": "C0008",
+      "score": 0.0,
+      "bm25": 0.0,
+      "term_match": 0.0,
+      "covered_groups": []
+     }
+    ]
+   },
+   {
+    "query_id": "Q2",
+    "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+    "keys": [
+     "共聚",
+     "聚焦",
+     "焦成",
+     "成像",
+     "像的",
+     "的曝",
+     "曝光",
+     "光时",
+     "时间",
+     "间和",
+     "和激",
+     "激光"
+    ],
+    "expanded_keys": [
+     {
+      "key": "电池",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "功率",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "battery",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "power",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "adaptation",
+      "via": "expansion:battery_power"
+     },
+     {
+      "key": "confocal",
+      "via": "expansion:confocal"
+     },
+     {
+      "key": "exposure",
+      "via": "expansion:exposure_time"
+     },
+     {
+      "key": "time",
+      "via": "expansion:exposure_time"
+     }
+    ],
+    "groups_hit": [
+     {
+      "group": "battery_power",
+      "terms": [
+       "电池",
+       "功率",
+       "battery",
+       "power adaptation"
+      ]
+     },
+     {
+      "group": "confocal",
+      "terms": [
+       "共聚焦",
+       "confocal"
+      ]
+     },
+     {
+      "group": "exposure_time",
+      "terms": [
+       "曝光时间",
+       "曝光",
+       "exposure time"
+      ]
+     }
+    ],
+    "filters": {
+     "project_ids": [
+      "P-17"
+     ],
+     "file_types": [
+      "md"
+     ]
+    },
+    "files_considered": 3,
+    "files_passing_filters": 2,
+    "hits": 0,
+    "excluded_by_filters": [
+     {
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "codes": [
+       "R_FILTER_PROJECT"
+      ],
+      "reasons": [
+       "文件不属于提问指定的项目编号"
+      ]
+     }
+    ],
+    "blocked_by_filters_top": [
+     {
+      "chunk_id": "C0008",
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "score": 0.955,
+      "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+     }
+    ],
+    "filtered_but_relevant": [
+     {
+      "chunk_id": "C0008",
+      "file_id": "F4",
+      "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+      "score": 0.955,
+      "reason": "文件未通过硬过滤，命中被拦下（相关但不在提问范围内）"
+     }
+    ],
+    "duplicate_copies_of_hits": [],
+    "top_scores": [
+     {
+      "chunk_id": "C0008",
+      "score": 0.955,
+      "bm25": 13.9017,
+      "term_match": 0.8333,
+      "covered_groups": [
+       "battery_power",
+       "confocal",
+       "exposure_time"
+      ]
+     },
+     {
+      "chunk_id": "C0001",
+      "score": 0.0,
+      "bm25": 0.0,
+      "term_match": 0.0,
+      "covered_groups": []
+     },
+     {
+      "chunk_id": "C0002",
+      "score": 0.0,
+      "bm25": 0.0,
+      "term_match": 0.0,
+      "covered_groups": []
+     },
+     {
+      "chunk_id": "C0003",
+      "score": 0.0,
+      "bm25": 0.0,
+      "term_match": 0.0,
+      "covered_groups": []
+     },
+     {
+      "chunk_id": "C0007",
+      "score": 0.0,
+      "bm25": 0.0,
+      "term_match": 0.0,
+      "covered_groups": []
+     }
+    ]
+   }
+  ],
+  "gaps": [
+   {
+    "query_id": "Q2",
+    "code": "R_FILTER_BLOCKED_HITS",
+    "reason": "库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容",
+    "next_action": "核对过滤条件是否过严或缺元数据；不得为凑结果放宽硬约束",
+    "files_passing_filters": 2,
+    "blocked_hit_count": 1,
+    "coverage_note": "注意：本库另有 1 个文件因权限/加密/损坏/无文本层未进入语料：空结果不能断定库内无支撑，只能说明可检索语料内无支撑",
+    "filters_unsatisfied_files": [
+     "F4"
+    ]
+   }
+  ],
+  "excluded_files": [
+   {
+    "file_id": "F2",
+    "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+    "code": "R_DUP_FILE",
+    "reason": "与首见文件 sha256 完全相同的副本，不作为独立命中来源",
+    "duplicate_of": "library/P-17/assay/2022-03_裂解缓冲液记录.md"
+   },
+   {
+    "file_id": "F5",
+    "path": "library/P-17/scan/2020_手写配方.pdf",
+    "code": "R_NO_TEXT_LAYER",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "library_report": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "library",
+    "<case_dir>/../library",
+    "<work>/library",
+    "<cwd>/library",
+    "/input/library"
+   ],
+   "files_scanned": 0,
+   "inline_entries": 5,
+   "files": [
+    {
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "file_type": "md",
+     "size": null,
+     "readable": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "text_sha256": "a1a005b8e10beaf27b0423e36495992c52b0e8d71a94dbb1ecf197143b7de84f",
+     "n_chars": 75,
+     "pages": 1,
+     "ocr_confidence": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "2024共聚焦成像参数",
+     "status": "ok"
+    },
+    {
+     "file_id": "F1",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "file_type": "md",
+     "size": null,
+     "readable": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "text_sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "n_chars": 352,
+     "pages": 2,
+     "ocr_confidence": null,
+     "alias_of": null,
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "裂解缓冲液体系",
+     "status": "ok"
+    },
+    {
+     "file_id": "F2",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+     "file_type": "md",
+     "size": null,
+     "readable": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "text_sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "n_chars": 352,
+     "pages": 2,
+     "ocr_confidence": null,
+     "alias_of": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "version": "v2",
+     "version_basis": "metadata",
+     "doc_key": "裂解缓冲液体系",
+     "status": "ok"
+    },
+    {
+     "file_id": "F3",
+     "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+     "file_type": "md",
+     "size": null,
+     "readable": null,
+     "file_sha256": null,
+     "extraction_method": "inline_case_json",
+     "text_sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+     "n_chars": 81,
+     "pages": 1,
+     "ocr_confidence": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "裂解缓冲液体系",
+     "status": "ok"
+    },
+    {
+     "file_id": "F5",
+     "path": "library/P-17/scan/2020_手写配方.pdf",
+     "file_type": "pdf",
+     "size": null,
+     "readable": null,
+     "file_sha256": null,
+     "extraction_method": null,
+     "text_sha256": null,
+     "n_chars": 0,
+     "pages": 0,
+     "ocr_confidence": null,
+     "alias_of": null,
+     "version": "v1",
+     "version_basis": "metadata",
+     "doc_key": "2020手写配方",
+     "status": "gap:R_NO_TEXT_LAYER"
+    }
+   ],
+   "alias_groups": [
+    {
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "kind": "alias_or_duplicate",
+     "canonical": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "members": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+     ],
+     "size": null,
+     "note": "同 SHA-256 不同文件名：完全重复/别名文件（canonical 优先非 copy/backup/latest 命名；合并为单一证据源，副本不进检索语料，不计独立命中）"
+    }
+   ],
+   "version_groups": [
+    {
+     "doc_key": "裂解缓冲液体系",
+     "canonical": {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "version": "v2"
+     },
+     "members": [
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+       "version": "v1",
+       "basis": "metadata",
+       "note": ""
+      }
+     ],
+     "note_source": "mixed",
+     "policy": "canonical=管理性版本序最大者（final>v(n)>draft，并列时非副本优先）；旧版只读归档，不删除"
+    }
+   ],
+   "gaps": [
+    {
+     "file_id": "F5",
+     "path": "library/P-17/scan/2020_手写配方.pdf",
+     "code": "R_NO_TEXT_LAYER",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与 ops_log.json"
+   }
+  },
+  "ops_log": [
+   {
+    "op": "merge_duplicate_candidates",
+    "targets": [
+     "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+    ],
+    "basis": "SHA-256 完全一致（e0b31d1aeb0d6b58…）：内容相同、仅文件名不同（别名/完全重复）",
+    "action": "建议保留规范名 library/P-17/assay/2022-03_裂解缓冲液记录.md，其余移入重复归档目录；本流程未执行任何改名/删除",
+    "input_readonly": true
+   },
+   {
+    "op": "consolidate_versions",
+    "targets": [
+     "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+     "library/P-17/protocol/2021-06_裂解方案_v1.md"
+    ],
+    "basis": "管理性版本说明/元数据归组 裂解缓冲液体系；canonical=v2（library/P-17/assay/2022-03_裂解缓冲液记录.md）",
+    "action": "建议旧版只读归档、检索口径以 canonical 为准；未执行",
+    "input_readonly": true
+   },
+   {
+    "op": "repair_file_gap",
+    "targets": [
+     "library/P-17/scan/2020_手写配方.pdf"
+    ],
+    "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+    "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR、权限件需授权）；本流程诚实跳过，不伪造文本",
+    "input_readonly": true
+   },
+   {
+    "op": "rebuild_index",
+    "targets": [
+     "canonical_files"
+    ],
+    "basis": "文件清单+哈希清单已重建（见 manifest.files），别名归一/版本组已归档",
+    "action": "建议检索索引以 canonical 文件为键重建；未执行",
+    "input_readonly": true
+   },
+   {
+    "op": "verify_input_integrity",
+    "targets": [
+     "input_library"
+    ],
+    "basis": "流程前后逐文件 SHA-256 对照：rechecked=0，hashes_unchanged=True",
+    "action": "输入库只读核验已通过；若 changed 非空须立即人工介入",
+    "input_readonly": true
+   }
+  ]
+ },
+ "evidence": {
+  "index": {
+   "build_params": {
+    "max_lines_per_chunk": 5,
+    "min_chars_per_chunk": 20,
+    "page_break_markers": [
+     "\\f",
+     "[[page:N|label]]"
+    ],
+    "note": "标题行不进 chunk 正文，只进 section_path；chunk 边界 = 标题切换 / 满 max_lines / 页结束"
+   },
+   "heading_patterns": [
+    "markdown",
+    "cn_chapter",
+    "cn_section",
+    "numbered",
+    "standard_sections"
+   ],
+   "files": [
+    {
+     "file_id": "F1",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "pages": 2,
+     "page_labels": [
+      "12",
+      "13"
+     ],
+     "label_sources": [
+      "explicit"
+     ],
+     "two_column_pages": [],
+     "chunks": 3,
+     "chars": 352,
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F2",
+     "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+     "pages": 2,
+     "page_labels": [
+      "12",
+      "13"
+     ],
+     "label_sources": [
+      "explicit"
+     ],
+     "two_column_pages": [],
+     "chunks": 3,
+     "chars": 352,
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F3",
+     "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+     "pages": 1,
+     "page_labels": [
+      null
+     ],
+     "label_sources": [
+      "absent"
+     ],
+     "two_column_pages": [],
+     "chunks": 1,
+     "chars": 81,
+     "sha256": "ed0a33b8d466ab429addd7fe6fb1eea635f59959e1e03a69676302b1aec9d4f2",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F4",
+     "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+     "pages": 1,
+     "page_labels": [
+      null
+     ],
+     "label_sources": [
+      "absent"
+     ],
+     "two_column_pages": [],
+     "chunks": 1,
+     "chars": 75,
+     "sha256": "a1a005b8e10beaf27b0423e36495992c52b0e8d71a94dbb1ecf197143b7de84f",
+     "extraction_method": "inline_case_json"
+    },
+    {
+     "file_id": "F5",
+     "path": "library/P-17/scan/2020_手写配方.pdf",
+     "pages": 0,
+     "chunks": 0,
+     "chars": 0,
+     "page_labels": [],
+     "label_sources": []
+    }
+   ],
+   "chunks_total": 8,
+   "chunks_retrievable": 5,
+   "chunk_table": [
+    {
+     "chunk_id": "C0001",
+     "file_id": "F1",
+     "page": 12,
+     "page_label": "12",
+     "section_path": [
+      "3 实验方法",
+      "3.2 裂解缓冲液配方"
+     ],
+     "line_from": 3,
+     "line_to": 5,
+     "two_column": false,
+     "char_range": [
+      24,
+      213
+     ],
+     "chars": 189
+    },
+    {
+     "chunk_id": "C0002",
+     "file_id": "F1",
+     "page": 12,
+     "page_label": "12",
+     "section_path": [
+      "3 实验方法",
+      "3.3 上样与电泳"
+     ],
+     "line_from": 7,
+     "line_to": 7,
+     "two_column": false,
+     "char_range": [
+      227,
+      271
+     ],
+     "chars": 43
+    },
+    {
+     "chunk_id": "C0003",
+     "file_id": "F1",
+     "page": 13,
+     "page_label": "13",
+     "section_path": [
+      "3.4 裂解效率检查"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      285,
+      353
+     ],
+     "chars": 67
+    },
+    {
+     "chunk_id": "C0007",
+     "file_id": "F3",
+     "page": 1,
+     "page_label": "",
+     "section_path": [
+      "2 缓冲液配方"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      10,
+      82
+     ],
+     "chars": 71
+    },
+    {
+     "chunk_id": "C0008",
+     "file_id": "F4",
+     "page": 1,
+     "page_label": "",
+     "section_path": [
+      "1 成像参数"
+     ],
+     "line_from": 2,
+     "line_to": 3,
+     "two_column": false,
+     "char_range": [
+      9,
+      76
+     ],
+     "chars": 66
+    }
+   ]
+  },
+  "retrieval": {
+   "queries": [
+    {
+     "query_id": "Q1",
+     "keys": [
+      "triton",
+      "x-100",
+      "细胞",
+      "胞裂",
+      "裂解",
+      "解缓",
+      "缓冲",
+      "冲液",
+      "液里",
+      "和脱",
+      "脱氧",
+      "氧胆"
+     ],
+     "expanded_keys": [
+      {
+       "key": "lysis",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "buffer",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "液配",
+       "via": "expansion:lysis_buffer"
+      },
+      {
+       "key": "配方",
+       "via": "expansion:lysis_buffer"
+      }
+     ],
+     "groups_hit": [
+      {
+       "group": "lysis_buffer",
+       "terms": [
+        "裂解缓冲液",
+        "lysis buffer",
+        "缓冲液配方"
+       ]
+      }
+     ],
+     "keys_full": [
+      "triton",
+      "x-100",
+      "细胞",
+      "胞裂",
+      "裂解",
+      "解缓",
+      "缓冲",
+      "冲液",
+      "液里",
+      "和脱",
+      "脱氧",
+      "氧胆",
+      "lysis",
+      "buffer",
+      "液配",
+      "配方"
+     ],
+     "chunks_scored": 5,
+     "top": [
+      {
+       "chunk_id": "C0001",
+       "score": 0.9758,
+       "bm25": 9.697,
+       "term_match": 0.9167,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0007",
+       "score": 0.8029,
+       "bm25": 6.8679,
+       "term_match": 0.75,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0002",
+       "score": 0.4041,
+       "bm25": 1.3284,
+       "term_match": 0.5833,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0003",
+       "score": 0.3002,
+       "bm25": 1.3963,
+       "term_match": 0.5417,
+       "covered_groups": [
+        "lysis_buffer"
+       ]
+      },
+      {
+       "chunk_id": "C0008",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      }
+     ]
+    },
+    {
+     "query_id": "Q2",
+     "keys": [
+      "共聚",
+      "聚焦",
+      "焦成",
+      "成像",
+      "像的",
+      "的曝",
+      "曝光",
+      "光时",
+      "时间",
+      "间和",
+      "和激",
+      "激光"
+     ],
+     "expanded_keys": [
+      {
+       "key": "电池",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "功率",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "battery",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "power",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "adaptation",
+       "via": "expansion:battery_power"
+      },
+      {
+       "key": "confocal",
+       "via": "expansion:confocal"
+      },
+      {
+       "key": "exposure",
+       "via": "expansion:exposure_time"
+      },
+      {
+       "key": "time",
+       "via": "expansion:exposure_time"
+      }
+     ],
+     "groups_hit": [
+      {
+       "group": "battery_power",
+       "terms": [
+        "电池",
+        "功率",
+        "battery",
+        "power adaptation"
+       ]
+      },
+      {
+       "group": "confocal",
+       "terms": [
+        "共聚焦",
+        "confocal"
+       ]
+      },
+      {
+       "group": "exposure_time",
+       "terms": [
+        "曝光时间",
+        "曝光",
+        "exposure time"
+       ]
+      }
+     ],
+     "keys_full": [
+      "共聚",
+      "聚焦",
+      "焦成",
+      "成像",
+      "像的",
+      "的曝",
+      "曝光",
+      "光时",
+      "时间",
+      "间和",
+      "和激",
+      "激光",
+      "电池",
+      "功率",
+      "battery",
+      "power",
+      "adaptation",
+      "confocal",
+      "exposure",
+      "time"
+     ],
+     "chunks_scored": 5,
+     "top": [
+      {
+       "chunk_id": "C0008",
+       "score": 0.955,
+       "bm25": 13.9017,
+       "term_match": 0.8333,
+       "covered_groups": [
+        "battery_power",
+        "confocal",
+        "exposure_time"
+       ]
+      },
+      {
+       "chunk_id": "C0001",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0002",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0003",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      },
+      {
+       "chunk_id": "C0007",
+       "score": 0.0,
+       "bm25": 0.0,
+       "term_match": 0.0,
+       "covered_groups": []
+      }
+     ]
+    }
+   ],
+   "scoring": {
+    "weights": {
+     "bm25": 0.45,
+     "term_match": 0.25,
+     "proximity": 0.2,
+     "heading": 0.1
+    },
+    "bm25": {
+     "k1": 1.2,
+     "b": 0.75
+    },
+    "proximity_window_chars": 60,
+    "max_query_terms": 12,
+    "normalize": "bm25_norm = bm25 / max(bm25 in this query over all chunks)",
+    "formula": "score = 0.45·bm25_norm + 0.25·term_match + 0.20·proximity + 0.10·heading_hit"
+   },
+   "thresholds": {
+    "min_score": 0.18,
+    "min_term_match": 0.2,
+    "max_hits_per_query": 3,
+    "quote_chars": 160
+   },
+   "query_expansion": {
+    "enabled": true,
+    "policy": "词表驱动的概念级扩展：词表任一词（归一后）是查询文本子串，或其词元集合 ⊆ 查询词元，即触发该组；组内所有词的词元加入 BM25 词元集合，并在 term_match 里按「概念」计一次覆盖（组内任一变体命中即覆盖）。每个扩展词元带 via=expansion:<group> 出处，逐条可解释。词表只收稳定的专业缩写/同义/上下位对，宁缺毋滥：触发错了只会稀释分数，不会凭空造命中。",
+    "groups": [
+     {
+      "id": "sampling_rate",
+      "terms": [
+       "采样率",
+       "sampling rate",
+       "sample rate"
+      ],
+      "note": "中英同义：采样率 = sampling/sample rate"
+     },
+     {
+      "id": "acoustic_monitoring",
+      "terms": [
+       "声学监测",
+       "passive acoustic monitoring",
+       "PAM"
+      ],
+      "note": "缩写：PAM = passive acoustic monitoring"
+     },
+     {
+      "id": "hydrophone",
+      "terms": [
+       "水听器",
+       "hydrophone"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "pcr",
+      "terms": [
+       "PCR",
+       "聚合酶链式反应",
+       "polymerase chain reaction"
+      ],
+      "note": "缩写：PCR = polymerase chain reaction"
+     },
+     {
+      "id": "edna",
+      "terms": [
+       "eDNA",
+       "环境DNA",
+       "environmental DNA",
+       "宏条形码",
+       "metabarcoding"
+      ],
+      "note": "缩写+上下位：eDNA 上下位概念含 metabarcoding 宏条形码"
+     },
+     {
+      "id": "detection_latency",
+      "terms": [
+       "检测延迟",
+       "延迟",
+       "detection latency",
+       "latency"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "battery_power",
+      "terms": [
+       "电池",
+       "功率",
+       "battery",
+       "power adaptation"
+      ],
+      "note": "中英同义：功耗/功率自适应"
+     },
+     {
+      "id": "fixed_interval",
+      "terms": [
+       "固定间隔",
+       "fixed interval"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "lysis_buffer",
+      "terms": [
+       "裂解缓冲液",
+       "lysis buffer",
+       "缓冲液配方"
+      ],
+      "note": "中英同义+上下位"
+     },
+     {
+      "id": "confocal",
+      "terms": [
+       "共聚焦",
+       "confocal"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "exposure_time",
+      "terms": [
+       "曝光时间",
+       "曝光",
+       "exposure time"
+      ],
+      "note": "中英同义"
+     },
+     {
+      "id": "calibration",
+      "terms": [
+       "校准",
+       "标定",
+       "calibration"
+      ],
+      "note": "同义+中英"
+     },
+     {
+      "id": "ctd",
+      "terms": [
+       "CTD",
+       "温盐深",
+       "conductivity temperature depth"
+      ],
+      "note": "缩写：CTD = conductivity-temperature-depth"
+     }
+    ]
+   },
+   "recompute": "score = w_bm25·bm25_norm + w_match·term_match + w_prox·proximity + w_head·heading；bm25_norm = bm25 / max(bm25)；term_match = 均值(原始词命中率, 扩展组覆盖率)，无扩展组时=原始词命中率（组内任一变体命中即覆盖，跨语言对齐不被表面词元稀释）"
+  },
+  "filters": {
+   "dictionary": {
+    "year_from": {
+     "type": "int_min",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    },
+    "year_to": {
+     "type": "int_max",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    },
+    "project_ids": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "project_id",
+     "code": "R_FILTER_PROJECT"
+    },
+    "batch_ids": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "batch",
+     "code": "R_FILTER_BATCH"
+    },
+    "file_types": {
+     "type": "in_list_lower",
+     "source": "derived",
+     "key": "extension",
+     "code": "R_FILTER_TYPE"
+    },
+    "versions": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "version",
+     "code": "R_FILTER_VERSION"
+    },
+    "permissions": {
+     "type": "in_list",
+     "source": "metadata",
+     "key": "permission",
+     "code": "R_FILTER_PERMISSION"
+    },
+    "exclude_scanned": {
+     "type": "not_true",
+     "source": "metadata",
+     "key": "scanned",
+     "code": "R_FILTER_SCANNED"
+    },
+    "require_version": {
+     "type": "exists",
+     "source": "metadata",
+     "key": "version",
+     "code": "R_FILTER_VERSION"
+    },
+    "require_year": {
+     "type": "exists",
+     "source": "metadata",
+     "key": "year",
+     "code": "R_FILTER_YEAR"
+    }
+   },
+   "codes": {
+    "R_FILTER_YEAR": "文件年份不在提问给定的时间窗内，或年份字段缺失",
+    "R_FILTER_PROJECT": "文件不属于提问指定的项目编号",
+    "R_FILTER_BATCH": "文件不属于提问指定的实验批次",
+    "R_FILTER_TYPE": "文件扩展名不在提问允许的类型集合内",
+    "R_FILTER_VERSION": "文件版本不在允许集合内，或版本字段缺失",
+    "R_FILTER_PERMISSION": "文件权限不满足提问要求（如只允许 rw）",
+    "R_FILTER_SCANNED": "提问要求排除扫描件，而该文件被标记为 scanned=true",
+    "R_FILTER_UNSUPPORTED": "提问使用了本表未定义的过滤字段；不做模糊处理，按不满足记",
+    "R_FILTER_METADATA_MISSING": "元数据缺失导致条件无法判定（统一按不满足处理）",
+    "R_NO_HIT_IN_SCOPE": "通过硬过滤的语料内没有任何 chunk 达到分数与词命中阈值",
+    "R_FILTERS_EXCLUDE_ALL": "硬过滤把全部文件排除，检索集为空（不得放宽条件）",
+    "R_DUP_FILE": "与首见文件 sha256 完全相同的副本，不作为独立命中来源",
+    "R_NO_TEXT_LAYER": "文件无文本层（扫描件/加密/损坏），未进入语料；不得记为已检索",
+    "R_QUOTE_MISMATCH": "回链片段在规范化原文中逐字复核失败，定位降级为不确定",
+    "R_FILTER_BLOCKED_HITS": "库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容",
+    "R_FILE_ENCRYPTED": "PDF 检测到 /Encrypt（加密件）：本流程不做解密，诚实跳过文本提取，不计为已检索",
+    "R_FILE_CORRUPT": "文件损坏/截断（内容流解压失败或无内容流）：诚实跳过，建议换源",
+    "R_FILE_NO_EXTRACTOR": "扩展名不在侧车/PDF/DOCX/纯文本提取链内：无可用提取器，诚实跳过",
+    "R_FILE_NO_PERMISSION": "文件存在但无读权限（chmod/ACL 拒绝）：不进入语料，如实标记，绝不绕过权限"
+   },
+   "per_query": [
+    {
+     "query_id": "Q1",
+     "excluded": [
+      {
+       "file_id": "F4",
+       "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+       "codes": [
+        "R_FILTER_PROJECT"
+       ],
+       "reasons": [
+        "文件不属于提问指定的项目编号"
+       ]
+      }
+     ],
+     "passing": 2,
+     "considered": 3
+    },
+    {
+     "query_id": "Q2",
+     "excluded": [
+      {
+       "file_id": "F4",
+       "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+       "codes": [
+        "R_FILTER_PROJECT"
+       ],
+       "reasons": [
+        "文件不属于提问指定的项目编号"
+       ]
+      }
+     ],
+     "passing": 2,
+     "considered": 3
+    }
+   ],
+   "policy": "硬约束逐文件逐条判定：元数据缺失 → satisfiable=false + code；不允许为了让结果非空而删除条件、扩大取值或改用模糊匹配。判定表逐条写入 result.evidence.filters.per_query。"
+  },
+  "dedupe": {
+   "hash_alias_groups": [
+    {
+     "sha256": "e0b31d1aeb0d6b58b065bfd30a7177e6ff36f514d6703889d0dfa758747cc815",
+     "kind": "alias_or_duplicate",
+     "canonical": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+     "members": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+     ],
+     "size": null,
+     "note": "同 SHA-256 不同文件名：完全重复/别名文件（canonical 优先非 copy/backup/latest 命名；合并为单一证据源，副本不进检索语料，不计独立命中）"
+    }
+   ],
+   "aliases": {
+    "F2": "library/P-17/assay/2022-03_裂解缓冲液记录.md"
+   },
+   "version_groups": [
+    {
+     "doc_key": "裂解缓冲液体系",
+     "canonical": {
+      "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "version": "v2"
+     },
+     "members": [
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+       "version": "v2",
+       "basis": "metadata",
+       "note": ""
+      },
+      {
+       "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+       "version": "v1",
+       "basis": "metadata",
+       "note": ""
+      }
+     ],
+     "note_source": "mixed",
+     "policy": "canonical=管理性版本序最大者（final>v(n)>draft，并列时非副本优先）；旧版只读归档，不删除"
+    }
+   ],
+   "policy": "同哈希异名归并为单一证据源（alias_of）；版本组 canonical=版本序最大者；副本/旧版不作独立命中，命中非 canonical 版本时给 stale_version 提示"
+  },
+  "unreadable": [
+   {
+    "file_id": "F5",
+    "path": "library/P-17/scan/2020_手写配方.pdf",
+    "code": "R_NO_TEXT_LAYER",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "library": {
+   "mode": "inline",
+   "root_resolution": [
+    "library",
+    "<case_dir>/../library",
+    "<work>/library",
+    "<cwd>/library",
+    "/input/library"
+   ],
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与 ops_log.json"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "two_column_policy": "PDF 页按 x 间距聚类列（启发式），two_column=true 时命中附阅读顺序提示；跨栏段落不强行拼接，如实标注",
+   "gap_policy": "加密/损坏/无文本层/无提取器/无权限分别记码，不静默跳过、不伪造文本、不计为已检索"
+  },
+  "canonical_text": "每个文件按 \\f 与 [[page:N|label]] 切页后以换行拼接；line_from/line_to 为页内 1 基线号，char_range 为该拼接文本中的字符区间，quote_check.exact_match 用该文本逐字复核",
+  "ops_log": {
+   "entries": [
+    {
+     "op": "merge_duplicate_candidates",
+     "targets": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md"
+     ],
+     "basis": "SHA-256 完全一致（e0b31d1aeb0d6b58…）：内容相同、仅文件名不同（别名/完全重复）",
+     "action": "建议保留规范名 library/P-17/assay/2022-03_裂解缓冲液记录.md，其余移入重复归档目录；本流程未执行任何改名/删除",
+     "input_readonly": true
+    },
+    {
+     "op": "consolidate_versions",
+     "targets": [
+      "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+      "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+      "library/P-17/protocol/2021-06_裂解方案_v1.md"
+     ],
+     "basis": "管理性版本说明/元数据归组 裂解缓冲液体系；canonical=v2（library/P-17/assay/2022-03_裂解缓冲液记录.md）",
+     "action": "建议旧版只读归档、检索口径以 canonical 为准；未执行",
+     "input_readonly": true
+    },
+    {
+     "op": "repair_file_gap",
+     "targets": [
+      "library/P-17/scan/2020_手写配方.pdf"
+     ],
+     "basis": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+     "action": "建议人工修复（代码 R_NO_TEXT_LAYER：加密件需口令、损坏件需换源、无文本层扫描件需补 OCR、权限件需授权）；本流程诚实跳过，不伪造文本",
+     "input_readonly": true
+    },
+    {
+     "op": "rebuild_index",
+     "targets": [
+      "canonical_files"
+     ],
+     "basis": "文件清单+哈希清单已重建（见 manifest.files），别名归一/版本组已归档",
+     "action": "建议检索索引以 canonical 文件为键重建；未执行",
+     "input_readonly": true
+    },
+    {
+     "op": "verify_input_integrity",
+     "targets": [
+      "input_library"
+     ],
+     "basis": "流程前后逐文件 SHA-256 对照：rechecked=0，hashes_unchanged=True",
+     "action": "输入库只读核验已通过；若 changed 非空须立即人工介入",
+     "input_readonly": true
+    }
+   ],
+   "executed": false,
+   "note": "全部为建议；输入库前后哈希对照见 evidence.library.integrity"
+  },
+  "ops_log_file": {
+   "path": "ops_log.json",
+   "entries": 5,
+   "note": "恢复/索引建议清单写在输出目录，绝不写回输入库"
+  },
+  "contract": {
+   "matches": "每个提问的命中清单：文件路径+版本+哈希、章节路径、印刷页与物理页、段落首句、逐字原文片段、过滤条件逐项满足情况、排序与得分",
+   "evidence_map": "索引构建参数与 chunk 边界、检索路径 trace、过滤判定表、去重与版本族、回链自检结果；他人可按记录复现到同一段",
+   "状态说明": "空结果原因、无文本层文件、印刷页标签缺失、副本与多版本处置、不确定性"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-044-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "evidence_map",
+     "matches",
+     "状态说明"
+    ]
+   },
+   {
+    "step": "library_intake",
+    "seq": 2,
+    "mode": "inline",
+    "files": 5,
+    "gaps": 1,
+    "alias_groups": 1,
+    "version_groups": 1
+   },
+   {
+    "step": "intake",
+    "seq": 3,
+    "files": 5,
+    "unreadable": 1,
+    "queries": 2
+   },
+   {
+    "step": "index",
+    "seq": 4,
+    "chunks": 8,
+    "pages": 6,
+    "dup_aliases": 1
+   },
+   {
+    "step": "ops_log_written",
+    "seq": 5,
+    "entries": 5
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-044-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "切页分块",
+   "去重与版本组",
+   "硬过滤执行",
+   "四因子检索（含词表扩展）",
+   "回链锚点自检",
+   "恢复/索引建议与只读核验"
+  ],
+  "unmet": [
+   {
+    "item": "提问命中:Q2",
+    "reason": "R_FILTER_BLOCKED_HITS — 库内存在达到分数阈值的段落，但所属文件被硬过滤排除；说明「相关但不在提问范围内」（见 filtered_but_relevant），不等于库内没有该内容"
+   },
+   {
+    "item": "文件库提取",
+    "reason": "1 份 R_NO_TEXT_LAYER——诚实跳过，不伪造文本层（详见 evidence.unreadable）"
+   }
+  ],
+  "notes": [
+   "1 组同哈希文件已合并为单一证据源（alias_of，不重复计命中）",
+   "1 个版本组存在多版本文件，canonical 与版本口径写入 evidence.dedupe.version_groups"
+  ]
+ },
+ "uncertainty": [
+  {
+   "item": "印刷页码",
+   "reason": "部分文件无显式印刷页标签，page_label 留空并标 label_source=absent，未用物理页冒充印刷页"
+  },
+  {
+   "item": "版本口径",
+   "reason": "1 条命中落在非 canonical 版本上，已逐条给 stale_version 提示（不冒充最新版）"
+  }
+ ]
+}

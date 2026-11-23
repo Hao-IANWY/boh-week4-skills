@@ -1,0 +1,27 @@
+{
+ "version": "0.1.0",
+ "description": "046 知识库台账字段字典：定义每份文件在检索与引用中必须交代的六个维度（类型/元数据/目录层级/重复/版本/权限与来源），缺失即显式声明。",
+ "file_fields": {
+  "file_id": {"required": true, "desc": "稳定标识，回链主键"},
+  "path": {"required": true, "desc": "库内相对路径，引用定位的第一段"},
+  "file_type": {"required": false, "desc": "扩展名或元数据类型，用于声明检索范围"},
+  "metadata": {"required": false, "desc": "year/project_id/version/permission/authors/doi/batch"},
+  "sha256": {"required": false, "desc": "正文归一后哈希，判定副本与版本"},
+  "pages": {"required": false, "desc": "切页结果：物理页 + 印刷页标签"},
+  "text_layer": {"required": true, "desc": "是否有文本层；无文本层不得记为已检索"}
+ },
+ "six_dimensions": {
+  "file_type": "文件类型是否覆盖并声明",
+  "metadata": "关键元数据字段是否交代（年份/版本/项目/权限）",
+  "directory": "目录层级是否体现在 path 与 section_path",
+  "duplicate": "重复副本是否合并并留 duplicate_of",
+  "version": "版本差异是否标注（旧版证据标 superseded）",
+  "permission_source": "权限与来源是否声明（permission / batch / 来源库）"
+ },
+ "citation_requirements": {
+  "must_have": ["file_id", "path", "version", "page", "page_label|label_source", "section_path", "line_from", "line_to", "char_range"],
+  "verbatim": "引用片段必须是原文整句，逐字可核；不做同义改写",
+  "strength": "direct / indirect / background 三档，见 qa_rules.json"
+ },
+ "scope_policy": "问题未指定范围时检索全库；指定 scope 时先按 scope 过滤文件，过滤后被排除的文件写入证据，不静默丢弃"
+}

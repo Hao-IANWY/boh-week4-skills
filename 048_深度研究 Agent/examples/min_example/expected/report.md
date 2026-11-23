@@ -10,11 +10,15 @@
 ## 摘要
 
 - 材料与筛选：筛查 6 条，纳入 6 条，排除 0 条。
-- 证据台账：7 条带定位的逐字证据。
+- 证据台账：7 条带定位的逐字证据（校验通过 7/7，年份跨度 2021–2024）。
+- 方向分布：正向 0 条、负向 2 条、零效应 0 条、混合 0 条、未判定 5 条。
 - 冲突证据：1 组（双列呈现）；研究空白：1 项。
-- We report single-step retrosynthesis top-1 accuracy of 52.3% on USPTO-50k using a message passing graph neural network with reaction centre classification. [E001] Template-free single-step retrosynthesis reaches 48.1% t…
-- We report single-step retrosynthesis top-1 accuracy of 52.3% on USPTO-50k using a message passing graph neural network with reaction centre classification. [E007]
-- Multi-step route planning is evaluated by route success rate rather than top-1 single-step accuracy, so results are not directly comparable across the two settings. [E006]
+- 问题拆解：4 个子问题；检索计划 0 步。
+- We report single-step retrosynthesis top-1 accuracy of 52.3% on USPTO-50k using a message passing graph neural network with reaction centre classification.
+- We report single-step retrosynthesis top-1 accuracy of 52.3% on USPTO-50k using a message passing graph neural network with reaction centre classification.
+- Multi-step route planning is evaluated by route success rate rather than top-1 single-step accuracy, so results are not directly comparable across the two settings.
+
+> 本摘要只重排 `result.json` 的计数、方向、年份与判定；证据与边界见后续各节，不在此处新增结论。
 
 ## 1. 研究问题与拆解
 

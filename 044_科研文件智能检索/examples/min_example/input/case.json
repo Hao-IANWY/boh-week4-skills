@@ -1,0 +1,143 @@
+{
+ "case_id": "EXAMPLE-044-NOT-A-TEST-CASE",
+ "task_instruction": "示例（非正式测试案例）：在一个含副本、旧版本与扫描件的 5 文件小库里回答两个提问——裂解缓冲液配方在哪个文件的哪一节哪一页，以及成像曝光时间在哪；所有命中必须给到页/行/逐字片段，过滤条件为硬约束。",
+ "output_contract": {
+  "matches": "每个提问的命中清单：文件路径+版本+哈希、章节路径、印刷页与物理页、段落首句、逐字原文片段、过滤条件逐项满足情况、排序与得分",
+  "evidence_map": "索引构建参数与 chunk 边界、检索路径 trace、过滤判定表、去重与版本族、回链自检结果；他人可按记录复现到同一段",
+  "状态说明": "空结果原因、无文本层文件、印刷页标签缺失、副本与多版本处置、不确定性"
+ },
+ "library": {
+  "name": "EXAMPLE 合成小库",
+  "root": "library",
+  "note": "全部文件为示例合成材料，非任何真实项目数据；正文内联在 files[].pages 中，不依赖本地磁盘"
+ },
+ "queries": [
+  {
+   "query_id": "Q1",
+   "text": "细胞裂解缓冲液里 Triton X-100 和脱氧胆酸钠的配方比例是多少",
+   "filters": {
+    "project_ids": [
+     "P-17"
+    ],
+    "file_types": [
+     "md"
+    ],
+    "year_from": 2021,
+    "exclude_scanned": true
+   },
+   "max_hits": 3
+  },
+  {
+   "query_id": "Q2",
+   "text": "共聚焦成像的曝光时间和激光功率设置在哪里",
+   "filters": {
+    "project_ids": [
+     "P-17"
+    ],
+    "file_types": [
+     "md"
+    ]
+   },
+   "max_hits": 3
+  }
+ ],
+ "files": [
+  {
+   "file_id": "F1",
+   "path": "library/P-17/assay/2022-03_裂解缓冲液记录.md",
+   "file_type": "md",
+   "metadata": {
+    "year": 2022,
+    "project_id": "P-17",
+    "version": "v2",
+    "permission": "rw",
+    "scanned": false,
+    "batch": "B-03",
+    "doc_id": "裂解缓冲液体系"
+   },
+   "pages": [
+    {
+     "page": 12,
+     "page_label": "12",
+     "text": "# 3 实验方法\n## 3.2 裂解缓冲液配方\n本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂混合片，终浓度为每 10 mL 一片，全程 4 ℃ 操作。\n## 3.3 上样与电泳\n样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。"
+    },
+    {
+     "page": 13,
+     "page_label": "13",
+     "text": "## 3.4 裂解效率检查\n裂解液 12000 g 离心 10 min，取上清测蛋白浓度，记录在附表 S2。\n本批裂解效率 92%，与上一批的 90% 基本一致。"
+    }
+   ]
+  },
+  {
+   "file_id": "F2",
+   "path": "library/P-17/assay/2022-03_裂解缓冲液记录_副本.md",
+   "file_type": "md",
+   "metadata": {
+    "year": 2022,
+    "project_id": "P-17",
+    "version": "v2",
+    "permission": "rw",
+    "scanned": false,
+    "batch": "B-03",
+    "doc_id": "裂解缓冲液体系"
+   },
+   "pages": [
+    {
+     "page": 12,
+     "page_label": "12",
+     "text": "# 3 实验方法\n## 3.2 裂解缓冲液配方\n本批细胞裂解使用改良 RIPA 体系：Triton X-100 终浓度 1%（v/v），脱氧胆酸钠 0.5%（w/v），NaCl 150 mM，Tris-HCl 50 mM（pH 7.4）。\n取 Triton X-100 原液 1.0 mL 加入 99 mL 预冷缓冲液，混匀后冰上静置 10 min。\n加入蛋白酶抑制剂混合片，终浓度为每 10 mL 一片，全程 4 ℃ 操作。\n## 3.3 上样与电泳\n样品按 4:1 与 5× SDS 上样缓冲液混合，95 ℃ 加热 5 min 后上样。"
+    },
+    {
+     "page": 13,
+     "page_label": "13",
+     "text": "## 3.4 裂解效率检查\n裂解液 12000 g 离心 10 min，取上清测蛋白浓度，记录在附表 S2。\n本批裂解效率 92%，与上一批的 90% 基本一致。"
+    }
+   ]
+  },
+  {
+   "file_id": "F3",
+   "path": "library/P-17/protocol/2021-06_裂解方案_v1.md",
+   "file_type": "md",
+   "metadata": {
+    "year": 2021,
+    "project_id": "P-17",
+    "version": "v1",
+    "permission": "r",
+    "scanned": false,
+    "batch": "B-01",
+    "doc_id": "裂解缓冲液体系"
+   },
+   "text": "# 2 缓冲液配方\n早期方案使用 Triton X-100 0.5%（v/v），未加脱氧胆酸钠。\n该版本已被 2022-03 的 v2 方案替代，仅保留用于追溯。"
+  },
+  {
+   "file_id": "F4",
+   "path": "library/P-09/imaging/2024_共聚焦成像参数.md",
+   "file_type": "md",
+   "metadata": {
+    "year": 2024,
+    "project_id": "P-09",
+    "version": "v1",
+    "permission": "rw",
+    "scanned": false
+   },
+   "text": "# 1 成像参数\n共聚焦成像曝光时间设置为 200 ms，激光功率 20%，Z 步进 0.5 µm，针孔 1 AU。\n每张图取 3 次平均以降低噪声。"
+  },
+  {
+   "file_id": "F5",
+   "path": "library/P-17/scan/2020_手写配方.pdf",
+   "file_type": "pdf",
+   "metadata": {
+    "year": 2020,
+    "project_id": "P-17",
+    "version": "v1",
+    "permission": "rw",
+    "scanned": true
+   },
+   "note": "扫描件无文本层，本例仅给出元数据与哈希，正文需 ocr-tool 后写入旁路文本"
+  }
+ ],
+ "source": {
+  "title": "Synthetic interface example (not a test case)",
+  "doi": null
+ }
+}

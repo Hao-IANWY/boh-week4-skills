@@ -1,0 +1,296 @@
+{
+ "version": "0.2.0",
+ "description": "044 科研文件智能检索的切页/分块/检索/查询扩展参数。所有阈值与词表集中在此，代码内不出现魔法数，保证 result.json 的每个分数都可复算；查询扩展为词表驱动（缩写/同义/上下位），逐条可解释，不引入向量库。",
+ "chunking": {
+  "max_lines_per_chunk": 5,
+  "min_chars_per_chunk": 20,
+  "page_break_markers": [
+   "\\f",
+   "[[page:N|label]]"
+  ],
+  "note": "标题行不进 chunk 正文，只进 section_path；chunk 边界 = 标题切换 / 满 max_lines / 页结束"
+ },
+ "heading_patterns": [
+  {
+   "id": "markdown",
+   "regex": "^(#{1,6})\\s+(.+?)\\s*#*$",
+   "groups": {
+    "level_group": 1,
+    "title_group": 2
+   }
+  },
+  {
+   "id": "cn_chapter",
+   "regex": "^第\\s*[0-9一二三四五六七八九十百]+\\s*章\\s*(.{0,40})$",
+   "level": 1,
+   "groups": {
+    "title_group": 1
+   },
+   "max_title_chars": 40,
+   "reject_chars": [
+    "。",
+    "；",
+    "，"
+   ]
+  },
+  {
+   "id": "cn_section",
+   "regex": "^第\\s*[0-9一二三四五六七八九十百]+\\s*节\\s*(.{0,40})$",
+   "level": 2,
+   "groups": {
+    "title_group": 1
+   },
+   "max_title_chars": 40,
+   "reject_chars": [
+    "。",
+    "；",
+    "，"
+   ]
+  },
+  {
+   "id": "numbered",
+   "regex": "^(\\d{1,2}(?:\\.\\d{1,2}){0,2})[\\.、]?\\s+(\\S.{0,50})$",
+   "groups": {
+    "level_group": 1,
+    "title_group": 2
+   },
+   "level_from_dots": true,
+   "max_title_chars": 50,
+   "reject_chars": [
+    "。",
+    "；",
+    "，",
+    ";",
+    ","
+   ]
+  },
+  {
+   "id": "standard_sections",
+   "regex": "^(摘\\s*要|引\\s*言|关\\s*键\\s*词|方\\s*法|材\\s*料\\s*与\\s*方\\s*法|结\\s*果|讨\\s*论|结\\s*论|参\\s*考\\s*文\\s*献|Abstract|Introduction|Methods|Materials and Methods|Results|Discussion|Conclusions?|References)\\s*[:：]?$",
+   "level": 1,
+   "groups": {
+    "title_group": 0
+   }
+  }
+ ],
+ "sentence_terminators": [
+  "。",
+  "！",
+  "？",
+  ". ",
+  "!",
+  "?",
+  "\n"
+ ],
+ "scoring": {
+  "weights": {
+   "bm25": 0.45,
+   "term_match": 0.25,
+   "proximity": 0.2,
+   "heading": 0.1
+  },
+  "bm25": {
+   "k1": 1.2,
+   "b": 0.75
+  },
+  "proximity_window_chars": 60,
+  "max_query_terms": 12,
+  "normalize": "bm25_norm = bm25 / max(bm25 in this query over all chunks)",
+  "formula": "score = 0.45·bm25_norm + 0.25·term_match + 0.20·proximity + 0.10·heading_hit"
+ },
+ "thresholds": {
+  "min_score": 0.18,
+  "min_term_match": 0.2,
+  "max_hits_per_query": 3,
+  "quote_chars": 160
+ },
+ "stopwords": [
+  "的",
+  "了",
+  "是",
+  "在",
+  "和",
+  "与",
+  "及",
+  "或",
+  "中",
+  "上",
+  "下",
+  "对",
+  "为",
+  "把",
+  "被",
+  "从",
+  "到",
+  "吗",
+  "呢",
+  "吧",
+  "请问",
+  "多少",
+  "什么",
+  "哪个",
+  "哪一",
+  "怎么",
+  "如何",
+  "是否",
+  "以及",
+  "我们",
+  "可以",
+  "the",
+  "a",
+  "an",
+  "of",
+  "in",
+  "on",
+  "for",
+  "with",
+  "and",
+  "or",
+  "is",
+  "are",
+  "was",
+  "were",
+  "to",
+  "what",
+  "which",
+  "how",
+  "why",
+  "where",
+  "does",
+  "do",
+  "did",
+  "it",
+  "this",
+  "that",
+  "please"
+ ],
+ "notes": {
+  "proximity": "邻近度只在同一 chunk 内至少命中 2 个不同查询词时计算，窗口 60 字符；单关键词命中记 0（相邻性无意义）",
+  "heading": "查询词出现在 section_path 或文件名时记 1，否则 0",
+  "no_fabrication": "分数只由上述四项算出，不掺入模型判断；命中不足时如实报空并给理由码"
+ },
+ "query_expansion": {
+  "enabled": true,
+  "policy": "词表驱动的概念级扩展：词表任一词（归一后）是查询文本子串，或其词元集合 ⊆ 查询词元，即触发该组；组内所有词的词元加入 BM25 词元集合，并在 term_match 里按「概念」计一次覆盖（组内任一变体命中即覆盖）。每个扩展词元带 via=expansion:<group> 出处，逐条可解释。词表只收稳定的专业缩写/同义/上下位对，宁缺毋滥：触发错了只会稀释分数，不会凭空造命中。",
+  "groups": [
+   {
+    "id": "sampling_rate",
+    "terms": [
+     "采样率",
+     "sampling rate",
+     "sample rate"
+    ],
+    "note": "中英同义：采样率 = sampling/sample rate"
+   },
+   {
+    "id": "acoustic_monitoring",
+    "terms": [
+     "声学监测",
+     "passive acoustic monitoring",
+     "PAM"
+    ],
+    "note": "缩写：PAM = passive acoustic monitoring"
+   },
+   {
+    "id": "hydrophone",
+    "terms": [
+     "水听器",
+     "hydrophone"
+    ],
+    "note": "中英同义"
+   },
+   {
+    "id": "pcr",
+    "terms": [
+     "PCR",
+     "聚合酶链式反应",
+     "polymerase chain reaction"
+    ],
+    "note": "缩写：PCR = polymerase chain reaction"
+   },
+   {
+    "id": "edna",
+    "terms": [
+     "eDNA",
+     "环境DNA",
+     "environmental DNA",
+     "宏条形码",
+     "metabarcoding"
+    ],
+    "note": "缩写+上下位：eDNA 上下位概念含 metabarcoding 宏条形码"
+   },
+   {
+    "id": "detection_latency",
+    "terms": [
+     "检测延迟",
+     "延迟",
+     "detection latency",
+     "latency"
+    ],
+    "note": "中英同义"
+   },
+   {
+    "id": "battery_power",
+    "terms": [
+     "电池",
+     "功率",
+     "battery",
+     "power adaptation"
+    ],
+    "note": "中英同义：功耗/功率自适应"
+   },
+   {
+    "id": "fixed_interval",
+    "terms": [
+     "固定间隔",
+     "fixed interval"
+    ],
+    "note": "中英同义"
+   },
+   {
+    "id": "lysis_buffer",
+    "terms": [
+     "裂解缓冲液",
+     "lysis buffer",
+     "缓冲液配方"
+    ],
+    "note": "中英同义+上下位"
+   },
+   {
+    "id": "confocal",
+    "terms": [
+     "共聚焦",
+     "confocal"
+    ],
+    "note": "中英同义"
+   },
+   {
+    "id": "exposure_time",
+    "terms": [
+     "曝光时间",
+     "曝光",
+     "exposure time"
+    ],
+    "note": "中英同义"
+   },
+   {
+    "id": "calibration",
+    "terms": [
+     "校准",
+     "标定",
+     "calibration"
+    ],
+    "note": "同义+中英"
+   },
+   {
+    "id": "ctd",
+    "terms": [
+     "CTD",
+     "温盐深",
+     "conductivity temperature depth"
+    ],
+    "note": "缩写：CTD = conductivity-temperature-depth"
+   }
+  ]
+ }
+}

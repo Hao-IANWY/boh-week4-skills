@@ -10,11 +10,15 @@
 ## 摘要
 
 - 材料与筛选：筛查 26 条，纳入 26 条，排除 0 条。
-- 证据台账：50 条带定位的逐字证据。
+- 证据台账：50 条带定位的逐字证据（校验通过 50/50，年份跨度 2019–2025）。
+- 方向分布：正向 0 条、负向 2 条、零效应 0 条、混合 0 条、未判定 48 条。
 - 冲突证据：0 组（双列呈现）；研究空白：0 项。
-- 主题 cell_integration（电芯集成与工程化）判为 flat。有记录桶数 1 < min_buckets_with_records=2：不判时间方向，只作池内计数观察（各桶计数 [0, 0, 2, 0]）
-- 主题 characterization（表征方法）判为 flat。桶间分布未达 rising/established 阈值（判据见 rules/statistics.json.trend_verdict），仅报桶计数 [1, 3, 0, 1]
-- 主题 computation（计算与模拟）判为 established。前 2 个证据桶占比 0.75 ≥ established_min_early_share=0.6，首个非空桶（2021-2022）计数 3 ≥ established_min_first_bucket_count=2（桶计数 [0, 3, 0, 1]）；established 只描述『记录集中于早期桶』的池内快照分布，不下全局成熟/衰退结论，是否回落由 topi…
+- 时间窗口：2019–2025；计数单位：一条题录计 1 次产出，按主年份字段归入单一年份（不重复计数）
+- 主题判定：8 个主题；established 4；flat 3；thin 1
+- 主题 cell_integration（电芯集成与工程化）判为 flat。
+- 主题 characterization（表征方法）判为 flat。
+
+> 本摘要只重排 `result.json` 的计数、方向、年份与判定；证据与边界见后续各节，不在此处新增结论。
 
 ## 1. 时间趋势
 

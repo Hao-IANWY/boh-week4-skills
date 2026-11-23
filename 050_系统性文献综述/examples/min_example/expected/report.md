@@ -9,11 +9,13 @@
 
 ## 摘要
 
-- 证据台账：9 条带定位的逐字证据。
+- 证据台账：9 条带定位的逐字证据（校验通过 9/9，年份跨度 2021–2024）。
+- 方向分布：正向 0 条、负向 0 条、零效应 0 条、混合 0 条、未判定 9 条。
 - 冲突证据：1 组（双列呈现）；研究空白：0 项。
-- We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M001] A template-free model reports…
-- Under low data conditions (under 500 training reactions) top-1 accuracy drops by 12 percentage points and the learned representation generalizes poorly across reaction classes. [M005]
-- We present a graph neural network with a learned reaction centre representation for single-step retrosynthesis and report 52.3% top-1 accuracy on USPTO-50k with three dataset splits. [M006] Limitation: no cross-split ev…
+- PRISMA 计数链：识别 8 → 纳入 4；恒等式自检 True。
+- 质量分布：high 4 条
+
+> 本摘要只重排 `result.json` 的计数、方向、年份与判定；证据与边界见后续各节，不在此处新增结论。
 
 ## 1. 检索式与研究问题
 

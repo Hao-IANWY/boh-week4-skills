@@ -1,0 +1,15 @@
+{
+ "version": "0.2.0",
+ "description": "契约字段投影表：真实 case.json 的 output_contract 键名不可预知。未被主流程单独生产的契约字段按本表关键词投影到同名产物分区，并显式标注 projection_of；仍无对应则落 status.unmet。0.2.0：新增 未处理项/文件库盘点/操作恢复 关键词（排在 evidence 前，防「操作证据」类键名被吞）。",
+ "rules": [
+  {"keywords": ["unprocessed", "未处理", "跳过", "skipped"], "projection": "unprocessed"},
+  {"keywords": ["文件库", "盘点", "library"], "projection": "library_report"},
+  {"keywords": ["操作", "变更", "change", "日志", "journal", "回滚", "rollback", "恢复"], "projection": "operations"},
+  {"keywords": ["classification", "分类", "归类", "归属", "目录", "整理结果", "结果", "result", "deliverable", "产物"], "projection": "classification"},
+  {"keywords": ["unclassified", "未分类", "待定", "无法归类"], "projection": "unclassified"},
+  {"keywords": ["low", "低置信", "复核", "review"], "projection": "low_confidence"},
+  {"keywords": ["evidence", "证据", "来源", "溯源", "映射", "provenance"], "projection": "evidence"},
+  {"keywords": ["status", "状态", "完成"], "projection": "status"}
+ ],
+ "note": "投影只改变契约字段的组织方式，不新增任何未计算的结论"
+}

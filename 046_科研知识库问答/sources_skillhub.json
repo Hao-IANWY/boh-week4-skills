@@ -1,0 +1,170 @@
+{
+ "seq": 46,
+ "title": "科研知识库问答",
+ "queries": [
+  "knowledge base question answering",
+  "rag knowledge base"
+ ],
+ "skills": [
+  {
+   "name": "mmq",
+   "slug": "s-gryt-memory-mason-mmq",
+   "author": "s-gryt",
+   "category": "development",
+   "description": "Query the knowledge base. Reads session context first, then the root index, then relevant atlas, concept, and synthesis pages, and synthesizes a clear answer with [[wikilink]] citations. Use when you want to ask about past decisions, patterns, lessons, or technical knowledge captured in previous AI conversations. Use …",
+   "description_zh": null,
+   "repo_url": "https://github.com/s-gryt/memory-mason#.cursor-skills-mmq",
+   "github_stars": 14
+  },
+  {
+   "name": "afrexai-knowledge-management",
+   "slug": "openclaw-skills-afrexai-knowledge-management",
+   "author": "openclaw",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~1kalin~afrexai-knowledge-management",
+   "github_stars": 3682
+  },
+  {
+   "name": "ml-knowledge-index",
+   "slug": "natilevyy-claude-useful-skills-ml-knowledge-index",
+   "author": "NatiLevyy",
+   "category": "ai-ml",
+   "description": "Routes ML/DL questions to specialized skills. Use FIRST when unsure which skill applies, when user asks broad ML questions, or when multiple topics might be relevant. Maps: regression/classification → ml-fundamentals, ensembles/clustering → ml-advanced, TF-IDF/Word2Vec → nlp-classical, training/backprop → deep-learnin…",
+   "description_zh": null,
+   "repo_url": "https://github.com/NatiLevyy/claude-useful-skills/tree/master/skills/ml-dl-skills/ml-knowledge-index",
+   "github_stars": 10
+  },
+  {
+   "name": "langchain",
+   "slug": "davila7-claude-code-templates-agents-langchain",
+   "author": "davila7",
+   "category": "ai-ml",
+   "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applicati…",
+   "description_zh": null,
+   "repo_url": "https://github.com/davila7/claude-code-templates#cli-tool~components~skills~ai-research~agents-langchain",
+   "github_stars": 30118
+  },
+  {
+   "name": "langchain",
+   "slug": "synthetic-sciences-openscience-langchain",
+   "author": "synthetic-sciences",
+   "category": "ai-ml",
+   "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applicati…",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~llm-tools~langchain",
+   "github_stars": 3077
+  },
+  {
+   "name": "llamaindex",
+   "slug": "davila7-claude-code-templates-agents-llamaindex",
+   "author": "davila7",
+   "category": "development",
+   "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applicat…",
+   "description_zh": null,
+   "repo_url": "https://github.com/davila7/claude-code-templates#cli-tool~components~skills~ai-research~agents-llamaindex",
+   "github_stars": 30118
+  },
+  {
+   "name": "llamaindex",
+   "slug": "synthetic-sciences-openscience-llamaindex",
+   "author": "synthetic-sciences",
+   "category": "llm-tools",
+   "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applicat…",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~llm-tools~llamaindex",
+   "github_stars": 3077
+  },
+  {
+   "name": "rag-construction",
+   "slug": "openclaw-skills-rag-construction",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Build RAG systems for construction knowledge bases. Create searchable AI-powered construction document systems",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~datadrivenconstruction~rag-construction",
+   "github_stars": 3630
+  },
+  {
+   "name": "Archon Manager",
+   "slug": "daffy0208-ai-dev-standards-archon-manager",
+   "author": "daffy0208",
+   "category": "project-management",
+   "description": "Master Archon MCP for strategic project management, task tracking, and knowledge base operations. The strategic layer (WHAT/WHEN) that coordinates with Skills (HOW). Use when managing projects, tracking tasks, querying knowledge bases, or implementing the Archon+Skills two-layer architecture.",
+   "description_zh": "这是一个用于AI助手的战略性项目管理技能，协调构建内容和时间，处理任务跟踪、优先级工作流和知识库查询，采用与战术技能结合的两层架构。",
+   "repo_url": "https://github.com/daffy0208/ai-dev-standards#skills~archon-manager",
+   "github_stars": 21
+  },
+  {
+   "name": "rlama",
+   "slug": "tdimino-claude-code-minoan-rlama",
+   "author": "tdimino",
+   "category": "ai-ml",
+   "description": "Build and query fully local RAG knowledge bases from documents (PDF, MD, code, etc.) using RLAMA and Ollama — no cloud, no data leaving the machine. Triggers on 'local knowledge base', 'search documents', 'document Q&A', 'RAG query', 'ingest files', 'semantic search'.",
+   "description_zh": null,
+   "repo_url": "https://github.com/tdimino/claude-code-minoan/tree/main/skills/integration-automation/rlama",
+   "github_stars": 41
+  },
+  {
+   "name": "agentsop-dify",
+   "slug": "agentsope-skillalchemy-agentsop-dify",
+   "author": "agentsope",
+   "category": "productivity",
+   "description": "SOP for building LLM applications on Dify — visual workflow + chatflow + agent + RAG knowledge base + plugin marketplace + observability, self-hostable. Use when shipping LLM apps fast with a \"no-code to pro-code\" gradient, especially when non-engineers need to co-author the flow.",
+   "description_zh": null,
+   "repo_url": "https://github.com/agentsope/SkillAlchemy/tree/master/skills/agentsop-dify",
+   "github_stars": 284
+  },
+  {
+   "name": "clarity-gate",
+   "slug": "openclaw-skills-clarity-gate",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Pre-ingestion verification for epistemic quality in RAG systems. Ensures documents are properly qualified before entering knowledge bases. Produces CGD (Clarity-Gated Documents) and validates SOT (Source of Truth) files.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~frmoretto~clarity-gate",
+   "github_stars": 3652
+  },
+  {
+   "name": "clarity-gate",
+   "slug": "frmoretto-clarity-gate-clarity-gate",
+   "author": "frmoretto",
+   "category": "development",
+   "description": "Pre-ingestion verification for epistemic quality in RAG systems. Ensures documents are properly qualified before entering knowledge bases. Produces CGD (Clarity-Gated Documents) and validates SOT (Source of Truth) files.",
+   "description_zh": null,
+   "repo_url": "https://github.com/frmoretto/clarity-gate#.codex~skills~clarity-gate",
+   "github_stars": 25
+  },
+  {
+   "name": "moltflow-ai",
+   "slug": "openclaw-skills-moltflow-ai",
+   "author": "openclaw",
+   "category": "development",
+   "description": "AI-powered WhatsApp features: auto-replies, voice transcription, RAG knowledge base, and style profiles. Use when: ai reply, transcribe voice, knowledge base, upload document, build style, learn mode.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~alex-tradequo~moltflow-whatsapp~moltflow-ai",
+   "github_stars": 3679
+  },
+  {
+   "name": "open-webui",
+   "slug": "openclaw-skills-open-webui",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Complete Open WebUI API integration for managing LLM models, chat completions, Ollama proxy operations, file uploads, knowledge bases (RAG), image generation, audio processing, and pipelines. Use this skill when interacting with Open WebUI instances via REST API - listing models, chatting with LLMs, uploading files fo…",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~0x7466~open-webui",
+   "github_stars": 3652
+  },
+  {
+   "name": "penguin-sdk",
+   "slug": "prism-shadow-penguin-harness-penguin-sdk",
+   "author": "Prism-Shadow",
+   "category": "development",
+   "description": "Build AI apps on the Penguin Harness SDK — self-contained projects, the createSession/run streaming loop with thinking and image messages, and a complete RAG recipe that ingests documents into a knowledge base and answers with citations behind a web UI.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Prism-Shadow/penguin-harness#packages~skills~skills~penguin-sdk",
+   "github_stars": 881
+  }
+ ]
+}

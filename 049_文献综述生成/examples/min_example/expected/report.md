@@ -3,16 +3,20 @@
 - **案例标识**：`EXAMPLE-049-NOT-A-TEST-CASE`
 - **Skill**：`literature-review-writer` v0.1.0
 - **运行状态**：`partial`
-- **生成时间**：2026-11-23T18:33:58+0800
+- **生成时间**：2026-11-23T18:45:44+0800
 
 > 本报告由 Skill 的确定性管线从 `result.json` 投影生成；结论、引文与定位均取自同一批结构化字段，不在此处新增主张。
 
 ## 摘要
 
 - 材料与筛选：筛查 9 条，纳入 8 条，排除 1 条。
-- 证据台账：27 条带定位的逐字证据。
+- 证据台账：27 条带定位的逐字证据（校验通过 27/27，年份跨度 2021–2024）。
+- 方向分布：正向 0 条、负向 3 条、零效应 0 条、混合 0 条、未判定 24 条。
 - 冲突证据：1 组（双列呈现）；研究空白：0 项。
-- 主要主题：accuracy×top-1；retrosynthesis；single-step×uspto-50k×reaction；benchmark×splits
+- 主题覆盖：8 个主题；accuracy×top-1；retrosynthesis；single-step×uspto-50k×reaction；benchmark×splits；data×low
+- 检索覆盖：1 条检索式；主检索式 `*` 命中 9 条，池内全量 9 条（未联网）。
+
+> 本摘要只重排 `result.json` 的计数、方向、年份与判定；证据与边界见后续各节，不在此处新增结论。
 
 ## 1. 综述范围与主题
 

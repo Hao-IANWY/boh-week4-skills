@@ -1,0 +1,170 @@
+{
+ "seq": 45,
+ "title": "文献与资料自动分类",
+ "queries": [
+  "document classification tagging",
+  "paper auto tagging"
+ ],
+ "skills": [
+  {
+   "name": "obsidian-file-manager",
+   "slug": "arlenagreer-claude-configuration-docs-obsidian-file-manager",
+   "author": "arlenagreer",
+   "category": "development",
+   "description": "This skill should be used when managing documentation files in an Obsidian vault, including creating session artifacts, moving planning documents from project directories to the vault, updating document lifecycle states (active → processed → archived), searching for documents by tags or content, and automating archiva…",
+   "description_zh": null,
+   "repo_url": "https://github.com/arlenagreer/claude_configuration_docs#skills~obsidian-file-manager",
+   "github_stars": 4
+  },
+  {
+   "name": "cve-impact",
+   "slug": "rhecosystemappeng-agentic-plugins-cve-impact",
+   "author": "RHEcosystemAppEng",
+   "category": "integration",
+   "description": "**CRITICAL**: Use for ALL CVE discovery and listing. DO NOT call get_cves directly.  Use when: \"show critical CVEs\", \"CVEs on hostname X\", \"remediatable vulnerabilities\", \"impact of CVE-X\", risk assessment.  NOT for remediation (use `/remediation`).  System-level: FIRST reply = pagination prompt (Step -1). Parsing: sc…",
+   "description_zh": null,
+   "repo_url": "https://github.com/RHEcosystemAppEng/agentic-plugins/tree/main/rh-sre/skills/cve-impact",
+   "github_stars": 48
+  },
+  {
+   "name": "implementing-compliance",
+   "slug": "ancoleman-ai-design-components-implementing-compliance",
+   "author": "ancoleman",
+   "category": "development",
+   "description": "Implement and maintain compliance with SOC 2, HIPAA, PCI-DSS, and GDPR using unified control mapping, policy-as-code enforcement, and automated evidence collection. Use when building systems requiring regulatory compliance, implementing security controls across multiple frameworks, or automating audit preparation.",
+   "description_zh": null,
+   "repo_url": "https://github.com/ancoleman/ai-design-components#skills~implementing-compliance",
+   "github_stars": 325
+  },
+  {
+   "name": "golden-dataset-curation",
+   "slug": "yonatangross-create-yg-app-golden-dataset-curation",
+   "author": "yonatangross",
+   "category": "development",
+   "description": "Quality criteria, workflows, and multi-agent analysis patterns for curating high-quality golden dataset entries",
+   "description_zh": null,
+   "repo_url": "https://github.com/yonatangross/create-yg-app#.claude~skills~golden-dataset-curation",
+   "github_stars": 3
+  },
+  {
+   "name": "resource-tagging",
+   "slug": "ancoleman-ai-design-components-resource-tagging",
+   "author": "ancoleman",
+   "category": "development",
+   "description": "Apply and enforce cloud resource tagging strategies across AWS, Azure, GCP, and Kubernetes for cost allocation, ownership tracking, compliance, and automation. Use when implementing cloud governance, optimizing costs, or automating infrastructure management.",
+   "description_zh": null,
+   "repo_url": "https://github.com/ancoleman/ai-design-components#skills~resource-tagging",
+   "github_stars": 325
+  },
+  {
+   "name": "transformers",
+   "slug": "synthetic-sciences-openscience-transformers",
+   "author": "synthetic-sciences",
+   "category": "llm-tools",
+   "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning m…",
+   "description_zh": null,
+   "repo_url": "https://github.com/synthetic-sciences/openscience#backend~cli~skills~llm-tools~transformers",
+   "github_stars": 3077
+  },
+  {
+   "name": "knowledge-base-manager",
+   "slug": "oakoss-agent-skills-knowledge-base-manager",
+   "author": "oakoss",
+   "category": "ai-ml",
+   "description": "Knowledge base architecture selection, curation, and governance. Use when choosing between document-based (RAG), entity-based (graph), or hybrid KB architectures, establishing content curation workflows, implementing versioning and governance, or evaluating quality metrics. For building retrieval pipelines, use the ra…",
+   "description_zh": null,
+   "repo_url": "https://github.com/oakoss/agent-skills/tree/main/skills/knowledge-base-manager",
+   "github_stars": 14
+  },
+  {
+   "name": "attack-surface-mapper",
+   "slug": "vakaobr-claude-code-ai-development-workflow-attack-surface-mapper-d120de13ac",
+   "author": "vakaobr",
+   "category": "development",
+   "description": "Consolidates outputs from web-recon-passive, web-recon-active, and api-recon into a single prioritized attack-surface picture - merging PASSIVE_RECON.md, ATTACK_SURFACE.md, API_INVENTORY.md, and AUTH_FLOWS.md into a deduplicated inventory ranked by risk (high-impact features, new/changed code, legacy /v1 endpoints, bu…",
+   "description_zh": null,
+   "repo_url": "https://github.com/vakaobr/claude-code-ai-development-workflow#.claude~skills~attack-surface-mapper",
+   "github_stars": 16
+  },
+  {
+   "name": "scansnap-bridge",
+   "slug": "idanbeck-claude-skills-scansnap-bridge",
+   "author": "idanbeck",
+   "category": "development",
+   "description": "",
+   "description_zh": null,
+   "repo_url": "https://github.com/idanbeck/claude-skills/tree/main/scansnap-bridge",
+   "github_stars": 12
+  },
+  {
+   "name": "research-publication",
+   "slug": "dnyoussef-context-cascade-research-publication",
+   "author": "DNYoussef",
+   "category": "education",
+   "description": "A research workflow skill for preparing academic publications, including paper writing, reproducibility artifacts, and venue submission following established research pipelines and quality gates.",
+   "description_zh": "一个用于准备学术出版物的研究流程技能，包括论文撰写、可复现性工件制作以及遵循既定研究流程和质量关卡的会议投稿。",
+   "repo_url": "https://github.com/DNYoussef/context-cascade#skills~research~research-publication",
+   "github_stars": 27
+  },
+  {
+   "name": "alphaxiv",
+   "slug": "tai609-nebulamat-alphaxiv-b93c5b38b1",
+   "author": "Tai609",
+   "category": "integration",
+   "description": "Quick single-paper lookup via AlphaXiv LLM-optimized summaries with tiered source fallback. Use when user says \"explain this paper\", \"summarize paper\", pastes an arXiv/AlphaXiv URL, or provides a bare arXiv ID for quick understanding - not for broad literature search.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~alphaxiv",
+   "github_stars": 92
+  },
+  {
+   "name": "deepxiv",
+   "slug": "tai609-nebulamat-deepxiv-d5c343dc0e",
+   "author": "Tai609",
+   "category": "integration",
+   "description": "Search and progressively read open-access academic papers through DeepXiv. Use when the user wants layered paper access, section-level reading, trending papers, or DeepXiv-backed literature retrieval.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~deepxiv",
+   "github_stars": 92
+  },
+  {
+   "name": "arxiv",
+   "slug": "tai609-nebulamat-arxiv-8c95018827",
+   "author": "Tai609",
+   "category": "integration",
+   "description": "Search, download, and summarize academic papers from arXiv. Use when user says \"search arxiv\", \"download paper\", \"fetch arxiv\", \"arxiv search\", \"get paper pdf\", or wants to find and save papers from arXiv to the local paper library.",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~arxiv",
+   "github_stars": 92
+  },
+  {
+   "name": "image-breaker",
+   "slug": "openclaw-skills-image-breaker",
+   "author": "openclaw",
+   "category": "development",
+   "description": "Extract and break down content from web documents, PDFs, images, and URLs into structured markdown notes stored locally and synced to Obsidian. Use when the user shares a URL, PDF, screenshot, or document and wants the content converted to organized notes with proper tagging and categorization.",
+   "description_zh": null,
+   "repo_url": "https://github.com/openclaw/skills#skills~biohackerrrrrr~image-breaker",
+   "github_stars": 3652
+  },
+  {
+   "name": "semantic-scholar",
+   "slug": "tai609-nebulamat-semantic-scholar-52d692f7c2",
+   "author": "Tai609",
+   "category": "integration",
+   "description": "Search published venue papers (IEEE, ACM, Springer, etc.) via Semantic Scholar API. Complements /arxiv (preprints) with citation counts, venue metadata, and TLDR. Use when user says \"search semantic scholar\", \"find IEEE papers\", \"find journal papers\", \"venue papers\", \"citation search\", or wants published literature be…",
+   "description_zh": null,
+   "repo_url": "https://github.com/Tai609/NebulaMat#runtime~aris~upstream~skills~skills-codex~semantic-scholar",
+   "github_stars": 92
+  },
+  {
+   "name": "proof-derivation-forensics",
+   "slug": "wanshuiyin-anti-autoresearch-proof-derivation-forensics",
+   "author": "wanshuiyin",
+   "category": "development",
+   "description": "Family-G proof & derivation integrity forensics: does a THIRD PARTY's written proof/derivation actually establish its theorem, or does it skip an obligation, assume its own conclusion, take an invalid step, drift a symbol's meaning, or smuggle an unstated assumption? Decides from the WRITTEN proof/derivation — verdict…",
+   "description_zh": null,
+   "repo_url": "https://github.com/wanshuiyin/Anti-Autoresearch#skills~proof-derivation-forensics",
+   "github_stars": 111
+  }
+ ]
+}

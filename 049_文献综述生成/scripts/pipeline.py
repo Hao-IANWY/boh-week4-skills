@@ -406,6 +406,48 @@ def criterion_eval(crit: dict, rec: dict) -> dict:
     return {"criterion_id": crit["criterion_id"], "matched": bool(ok), "matched_terms": sorted(set(terms))}
 
 
+
+def build_search_log(records: list, protocol_block: dict, declared_themes: list) -> dict:
+    """池内检索记录：检索式来自协议 inclusion.any_keys 与声明主题词，命中数为实际扫描结果。
+
+    不联网、不调用数据库，因此不声称“数据库总命中”；命中数与 record_ids 只证明本轮语料内的覆盖。
+    """
+    keys = []
+    for inc in as_list(protocol_block.get("inclusion", [])):
+        for k in as_list(inc.get("any_keys", [])):
+            k = str(k).strip()
+            if k and k not in keys:
+                keys.append(k)
+    queries = []
+
+    def hits(terms):
+        ts = [norm(x) for x in terms if norm(x)]
+        return [r["record_id"] for r in records
+                if ts and all(t in norm(record_text(r)) for t in ts)]
+
+    if keys:
+        ids = hits(keys)
+        queries.append({"query": " AND ".join(keys), "terms": keys, "hit_count": len(ids),
+                        "record_ids": ids[:50], "field_scope": ["title", "abstract", "text"]})
+        for k in keys:
+            ids = hits([k])
+            queries.append({"query": k, "terms": [k], "hit_count": len(ids),
+                            "record_ids": ids[:50], "field_scope": ["title", "abstract", "text"]})
+    for th in declared_themes:
+        terms = [str(x) for x in as_list(th.get("terms", []))][:4]
+        if terms:
+            ids = hits(terms)
+            queries.append({"query": " OR ".join(terms), "terms": terms, "hit_count": len(ids),
+                            "record_ids": ids[:50], "theme_id": th.get("theme_id"),
+                            "field_scope": ["title", "abstract", "text"]})
+    queries.append({"query": "*", "terms": [], "hit_count": len(records),
+                    "record_ids": [r["record_id"] for r in records],
+                    "note": "池内全量扫描；未联网，不声称数据库覆盖"})
+    return {"queries": queries, "pool_size": len(records),
+            "note": "检索式由协议 inclusion.any_keys 与声明主题词生成；命中数为池内扫描结果，"
+                    "未联网，不代表数据库总命中；全量扫描行用于证明没有静默丢记录。"}
+
+
 def screen_records(records: list, protocol_block: dict, trace: list) -> tuple:
     """对每条记录逐条执行纳排：命中/未命中哪条标准记入 criterion_hits。"""
     rows, is_fallback = [], protocol_block["protocol_status"] == "missing_fallback_declared"
@@ -571,6 +613,7 @@ def cluster_topics(rtm: dict, vocab: dict, cfg: dict) -> tuple:
             grouped.update(support)
     singletons = sorted(set(rtm) - grouped)
     return clusters, singletons, term_sets
+
 
 
 def label_for_terms(terms: list, vocab: dict, cfg: dict) -> str:
@@ -1137,6 +1180,8 @@ def run(case: dict, task_text: str, args) -> Result:
     records = collect_records(case, bases, sources)
     question = parse_question(case, task_text)
     declared, declared_source = collect_themes(case)
+    protocol_block = build_protocol_block(case, criteria)
+    search_log = build_search_log(records, protocol_block, declared)
     res.log("intake", sources=len(sources), records=len(records),
             themes=declared_source, question_chars=len(question["text"]))
 
@@ -1152,7 +1197,6 @@ def run(case: dict, task_text: str, args) -> Result:
         return res
 
     # ---- B. 前瞻协议：先落盘计划文件，再逐条筛选 ----
-    protocol_block = build_protocol_block(case, criteria)
     constraints = case.get("constraints") if isinstance(case.get("constraints"), dict) else {}
     plan_doc = {"case_id": res.case_id, "skill": SKILL,
                 "question": question["text"], "question_source": question["source"],
@@ -1302,7 +1346,7 @@ def run(case: dict, task_text: str, args) -> Result:
                       "order_note": "先落盘协议与计划（plan.json），后对每条记录逐条筛选并记 criterion_hits，"
                                     "再执行 DOI/标题+年份去重",
                       "dedupe_rule": criteria.get("dedupe_rule", ""),
-                      "counts": counts, "records": rows,
+                      "counts": counts, "records": rows, "search_log": search_log,
                       "input_gap": protocol_block["input_gap"]},
         "topics": topics,
         "outline": outline,
@@ -1328,7 +1372,7 @@ def run(case: dict, task_text: str, args) -> Result:
                                         "note": "来源文件清单与解析结果；记录通过 source_path/source_id 指到来源文件"}
     res.evidence["protocol"] = protocol_block
     res.evidence["screening"] = {"counts": counts, "rule": criteria.get("screening_rule", ""),
-                                 "dedupe_rule": criteria.get("dedupe_rule", ""),
+                                 "dedupe_rule": criteria.get("dedupe_rule", ""), "search_log": search_log,
                                  "fallback": protocol_block["fallback"],
                                  "input_gap": protocol_block["input_gap"]}
     res.evidence["clustering"] = clustering_info
@@ -1439,6 +1483,9 @@ def _synthesis_hooks(args, result_path, payload):
                                "--case", str(getattr(args, "case", ""))],
                               capture_output=True, text=True, timeout=60)
         info["synthesis_input"] = str(work / "synthesis_input.json") if proc.returncode == 0 else "failed"
+        if proc.returncode == 0:
+            info["next"] = ("读 synthesis_input.json 与 rules/synthesis_prompt.md，写 work/synthesis.json，"
+                            "再重跑本命令；校验通过会写出 review.md")
     except Exception as exc:  # noqa: BLE001
         info["synthesis_input"] = f"{type(exc).__name__}: {exc}"
     syn = work / "synthesis.json"

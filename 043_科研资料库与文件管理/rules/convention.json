@@ -1,0 +1,20 @@
+{
+ "version": "0.2.0",
+ "description": "043 落库约定：目录模板、命名模板、默认排除与处理上限。换项目只改本文件与 case.convention，不动脚本。库目录引用字段名容错：materials_root/library_path/files_root/library_dir/library_root 或 library{root,path,dir}。",
+ "default_directory_template": "{project}/{year}/{kind}",
+ "default_naming_template": "{project}_{year}_{kind}_{seq}{ext}",
+ "template_fields": {
+  "project": "项目号，来自文件名/目录名/补充表，抽不到写 UNASSIGNED",
+  "year": "年份（4 位），抽不到写 UNDATED",
+  "kind": "数据类型（raw_data/analysis_note/document/code/image/binary/other），来自扩展名表",
+  "seq": "同目录序号，缺省按清单顺序两位补零",
+  "ext": "原扩展名（含点）"
+ },
+ "default_exclude": [".git", ".svn", "__pycache__", ".DS_Store", "node_modules", ".ipynb_checkpoints"],
+ "max_files": 5000,
+ "templates_are_relative": true,
+ "notes": [
+  "模板渲染失败（占位符无值）不中断：落到 unsorted/ 并保留原文件名，同时记 template_error",
+  "目标路径冲突不覆盖：同名加 -dupN 后缀，覆盖会切断版本链"
+ ]
+}

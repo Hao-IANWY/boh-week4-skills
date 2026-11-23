@@ -1,0 +1,5794 @@
+{
+ "case_id": "EXAMPLE-045-NOT-A-TEST-CASE",
+ "skill": {
+  "name": "literature-auto-classifier",
+  "version": "0.1.0"
+ },
+ "generated_at": "2026-11-23T18:30:35+0800",
+ "classification": [
+  {
+   "doc_id": "D1",
+   "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+   "name": "Retrosynthesis Prediction with GNN.pdf",
+   "fingerprint": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 142,
+    "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+    "gap_code": null
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "journal_article",
+    "confidence": 0.8644,
+    "level": "high",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "dataset",
+      "confidence": 0.2727,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.84,
+     "matched_terms": [
+      "graph neural network",
+      "message passing"
+     ],
+     "fields": [
+      "keywords",
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.8276,
+     "matched_terms": [
+      "retrosynthesis",
+      "single-step retrosynthesis"
+     ],
+     "fields": [
+      "abstract",
+      "title"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.6,
+     "matched_terms": [
+      "uspTO-50k"
+     ],
+     "fields": [
+      "abstract"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/journal_article/2021",
+    "template": "{root}/journal_article/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "Retrosynthesis Prediction with GNN.pdf",
+    "to": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D1",
+     "D8"
+    ]
+   },
+   "version": {
+    "family": "doi:10.1000/example.2021.001",
+    "primary_doc": "D1",
+    "role": "journal",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "journal-article"
+   }
+  },
+  {
+   "doc_id": "D2",
+   "path": "downloads/arxiv_2020.1234.pdf",
+   "name": "arxiv_2020.1234.pdf",
+   "fingerprint": "d8304484a5367048c7bf72a6d15635d57a142f5b3bad4d560c0ed139efaac0b8",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 80,
+    "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+    "gap_code": null
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "preprint",
+    "confidence": 0.8697,
+    "level": "high",
+    "labels": [
+     {
+      "category": "preprint",
+      "name": "预印本",
+      "confidence": 0.8697,
+      "level": "high",
+      "raw_score": 5.34,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "preprint",
+        "matched": "type=preprint",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "arxiv",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "preprint",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "预印本",
+        "normalized_offsets": [
+         26
+        ],
+        "weight": 1.2
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.8758,
+     "matched_terms": [
+      "gnn",
+      "graph neural network",
+      "message passing"
+     ],
+     "fields": [
+      "abstract",
+      "keywords",
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.75,
+     "matched_terms": [
+      "retrosynthesis"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.6,
+     "matched_terms": [
+      "uspTO-50k"
+     ],
+     "fields": [
+      "abstract"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/preprint/2020",
+    "template": "{root}/preprint/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "arxiv_2020.1234.pdf",
+    "to": "Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D2"
+    ]
+   },
+   "version": {
+    "family": "doi:10.1000/example.2021.001",
+    "primary_doc": "D1",
+    "role": "preprint",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "doi": "10.1000/example.2021.001",
+    "type": "preprint"
+   }
+  },
+  {
+   "doc_id": "D3",
+   "path": "downloads/neurips_bench_2023.pdf",
+   "name": "neurips_bench_2023.pdf",
+   "fingerprint": "7704fb7d414ccbee52b0b7a13ac00173f78f2c6a71c20891acb639c5e4f9bcd1",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 99,
+    "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+    "gap_code": null
+   },
+   "title": "Benchmarking Graph Neural Networks for Reaction Yield Prediction",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "conference_paper",
+    "confidence": 0.7576,
+    "level": "high",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.7576,
+      "level": "high",
+      "raw_score": 2.5,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "conference-paper",
+        "matched": "type=conference-paper",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "proceedings",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       }
+      ]
+     },
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         62
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "journal_article",
+      "confidence": 0.5556,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "反应产率预测",
+     "parent": "机器学习任务",
+     "confidence": 0.8333,
+     "matched_terms": [
+      "reaction yield",
+      "yield prediction"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.802,
+     "matched_terms": [
+      "gnn",
+      "message passing"
+     ],
+     "fields": [
+      "abstract",
+      "keywords"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.7714,
+     "matched_terms": [
+      "benchmark",
+      "open splits"
+     ],
+     "fields": [
+      "abstract",
+      "keywords"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/conference_paper/2023",
+    "template": "{root}/conference_paper/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "neurips_bench_2023.pdf",
+    "to": "Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D3"
+    ]
+   },
+   "version": {
+    "family": null,
+    "primary_doc": "D3",
+    "role": "single",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "Y. Chen"
+    ],
+    "year": 2023,
+    "venue": "NeurIPS Datasets and Benchmarks",
+    "doi": "10.1000/example.2023.777",
+    "type": "conference-paper"
+   }
+  },
+  {
+   "doc_id": "D4",
+   "path": "downloads/zenodo_usp50k_splits.zip",
+   "name": "zenodo_usp50k_splits.zip",
+   "fingerprint": "f0a472062ae9f4b351779dbc0b21245497c821e872734f138f11f56b6c85d810",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 83,
+    "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+    "gap_code": null
+   },
+   "title": "USPTO-50k open splits dataset",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "dataset",
+    "confidence": 0.8987,
+    "level": "high",
+    "labels": [
+     {
+      "category": "dataset",
+      "name": "数据集",
+      "confidence": 0.8987,
+      "level": "high",
+      "raw_score": 7.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "dataset",
+        "matched": "type=dataset",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "dataset",
+        "normalized_offsets": [
+         22
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "数据集",
+        "normalized_offsets": [
+         55
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "zenodo",
+        "normalized_offsets": [
+         90
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "data availability",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "journal_article",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.873,
+     "matched_terms": [
+      "benchmark",
+      "open splits",
+      "uspTO-50k"
+     ],
+     "fields": [
+      "keywords",
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.6429,
+     "matched_terms": [
+      "retrosynthesis"
+     ],
+     "fields": [
+      "abstract"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/dataset/2023",
+    "template": "{root}/dataset/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "zenodo_usp50k_splits.zip",
+    "to": "Chen-2023-USPTO-50k-open-splits-dataset.zip",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D4"
+    ]
+   },
+   "version": {
+    "family": null,
+    "primary_doc": "D4",
+    "role": "single",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "Y. Chen"
+    ],
+    "year": 2023,
+    "venue": "Zenodo",
+    "doi": "10.5281/example.2023.042",
+    "type": "dataset"
+   }
+  },
+  {
+   "doc_id": "D5",
+   "path": "downloads/si_example_2021.pdf",
+   "name": "si_example_2021.pdf",
+   "fingerprint": "21500619e513a7ca51d015d6b38ee7a8c192e154b6fa71d2b2f5c5d167964a1e",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 56,
+    "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+    "gap_code": null
+   },
+   "title": "Supporting Information for Retrosynthesis Prediction with GNN",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "supplementary",
+    "confidence": 0.905,
+    "level": "high",
+    "labels": [
+     {
+      "category": "supplementary",
+      "name": "补充材料",
+      "confidence": 0.905,
+      "level": "high",
+      "raw_score": 7.62,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "supplementary-material",
+        "matched": "type=supplementary",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "keywords",
+        "term": "supplementary",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.8
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "supporting information",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附图",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 0.96
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附表",
+        "normalized_offsets": [
+         35
+        ],
+        "weight": 0.96
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.75,
+     "matched_terms": [
+      "gnn"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.75,
+     "matched_terms": [
+      "retrosynthesis"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.5556,
+     "matched_terms": [
+      "uspTO-50k"
+     ],
+     "fields": [
+      "body"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/supplementary/2021",
+    "template": "{root}/supplementary/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "si_example_2021.pdf",
+    "to": "Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+    "template": "{author}-{year}-SI-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D5"
+    ]
+   },
+   "version": {
+    "family": "doi:10.1000/example.2021.001",
+    "primary_doc": "D1",
+    "role": "supplementary",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "A. Kim"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "supplementary-material"
+   }
+  },
+  {
+   "doc_id": "D6",
+   "path": "downloads/thesis_zhang_2022.pdf",
+   "name": "thesis_zhang_2022.pdf",
+   "fingerprint": "1334ffc2b7b5665bc3dfdbdc75e1387896203cc9bd2d155d6362e0b2d03b6ea1",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 29,
+    "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+    "gap_code": null
+   },
+   "title": "图神经网络在逆合成预测中的应用研究",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "thesis",
+    "confidence": 0.8502,
+    "level": "high",
+    "labels": [
+     {
+      "category": "thesis",
+      "name": "学位论文",
+      "confidence": 0.8502,
+      "level": "high",
+      "raw_score": 4.54,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "thesis",
+        "matched": "type=thesis",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "学位论文",
+        "normalized_offsets": [
+         1
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "导师",
+        "normalized_offsets": [
+         7
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "答辩",
+        "normalized_offsets": [
+         14
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.8571,
+     "matched_terms": [
+      "图神经",
+      "图神经网络"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.8571,
+     "matched_terms": [
+      "逆合成",
+      "逆合成预测"
+     ],
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.6,
+     "matched_terms": [
+      "uspTO-50k"
+     ],
+     "fields": [
+      "abstract"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/thesis/2022",
+    "template": "{root}/thesis/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "thesis_zhang_2022.pdf",
+    "to": "张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D6"
+    ]
+   },
+   "version": {
+    "family": null,
+    "primary_doc": "D6",
+    "role": "single",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "张伟"
+    ],
+    "year": 2022,
+    "venue": "某大学",
+    "type": "thesis"
+   }
+  },
+  {
+   "doc_id": "D7",
+   "path": "downloads/2023_fall_group_meeting_notes.md",
+   "name": "2023_fall_group_meeting_notes.md",
+   "fingerprint": "71a5f123714cadb8c2577fc64718439bd6d96c0e1a6d33a6f7c1783870c9d8fc",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 64,
+    "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+    "gap_code": null
+   },
+   "title": "课题组分工会安排（2023 秋）",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "low_confidence",
+   "doc_type": {
+    "primary": "conference_paper",
+    "confidence": 0.5556,
+    "level": "review",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "conference",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "journal_article",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [],
+   "directory": {
+    "path": "library/conference_paper/2023",
+    "template": "{root}/conference_paper/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "2023_fall_group_meeting_notes.md",
+    "to": "zz-author-2023-课题组分工会安排（2023-秋）.md",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [
+     "author"
+    ],
+    "degraded": true,
+    "degraded_reasons": [
+     "missing_fields:author"
+    ]
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D7"
+    ]
+   },
+   "version": {
+    "family": null,
+    "primary_doc": "D7",
+    "role": "single",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [],
+    "year": 2023
+   }
+  },
+  {
+   "doc_id": "D8",
+   "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+   "name": "Retrosynthesis Prediction with GNN (1).pdf",
+   "fingerprint": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "inline_case_json",
+    "n_chars": 142,
+    "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+    "gap_code": null
+   },
+   "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+   "title_source": "case_or_metadata",
+   "filename_garbled": false,
+   "status": "classified",
+   "doc_type": {
+    "primary": "journal_article",
+    "confidence": 0.8644,
+    "level": "high",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "alternatives": [
+     {
+      "category": "dataset",
+      "confidence": 0.2727,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "conference_paper",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [
+    {
+     "tag": "图神经网络",
+     "parent": "机器学习方法",
+     "confidence": 0.84,
+     "matched_terms": [
+      "graph neural network",
+      "message passing"
+     ],
+     "fields": [
+      "keywords",
+      "title"
+     ]
+    },
+    {
+     "tag": "逆合成预测",
+     "parent": "反应预测",
+     "confidence": 0.8276,
+     "matched_terms": [
+      "retrosynthesis",
+      "single-step retrosynthesis"
+     ],
+     "fields": [
+      "abstract",
+      "title"
+     ]
+    },
+    {
+     "tag": "基准数据集",
+     "parent": "数据资源",
+     "confidence": 0.6,
+     "matched_terms": [
+      "uspTO-50k"
+     ],
+     "fields": [
+      "abstract"
+     ]
+    }
+   ],
+   "directory": {
+    "path": "library/journal_article/2021",
+    "template": "{root}/journal_article/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "Retrosynthesis Prediction with GNN (1).pdf",
+    "to": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [],
+    "degraded": false,
+    "degraded_reasons": []
+   },
+   "duplicate": {
+    "is_duplicate": true,
+    "duplicate_of": "D1",
+    "kind": "text_duplicate",
+    "hash_group": [
+     "D1",
+     "D8"
+    ]
+   },
+   "version": {
+    "family": "doi:10.1000/example.2021.001",
+    "primary_doc": "D1",
+    "role": "duplicate",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [
+     "A. Kim",
+     "L. Duarte"
+    ],
+    "year": 2021,
+    "venue": "Journal of Chemical Information and Modeling",
+    "doi": "10.1000/example.2021.001",
+    "type": "journal-article"
+   }
+  },
+  {
+   "doc_id": "D9",
+   "path": "scans/2019_paper_notes.pdf",
+   "name": "2019_paper_notes.pdf",
+   "fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "file_sha256": null,
+   "size": null,
+   "extraction": {
+    "method": "",
+    "n_chars": 0,
+    "text_sha256": "",
+    "gap_code": "R_NO_TEXT"
+   },
+   "title": "",
+   "title_source": "absent",
+   "filename_garbled": false,
+   "status": "unclassified",
+   "doc_type": {
+    "primary": null,
+    "confidence": 0.0,
+    "level": "none",
+    "labels": [],
+    "alternatives": [
+     {
+      "category": "dataset",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     },
+     {
+      "category": "journal_article",
+      "confidence": 0.0,
+      "reason": "低于阈值未采用"
+     }
+    ]
+   },
+   "tags": [],
+   "directory": {
+    "path": "library/unclassified/2019",
+    "template": "{root}/{doc_type}/{year}",
+    "missing_fields": [],
+    "degraded": false
+   },
+   "filename": {
+    "from": "2019_paper_notes.pdf",
+    "to": "zz-author-2019-untitled.pdf",
+    "template": "{author}-{year}-{title}.{ext}",
+    "missing_fields": [
+     "author",
+     "title"
+    ],
+    "degraded": true,
+    "degraded_reasons": [
+     "missing_fields:author,title",
+     "no_title"
+    ]
+   },
+   "duplicate": {
+    "is_duplicate": false,
+    "duplicate_of": null,
+    "kind": null,
+    "hash_group": [
+     "D9"
+    ]
+   },
+   "version": {
+    "family": null,
+    "primary_doc": "D9",
+    "role": "single",
+    "version_token": ""
+   },
+   "metadata": {
+    "authors": [],
+    "year": 2019
+   }
+  }
+ ],
+ "unclassified": [
+  {
+   "doc_id": "D9",
+   "path": "scans/2019_paper_notes.pdf",
+   "name": "2019_paper_notes.pdf",
+   "code": "R_UNCLASSIFIED",
+   "reason": "所有类别置信度均低于 review 阈值",
+   "extraction_gap": "R_NO_TEXT",
+   "best_candidate": {
+    "category": null,
+    "confidence": 0.0,
+    "note": "无任何规则命中时不给候选类别"
+   },
+   "missing": [
+    "title",
+    "venue",
+    "doi",
+    "type"
+   ]
+  }
+ ],
+ "low_confidence": [
+  {
+   "doc_id": "D7",
+   "path": "downloads/2023_fall_group_meeting_notes.md",
+   "label": "conference_paper",
+   "confidence": 0.5556,
+   "code": "R_LOW_CONFIDENCE",
+   "note": "入选 review 档，需人工确认后再落入目录"
+  }
+ ],
+ "manual_review": [
+  {
+   "doc_id": "D7",
+   "path": "downloads/2023_fall_group_meeting_notes.md",
+   "code": "R_LOW_CONFIDENCE",
+   "label": "conference_paper",
+   "confidence": 0.5556,
+   "note": "分类置信度落在 review 档，需人工确认后再入目录"
+  }
+ ],
+ "operations": [
+  {
+   "op_id": "OP0001",
+   "action": "move_rename",
+   "doc_id": "D1",
+   "src": "downloads/Retrosynthesis Prediction with GNN.pdf",
+   "dst": "library/journal_article/2021/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "basis": "目录模板 {root}/journal_article/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+   "idempotency_key": "6aa65e06989a",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/journal_article/2021/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "dst": "downloads/Retrosynthesis Prediction with GNN.pdf"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0002",
+   "action": "move_rename",
+   "doc_id": "D2",
+   "src": "downloads/arxiv_2020.1234.pdf",
+   "dst": "library/preprint/2020/Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "basis": "目录模板 {root}/preprint/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+   "idempotency_key": "c8ce3003a2c5",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/preprint/2020/Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "dst": "downloads/arxiv_2020.1234.pdf"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0003",
+   "action": "move_rename",
+   "doc_id": "D3",
+   "src": "downloads/neurips_bench_2023.pdf",
+   "dst": "library/conference_paper/2023/Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+   "basis": "目录模板 {root}/conference_paper/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+   "idempotency_key": "6517fdb3094e",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/conference_paper/2023/Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+    "dst": "downloads/neurips_bench_2023.pdf"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0004",
+   "action": "move_rename",
+   "doc_id": "D4",
+   "src": "downloads/zenodo_usp50k_splits.zip",
+   "dst": "library/dataset/2023/Chen-2023-USPTO-50k-open-splits-dataset.zip",
+   "basis": "目录模板 {root}/dataset/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+   "idempotency_key": "37435e28b5ef",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/dataset/2023/Chen-2023-USPTO-50k-open-splits-dataset.zip",
+    "dst": "downloads/zenodo_usp50k_splits.zip"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0005",
+   "action": "move_rename",
+   "doc_id": "D5",
+   "src": "downloads/si_example_2021.pdf",
+   "dst": "library/supplementary/2021/Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+   "basis": "目录模板 {root}/supplementary/{year} + 命名模板 {author}-{year}-SI-{title}.{ext}",
+   "idempotency_key": "c794ce65d2a8",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/supplementary/2021/Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+    "dst": "downloads/si_example_2021.pdf"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0006",
+   "action": "move_rename",
+   "doc_id": "D6",
+   "src": "downloads/thesis_zhang_2022.pdf",
+   "dst": "library/thesis/2022/张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+   "basis": "目录模板 {root}/thesis/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+   "idempotency_key": "cebb9c3142f9",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/thesis/2022/张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+    "dst": "downloads/thesis_zhang_2022.pdf"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0007",
+   "action": "move_rename",
+   "doc_id": "D7",
+   "src": "downloads/2023_fall_group_meeting_notes.md",
+   "dst": "library/conference_paper/2023/zz-author-2023-课题组分工会安排（2023-秋）.md",
+   "basis": "目录模板 {root}/conference_paper/{year} + 命名模板 {author}-{year}-{title}.{ext}（缺字段已降级占位）",
+   "idempotency_key": "a59f10909793",
+   "rollback": {
+    "action": "move_rename",
+    "src": "library/conference_paper/2023/zz-author-2023-课题组分工会安排（2023-秋）.md",
+    "dst": "downloads/2023_fall_group_meeting_notes.md"
+   },
+   "reason": "按目录模板与命名模板归档",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "move_rename"
+  },
+  {
+   "op_id": "OP0008",
+   "action": "archive_duplicate",
+   "doc_id": "D8",
+   "src": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+   "dst": "archive/duplicates/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "basis": "与 D1 正文归一指纹相同（同文不同名副本）",
+   "kind": "text_duplicate",
+   "idempotency_key": "0c9645f8a66a",
+   "rollback": {
+    "action": "move",
+    "src": "archive/duplicates/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "dst": "downloads/Retrosynthesis Prediction with GNN (1).pdf"
+   },
+   "reason": "副本只归档不覆盖不删除；canonical 文件保留原语义",
+   "input_readonly": false,
+   "executed": false,
+   "suggested_action": "archive_duplicate"
+  }
+ ],
+ "unprocessed": [
+  {
+   "doc_id": "D9",
+   "path": "scans/2019_paper_notes.pdf",
+   "code": "R_NO_TEXT",
+   "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+   "suggested_action": "确认文件内容后重跑"
+  }
+ ],
+ "library_report": {
+  "mode": "inline",
+  "root": null,
+  "root_resolution": [
+   "inline（无库目录，使用 case 内联材料）"
+  ],
+  "files_scanned": 0,
+  "documents": 9,
+  "auxiliary_files": [],
+  "empty_dirs": [],
+  "metadata_source": "case 未提供伴随元数据表（metadata_csv 等）",
+  "metadata_rows": 0,
+  "alias_groups": [],
+  "near_duplicate_hints": [
+   {
+    "a": "downloads/Retrosynthesis Prediction with GNN.pdf",
+    "b": "downloads/arxiv_2020.1234.pdf",
+    "title_key": "retrosynthesispredictionwithgraphneuralnetworksandmessagepassing",
+    "note": "同归一化标题但内容不同：近重复（可能为不同版本/修订），建议人工确认，不自动合并"
+   }
+  ],
+  "version_groups": [],
+  "version_notes_fields": "version_notes, admin_notes, versions",
+  "gaps": [
+   {
+    "path": "scans/2019_paper_notes.pdf",
+    "code": "R_NO_TEXT",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+   }
+  ],
+  "extraction_methods": {
+   "downloads/Retrosynthesis Prediction with GNN.pdf": {
+    "method": "inline_case_json",
+    "n_chars": 142,
+    "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/arxiv_2020.1234.pdf": {
+    "method": "inline_case_json",
+    "n_chars": 80,
+    "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/neurips_bench_2023.pdf": {
+    "method": "inline_case_json",
+    "n_chars": 99,
+    "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/zenodo_usp50k_splits.zip": {
+    "method": "inline_case_json",
+    "n_chars": 83,
+    "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/si_example_2021.pdf": {
+    "method": "inline_case_json",
+    "n_chars": 56,
+    "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/thesis_zhang_2022.pdf": {
+    "method": "inline_case_json",
+    "n_chars": 29,
+    "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/2023_fall_group_meeting_notes.md": {
+    "method": "inline_case_json",
+    "n_chars": 64,
+    "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+    "file_sha256": null,
+    "size": null
+   },
+   "downloads/Retrosynthesis Prediction with GNN (1).pdf": {
+    "method": "inline_case_json",
+    "n_chars": 142,
+    "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+    "file_sha256": null,
+    "size": null
+   },
+   "scans/2019_paper_notes.pdf": {
+    "method": null,
+    "n_chars": 0,
+    "text_sha256": null,
+    "file_sha256": null,
+    "size": null
+   }
+  }
+ },
+ "records_view": [
+  {
+   "doc_id": "D1",
+   "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+   "status": "classified",
+   "doc_type": "journal_article",
+   "confidence": 0.8644,
+   "tags": [
+    "图神经网络",
+    "逆合成预测",
+    "基准数据集"
+   ],
+   "dst_dir": "library/journal_article/2021",
+   "dst_name": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D2",
+   "path": "downloads/arxiv_2020.1234.pdf",
+   "status": "classified",
+   "doc_type": "preprint",
+   "confidence": 0.8697,
+   "tags": [
+    "图神经网络",
+    "逆合成预测",
+    "基准数据集"
+   ],
+   "dst_dir": "library/preprint/2020",
+   "dst_name": "Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D3",
+   "path": "downloads/neurips_bench_2023.pdf",
+   "status": "classified",
+   "doc_type": "conference_paper",
+   "confidence": 0.7576,
+   "tags": [
+    "反应产率预测",
+    "图神经网络",
+    "基准数据集"
+   ],
+   "dst_dir": "library/conference_paper/2023",
+   "dst_name": "Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D4",
+   "path": "downloads/zenodo_usp50k_splits.zip",
+   "status": "classified",
+   "doc_type": "dataset",
+   "confidence": 0.8987,
+   "tags": [
+    "基准数据集",
+    "逆合成预测"
+   ],
+   "dst_dir": "library/dataset/2023",
+   "dst_name": "Chen-2023-USPTO-50k-open-splits-dataset.zip",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D5",
+   "path": "downloads/si_example_2021.pdf",
+   "status": "classified",
+   "doc_type": "supplementary",
+   "confidence": 0.905,
+   "tags": [
+    "图神经网络",
+    "逆合成预测",
+    "基准数据集"
+   ],
+   "dst_dir": "library/supplementary/2021",
+   "dst_name": "Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D6",
+   "path": "downloads/thesis_zhang_2022.pdf",
+   "status": "classified",
+   "doc_type": "thesis",
+   "confidence": 0.8502,
+   "tags": [
+    "图神经网络",
+    "逆合成预测",
+    "基准数据集"
+   ],
+   "dst_dir": "library/thesis/2022",
+   "dst_name": "张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D7",
+   "path": "downloads/2023_fall_group_meeting_notes.md",
+   "status": "low_confidence",
+   "doc_type": "conference_paper",
+   "confidence": 0.5556,
+   "tags": [],
+   "dst_dir": "library/conference_paper/2023",
+   "dst_name": "zz-author-2023-课题组分工会安排（2023-秋）.md",
+   "duplicate_of": null,
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D8",
+   "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+   "status": "classified",
+   "doc_type": "journal_article",
+   "confidence": 0.8644,
+   "tags": [
+    "图神经网络",
+    "逆合成预测",
+    "基准数据集"
+   ],
+   "dst_dir": "library/journal_article/2021",
+   "dst_name": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+   "duplicate_of": "D1",
+   "extraction_method": "inline_case_json",
+   "file_sha256": null
+  },
+  {
+   "doc_id": "D9",
+   "path": "scans/2019_paper_notes.pdf",
+   "status": "unclassified",
+   "doc_type": null,
+   "confidence": 0.0,
+   "tags": [],
+   "dst_dir": "library/unclassified/2019",
+   "dst_name": "zz-author-2019-untitled.pdf",
+   "duplicate_of": null,
+   "extraction_method": "",
+   "file_sha256": null
+  }
+ ],
+ "evidence_map": {
+  "rules": {
+   "taxonomy_version": "0.1.0",
+   "tag_vocabulary_version": "0.1.0",
+   "classification_rules_version": "0.2.0",
+   "thresholds": {
+    "high_confidence": 0.6,
+    "review_confidence": 0.35,
+    "max_type_labels": 2,
+    "max_tags": 4,
+    "min_tag_confidence": 0.3
+   },
+   "field_weights": {
+    "title": 2.0,
+    "keywords": 1.5,
+    "venue": 1.5,
+    "abstract": 1.2,
+    "body": 1.0
+   },
+   "saturation": 0.8,
+   "formula": "confidence = raw/(raw+k)，raw = Σ(term_weight×field_weight) + metadata 命中权重 − negative 权重"
+  },
+  "inventory": {
+   "docs": 9,
+   "readable": 8,
+   "unreadable": [
+    {
+     "doc_id": "D9",
+     "path": "scans/2019_paper_notes.pdf",
+     "code": "R_NO_TEXT",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "hash_groups": [
+    {
+     "sha256": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+     "doc_ids": [
+      "D1",
+      "D8"
+     ]
+    },
+    {
+     "sha256": "d8304484a5367048c7bf72a6d15635d57a142f5b3bad4d560c0ed139efaac0b8",
+     "doc_ids": [
+      "D2"
+     ]
+    },
+    {
+     "sha256": "7704fb7d414ccbee52b0b7a13ac00173f78f2c6a71c20891acb639c5e4f9bcd1",
+     "doc_ids": [
+      "D3"
+     ]
+    },
+    {
+     "sha256": "f0a472062ae9f4b351779dbc0b21245497c821e872734f138f11f56b6c85d810",
+     "doc_ids": [
+      "D4"
+     ]
+    },
+    {
+     "sha256": "21500619e513a7ca51d015d6b38ee7a8c192e154b6fa71d2b2f5c5d167964a1e",
+     "doc_ids": [
+      "D5"
+     ]
+    },
+    {
+     "sha256": "1334ffc2b7b5665bc3dfdbdc75e1387896203cc9bd2d155d6362e0b2d03b6ea1",
+     "doc_ids": [
+      "D6"
+     ]
+    },
+    {
+     "sha256": "71a5f123714cadb8c2577fc64718439bd6d96c0e1a6d33a6f7c1783870c9d8fc",
+     "doc_ids": [
+      "D7"
+     ]
+    },
+    {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "doc_ids": [
+      "D9"
+     ]
+    }
+   ],
+   "version_families": [
+    {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "members": [
+      {
+       "doc_id": "D1",
+       "year": 2021,
+       "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+       "type": "journal-article",
+       "role": "journal",
+       "version": "",
+       "kept_as_primary": true
+      },
+      {
+       "doc_id": "D2",
+       "year": 2020,
+       "path": "downloads/arxiv_2020.1234.pdf",
+       "type": "preprint",
+       "role": "preprint",
+       "version": "",
+       "kept_as_primary": false
+      },
+      {
+       "doc_id": "D5",
+       "year": 2021,
+       "path": "downloads/si_example_2021.pdf",
+       "type": "supplementary-material",
+       "role": "supplementary",
+       "version": "",
+       "kept_as_primary": false
+      },
+      {
+       "doc_id": "D8",
+       "year": 2021,
+       "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+       "type": "journal-article",
+       "role": "duplicate",
+       "version": "",
+       "kept_as_primary": false
+      }
+     ],
+     "evidence": "DOI 归一相同",
+     "policy": "正式版角色优先、版本序大者优先；全部保留不删除，预印本/修订版/补充材料不当独立文献，归档建议写 ops_log"
+    }
+   ]
+  },
+  "library": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "documents": 9,
+   "auxiliary_files": [],
+   "empty_dirs": [],
+   "metadata_source": "case 未提供伴随元数据表（metadata_csv 等）",
+   "metadata_rows": 0,
+   "alias_groups": [],
+   "near_duplicate_hints": [
+    {
+     "a": "downloads/Retrosynthesis Prediction with GNN.pdf",
+     "b": "downloads/arxiv_2020.1234.pdf",
+     "title_key": "retrosynthesispredictionwithgraphneuralnetworksandmessagepassing",
+     "note": "同归一化标题但内容不同：近重复（可能为不同版本/修订），建议人工确认，不自动合并"
+    }
+   ],
+   "version_groups": [],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "gaps": [
+    {
+     "path": "scans/2019_paper_notes.pdf",
+     "code": "R_NO_TEXT",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "extraction_methods": {
+    "downloads/Retrosynthesis Prediction with GNN.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/arxiv_2020.1234.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 80,
+     "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/neurips_bench_2023.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 99,
+     "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/zenodo_usp50k_splits.zip": {
+     "method": "inline_case_json",
+     "n_chars": 83,
+     "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/si_example_2021.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 56,
+     "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/thesis_zhang_2022.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 29,
+     "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/2023_fall_group_meeting_notes.md": {
+     "method": "inline_case_json",
+     "n_chars": 64,
+     "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/Retrosynthesis Prediction with GNN (1).pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "scans/2019_paper_notes.pdf": {
+     "method": null,
+     "n_chars": 0,
+     "text_sha256": null,
+     "file_sha256": null,
+     "size": null
+    }
+   },
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与操作日志"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "extraction_chain": "内联正文 → 侧车 .txt/.ocr.txt → pdf_min 文本层 → DOCX zip+xml → 纯文本 → 诚实 gap"
+  },
+  "label_evidence": [
+   {
+    "doc_id": "D1",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D2",
+    "labels": [
+     {
+      "category": "preprint",
+      "name": "预印本",
+      "confidence": 0.8697,
+      "level": "high",
+      "raw_score": 5.34,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "preprint",
+        "matched": "type=preprint",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "arxiv",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "preprint",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "预印本",
+        "normalized_offsets": [
+         26
+        ],
+        "weight": 1.2
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8758,
+      "matched_terms": [
+       "gnn",
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D3",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.7576,
+      "level": "high",
+      "raw_score": 2.5,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "conference-paper",
+        "matched": "type=conference-paper",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "proceedings",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       }
+      ]
+     },
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         62
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "反应产率预测",
+      "parent": "机器学习任务",
+      "confidence": 0.8333,
+      "matched_terms": [
+       "reaction yield",
+       "yield prediction"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.802,
+      "matched_terms": [
+       "gnn",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.7714,
+      "matched_terms": [
+       "benchmark",
+       "open splits"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D4",
+    "labels": [
+     {
+      "category": "dataset",
+      "name": "数据集",
+      "confidence": 0.8987,
+      "level": "high",
+      "raw_score": 7.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "dataset",
+        "matched": "type=dataset",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "dataset",
+        "normalized_offsets": [
+         22
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "数据集",
+        "normalized_offsets": [
+         55
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "zenodo",
+        "normalized_offsets": [
+         90
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "data availability",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.873,
+      "matched_terms": [
+       "benchmark",
+       "open splits",
+       "uspTO-50k"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.6429,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D5",
+    "labels": [
+     {
+      "category": "supplementary",
+      "name": "补充材料",
+      "confidence": 0.905,
+      "level": "high",
+      "raw_score": 7.62,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "supplementary-material",
+        "matched": "type=supplementary",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "keywords",
+        "term": "supplementary",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.8
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "supporting information",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附图",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 0.96
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附表",
+        "normalized_offsets": [
+         35
+        ],
+        "weight": 0.96
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.75,
+      "matched_terms": [
+       "gnn"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.5556,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "body"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D6",
+    "labels": [
+     {
+      "category": "thesis",
+      "name": "学位论文",
+      "confidence": 0.8502,
+      "level": "high",
+      "raw_score": 4.54,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "thesis",
+        "matched": "type=thesis",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "学位论文",
+        "normalized_offsets": [
+         1
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "导师",
+        "normalized_offsets": [
+         7
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "答辩",
+        "normalized_offsets": [
+         14
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "图神经",
+       "图神经网络"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "逆合成",
+       "逆合成预测"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D7",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "conference",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "tags": []
+   },
+   {
+    "doc_id": "D8",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D9",
+    "labels": [],
+    "tags": []
+   }
+  ],
+  "tag_normalization": {
+   "merges": [
+    {
+     "doc_id": "D1",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis",
+        "single-step retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D2",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn",
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D3",
+     "merges": [
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "反应产率预测",
+       "merged_from": [
+        "reaction yield",
+        "yield prediction"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "benchmark",
+        "open splits"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D4",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "benchmark",
+        "open splits",
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D5",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D6",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "逆合成"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "图神经"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D7",
+     "merges": []
+    },
+    {
+     "doc_id": "D8",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis",
+        "single-step retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D9",
+     "merges": []
+    }
+   ],
+   "policy": {
+    "canonical_first": true,
+    "merge_policy": "同义词命中全部并入 canonical 标签，merged_from 留痕；同一标签同一文档只出现一次",
+    "granularity_cap": "每份文档最多保留 max_tags 个标签（见 classification_rules.json），按置信度截断",
+    "parent_policy": "上位标签只作层级提示，不自动打给文档，避免上下位重复计数"
+   },
+   "distribution": {
+    "图神经网络": 6,
+    "逆合成预测": 6,
+    "基准数据集": 7,
+    "反应产率预测": 1
+   }
+  },
+  "naming": {
+   "templates": {
+    "library_root": "library",
+    "archive_root": "archive",
+    "default_dir_template": "{root}/{doc_type}/{year}",
+    "default_name_template": "{author}-{year}-{title}.{ext}",
+    "title_max_chars": 40,
+    "filename_max_chars": 120,
+    "null_tokens": {
+     "author": "zz-author",
+     "year": "nd",
+     "venue": "zz-venue",
+     "doc_type": "unclassified",
+     "project": "zz-project",
+     "title": "untitled"
+    },
+    "degrade_rule": "任何字段缺失 → 用 null_token 占位并把 degraded=true、missing_fields 列名；严禁补造作者/年份/期刊/DOI"
+   },
+   "degraded_docs": [
+    "D7",
+    "D9"
+   ],
+   "conflicts": [],
+   "existing_conflicts": [],
+   "garbled_names": [],
+   "note": "缺字段用 null_token 占位并标 degraded=true；冲突按版本/角色/指纹短码消歧，绝不覆盖"
+  },
+  "distribution": {
+   "by_doc_type": {
+    "journal_article": 2,
+    "preprint": 1,
+    "conference_paper": 2,
+    "dataset": 1,
+    "supplementary": 1,
+    "thesis": 1,
+    "unclassified": 1
+   },
+   "by_tag": {
+    "图神经网络": 6,
+    "逆合成预测": 6,
+    "基准数据集": 7,
+    "反应产率预测": 1
+   }
+  },
+  "operations": {
+   "mode": "dry_run",
+   "library_mode": false,
+   "planned": 8,
+   "journal": [],
+   "idempotency": "每步带 idempotency_key；重复运行得到同一计划；未处理项在 unprocessed 单列，可续跑",
+   "rollback": "每步 rollback 字段给出逆操作或「未执行，天然可逆」说明",
+   "readonly_proof": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与操作日志"
+   }
+  },
+  "scope": {
+   "cases_seen": [
+    "EXAMPLE-045-NOT-A-TEST-CASE"
+   ],
+   "no_network": true,
+   "note": "类别、标签、命名全部由 rules/ 与材料本身推出，未使用外部模型判断"
+  }
+ },
+ "状态说明": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "去重与版本族/版本组",
+   "规则优先分类",
+   "标签归并与粒度控制",
+   "命名与目录模板降级",
+   "批量操作计划（建议 + 幂等 + 回滚）"
+  ],
+  "unmet": [
+   {
+    "item": "未分类",
+    "reason": "1 份文件无类别达阈值，已单列并给最接近候选，不强行归类"
+   },
+   {
+    "item": "低置信",
+    "reason": "1 份文件落在 review 档，需人工确认"
+   },
+   {
+    "item": "文件提取",
+    "reason": "1 份 R_NO_TEXT——诚实跳过，未伪造文本（详见 unprocessed）"
+   },
+   {
+    "item": "文件库目录",
+    "reason": "case 未声明文件库目录（library_path/materials_root 等字符串路径），按内联材料处理"
+   }
+  ],
+  "notes": [
+   "1 对近重复（同归一化标题、内容不同）仅提示，不自动合并"
+  ]
+ },
+ "result": {
+  "classification": [
+   {
+    "doc_id": "D1",
+    "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+    "name": "Retrosynthesis Prediction with GNN.pdf",
+    "fingerprint": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "gap_code": null
+    },
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "journal_article",
+     "confidence": 0.8644,
+     "level": "high",
+     "labels": [
+      {
+       "category": "journal_article",
+       "name": "期刊论文",
+       "confidence": 0.8644,
+       "level": "high",
+       "raw_score": 5.1,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "journal-article",
+         "matched": "type=journal-article",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "abstract",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.0
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "keywords",
+         "normalized_offsets": [
+          32
+         ],
+         "weight": 0.8
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "references",
+         "normalized_offsets": [
+          79
+         ],
+         "weight": 0.6
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "doi",
+         "normalized_offsets": [
+          114
+         ],
+         "weight": 0.8
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "received",
+         "normalized_offsets": [
+          9
+         ],
+         "weight": 0.4
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "dataset",
+       "confidence": 0.2727,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/journal_article/2021",
+     "template": "{root}/journal_article/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "Retrosynthesis Prediction with GNN.pdf",
+     "to": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D1",
+      "D8"
+     ]
+    },
+    "version": {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "role": "journal",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "A. Kim",
+      "L. Duarte"
+     ],
+     "year": 2021,
+     "venue": "Journal of Chemical Information and Modeling",
+     "doi": "10.1000/example.2021.001",
+     "type": "journal-article"
+    }
+   },
+   {
+    "doc_id": "D2",
+    "path": "downloads/arxiv_2020.1234.pdf",
+    "name": "arxiv_2020.1234.pdf",
+    "fingerprint": "d8304484a5367048c7bf72a6d15635d57a142f5b3bad4d560c0ed139efaac0b8",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 80,
+     "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+     "gap_code": null
+    },
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "preprint",
+     "confidence": 0.8697,
+     "level": "high",
+     "labels": [
+      {
+       "category": "preprint",
+       "name": "预印本",
+       "confidence": 0.8697,
+       "level": "high",
+       "raw_score": 5.34,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "preprint",
+         "matched": "type=preprint",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "arxiv",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.2
+        },
+        {
+         "kind": "term",
+         "field": "abstract",
+         "term": "preprint",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.44
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "预印本",
+         "normalized_offsets": [
+          26
+         ],
+         "weight": 1.2
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8758,
+      "matched_terms": [
+       "gnn",
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/preprint/2020",
+     "template": "{root}/preprint/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "arxiv_2020.1234.pdf",
+     "to": "Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D2"
+     ]
+    },
+    "version": {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "role": "preprint",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "A. Kim",
+      "L. Duarte"
+     ],
+     "year": 2020,
+     "venue": "arXiv",
+     "doi": "10.1000/example.2021.001",
+     "type": "preprint"
+    }
+   },
+   {
+    "doc_id": "D3",
+    "path": "downloads/neurips_bench_2023.pdf",
+    "name": "neurips_bench_2023.pdf",
+    "fingerprint": "7704fb7d414ccbee52b0b7a13ac00173f78f2c6a71c20891acb639c5e4f9bcd1",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 99,
+     "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+     "gap_code": null
+    },
+    "title": "Benchmarking Graph Neural Networks for Reaction Yield Prediction",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "conference_paper",
+     "confidence": 0.7576,
+     "level": "high",
+     "labels": [
+      {
+       "category": "conference_paper",
+       "name": "会议论文",
+       "confidence": 0.7576,
+       "level": "high",
+       "raw_score": 2.5,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "conference-paper",
+         "matched": "type=conference-paper",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "proceedings",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.0
+        }
+       ]
+      },
+      {
+       "category": "journal_article",
+       "name": "期刊论文",
+       "confidence": 0.5556,
+       "level": "review",
+       "raw_score": 1.0,
+       "hits": [
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "abstract",
+         "normalized_offsets": [
+          62
+         ],
+         "weight": 1.0
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "journal_article",
+       "confidence": 0.5556,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "反应产率预测",
+      "parent": "机器学习任务",
+      "confidence": 0.8333,
+      "matched_terms": [
+       "reaction yield",
+       "yield prediction"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.802,
+      "matched_terms": [
+       "gnn",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.7714,
+      "matched_terms": [
+       "benchmark",
+       "open splits"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/conference_paper/2023",
+     "template": "{root}/conference_paper/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "neurips_bench_2023.pdf",
+     "to": "Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D3"
+     ]
+    },
+    "version": {
+     "family": null,
+     "primary_doc": "D3",
+     "role": "single",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "Y. Chen"
+     ],
+     "year": 2023,
+     "venue": "NeurIPS Datasets and Benchmarks",
+     "doi": "10.1000/example.2023.777",
+     "type": "conference-paper"
+    }
+   },
+   {
+    "doc_id": "D4",
+    "path": "downloads/zenodo_usp50k_splits.zip",
+    "name": "zenodo_usp50k_splits.zip",
+    "fingerprint": "f0a472062ae9f4b351779dbc0b21245497c821e872734f138f11f56b6c85d810",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 83,
+     "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+     "gap_code": null
+    },
+    "title": "USPTO-50k open splits dataset",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "dataset",
+     "confidence": 0.8987,
+     "level": "high",
+     "labels": [
+      {
+       "category": "dataset",
+       "name": "数据集",
+       "confidence": 0.8987,
+       "level": "high",
+       "raw_score": 7.1,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "dataset",
+         "matched": "type=dataset",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "title",
+         "term": "dataset",
+         "normalized_offsets": [
+          22
+         ],
+         "weight": 2.4
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "数据集",
+         "normalized_offsets": [
+          55
+         ],
+         "weight": 1.2
+        },
+        {
+         "kind": "term",
+         "field": "abstract",
+         "term": "zenodo",
+         "normalized_offsets": [
+          90
+         ],
+         "weight": 1.2
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "data availability",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 0.8
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "journal_article",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.873,
+      "matched_terms": [
+       "benchmark",
+       "open splits",
+       "uspTO-50k"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.6429,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/dataset/2023",
+     "template": "{root}/dataset/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "zenodo_usp50k_splits.zip",
+     "to": "Chen-2023-USPTO-50k-open-splits-dataset.zip",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D4"
+     ]
+    },
+    "version": {
+     "family": null,
+     "primary_doc": "D4",
+     "role": "single",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "Y. Chen"
+     ],
+     "year": 2023,
+     "venue": "Zenodo",
+     "doi": "10.5281/example.2023.042",
+     "type": "dataset"
+    }
+   },
+   {
+    "doc_id": "D5",
+    "path": "downloads/si_example_2021.pdf",
+    "name": "si_example_2021.pdf",
+    "fingerprint": "21500619e513a7ca51d015d6b38ee7a8c192e154b6fa71d2b2f5c5d167964a1e",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 56,
+     "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+     "gap_code": null
+    },
+    "title": "Supporting Information for Retrosynthesis Prediction with GNN",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "supplementary",
+     "confidence": 0.905,
+     "level": "high",
+     "labels": [
+      {
+       "category": "supplementary",
+       "name": "补充材料",
+       "confidence": 0.905,
+       "level": "high",
+       "raw_score": 7.62,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "supplementary-material",
+         "matched": "type=supplementary",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "keywords",
+         "term": "supplementary",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.8
+        },
+        {
+         "kind": "term",
+         "field": "title",
+         "term": "supporting information",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 2.4
+        },
+        {
+         "kind": "term",
+         "field": "abstract",
+         "term": "附图",
+         "normalized_offsets": [
+          25
+         ],
+         "weight": 0.96
+        },
+        {
+         "kind": "term",
+         "field": "abstract",
+         "term": "附表",
+         "normalized_offsets": [
+          35
+         ],
+         "weight": 0.96
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.75,
+      "matched_terms": [
+       "gnn"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.5556,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "body"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/supplementary/2021",
+     "template": "{root}/supplementary/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "si_example_2021.pdf",
+     "to": "Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+     "template": "{author}-{year}-SI-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D5"
+     ]
+    },
+    "version": {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "role": "supplementary",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "A. Kim"
+     ],
+     "year": 2021,
+     "venue": "Journal of Chemical Information and Modeling",
+     "doi": "10.1000/example.2021.001",
+     "type": "supplementary-material"
+    }
+   },
+   {
+    "doc_id": "D6",
+    "path": "downloads/thesis_zhang_2022.pdf",
+    "name": "thesis_zhang_2022.pdf",
+    "fingerprint": "1334ffc2b7b5665bc3dfdbdc75e1387896203cc9bd2d155d6362e0b2d03b6ea1",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 29,
+     "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+     "gap_code": null
+    },
+    "title": "图神经网络在逆合成预测中的应用研究",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "thesis",
+     "confidence": 0.8502,
+     "level": "high",
+     "labels": [
+      {
+       "category": "thesis",
+       "name": "学位论文",
+       "confidence": 0.8502,
+       "level": "high",
+       "raw_score": 4.54,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "thesis",
+         "matched": "type=thesis",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "abstract",
+         "term": "学位论文",
+         "normalized_offsets": [
+          1
+         ],
+         "weight": 1.44
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "导师",
+         "normalized_offsets": [
+          7
+         ],
+         "weight": 0.8
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "答辩",
+         "normalized_offsets": [
+          14
+         ],
+         "weight": 0.8
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "图神经",
+       "图神经网络"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "逆合成",
+       "逆合成预测"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/thesis/2022",
+     "template": "{root}/thesis/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "thesis_zhang_2022.pdf",
+     "to": "张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D6"
+     ]
+    },
+    "version": {
+     "family": null,
+     "primary_doc": "D6",
+     "role": "single",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "张伟"
+     ],
+     "year": 2022,
+     "venue": "某大学",
+     "type": "thesis"
+    }
+   },
+   {
+    "doc_id": "D7",
+    "path": "downloads/2023_fall_group_meeting_notes.md",
+    "name": "2023_fall_group_meeting_notes.md",
+    "fingerprint": "71a5f123714cadb8c2577fc64718439bd6d96c0e1a6d33a6f7c1783870c9d8fc",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 64,
+     "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+     "gap_code": null
+    },
+    "title": "课题组分工会安排（2023 秋）",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "low_confidence",
+    "doc_type": {
+     "primary": "conference_paper",
+     "confidence": 0.5556,
+     "level": "review",
+     "labels": [
+      {
+       "category": "conference_paper",
+       "name": "会议论文",
+       "confidence": 0.5556,
+       "level": "review",
+       "raw_score": 1.0,
+       "hits": [
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "conference",
+         "normalized_offsets": [
+          25
+         ],
+         "weight": 1.0
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "journal_article",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [],
+    "directory": {
+     "path": "library/conference_paper/2023",
+     "template": "{root}/conference_paper/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "2023_fall_group_meeting_notes.md",
+     "to": "zz-author-2023-课题组分工会安排（2023-秋）.md",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [
+      "author"
+     ],
+     "degraded": true,
+     "degraded_reasons": [
+      "missing_fields:author"
+     ]
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D7"
+     ]
+    },
+    "version": {
+     "family": null,
+     "primary_doc": "D7",
+     "role": "single",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [],
+     "year": 2023
+    }
+   },
+   {
+    "doc_id": "D8",
+    "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+    "name": "Retrosynthesis Prediction with GNN (1).pdf",
+    "fingerprint": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "gap_code": null
+    },
+    "title": "Retrosynthesis Prediction with Graph Neural Networks and Message Passing",
+    "title_source": "case_or_metadata",
+    "filename_garbled": false,
+    "status": "classified",
+    "doc_type": {
+     "primary": "journal_article",
+     "confidence": 0.8644,
+     "level": "high",
+     "labels": [
+      {
+       "category": "journal_article",
+       "name": "期刊论文",
+       "confidence": 0.8644,
+       "level": "high",
+       "raw_score": 5.1,
+       "hits": [
+        {
+         "kind": "metadata",
+         "field": "type",
+         "value": "journal-article",
+         "matched": "type=journal-article",
+         "weight": 1.5
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "abstract",
+         "normalized_offsets": [
+          0
+         ],
+         "weight": 1.0
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "keywords",
+         "normalized_offsets": [
+          32
+         ],
+         "weight": 0.8
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "references",
+         "normalized_offsets": [
+          79
+         ],
+         "weight": 0.6
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "doi",
+         "normalized_offsets": [
+          114
+         ],
+         "weight": 0.8
+        },
+        {
+         "kind": "term",
+         "field": "body",
+         "term": "received",
+         "normalized_offsets": [
+          9
+         ],
+         "weight": 0.4
+        }
+       ]
+      }
+     ],
+     "alternatives": [
+      {
+       "category": "dataset",
+       "confidence": 0.2727,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "conference_paper",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ],
+    "directory": {
+     "path": "library/journal_article/2021",
+     "template": "{root}/journal_article/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "Retrosynthesis Prediction with GNN (1).pdf",
+     "to": "Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [],
+     "degraded": false,
+     "degraded_reasons": []
+    },
+    "duplicate": {
+     "is_duplicate": true,
+     "duplicate_of": "D1",
+     "kind": "text_duplicate",
+     "hash_group": [
+      "D1",
+      "D8"
+     ]
+    },
+    "version": {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "role": "duplicate",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [
+      "A. Kim",
+      "L. Duarte"
+     ],
+     "year": 2021,
+     "venue": "Journal of Chemical Information and Modeling",
+     "doi": "10.1000/example.2021.001",
+     "type": "journal-article"
+    }
+   },
+   {
+    "doc_id": "D9",
+    "path": "scans/2019_paper_notes.pdf",
+    "name": "2019_paper_notes.pdf",
+    "fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file_sha256": null,
+    "size": null,
+    "extraction": {
+     "method": "",
+     "n_chars": 0,
+     "text_sha256": "",
+     "gap_code": "R_NO_TEXT"
+    },
+    "title": "",
+    "title_source": "absent",
+    "filename_garbled": false,
+    "status": "unclassified",
+    "doc_type": {
+     "primary": null,
+     "confidence": 0.0,
+     "level": "none",
+     "labels": [],
+     "alternatives": [
+      {
+       "category": "dataset",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      },
+      {
+       "category": "journal_article",
+       "confidence": 0.0,
+       "reason": "低于阈值未采用"
+      }
+     ]
+    },
+    "tags": [],
+    "directory": {
+     "path": "library/unclassified/2019",
+     "template": "{root}/{doc_type}/{year}",
+     "missing_fields": [],
+     "degraded": false
+    },
+    "filename": {
+     "from": "2019_paper_notes.pdf",
+     "to": "zz-author-2019-untitled.pdf",
+     "template": "{author}-{year}-{title}.{ext}",
+     "missing_fields": [
+      "author",
+      "title"
+     ],
+     "degraded": true,
+     "degraded_reasons": [
+      "missing_fields:author,title",
+      "no_title"
+     ]
+    },
+    "duplicate": {
+     "is_duplicate": false,
+     "duplicate_of": null,
+     "kind": null,
+     "hash_group": [
+      "D9"
+     ]
+    },
+    "version": {
+     "family": null,
+     "primary_doc": "D9",
+     "role": "single",
+     "version_token": ""
+    },
+    "metadata": {
+     "authors": [],
+     "year": 2019
+    }
+   }
+  ],
+  "unclassified": [
+   {
+    "doc_id": "D9",
+    "path": "scans/2019_paper_notes.pdf",
+    "name": "2019_paper_notes.pdf",
+    "code": "R_UNCLASSIFIED",
+    "reason": "所有类别置信度均低于 review 阈值",
+    "extraction_gap": "R_NO_TEXT",
+    "best_candidate": {
+     "category": null,
+     "confidence": 0.0,
+     "note": "无任何规则命中时不给候选类别"
+    },
+    "missing": [
+     "title",
+     "venue",
+     "doi",
+     "type"
+    ]
+   }
+  ],
+  "low_confidence": [
+   {
+    "doc_id": "D7",
+    "path": "downloads/2023_fall_group_meeting_notes.md",
+    "label": "conference_paper",
+    "confidence": 0.5556,
+    "code": "R_LOW_CONFIDENCE",
+    "note": "入选 review 档，需人工确认后再落入目录"
+   }
+  ],
+  "manual_review": [
+   {
+    "doc_id": "D7",
+    "path": "downloads/2023_fall_group_meeting_notes.md",
+    "code": "R_LOW_CONFIDENCE",
+    "label": "conference_paper",
+    "confidence": 0.5556,
+    "note": "分类置信度落在 review 档，需人工确认后再入目录"
+   }
+  ],
+  "unprocessed": [
+   {
+    "doc_id": "D9",
+    "path": "scans/2019_paper_notes.pdf",
+    "code": "R_NO_TEXT",
+    "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败",
+    "suggested_action": "确认文件内容后重跑"
+   }
+  ],
+  "operations": [
+   {
+    "op_id": "OP0001",
+    "action": "move_rename",
+    "doc_id": "D1",
+    "src": "downloads/Retrosynthesis Prediction with GNN.pdf",
+    "dst": "library/journal_article/2021/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "basis": "目录模板 {root}/journal_article/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+    "idempotency_key": "6aa65e06989a",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/journal_article/2021/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "dst": "downloads/Retrosynthesis Prediction with GNN.pdf"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0002",
+    "action": "move_rename",
+    "doc_id": "D2",
+    "src": "downloads/arxiv_2020.1234.pdf",
+    "dst": "library/preprint/2020/Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "basis": "目录模板 {root}/preprint/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+    "idempotency_key": "c8ce3003a2c5",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/preprint/2020/Kim-2020-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "dst": "downloads/arxiv_2020.1234.pdf"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0003",
+    "action": "move_rename",
+    "doc_id": "D3",
+    "src": "downloads/neurips_bench_2023.pdf",
+    "dst": "library/conference_paper/2023/Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+    "basis": "目录模板 {root}/conference_paper/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+    "idempotency_key": "6517fdb3094e",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/conference_paper/2023/Chen-2023-Benchmarking-Graph-Neural-Networks-for-R.pdf",
+     "dst": "downloads/neurips_bench_2023.pdf"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0004",
+    "action": "move_rename",
+    "doc_id": "D4",
+    "src": "downloads/zenodo_usp50k_splits.zip",
+    "dst": "library/dataset/2023/Chen-2023-USPTO-50k-open-splits-dataset.zip",
+    "basis": "目录模板 {root}/dataset/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+    "idempotency_key": "37435e28b5ef",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/dataset/2023/Chen-2023-USPTO-50k-open-splits-dataset.zip",
+     "dst": "downloads/zenodo_usp50k_splits.zip"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0005",
+    "action": "move_rename",
+    "doc_id": "D5",
+    "src": "downloads/si_example_2021.pdf",
+    "dst": "library/supplementary/2021/Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+    "basis": "目录模板 {root}/supplementary/{year} + 命名模板 {author}-{year}-SI-{title}.{ext}",
+    "idempotency_key": "c794ce65d2a8",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/supplementary/2021/Kim-2021-SI-Supporting-Information-for-Retrosynthesi.pdf",
+     "dst": "downloads/si_example_2021.pdf"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0006",
+    "action": "move_rename",
+    "doc_id": "D6",
+    "src": "downloads/thesis_zhang_2022.pdf",
+    "dst": "library/thesis/2022/张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+    "basis": "目录模板 {root}/thesis/{year} + 命名模板 {author}-{year}-{title}.{ext}",
+    "idempotency_key": "cebb9c3142f9",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/thesis/2022/张伟-2022-图神经网络在逆合成预测中的应用研究.pdf",
+     "dst": "downloads/thesis_zhang_2022.pdf"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0007",
+    "action": "move_rename",
+    "doc_id": "D7",
+    "src": "downloads/2023_fall_group_meeting_notes.md",
+    "dst": "library/conference_paper/2023/zz-author-2023-课题组分工会安排（2023-秋）.md",
+    "basis": "目录模板 {root}/conference_paper/{year} + 命名模板 {author}-{year}-{title}.{ext}（缺字段已降级占位）",
+    "idempotency_key": "a59f10909793",
+    "rollback": {
+     "action": "move_rename",
+     "src": "library/conference_paper/2023/zz-author-2023-课题组分工会安排（2023-秋）.md",
+     "dst": "downloads/2023_fall_group_meeting_notes.md"
+    },
+    "reason": "按目录模板与命名模板归档",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "move_rename"
+   },
+   {
+    "op_id": "OP0008",
+    "action": "archive_duplicate",
+    "doc_id": "D8",
+    "src": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+    "dst": "archive/duplicates/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+    "basis": "与 D1 正文归一指纹相同（同文不同名副本）",
+    "kind": "text_duplicate",
+    "idempotency_key": "0c9645f8a66a",
+    "rollback": {
+     "action": "move",
+     "src": "archive/duplicates/Kim-2021-Retrosynthesis-Prediction-with-Graph-Neu.pdf",
+     "dst": "downloads/Retrosynthesis Prediction with GNN (1).pdf"
+    },
+    "reason": "副本只归档不覆盖不删除；canonical 文件保留原语义",
+    "input_readonly": false,
+    "executed": false,
+    "suggested_action": "archive_duplicate"
+   }
+  ],
+  "library_report": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "documents": 9,
+   "auxiliary_files": [],
+   "empty_dirs": [],
+   "metadata_source": "case 未提供伴随元数据表（metadata_csv 等）",
+   "metadata_rows": 0,
+   "alias_groups": [],
+   "near_duplicate_hints": [
+    {
+     "a": "downloads/Retrosynthesis Prediction with GNN.pdf",
+     "b": "downloads/arxiv_2020.1234.pdf",
+     "title_key": "retrosynthesispredictionwithgraphneuralnetworksandmessagepassing",
+     "note": "同归一化标题但内容不同：近重复（可能为不同版本/修订），建议人工确认，不自动合并"
+    }
+   ],
+   "version_groups": [],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "gaps": [
+    {
+     "path": "scans/2019_paper_notes.pdf",
+     "code": "R_NO_TEXT",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "extraction_methods": {
+    "downloads/Retrosynthesis Prediction with GNN.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/arxiv_2020.1234.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 80,
+     "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/neurips_bench_2023.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 99,
+     "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/zenodo_usp50k_splits.zip": {
+     "method": "inline_case_json",
+     "n_chars": 83,
+     "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/si_example_2021.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 56,
+     "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/thesis_zhang_2022.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 29,
+     "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/2023_fall_group_meeting_notes.md": {
+     "method": "inline_case_json",
+     "n_chars": 64,
+     "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/Retrosynthesis Prediction with GNN (1).pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "scans/2019_paper_notes.pdf": {
+     "method": null,
+     "n_chars": 0,
+     "text_sha256": null,
+     "file_sha256": null,
+     "size": null
+    }
+   }
+  }
+ },
+ "evidence": {
+  "rules": {
+   "taxonomy_version": "0.1.0",
+   "tag_vocabulary_version": "0.1.0",
+   "classification_rules_version": "0.2.0",
+   "thresholds": {
+    "high_confidence": 0.6,
+    "review_confidence": 0.35,
+    "max_type_labels": 2,
+    "max_tags": 4,
+    "min_tag_confidence": 0.3
+   },
+   "field_weights": {
+    "title": 2.0,
+    "keywords": 1.5,
+    "venue": 1.5,
+    "abstract": 1.2,
+    "body": 1.0
+   },
+   "saturation": 0.8,
+   "formula": "confidence = raw/(raw+k)，raw = Σ(term_weight×field_weight) + metadata 命中权重 − negative 权重"
+  },
+  "inventory": {
+   "docs": 9,
+   "readable": 8,
+   "unreadable": [
+    {
+     "doc_id": "D9",
+     "path": "scans/2019_paper_notes.pdf",
+     "code": "R_NO_TEXT",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "hash_groups": [
+    {
+     "sha256": "8162f2f1e0686cc58592533e4e96111426288d6d2c7615d0ba06b8876f8bc683",
+     "doc_ids": [
+      "D1",
+      "D8"
+     ]
+    },
+    {
+     "sha256": "d8304484a5367048c7bf72a6d15635d57a142f5b3bad4d560c0ed139efaac0b8",
+     "doc_ids": [
+      "D2"
+     ]
+    },
+    {
+     "sha256": "7704fb7d414ccbee52b0b7a13ac00173f78f2c6a71c20891acb639c5e4f9bcd1",
+     "doc_ids": [
+      "D3"
+     ]
+    },
+    {
+     "sha256": "f0a472062ae9f4b351779dbc0b21245497c821e872734f138f11f56b6c85d810",
+     "doc_ids": [
+      "D4"
+     ]
+    },
+    {
+     "sha256": "21500619e513a7ca51d015d6b38ee7a8c192e154b6fa71d2b2f5c5d167964a1e",
+     "doc_ids": [
+      "D5"
+     ]
+    },
+    {
+     "sha256": "1334ffc2b7b5665bc3dfdbdc75e1387896203cc9bd2d155d6362e0b2d03b6ea1",
+     "doc_ids": [
+      "D6"
+     ]
+    },
+    {
+     "sha256": "71a5f123714cadb8c2577fc64718439bd6d96c0e1a6d33a6f7c1783870c9d8fc",
+     "doc_ids": [
+      "D7"
+     ]
+    },
+    {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "doc_ids": [
+      "D9"
+     ]
+    }
+   ],
+   "version_families": [
+    {
+     "family": "doi:10.1000/example.2021.001",
+     "primary_doc": "D1",
+     "members": [
+      {
+       "doc_id": "D1",
+       "year": 2021,
+       "path": "downloads/Retrosynthesis Prediction with GNN.pdf",
+       "type": "journal-article",
+       "role": "journal",
+       "version": "",
+       "kept_as_primary": true
+      },
+      {
+       "doc_id": "D2",
+       "year": 2020,
+       "path": "downloads/arxiv_2020.1234.pdf",
+       "type": "preprint",
+       "role": "preprint",
+       "version": "",
+       "kept_as_primary": false
+      },
+      {
+       "doc_id": "D5",
+       "year": 2021,
+       "path": "downloads/si_example_2021.pdf",
+       "type": "supplementary-material",
+       "role": "supplementary",
+       "version": "",
+       "kept_as_primary": false
+      },
+      {
+       "doc_id": "D8",
+       "year": 2021,
+       "path": "downloads/Retrosynthesis Prediction with GNN (1).pdf",
+       "type": "journal-article",
+       "role": "duplicate",
+       "version": "",
+       "kept_as_primary": false
+      }
+     ],
+     "evidence": "DOI 归一相同",
+     "policy": "正式版角色优先、版本序大者优先；全部保留不删除，预印本/修订版/补充材料不当独立文献，归档建议写 ops_log"
+    }
+   ]
+  },
+  "library": {
+   "mode": "inline",
+   "root": null,
+   "root_resolution": [
+    "inline（无库目录，使用 case 内联材料）"
+   ],
+   "files_scanned": 0,
+   "documents": 9,
+   "auxiliary_files": [],
+   "empty_dirs": [],
+   "metadata_source": "case 未提供伴随元数据表（metadata_csv 等）",
+   "metadata_rows": 0,
+   "alias_groups": [],
+   "near_duplicate_hints": [
+    {
+     "a": "downloads/Retrosynthesis Prediction with GNN.pdf",
+     "b": "downloads/arxiv_2020.1234.pdf",
+     "title_key": "retrosynthesispredictionwithgraphneuralnetworksandmessagepassing",
+     "note": "同归一化标题但内容不同：近重复（可能为不同版本/修订），建议人工确认，不自动合并"
+    }
+   ],
+   "version_groups": [],
+   "version_notes_fields": "version_notes, admin_notes, versions",
+   "gaps": [
+    {
+     "path": "scans/2019_paper_notes.pdf",
+     "code": "R_NO_TEXT",
+     "reason": "内联无正文且文件路径不可读（或不存在），文本获取失败"
+    }
+   ],
+   "extraction_methods": {
+    "downloads/Retrosynthesis Prediction with GNN.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/arxiv_2020.1234.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 80,
+     "text_sha256": "d53ae2a79df7405070f67d6fa7cda138a1df4f82dacc1744804ec6e9cb482fc7",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/neurips_bench_2023.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 99,
+     "text_sha256": "3e31c7cd914aa0887a773d2fbc5e6d2920a95519bf859a71c65d8e79c1e86cf6",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/zenodo_usp50k_splits.zip": {
+     "method": "inline_case_json",
+     "n_chars": 83,
+     "text_sha256": "c2c138f2938a5404ce253370922ebadd5c4ecea8cef1a1d666d6aaa20898d119",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/si_example_2021.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 56,
+     "text_sha256": "4e3b4c18693638bc734ac571b249159ebcb1a85843adfcdfe76dc9e6295c11b4",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/thesis_zhang_2022.pdf": {
+     "method": "inline_case_json",
+     "n_chars": 29,
+     "text_sha256": "d9be58aa2874fa24603b08e89872ac09fe7d9d95af0543264c7c79d57b9ed6e9",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/2023_fall_group_meeting_notes.md": {
+     "method": "inline_case_json",
+     "n_chars": 64,
+     "text_sha256": "000ac2434cc69ad16b0dad3a4e1e53977600a120878beee3faf514b00b36b863",
+     "file_sha256": null,
+     "size": null
+    },
+    "downloads/Retrosynthesis Prediction with GNN (1).pdf": {
+     "method": "inline_case_json",
+     "n_chars": 142,
+     "text_sha256": "b16990c7246eaf3939528f0d01ef995e93a3b28488b9f37b4914795225f3154c",
+     "file_sha256": null,
+     "size": null
+    },
+    "scans/2019_paper_notes.pdf": {
+     "method": null,
+     "n_chars": 0,
+     "text_sha256": null,
+     "file_sha256": null,
+     "size": null
+    }
+   },
+   "integrity": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与操作日志"
+   },
+   "hash_policy": "逐文件 SHA-256（字节级）；扫描时与流程结束时各取一次，全部一致才记 hashes_unchanged=true",
+   "extraction_chain": "内联正文 → 侧车 .txt/.ocr.txt → pdf_min 文本层 → DOCX zip+xml → 纯文本 → 诚实 gap"
+  },
+  "label_evidence": [
+   {
+    "doc_id": "D1",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D2",
+    "labels": [
+     {
+      "category": "preprint",
+      "name": "预印本",
+      "confidence": 0.8697,
+      "level": "high",
+      "raw_score": 5.34,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "preprint",
+        "matched": "type=preprint",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "arxiv",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "preprint",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "预印本",
+        "normalized_offsets": [
+         26
+        ],
+        "weight": 1.2
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8758,
+      "matched_terms": [
+       "gnn",
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D3",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.7576,
+      "level": "high",
+      "raw_score": 2.5,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "conference-paper",
+        "matched": "type=conference-paper",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "proceedings",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       }
+      ]
+     },
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         62
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "反应产率预测",
+      "parent": "机器学习任务",
+      "confidence": 0.8333,
+      "matched_terms": [
+       "reaction yield",
+       "yield prediction"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.802,
+      "matched_terms": [
+       "gnn",
+       "message passing"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.7714,
+      "matched_terms": [
+       "benchmark",
+       "open splits"
+      ],
+      "fields": [
+       "abstract",
+       "keywords"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D4",
+    "labels": [
+     {
+      "category": "dataset",
+      "name": "数据集",
+      "confidence": 0.8987,
+      "level": "high",
+      "raw_score": 7.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "dataset",
+        "matched": "type=dataset",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "dataset",
+        "normalized_offsets": [
+         22
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "数据集",
+        "normalized_offsets": [
+         55
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "zenodo",
+        "normalized_offsets": [
+         90
+        ],
+        "weight": 1.2
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "data availability",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.873,
+      "matched_terms": [
+       "benchmark",
+       "open splits",
+       "uspTO-50k"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.6429,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D5",
+    "labels": [
+     {
+      "category": "supplementary",
+      "name": "补充材料",
+      "confidence": 0.905,
+      "level": "high",
+      "raw_score": 7.62,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "supplementary-material",
+        "matched": "type=supplementary",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "keywords",
+        "term": "supplementary",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.8
+       },
+       {
+        "kind": "term",
+        "field": "title",
+        "term": "supporting information",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 2.4
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附图",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 0.96
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "附表",
+        "normalized_offsets": [
+         35
+        ],
+        "weight": 0.96
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.75,
+      "matched_terms": [
+       "gnn"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.75,
+      "matched_terms": [
+       "retrosynthesis"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.5556,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "body"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D6",
+    "labels": [
+     {
+      "category": "thesis",
+      "name": "学位论文",
+      "confidence": 0.8502,
+      "level": "high",
+      "raw_score": 4.54,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "thesis",
+        "matched": "type=thesis",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "abstract",
+        "term": "学位论文",
+        "normalized_offsets": [
+         1
+        ],
+        "weight": 1.44
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "导师",
+        "normalized_offsets": [
+         7
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "答辩",
+        "normalized_offsets": [
+         14
+        ],
+        "weight": 0.8
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "图神经",
+       "图神经网络"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8571,
+      "matched_terms": [
+       "逆合成",
+       "逆合成预测"
+      ],
+      "fields": [
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D7",
+    "labels": [
+     {
+      "category": "conference_paper",
+      "name": "会议论文",
+      "confidence": 0.5556,
+      "level": "review",
+      "raw_score": 1.0,
+      "hits": [
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "conference",
+        "normalized_offsets": [
+         25
+        ],
+        "weight": 1.0
+       }
+      ]
+     }
+    ],
+    "tags": []
+   },
+   {
+    "doc_id": "D8",
+    "labels": [
+     {
+      "category": "journal_article",
+      "name": "期刊论文",
+      "confidence": 0.8644,
+      "level": "high",
+      "raw_score": 5.1,
+      "hits": [
+       {
+        "kind": "metadata",
+        "field": "type",
+        "value": "journal-article",
+        "matched": "type=journal-article",
+        "weight": 1.5
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "abstract",
+        "normalized_offsets": [
+         0
+        ],
+        "weight": 1.0
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "keywords",
+        "normalized_offsets": [
+         32
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "references",
+        "normalized_offsets": [
+         79
+        ],
+        "weight": 0.6
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "doi",
+        "normalized_offsets": [
+         114
+        ],
+        "weight": 0.8
+       },
+       {
+        "kind": "term",
+        "field": "body",
+        "term": "received",
+        "normalized_offsets": [
+         9
+        ],
+        "weight": 0.4
+       }
+      ]
+     }
+    ],
+    "tags": [
+     {
+      "tag": "图神经网络",
+      "parent": "机器学习方法",
+      "confidence": 0.84,
+      "matched_terms": [
+       "graph neural network",
+       "message passing"
+      ],
+      "fields": [
+       "keywords",
+       "title"
+      ]
+     },
+     {
+      "tag": "逆合成预测",
+      "parent": "反应预测",
+      "confidence": 0.8276,
+      "matched_terms": [
+       "retrosynthesis",
+       "single-step retrosynthesis"
+      ],
+      "fields": [
+       "abstract",
+       "title"
+      ]
+     },
+     {
+      "tag": "基准数据集",
+      "parent": "数据资源",
+      "confidence": 0.6,
+      "matched_terms": [
+       "uspTO-50k"
+      ],
+      "fields": [
+       "abstract"
+      ]
+     }
+    ]
+   },
+   {
+    "doc_id": "D9",
+    "labels": [],
+    "tags": []
+   }
+  ],
+  "tag_normalization": {
+   "merges": [
+    {
+     "doc_id": "D1",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis",
+        "single-step retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D2",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn",
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D3",
+     "merges": [
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "反应产率预测",
+       "merged_from": [
+        "reaction yield",
+        "yield prediction"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "benchmark",
+        "open splits"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D4",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "benchmark",
+        "open splits",
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D5",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "gnn"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D6",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "逆合成"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "图神经"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D7",
+     "merges": []
+    },
+    {
+     "doc_id": "D8",
+     "merges": [
+      {
+       "canonical": "逆合成预测",
+       "merged_from": [
+        "retrosynthesis",
+        "single-step retrosynthesis"
+       ]
+      },
+      {
+       "canonical": "图神经网络",
+       "merged_from": [
+        "graph neural network",
+        "message passing"
+       ]
+      },
+      {
+       "canonical": "基准数据集",
+       "merged_from": [
+        "uspTO-50k"
+       ]
+      }
+     ]
+    },
+    {
+     "doc_id": "D9",
+     "merges": []
+    }
+   ],
+   "policy": {
+    "canonical_first": true,
+    "merge_policy": "同义词命中全部并入 canonical 标签，merged_from 留痕；同一标签同一文档只出现一次",
+    "granularity_cap": "每份文档最多保留 max_tags 个标签（见 classification_rules.json），按置信度截断",
+    "parent_policy": "上位标签只作层级提示，不自动打给文档，避免上下位重复计数"
+   },
+   "distribution": {
+    "图神经网络": 6,
+    "逆合成预测": 6,
+    "基准数据集": 7,
+    "反应产率预测": 1
+   }
+  },
+  "naming": {
+   "templates": {
+    "library_root": "library",
+    "archive_root": "archive",
+    "default_dir_template": "{root}/{doc_type}/{year}",
+    "default_name_template": "{author}-{year}-{title}.{ext}",
+    "title_max_chars": 40,
+    "filename_max_chars": 120,
+    "null_tokens": {
+     "author": "zz-author",
+     "year": "nd",
+     "venue": "zz-venue",
+     "doc_type": "unclassified",
+     "project": "zz-project",
+     "title": "untitled"
+    },
+    "degrade_rule": "任何字段缺失 → 用 null_token 占位并把 degraded=true、missing_fields 列名；严禁补造作者/年份/期刊/DOI"
+   },
+   "degraded_docs": [
+    "D7",
+    "D9"
+   ],
+   "conflicts": [],
+   "existing_conflicts": [],
+   "garbled_names": [],
+   "note": "缺字段用 null_token 占位并标 degraded=true；冲突按版本/角色/指纹短码消歧，绝不覆盖"
+  },
+  "distribution": {
+   "by_doc_type": {
+    "journal_article": 2,
+    "preprint": 1,
+    "conference_paper": 2,
+    "dataset": 1,
+    "supplementary": 1,
+    "thesis": 1,
+    "unclassified": 1
+   },
+   "by_tag": {
+    "图神经网络": 6,
+    "逆合成预测": 6,
+    "基准数据集": 7,
+    "反应产率预测": 1
+   }
+  },
+  "operations": {
+   "mode": "dry_run",
+   "library_mode": false,
+   "planned": 8,
+   "journal": [],
+   "idempotency": "每步带 idempotency_key；重复运行得到同一计划；未处理项在 unprocessed 单列，可续跑",
+   "rollback": "每步 rollback 字段给出逆操作或「未执行，天然可逆」说明",
+   "readonly_proof": {
+    "files": 0,
+    "rechecked": 0,
+    "hashes_unchanged": true,
+    "changed": [],
+    "input_modified": false,
+    "policy": "输入库全程只读；本流程只在输出目录写 result.json 与操作日志"
+   }
+  },
+  "scope": {
+   "cases_seen": [
+    "EXAMPLE-045-NOT-A-TEST-CASE"
+   ],
+   "no_network": true,
+   "note": "类别、标签、命名全部由 rules/ 与材料本身推出，未使用外部模型判断"
+  },
+  "contract": {
+   "classification": "每份文件的类型归属与依据、标签集与命中出处、目录与新文件名（原名→新名）、重复组、版本族与角色、未处理项",
+   "unclassified": "未分类文件单列：理由码、最接近候选与置信度、缺失字段",
+   "evidence_map": "规则表版本、阈值与权重、逐条命中的术语/字段/偏移、标签归并记录、哈希分组、操作日志与逆操作",
+   "状态说明": "完成/部分完成、不可读文件、低置信待复核、重复与版本处置、不确定性"
+  },
+  "run_log": [
+   {
+    "step": "load_case",
+    "seq": 1,
+    "case_id": "EXAMPLE-045-NOT-A-TEST-CASE",
+    "contract_keys": [
+     "classification",
+     "evidence_map",
+     "unclassified",
+     "状态说明"
+    ]
+   },
+   {
+    "step": "library_intake",
+    "seq": 2,
+    "mode": "inline",
+    "files": 9,
+    "scan_files": 0,
+    "alias_groups": 0,
+    "version_groups": 0,
+    "empty_dirs": 0,
+    "metadata_rows": 0
+   },
+   {
+    "step": "intake",
+    "seq": 3,
+    "docs": 9,
+    "unreadable": 1
+   }
+  ],
+  "cases_seen": [
+   "EXAMPLE-045-NOT-A-TEST-CASE"
+  ]
+ },
+ "status": {
+  "overall": "partial",
+  "completed": [
+   "文件库盘点",
+   "去重与版本族/版本组",
+   "规则优先分类",
+   "标签归并与粒度控制",
+   "命名与目录模板降级",
+   "批量操作计划（建议 + 幂等 + 回滚）"
+  ],
+  "unmet": [
+   {
+    "item": "未分类",
+    "reason": "1 份文件无类别达阈值，已单列并给最接近候选，不强行归类"
+   },
+   {
+    "item": "低置信",
+    "reason": "1 份文件落在 review 档，需人工确认"
+   },
+   {
+    "item": "文件提取",
+    "reason": "1 份 R_NO_TEXT——诚实跳过，未伪造文本（详见 unprocessed）"
+   },
+   {
+    "item": "文件库目录",
+    "reason": "case 未声明文件库目录（library_path/materials_root 等字符串路径），按内联材料处理"
+   }
+  ],
+  "notes": [
+   "1 对近重复（同归一化标题、内容不同）仅提示，不自动合并"
+  ]
+ },
+ "uncertainty": []
+}

@@ -2003,6 +2003,9 @@ def _synthesis_hooks(args, result_path, payload):
                                "--case", str(getattr(args, "case", ""))],
                               capture_output=True, text=True, timeout=60)
         info["synthesis_input"] = str(work / "synthesis_input.json") if proc.returncode == 0 else "failed"
+        if proc.returncode == 0:
+            info["next"] = ("读 synthesis_input.json 与 rules/synthesis_prompt.md，写 work/synthesis.json，"
+                            "再重跑本命令；校验通过会写出 review.md")
     except Exception as exc:  # noqa: BLE001
         info["synthesis_input"] = f"{type(exc).__name__}: {exc}"
     syn = work / "synthesis.json"

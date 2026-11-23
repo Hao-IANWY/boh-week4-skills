@@ -1,0 +1,94 @@
+{
+ "version": "0.1.0",
+ "description": "045 文献类型分类法：一类一条规则。术语权重 × 字段权重得到原始分，再经饱和函数转成可解释置信度。类别顺序不影响结果（按置信度排序），但 dir_template/name_template 决定归档路径与文件名。",
+ "categories": [
+  {
+   "id": "journal_article",
+   "name": "期刊论文",
+   "description": "正式发表的同行评议期刊论文",
+   "dir_template": "{root}/journal_article/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["journal-article", "journal_article", "article", "期刊论文"], "weight": 1.5, "label": "type=journal-article"}
+   ],
+   "terms": {"abstract": 1.0, "关键词": 0.8, "keywords": 0.8, "references": 0.6, "doi": 0.8, "received": 0.4},
+   "negative_terms": {"arxiv": 1.0, "预印本": 1.0, "supplementary information": 0.8}
+  },
+  {
+   "id": "preprint",
+   "name": "预印本",
+   "description": "未同行评议的预印本版本",
+   "dir_template": "{root}/preprint/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["preprint", "posted-content", "预印本"], "weight": 1.5, "label": "type=preprint"}
+   ],
+   "terms": {"arxiv": 1.2, "preprint": 1.2, "预印本": 1.2, "biorxiv": 1.2, "medrxiv": 1.2, "research square": 1.0},
+   "negative_terms": {}
+  },
+  {
+   "id": "conference_paper",
+   "name": "会议论文",
+   "description": "会议/研讨会录用论文",
+   "dir_template": "{root}/conference_paper/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["conference-paper", "conference_paper", "proceedings-article", "会议论文"], "weight": 1.5, "label": "type=conference-paper"}
+   ],
+   "terms": {"proceedings": 1.0, "conference": 1.0, "会议": 1.0, "symposium": 0.8, "workshop": 0.8, "会议论文": 1.2},
+   "negative_terms": {}
+  },
+  {
+   "id": "thesis",
+   "name": "学位论文",
+   "description": "硕士/博士学位论文",
+   "dir_template": "{root}/thesis/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["thesis", "dissertation", "学位论文"], "weight": 1.5, "label": "type=thesis"}
+   ],
+   "terms": {"dissertation": 1.2, "thesis": 1.2, "学位论文": 1.2, "导师": 0.8, "答辩": 0.8},
+   "negative_terms": {}
+  },
+  {
+   "id": "dataset",
+   "name": "数据集",
+   "description": "数据/代码存档条目",
+   "dir_template": "{root}/dataset/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["dataset", "数据", "数据集"], "weight": 1.5, "label": "type=dataset"}
+   ],
+   "terms": {"dataset": 1.2, "数据集": 1.2, "zenodo": 1.0, "figshare": 1.0, "data availability": 0.8, "doi": 0.3},
+   "negative_terms": {}
+  },
+  {
+   "id": "supplementary",
+   "name": "补充材料",
+   "description": "论文的 SI/附图/附表",
+   "dir_template": "{root}/supplementary/{year}",
+   "name_template": "{author}-{year}-SI-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["supplementary", "supplementary-material", "补充材料"], "weight": 1.5, "label": "type=supplementary"}
+   ],
+   "terms": {"supplementary": 1.2, "supporting information": 1.2, "补充材料": 1.2, "附图": 0.8, "附表": 0.8, "si": 0.4},
+   "negative_terms": {}
+  },
+  {
+   "id": "patent",
+   "name": "专利",
+   "description": "专利文献",
+   "dir_template": "{root}/patent/{year}",
+   "name_template": "{author}-{year}-{title}.{ext}",
+   "metadata_rules": [
+    {"field": "type", "equals": ["patent", "专利"], "weight": 1.5, "label": "type=patent"}
+   ],
+   "terms": {"patent": 1.2, "专利": 1.2, "申请人": 1.0, "权利要求": 0.8},
+   "negative_terms": {}
+  }
+ ],
+ "notes": {
+  "term_matching": "术语在归一化文本里按子串匹配（大小写/全半角归一），同一术语只计一次命中（防止关键词堆砌刷分）",
+  "unclassified": "所有类别置信度低于 review 阈值 → 落未分类单列，给最接近候选，不强行归类"
+ }
+}

@@ -1,0 +1,4 @@
+run_id,temperature_C,pressure_MPa,selectivity_pct
+R01,240,3.0,82.1
+R02,240,3.0,81.7
+R03,250,3.0,78.4

@@ -1,0 +1,504 @@
+{
+ "seq": 44,
+ "title": "科研文件智能检索",
+ "category": "资料管理",
+ "queries": [
+  "local document semantic search rag tool",
+  "file search agent skill",
+  "semantic file retrieval local"
+ ],
+ "candidates": [
+  {
+   "full_name": "infiniflow/ragflow",
+   "url": "https://github.com/infiniflow/ragflow",
+   "stars": 94378,
+   "desc": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
+   "topics": [
+    "agent-harness",
+    "agent-native-database",
+    "agentic-ai",
+    "agentic-retrieval",
+    "agentic-search",
+    "ai"
+   ],
+   "lang": "Go",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-18T11:28:53Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "paperless-ngx/paperless-ngx",
+   "url": "https://github.com/paperless-ngx/paperless-ngx",
+   "stars": 48250,
+   "desc": "A community-supported supercharged document management system: scan, index and archive all your documents",
+   "topics": [
+    "ai",
+    "angular",
+    "archiving",
+    "django",
+    "dms",
+    "document-management"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-18T12:18:04Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "khoj-ai/khoj",
+   "url": "https://github.com/khoj-ai/khoj",
+   "stars": 38170,
+   "desc": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemin…",
+   "topics": [
+    "agent",
+    "ai",
+    "assistant",
+    "chat",
+    "chatgpt",
+    "emacs"
+   ],
+   "lang": "Python",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-08-02T01:55:40Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "TagStudioDev/TagStudio",
+   "url": "https://github.com/TagStudioDev/TagStudio",
+   "stars": 7303,
+   "desc": "A User-Focused Photo & File Management System",
+   "topics": [
+    "document-management-system",
+    "file-manager",
+    "metadata",
+    "organizer",
+    "photo-gallery",
+    "photo-organizer"
+   ],
+   "lang": "Python",
+   "license": "GPL-3.0",
+   "pushed_at": "2026-11-14T18:36:44Z",
+   "via": [],
+   "seed": true
+  },
+  {
+   "full_name": "alexgaoth/awesome-reverse-engineered",
+   "url": "https://github.com/alexgaoth/awesome-reverse-engineered",
+   "stars": 1454,
+   "desc": "Don't reverse engineer it twice. 17,000+ open-source tools built by reverse engineering closed apps, APIs, devices, protocols, file formats, games and AI tools. Search site + agent skill + MCP server, refreshed nightly.",
+   "topics": [
+    "agent-skills",
+    "ai-agents",
+    "awesome",
+    "awesome-list",
+    "claude-code",
+    "decompilation"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-18T02:06:33Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "baidu-netdisk/bdpan-storage",
+   "url": "https://github.com/baidu-netdisk/bdpan-storage",
+   "stars": 350,
+   "desc": "Agent Skill for Baidu Netdisk (百度网盘) — upload, download, transfer,    share, search files via natural language. Works with Claude Code,   Cursor, Codex, Gemini CLI, OpenClaw.",
+   "topics": [
+    "agent-skills",
+    "agentic-ai",
+    "ai-agents",
+    "baidu",
+    "baidu-netdisk",
+    "claude-code"
+   ],
+   "lang": "Shell",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-10-29T07:39:29Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "O0000-code/paper-search-pro",
+   "url": "https://github.com/O0000-code/paper-search-pro",
+   "stars": 236,
+   "desc": "Academic literature discovery as a Skill — Claude Code · Codex · any agent that loads SKILL.md. Five sources · four tiers · single-file Shadcn report.",
+   "topics": [
+    "academic-research",
+    "agent-skill",
+    "arxiv",
+    "claude-code-skill",
+    "codex",
+    "literature-search"
+   ],
+   "lang": "HTML",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-03T11:53:56Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "BrikerMan/skilless.ai",
+   "url": "https://github.com/BrikerMan/skilless.ai",
+   "stars": 228,
+   "desc": "skilless.ai gives your AI Agents real data capabilities - web search, web scraping, video download/subtitle extraction, and media processing. One-line install, works with OpenCode, Cursor, Claude Code, and any AI agent …",
+   "topics": [
+    "ai-agent",
+    "coding-assistant",
+    "opencode",
+    "skills"
+   ],
+   "lang": "Astro",
+   "license": null,
+   "pushed_at": "2026-07-04T03:52:22Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Mayuqi-crypto/everything-search-skill",
+   "url": "https://github.com/Mayuqi-crypto/everything-search-skill",
+   "stars": 70,
+   "desc": "⚡ Ultra-fast, index-powered local file search skill for AI agents (Cursor, Codex, PI-Desktop) using Voidtools Everything",
+   "topics": [
+    "agent-skill",
+    "codex",
+    "cursor",
+    "everything",
+    "file-search",
+    "linux-do"
+   ],
+   "lang": "PowerShell",
+   "license": "MIT",
+   "pushed_at": "2026-09-20T07:36:07Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "hermes-labs-ai/zer0dex",
+   "url": "https://github.com/hermes-labs-ai/zer0dex",
+   "stars": 64,
+   "desc": "A local dual-layer memory pattern for AI agents: a compact, human-readable markdown index paired with semantic retrieval from a local vector store, queried before each message. For cross-project recall where flat memory…",
+   "topics": [
+    "agent-memory",
+    "agent-skills",
+    "ai-agents",
+    "ai-memory",
+    "ai-reliability",
+    "claude-code"
+   ],
+   "lang": "Python",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-10-19T18:51:11Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "sfrangulov/minirag-mcp",
+   "url": "https://github.com/sfrangulov/minirag-mcp",
+   "stars": 60,
+   "desc": "Local-first RAG MCP server in Python: hybrid search (semantic + BM25 keyword boost) over your own documents. 11 MCP tools + CLI, markitdown ingestion for 12 formats, multilingual embeddings, LanceDB. Nothing leaves your…",
+   "topics": [
+    "bm25",
+    "claude-code",
+    "embeddings",
+    "fastembed",
+    "fastmcp",
+    "hybrid-search"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-17T07:42:40Z",
+   "via": [
+    "local document semantic search rag tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "backblaze-labs/claude-skill-b2-cloud-storage",
+   "url": "https://github.com/backblaze-labs/claude-skill-b2-cloud-storage",
+   "stars": 44,
+   "desc": "Claude Skill for Backblaze B2 Cloud Storage management from the terminal. Manage buckets, list and search files, audit storage usage, detect stale or large objects, review security posture, and safely clean up data usin…",
+   "topics": [
+    "agent-skill",
+    "b2-labs",
+    "claude",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-code-skill"
+   ],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-11-13T20:04:03Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "dlkakbs/hermes-startup-architect",
+   "url": "https://github.com/dlkakbs/hermes-startup-architect",
+   "stars": 41,
+   "desc": "A permanent Hermes Agent skill that transforms any startup idea into an investor-ready kit. Chains web_search, terminal & write_file to generate 8 assets: market analysis, competitor map, pitch deck, roadmap & a Tailwin…",
+   "topics": [],
+   "lang": null,
+   "license": null,
+   "pushed_at": "2026-05-19T13:08:08Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "henrydaum/2nd-Brain",
+   "url": "https://github.com/henrydaum/2nd-Brain",
+   "stars": 30,
+   "desc": "Second Brain is a desktop application that acts as a personal knowledge base, using retrieval-augmented generation (RAG), multimodal AI models, and a hybrid lexical/semantic search algorithm to interact with local text …",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-01-30T22:04:33Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "bimajanuri/paper-review-skill",
+   "url": "https://github.com/bimajanuri/paper-review-skill",
+   "stars": 29,
+   "desc": "Paper Review helps AI agents turn a set of academic papers into a clear, traceable literature matrix. It can search online sources, read a local collection of PDF or LaTeX files, or combine both. The workflow keeps pape…",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-10-29T02:26:03Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "NoteNerdOfficial/ai-skills-manager",
+   "url": "https://github.com/NoteNerdOfficial/ai-skills-manager",
+   "stars": 28,
+   "desc": "AI Skills Manager brings your Claude, Codex, Pi, and other tool-specific skills, agents, commands, and rules into one searchable Obsidian library. Browse, tag, favorite, and group items across global and project folders…",
+   "topics": [],
+   "lang": "TypeScript",
+   "license": "MIT",
+   "pushed_at": "2026-10-17T16:44:57Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "czxieddan/RHoiScribe",
+   "url": "https://github.com/czxieddan/RHoiScribe",
+   "stars": 27,
+   "desc": "Local MCP server and SKILL for Hearts of Iron IV modding agents. reduce wasted agent work caused by repeated web searches, stale assumptions, unsafe file paths, missing localisation encoding, and Paradox script that loo…",
+   "topics": [
+    "ai",
+    "hoi4",
+    "mcp",
+    "mcp-server",
+    "modding",
+    "modding-tools"
+   ],
+   "lang": "Rust",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-10-10T12:09:52Z",
+   "via": [
+    "file search agent skill"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "scientist-labs/ragnar-cli",
+   "url": "https://github.com/scientist-labs/ragnar-cli",
+   "stars": 12,
+   "desc": "Ragnar is a pure Ruby command-line RAG (Retrieval-Augmented Generation) tool with zero external dependencies. It provides local document indexing, semantic search, and LLM-powered query processing. Built to be hackable,…",
+   "topics": [
+    "ai",
+    "cli",
+    "rag",
+    "ruby"
+   ],
+   "lang": "Ruby",
+   "license": "MIT",
+   "pushed_at": "2026-07-13T06:12:45Z",
+   "via": [
+    "local document semantic search rag tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "CREE1116/weft",
+   "url": "https://github.com/CREE1116/weft",
+   "stars": 6,
+   "desc": "Local-first file search for macOS and AI agents — semantic retrieval, verified context, and background indexing.",
+   "topics": [
+    "ai-agents",
+    "desktop-search",
+    "local-first",
+    "macos",
+    "rust",
+    "semantic-search"
+   ],
+   "lang": "Rust",
+   "license": null,
+   "pushed_at": "2026-10-15T04:21:47Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Aevorine/Synorive",
+   "url": "https://github.com/Aevorine/Synorive",
+   "stars": 4,
+   "desc": "Offline semantic search for everything on your disk - documents, code, PDFs, scanned images (OCR), video by the second. 100% local AI: hybrid RAG with keyword + vector + rerank, no API key, no cloud. Desktop app + 26 MC…",
+   "topics": [
+    "android",
+    "claude-code",
+    "electron",
+    "embeddings",
+    "fact-checking",
+    "hybrid-search"
+   ],
+   "lang": "Python",
+   "license": "AGPL-3.0",
+   "pushed_at": "2026-09-12T15:47:21Z",
+   "via": [
+    "local document semantic search rag tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "A-Aboody/Locket.AI",
+   "url": "https://github.com/A-Aboody/Locket.AI",
+   "stars": 3,
+   "desc": "The Local Document Retrieval Agent is a privacy-focused AI tool that uses natural language processing and semantic search to quickly find relevant local or networked documents. It supports multiple file types, operates …",
+   "topics": [],
+   "lang": "JavaScript",
+   "license": "MIT",
+   "pushed_at": "2026-04-13T14:18:24Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "EimanTahir071/RAG-over-Audio",
+   "url": "https://github.com/EimanTahir071/RAG-over-Audio",
+   "stars": 3,
+   "desc": "RAG over Audio is a retrieval-augmented generation (RAG) system for audio analysis. It transcribes audio files using OpenAI's Whisper, chunks and embeds the transcripts into ChromaDB for semantic search, and uses a loca…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-02-10T13:03:32Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "SriramV1212/Local-AI-Powered-Document-Assistant",
+   "url": "https://github.com/SriramV1212/Local-AI-Powered-Document-Assistant",
+   "stars": 2,
+   "desc": "A privacy-focused AI tool built with DeepSeek 8B (via Ollama) and Retrieval-Augmented Generation (RAG). It processes unstructured documents, enabling semantic search and summarization using ChromaDB and LangChain. Featu…",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2025-04-06T18:13:23Z",
+   "via": [
+    "local document semantic search rag tool"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Ssshake1996/one_search",
+   "url": "https://github.com/Ssshake1996/one_search",
+   "stars": 2,
+   "desc": "Local file and database search via MCP, with a resource-bounded background service and local semantic retrieval.",
+   "topics": [],
+   "lang": "Python",
+   "license": null,
+   "pushed_at": "2026-10-05T15:31:28Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "DokRaphael/harbor-preindex",
+   "url": "https://github.com/DokRaphael/harbor-preindex",
+   "stars": 2,
+   "desc": "Turn any filesystem into a semantic workspace — local-first indexing, retrieval, and file routing.",
+   "topics": [],
+   "lang": "Python",
+   "license": "MIT",
+   "pushed_at": "2026-04-17T15:00:07Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "tercumantanumut/selene-retrieval",
+   "url": "https://github.com/tercumantanumut/selene-retrieval",
+   "stars": 2,
+   "desc": "Let your AI apps search your own files, privately. A Windows desktop app and MCP server with local hybrid (keyword + semantic) search over your folders. No cloud or API key needed.",
+   "topics": [
+    "claude-desktop",
+    "cursor",
+    "desktop-app",
+    "embeddings",
+    "hybrid-search",
+    "lancedb"
+   ],
+   "lang": "Rust",
+   "license": "Apache-2.0",
+   "pushed_at": "2026-11-15T11:04:32Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  },
+  {
+   "full_name": "Med-Karim-Ben-Boubaker/localume",
+   "url": "https://github.com/Med-Karim-Ben-Boubaker/localume",
+   "stars": 2,
+   "desc": "Localume is a powerful desktop application that enables semantic search across your documents using advanced vector embeddings and retrieval technology. The application monitors specified directories in real-time, autom…",
+   "topics": [
+    "embeddings-similarity",
+    "faiss-vector-database",
+    "filesystem",
+    "multi-modal",
+    "python3",
+    "search"
+   ],
+   "lang": "Python",
+   "license": "NOASSERTION",
+   "pushed_at": "2025-01-22T16:58:32Z",
+   "via": [
+    "semantic file retrieval local"
+   ],
+   "seed": false
+  }
+ ]
+}
