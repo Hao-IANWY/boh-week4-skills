@@ -4,7 +4,7 @@
   "name": "research-file-library",
   "version": "0.1.0"
  },
- "generated_at": "2026-11-23T18:37:33+0800",
+ "generated_at": "2026-11-23T19:21:49+0800",
  "主结果": {
   "status": "partial",
   "library_mode": {
@@ -159,7 +159,7 @@
     "in_library": true
    },
    {
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "bytes": 143,
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
@@ -180,12 +180,12 @@
      "seq": ""
     },
     "field_provenance": {
-     "year": "人工给定[archive/2023_final_报告.md]",
-     "project": "人工给定[archive/2023_final_报告.md]",
+     "year": "人工给定[archive/2023_final_report.md]",
+     "project": "人工给定[archive/2023_final_report.md]",
      "kind": "扩展名推断",
      "title": "内容提取",
-     "owner": "人工给定[archive/2023_final_报告.md]",
-     "note": "人工给定[archive/2023_final_报告.md]"
+     "owner": "人工给定[archive/2023_final_report.md]",
+     "note": "人工给定[archive/2023_final_report.md]"
     },
     "fill_rate": 1.0,
     "in_library": true
@@ -337,7 +337,7 @@
     "template_error": ""
    },
    {
-    "source": "archive/2023_final_报告.md",
+    "source": "archive/2023_final_report.md",
     "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "role": "canonical",
@@ -549,9 +549,9 @@
     "extraction_method": "plain_text"
    },
    {
-    "id": "6b3531e5",
+    "id": "f4851de1",
     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
     "kind": "analysis_note",
@@ -559,17 +559,16 @@
     "year": "2023",
     "title": "2023 年度结题报告（归档件）",
     "terms": [
-     "2023_final_",
-     "md",
+     "2023_final_report.md",
      "2023",
      "12",
      "proj-a",
      "2024_raw",
-     "报告",
      "年度",
      "度结",
      "结题",
      "题报",
+     "报告",
      "归档",
      "档件",
      "本年",
@@ -757,7 +756,7 @@
     "mtime": "2026-11-18T22:42:26"
    },
    {
-    "path": "archive/2023_final_报告.md",
+    "path": "archive/2023_final_report.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
     "mode": "0o644",
@@ -798,7 +797,7 @@
    },
    {
     "op": "copy",
-    "from": "archive/2023_final_报告.md",
+    "from": "archive/2023_final_report.md",
     "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
@@ -854,13 +853,13 @@
     "kind": "扩展名推断",
     "title": "未知"
    },
-   "archive/2023_final_报告.md": {
-    "year": "人工给定[archive/2023_final_报告.md]",
-    "project": "人工给定[archive/2023_final_报告.md]",
+   "archive/2023_final_report.md": {
+    "year": "人工给定[archive/2023_final_report.md]",
+    "project": "人工给定[archive/2023_final_report.md]",
     "kind": "扩展名推断",
     "title": "内容提取",
-    "owner": "人工给定[archive/2023_final_报告.md]",
-    "note": "人工给定[archive/2023_final_报告.md]"
+    "owner": "人工给定[archive/2023_final_report.md]",
+    "note": "人工给定[archive/2023_final_report.md]"
    },
    "supplement/scan_page.bin": {
     "project": "目录名解析",
@@ -870,11 +869,11 @@
    }
   },
   "field_conflicts": {
-   "archive/2023_final_报告.md": [
+   "archive/2023_final_report.md": [
     {
      "field": "project",
      "kept": "PROJ-A",
-     "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+     "kept_provenance": "人工给定[archive/2023_final_report.md]",
      "dropped": "archive",
      "dropped_provenance": "目录名解析"
     }
@@ -915,7 +914,7 @@
     "ocr_confidence": null
    },
    {
-    "path": "archive/2023_final_报告.md",
+    "path": "archive/2023_final_report.md",
     "method": "plain_text",
     "n_chars": 69,
     "gap_code": null,
@@ -1022,7 +1021,7 @@
     {
      "op": "ingest_suggestion",
      "targets": [
-      "archive/2023_final_报告.md"
+      "archive/2023_final_report.md"
      ],
      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
      "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
@@ -1446,7 +1445,7 @@
     "in_library": true
    },
    {
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "bytes": 143,
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
@@ -1467,12 +1466,12 @@
      "seq": ""
     },
     "field_provenance": {
-     "year": "人工给定[archive/2023_final_报告.md]",
-     "project": "人工给定[archive/2023_final_报告.md]",
+     "year": "人工给定[archive/2023_final_report.md]",
+     "project": "人工给定[archive/2023_final_report.md]",
      "kind": "扩展名推断",
      "title": "内容提取",
-     "owner": "人工给定[archive/2023_final_报告.md]",
-     "note": "人工给定[archive/2023_final_报告.md]"
+     "owner": "人工给定[archive/2023_final_report.md]",
+     "note": "人工给定[archive/2023_final_report.md]"
     },
     "fill_rate": 1.0,
     "in_library": true
@@ -1624,7 +1623,7 @@
     "template_error": ""
    },
    {
-    "source": "archive/2023_final_报告.md",
+    "source": "archive/2023_final_report.md",
     "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "role": "canonical",
@@ -1836,9 +1835,9 @@
     "extraction_method": "plain_text"
    },
    {
-    "id": "6b3531e5",
+    "id": "f4851de1",
     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
     "kind": "analysis_note",
@@ -1846,17 +1845,16 @@
     "year": "2023",
     "title": "2023 年度结题报告（归档件）",
     "terms": [
-     "2023_final_",
-     "md",
+     "2023_final_report.md",
      "2023",
      "12",
      "proj-a",
      "2024_raw",
-     "报告",
      "年度",
      "度结",
      "结题",
      "题报",
+     "报告",
      "归档",
      "档件",
      "本年",
@@ -2166,7 +2164,7 @@
     "in_library": true
    },
    {
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "bytes": 143,
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
@@ -2187,12 +2185,12 @@
      "seq": ""
     },
     "field_provenance": {
-     "year": "人工给定[archive/2023_final_报告.md]",
-     "project": "人工给定[archive/2023_final_报告.md]",
+     "year": "人工给定[archive/2023_final_report.md]",
+     "project": "人工给定[archive/2023_final_report.md]",
      "kind": "扩展名推断",
      "title": "内容提取",
-     "owner": "人工给定[archive/2023_final_报告.md]",
-     "note": "人工给定[archive/2023_final_报告.md]"
+     "owner": "人工给定[archive/2023_final_report.md]",
+     "note": "人工给定[archive/2023_final_report.md]"
     },
     "fill_rate": 1.0,
     "in_library": true
@@ -2344,7 +2342,7 @@
     "template_error": ""
    },
    {
-    "source": "archive/2023_final_报告.md",
+    "source": "archive/2023_final_report.md",
     "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "role": "canonical",
@@ -2556,9 +2554,9 @@
     "extraction_method": "plain_text"
    },
    {
-    "id": "6b3531e5",
+    "id": "f4851de1",
     "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
-    "source_path": "archive/2023_final_报告.md",
+    "source_path": "archive/2023_final_report.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
     "kind": "analysis_note",
@@ -2566,17 +2564,16 @@
     "year": "2023",
     "title": "2023 年度结题报告（归档件）",
     "terms": [
-     "2023_final_",
-     "md",
+     "2023_final_report.md",
      "2023",
      "12",
      "proj-a",
      "2024_raw",
-     "报告",
      "年度",
      "度结",
      "结题",
      "题报",
+     "报告",
      "归档",
      "档件",
      "本年",
@@ -2764,7 +2761,7 @@
     "mtime": "2026-11-18T22:42:26"
    },
    {
-    "path": "archive/2023_final_报告.md",
+    "path": "archive/2023_final_report.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
     "mode": "0o644",
@@ -2805,7 +2802,7 @@
    },
    {
     "op": "copy",
-    "from": "archive/2023_final_报告.md",
+    "from": "archive/2023_final_report.md",
     "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
     "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
     "bytes": 143,
@@ -2861,13 +2858,13 @@
     "kind": "扩展名推断",
     "title": "未知"
    },
-   "archive/2023_final_报告.md": {
-    "year": "人工给定[archive/2023_final_报告.md]",
-    "project": "人工给定[archive/2023_final_报告.md]",
+   "archive/2023_final_report.md": {
+    "year": "人工给定[archive/2023_final_report.md]",
+    "project": "人工给定[archive/2023_final_report.md]",
     "kind": "扩展名推断",
     "title": "内容提取",
-    "owner": "人工给定[archive/2023_final_报告.md]",
-    "note": "人工给定[archive/2023_final_报告.md]"
+    "owner": "人工给定[archive/2023_final_report.md]",
+    "note": "人工给定[archive/2023_final_report.md]"
    },
    "supplement/scan_page.bin": {
     "project": "目录名解析",
@@ -2877,11 +2874,11 @@
    }
   },
   "field_conflicts": {
-   "archive/2023_final_报告.md": [
+   "archive/2023_final_report.md": [
     {
      "field": "project",
      "kept": "PROJ-A",
-     "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+     "kept_provenance": "人工给定[archive/2023_final_report.md]",
      "dropped": "archive",
      "dropped_provenance": "目录名解析"
     }
@@ -2922,7 +2919,7 @@
     "ocr_confidence": null
    },
    {
-    "path": "archive/2023_final_报告.md",
+    "path": "archive/2023_final_report.md",
     "method": "plain_text",
     "n_chars": 69,
     "gap_code": null,
@@ -3029,7 +3026,7 @@
     {
      "op": "ingest_suggestion",
      "targets": [
-      "archive/2023_final_报告.md"
+      "archive/2023_final_report.md"
      ],
      "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
      "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
@@ -3379,7 +3376,7 @@
      "in_library": true
     },
     {
-     "source_path": "archive/2023_final_报告.md",
+     "source_path": "archive/2023_final_report.md",
      "target_path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
      "bytes": 143,
      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
@@ -3400,12 +3397,12 @@
       "seq": ""
      },
      "field_provenance": {
-      "year": "人工给定[archive/2023_final_报告.md]",
-      "project": "人工给定[archive/2023_final_报告.md]",
+      "year": "人工给定[archive/2023_final_report.md]",
+      "project": "人工给定[archive/2023_final_report.md]",
       "kind": "扩展名推断",
       "title": "内容提取",
-      "owner": "人工给定[archive/2023_final_报告.md]",
-      "note": "人工给定[archive/2023_final_报告.md]"
+      "owner": "人工给定[archive/2023_final_report.md]",
+      "note": "人工给定[archive/2023_final_report.md]"
      },
      "fill_rate": 1.0,
      "in_library": true
@@ -3557,7 +3554,7 @@
      "template_error": ""
     },
     {
-     "source": "archive/2023_final_报告.md",
+     "source": "archive/2023_final_report.md",
      "target": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
      "role": "canonical",
@@ -3769,9 +3766,9 @@
      "extraction_method": "plain_text"
     },
     {
-     "id": "6b3531e5",
+     "id": "f4851de1",
      "path": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
-     "source_path": "archive/2023_final_报告.md",
+     "source_path": "archive/2023_final_report.md",
      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
      "bytes": 143,
      "kind": "analysis_note",
@@ -3779,17 +3776,16 @@
      "year": "2023",
      "title": "2023 年度结题报告（归档件）",
      "terms": [
-      "2023_final_",
-      "md",
+      "2023_final_report.md",
       "2023",
       "12",
       "proj-a",
       "2024_raw",
-      "报告",
       "年度",
       "度结",
       "结题",
       "题报",
+      "报告",
       "归档",
       "档件",
       "本年",
@@ -3977,7 +3973,7 @@
      "mtime": "2026-11-18T22:42:26"
     },
     {
-     "path": "archive/2023_final_报告.md",
+     "path": "archive/2023_final_report.md",
      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
      "bytes": 143,
      "mode": "0o644",
@@ -4018,7 +4014,7 @@
     },
     {
      "op": "copy",
-     "from": "archive/2023_final_报告.md",
+     "from": "archive/2023_final_report.md",
      "to": "library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md",
      "sha256": "35346e66ad29ac1f459c7f4c5db5b1d71ac73842db1e9dded86bcdb38db57915",
      "bytes": 143,
@@ -4074,13 +4070,13 @@
      "kind": "扩展名推断",
      "title": "未知"
     },
-    "archive/2023_final_报告.md": {
-     "year": "人工给定[archive/2023_final_报告.md]",
-     "project": "人工给定[archive/2023_final_报告.md]",
+    "archive/2023_final_report.md": {
+     "year": "人工给定[archive/2023_final_report.md]",
+     "project": "人工给定[archive/2023_final_report.md]",
      "kind": "扩展名推断",
      "title": "内容提取",
-     "owner": "人工给定[archive/2023_final_报告.md]",
-     "note": "人工给定[archive/2023_final_报告.md]"
+     "owner": "人工给定[archive/2023_final_report.md]",
+     "note": "人工给定[archive/2023_final_report.md]"
     },
     "supplement/scan_page.bin": {
      "project": "目录名解析",
@@ -4090,11 +4086,11 @@
     }
    },
    "field_conflicts": {
-    "archive/2023_final_报告.md": [
+    "archive/2023_final_report.md": [
      {
       "field": "project",
       "kept": "PROJ-A",
-      "kept_provenance": "人工给定[archive/2023_final_报告.md]",
+      "kept_provenance": "人工给定[archive/2023_final_report.md]",
       "dropped": "archive",
       "dropped_provenance": "目录名解析"
      }
@@ -4135,7 +4131,7 @@
      "ocr_confidence": null
     },
     {
-     "path": "archive/2023_final_报告.md",
+     "path": "archive/2023_final_report.md",
      "method": "plain_text",
      "n_chars": 69,
      "gap_code": null,
@@ -4242,7 +4238,7 @@
      {
       "op": "ingest_suggestion",
       "targets": [
-       "archive/2023_final_报告.md"
+       "archive/2023_final_report.md"
       ],
       "basis": "目录模板 {project}/{year}/{kind} / 命名模板 {project}_{year}_{kind}_{seq}{ext}（字段：project=PROJ-A, year=2023, kind=analysis_note, seq=01）",
       "action": "建议入库到 out/library/PROJ-A/2023/analysis_note/PROJ-A_2023_analysis_note_01.md（本流程已复制并哈希核验）；源文件保持原位只读",
