@@ -104,11 +104,14 @@ def resolve_library_root(case: dict, case_dir: Path, work: Path) -> tuple:
     raw = Path(str(ref))
     if raw.is_absolute():
         return (raw if raw.is_dir() else None), [str(raw)], ""
-    bases = [case_dir, case_dir.parent, work or Path("."), Path.cwd(), Path("/input")]
+    # 解析按真实路径进行，但记录进 result 的候选一律用占位标签：
+    # 绝对路径随 cwd/机器变化，直接落盘会破坏跨 cwd 幂等与基线可复核性。
+    bases = [("case_dir", case_dir), ("case_parent", case_dir.parent),
+             ("work", work or Path(".")), ("cwd", Path.cwd()), ("/input", Path("/input"))]
     tried, hit = [], None
-    for base in bases:
+    for label, base in bases:
         cand = base / raw
-        tried.append(str(cand))
+        tried.append(f"<{label}>/{raw.as_posix()}" if label != "/input" else f"/input/{raw.as_posix()}")
         if hit is None and cand.is_dir():
             hit = cand
     return hit, tried, "" if hit else "库目录不存在（已尝试：" + "；".join(tried) + "）"
